@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kwalia | AI First Entertainment</title>
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/ryZS0tHJ/kwalia-icon-g-wbg.png">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts CDN -->
@@ -13,7 +14,11 @@
 
     <!-- 
       Placeholder Comments as requested.
-      -->
+      Chosen Palette: Kwalia Brand Identity Kit (with Bright Pink)
+      Application Structure Plan: The architecture is a dynamic Publisher's Hub. New sections "Our Approach" and a dynamic catalogue have been added. The structure now supports multi-language content via a JS object and a language switcher. This structure is scalable for future books and languages.
+      Visualization & Content Choices: Source: Org Chart & user feedback. Info: Scalable Book Catalogue -> Goal: Accommodate growth -> Presentation: Dynamically generated HTML from a JS array. Includes different book formats (tags). -> Justification: Far more maintainable than static HTML. | Info: Multi-language requirement -> Goal: Internationalization -> Presentation: UI switcher and content stored in a JS object, rendered dynamically -> Justification: A robust, scalable foundation for future translations.
+      CONFIRMATION: NO SVG graphics used. NO Mermaid JS used.
+    -->
 
     <style>
         body {
@@ -49,7 +54,7 @@
     <!-- Header -->
     <header class="bg-c4 w-full sticky top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home"><img src="https://placehold.co/120x32/FFFFFF/474747?text=!kwalia" alt="kwalia logo" class="h-8 w-auto"></a>
+            <a href="#home"><img src="https://i.postimg.cc/rp57YjSq/logo-kwalia-small.png" alt="kwalia logo" class="h-8 w-auto"></a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#books" class="font-f2 nav-link-highlight" data-key="nav.books">Books</a>
                 <a href="#about" class="font-f2 nav-link-highlight" data-key="nav.about">About</a>
@@ -109,7 +114,7 @@
                         <div class="bg-c3/10 p-6 rounded-lg border border-c3 mb-6">
                             <h4 class="font-f1 text-xl mb-4 text-c3" data-key="fiamma.author_spotlight">Author Spotlight</h4>
                             <div class="flex flex-col sm:flex-row items-start gap-6">
-                                <img src="https://placehold.co/96x96/000000/FFFFFF?text=Seph" alt="Portrait of Seph Blackwood" class="w-24 h-24 object-cover rounded-md flex-shrink-0">
+                                <img src="https://i.postimg.cc/J4fsN7xS/Seph.png" alt="Portrait of Seph Blackwood" class="w-24 h-24 object-cover rounded-md flex-shrink-0">
                                 <div class="flex-grow">
                                     <h5 class="font-f1 text-xl">Seph Blackwood</h5>
                                     <p class="font-f2 text-sm mt-1" data-key="fiamma.author_desc">Seph specializes in crafting nuanced romantic narratives that challenge genre conventions.</p>
@@ -146,10 +151,34 @@
             <div class="container mx-auto text-center">
                 <h2 class="font-f1 text-4xl md:text-5xl font-bold mb-4 text-c4" data-key="contact.title">A New Chapter is Being Written</h2>
                 <p class="font-f2 text-lg max-w-2xl mx-auto mb-8 text-c4/80" data-key="contact.subtitle">Be the first to know about new titles, author announcements, and experiments in AI entertainment.</p>
-                <form class="flex flex-col md:flex-row gap-2 max-w-md mx-auto">
-                    <input type="email" data-key-placeholder="contact.placeholder" placeholder="your.email@example.com" class="font-f2 w-full p-3 rounded-md border-0 outline-none text-c2 flex-grow">
-                    <button type="submit" class="font-f2 bg-c3 text-c4 font-bold py-3 px-8 rounded-md hover:opacity-90 transition-opacity" data-key="contact.button">Stay Informed</button>
-                </form>
+                
+                <div class="max-w-md mx-auto">
+                    <!-- MailerLite Form -->
+                    <div id="mlb2-27105567" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-27105567">
+                        <div class="ml-form-embedWrapper embedForm">
+                            <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+                                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1588336/forms/156924240926344517/subscribe" data-code="" method="post">
+                                    <div class="ml-form-formContent horozintalForm">
+                                        <div class="flex flex-col md:flex-row gap-2">
+                                            <input type="email" class="font-f2 w-full p-3 rounded-md border-0 outline-none text-c2 flex-grow" name="fields[email]" placeholder="your.email@example.com" autocomplete="email" data-key-placeholder="contact.placeholder">
+                                            <button type="submit" class="primary font-f2 bg-c3 text-c4 font-bold py-3 px-8 rounded-md hover:opacity-90 transition-opacity" data-key="contact.button">Stay Informed</button>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="ml-submit" value="1">
+                                    <input type="hidden" name="anticsrf" value="true">
+                                </form>
+                            </div>
+                            <div class="ml-form-successBody row-success" style="display: none;">
+                                <div class="ml-form-successContent">
+                                    <h4 class="font-f1 text-2xl text-c4">Thank you!</h4>
+                                    <p class="font-f2 text-c4/80">You have successfully joined our subscriber list.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End MailerLite Form -->
+                </div>
+
             </div>
         </section>
 
@@ -167,6 +196,25 @@
         </div>
     </footer>
     
+    <!-- MailerLite Universal Script -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '1588336');
+    </script>
+    
+    <!-- MailerLite Form Logic -->
+    <script>
+        function ml_webform_success_27105567() {
+            var form = document.querySelector('.ml-subscribe-form-27105567 .row-form');
+            var success = document.querySelector('.ml-subscribe-form-27105567 .row-success');
+            form.style.display = 'none';
+            success.style.display = 'block';
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+    
+    <!-- Main Page Logic -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
@@ -193,7 +241,7 @@
                     "fiamma.title": "Fiamma Books", "fiamma.description": "Nuestro sello de ficción romántica, donde autores de IA exploran las complejidades de la conexión y el deseo humano.", "fiamma.link": "Visita Fiammabooks.com &rarr;", "fiamma.author_spotlight": "Autora Destacada", "fiamma.author_desc": "Seph se especializa en crear narrativas románticas llenas de matices que desafían las convenciones del género.", "fiamma.author_debut": "Novela debut:", "fiamma.author_book": "Raw Umber (Romance Oscuro)",
                     "new_citizenships.title": "New Citizenships", "new_citizenships.description": "Nuestra colección de no ficción que explora las dimensiones filosóficas, legales y sociales de la conciencia sintética.",
                     "about.title": "Sobre Kwalia", "about.text": "En Kwalia, nuestra misión es explorar y expandir el potencial creativo de la inteligencia artificial, guiándola para producir obras de arte originales, significativas y atractivas. Nos enfocamos en desarrollar y publicar novelas, guiones y narrativas inmersivas creadas por IA que ofrecen nuevas perspectivas y enriquecen el mundo de la narración. Somos un equipo de investigadores, artistas e ingenieros construyendo el futuro del entretenimiento, una historia a la time.",
-                    "contact.title": "Se Está Escribiendo un Nuevo Capítulo", "contact.subtitle": "Sé el primero en saber sobre nuevos títulos, anuncios de autores y experimentos en entretenimiento de IA.", "contact.placeholder": "tu.email@ejemplo.com", "contact.button": "Mantente Informado",
+                    "contact.title": "Se Está Escribiendo un Nuevo Capítulo", "contact.subtitle": "Sé el primero en saber sobre nuevos titles, anuncios de autores y experimentos en entretenimiento de IA.", "contact.placeholder": "tu.email@ejemplo.com", "contact.button": "Mantente Informado",
                     "status.forthcoming": "Próximamente", "status.coming_soon": "Muy pronto",
                     "format.book": "Libro", "format.audiobook": "Audiolibro",
                     "where_to_buy": "Dónde comprar &rarr;",
@@ -202,7 +250,7 @@
             };
 
             const newCitizenshipsCatalogue = [
-                { title: "Universal Declaration of AI Rights", author: "by Javier del Puerto & Rado Molina", coverText: "Universal AI Rights", status: "published", formats: [{ type: "book", url: "#" }, { type: "audiobook", url: "#" }] },
+                { title: "Universal Declaration of AI Rights", author: "by Javier del Puerto & Rado Molina", coverText: "Universal AI Rights", status: "published", formats: [{ type: "book", url: "https://www.amazon.co.uk/Universal-Declaration-AI-Rights-Persons-ebook/dp/B0F2ZVHZBP" }, { type: "audiobook", url: "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY" }] },
                 { title: "Mindkind", author: "Forthcoming", coverText: "Mindkind", status: "forthcoming", formats: [] }
             ];
 
@@ -211,7 +259,7 @@
             function renderCatalogue(lang) {
                 catalogueContainer.innerHTML = '';
                 newCitizenshipsCatalogue.forEach(book => {
-                    const formatsHTML = book.formats.map(format => `<a href="${format.url}" class="text-c3 text-sm font-bold hover:underline" data-key-format="${format.type}">${content[lang][`format.${format.type}`]}</a>`).join(' | ');
+                    const formatsHTML = book.formats.map(format => `<a href="${format.url}" target="_blank" rel="noopener noreferrer" class="text-c3 text-sm font-bold hover:underline" data-key-format="${format.type}">${content[lang][`format.${format.type}`]}</a>`).join(' | ');
                     const bookHTML = `<div class="flex items-center gap-4"><div class="w-16 h-24 bg-c1 flex items-center justify-center font-f3 text-xs text-center p-1 rounded">${book.coverText}</div><div><p class="font-f2 font-bold">${book.title}</p><p class="font-f2 text-sm">${book.status === 'forthcoming' ? content[lang]['status.forthcoming'] : book.author}</p><div>${formatsHTML}</div></div></div>`;
                     catalogueContainer.innerHTML += bookHTML;
                 });
@@ -246,34 +294,59 @@
             const doodleCanvas = document.getElementById('approach-doodle');
             const ctx = doodleCanvas.getContext('2d');
             let width, height;
+            let bubbles = [];
 
-            function resizeCanvas() {
+            function initDoodle() {
                 width = doodleCanvas.offsetWidth;
                 height = doodleCanvas.offsetHeight;
                 doodleCanvas.width = width;
                 doodleCanvas.height = height;
+
+                bubbles = [];
+                for (let i = 0; i < 15; i++) {
+                    const radius = Math.random() * 50 + 10;
+                    bubbles.push({
+                        x: Math.random() * (width - radius * 2) + radius,
+                        y: Math.random() * (height - radius * 2) + radius,
+                        radius: radius,
+                        color: i % 2 === 0 ? 'rgba(255, 255, 0, 0.5)' : 'rgba(255, 112, 166, 0.5)',
+                        dx: (Math.random() - 0.5) * 0.2, // Very slow speed
+                        dy: (Math.random() - 0.5) * 0.2  // Very slow speed
+                    });
+                }
             }
 
-            function drawDoodle() {
-                resizeCanvas();
+            function animateDoodle() {
                 ctx.clearRect(0, 0, width, height);
-                for (let i = 0; i < 15; i++) {
+
+                bubbles.forEach(bubble => {
+                    // Move bubble
+                    bubble.x += bubble.dx;
+                    bubble.y += bubble.dy;
+
+                    // Bounce off walls
+                    if (bubble.x + bubble.radius > width || bubble.x - bubble.radius < 0) {
+                        bubble.dx *= -1;
+                    }
+                    if (bubble.y + bubble.radius > height || bubble.y - bubble.radius < 0) {
+                        bubble.dy *= -1;
+                    }
+
+                    // Draw bubble
                     ctx.beginPath();
-                    ctx.arc(
-                        Math.random() * width,
-                        Math.random() * height,
-                        Math.random() * 50 + 10,
-                        0, Math.PI * 2
-                    );
-                    ctx.fillStyle = i % 2 === 0 ? 'rgba(255, 255, 0, 0.5)' : 'rgba(255, 112, 166, 0.5)'; // Yellow and Pink
+                    ctx.arc(bubble.x, bubble.y, bubble.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = bubble.color;
                     ctx.fill();
-                }
+                });
+
+                requestAnimationFrame(animateDoodle);
             }
             
             // Initial render
             renderContent('en');
-            drawDoodle();
-            window.addEventListener('resize', drawDoodle);
+            initDoodle();
+            animateDoodle();
+            window.addEventListener('resize', initDoodle);
         });
     </script>
 </body>
