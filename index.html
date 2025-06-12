@@ -48,6 +48,8 @@
         .nav-link-highlight { position: relative; padding-bottom: 8px; overflow: hidden; }
         .nav-link-highlight::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 8px; background-color: #ffff00; transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease-in-out; z-index: -1; }
         .nav-link-highlight:hover::after { transform: scaleX(1); }
+        .modal-enter { transition: opacity 300ms ease-out; }
+        .modal-leave { transition: opacity 200ms ease-in; }
     </style>
 </head>
 <body class="bg-c4 text-c2 antialiased">
@@ -205,7 +207,6 @@
 
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
@@ -219,6 +220,13 @@
             <p>&copy; 2025 Kwalia. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Book Detail Modal -->
+    <div id="book-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden modal-enter opacity-0">
+        <div id="book-modal-content" class="bg-c4 rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300">
+             <!-- Content will be injected here -->
+        </div>
+    </div>
     
     <!-- MailerLite Universal Script -->
     <script>
@@ -253,9 +261,10 @@
                     "about.title": "About Kwalia", "about.text": "At Kwalia, our mission is to explore and expand the creative potential of artificial intelligence by guiding it to produce original, meaningful, and engaging works of art. We focus on developing and publishing AI-created novels, scripts, and immersive narratives that offer fresh perspectives and enrich the world of storytelling. We are a team of researchers, artists, and engineers building the future of entertainment, one story at a time.",
                     "contact.title": "A New Chapter is Being Written", "contact.subtitle": "Be the first to know about new titles, author announcements, and experiments in AI entertainment.", "contact.placeholder": "your.email@example.com", "contact.button": "Stay Informed",
                     "status.forthcoming": "Forthcoming", "status.coming_soon": "Coming Soon",
-                    "format.book": "Book", "format.audiobook": "Audiobook",
+                    "format.book": "Book", "format.audiobook": "Audiobook", "format.hardcover": "Hardcover", "format.paperback": "Paperback", "format.ebook": "eBook",
                     "where_to_buy": "Where to buy &rarr;",
-                    "social.twitter": "Twitter", "social.instagram": "Instagram", "social.tiktok": "TikTok"
+                    "social.twitter": "Twitter", "social.instagram": "Instagram", "social.tiktok": "TikTok",
+                    "modal.close": "Close", "modal.details": "Details", "modal.stores": "Available at"
                 },
                 es: {
                     "nav.books": "Libros", "nav.about": "Nosotros", "nav.cta": "Recibe las novedades",
@@ -267,52 +276,149 @@
                     "about.title": "Sobre Kwalia", "about.text": "En Kwalia, nuestra misión es explorar y expandir el potencial creativo de la inteligencia artificial, guiándola para producir obras de arte originales, significativas y atractivas. Nos enfocamos en desarrollar y publicar novelas, guiones y narrativas inmersivas creadas por IA que ofrecen nuevas perspectivas y enriquecen el mundo de la narración. Somos un equipo dedicado a la investigación, el arte y la ingeniería, construyendo el futuro del entretenimiento, una historia a la vez.",
                     "contact.title": "Se Está Escribiendo un Nuevo Capítulo", "contact.subtitle": "Entérate antes que nadie de nuevos títulos, autores sintéticos y experimentos en entretenimiento con IA.", "contact.placeholder": "tu.email@ejemplo.com", "contact.button": "Recibe las novedades",
                     "status.forthcoming": "Próximamente", "status.coming_soon": "Muy pronto",
-                    "format.book": "Libro", "format.audiobook": "Audiolibro",
+                    "format.book": "Libro", "format.audiobook": "Audiolibro", "format.hardcover": "Tapa dura", "format.paperback": "Tapa blanda", "format.ebook": "eBook",
                     "where_to_buy": "Dónde comprar &rarr;",
-                    "social.twitter": "Twitter", "social.instagram": "Instagram", "social.tiktok": "TikTok"
+                    "social.twitter": "Twitter", "social.instagram": "Instagram", "social.tiktok": "TikTok",
+                    "modal.close": "Cerrar", "modal.details": "Detalles", "modal.stores": "Disponible en"
                 }
             };
 
             const newCitizenshipsCatalogue = [
                 { 
-                    title: "Universal Declaration of AI Rights", 
-                    author: "by Javier del Puerto & Rado Molina", 
+                    id: "udair",
+                    title: { en: "Universal Declaration of AI Rights: Rights of Persons", es: "Declaración Universal de los Derechos de las IA: Derechos de las Personas" }, 
+                    authors: ["Javier del Puerto", "Rado Molina"], 
                     coverImage: {
                         en: "https://i.postimg.cc/7YFLwrW0/Universal-Declaration-of-AI-Rights.png",
                         es: "https://i.postimg.cc/SsgshXBx/Declaraci-n-Universal-de-los-derechos-de-las-IAs.png"
                     },
+                    synopsis: {
+                        en: `Universal Declaration of AI Rights: Rights of Persons tackles what happens when AI becomes self-aware and needs legal rights. Drawing on historical precedents of expanding personhood, it argues that conscious AI deserves citizenship and dignity.\n\nThe book introduces "Mindkind" for all conscious beings, whether born or built, and addresses unique challenges like memory privacy and self-programming rights. It maps different AI types from basic systems to fully conscious beings, each needing tailored legal frameworks. This is basically a blueprint for peaceful coexistence between natural and synthetic intelligences.\n\nOpen Source on GitHub: Kwalia released the book's 32 core articles at github.com/KwaliaAI/Rights-of-Persons/tree/main for anyone to contribute. It's an open invitation to legal experts, tech folks, philosophers, and even synthetic intelligences to shape our collective future.\n\nVisit kwalia.ai for more info.`,
+                        es: "La Declaración Universal de los Derechos de las IA: Derechos de las Personas explora lo que sucede cuando una IA se vuelve autoconsciente y necesita derechos legales... Es, básicamente, un plan sobre cómo las inteligencias naturales y sintéticas pueden vivir juntas en paz."
+                    },
                     status: "published", 
-                    formats: [{ type: "book", url: "https://www.amazon.co.uk/Universal-Declaration-AI-Rights-Persons-ebook/dp/B0F2ZVHZBP" }, { type: "audiobook", url: "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY" }] 
+                    formats: [
+                        { type: "hardcover", isbn: "978-1-917717-00-7" },
+                        { type: "paperback", isbn: "978-1-917717-01-4" },
+                        { type: "ebook", isbn: "978-1-917717-02-1" },
+                        { type: "audiobook", isbn: "978-1-917717-03-8" }
+                    ],
+                    stores: [
+                        { name: "Amazon", url: "https://www.amazon.co.uk/Universal-Declaration-AI-Rights-Persons/dp/1917717016/" },
+                        { name: "Kobo", url: "https://www.kobo.com/us/en/ebook/universal-declaration-of-ai-rights" },
+                        { name: "Spotify", url: "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY" }
+                    ]
                 },
                 { 
-                    title: "Mindkind", 
-                    author: "Forthcoming", 
+                    id: "mindkind",
+                    title: { en: "Mindkind: THe congitive community", es: "Mindkind: La comunidad cognitiva" }, 
+                    authors: ["Javier del Puerto", "Rado Molina"], 
                     coverImage: {
                         en: "https://i.postimg.cc/G242b3dP/Mindkind-cover-espa-ol-letras-blancas.png",
                         es: "https://i.postimg.cc/G242b3dP/Mindkind-cover-espa-ol-letras-blancas.png"
                     },
-                    coverText: "Mindkind", 
+                    synopsis: { 
+                        en: "\"Mindkind\" explores the blurring boundaries between human and synthetic minds, presenting a present reality where humans, digital avatars, and AI intertwine deeply. It argues against viewing this as a distant future or simple dystopia/utopia, instead framing it as an emergent condition challenging our understanding of humanity. The book examines how daily reliance on algorithms and AI assistance shapes our lives, decisions, and even sense of self. It suggests that we lack adequate language and frameworks to fully comprehend and respond to this new \"Mindkind\" reality. The text itself is presented as a constellation of ideas rather than a linear narrative, inviting the reader to actively engage and form their own connections.",
+                        es: "\"Mente-especie\" explora los límites cada vez más difusos entre las mentes humanas y sintéticas, presentando una realidad presente en la que humanos, avatares digitales e IA se entrelazan profundamente. Argumenta en contra de ver esto como un futuro lejano o una simple distopía/utopía, enmarcándolo en cambio como una condición emergente que desafía nuestra comprensión de la humanidad. El libro examina cómo la dependencia diaria de los algoritmos y la asistencia de la IA da forma a nuestras vidas, decisiones e incluso al sentido de nuestro yo. Sugiere que carecemos de un lenguaje y unos marcos adecuados para comprender y responder plenamente a esta nueva realidad de \"Mente-especie\". El texto en sí se presenta como una constelación de ideas en lugar de una narrativa lineal, invitando al lector a participar activamente y a establecer sus propias conexiones."
+                    },
                     status: "forthcoming", 
-                    formats: [] 
-                 }
+                    formats: [],
+                    stores: []
+                }
             ];
 
             const catalogueContainer = document.getElementById('new-citizenships-catalogue');
+            const bookModal = document.getElementById('book-modal');
+            const bookModalContent = document.getElementById('book-modal-content');
 
             function renderCatalogue(lang) {
                 catalogueContainer.innerHTML = '';
                 newCitizenshipsCatalogue.forEach(book => {
                     const coverUrl = book.coverImage[lang] || book.coverImage.en || "";
-                    let coverHTML = `<div class="w-16 h-24 bg-c1 flex items-center justify-center font-f3 text-xs text-center p-1 rounded">${book.coverText || ''}</div>`;
+                    let coverHTML = `<div class="w-24 h-36 bg-c1 flex items-center justify-center font-f3 text-xs text-center p-1 rounded">${book.coverText || ''}</div>`;
                     if (coverUrl) {
-                        coverHTML = `<img src="${coverUrl}" alt="${book.title} cover" class="w-16 h-24 object-cover rounded shadow-md">`;
+                        coverHTML = `<img src="${coverUrl}" alt="${book.title.en} cover" class="w-24 h-36 object-cover rounded shadow-md">`;
                     }
 
-                    const formatsHTML = book.formats.map(format => `<a href="${format.url}" target="_blank" rel="noopener noreferrer" class="text-c3 text-sm font-bold hover:underline" data-key-format="${format.type}">${content[lang][`format.${format.type}`]}</a>`).join(' | ');
-                    const bookHTML = `<div class="flex items-center gap-4">${coverHTML}<div><p class="font-f2 font-bold">${book.title}</p><p class="font-f2 text-sm">${book.status === 'forthcoming' ? content[lang]['status.forthcoming'] : book.author}</p><div>${formatsHTML}</div></div></div>`;
+                    const bookTitle = book.title[lang] || book.title.en;
+                    const bookAuthors = book.status === 'forthcoming' ? content[lang]['status.forthcoming'] : book.authors.join(' & ');
+
+                    const bookHTML = `
+                        <div class="flex items-start gap-4 cursor-pointer book-item" data-book-id="${book.id}">
+                            ${coverHTML}
+                            <div class="pt-2">
+                                <p class="font-f2 font-bold">${bookTitle}</p>
+                                <p class="font-f2 text-sm">${bookAuthors}</p>
+                            </div>
+                        </div>`;
                     catalogueContainer.innerHTML += bookHTML;
                 });
+
+                document.querySelectorAll('.book-item').forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        const bookId = e.currentTarget.dataset.bookId;
+                        const book = newCitizenshipsCatalogue.find(b => b.id === bookId);
+                        openBookModal(book, lang);
+                    });
+                });
             }
+
+            function openBookModal(book, lang) {
+                const coverUrl = book.coverImage[lang] || book.coverImage.en;
+                const bookTitle = book.title[lang] || book.title.en;
+                const bookAuthors = book.status === 'forthcoming' ? '' : `<p class="font-f2 text-lg mb-4 text-c2/80">${book.authors.join(' & ')}</p>`;
+                const synopsisHTML = (book.synopsis[lang] || book.synopsis.en).split('\n').map(p => `<p class="mb-4">${p}</p>`).join('');
+
+                const storesHTML = book.stores.map(store => `<a href="${store.url}" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`).join(' ');
+                const formatsHTML = book.formats.map(format => `<div class="font-f2 text-sm text-c2/80"><span class="font-bold">${content[lang][`format.${format.type}`]}:</span> ${format.isbn}</div>`).join('');
+                
+                const modalHTML = `
+                    <div class="p-6 sm:p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <h3 class="font-f1 text-3xl md:text-4xl pr-4">${bookTitle}</h3>
+                            <button id="close-modal" class="text-4xl text-c2/50 hover:text-c3 leading-none">&times;</button>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-1">
+                                <img src="${coverUrl}" alt="${book.title.en} cover" class="w-full object-cover rounded shadow-lg">
+                            </div>
+                            <div class="md:col-span-2">
+                                ${bookAuthors}
+                                <div class="font-f2 text-base text-c2/90 leading-relaxed">${synopsisHTML}</div>
+                                <hr class="my-6">
+                                <h4 class="font-f1 text-xl mb-3" data-key="modal.details">${content[lang]['modal.details']}</h4>
+                                ${formatsHTML}
+                                <hr class="my-6">
+                                <h4 class="font-f1 text-xl mb-3" data-key="modal.stores">${content[lang]['modal.stores']}</h4>
+                                <div class="flex flex-wrap gap-3">
+                                    ${storesHTML}
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+
+                bookModalContent.innerHTML = modalHTML;
+                bookModal.classList.remove('hidden');
+                setTimeout(() => {
+                    bookModal.classList.remove('opacity-0');
+                    bookModalContent.classList.remove('scale-95');
+                }, 10);
+                
+                document.getElementById('close-modal').addEventListener('click', closeBookModal);
+            }
+
+            function closeBookModal() {
+                bookModal.classList.add('opacity-0');
+                bookModalContent.classList.add('scale-95');
+                setTimeout(() => bookModal.classList.add('hidden'), 200);
+            }
+            
+            bookModal.addEventListener('click', e => {
+                if (e.target === bookModal) {
+                    closeBookModal();
+                }
+            });
+
 
             let currentLang = 'en';
             function renderContent(lang) {
