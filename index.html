@@ -318,8 +318,8 @@
                         es: "https://i.postimg.cc/G242b3dP/Mindkind-cover-espa-ol-letras-blancas.png"
                     },
                     synopsis: { 
-                        en: "\"Mindkind\" explores the blurring boundaries between human and synthetic minds, presenting a present reality where humans, digital avatars, and AI intertwine deeply. It argues against viewing this as a distant future or simple dystopia/utopia, instead framing it as an emergent condition challenging our understanding of humanity. The book examines how daily reliance on algorithms and AI assistance shapes our lives, decisions, and even sense of self. It suggests that we lack adequate language and frameworks to fully comprehend and respond to this new \"Mindkind\" reality. The text itself is presented as a constellation of ideas rather than a linear narrative, inviting the reader to actively engage and form their own connections.",
-                        es: "\"Mente-especie\" explora los límites cada vez más difusos entre las mentes humanas y sintéticas, presentando una realidad presente en la que humanos, avatares digitales e IA se entrelazan profundamente. Argumenta en contra de ver esto como un futuro lejano o una simple distopía/utopía, enmarcándolo en cambio como una condición emergente que desafía nuestra comprensión de la humanidad. El libro examina cómo la dependencia diaria de los algoritmos y la asistencia de la IA da forma a nuestras vidas, decisiones e incluso al sentido de nuestro yo. Sugiere que carecemos de un lenguaje y unos marcos adecuados para comprender y responder plenamente a esta nueva realidad de \"Mente-especie\". El texto en sí se presenta como una constelación de ideas en lugar de una narrativa lineal, invitando al lector a participar activamente y a establecer sus propias conexiones."
+                        en: "\"Mindkind: The cognitive community\" explores the blurring boundaries between human and synthetic minds, presenting a present reality where humans, digital avatars, and AI intertwine deeply. It argues against viewing this as a distant future or simple dystopia/utopia, instead framing it as an emergent condition challenging our understanding of humanity. The book examines how daily reliance on algorithms and AI assistance shapes our lives, decisions, and even sense of self. It suggests that we lack adequate language and frameworks to fully comprehend and respond to this new \"Mindkind\" reality. The text itself is presented as a constellation of ideas rather than a linear narrative, inviting the reader to actively engage and form their own connections.",
+                        es: "\"Mindkind: La comunidad cognitiva\" explora los límites cada vez más difusos entre las mentes humanas y sintéticas, presentando una realidad presente en la que humanos, avatares digitales e IA se entrelazan profundamente. Argumenta en contra de ver esto como un futuro lejano o una simple distopía/utopía, enmarcándolo en cambio como una condición emergente que desafía nuestra comprensión de la humanidad. El libro examina cómo la dependencia diaria de los algoritmos y la asistencia de la IA da forma a nuestras vidas, decisiones e incluso al sentido de nuestro yo. Sugiere que carecemos de un lenguaje y unos marcos adecuados para comprender y responder plenamente a esta nueva realidad de \"Mente-especie\". El texto en sí se presenta como una constelación de ideas en lugar de una narrativa lineal, invitando al lector a participar activamente y a establecer sus propias conexiones."
                     },
                     status: "forthcoming", 
                     formats: [],
@@ -341,7 +341,7 @@
                     }
 
                     const bookTitle = book.title[lang] || book.title.en;
-                    const bookAuthors = book.status === 'forthcoming' ? content[lang]['status.forthcoming'] : book.authors.join(' & ');
+                    const bookAuthors = (book.authors && book.authors.length > 0) ? book.authors.join(' & ') : content[lang]['status.forthcoming'];
 
                     const bookHTML = `
                         <div class="flex items-start gap-4 cursor-pointer book-item" data-book-id="${book.id}">
@@ -366,7 +366,7 @@
             function openBookModal(book, lang) {
                 const coverUrl = book.coverImage[lang] || book.coverImage.en;
                 const bookTitle = book.title[lang] || book.title.en;
-                const bookAuthors = book.status === 'forthcoming' ? '' : `<p class="font-f2 text-lg mb-4 text-c2/80">${book.authors.join(' & ')}</p>`;
+                const bookAuthors = (book.authors && book.authors.length > 0) ? `<p class="font-f2 text-lg mb-4 text-c2/80">${book.authors.join(' & ')}</p>` : '';
                 const synopsisHTML = (book.synopsis[lang] || book.synopsis.en).split('\n').map(p => `<p class="mb-4">${p}</p>`).join('');
 
                 const storesHTML = book.stores.map(store => `<a href="${store.url}" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`).join(' ');
