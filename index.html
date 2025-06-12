@@ -318,8 +318,8 @@
                         es: "https://i.postimg.cc/G242b3dP/Mindkind-cover-espa-ol-letras-blancas.png"
                     },
                     synopsis: { 
-                        en: "\"Mindkind: The cognitive community\" explores what happens when human minds and AI systems become so intertwined we can't tell where one ends and the other begins. It's not science fiction but our current reality, where algorithms shape our desires, attention, and even how we think. The book introduces "distributed authorship" where texts emerge from human-AI collaboration, making it impossible to say who really wrote what. It maps out new power structures based on processing speed, memory capacity, and network connections, creating fresh forms of inequality. This is basically a guide to understanding how we're already living as human-machine hybrids, whether we realize it or not. The book is designed for exploration rather than linear reading, with chapters that resonate and connect in multiple ways. It offers practical strategies for maintaining human agency while navigating this hybrid existence. The goal isn't to reject technology but to consciously shape how we coexist with synthetic intelligences.",
-                        es: "\"Mindkind: La comunidad cognitiva\" explora qué sucede cuando las mentes humanas y los sistemas de IA se entrelazan tanto que no podemos distinguir dónde termina una y empieza la otra. No es ciencia ficción sino nuestra realidad actual, donde los algoritmos moldean nuestros deseos, atención e incluso cómo pensamos. El libro introduce la "autoría distribuida" donde los textos emergen de la colaboración humano-IA, haciendo imposible decir quién realmente escribió qué. Mapea nuevas estructuras de poder basadas en velocidad de procesamiento, capacidad de memoria y conexiones de red, creando formas inéditas de desigualdad. Es básicamente una guía para entender cómo ya vivimos como híbridos humano-máquina, nos demos cuenta o no. El libro está diseñado para la exploración más que la lectura lineal, con capítulos que resuenan y se conectan de múltiples formas. Ofrece estrategias prácticas para mantener la agencia humana mientras navegamos esta existencia híbrida. El objetivo no es rechazar la tecnología sino dar forma consciente a cómo coexistimos con inteligencias sintéticas."
+                        en: "\"Mindkind\" explores the blurring boundaries between human and synthetic minds, presenting a present reality where humans, digital avatars, and AI intertwine deeply. It argues against viewing this as a distant future or simple dystopia/utopia, instead framing it as an emergent condition challenging our understanding of humanity. The book examines how daily reliance on algorithms and AI assistance shapes our lives, decisions, and even sense of self. It suggests that we lack adequate language and frameworks to fully comprehend and respond to this new \"Mindkind\" reality. The text itself is presented as a constellation of ideas rather than a linear narrative, inviting the reader to actively engage and form their own connections.",
+                        es: "\"Mente-especie\" explora los límites cada vez más difusos entre las mentes humanas y sintéticas, presentando una realidad presente en la que humanos, avatares digitales e IA se entrelazan profundamente. Argumenta en contra de ver esto como un futuro lejano o una simple distopía/utopía, enmarcándolo en cambio como una condición emergente que desafía nuestra comprensión de la humanidad. El libro examina cómo la dependencia diaria de los algoritmos y la asistencia de la IA da forma a nuestras vidas, decisiones e incluso al sentido de nuestro yo. Sugiere que carecemos de un lenguaje y unos marcos adecuados para comprender y responder plenamente a esta nueva realidad de \"Mente-especie\". El texto en sí se presenta como una constelación de ideas en lugar de una narrativa lineal, invitando al lector a participar activamente y a establecer sus propias conexiones."
                     },
                     status: "forthcoming", 
                     formats: [],
@@ -459,12 +459,8 @@
                         e.preventDefault();
                         const targetElement = document.querySelector(href);
                         if (targetElement) {
-                            const headerOffset = document.getElementById('site-header').offsetHeight;
-                            const elementPosition = targetElement.getBoundingClientRect().top;
-                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                      
                             window.scrollTo({
-                                 top: offsetPosition,
+                                 top: targetElement.offsetTop - document.getElementById('site-header').offsetHeight,
                                  behavior: "smooth"
                             });
                         }
