@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kwalia | AI First Entertainment</title>
     <link rel="icon" type="image/png" href="https://i.postimg.cc/tTLpqqzd/kwalia-icon-g-wbg-SQUARED-32x32-px.png">
-
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Kwalia | AI First Entertainment">
     <meta property="og:description" content="We believe that artificial intelligence can craft stories and non-fiction books powerful enough to inspire, challenge, and transform the world.">
-    <meta property="og:image" content="https://i.postimg.cc/pLGR7ggb/logo-kwalia5-g-Wbg-1200x300-px.png">
+    <meta property="og:image" content="https://i.postimg.cc/VkZ5M7Bg/logo-kwalia5-g-Wbg-1200x1200-px.png">
     <meta property="og:url" content="https://kwalia.ai">
     <meta name="twitter:card" content="summary_large_image">
-
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts CDN -->
@@ -276,8 +274,27 @@
             };
 
             const newCitizenshipsCatalogue = [
-                { title: "Universal Declaration of AI Rights", author: "by Javier del Puerto & Rado Molina", coverText: "Universal AI Rights", status: "published", formats: [{ type: "book", url: "https://www.amazon.co.uk/Universal-Declaration-AI-Rights-Persons-ebook/dp/B0F2ZVHZBP" }, { type: "audiobook", url: "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY" }] },
-                { title: "Mindkind", author: "Forthcoming", coverText: "Mindkind", status: "forthcoming", formats: [] }
+                { 
+                    title: "Universal Declaration of AI Rights", 
+                    author: "by Javier del Puerto & Rado Molina", 
+                    coverImage: {
+                        en: "https://i.postimg.cc/7YFLwrW0/Universal-Declaration-of-AI-Rights.png",
+                        es: "https://i.postimg.cc/SsgshXBx/Declaraci-n-Universal-de-los-derechos-de-las-IAs.png"
+                    },
+                    status: "published", 
+                    formats: [{ type: "book", url: "https://www.amazon.co.uk/Universal-Declaration-AI-Rights-Persons-ebook/dp/B0F2ZVHZBP" }, { type: "audiobook", url: "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY" }] 
+                },
+                { 
+                    title: "Mindkind", 
+                    author: "Forthcoming", 
+                    coverImage: {
+                        en: "", // No cover yet
+                        es: ""
+                    },
+                    coverText: "Mindkind", 
+                    status: "forthcoming", 
+                    formats: [] 
+                }
             ];
 
             const catalogueContainer = document.getElementById('new-citizenships-catalogue');
@@ -285,8 +302,14 @@
             function renderCatalogue(lang) {
                 catalogueContainer.innerHTML = '';
                 newCitizenshipsCatalogue.forEach(book => {
+                    const coverUrl = book.coverImage[lang] || book.coverImage.en || "";
+                    let coverHTML = `<div class="w-16 h-24 bg-c1 flex items-center justify-center font-f3 text-xs text-center p-1 rounded">${book.coverText || ''}</div>`;
+                    if (coverUrl) {
+                        coverHTML = `<img src="${coverUrl}" alt="${book.title} cover" class="w-16 h-24 object-cover rounded shadow-md">`;
+                    }
+
                     const formatsHTML = book.formats.map(format => `<a href="${format.url}" target="_blank" rel="noopener noreferrer" class="text-c3 text-sm font-bold hover:underline" data-key-format="${format.type}">${content[lang][`format.${format.type}`]}</a>`).join(' | ');
-                    const bookHTML = `<div class="flex items-center gap-4"><div class="w-16 h-24 bg-c1 flex items-center justify-center font-f3 text-xs text-center p-1 rounded">${book.coverText}</div><div><p class="font-f2 font-bold">${book.title}</p><p class="font-f2 text-sm">${book.status === 'forthcoming' ? content[lang]['status.forthcoming'] : book.author}</p><div>${formatsHTML}</div></div></div>`;
+                    const bookHTML = `<div class="flex items-center gap-4">${coverHTML}<div><p class="font-f2 font-bold">${book.title}</p><p class="font-f2 text-sm">${book.status === 'forthcoming' ? content[lang]['status.forthcoming'] : book.author}</p><div>${formatsHTML}</div></div></div>`;
                     catalogueContainer.innerHTML += bookHTML;
                 });
             }
@@ -327,8 +350,18 @@
                 anchor.addEventListener('click', function (e) {
                     const href = this.getAttribute('href');
                     if (href && href.length > 1) {
+                        e.preventDefault();
                         const targetElement = document.querySelector(href);
-                        if (targetElement) { e.preventDefault(); targetElement.scrollIntoView({ behavior: 'smooth' }); }
+                        if (targetElement) {
+                            const headerOffset = document.getElementById('site-header').offsetHeight;
+                            const elementPosition = targetElement.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                      
+                            window.scrollTo({
+                                 top: offsetPosition,
+                                 behavior: "smooth"
+                            });
+                        }
                     }
                 });
             });
