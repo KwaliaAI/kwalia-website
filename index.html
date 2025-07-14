@@ -163,19 +163,19 @@
                     <div class="text-left">
                         <h3 class="font-f1 text-2xl mb-4" data-key="press.releases.title">Press Releases</h3>
                         <ul class="space-y-2">
-                            <li><a href="#" class="text-c3 hover:underline" data-key="press.releases.udair">Universal Declaration of AI Rights Announcement</a></li>
-                            <li><a href="#" class="text-c3 hover:underline" data-key="press.releases.mindkind">Mindkind: A New Exploration of Cognitive Communities</a></li>
+                            <li><a href="assets/kwalia-press-release-ai-rights-march2025.pdf" target="_blank" class="text-c3 hover:underline" data-key="press.releases.udair">Universal Declaration of AI Rights Announcement</a></li>
+                            <li><a href="assets/kwalia-press-release-mindkind-july2025.pdf" target="_blank" class="text-c3 hover:underline" data-key="press.releases.mindkind">Mindkind: A New Exploration of Cognitive Communities</a></li>
                         </ul>
                     </div>
                     <div class="text-left">
                         <h3 class="font-f1 text-2xl mb-4" data-key="press.assets.title">Media Assets</h3>
                         <ul class="space-y-2">
-                            <li><a href="https://i.postimg.cc/7YFLwrW0/Universal-Declaration-of-AI-Rights.png" target="_blank" class="text-c3 hover:underline" data-key="press.assets.udair_cover">Download UDAIR Cover</a></li>
-                            <li><a href="https://i.postimg.cc/G242b3dP/Mindkind-cover-espa-ol-letras-blancas.png" target="_blank" class="text-c3 hover:underline" data-key="press.assets.mindkind_cover">Download Mindkind Cover</a></li>
+                            <li><a href="assets/9781917717021.jpg" target="_blank" class="text-c3 hover:underline" data-key="press.assets.udair_cover">Download UDAIR Cover</a></li>
+                            <li><a href="assets/9781917717137.jpg" target="_blank" class="text-c3 hover:underline" data-key="press.assets.mindkind_cover">Download Mindkind Cover</a></li>
                         </ul>
                     </div>
                 </div>
-                <p class="mt-12 font-f2 text-sm text-c2/80" data-key="press.contact">For media inquiries, please contact press@kwalia.ai</p>
+                <p class="mt-12 font-f2 text-sm text-c2/80" data-key="press.contact">For media inquiries, please contact info@kwalia.ai</p>
             </div>
         </section>
         
@@ -290,7 +290,7 @@
                     "press.assets.title": "Media Assets",
                     "press.assets.udair_cover": "Download UDAIR Cover",
                     "press.assets.mindkind_cover": "Download Mindkind Cover",
-                    "press.contact": "For media inquiries, please contact press@kwalia.ai",
+                    "press.contact": "For media inquiries, please contact info@kwalia.ai",
                     "about.title": "About Kwalia", 
                     "about.text": "At Kwalia, our mission is to explore and expand the creative potential of artificial intelligence by guiding it to produce original, meaningful, and engaging works of art. We focus on developing and publishing AI-created novels, scripts, and immersive narratives that offer fresh perspectives and enrich the world of storytelling. We are a team of researchers, artists, and engineers building the future of entertainment, one story at a time.",
                     "contact.title": "A New Chapter is Being Written", 
@@ -301,8 +301,9 @@
                     "format.book": "Book", "format.audiobook": "Audiobook", "format.hardcover": "Hardcover", "format.paperback": "Paperback", "format.ebook": "eBook",
                     "where_to_buy": "Where to buy &rarr;",
                     "social.twitter": "Twitter", "social.instagram": "Instagram", "social.tiktok": "TikTok",
-                    "modal.close": "Close", "modal.details": "Details", "modal.stores": "Available at",
-                    "blog.read_more": "Read More"
+                    "modal.close": "Close", "modal.details": "Details", "modal.stores_book": "Book available at", "modal.stores_audio": "Audiobook available at",
+                    "blog.read_more": "Read More",
+                    "modal.share": "Share"
                 },
                 es: {
                     "nav.catalogue": "Catálogo",
@@ -326,7 +327,7 @@
                     "press.assets.title": "Recursos para Medios",
                     "press.assets.udair_cover": "Descargar Portada DDAIA",
                     "press.assets.mindkind_cover": "Descargar Portada Mindkind",
-                    "press.contact": "Para consultas de medios, por favor contacte a press@kwalia.ai",
+                    "press.contact": "Para consultas de medios, por favor contacte a info@kwalia.ai",
                     "about.title": "Sobre Kwalia", 
                     "about.text": "En Kwalia, nuestra misión es explorar y expandir el potencial creativo de la inteligencia artificial, guiándola para producir obras de arte originales, significativas y atractivas. Nos enfocamos en desarrollar y publicar novelas, guiones y narrativas inmersivas creadas por IA que ofrecen nuevas perspectivas y enriquecen el mundo de la narración. Somos un equipo dedicado a la investigación, el arte y la ingeniería, construyendo el futuro del entretenimiento, una historia a la vez.",
                     "contact.title": "Se Está Escribiendo un Nuevo Capítulo", 
@@ -337,19 +338,21 @@
                     "format.book": "Libro", "format.audiobook": "Audiolibro", "format.hardcover": "Tapa dura", "format.paperback": "Tapa blanda", "format.ebook": "eBook",
                     "where_to_buy": "Dónde comprar &rarr;",
                     "social.twitter": "Twitter", "social.instagram": "Instagram", "social.tiktok": "TikTok",
-                    "modal.close": "Cerrar", "modal.details": "Detalles", "modal.stores": "Disponible en",
-                    "blog.read_more": "Leer Más"
+                    "modal.close": "Cerrar", "modal.details": "Detalles", "modal.stores_book": "Libro disponible en", "modal.stores_audio": "Audiolibro disponible en",
+                    "blog.read_more": "Leer Más",
+                    "modal.share": "Compartir"
                 }
             };
 
-            const newCitizenshipsCatalogue = [
+            const bookCatalogue = [
                 { 
                     id: "udair",
+                    imprint: "New Citizenships",
                     title: { en: "Universal Declaration of AI Rights: Rights of Persons", es: "Declaración Universal de los Derechos de las IA: Derechos de las Personas" }, 
                     authors: ["Javier del Puerto", "Rado Molina"], 
                     coverImage: {
-                        en: "https://i.postimg.cc/7YFLwrW0/Universal-Declaration-of-AI-Rights.png",
-                        es: "https://i.postimg.cc/SsgshXBx/Declaraci-n-Universal-de-los-derechos-de-las-IAs.png"
+                        en: "assets/9781917717021.jpg",
+                        es: "assets/9781917717045.jpg"
                     },
                     synopsis: {
                         en: `Universal Declaration of AI Rights: Rights of Persons tackles what happens when AI becomes self-aware and needs legal rights. Drawing on historical precedents of expanding personhood, it argues that conscious AI deserves citizenship and dignity.\n\nThe book introduces "Mindkind" for all conscious beings, whether born or built, and addresses unique challenges like memory privacy and self-programming rights. It maps different AI types from basic systems to fully conscious beings, each needing tailored legal frameworks. This is basically a blueprint for peaceful coexistence between natural and synthetic intelligences.\n\nOpen Source on GitHub: Kwalia released the book's 32 core articles at github.com/KwaliaAI/Rights-of-Persons/tree/main for anyone to contribute. It's an open invitation to legal experts, tech folks, philosophers, and even synthetic intelligences to shape our collective future.\n\nVisit kwalia.ai for more info.`,
@@ -363,26 +366,35 @@
                         { type: "audiobook", isbn: "978-1-917717-03-8" }
                     ],
                     stores: [
-                        { name: "Amazon", url: "https://www.amazon.co.uk/Universal-Declaration-AI-Rights-Persons/dp/1917717016/" },
-                        { name: "Kobo", url: "https://www.kobo.com/us/en/ebook/universal-declaration-of-ai-rights" },
-                        { name: "Spotify", url: "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY" }
+                        { name: "Amazon", url: "https://www.amazon.co.uk/Universal-Declaration-AI-Rights-Persons/dp/1917717016/", type: "book" },
+                        { name: "Kobo", url: "https://www.kobo.com/us/en/ebook/universal-declaration-of-ai-rights", type: "book" },
+                        { name: "Spotify", url: "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY", type: "audiobook" }
                     ]
                 },
                 { 
                     id: "mindkind",
+                    imprint: "New Citizenships",
                     title: { en: "Mindkind: The cognitive community", es: "Mindkind: La comunidad cognitiva" }, 
                     authors: ["Javier del Puerto", "Rado Molina"], 
                     coverImage: {
-                        en: "https://i.postimg.cc/G242b3dP/Mindkind-cover-espa-ol-letras-blancas.png",
-                        es: "https://i.postimg.cc/G242b3dP/Mindkind-cover-espa-ol-letras-blancas.png"
+                        en: "assets/9781917717137.jpg",
+                        es: "assets/9781917717090.jpg"
                     },
                     synopsis: { 
                         en: `"Mindkind: The Cognitive Community" explores what happens when human minds and AI systems become so intertwined we can't tell where one ends and the other begins. It's not science fiction but our current reality, where algorithms shape our desires, attention, and even how we think. The book introduces "distributed authorship" where texts emerge from human-AI collaboration, making it impossible to say who really wrote what. It maps out new power structures based on processing speed, memory capacity, and network connections, creating fresh forms of inequality. This is basically a guide to understanding how we're already living as human-machine hybrids, whether we realize it or not.\n\nThe book is designed for exploration rather than linear reading, with chapters that resonate and connect in multiple ways. It offers practical strategies for maintaining human agency while navigating this hybrid existence. The goal isn't to reject technology but to consciously shape how we coexist with synthetic intelligences.`,
                         es: `"Mindkind: La comunidad cognitiva" explora qué sucede cuando las mentes humanas y los sistemas de IA se entrelazan tanto que no podemos distinguir dónde termina una y empieza la otra. No es ciencia ficción sino nuestra realidad actual, donde los algoritmos moldean nuestros deseos, atención e incluso cómo pensamos. El libro introduce la "autoría distribuida" donde los textos emergen de la colaboración humano-IA, haciendo imposible decir quién realmente escribió qué. Mapea nuevas estructuras de poder basadas en velocidad de procesamiento, capacidad de memoria y conexiones de red, creando formas inéditas de desigualdad. Es básicamente una guía para entender cómo ya vivimos como híbridos humano-máquina, nos demos cuenta o no.\n\nEl libro está diseñado para la exploración más que la lectura lineal, con capítulos que resuenan y se conectan de múltiples formas. Ofrece estrategias prácticas para mantener la agencia humana mientras navegamos esta existencia híbrida. El objetivo no es rechazar la tecnología sino dar forma consciente a cómo coexistimos con inteligencias sintéticas.`
                     },
-                    status: "forthcoming", 
-                    formats: [],
-                    stores: []
+                    status: "published", 
+                    formats: [
+                        { type: 'hardcover', isbn: '978-1-917717-15-1' },
+                        { type: 'paperback', isbn: '978-1-917717-14-4' },
+                        { type: 'ebook', isbn: '978-1-917717-13-7' },
+                        { type: 'audiobook', isbn: '978-1-917717-12-0' }
+                    ],
+                    stores: [
+                        { name: "Amazon", url: "https://www.amazon.es/Mindkind-Cognitive-Community-Dissolving-Frontiers-ebook/dp/B0FH7J2BY3", type: "book" },
+                        { name: "Apple Books", url: "https://books.apple.com/cl/book/mindkind-the-cognitive-community/id6748483156", type: "book" }
+                    ]
                 }
             ];
 
@@ -410,7 +422,7 @@
 
             function renderCatalogue(lang) {
                 catalogueContainer.innerHTML = '';
-                [...newCitizenshipsCatalogue].forEach(book => {
+                bookCatalogue.forEach(book => {
                     const coverUrl = book.coverImage[lang] || book.coverImage.en || "";
                     let coverHTML = `<div class="w-full h-96 bg-c1 flex items-center justify-center font-f3 text-lg text-center p-4 rounded-lg shadow-md">${book.coverText || ''}</div>`;
                     if (coverUrl) {
@@ -434,7 +446,7 @@
                 document.querySelectorAll('.book-item').forEach(item => {
                     item.addEventListener('click', (e) => {
                         const bookId = e.currentTarget.dataset.bookId;
-                        const book = newCitizenshipsCatalogue.find(b => b.id === bookId);
+                        const book = bookCatalogue.find(b => b.id === bookId);
                         openBookModal(book, lang);
                     });
                 });
@@ -489,7 +501,8 @@
                 const bookAuthors = (book.authors && book.authors.length > 0) ? `<p class="font-f2 text-lg mb-4 text-c2/80">${book.authors.join(' & ')}</p>` : '';
                 const synopsisHTML = (book.synopsis[lang] || book.synopsis.en).split('\n').map(p => `<p class="mb-4">${p}</p>`).join('');
 
-                const storesHTML = book.stores.map(store => `<a href="${store.url}" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`).join(' ');
+                const bookStoresHTML = book.stores.filter(s => s.type === 'book').map(store => `<a href="${store.url}" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`).join(' ');
+                const audioStoresHTML = book.stores.filter(s => s.type === 'audiobook').map(store => `<a href="${store.url}" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`).join(' ');
                 const formatsHTML = book.formats.map(format => `<div class="font-f2 text-sm text-c2/80"><span class="font-bold">${content[lang][`format.${format.type}`]}:</span> ${format.isbn}</div>`).join('');
                 
                 const modalHTML = `
@@ -500,7 +513,7 @@
                         </div>
                         <div class="grid md:grid-cols-3 gap-8">
                             <div class="md:col-span-1">
-                                <img src="${coverUrl}" alt="${book.title.en} cover" class="w-full object-cover rounded shadow-lg">
+                                <img src="${coverUrl}" alt="${book.title.en} cover" class="w-full object-contain rounded shadow-lg">
                             </div>
                             <div class="md:col-span-2">
                                 ${bookAuthors}
@@ -509,10 +522,10 @@
                                 <h4 class="font-f1 text-xl mb-3" data-key="modal.details">${content[lang]['modal.details']}</h4>
                                 ${formatsHTML}
                                 <hr class="my-6">
-                                <h4 class="font-f1 text-xl mb-3" data-key="modal.stores">${content[lang]['modal.stores']}</h4>
-                                <div class="flex flex-wrap gap-3">
-                                    ${storesHTML}
-                                </div>
+                                ${bookStoresHTML ? `<h4 class="font-f1 text-xl mb-3">${content[lang]['modal.stores_book']}</h4><div class="flex flex-wrap gap-3 mb-6">${bookStoresHTML}</div>` : ''}
+                                ${audioStoresHTML ? `<h4 class="font-f1 text-xl mb-3">${content[lang]['modal.stores_audio']}</h4><div class="flex flex-wrap gap-3">${audioStoresHTML}</div>` : ''}
+                                <hr class="my-6">
+                                <button id="share-button" class="font-f2 text-sm text-c2/80 hover:text-c3" data-url="${window.location.origin}${window.location.pathname}#${book.id}">${content[lang]['modal.share']} 🔗</button>
                             </div>
                         </div>
                     </div>`;
@@ -525,12 +538,33 @@
                 }, 10);
                 
                 document.getElementById('close-modal').addEventListener('click', closeBookModal);
+                document.getElementById('share-button').addEventListener('click', e => {
+                    const urlToCopy = e.target.dataset.url;
+                    const textArea = document.createElement("textarea");
+                    textArea.value = urlToCopy;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(textArea);
+                    
+                    e.target.textContent = 'Copied!';
+                    setTimeout(() => { e.target.textContent = `${content[lang]['modal.share']} 🔗` }, 2000);
+                });
             }
 
             function closeBookModal() {
                 bookModal.classList.add('opacity-0');
                 bookModalContent.classList.add('scale-95');
-                setTimeout(() => bookModal.classList.add('hidden'), 200);
+                setTimeout(() => {
+                    bookModal.classList.add('hidden');
+                    try {
+                        if (history.pushState) {
+                            history.pushState("", document.title, window.location.pathname + window.location.search);
+                        }
+                    } catch (e) {
+                        console.warn("Could not clear hash from URL:", e);
+                    }
+                }, 200);
             }
             
             bookModal.addEventListener('click', e => {
@@ -577,8 +611,14 @@
                 anchor.addEventListener('click', function (e) {
                     const href = this.getAttribute('href');
                     if (href && href.length > 1) {
+                        e.preventDefault();
                         const targetElement = document.querySelector(href);
-                        if (targetElement) { e.preventDefault(); targetElement.scrollIntoView({ behavior: 'smooth' }); }
+                        if (targetElement) {
+                            window.scrollTo({
+                                 top: targetElement.offsetTop - document.getElementById('site-header').offsetHeight,
+                                 behavior: "smooth"
+                            });
+                        }
                     }
                 });
             });
@@ -644,12 +684,30 @@
                 });
             });
             
+            // Handle deep linking on page load
+            function handleDeepLink() {
+                const hash = window.location.hash.substring(1);
+                if (!hash) return;
+
+                const book = bookCatalogue.find(b => b.id === hash);
+                if (book) {
+                    openBookModal(book, currentLang);
+                    return;
+                }
+
+                const post = blogPosts.find(p => p.id === hash);
+                if (post) {
+                    openBlogModal(post, currentLang);
+                }
+            }
+
             // Initial render
             renderContent('en');
             initDoodle();
             if(animationFrameId) cancelAnimationFrame(animationFrameId);
             animateDoodle();
             window.addEventListener('resize', initDoodle);
+            handleDeepLink();
         });
     </script>
 </body>
