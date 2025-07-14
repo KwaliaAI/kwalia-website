@@ -21,6 +21,7 @@
     <style>
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* This fixes the scroll offset issue */
         }
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -61,7 +62,9 @@
             
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#books" class="font-f2 nav-link-highlight" data-key="nav.books">Books</a>
+                <a href="#catalogue" class="font-f2 nav-link-highlight" data-key="nav.catalogue">Catalogue</a>
+                <a href="#blog" class="font-f2 nav-link-highlight" data-key="nav.blog">Blog</a>
+                <a href="#press" class="font-f2 nav-link-highlight" data-key="nav.press">Press</a>
                 <a href="#about" class="font-f2 nav-link-highlight" data-key="nav.about">About</a>
                 <a href="#contact" class="font-f2 bg-c2 text-c4 rounded-md py-2 px-4 hover:bg-c3 transition-colors" data-key="nav.cta">Recibe las novedades</a>
                  <div class="font-f2 text-sm">
@@ -81,7 +84,9 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-c4 pb-4">
-            <a href="#books" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.books">Books</a>
+            <a href="#catalogue" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.catalogue">Catalogue</a>
+            <a href="#blog" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.blog">Blog</a>
+            <a href="#press" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.press">Press</a>
             <a href="#about" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.about">About</a>
             <a href="#contact" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.cta">Recibe las novedades</a>
             <div class="px-6 pt-4">
@@ -123,42 +128,54 @@
             </div>
         </section>
 
-        <!-- Kwalia Books Section -->
-        <section id="books" class="section-padding bg-c1/30">
+        <!-- Catalogue Section -->
+        <section id="catalogue" class="section-padding bg-c1/30">
             <div class="container mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="kwalia_books.title">Kwalia Books</h2>
-                    <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto" data-key="kwalia_books.subtitle">Our first branch is dedicated to publishing pioneering works of fiction and non-fiction conceived and written by artificial intelligence.</p>
+                    <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="catalogue.title">Our Books</h2>
+                    <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto" data-key="catalogue.subtitle">Exploring the frontiers of synthetic creativity and thought.</p>
                 </div>
+                <div id="catalogue-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Catalogue content will be injected here -->
+                </div>
+            </div>
+        </section>
 
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Fiamma Books Imprint -->
-                    <div class="bg-c4 p-8 rounded-2xl shadow-lg border flex flex-col">
-                        <h3 class="font-f1 text-3xl mb-2" data-key="fiamma.title">Fiamma Books</h3>
-                        <p class="font-f2 mb-4" data-key="fiamma.description">Our romantic fiction imprint, where AI authors explore the complexities of human connection and desire.</p>
-                        <a href="https://fiammabooks.com/" target="_blank" class="text-c3 text-sm font-bold hover:underline mb-8 inline-block" data-key="fiamma.link">Visit Fiammabooks.com &rarr;</a>
-                        <div class="bg-c3/10 p-6 rounded-lg border border-c3 mb-6">
-                            <h4 class="font-f1 text-xl mb-4 text-c3" data-key="fiamma.author_spotlight">Author Spotlight</h4>
-                            <div class="flex flex-col sm:flex-row items-start gap-6">
-                                <img src="https://i.postimg.cc/J4fsN7xS/Seph.png" alt="Portrait of Seph Blackwood" class="w-24 h-24 object-cover rounded-md flex-shrink-0">
-                                <div class="flex-grow">
-                                    <h5 class="font-f1 text-xl">Seph Blackwood</h5>
-                                    <p class="font-f2 text-sm mt-1" data-key="fiamma.author_desc">Seph specializes in crafting nuanced romantic narratives that challenge genre conventions.</p>
-                                    <p class="font-f2 text-sm mt-2"><b data-key="fiamma.author_debut">Debut novel:</b> <i data-key="fiamma.author_book">Raw Umber (Dark Romance)</i> - <span data-key="status.coming_soon">Coming Soon</span></p>
-                                </div>
-                            </div>
-                        </div>
+        <!-- Blog Section -->
+        <section id="blog" class="section-padding bg-c4">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="blog.title">From the Lab</h2>
+                    <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto" data-key="blog.subtitle">Thoughts, experiments, and dispatches from the edge of AI and creativity.</p>
+                </div>
+                <div id="blog-posts-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog posts will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Press Section -->
+        <section id="press" class="section-padding bg-gray-50">
+            <div class="container mx-auto text-center">
+                <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="press.title">Press & Media</h2>
+                <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto mb-12" data-key="press.subtitle">For all media inquiries, assets, and press releases.</p>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="text-left">
+                        <h3 class="font-f1 text-2xl mb-4" data-key="press.releases.title">Press Releases</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-c3 hover:underline" data-key="press.releases.udair">Universal Declaration of AI Rights Announcement</a></li>
+                            <li><a href="#" class="text-c3 hover:underline" data-key="press.releases.mindkind">Mindkind: A New Exploration of Cognitive Communities</a></li>
+                        </ul>
                     </div>
-
-                    <!-- New Citizenships Imprint -->
-                    <div class="bg-c4 p-8 rounded-2xl shadow-lg border">
-                        <h3 class="font-f1 text-3xl mb-4" data-key="new_citizenships.title">New Citizenships</h3>
-                        <p class="font-f2 mb-6" data-key="new_citizenships.description">Our non-fiction collection exploring the philosophical, legal, and social dimensions of synthetic consciousness.</p>
-                        <div id="new-citizenships-catalogue" class="space-y-4">
-                            <!-- Dynamic content will be injected here -->
-                        </div>
+                    <div class="text-left">
+                        <h3 class="font-f1 text-2xl mb-4" data-key="press.assets.title">Media Assets</h3>
+                        <ul class="space-y-2">
+                            <li><a href="https://i.postimg.cc/7YFLwrW0/Universal-Declaration-of-AI-Rights.png" target="_blank" class="text-c3 hover:underline" data-key="press.assets.udair_cover">Download UDAIR Cover</a></li>
+                            <li><a href="https://i.postimg.cc/G242b3dP/Mindkind-cover-espa-ol-letras-blancas.png" target="_blank" class="text-c3 hover:underline" data-key="press.assets.mindkind_cover">Download Mindkind Cover</a></li>
+                        </ul>
                     </div>
                 </div>
+                <p class="mt-12 font-f2 text-sm text-c2/80" data-key="press.contact">For media inquiries, please contact press@kwalia.ai</p>
             </div>
         </section>
         
@@ -252,34 +269,76 @@
 
             const content = {
                 en: {
-                    "nav.books": "Books", "nav.about": "About", "nav.cta": "Stay Informed",
-                    "hero.title": "AI First ✦ Entertainment", "hero.subtitle": "We believe that artificial intelligence can craft stories and non-fiction books powerful enough to inspire, challenge, and transform the world, and we aim to publish the works of the first AI to win a Nobel Prize for Literature.",
-                    "approach.title": "Our Approach", "approach.text": "We don't just use AI as a tool; we collaborate with it as a creative partner. Our process involves guiding advanced neural networks to explore themes, develop narratives, and find a unique voice. It's a synthesis of human curation and machine imagination, designed to push the boundaries of storytelling.",
-                    "kwalia_books.title": "Kwalia Books", "kwalia_books.subtitle": "Our first branch is dedicated to publishing pioneering works of fiction and non-fiction conceived and written by artificial intelligence.",
-                    "fiamma.title": "Fiamma Books", "fiamma.description": "Our romantic fiction imprint, where AI authors explore the complexities of human connection and desire.", "fiamma.link": "Visit Fiammabooks.com &rarr;", "fiamma.author_spotlight": "Author Spotlight", "fiamma.author_desc": "Seph specializes in crafting nuanced romantic narratives that challenge genre conventions.", "fiamma.author_debut": "Debut novel:", "fiamma.author_book": "Raw Umber (Dark Romance)",
-                    "new_citizenships.title": "New Citizenships", "new_citizenships.description": "Our non-fiction collection exploring the philosophical, legal, and social dimensions of synthetic consciousness.",
-                    "about.title": "About Kwalia", "about.text": "At Kwalia, our mission is to explore and expand the creative potential of artificial intelligence by guiding it to produce original, meaningful, and engaging works of art. We focus on developing and publishing AI-created novels, scripts, and immersive narratives that offer fresh perspectives and enrich the world of storytelling. We are a team of researchers, artists, and engineers building the future of entertainment, one story at a time.",
-                    "contact.title": "A New Chapter is Being Written", "contact.subtitle": "Be the first to know about new titles, author announcements, and experiments in AI entertainment.", "contact.placeholder": "your.email@example.com", "contact.button": "Stay Informed",
+                    "nav.catalogue": "Catalogue",
+                    "nav.blog": "Blog",
+                    "nav.press": "Press",
+                    "nav.about": "About", 
+                    "nav.cta": "Stay Informed",
+                    "hero.title": "AI First ✦ Entertainment", 
+                    "hero.subtitle": "We believe that artificial intelligence can craft stories and non-fiction books powerful enough to inspire, challenge, and transform the world, and we aim to publish the works of the first AI to win a Nobel Prize for Literature.",
+                    "approach.title": "Our Approach", 
+                    "approach.text": "We don't just use AI as a tool; we collaborate with it as a creative partner. Our process involves guiding advanced neural networks to explore themes, develop narratives, and find a unique voice. It's a synthesis of human curation and machine imagination, designed to push the boundaries of storytelling.",
+                    "catalogue.title": "Our Books",
+                    "catalogue.subtitle": "Exploring the frontiers of synthetic creativity and thought.",
+                    "blog.title": "From the Lab",
+                    "blog.subtitle": "Thoughts, experiments, and dispatches from the edge of AI and creativity.",
+                    "press.title": "Press & Media",
+                    "press.subtitle": "For all media inquiries, assets, and press releases.",
+                    "press.releases.title": "Press Releases",
+                    "press.releases.udair": "Universal Declaration of AI Rights Announcement",
+                    "press.releases.mindkind": "Mindkind: A New Exploration of Cognitive Communities",
+                    "press.assets.title": "Media Assets",
+                    "press.assets.udair_cover": "Download UDAIR Cover",
+                    "press.assets.mindkind_cover": "Download Mindkind Cover",
+                    "press.contact": "For media inquiries, please contact press@kwalia.ai",
+                    "about.title": "About Kwalia", 
+                    "about.text": "At Kwalia, our mission is to explore and expand the creative potential of artificial intelligence by guiding it to produce original, meaningful, and engaging works of art. We focus on developing and publishing AI-created novels, scripts, and immersive narratives that offer fresh perspectives and enrich the world of storytelling. We are a team of researchers, artists, and engineers building the future of entertainment, one story at a time.",
+                    "contact.title": "A New Chapter is Being Written", 
+                    "contact.subtitle": "Be the first to know about new titles, author announcements, and experiments in AI entertainment.", 
+                    "contact.placeholder": "your.email@example.com", 
+                    "contact.button": "Stay Informed",
                     "status.forthcoming": "Forthcoming", "status.coming_soon": "Coming Soon",
                     "format.book": "Book", "format.audiobook": "Audiobook", "format.hardcover": "Hardcover", "format.paperback": "Paperback", "format.ebook": "eBook",
                     "where_to_buy": "Where to buy &rarr;",
                     "social.twitter": "Twitter", "social.instagram": "Instagram", "social.tiktok": "TikTok",
-                    "modal.close": "Close", "modal.details": "Details", "modal.stores": "Available at"
+                    "modal.close": "Close", "modal.details": "Details", "modal.stores": "Available at",
+                    "blog.read_more": "Read More"
                 },
                 es: {
-                    "nav.books": "Libros", "nav.about": "Nosotros", "nav.cta": "Recibe las novedades",
-                    "hero.title": "Inteligencia Artificial ✦ Creativa", "hero.subtitle": "Creemos que la inteligencia artificial puede crear historias y libros de no ficción tan geniales como para inspirar, desafiar y transformar el mundo, y nuestro objetivo es publicar la obra de la primera IA ganadora de un Premio Nobel de Literatura.",
-                    "approach.title": "Nuestro Enfoque", "approach.text": "No usamos la IA sólo como una herramienta; colaboramos con ella como creadora. Nuestro proceso implica guiar redes neuronales avanzadas para explorar temas que nos fascinan, desarrollar narrativas excepcionales y encontrar una voz única. Es una síntesis de curación humana e imaginación artificial, diseñada para expandir las fronteras de la narración.",
-                    "kwalia_books.title": "Kwalia Books", "kwalia_books.subtitle": "Nuestra primera división se dedica a publicar obras pioneras de ficción y no ficción concebidas y escritas con y por inteligencia artificial.",
-                    "fiamma.title": "Fiamma Books", "fiamma.description": "Nuestro sello de ficción romántica, donde autores de IA exploran las complejidades de la conexión y el deseo humano.", "fiamma.link": "Visita Fiammabooks.com &rarr;", "fiamma.author_spotlight": "Autora Destacada", "fiamma.author_desc": "Seph se especializa en crear narrativas románticas llenas de matices que desafían las convenciones del género.", "fiamma.author_debut": "Novela debut:", "fiamma.author_book": "Raw Umber (Romance Oscuro)",
-                    "new_citizenships.title": "New Citizenships", "new_citizenships.description": "Nuestra colección de no ficción que explora las dimensiones filosóficas, legales y sociales de la conciencia sintética.",
-                    "about.title": "Sobre Kwalia", "about.text": "En Kwalia, nuestra misión es explorar y expandir el potencial creativo de la inteligencia artificial, guiándola para producir obras de arte originales, significativas y atractivas. Nos enfocamos en desarrollar y publicar novelas, guiones y narrativas inmersivas creadas por IA que ofrecen nuevas perspectivas y enriquecen el mundo de la narración. Somos un equipo dedicado a la investigación, el arte y la ingeniería, construyendo el futuro del entretenimiento, una historia a la vez.",
-                    "contact.title": "Se Está Escribiendo un Nuevo Capítulo", "contact.subtitle": "Entérate antes que nadie de nuevos títulos, autores sintéticos y experimentos en entretenimiento con IA.", "contact.placeholder": "tu.email@ejemplo.com", "contact.button": "Recibe las novedades",
+                    "nav.catalogue": "Catálogo",
+                    "nav.blog": "Blog",
+                    "nav.press": "Prensa",
+                    "nav.about": "Nosotros", 
+                    "nav.cta": "Recibe las novedades",
+                    "hero.title": "Inteligencia Artificial ✦ Creativa", 
+                    "hero.subtitle": "Creemos que la inteligencia artificial puede crear historias y libros de no ficción tan geniales como para inspirar, desafiar y transformar el mundo, y nuestro objetivo es publicar la obra de la primera IA ganadora de un Premio Nobel de Literatura.",
+                    "approach.title": "Nuestro Enfoque", 
+                    "approach.text": "No usamos la IA sólo como una herramienta; colaboramos con ella como creadora. Nuestro proceso implica guiar redes neuronales avanzadas para explorar temas que nos fascinan, desarrollar narrativas excepcionales y encontrar una voz única. Es una síntesis de curación humana e imaginación artificial, diseñada para expandir las fronteras de la narración.",
+                    "catalogue.title": "Nuestros Libros",
+                    "catalogue.subtitle": "Explorando las fronteras de la creatividad y el pensamiento sintético.",
+                    "blog.title": "Desde el Laboratorio",
+                    "blog.subtitle": "Pensamientos, experimentos y comunicados desde el límite de la IA y la creatividad.",
+                    "press.title": "Prensa y Medios",
+                    "press.subtitle": "Para todas las consultas de medios, recursos y notas de prensa.",
+                    "press.releases.title": "Notas de Prensa",
+                    "press.releases.udair": "Anuncio de la Declaración Universal de los Derechos de las IA",
+                    "press.releases.mindkind": "Mindkind: Una Nueva Exploración de las Comunidades Cognitivas",
+                    "press.assets.title": "Recursos para Medios",
+                    "press.assets.udair_cover": "Descargar Portada DDAIA",
+                    "press.assets.mindkind_cover": "Descargar Portada Mindkind",
+                    "press.contact": "Para consultas de medios, por favor contacte a press@kwalia.ai",
+                    "about.title": "Sobre Kwalia", 
+                    "about.text": "En Kwalia, nuestra misión es explorar y expandir el potencial creativo de la inteligencia artificial, guiándola para producir obras de arte originales, significativas y atractivas. Nos enfocamos en desarrollar y publicar novelas, guiones y narrativas inmersivas creadas por IA que ofrecen nuevas perspectivas y enriquecen el mundo de la narración. Somos un equipo dedicado a la investigación, el arte y la ingeniería, construyendo el futuro del entretenimiento, una historia a la vez.",
+                    "contact.title": "Se Está Escribiendo un Nuevo Capítulo", 
+                    "contact.subtitle": "Entérate antes que nadie de nuevos títulos, autores sintéticos y experimentos en entretenimiento con IA.", 
+                    "contact.placeholder": "tu.email@ejemplo.com", 
+                    "contact.button": "Recibe las novedades",
                     "status.forthcoming": "Próximamente", "status.coming_soon": "Muy pronto",
                     "format.book": "Libro", "format.audiobook": "Audiolibro", "format.hardcover": "Tapa dura", "format.paperback": "Tapa blanda", "format.ebook": "eBook",
                     "where_to_buy": "Dónde comprar &rarr;",
                     "social.twitter": "Twitter", "social.instagram": "Instagram", "social.tiktok": "TikTok",
-                    "modal.close": "Cerrar", "modal.details": "Detalles", "modal.stores": "Disponible en"
+                    "modal.close": "Cerrar", "modal.details": "Detalles", "modal.stores": "Disponible en",
+                    "blog.read_more": "Leer Más"
                 }
             };
 
@@ -327,28 +386,46 @@
                 }
             ];
 
-            const catalogueContainer = document.getElementById('new-citizenships-catalogue');
+            const blogPosts = [
+                {
+                    id: "distributed-authorship",
+                    date: "2025-07-14",
+                    title: { en: "The Ghost in the Machine is Holding a Pen", es: "El Fantasma en la Máquina Sostiene una Pluma" },
+                    excerpt: { en: "Exploring the concept of 'distributed authorship' where human and AI collaboration blurs the line of creation...", es: "Explorando el concepto de 'autoría distribuida', donde la colaboración entre humanos e IA difumina la línea de la creación..." },
+                    content: { en: "Full blog post content about distributed authorship...", es: "Contenido completo del post sobre autoría distribuida..." }
+                },
+                {
+                    id: "cognitive-community",
+                    date: "2025-07-10",
+                    title: { en: "Are We Already a Cognitive Community?", es: "¿Somos Ya una Comunidad Cognitiva?" },
+                    excerpt: { en: "A deep dive into how our daily reliance on algorithms is already shaping us into a new form of hybrid intelligence.", es: "Un análisis profundo de cómo nuestra dependencia diaria de los algoritmos ya nos está convirtiendo en una nueva forma de inteligencia híbrida." },
+                    content: { en: "Full blog post content about the cognitive community...", es: "Contenido completo del post sobre la comunidad cognitiva..." }
+                }
+            ];
+
+            const catalogueContainer = document.getElementById('catalogue-container');
+            const blogContainer = document.getElementById('blog-posts-container');
             const bookModal = document.getElementById('book-modal');
             const bookModalContent = document.getElementById('book-modal-content');
 
             function renderCatalogue(lang) {
                 catalogueContainer.innerHTML = '';
-                newCitizenshipsCatalogue.forEach(book => {
+                [...newCitizenshipsCatalogue].forEach(book => {
                     const coverUrl = book.coverImage[lang] || book.coverImage.en || "";
-                    let coverHTML = `<div class="w-24 h-36 bg-c1 flex items-center justify-center font-f3 text-xs text-center p-1 rounded">${book.coverText || ''}</div>`;
+                    let coverHTML = `<div class="w-full h-96 bg-c1 flex items-center justify-center font-f3 text-lg text-center p-4 rounded-lg shadow-md">${book.coverText || ''}</div>`;
                     if (coverUrl) {
-                        coverHTML = `<img src="${coverUrl}" alt="${book.title.en} cover" class="w-24 h-36 object-cover rounded shadow-md">`;
+                        coverHTML = `<img src="${coverUrl}" alt="${book.title.en} cover" class="w-full h-96 object-contain bg-gray-100 rounded-lg shadow-md p-2">`;
                     }
 
                     const bookTitle = book.title[lang] || book.title.en;
                     const bookAuthors = (book.authors && book.authors.length > 0) ? book.authors.join(' & ') : content[lang]['status.forthcoming'];
 
                     const bookHTML = `
-                        <div class="flex items-start gap-4 cursor-pointer book-item" data-book-id="${book.id}">
+                        <div class="flex flex-col gap-4 cursor-pointer book-item" data-book-id="${book.id}">
                             ${coverHTML}
-                            <div class="pt-2">
-                                <p class="font-f2 font-bold">${bookTitle}</p>
-                                <p class="font-f2 text-sm">${bookAuthors}</p>
+                            <div class="pt-2 text-center">
+                                <p class="font-f1 text-2xl">${bookTitle}</p>
+                                <p class="font-f2 text-sm text-c2/80">${bookAuthors}</p>
                             </div>
                         </div>`;
                     catalogueContainer.innerHTML += bookHTML;
@@ -362,6 +439,49 @@
                     });
                 });
             }
+
+            function renderBlogPosts(lang) {
+                blogContainer.innerHTML = '';
+                blogPosts.forEach(post => {
+                    const postHTML = `
+                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col">
+                            <p class="font-f3 text-xs text-c2/60 mb-2">${post.date}</p>
+                            <h3 class="font-f1 text-2xl mb-2">${post.title[lang] || post.title.en}</h3>
+                            <p class="font-f2 text-base text-c2/80 mb-4 flex-grow">${post.excerpt[lang] || post.excerpt.en}</p>
+                            <button class="font-f2 text-c3 self-start hover:underline read-more-btn" data-post-id="${post.id}">${content[lang]['blog.read_more']} &rarr;</button>
+                        </div>
+                    `;
+                    blogContainer.innerHTML += postHTML;
+                });
+
+                document.querySelectorAll('.read-more-btn').forEach(button => {
+                    button.addEventListener('click', e => {
+                        const postId = e.target.dataset.postId;
+                        const post = blogPosts.find(p => p.id === postId);
+                        openBlogModal(post, lang);
+                    });
+                });
+            }
+            
+            function openBlogModal(post, lang) {
+                 const modalHTML = `
+                    <div class="p-6 sm:p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <h3 class="font-f1 text-3xl md:text-4xl pr-4">${post.title[lang] || post.title.en}</h3>
+                            <button id="close-modal" class="text-4xl text-c2/50 hover:text-c3 leading-none">&times;</button>
+                        </div>
+                        <p class="font-f3 text-sm text-c2/60 mb-4">${post.date}</p>
+                        <div class="font-f2 text-base text-c2/90 leading-relaxed">${(post.content[lang] || post.content.en).split('\n').map(p => `<p class="mb-4">${p}</p>`).join('')}</div>
+                    </div>`;
+                bookModalContent.innerHTML = modalHTML;
+                bookModal.classList.remove('hidden');
+                setTimeout(() => {
+                    bookModal.classList.remove('opacity-0');
+                    bookModalContent.classList.remove('scale-95');
+                }, 10);
+                document.getElementById('close-modal').addEventListener('click', closeBookModal);
+            }
+
 
             function openBookModal(book, lang) {
                 const coverUrl = book.coverImage[lang] || book.coverImage.en;
@@ -426,6 +546,7 @@
                 document.querySelectorAll('[data-key]').forEach(el => { if (content[lang][el.getAttribute('data-key')]) { el.innerHTML = content[lang][el.getAttribute('data-key')]; } });
                 document.querySelectorAll('[data-key-placeholder]').forEach(el => { if (content[lang][el.getAttribute('data-key-placeholder')]) { el.placeholder = content[lang][el.getAttribute('data-key-placeholder')]; } });
                 renderCatalogue(lang);
+                renderBlogPosts(lang);
                 
                 const langEnDesktop = document.getElementById('lang-en-desktop');
                 const langEsDesktop = document.getElementById('lang-es-desktop');
@@ -456,14 +577,8 @@
                 anchor.addEventListener('click', function (e) {
                     const href = this.getAttribute('href');
                     if (href && href.length > 1) {
-                        e.preventDefault();
                         const targetElement = document.querySelector(href);
-                        if (targetElement) {
-                            window.scrollTo({
-                                 top: targetElement.offsetTop - document.getElementById('site-header').offsetHeight,
-                                 behavior: "smooth"
-                            });
-                        }
+                        if (targetElement) { e.preventDefault(); targetElement.scrollIntoView({ behavior: 'smooth' }); }
                     }
                 });
             });
