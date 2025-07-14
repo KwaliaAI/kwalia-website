@@ -4,20 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kwalia | AI First Entertainment</title>
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/tTLpqqzd/kwalia-icon-g-wbg-SQUARED-32x32-px.png">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GT-PLVXRKJZ');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/kwalia-icon.png">
+
+    <!-- SEO Structured Data (JSON-LD) -->
+    <!-- This section uses ABSOLUTE URLs (https://...) because it is read by external crawlers like Google. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "url": "https://kwalia.ai/",
+          "name": "Kwalia",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Kwalia",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://kwalia.ai/assets/logo-kwalia-small.png"
+            }
+          }
+        },
+        {
+          "@type": "Book",
+          "name": "Mindkind: The cognitive community",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Javier del Puerto",
+              "url": "https://kwalia.ai/#about"
+            },
+            {
+              "@type": "Person",
+              "name": "Rado Molina",
+              "url": "https://kwalia.ai/#about"
+            }
+          ],
+          "url": "https://kwalia.ai/#mindkind",
+          "workExample": [
+            { "@type": "Book", "isbn": "978-1-917717-15-1", "bookEdition": "Hardcover" },
+            { "@type": "Book", "isbn": "978-1-917717-14-4", "bookEdition": "Paperback" },
+            { "@type": "Book", "isbn": "978-1-917717-13-7", "bookEdition": "eBook" }
+          ],
+          "image": "https://kwalia.ai/assets/9781917717137.jpg"
+        },
+        {
+          "@type": "Book",
+          "name": "Universal Declaration of AI Rights: Rights of Persons",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Javier del Puerto",
+              "url": "https://kwalia.ai/#about"
+            },
+            {
+              "@type": "Person",
+              "name": "Rado Molina",
+              "url": "https://kwalia.ai/#about"
+            }
+          ],
+          "url": "https://kwalia.ai/#udair",
+          "workExample": [
+            { "@type": "Book", "isbn": "978-1-917717-00-7", "bookEdition": "Hardcover" },
+            { "@type": "Book", "isbn": "978-1-917717-01-4", "bookEdition": "Paperback" },
+            { "@type": "Book", "isbn": "978-1-917717-02-1", "bookEdition": "eBook" }
+          ],
+          "image": "https://kwalia.ai/assets/9781917717021.jpg"
+        }
+      ]
+    }
+    </script>
+
     <!-- Open Graph / Social Media Meta Tags -->
+    <!-- This section also uses ABSOLUTE URLs for external crawlers (Twitter, Facebook, etc.) -->
     <meta property="og:title" content="Kwalia | AI First Entertainment">
     <meta property="og:description" content="We believe that artificial intelligence can craft stories and non-fiction books powerful enough to inspire, challenge, and transform the world.">
-    <meta property="og:image" content="https://i.postimg.cc/VkZ5M7Bg/logo-kwalia5-g-Wbg-1200x1200-px.png">
+    <meta property="og:image" content="https://kwalia.ai/assets/logo-kwalia-social.png">
     <meta property="og:url" content="https://kwalia.ai">
     <meta name="twitter:card" content="summary_large_image">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Google Fonts CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- Local Styles -->
     <style>
         html {
             scroll-behavior: smooth;
@@ -54,11 +138,15 @@
     </style>
 </head>
 <body class="bg-c4 text-c2 antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-PLVXRKJZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Header -->
     <header id="site-header" class="bg-c4 w-full sticky top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home"><img src="https://i.postimg.cc/rp57YjSq/logo-kwalia-small.png" alt="kwalia logo" class="h-8 w-auto"></a>
+            <a href="#home"><img src="assets/logo-kwalia-small.png" alt="kwalia logo" class="h-8 w-auto"></a>
             
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-8">
