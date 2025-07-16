@@ -707,6 +707,11 @@
 
 
             function openBookModal(book, lang) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'view_book_details',
+                    'book_title': book.title.en // We use the English title for consistent tracking
+                });
                 const coverUrl = book.coverImage[lang] || book.coverImage.en;
                 const bookTitle = book.title[lang] || book.title.en;
                 const bookAuthors = (book.authors && book.authors.length > 0) ? `<p class="font-f2 text-lg mb-4 text-c2/80">${book.authors.join(' & ')}</p>` : '';
