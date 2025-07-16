@@ -325,8 +325,8 @@
                     <div class="text-left">
                         <h3 class="font-f1 text-2xl mb-4" data-key="press.releases.title">Press Releases</h3>
                         <ul class="space-y-2">
-                            <li><a href="assets/kwalia-press-release-ai-rights-march2025.pdf" target="_blank" class="text-c3 hover:underline" data-key="press.releases.udair">Universal Declaration of AI Rights Announcement</a></li>
-                            <li><a href="assets/kwalia-press-release-mindkind-july2025.pdf" target="_blank" class="text-c3 hover:underline" data-key="press.releases.mindkind">Mindkind: A New Exploration of Cognitive Communities</a></li>
+                            <li><a id="udair-press-link" href="assets/kwalia-press-release-ai-rights-march2025.pdf" target="_blank" class="text-c3 hover:underline" data-key="press.releases.udair">Universal Declaration of AI Rights Announcement</a></li>
+                            <li><a id="mindkind-press-link" href="assets/kwalia-press-release-mindkind-july2025.pdf" target="_blank" class="text-c3 hover:underline" data-key="press.releases.mindkind">Mindkind: A New Exploration of Cognitive Communities</a></li>
                         </ul>
                     </div>
                     <div class="text-left">
@@ -790,6 +790,21 @@
                 currentLang = lang;
                 document.querySelectorAll('[data-key]').forEach(el => { if (content[lang][el.getAttribute('data-key')]) { el.innerHTML = content[lang][el.getAttribute('data-key')]; } });
                 document.querySelectorAll('[data-key-placeholder]').forEach(el => { if (content[lang][el.getAttribute('data-key-placeholder')]) { el.placeholder = content[lang][el.getAttribute('data-key-placeholder')]; } });
+
+                const udairPressLink = document.getElementById('udair-press-link');
+                if (udairPressLink) {
+                    udairPressLink.href = lang === 'es' 
+                        ? 'assets/kwalia-press-release-ai-rights-es.pdf' // <-- Use your actual Spanish file name
+                        : 'assets/kwalia-press-release-ai-rights-en.pdf'; // <-- Use your actual English file name
+                }
+            
+                const mindkindPressLink = document.getElementById('mindkind-press-link');
+                if (mindkindPressLink) {
+                    mindkindPressLink.href = lang === 'es' 
+                        ? 'assets/kwalia-nota-prensa-mindkind-julio-2025.pdf' // <-- Use your actual Spanish file name
+                        : 'assets/kwalia-press-release-mindkind-july2025.pdf'; // <-- Use your actual English file name
+                }
+                
                 renderCatalogue(lang);
                 renderBlogPosts(lang);
                 
