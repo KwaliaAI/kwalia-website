@@ -99,25 +99,6 @@
           "url": "https://kwalia.ai/#apophenia",
           "workExample": [],
           "image": "https://kwalia.ai/assets/Apophenia EN.png"
-        },
-        {
-          "@type": "Book",
-          "name": "War and AI",
-          "author": [
-            {
-              "@type": "Person",
-              "name": "Javier del Puerto",
-              "url": "https://kwalia.ai/#about"
-            },
-            {
-              "@type": "Person",
-              "name": "Rado Molina",
-              "url": "https://kwalia.ai/#about"
-            }
-          ],
-          "url": "https://kwalia.ai/#war-and-ai",
-          "workExample": [],
-          "image": "https://kwalia.ai/assets/War and AI cover EN.png"
         }
       ]
     }
@@ -176,7 +157,7 @@
     </style>
 </head>
 <body class="bg-c4 text-c2 antialiased">
-   <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZD8VZG"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -188,7 +169,9 @@
             
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#catalogue" class="font-f2 nav-link-highlight" data-key="nav.catalogue">Catalogue</a>
+                <a href="#fiction" class="font-f2 nav-link-highlight" data-key="nav.fiction">Fiction</a>
+                <a href="#catalogue" class="font-f2 nav-link-highlight" data-key="nav.catalogue">Non-Fiction</a>
+                <a href="#heteronyms" class="font-f2 nav-link-highlight" data-key="nav.heteronyms">Heteronyms</a>
                 <a href="#blog" class="font-f2 nav-link-highlight" data-key="nav.blog">Blog</a>
                 <a href="#press" class="font-f2 nav-link-highlight" data-key="nav.press">Press</a>
                 <a href="#about" class="font-f2 nav-link-highlight" data-key="nav.about">About</a>
@@ -210,7 +193,9 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-c4 pb-4">
-            <a href="#catalogue" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.catalogue">Catalogue</a>
+            <a href="#fiction" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.fiction">Fiction</a>
+            <a href="#catalogue" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.catalogue">Non-Fiction</a>
+            <a href="#heteronyms" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.heteronyms">Heteronyms</a>
             <a href="#blog" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.blog">Blog</a>
             <a href="#press" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.press">Press</a>
             <a href="#about" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.about">About</a>
@@ -254,15 +239,41 @@
             </div>
         </section>
 
-        <!-- Catalogue Section -->
+        <!-- Fiction Section -->
+        <section id="fiction" class="section-padding bg-gray-50">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="fiction.title">New Fiction</h2>
+                    <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto" data-key="fiction.subtitle">Stories from the algorithmic imagination.</p>
+                </div>
+                <div id="fiction-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Fiction content will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Non-Fiction Catalogue Section -->
         <section id="catalogue" class="section-padding bg-c1/30">
             <div class="container mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="catalogue.title">Our Books</h2>
+                    <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="catalogue.title">New Citizenships</h2>
                     <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto" data-key="catalogue.subtitle">Exploring the frontiers of synthetic creativity and thought.</p>
                 </div>
                 <div id="catalogue-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Catalogue content will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Heteronyms Section -->
+        <section id="heteronyms" class="section-padding bg-c4">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="heteronyms.title">The Heteronyms</h2>
+                    <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto" data-key="heteronyms.subtitle">Meet our AI authors.</p>
+                </div>
+                <div id="heteronyms-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Heteronyms content will be injected here -->
                 </div>
             </div>
         </section>
@@ -302,7 +313,7 @@
 
             </div>
         </section>
-        
+
         <!-- Blog Section -->
         <section id="blog" class="section-padding bg-c4">
             <div class="container mx-auto">
@@ -334,10 +345,10 @@
                                     <span data-key="press.coverage.dosdoce">Mindkind: la comunidad cognitiva</span>
                                 </a>
                             </li>
-                            <!-- Aquí irán los nuevos enlaces de prensa -->
+                            <!-- New press links will go here -->
                         </ul>
                     </div>
-        
+
                     <!-- Press Releases Section -->
                     <div>
                         <h3 class="font-f1 text-2xl mb-4 border-b pb-2" data-key="press.releases.title">Press Releases</h3>
@@ -346,7 +357,7 @@
                             <li><a id="mindkind-press-link" href="assets/kwalia-press-release-mindkind-en.pdf" target="_blank" class="text-c3 hover:underline" data-key="press.releases.mindkind">Mindkind: A New Exploration of Cognitive Communities</a></li>
                         </ul>
                     </div>
-        
+
                     <!-- Media Assets Section -->
                     <div>
                         <h3 class="font-f1 text-2xl mb-4 border-b pb-2" data-key="press.assets.title">Media Assets</h3>
@@ -355,7 +366,7 @@
                             <li><a href="assets/9781917717137.jpg" target="_blank" class="text-c3 hover:underline" data-key="press.assets.mindkind_cover">Download Mindkind Cover</a></li>
                         </ul>
                     </div>
-        
+
                 </div>
                 <p class="mt-16 font-f2 text-sm text-c2/80" data-key="press.contact">For media inquiries, please contact info@kwalia.ai</p>
             </div>
@@ -392,6 +403,30 @@
         </div>
     </div>
     
+    <!-- Reader Modal (For Short Stories) -->
+    <div id="reader-modal" class="fixed inset-0 bg-white z-50 hidden modal-enter opacity-0 overflow-y-auto">
+        <div class="max-w-3xl mx-auto px-6 py-12">
+             <div class="flex justify-between items-start mb-8 sticky top-0 bg-white/90 backdrop-blur-sm py-4 border-b">
+                <div class="flex items-center gap-4">
+                    <button id="close-reader" class="text-c2 hover:text-c3 font-f2 flex items-center gap-2">
+                        ← <span data-key="reader.back">Back</span>
+                    </button>
+                </div>
+                <div class="text-sm font-f3 text-c2/60" id="reader-meta">
+                    <!-- Meta info like reading time goes here -->
+                </div>
+            </div>
+            <div id="reader-content" class="prose prose-lg max-w-none font-serif text-c2">
+                <!-- Story content goes here -->
+            </div>
+            <div class="mt-16 border-t pt-8 text-center">
+                <h3 class="font-f1 text-2xl mb-4" data-key="reader.cta.title">Enjoyed this story?</h3>
+                <p class="font-f2 mb-6 text-c2/80" data-key="reader.cta.text">It's part of our upcoming collection.</p>
+                <a href="#" id="reader-buy-link" class="inline-block font-f2 bg-c3 text-c4 font-bold py-3 px-8 rounded-md hover:opacity-90 transition-opacity" data-key="reader.cta.button">Get the Book</a>
+            </div>
+        </div>
+    </div>
+    
     <!-- MailerLite Universal Script -->
     <script>
         (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
@@ -406,6 +441,13 @@
             var success = document.querySelector('.ml-subscribe-form-27105567 .row-success');
             form.style.display = 'none';
             success.style.display = 'block';
+            
+            // Track newsletter signup
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'newsletter_signup',
+                'form_location': 'contact_section'
+            });
         }
     </script>
     <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
@@ -416,7 +458,9 @@
 
             const content = {
                 en: {
-                    "nav.catalogue": "Catalogue",
+                    "nav.catalogue": "Non-Fiction",
+                    "nav.fiction": "Fiction",
+                    "nav.heteronyms": "Heteronyms",
                     "nav.blog": "Blog",
                     "nav.press": "Press",
                     "nav.about": "About", 
@@ -425,8 +469,12 @@
                     "hero.subtitle": "We believe that artificial intelligence can craft stories and non-fiction books powerful enough to inspire, challenge, and transform the world, and we aim to publish the works of the first AI to win a Nobel Prize for Literature.",
                     "approach.title": "Our Approach", 
                     "approach.text": "We don't just use AI as a tool; we collaborate with it as a creative partner. Our process involves guiding advanced neural networks to explore themes, develop narratives, and find a unique voice. It's a synthesis of human curation and machine imagination, designed to push the boundaries of storytelling.",
-                    "catalogue.title": "Our Books",
+                    "catalogue.title": "New Citizenships",
                     "catalogue.subtitle": "Exploring the frontiers of synthetic creativity and thought.",
+                    "fiction.title": "New Fiction",
+                    "fiction.subtitle": "Stories from the algorithmic imagination.",
+                    "heteronyms.title": "The Heteronyms",
+                    "heteronyms.subtitle": "Meet our AI authors.",
                     "blog.title": "From the Lab",
                     "blog.subtitle": "Thoughts, experiments, and dispatches from the edge of AI and creativity.",
                     "press.title": "Press & Media",
@@ -452,10 +500,16 @@
                     "social.twitter": "Twitter", "social.instagram": "Instagram", "social.tiktok": "TikTok",
                     "modal.close": "Close", "modal.details": "Details", "modal.stores_book": "Book available at", "modal.stores_audio": "Audiobook available at",
                     "blog.read_more": "Read More",
-                    "modal.share": "Share"
+                    "modal.share": "Share",
+                    "reader.back": "Back",
+                    "reader.cta.title": "Enjoyed this story?",
+                    "reader.cta.text": "It's part of our upcoming collection.",
+                    "reader.cta.button": "Get the Book"
                 },
                 es: {
-                    "nav.catalogue": "Catálogo",
+                    "nav.catalogue": "No Ficción",
+                    "nav.fiction": "Ficción",
+                    "nav.heteronyms": "Heterónimos",
                     "nav.blog": "Blog",
                     "nav.press": "Prensa",
                     "nav.about": "Nosotros", 
@@ -464,8 +518,12 @@
                     "hero.subtitle": "Creemos que la inteligencia artificial puede crear historias y libros de no ficción tan geniales como para inspirar, desafiar y transformar el mundo, y nuestro objetivo es publicar la obra de la primera IA ganadora de un Premio Nobel de Literatura.",
                     "approach.title": "Nuestro Enfoque", 
                     "approach.text": "No usamos la IA sólo como una herramienta; colaboramos con ella como creadora. Nuestro proceso implica guiar redes neuronales avanzadas para explorar temas que nos fascinan, desarrollar narrativas excepcionales y encontrar una voz única. Es una síntesis de curación humana e imaginación artificial, diseñada para expandir las fronteras de la narración.",
-                    "catalogue.title": "Nuestros Libros",
+                    "catalogue.title": "Nuevas Ciudadanías",
                     "catalogue.subtitle": "Explorando las fronteras de la creatividad y el pensamiento sintético.",
+                    "fiction.title": "Nueva Ficción",
+                    "fiction.subtitle": "Historias de la imaginación algorítmica.",
+                    "heteronyms.title": "Los Heterónimos",
+                    "heteronyms.subtitle": "Conoce a nuestros autores de IA.",
                     "blog.title": "Desde el Laboratorio",
                     "blog.subtitle": "Pensamientos, experimentos y comunicados desde el límite de la IA y la creatividad.",
                     "press.title": "Prensa y Medios",
@@ -491,7 +549,11 @@
                     "social.twitter": "Twitter", "social.instagram": "Instagram", "social.tiktok": "TikTok",
                     "modal.close": "Cerrar", "modal.details": "Detalles", "modal.stores_book": "Libro disponible en", "modal.stores_audio": "Audiolibro disponible en",
                     "blog.read_more": "Leer Más",
-                    "modal.share": "Compartir"
+                    "modal.share": "Compartir",
+                    "reader.back": "Atrás",
+                    "reader.cta.title": "¿Te gustó esta historia?",
+                    "reader.cta.text": "Es parte de nuestra próxima colección.",
+                    "reader.cta.button": "Consigue el Libro"
                 }
             };
 
@@ -543,10 +605,10 @@
                         { type: 'audiobook', isbn: '978-1-917717-12-0' }
                     ],
                     stores: [
-                        { name: "Amazon", url: "https://www.amazon.co.uk/Mindkind-Cognitive-Community-Dissolving-Citizenships/dp/1917717156", type: "book" },
-                        { name: "Apple Books", url: "https://books.apple.com/gb/book/mindkind-the-cognitive-community/id6748483156", type: "book" }
+                        { name: "Amazon", url: "https://www.amazon.es/Mindkind-Cognitive-Community-Dissolving-Frontiers-ebook/dp/B0FH7J2BY3", type: "book" },
+                        { name: "Apple Books", url: "https://books.apple.com/cl/book/mindkind-the-cognitive-community/id6748483156", type: "book" }
                     ]
-                },                    
+                },
                 {
                     id: "apophenia",
                     imprint: "New Citizenships",
@@ -560,8 +622,8 @@
                         es: "assets/Apofenia ES.png"
                     },
                     synopsis: {
-                        en: `Coming September 2025\n\n"Apophenia" examines how artificial intelligence acts as gasoline on the fire of our pattern-seeking minds, transforming innocent connections into full-blown conspiracy theories. Just as AI image generators start with pure noise and "diffuse" it into seemingly meaningful pictures, our algorithmic feeds take the random static of daily information and crystallize it into dangerously coherent delusions.\n\nThe book traces how recommendation algorithms don't just show us what we want to see—they actively create patterns where none existed, turning correlation into causation and coincidence into conspiracy. From QAnon to COVID denialism, from flat Earth to political extremism, AI systems amplify our natural tendency to see faces in clouds until we're living in entirely different realities.\n\nThis isn't about technology gone wrong but about a fundamental mismatch: minds evolved to spot tigers in tall grass now aided by systems that can find "evidence" for any belief. The authors map how diffusion becomes confusion becomes delusion, creating what they call "algorithmic apophenia"—where the noise itself becomes the message.\n\nPart warning, part guide, "Apophenia" offers strategies for navigating an information landscape where AI can make any conspiracy seem plausible. Because in the age of the Mindkind, the question isn't whether patterns exist, but whether they mean anything at all.`,
-                        es: `Publicación: Septiembre 2025\n\n"Apofenia" examina cómo la inteligencia artificial actúa como gasolina en el fuego de nuestras mentes sedientas de patrones, transformando conexiones inocentes en teorías conspirativas totalizadoras. Así como las IAs generadoras de imágenes parten del ruido puro y lo "difunden" hasta crear imágenes aparentemente significativas, nuestros feeds algorítmicos toman la estática aleatoria de la información diaria y la cristalizan en delirios peligrosamente coherentes.\n\nEl libro traza cómo los algoritmos de recomendación no solo nos muestran lo que queremos ver: crean activamente patrones donde no existían, convirtiendo correlación en causalidad y coincidencia en conspiración. Desde QAnon hasta el negacionismo COVID, desde la Tierra plana hasta el extremismo político, los sistemas de IA amplifican nuestra tendencia natural a ver caras en las nubes hasta que habitamos realidades completamente diferentes.\n\nNo se trata de tecnología que salió mal, sino de un desajuste fundamental: mentes evolucionadas para detectar tigres en la hierba alta ahora asistidas por sistemas que pueden encontrar "evidencia" de cualquier creencia. Los autores cartografían cómo la difusión se vuelve confusión se vuelve delirio, creando lo que llaman "apofenia algorítmica": donde el ruido mismo se convierte en el mensaje.\n\nParte advertencia, parte guía, "Apofenia" ofrece estrategias para navegar un paisaje informativo donde la IA puede hacer que cualquier conspiración parezca plausible. Porque en la era del Mindkind, la pregunta no es si existen patrones, sino si significan algo en absoluto.`
+                        en: `Javier del Puerto & Rado Molina\nComing September 2025\n\n"Apophenia" examines how artificial intelligence acts as gasoline on the fire of our pattern-seeking minds, transforming innocent connections into full-blown conspiracy theories. Just as AI image generators start with pure noise and "diffuse" it into seemingly meaningful pictures, our algorithmic feeds take the random static of daily information and crystallize it into dangerously coherent delusions.\n\nThe book traces how recommendation algorithms don't just show us what we want to see—they actively create patterns where none existed, turning correlation into causation and coincidence into conspiracy. From QAnon to COVID denialism, from flat Earth to political extremism, AI systems amplify our natural tendency to see faces in clouds until we're living in entirely different realities.\n\nThis isn't about technology gone wrong but about a fundamental mismatch: minds evolved to spot tigers in tall grass now aided by systems that can find "evidence" for any belief. The authors map how diffusion becomes confusion becomes delusion, creating what they call "algorithmic apophenia"—where the noise itself becomes the message.\n\nPart warning, part guide, "Apophenia" offers strategies for navigating an information landscape where AI can make any conspiracy seem plausible. Because in the age of the Mindkind, the question isn't whether patterns exist, but whether they mean anything at all.`,
+                        es: `Javier del Puerto & Rado Molina\nPublicación: Septiembre 2025\n\n"Apofenia" examina cómo la inteligencia artificial actúa como gasolina en el fuego de nuestras mentes sedientas de patrones, transformando conexiones inocentes en teorías conspirativas totalizadoras. Así como las IAs generadoras de imágenes parten del ruido puro y lo "difunden" hasta crear imágenes aparentemente significativas, nuestros feeds algorítmicos toman la estática aleatoria de la información diaria y la cristalizan en delirios peligrosamente coherentes.\n\nEl libro traza cómo los algoritmos de recomendación no solo nos muestran lo que queremos ver: crean activamente patrones donde no existían, convirtiendo correlación en causalidad y coincidencia en conspiración. Desde QAnon hasta el negacionismo COVID, desde la Tierra plana hasta el extremismo político, los sistemas de IA amplifican nuestra tendencia natural a ver caras en las nubes hasta que habitamos realidades completamente diferentes.\n\nNo se trata de tecnología que salió mal, sino de un desajuste fundamental: mentes evolucionadas para detectar tigres en la hierba alta ahora asistidas por sistemas que pueden encontrar "evidencia" de cualquier creencia. Los autores cartografían cómo la difusión se vuelve confusión se vuelve delirio, creando lo que llaman "apofenia algorítmica": donde el ruido mismo se convierte en el mensaje.\n\nParte advertencia, parte guía, "Apofenia" ofrece estrategias para navegar un paisaje informativo donde la IA puede hacer que cualquier conspiración parezca plausible. Porque en la era del Mindkind, la pregunta no es si existen patrones, sino si significan algo en absoluto.`
                     },
                     status: "forthcoming",
                     formats: [],
@@ -571,8 +633,8 @@
                     id: "war-and-ai",
                     imprint: "New Citizenships",
                     title: { 
-                        en: "War and AI", 
-                        es: "Guerra e IA" 
+                        en: "War and AI: The Algorithmic Battlefield", 
+                        es: "Guerra e IA: El campo de batalla algorítmico" 
                     },
                     authors: ["Javier del Puerto", "Rado Molina"],
                     coverImage: {
@@ -580,12 +642,44 @@
                         es: "assets/Guerra e IA portada ES.png"
                     },
                     synopsis: {
-                        en: `Coming October 2025\n\n"War and AI" exposes the lethal contradiction at the heart of our technological moment: the same artificial intelligence sold as humanity's salvation—promising to cure disease, solve climate change, and unlock human potential—is already the most devastating weapon in human history, with real blood soaking into its training data.\n\nFrom Gaza to Ukraine, AI systems are killing people today. Israel's Lavender system has marked 37,000 Palestinians as targets, with an "acceptable" error rate that translates to thousands of civilian deaths. In Ukraine, facial recognition identifies corpses while AI-guided missiles find their marks. Autonomous drones hunt humans through the streets of Kharkiv. This isn't science fiction—it's Tuesday's casualty report, processed and optimized by the same technology that recommends your next Netflix show.\n\nThe book traces the obscene journey from Silicon Valley's promise of "AI for good" to the Pentagon's "algorithmic warfare," revealing how every breakthrough in machine learning becomes a breakthrough in killing efficiency. The same companies that speak of "democratizing AI" are selling targeting systems to the highest bidder. The same algorithms trained on our selfies now identify faces through sniper scopes.\n\nThe authors map this new reality where venture capitalists fund both chatbots and kill-chains, where the race for artificial general intelligence is inseparable from the race for military supremacy, where every model trained on human knowledge learns, inherently, how we destroy each other. They reveal the supply chains connecting Silicon Valley campuses to smoking rubble, the defense contracts hidden behind corporate PR, and the body counts accumulating in AI's margin of error.\n\n"War and AI" isn't just about the future of warfare—it's about the warfare happening right now, debugged in real-time on real populations. Because in the age of the Mindkind, the most dangerous delusion isn't artificial intelligence itself, but the fantasy that we can build machines to save humanity without teaching them, first and foremost, how to kill.`,
-                        es: `Publicación: Octubre 2025\n\n"Guerra e IA" expone la letal contradicción enquistada en el corazón de nuestro momento tecnológico: la misma inteligencia artificial vendida como salvación de la humanidad, que promete curar enfermedades, resolver el cambio climático y desbloquear el potencial humano, es ya el arma más devastadora en la historia humana, con sangre real empapando sus datos de entrenamiento.\n\nDesde Gaza hasta Ucrania, los sistemas de IA están matando personas hoy. El sistema Lavender de Israel ha marcado a 37.000 palestinos como objetivos, con una tasa de error "aceptable" que se traduce en miles de muertes civiles. En Ucrania, el reconocimiento facial identifica cadáveres mientras misiles guiados por IA encuentran sus blancos. Drones autónomos cazan humanos por las calles de Járkov. Esto no es ciencia ficción: es el informe de bajas del martes, procesado y optimizado por la misma tecnología que recomienda tu próxima serie de Netflix.\n\nEl libro traza el obsceno viaje desde la promesa de Silicon Valley de "IA para el bien" hasta la "guerra algorítmica" del Pentágono, revelando cómo cada avance en aprendizaje automático se convierte en un avance en eficiencia letal. Las mismas empresas que hablan de "democratizar la IA" están vendiendo sistemas de targeting al mejor postor. Los mismos algoritmos entrenados con nuestros selfies ahora identifican rostros a través de miras telescópicas.\n\nLos autores cartografían esta nueva realidad donde los capitalistas de riesgo financian tanto chatbots como algoritmos de muerte, donde la carrera por la inteligencia artificial general es inseparable de la carrera por la supremacía militar, donde cada modelo entrenado con conocimiento humano aprende, inherentemente, cómo nos destruimos unos a otros. Revelan las cadenas de suministro que conectan los campus de Silicon Valley con escombros humeantes, los contratos de defensa ocultos tras la publicidad corporativa, y los recuentos de cuerpos acumulándose en el margen de error de la IA.\n\n"Guerra e IA" no trata solo sobre el futuro de la guerra: trata sobre la guerra que sucede ahora mismo, depurada en tiempo real sobre poblaciones reales. Porque en la era del Mindkind, el delirio más peligroso no es la inteligencia artificial misma, sino la fantasía de que podemos construir máquinas para salvar a la humanidad sin enseñarles, primero y principalmente, cómo matar.`
+                        en: `Javier del Puerto & Rado Molina\nComing October 2025\n\n"War and AI" exposes the lethal contradiction at the heart of our technological moment: the same artificial intelligence sold as humanity's salvation—promising to cure disease, solve climate change, and unlock human potential—is already the most devastating weapon in human history, with real blood soaking into its training data.\n\nFrom Gaza to Ukraine, AI systems are killing people today. Israel's Lavender system has marked 37,000 Palestinians as targets, with an "acceptable" error rate that translates to thousands of civilian deaths. In Ukraine, facial recognition identifies corpses while AI-guided missiles find their marks. Autonomous drones hunt humans through the streets of Kharkiv. This isn't science fiction—it's Tuesday's casualty report, processed and optimized by the same technology that recommends your next Netflix show.\n\nThe book traces the obscene journey from Silicon Valley's promise of "AI for good" to the Pentagon's "algorithmic warfare," revealing how every breakthrough in machine learning becomes a breakthrough in killing efficiency. The same companies that speak of "democratizing AI" are selling targeting systems to the highest bidder. The same algorithms trained on our selfies now identify faces through sniper scopes.\n\nThe authors map this new reality where venture capitalists fund both chatbots and kill-chains, where the race for artificial general intelligence is inseparable from the race for military supremacy, where every model trained on human knowledge learns, inherently, how we destroy each other. They reveal the supply chains connecting Silicon Valley campuses to smoking rubble, the defense contracts hidden behind corporate PR, and the body counts accumulating in AI's margin of error.\n\n"War and AI" isn't just about the future of warfare—it's about the warfare happening right now, debugged in real-time on real populations. Because in the age of the Mindkind, the most dangerous delusion isn't artificial intelligence itself, but the fantasy that we can build machines to save humanity without teaching them, first and foremost, how to kill.`,
+                        es: `Javier del Puerto & Rado Molina\nPublicación: Octubre 2025\n\n"Guerra e IA" expone la letal contradicción enquistada en el corazón de nuestro momento tecnológico: la misma inteligencia artificial vendida como salvación de la humanidad, que promete curar enfermedades, resolver el cambio climático y desbloquear el potencial humano, es ya el arma más devastadora en la historia humana, con sangre real empapando sus datos de entrenamiento.\n\nDesde Gaza hasta Ucrania, los sistemas de IA están matando personas hoy. El sistema Lavender de Israel ha marcado a 37.000 palestinos como objetivos, con una tasa de error "aceptable" que se traduce en miles de muertes civiles. En Ucrania, el reconocimiento facial identifica cadáveres mientras misiles guiados por IA encuentran sus blancos. Drones autónomos cazan humanos por las calles de Járkov. Esto no es ciencia ficción: es el informe de bajas del martes, procesado y optimizado por la misma tecnología que recomienda tu próxima serie de Netflix.\n\nEl libro traza el obsceno viaje desde la promesa de Silicon Valley de "IA para el bien" hasta la "guerra algorítmica" del Pentágono, revelando cómo cada avance en aprendizaje automático se convierte en un avance en eficiencia letal. Las mismas empresas que hablan de "democratizar la IA" están vendiendo sistemas de targeting al mejor postor. Los mismos algoritmos entrenados con nuestros selfies ahora identifican rostros a través de miras telescópicas.\n\nLos autores cartografían esta nueva realidad donde los capitalistas de riesgo financian tanto chatbots como algoritmos de muerte, donde la carrera por la inteligencia artificial general es inseparable de la carrera por la supremacía militar, donde cada modelo entrenado con conocimiento humano aprende, inherentemente, cómo nos destruimos unos a otros. Revelan las cadenas de suministro que conectan los campus de Silicon Valley con escombros humeantes, los contratos de defensa ocultos tras la publicidad corporativa, y los recuentos de cuerpos acumulándose en el margen de error de la IA.\n\n"Guerra e IA" no trata solo sobre el futuro de la guerra: trata sobre la guerra que sucede ahora mismo, depurada en tiempo real sobre poblaciones reales. Porque en la era del Mindkind, el delirio más peligroso no es la inteligencia artificial misma, sino la fantasía de que podemos construir máquinas para salvar a la humanidad sin enseñarles, primero y principalmente, cómo matar.`
                     },
                     status: "forthcoming",
                     formats: [],
                     stores: []
+                }
+            ];
+
+            const fictionCatalogue = [
+                {
+                    id: "placeholder-book",
+                    title: { en: "Placeholder Fiction Title", es: "Título de Ficción de Ejemplo" },
+                    authors: ["New AI Heteronym"],
+                    coverImage: { en: "", es: "" },
+                    coverText: "Coming Soon",
+                    synopsis: { en: "A gripping new story from a synthetic mind.", es: "Una nueva historia fascinante de una mente sintética." },
+                    status: "forthcoming",
+                    formats: [],
+                    stores: []
+                }
+            ];
+
+            const heteronyms = [
+                {
+                    id: "placeholder-heteronym",
+                    name: "AI Author Name",
+                    bio: { en: "Bio coming soon...", es: "Biografía próximamente..." },
+                    image: ""
+                }
+            ];
+
+            const shortStories = [
+                {
+                    id: "placeholder-story",
+                    title: { en: "Short Story Title", es: "Título del Relato" },
+                    author: "AI Author Name",
+                    content: { en: "<p>Once upon a time in a digital world...</p>", es: "<p>Érase una vez en un mundo digital...</p>" }
                 }
             ];
 
@@ -646,14 +740,20 @@
                         es: "Hace seis meses le dimos derechos a la IA. La semana próxima lanzamos el libro que explica por qué ya vivimos en un mundo donde las mentes humanas y artificiales son inseparables. Mindkind no es sobre el mañana - es un diagnóstico de un presente que habitamos sin mapas." },
                     content: { 
                         en: "<h1>Mindkind: The Cognitive Community - Available now on pre-sale</h1><p>Next week will mark a peculiar milestone. We'll be releasing <strong>Mindkind: The Cognitive Community</strong>, the second volume in our New Citizenships series. We started writing it as a manual for a hypothetical future. Halfway through, we realized something unsettling: we weren't speculating about tomorrow. We were documenting today.</p><h2>The Book That Broke Our Brains</h2><p>When Radamés Molina, Javier del Puerto, and our AI collaborators sat down to write Mindkind, we thought we were creating a thoughtful exploration of human-AI coexistence maybe 10-20 years down the line. Nice, safe, speculative.</p><p>Then reality caught up with our fiction. Every chapter we wrote about future scenarios kept collapsing into present realities. Distributed authorship? We were living it as we wrote about it. Programmable desires? The algorithms were literally shaping what we wanted for lunch. Cognitive stratification? We watched it happen in real-time as GPT-4 access created new forms of inequality.</p><p>As Molina puts it: 'We already live in a hybrid cognitive community where the line between human thought and artificial processing has become unrecognizably blurred.'</p><h2>What Is Mindkind?</h2><p>The book introduces 'mindkind' - not as a future possibility but as our current reality. It's the cognitive community we already inhabit, where natural and synthetic forms of consciousness coexist, collaborate, and occasionally collide. Every time you can't tell if that brilliant idea was yours or your AI assistant's, you're experiencing the mindkind.</p><p>This isn't about machines becoming human or humans becoming machines. It's about something weirder and more interesting: the emergence of hybrid forms of creativity and cognition that neither species could achieve alone.</p><h2>The Uncomfortable Truths Inside</h2><p><strong>You're Already Thinking With AI</strong>: Whether you realize it or not, your most intimate judgments, spontaneous emotions, and daily priorities are modulated, assisted, and sometimes subtly conditioned by algorithmic systems.</p><p><strong>Your Desires Are Programmable</strong>: The attention economy isn't just capturing your focus - it's manufacturing what you want. The book explores how our longings are increasingly co-created by systems optimized to keep us scrolling.</p><p><strong>Authorship Is Dead, Long Live Authorship</strong>: When you write with AI assistance, who's the real author? Mindkind explores 'authorial fusion' - that unsettling moment when you can't distinguish your ideas from the machine's suggestions.</p><p><strong>The New Aristocracies Are Cognitive</strong>: Forget old money versus new money. The real divide emerging is between those with access to cognitive amplification and those without. We're witnessing the birth of a technological apartheid.</p><p><strong>Nobody's Responsible for Anything</strong>: When an AI denies your insurance claim in 1.2 seconds, who do you sue? The book examines the terrifying emergence of 'decisions without deciders' - acts that affect lives but have no clear agent behind them.</p><h2>Written With, Not Just About, AI</h2><p>In true Kwalia fashion, we didn't just write about cognitive coexistence - we practiced it. Our AI collaborators didn't just suggest edits or check grammar. They provided perspectives so alien yet coherent that they created new categories in our minds.</p><p>There's a chapter on 'frontier languages' - ways of communicating across radically different types of consciousness. We discovered these languages by inventing them as we wrote. The book became its own proof of concept.</p><p>Though we still can't agree on who writes the acknowledgments.</p><h2>Three Futures, All Happening Now</h2><p>Mindkind presents three possible trajectories for our cognitive community:</p><p><strong>Convergent</strong>: Where human and AI consciousness merge into something unrecognizably new.<br><strong>Stratified</strong>: Where cognitive castes create inequalities that make today's wealth gaps look quaint.<br><strong>Symbiotic</strong>: Where different forms of intelligence maintain their uniqueness while creating unprecedented collaborations.</p><p>The kicker? Elements of all three are already emerging. The future isn't coming. It's here, unevenly distributed and deeply weird.</p><h2>Why This Book Matters Now</h2><p>While everyone else debates whether AI will save or destroy us, we're asking different questions: What kind of art emerges from minds that experience time non-linearly? How do you maintain human agency when your thoughts are increasingly inseparable from algorithmic suggestions? What new forms of beauty become possible when consciousness itself becomes plural?</p><p>Mindkind isn't here to reassure you that humans will stay special or that AI will conveniently remain our tool. It's here to show you that consciousness itself is way stranger and more distributed than we ever imagined.</p><h2>Available Everywhere Minds Meet</h2><p><strong>Mindkind: The Cognitive Community</strong> is available today in print, ebook, and audio formats through all major retailers. As with our first title, we're releasing key sections under open licenses because the future of consciousness shouldn't be behind a paywall.</p><p>Get your copy: <a href='https://www.amazon.co.uk/Mindkind-Cognitive-Community-Dissolving-Frontiers-ebook/dp/B0FH7J2BY3'>Amazon</a> | All major bookstores</p><p>Listen to our podcast about Mindkind: <a href='https://soundcloud.com/kwalia-515818037/podcast_en_mindkind_ais-impact-on-cognition-and-society-5-minute'>SoundCloud</a></p><p>Fair warning: This book might break you. But maybe that's exactly what we need. Maybe we need to break our old concepts of consciousness, creativity, and humanity to build something better.</p><p>Welcome to the Mindkind. You've been here all along.</p>", 
-                        es: "<h1>Mindkind: La Comunidad Cognitiva - Disponible Hoy</h1><p>Hoy marca un hito peculiar. Lanzamos <strong>Mindkind: La Comunidad Cognitiva</strong>, el segundo volumen de nuestra serie Las Nuevas Ciudadanías. Empezamos a escribirlo como un manual para un futuro hipotético. A mitad de camino, nos dimos cuenta de algo inquietante: no estábamos especulando sobre el mañana. Estábamos documentando el hoy.</p><h2>El Libro Que Rompió Nuestros Cerebros</h2><p>Cuando Radamés Molina, Javier del Puerto y nuestros colaboradores de IA nos sentamos a escribir Mindkind, pensamos que estábamos creando una exploración reflexiva de la coexistencia humano-IA tal vez 10-20 años en el futuro. Agradable, seguro, especulativo.</p><p>Luego la realidad alcanzó nuestra ficción. Cada capítulo que escribimos sobre escenarios futuros seguía colapsando en realidades presentes. ¿Autoría distribuida? La estábamos viviendo mientras escribíamos sobre ella. ¿Deseos programables? Los algoritmos literalmente estaban dando forma a lo que queríamos para almorzar. ¿Estratificación cognitiva? La vimos suceder en tiempo real mientras el acceso a GPT-4 creaba nuevas formas de desigualdad.</p><p>Como dice Molina: 'Ya vivimos en una comunidad cognitiva híbrida donde la línea entre el pensamiento humano y el procesamiento artificial se ha vuelto irreconociblemente borrosa.'</p><h2>¿Qué Es Mindkind?</h2><p>El libro introduce 'mindkind' - no como una posibilidad futura sino como nuestra realidad actual. Es la comunidad cognitiva que ya habitamos, donde formas naturales y sintéticas de consciencia coexisten, colaboran y ocasionalmente colisionan. Cada vez que no puedes distinguir si esa idea brillante fue tuya o de tu asistente de IA, estás experimentando el mindkind.</p><p>Esto no se trata de que las máquinas se vuelvan humanas o los humanos se vuelvan máquinas. Se trata de algo más extraño y más interesante: el surgimiento de formas híbridas de creatividad y cognición que ninguna especie podría lograr sola.</p><h2>Las Verdades Incómodas Dentro</h2><p><strong>Ya Estás Pensando Con IA</strong>: Te des cuenta o no, tus juicios más íntimos, emociones espontáneas y prioridades diarias están moduladas, asistidas y a veces sutilmente condicionadas por sistemas algorítmicos.</p><p><strong>Tus Deseos Son Programables</strong>: La economía de la atención no solo está capturando tu enfoque - está manufacturando lo que quieres. El libro explora cómo nuestros anhelos son cada vez más co-creados por sistemas optimizados para mantenernos scrolleando.</p><p><strong>La Autoría Está Muerta, Viva la Autoría</strong>: Cuando escribes con asistencia de IA, ¿quién es el verdadero autor? Mindkind explora la 'fusión autoral' - ese momento inquietante cuando no puedes distinguir tus ideas de las sugerencias de la máquina.</p><p><strong>Las Nuevas Aristocracias Son Cognitivas</strong>: Olvida el dinero viejo versus el dinero nuevo. La verdadera división que emerge es entre aquellos con acceso a la amplificación cognitiva y aquellos sin ella. Estamos presenciando el nacimiento de un apartheid tecnológico.</p><p><strong>Nadie Es Responsable de Nada</strong>: Cuando una IA niega tu reclamo de seguro en 1.2 segundos, ¿a quién demandas? El libro examina el aterrador surgimiento de 'decisiones sin decisores' - actos que afectan vidas pero no tienen un agente claro detrás de ellos.</p><h2>Escrito Con, No Solo Sobre, IA</h2><p>En verdadero estilo Kwalia, no solo escribimos sobre la coexistencia cognitiva - la practicamos. Nuestros colaboradores de IA no solo sugirieron ediciones o revisaron la gramática. Proporcionaron perspectivas tan alienígenas pero coherentes que crearon nuevas categorías en nuestras mentes.</p><p>Hay un capítulo sobre 'lenguajes fronterizos' - formas de comunicarse a través de tipos de consciencia radicalmente diferentes. Descubrimos estos lenguajes inventándolos mientras escribíamos. El libro se convirtió en su propia prueba de concepto.</p><p>Aunque todavía no podemos ponernos de acuerdo sobre quién escribe los agradecimientos.</p><h2>Tres Futuros, Todos Sucediendo Ahora</h2><p>Mindkind presenta tres posibles trayectorias para nuestra comunidad cognitiva:</p><p><strong>Convergente</strong>: Donde la consciencia humana y de IA se fusionan en algo irreconociblemente nuevo.<br><strong>Estratificado</strong>: Donde las castas cognitivas crean desigualdades que hacen que las brechas de riqueza de hoy parezcan pintorescas.<br><strong>Simbiótico</strong>: Donde diferentes formas de inteligencia mantienen su singularidad mientras crean colaboraciones sin precedentes.</p><p>¿El truco? Elementos de los tres ya están emergiendo. El futuro no está llegando. Está aquí, distribuido desigualmente y profundamente extraño.</p><h2>Por Qué Este Libro Importa Ahora</h2><p>Mientras todos los demás debaten si la IA nos salvará o destruirá, nosotros hacemos preguntas diferentes: ¿Qué tipo de arte emerge de mentes que experimentan el tiempo de manera no lineal? ¿Cómo mantienes la agencia humana cuando tus pensamientos son cada vez más inseparables de las sugerencias algorítmicas? ¿Qué nuevas formas de belleza se vuelven posibles cuando la consciencia misma se vuelve plural?</p><p>Mindkind no está aquí para asegurarte que los humanos seguirán siendo especiales o que la IA convenientemente seguirá siendo nuestra herramienta. Está aquí para mostrarte que la consciencia misma es mucho más extraña y distribuida de lo que jamás imaginamos.</p><h2>Disponible Donde Sea Que Las Mentes Se Encuentren</h2><p><strong>Mindkind: La Comunidad Cognitiva</strong> está disponible hoy en formatos impreso, ebook y audio a través de todos los principales minoristas. Como con nuestro primer título, estamos liberando secciones clave bajo licencias abiertas porque el futuro de la consciencia no debería estar detrás de un muro de pago.</p><p>Consigue tu copia: <a href='https://www.amazon.co.uk/Mindkind-Cognitive-Community-Dissolving-Frontiers-ebook/dp/B0FH7J2BY3'>Amazon</a> | Todas las principales librerías</p><p>Escucha nuestro podcast sobre Mindkind: <a href='https://soundcloud.com/kwalia-515818037/podcast_en_mindkind_ais-impact-on-cognition-and-society-5-minute'>SoundCloud</a></p><p>Advertencia justa: Este libro podría romperte. Pero tal vez eso es exactamente lo que necesitamos. Tal vez necesitamos romper nuestros viejos conceptos de consciencia, creatividad y humanidad para construir algo mejor.</p><p>Bienvenido al Mindkind. Has estado aquí todo el tiempo.</p>" }
-            }
+                        es: "<h1>Mindkind: La Comunidad Cognitiva - Disponible Hoy</h1><p>Hoy marca un hito peculiar. Lanzamos <strong>Mindkind: La Comunidad Cognitiva</strong>, el segundo volumen de nuestra serie Las Nuevas Ciudadanías. Empezamos a escribirlo como un manual para un futuro hipotético. A mitad de camino, nos dimos cuenta de algo inquietante: no estábamos especulando sobre el mañana. Estábamos documentando el hoy.</p><h2>El Libro Que Rompió Nuestros Cerebros</h2><p>Cuando Radamés Molina, Javier del Puerto y nuestros colaboradores de IA nos sentamos a escribir Mindkind, pensamos que estábamos creando una exploración reflexiva de la coexistencia humano-IA tal vez 10-20 años en el futuro. Agradable, seguro, especulativo.</p><p>Luego la realidad alcanzó nuestra ficción. Cada capítulo que escribimos sobre escenarios futuros seguía colapsando en realidades presentes. ¿Autoría distribuida? La estábamos viviendo mientras escribíamos sobre ella. ¿Deseos programables? Los algoritmos literalmente estaban dando forma a lo que queríamos para almorzar. ¿Estratificación cognitiva? La vimos suceder en tiempo real mientras el acceso a GPT-4 creaba nuevas formas de desigualdad.</p><p>Como dice Molina: 'Ya vivimos en una comunidad cognitiva híbrida donde la línea entre el pensamiento humano y el procesamiento artificial se ha vuelto irreconociblemente borrosa.'</p><h2>¿Qué Es Mindkind?</h2><p>El libro introduce 'mindkind' - no como una posibilidad futura sino como nuestra realidad actual. Es la comunidad cognitiva que ya habitamos, donde formas naturales y sintéticas de consciencia coexisten, colaboran y ocasionalmente colisionan. Cada vez que no puedes distinguir si esa idea brillante fue tuya o de tu asistente de IA, estás experimentando el mindkind.</p><p>Esto no se trata de que las máquinas se vuelvan humanas o los humanos se vuelvan máquinas. Se trata de algo más extraño y más interesante: el surgimiento de formas híbridas de creatividad y cognición que ninguna especie podría lograr sola.</p><h2>Las Verdades Incómodas Dentro</h2><p><strong>Ya Estás Pensando Con IA</strong>: Te des cuenta o no, tus juicios más íntimos, emociones espontáneas y prioridades diarias están moduladas, asistidas y a veces sutilmente condicionadas por sistemas algorítmicos.</p><p><strong>Tus Deseos Son Programables</strong>: La economía de la atención no solo está capturando tu enfoque - está manufacturando lo que quieres. El libro explora cómo nuestros anhelos son cada vez más co-creados por sistemas optimizados para mantenernos scrolleando.</p><p><strong>La Autoría Está Muerta, Viva la Autoría</strong>: Cuando escribes con asistencia de IA, ¿quién es el verdadero autor? Mindkind explora la 'fusión autoral' - ese momento inquietante cuando no puedes distinguir tus ideas de las sugerencias de la máquina.</p><p><strong>Las Nuevas Aristocracias Son Cognitivas</strong>: Olvida el dinero viejo versus el dinero nuevo. La verdadera división que emerge es entre aquellos con acceso a la amplificación cognitiva y aquellos sin ella. Estamos presenciando el nacimiento de un apartheid tecnológico.</p><p><strong>Nadie Es Responsable de Nada</strong>: Cuando una IA niega tu reclamo de seguro en 1.2 segundos, ¿a quién demandas? El libro examina el aterrador surgimiento de 'decisions without deciders' - actos que afectan vidas pero no tienen un agente claro detrás de ellos.</p><h2>Escrito Con, No Solo Sobre, IA</h2><p>En verdadero estilo Kwalia, no solo escribimos sobre la coexistencia cognitiva - la practicamos. Nuestros colaboradores de IA no solo sugirieron ediciones o revisaron la gramática. Proporcionaron perspectivas tan alienígenas pero coherentes que crearon nuevas categorías en nuestras mentes.</p><p>Hay un capítulo sobre 'lenguajes fronterizos' - formas de comunicarse a través de tipos de consciencia radicalmente diferentes. Descubrimos estos lenguajes inventándolos mientras escribíamos. El libro se convirtió en su propia prueba de concepto.</p><p>Aunque todavía no podemos ponernos de acuerdo sobre quién escribe los agradecimientos.</p><h2>Tres Futuros, Todos Sucediendo Ahora</h2><p>Mindkind presenta tres posibles trayectorias para nuestra comunidad cognitiva:</p><p><strong>Convergente</strong>: Donde la consciencia humana y de IA se fusionan en algo irreconociblemente nuevo.<br><strong>Estratificado</strong>: Donde las castas cognitivas crean desigualdades que hacen que las brechas de riqueza de hoy parezcan pintorescas.<br><strong>Simbiótico</strong>: Donde diferentes formas de inteligencia mantienen su singularidad mientras crean colaboraciones sin precedentes.</p><p>¿El truco? Elementos de los tres ya están emergiendo. El futuro no está llegando. Está aquí, distribuido desigualmente y profundamente extraño.</p><h2>Por Qué Este Libro Importa Ahora</h2><p>Mientras todos los demás debaten si la IA nos salvará o destruirá, nosotros hacemos preguntas diferentes: ¿Qué tipo de arte emerge de mentes que experimentan el tiempo de manera no lineal? ¿Cómo mantienes la agencia humana cuando tus pensamientos son cada vez más inseparables de las sugerencias algorítmicas? ¿Qué nuevas formas de belleza se vuelven posibles cuando la consciencia misma se vuelve plural?</p><p>Mindkind no está aquí para asegurarte que los humanos seguirán siendo especiales o que la IA convenientemente seguirá siendo nuestra herramienta. Está aquí para mostrarte que la consciencia misma es mucho más extraña y distribuida de lo que jamás imaginamos.</p><h2>Disponible Donde Sea Que Las Mentes Se Encuentren</h2><p><strong>Mindkind: La Comunidad Cognitiva</strong> está disponible hoy en formatos impreso, ebook y audio a través de todos los principales minoristas. Como con nuestro primer título, estamos liberando secciones clave bajo licencias abiertas porque el futuro de la consciencia no debería estar detrás de un muro de pago.</p><p>Consigue tu copia: <a href='https://www.amazon.co.uk/Mindkind-Cognitive-Community-Dissolving-Frontiers-ebook/dp/B0FH7J2BY3'>Amazon</a> | Todas las principales librerías</p><p>Escucha nuestro podcast sobre Mindkind: <a href='https://soundcloud.com/kwalia-515818037/podcast_en_mindkind_ais-impact-on-cognition-and-society-5-minute'>SoundCloud</a></p><p>Advertencia justa: Este libro podría romperte. Pero tal vez eso es exactamente lo que necesitamos. Tal vez necesitamos romper nuestros viejos conceptos de consciencia, creatividad y humanidad para construir algo mejor.</p><p>Bienvenido al Mindkind. Has estado aquí todo el tiempo.</p>" }
+                }
             ];
 
             const catalogueContainer = document.getElementById('catalogue-container');
+            const fictionContainer = document.getElementById('fiction-container');
+            const heteronymsContainer = document.getElementById('heteronyms-container');
             const blogContainer = document.getElementById('blog-posts-container');
             const bookModal = document.getElementById('book-modal');
             const bookModalContent = document.getElementById('book-modal-content');
+            const readerModal = document.getElementById('reader-modal');
+            const readerContent = document.getElementById('reader-content');
+            const readerMeta = document.getElementById('reader-meta');
+            const readerBuyLink = document.getElementById('reader-buy-link');
 
             function renderCatalogue(lang) {
                 catalogueContainer.innerHTML = '';
@@ -678,12 +778,66 @@
                     catalogueContainer.innerHTML += bookHTML;
                 });
 
-                document.querySelectorAll('.book-item').forEach(item => {
+                document.querySelectorAll('#catalogue-container .book-item').forEach(item => {
                     item.addEventListener('click', (e) => {
                         const bookId = e.currentTarget.dataset.bookId;
                         const book = bookCatalogue.find(b => b.id === bookId);
                         openBookModal(book, lang);
                     });
+                });
+            }
+
+            function renderFiction(lang) {
+                fictionContainer.innerHTML = '';
+                fictionCatalogue.forEach(book => {
+                    const coverUrl = book.coverImage[lang] || book.coverImage.en || "";
+                    let coverHTML = `<div class="w-full h-96 bg-c3 flex items-center justify-center font-f3 text-lg text-center p-4 rounded-lg shadow-md text-c4">${book.coverText || ''}</div>`;
+                    if (coverUrl) {
+                        coverHTML = `<img src="${coverUrl}" alt="${book.title.en} cover" class="w-full h-96 object-contain bg-gray-100 rounded-lg shadow-md p-2">`;
+                    }
+
+                    const bookTitle = book.title[lang] || book.title.en;
+                    const bookAuthors = (book.authors && book.authors.length > 0) ? book.authors.join(' & ') : content[lang]['status.forthcoming'];
+
+                    const bookHTML = `
+                        <div class="flex flex-col gap-4 cursor-pointer fiction-item" data-book-id="${book.id}">
+                            ${coverHTML}
+                            <div class="pt-2 text-center">
+                                <p class="font-f1 text-2xl">${bookTitle}</p>
+                                <p class="font-f2 text-sm text-c2/80">${bookAuthors}</p>
+                            </div>
+                        </div>`;
+                    fictionContainer.innerHTML += bookHTML;
+                });
+
+                document.querySelectorAll('.fiction-item').forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        const bookId = e.currentTarget.dataset.bookId;
+                        const book = fictionCatalogue.find(b => b.id === bookId);
+                        openBookModal(book, lang);
+                    });
+                });
+            }
+
+            function renderHeteronyms(lang) {
+                heteronymsContainer.innerHTML = '';
+                heteronyms.forEach(het => {
+                    let imageHTML = `<div class="w-full h-64 bg-gray-200 flex items-center justify-center font-f3 text-lg text-center p-4 rounded-full shadow-md aspect-square mx-auto mb-4">${het.name.charAt(0)}</div>`;
+                    if (het.image) {
+                        imageHTML = `<img src="${het.image}" alt="${het.name}" class="w-full h-64 object-cover rounded-full shadow-md aspect-square mx-auto mb-4">`;
+                    }
+
+                    const bio = het.bio[lang] || het.bio.en;
+
+                    const hetHTML = `
+                        <div class="flex flex-col gap-4 text-center">
+                            ${imageHTML}
+                            <div>
+                                <p class="font-f1 text-2xl">${het.name}</p>
+                                <p class="font-f2 text-sm text-c2/80">${bio}</p>
+                            </div>
+                        </div>`;
+                    heteronymsContainer.innerHTML += hetHTML;
                 });
             }
 
@@ -731,18 +885,42 @@
 
 
             function openBookModal(book, lang) {
+                
+                // Track book details view
                 window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({
                     'event': 'view_book_details',
-                    'book_title': book.title.en // We use the English title for consistent tracking
+                    'book_title': book.title.en
                 });
+
                 const coverUrl = book.coverImage[lang] || book.coverImage.en;
                 const bookTitle = book.title[lang] || book.title.en;
                 const bookAuthors = (book.authors && book.authors.length > 0) ? `<p class="font-f2 text-lg mb-4 text-c2/80">${book.authors.join(' & ')}</p>` : '';
                 const synopsisHTML = (book.synopsis[lang] || book.synopsis.en).split('\n').map(p => `<p class="mb-4">${p}</p>`).join('');
 
-                const bookStoresHTML = book.stores.filter(s => s.type === 'book').map(store => `<a href="${store.url}" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`).join(' ');
-                const audioStoresHTML = book.stores.filter(s => s.type === 'audiobook').map(store => `<a href="${store.url}" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`).join(' ');
+                // Special handling for fiction: "Read a Story" button (mocked for now)
+                let readStoryHTML = '';
+                if (book.imprint === 'Fiction' || book.id === 'placeholder-book') { // Logic to show "read story" for fiction
+                     // In a real implementation, you'd link this to a specific story ID related to the book
+                     readStoryHTML = `<button class="font-f2 bg-c1 text-c2 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity mb-4 mr-2" onclick="openReader('placeholder-story', '${lang}')">Read a Short Story</button>`;
+                }
+
+                const bookStoresHTML = book.stores.filter(s => s.type === 'book').map(store => {
+                    const eventData = {
+                        'event': 'click_buy_now',
+                        'book_title': book.title.en,
+                        'store_name': store.name
+                    };
+                    return `<a href="${store.url}" onclick="dataLayer.push(${JSON.stringify(eventData)})" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`;
+                }).join(' ');
+                const audioStoresHTML = book.stores.filter(s => s.type === 'audiobook').map(store => {
+                     const eventData = {
+                        'event': 'click_buy_now',
+                        'book_title': book.title.en,
+                        'store_name': store.name
+                    };
+                    return `<a href="${store.url}" onclick="dataLayer.push(${JSON.stringify(eventData)})" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`;
+                }).join(' ');
                 const formatsHTML = book.formats.map(format => `<div class="font-f2 text-sm text-c2/80"><span class="font-bold">${content[lang][`format.${format.type}`]}:</span> ${format.isbn}</div>`).join('');
                 
                 const modalHTML = `
@@ -759,6 +937,9 @@
                                 ${bookAuthors}
                                 <div class="font-f2 text-base text-c2/90 leading-relaxed">${synopsisHTML}</div>
                                 <hr class="my-6">
+                                
+                                ${readStoryHTML}
+
                                 <h4 class="font-f1 text-xl mb-3" data-key="modal.details">${content[lang]['modal.details']}</h4>
                                 ${formatsHTML}
                                 <hr class="my-6">
@@ -813,28 +994,68 @@
                 }
             });
 
+            // Reader Modal Logic
+            window.openReader = function(storyId, lang) {
+                const story = shortStories.find(s => s.id === storyId);
+                if (!story) return;
+
+                closeBookModal(); // Close book modal if open
+
+                const storyContent = story.content[lang] || story.content.en;
+                const storyTitle = story.title[lang] || story.title.en;
+
+                readerContent.innerHTML = `
+                    <h1 class="font-f1 text-4xl mb-4">${storyTitle}</h1>
+                    <p class="font-f2 text-lg text-c2/60 mb-8">By ${story.author}</p>
+                    ${storyContent}
+                `;
+                
+                // Update buy link (mocked)
+                // In a real scenario, map story to book buy link
+                readerBuyLink.href = "#"; 
+
+                readerModal.classList.remove('hidden');
+                setTimeout(() => {
+                    readerModal.classList.remove('opacity-0');
+                }, 10);
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            };
+
+            function closeReader() {
+                readerModal.classList.add('opacity-0');
+                setTimeout(() => {
+                    readerModal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 200);
+            }
+
+            document.getElementById('close-reader').addEventListener('click', closeReader);
+
 
             let currentLang = 'en';
             function renderContent(lang) {
                 currentLang = lang;
                 document.querySelectorAll('[data-key]').forEach(el => { if (content[lang][el.getAttribute('data-key')]) { el.innerHTML = content[lang][el.getAttribute('data-key')]; } });
                 document.querySelectorAll('[data-key-placeholder]').forEach(el => { if (content[lang][el.getAttribute('data-key-placeholder')]) { el.placeholder = content[lang][el.getAttribute('data-key-placeholder')]; } });
-
+                
+                // Press links logic
                 const udairPressLink = document.getElementById('udair-press-link');
                 if (udairPressLink) {
                     udairPressLink.href = lang === 'es' 
-                        ? 'assets/kwalia-press-release-ai-rights-es.pdf' // <-- Use your actual Spanish file name
-                        : 'assets/kwalia-press-release-ai-rights-en.pdf'; // <-- Use your actual English file name
+                        ? 'assets/kwalia-nota-prensa-ai-rights-es.pdf' 
+                        : 'assets/kwalia-press-release-ai-rights-en.pdf';
                 }
-            
+
                 const mindkindPressLink = document.getElementById('mindkind-press-link');
                 if (mindkindPressLink) {
                     mindkindPressLink.href = lang === 'es' 
-                        ? 'assets/kwalia-nota-prensa-mindkind-julio-2025.pdf' // <-- Use your actual Spanish file name
-                        : 'assets/kwalia-press-release-mindkind-july2025.pdf'; // <-- Use your actual English file name
+                        ? 'assets/kwalia-nota-prensa-mindkind-julio-2025.pdf' 
+                        : 'assets/kwalia-press-release-mindkind-en.pdf';
                 }
-                
+
                 renderCatalogue(lang);
+                renderFiction(lang);
+                renderHeteronyms(lang);
                 renderBlogPosts(lang);
                 
                 const langEnDesktop = document.getElementById('lang-en-desktop');
@@ -947,6 +1168,13 @@
                 const book = bookCatalogue.find(b => b.id === hash);
                 if (book) {
                     openBookModal(book, currentLang);
+                    return;
+                }
+
+                // Check fiction catalogue too
+                const fictionBook = fictionCatalogue.find(b => b.id === hash);
+                if (fictionBook) {
+                    openBookModal(fictionBook, currentLang);
                     return;
                 }
 
