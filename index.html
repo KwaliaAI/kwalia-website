@@ -779,19 +779,32 @@
                 fictionContainer.innerHTML = '';
                 fictionCatalogue.forEach(book => {
                     const coverUrl = book.coverImage[lang] || book.coverImage.en || "";
-                    let coverHTML = `<div class="w-full h-96 bg-c3 flex items-center justify-center font-f3 text-lg text-center p-4 rounded-lg shadow-md text-c4">${book.coverText || ''}</div>`;
+                    
+                    // Logic to add "Read Sample" badge if the book has stories
+                    let badgeHTML = '';
+                    if (book.stories && book.stories.length > 0) {
+                        badgeHTML = `<span class="absolute top-3 right-3 bg-white/90 text-slate-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm backdrop-blur-sm z-10">Read Sample</span>`;
+                    }
+
+                    let coverHTML = `<div class="w-full h-96 bg-c3 flex items-center justify-center font-f3 text-lg text-center p-4 rounded-lg shadow-md text-c4 relative">${badgeHTML} ${book.coverText || ''}</div>`;
+                    
                     if (coverUrl) {
-                        coverHTML = `<img src="${coverUrl}" alt="${book.title.en} cover" class="w-full h-96 object-contain bg-gray-100 rounded-lg shadow-md p-2">`;
+                        // Wrapped in a relative div to position the badge
+                        coverHTML = `
+                            <div class="relative w-full h-96 rounded-lg shadow-md overflow-hidden bg-gray-100 group">
+                                ${badgeHTML}
+                                <img src="${coverUrl}" alt="${book.title.en} cover" class="w-full h-full object-contain p-2 transition-transform duration-500 group-hover:scale-105">
+                            </div>`;
                     }
 
                     const bookTitle = book.title[lang] || book.title.en;
                     const bookAuthors = (book.authors && book.authors.length > 0) ? book.authors.join(' & ') : content[lang]['status.forthcoming'];
 
                     const bookHTML = `
-                        <div class="flex flex-col gap-4 cursor-pointer fiction-item" data-book-id="${book.id}">
+                        <div class="flex flex-col gap-4 cursor-pointer fiction-item group" data-book-id="${book.id}">
                             ${coverHTML}
                             <div class="pt-2 text-center">
-                                <p class="font-f1 text-2xl">${bookTitle}</p>
+                                <p class="font-f1 text-2xl group-hover:text-rose-500 transition-colors">${bookTitle}</p>
                                 <p class="font-f2 text-sm text-c2/80">${bookAuthors}</p>
                             </div>
                         </div>`;
@@ -1220,6 +1233,7 @@
     </script>
 </body>
 </html>
+
 
 
 
