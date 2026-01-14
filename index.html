@@ -1008,12 +1008,34 @@
                 const story = shortStories.find(s => s.id === storyId);
                 if (!story) return;
 
-                closeBookModal(); // Close book modal if open
+                closeBookModal(); 
 
                 const storyTitle = story.title[lang] || story.title.en;
                 const storyUrl = story.src[lang] || story.src.en;
 
-                // Show loading state immediately
+                // --- FIX STARTS HERE: Button Setup & Tracker ---
+                // 1. Find the specific button
+                const buyBtn = document.getElementById('reader-buy-link');
+                
+                // 2. Set the Amazon link attributes
+                buyBtn.href = "https://www.amazon.co.uk/PAYLOAD-Short-Stories-Alden-Pierce-ebook/dp/B0G7KTMSTM";
+                buyBtn.target = "_blank";
+                buyBtn.rel = "noopener noreferrer";
+                buyBtn.textContent = lang === 'es' ? "Comprar en Amazon" : "Buy on Amazon";
+
+                // 3. Attach the tracker (This sends the data when clicked)
+                buyBtn.onclick = function() {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'click_buy_now',
+                        'book_title': 'PAYLOAD (from Reader)',
+                        'store_name': 'Amazon',
+                        'story_read': storyTitle
+                    });
+                };
+                // --- FIX ENDS HERE ---
+
+                // Show loading state
                 readerContent.innerHTML = `
                     <h1 class="font-f1 text-4xl mb-4">${storyTitle}</h1>
                     <p class="font-f2 text-lg text-c2/60 mb-8">By ${story.author}</p>
@@ -1026,13 +1048,6 @@
                     </div>
                     <p class="mt-4 text-sm text-gray-400">${content[lang]['reader.loading']}</p>
                 `;
-                
-                // --- THIS IS THE ONLY CHANGE ---
-                readerBuyLink.href = "https://www.amazon.co.uk/PAYLOAD-Short-Stories-Alden-Pierce-ebook/dp/B0G7KTMSTM";
-                readerBuyLink.target = "_blank";
-                readerBuyLink.rel = "noopener noreferrer";
-                readerBuyLink.textContent = lang === 'es' ? "Comprar en Amazon" : "Buy on Amazon";
-                // -----------------------------
 
                 readerModal.classList.remove('hidden');
                 setTimeout(() => { readerModal.classList.remove('opacity-0'); }, 10);
@@ -1045,7 +1060,6 @@
                         return response.text();
                     })
                     .then(html => {
-                        // Inject the fetched HTML
                         readerContent.innerHTML = `
                             <h1 class="font-f1 text-4xl mb-4">${storyTitle}</h1>
                             <p class="font-f2 text-lg text-c2/60 mb-8">By ${story.author}</p>
@@ -1240,5 +1254,6 @@
     </script>
 </body>
 </html>
+
 
 
