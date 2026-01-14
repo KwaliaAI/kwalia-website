@@ -1027,7 +1027,13 @@
                     <p class="mt-4 text-sm text-gray-400">${content[lang]['reader.loading']}</p>
                 `;
                 
-                readerBuyLink.href = "#contact"; 
+                // --- THIS IS THE ONLY CHANGE ---
+                readerBuyLink.href = "https://www.amazon.co.uk/PAYLOAD-Short-Stories-Alden-Pierce-ebook/dp/B0G7KTMSTM";
+                readerBuyLink.target = "_blank";
+                readerBuyLink.rel = "noopener noreferrer";
+                readerBuyLink.textContent = lang === 'es' ? "Comprar en Amazon" : "Buy on Amazon";
+                // -----------------------------
+
                 readerModal.classList.remove('hidden');
                 setTimeout(() => { readerModal.classList.remove('opacity-0'); }, 10);
                 document.body.style.overflow = 'hidden';
@@ -1058,7 +1064,7 @@
                         `;
                     });
             };
-
+            
             function closeReader() {
                 readerModal.classList.add('opacity-0');
                 setTimeout(() => {
@@ -1233,3 +1239,4 @@
     </script>
 </body>
 </html>
+
