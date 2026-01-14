@@ -378,7 +378,7 @@
             <div class="mt-16 border-t pt-8 text-center">
                 <h3 class="font-f1 text-2xl mb-4" data-key="reader.cta.title">Enjoyed this story?</h3>
                 <p class="font-f2 mb-6 text-c2/80" data-key="reader.cta.text">It's part of our upcoming collection.</p>
-                <a href="#" id="reader-buy-link" class="inline-block font-f2 bg-c3 text-c4 font-bold py-3 px-8 rounded-md hover:opacity-90 transition-opacity" data-key="reader.cta.button">Get the Book</a>
+                <a href="javascript:void(0)" id="reader-buy-link" class="inline-block font-f2 bg-c3 text-c4 font-bold py-3 px-8 rounded-md hover:opacity-90 transition-opacity" data-key="reader.cta.button">Get the Book</a>
             </div>
         </div>
     </div>
@@ -1130,7 +1130,8 @@
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     const href = this.getAttribute('href');
-                    if (href && href.length > 1) {
+                        // Only prevent default if it actually starts with # AND isn't just a placeholder
+                        if (href && href.startsWith('#') && href.length > 1) {
                         e.preventDefault();
                         const targetElement = document.querySelector(href);
                         if (targetElement) {
@@ -1239,4 +1240,5 @@
     </script>
 </body>
 </html>
+
 
