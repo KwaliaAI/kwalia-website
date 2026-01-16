@@ -634,7 +634,7 @@
                         { name: "Google Play", url: "https://play.google.com/store/audiobooks/details/Alden_Pierce_PAYLOAD_Short_Stories?id=AQAAAEDqVW4VlM", type: "audiobook" }
                     ],
                     // Links to story IDs defined in shortStories array
-                    stories: ["morphine", "sesame"] 
+                    stories: ["morphine", "sesame", "quiet"]
                 }
             ];
 
@@ -655,19 +655,20 @@
                     id: "morphine",
                     title: { en: "Morphine", es: "Morfina" },
                     author: "Alden Pierce",
-                    src: { 
-                        en: "stories/morphine_en.html", 
-                        es: "stories/morphine_en.html" 
-                    }
+                    src: { en: "stories/morphine_en.html", es: "stories/morphine_en.html" }
                 },
                 {
                     id: "sesame",
                     title: { en: "Sesame", es: "Sésamo" },
                     author: "Alden Pierce",
-                    src: { 
-                        en: "stories/sesame_en.html", 
-                        es: "stories/sesame_en.html" 
-                    }
+                    src: { en: "stories/sesame_en.html", es: "stories/sesame_en.html" }
+                },
+                {
+                    id: "quiet",
+                    title: { en: "Quiet as you can", es: "Quiet as you can" },
+                    author: "Alden Pierce",
+                    isExcerpt: true, // Marks this as an excerpt
+                    src: { en: "stories/quiet_en.html", es: "stories/quiet_en.html" }
                 }
             ];
 
@@ -1012,18 +1013,20 @@
 
                 const storyTitle = story.title[lang] || story.title.en;
                 const storyUrl = story.src[lang] || story.src.en;
+                
+                // --- EXCERPT LOGIC ---
+                const isExcerpt = story.isExcerpt || false;
+                const buttonTextEn = isExcerpt ? "Continue reading on Amazon" : "Buy on Amazon";
+                const buttonTextEs = isExcerpt ? "Sigue leyendo en Amazon" : "Comprar en Amazon";
 
-                // --- FIX STARTS HERE: Button Setup & Tracker ---
-                // 1. Find the specific button
+                // --- BUTTON SETUP ---
                 const buyBtn = document.getElementById('reader-buy-link');
                 
-                // 2. Set the Amazon link attributes
                 buyBtn.href = "https://www.amazon.co.uk/PAYLOAD-Short-Stories-Alden-Pierce-ebook/dp/B0G7KTMSTM";
                 buyBtn.target = "_blank";
                 buyBtn.rel = "noopener noreferrer";
-                buyBtn.textContent = lang === 'es' ? "Comprar en Amazon" : "Buy on Amazon";
+                buyBtn.textContent = lang === 'es' ? buttonTextEs : buttonTextEn; // Use conditional text
 
-                // 3. Attach the tracker (This sends the data when clicked)
                 buyBtn.onclick = function() {
                     window.dataLayer = window.dataLayer || [];
                     window.dataLayer.push({
@@ -1033,7 +1036,6 @@
                         'story_read': storyTitle
                     });
                 };
-                // --- FIX ENDS HERE ---
 
                 // Show loading state
                 readerContent.innerHTML = `
@@ -1254,6 +1256,7 @@
     </script>
 </body>
 </html>
+
 
 
 
