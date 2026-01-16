@@ -1,0 +1,31 @@
+[
+  {
+    "id": "payload",
+    "imprint": "Fiction",
+    "title": {
+      "en": "PAYLOAD: Short Stories",
+      "es": "PAYLOAD: Relatos Cortos"
+    },
+    "authors": ["Alden Pierce"],
+    "coverImage": {
+      "en": "assets/9781917717175-Frame.jpg",
+      "es": "assets/9781917717175-Frame.jpg"
+    },
+    "coverText": "",
+    "synopsis": {
+      "en": "PAYLOAD: Short Stories is a collection of razor-bright, deeply human tales about ordinary people caught in the quiet emergencies of modern life. From teenagers reaching for a world beyond their zip code, to teachers, nurses, and night-shift workers carrying unspoken burdens, these stories illuminate the small, relentless pressures that shape who we become.\n\nAlden Pierce writes with exquisite clarity and tenderness, revealing the fault lines running beneath our daily routines. This is a book about survival, connection, and the fragile, ferocious hope that keeps us moving forward.\n\nIn these sharp, compassionate stories, Alden Pierce reveals the quiet catastrophes and small salvations that shape ordinary lives. Tender, tense, and unflinchingly human, PAYLOAD captures the moments when everything breaks, and the moments when we find a way through.",
+      "es": "PAYLOAD: Relatos Cortos es una colección de cuentos brillantes y profundamente humanos sobre personas comunes atrapadas en las emergencias silenciosas de la vida moderna. Desde adolescentes que buscan un mundo más allá de su código postal, hasta maestros, enfermeras y trabajadores del turno de noche que cargan con pesos no dichos, estas historias iluminan las presiones pequeñas e implacables que moldean quiénes somos.\n\nAlden Pierce escribe con una claridad y ternura exquisitas, revelando las fallas que corren bajo nuestras rutinas diarias. Este es un libro sobre la supervivencia, la conexión y la esperanza frágil y feroz que nos mantiene avanzando."
+    },
+    "status": "published",
+    "formats": [
+      { "type": "paperback", "isbn": "978-1-917717-16-8" },
+      { "type": "ebook", "isbn": "978-1-917717-17-5" },
+      { "type": "audiobook", "isbn": "978-1-917717-18-2" }
+    ],
+    "stores": [
+      { "name": "Amazon", "url": "https://www.amazon.co.uk/PAYLOAD-Short-Stories-Alden-Pierce-ebook/dp/B0G7KTMSTM", "type": "book" },
+      { "name": "Google Play", "url": "https://play.google.com/store/audiobooks/details/Alden_Pierce_PAYLOAD_Short_Stories?id=AQAAAEDqVW4VlM", "type": "audiobook" }
+    ],
+    "stories": ["morphine", "sesame", "quiet"]
+  }
+]

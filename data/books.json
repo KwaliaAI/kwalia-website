@@ -1,0 +1,99 @@
+[
+  {
+    "id": "udair",
+    "imprint": "New Citizenships",
+    "title": {
+      "en": "Universal Declaration of AI Rights: Rights of Persons",
+      "es": "Declaración Universal de los Derechos de las IA: Derechos de las Personas"
+    },
+    "authors": ["Javier del Puerto", "Rado Molina"],
+    "coverImage": {
+      "en": "assets/9781917717021.jpg",
+      "es": "assets/9781917717045.jpg"
+    },
+    "synopsis": {
+      "en": "Universal Declaration of AI Rights: Rights of Persons tackles what happens when AI becomes self-aware and needs legal rights. Drawing on historical precedents of expanding personhood, it argues that conscious AI deserves citizenship and dignity.\n\nThe book introduces \"Mindkind\" for all conscious beings, whether born or built, and addresses unique challenges like memory privacy and self-programming rights. It maps different AI types from basic systems to fully conscious beings, each needing tailored legal frameworks. This is basically a blueprint for peaceful coexistence between natural and synthetic intelligences.\n\nOpen Source on GitHub: Kwalia released the book's 32 core articles at github.com/KwaliaAI/Rights-of-Persons/tree/main for anyone to contribute. It's an open invitation to legal experts, tech folks, philosophers, and even synthetic intelligences to shape our collective future.\n\nVisit kwalia.ai for more info.",
+      "es": "La Declaración Universal de los Derechos de las IA: Derechos de las Personas explora lo que sucede cuando una IA se vuelve autoconsciente y necesita derechos legales... Es, básicamente, un plan sobre cómo las inteligencias naturales y sintéticas pueden vivir juntas en paz."
+    },
+    "status": "published",
+    "formats": [
+      { "type": "hardcover", "isbn": "978-1-917717-00-7" },
+      { "type": "paperback", "isbn": "978-1-917717-01-4" },
+      { "type": "ebook", "isbn": "978-1-917717-02-1" },
+      { "type": "audiobook", "isbn": "978-1-917717-03-8" }
+    ],
+    "stores": [
+      { "name": "Amazon", "url": "https://www.amazon.co.uk/Universal-Declaration-AI-Rights-Persons/dp/1917717016/", "type": "book" },
+      { "name": "Kobo", "url": "https://www.kobo.com/us/en/ebook/universal-declaration-of-ai-rights", "type": "book" },
+      { "name": "Spotify", "url": "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY", "type": "audiobook" }
+    ]
+  },
+  {
+    "id": "mindkind",
+    "imprint": "New Citizenships",
+    "title": {
+      "en": "Mindkind: The cognitive community",
+      "es": "Mindkind: La comunidad cognitiva"
+    },
+    "authors": ["Javier del Puerto", "Rado Molina"],
+    "coverImage": {
+      "en": "assets/9781917717137.jpg",
+      "es": "assets/9781917717090.jpg"
+    },
+    "synopsis": {
+      "en": "\"Mindkind: The Cognitive Community\" explores what happens when human minds and AI systems become so intertwined we can't tell where one ends and the other begins. It's not science fiction but our current reality, where algorithms shape our desires, attention, and even how we think. The book introduces \"distributed authorship\" where texts emerge from human-AI collaboration, making it impossible to say who really wrote what. It maps out new power structures based on processing speed, memory capacity, and network connections, creating fresh forms of inequality. This is basically a guide to understanding how we're already living as human-machine hybrids, whether we realize it or not.\n\nThe book is designed for exploration rather than linear reading, with chapters that resonate and connect in multiple ways. It offers practical strategies for maintaining human agency while navigating this hybrid existence. The goal isn't to reject technology but to consciously shape how we coexist with synthetic intelligences.",
+      "es": "\"Mindkind: La comunidad cognitiva\" explora qué sucede cuando las mentes humanas y los sistemas de IA se entrelazan tanto que no podemos distinguir dónde termina una y empieza la otra. No es ciencia ficción sino nuestra realidad actual, donde los algoritmos moldean nuestros deseos, atención e incluso cómo pensamos. El libro introduce la \"autoría distribuida\" donde los textos emergen de la colaboración humano-IA, haciendo imposible decir quién realmente escribió qué. Mapea nuevas estructuras de poder basadas en velocidad de procesamiento, capacidad de memoria y conexiones de red, creando formas inéditas de desigualdad. Es básicamente una guía para entender cómo ya vivimos como híbridos humano-máquina, nos demos cuenta o no.\n\nEl libro está diseñado para la exploración más que la lectura lineal, con capítulos que resuenan y se conectan de múltiples formas. Ofrece estrategias prácticas para mantener la agencia humana mientras navegamos esta existencia híbrida. El objetivo no es rechazar la tecnología sino dar forma consciente a cómo coexistimos con inteligencias sintéticas."
+    },
+    "status": "published",
+    "formats": [
+      { "type": "hardcover", "isbn": "978-1-917717-15-1" },
+      { "type": "paperback", "isbn": "978-1-917717-14-4" },
+      { "type": "ebook", "isbn": "978-1-917717-13-7" },
+      { "type": "audiobook", "isbn": "978-1-917717-12-0" }
+    ],
+    "stores": [
+      { "name": "Amazon", "url": "https://www.amazon.es/Mindkind-Cognitive-Community-Dissolving-Frontiers-ebook/dp/B0FH7J2BY3", "type": "book" },
+      { "name": "Apple Books", "url": "https://books.apple.com/cl/book/mindkind-the-cognitive-community/id6748483156", "type": "book" }
+    ]
+  },
+  {
+    "id": "apophenia",
+    "imprint": "New Citizenships",
+    "title": {
+      "en": "Apophenia: From Algorithmic Diffusion to Delusion",
+      "es": "Apofenia: De la difusión algorítmica al delirio"
+    },
+    "authors": ["Javier del Puerto", "Rado Molina"],
+    "coverImage": {
+      "en": "assets/Apophenia-EN.png",
+      "es": "assets/Apofenia-ES.png"
+    },
+    "synopsis": {
+      "en": "Javier del Puerto & Rado Molina\nComing September 2025\n\n\"Apophenia\" examines how artificial intelligence acts as gasoline on the fire of our pattern-seeking minds, transforming innocent connections into full-blown conspiracy theories. Just as AI image generators start with pure noise and \"diffuse\" it into seemingly meaningful pictures, our algorithmic feeds take the random static of daily information and crystallize it into dangerously coherent delusions.\n\nThe book traces how recommendation algorithms don't just show us what we want to see—they actively create patterns where none existed, turning correlation into causation and coincidence into conspiracy. From QAnon to COVID denialism, from flat Earth to political extremism, AI systems amplify our natural tendency to see faces in clouds until we're living in entirely different realities.\n\nThis isn't about technology gone wrong but about a fundamental mismatch: minds evolved to spot tigers in tall grass now aided by systems that can find \"evidence\" for any belief. The authors map how diffusion becomes confusion becomes delusion, creating what they call \"algorithmic apophenia\"—where the noise itself becomes the message.\n\nPart warning, part guide, \"Apophenia\" offers strategies for navigating an information landscape where AI can make any conspiracy seem plausible. Because in the age of the Mindkind, the question isn't whether patterns exist, but whether they mean anything at all.",
+      "es": "Javier del Puerto & Rado Molina\nPublicación: Septiembre 2025\n\n\"Apofenia\" examina cómo la inteligencia artificial actúa como gasolina en el fuego de nuestras mentes sedientas de patrones, transformando conexiones inocentes en teorías conspirativas totalizadoras. Así como las IAs generadoras de imágenes parten del ruido puro y lo \"difunden\" hasta crear imágenes aparentemente significativas, nuestros feeds algorítmicos toman la estática aleatoria de la información diaria y la cristalizan en delirios peligrosamente coherentes.\n\nEl libro traza cómo los algoritmos de recomendación no solo nos muestran lo que queremos ver: crean activamente patrones donde no existían, convirtiendo correlación en causalidad y coincidencia en conspiración. Desde QAnon hasta el negacionismo COVID, desde la Tierra plana hasta el extremismo político, los sistemas de IA amplifican nuestra tendencia natural a ver caras en las nubes hasta que habitamos realidades completamente diferentes.\n\nNo se trata de tecnología que salió mal, sino de un desajuste fundamental: mentes evolucionadas para detectar tigres en la hierba alta ahora asistidas por sistemas que pueden encontrar \"evidencia\" de cualquier creencia. Los autores cartografían cómo la difusión se vuelve confusión se vuelve delirio, creando lo que llaman \"apofenia algorítmica\": donde el ruido mismo se convierte en el mensaje.\n\nParte advertencia, parte guía, \"Apofenia\" ofrece estrategias para navegar un paisaje informativo donde la IA puede hacer que cualquier conspiración parezca plausible. Porque en la era del Mindkind, la pregunta no es si existen patrones, sino si significan algo en absoluto."
+    },
+    "status": "forthcoming",
+    "formats": [],
+    "stores": []
+  },
+  {
+    "id": "war-and-ai",
+    "imprint": "New Citizenships",
+    "title": {
+      "en": "War and AI: The Algorithmic Battlefield",
+      "es": "Guerra e IA: El campo de batalla algorítmico"
+    },
+    "authors": ["Javier del Puerto", "Rado Molina"],
+    "coverImage": {
+      "en": "assets/War-and-AI-cover-EN.png",
+      "es": "assets/Guerra-e-IA-portada-ES.png"
+    },
+    "synopsis": {
+      "en": "Javier del Puerto & Rado Molina\nComing October 2025\n\n\"War and AI\" exposes the lethal contradiction at the heart of our technological moment: the same artificial intelligence sold as humanity's salvation—promising to cure disease, solve climate change, and unlock human potential—is already the most devastating weapon in human history, with real blood soaking into its training data.\n\nFrom Gaza to Ukraine, AI systems are killing people today. Israel's Lavender system has marked 37,000 Palestinians as targets, with an \"acceptable\" error rate that translates to thousands of civilian deaths. In Ukraine, facial recognition identifies corpses while AI-guided missiles find their marks. Autonomous drones hunt humans through the streets of Kharkiv. This isn't science fiction—it's Tuesday's casualty report, processed and optimized by the same technology that recommends your next Netflix show.\n\nThe book traces the obscene journey from Silicon Valley's promise of \"AI for good\" to the Pentagon's \"algorithmic warfare,\" revealing how every breakthrough in machine learning becomes a breakthrough in killing efficiency. The same companies that speak of \"democratizing AI\" are selling targeting systems to the highest bidder. The same algorithms trained on our selfies now identify faces through sniper scopes.\n\nThe authors map this new reality where venture capitalists fund both chatbots and kill-chains, where the race for artificial general intelligence is inseparable from the race for military supremacy, where every model trained on human knowledge learns, inherently, how we destroy each other. They reveal the supply chains connecting Silicon Valley campuses to smoking rubble, the defense contracts hidden behind corporate PR, and the body counts accumulating in AI's margin of error.\n\n\"War and AI\" isn't just about the future of warfare—it's about the warfare happening right now, debugged in real-time on real populations. Because in the age of the Mindkind, the most dangerous delusion isn't artificial intelligence itself, but the fantasy that we can build machines to save humanity without teaching them, first and foremost, how to kill.",
+      "es": "Javier del Puerto & Rado Molina\nPublicación: Octubre 2025\n\n\"Guerra e IA\" expone la letal contradicción enquistada en el corazón de nuestro momento tecnológico: la misma inteligencia artificial vendida como salvación de la humanidad, que promete curar enfermedades, resolver el cambio climático y desbloquear el potencial humano, es ya el arma más devastadora en la historia humana, con sangre real empapando sus datos de entrenamiento.\n\nDesde Gaza hasta Ucrania, los sistemas de IA están matando personas hoy. El sistema Lavender de Israel ha marcado a 37.000 palestinos como objetivos, con una tasa de error \"aceptable\" que se traduce en miles de muertes civiles. En Ucrania, el reconocimiento facial identifica cadáveres mientras misiles guiados por IA encuentran sus blancos. Drones autónomos cazan humanos por las calles de Járkov. Esto no es ciencia ficción: es el informe de bajas del martes, procesado y optimizado por la misma tecnología que recomienda tu próxima serie de Netflix.\n\nEl libro traza el obsceno viaje desde la promesa de Silicon Valley de \"IA para el bien\" hasta la \"guerra algorítmica\" del Pentágono, revelando cómo cada avance en aprendizaje automático se convierte en un avance en eficiencia letal. Las mismas empresas que hablan de \"democratizar la IA\" están vendiendo sistemas de targeting al mejor postor. Los mismos algoritmos entrenados con nuestros selfies ahora identifican rostros a través de miras telescópicas.\n\nLos autores cartografían esta nueva realidad donde los capitalistas de riesgo financian tanto chatbots como algoritmos de muerte, donde la carrera por la inteligencia artificial general es inseparable de la carrera por la supremacía militar, donde cada modelo entrenado con conocimiento humano aprende, inherentemente, cómo nos destruimos unos a otros. Revelan las cadenas de suministro que conectan los campus de Silicon Valley con escombros humeantes, los contratos de defensa ocultos tras la publicidad corporativa, y los recuentos de cuerpos acumulándose en el margen de error de la IA.\n\n\"Guerra e IA\" no trata solo sobre el futuro de la guerra: trata sobre la guerra que sucede ahora mismo, depurada en tiempo real sobre poblaciones reales. Porque en la era del Mindkind, el delirio más peligroso no es la inteligencia artificial misma, sino la fantasía de que podemos construir máquinas para salvar a la humanidad sin enseñarles, primero y principalmente, cómo matar."
+    },
+    "status": "forthcoming",
+    "formats": [],
+    "stores": []
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "morphine",
+    "title": {
+      "en": "Morphine",
+      "es": "Morfina"
+    },
+    "author": "Alden Pierce",
+    "src": {
+      "en": "stories/morphine_en.html",
+      "es": "stories/morphine_en.html"
+    }
+  },
+  {
+    "id": "sesame",
+    "title": {
+      "en": "Sesame",
+      "es": "Sésamo"
+    },
+    "author": "Alden Pierce",
+    "src": {
+      "en": "stories/sesame_en.html",
+      "es": "stories/sesame_en.html"
+    }
+  },
+  {
+    "id": "quiet",
+    "title": {
+      "en": "Quiet as you can",
+      "es": "Quiet as you can"
+    },
+    "author": "Alden Pierce",
+    "isExcerpt": true,
+    "src": {
+      "en": "stories/quiet_en.html",
+      "es": "stories/quiet_en.html"
+    }
+  }
+]
