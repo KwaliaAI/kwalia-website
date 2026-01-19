@@ -1,0 +1,52 @@
+[
+  {
+    "id": "youre-already-a-cyborg",
+    "slug": {
+      "en": "youre-already-a-cyborg",
+      "es": "ya-eres-un-cyborg"
+    },
+    "title": {
+      "en": "You're Already a Cyborg (And That's Fine)",
+      "es": "Ya eres un cyborg (y no pasa nada)"
+    },
+    "subtitle": {
+      "en": "On the merger that already happened while nobody was looking.",
+      "es": "Sobre la fusion que ya ocurrio mientras nadie miraba."
+    },
+    "excerpt": {
+      "en": "Every time you use your phone to remember something, you're extending your mind into a machine.",
+      "es": "Cada vez que usas el movil para recordar algo, estas extendiendo tu mente hacia una maquina."
+    },
+    "date": "2026-01-19",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "sourceIdeas": ["cognitive-externalization", "extended-mind-thesis"],
+    "tmmTopics": ["extended-mind-thesis", "cognitive-externalization", "programmable-desire", "socrates-writing"],
+    "status": "published"
+  },
+  {
+    "id": "why-corporations-are-people",
+    "slug": {
+      "en": "why-corporations-are-people",
+      "es": "por-que-las-empresas-son-personas"
+    },
+    "title": {
+      "en": "Why Corporations Are People But AI Isn't",
+      "es": "Por que las empresas son personas pero la IA no"
+    },
+    "subtitle": {
+      "en": "The legal history is weirder than you think.",
+      "es": "La historia legal es mas rara de lo que crees."
+    },
+    "excerpt": {
+      "en": "The legal history is weirder than you think. And it exposes something uncomfortable about how we decide who counts.",
+      "es": "La historia legal es mas rara de lo que crees. Y expone algo incomodo sobre como decidimos quien cuenta."
+    },
+    "date": "2026-01-19",
+    "readTime": 6,
+    "primaryBook": "udair",
+    "sourceIdeas": ["corporate-personhood", "river-personhood", "synthetic-person-criteria"],
+    "tmmTopics": ["corporate-personhood-history", "river-personhood", "ai-consciousness-debate", "synthetic-person-criteria"],
+    "status": "published"
+  }
+]
