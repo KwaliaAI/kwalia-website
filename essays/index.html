@@ -85,6 +85,53 @@
         .essay-card:hover h2 {
             color: #FF70A6;
         }
+
+        .essay-bubble {
+            width: 80px;
+            height: 64px;
+            flex-shrink: 0;
+        }
+        @media (max-width: 640px) {
+            .essay-bubble { display: none; }
+            .essay-card { display: block !important; }
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .pagination button {
+            padding: 0.5rem 1rem;
+            border: 1px solid #e5e5e5;
+            background: white;
+            border-radius: 0.375rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .pagination button:hover:not(:disabled) {
+            border-color: #FF70A6;
+            color: #FF70A6;
+        }
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .pagination button.active {
+            background: #474747;
+            color: white;
+            border-color: #474747;
+        }
+        .pagination .page-info {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: #474747;
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body class="bg-c4 text-c2 antialiased">
@@ -141,307 +188,560 @@
 
                 <div id="essays-list" class="space-y-0">
 
-                    <a href="the-last-human-thought.html" class="essay-card block py-6" data-href-en="the-last-human-thought.html" data-href-es="el-ultimo-pensamiento-humano.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
+                    <a href="the-last-human-thought.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-last-human-thought.html" data-href-es="el-ultimo-pensamiento-humano.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="23" cy="18" r="11" fill="#FF70A6" opacity="0.75"/><circle cx="40" cy="41" r="22" fill="#ffff00" opacity="0.3"/><circle cx="57" cy="64" r="18" fill="#474747" opacity="0.44999999999999996"/><circle cx="74" cy="37" r="14" fill="#FF70A6" opacity="0.6"/><circle cx="31" cy="60" r="10" fill="#ffff00" opacity="0.75"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Last Human Thought" data-es="El ultimo pensamiento humano">The Last Human Thought</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="What would it be?" data-es="Cual seria?">What would it be?</p>
+                    </div>
                     </a>
 
-                    <a href="a-day-in-the-stratified-mindkind.html" class="essay-card block py-6" data-href-en="a-day-in-the-stratified-mindkind.html" data-href-es="un-dia-en-el-mindkind-estratificado.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
+                    <a href="a-day-in-the-stratified-mindkind.html" class="essay-card flex items-start gap-4 py-6" data-href-en="a-day-in-the-stratified-mindkind.html" data-href-es="un-dia-en-el-mindkind-estratificado.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="25" r="18" fill="#ffff00" opacity="0.6"/><circle cx="47" cy="48" r="14" fill="#474747" opacity="0.75"/><circle cx="64" cy="21" r="10" fill="#FF70A6" opacity="0.3"/><circle cx="21" cy="44" r="21" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="38" cy="17" r="17" fill="#474747" opacity="0.6"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="A Day in the Stratified Mindkind" data-es="Un dia en el Mindkind estratificado">A Day in the Stratified Mindkind</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="Short fiction, 2045." data-es="Ficcion corta, 2045.">Short fiction, 2045.</p>
+                    </div>
                     </a>
 
-                    <a href="on-writing-with-machines.html" class="essay-card block py-6" data-href-en="on-writing-with-machines.html" data-href-es="sobre-escribir-con-maquinas.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
+                    <a href="on-writing-with-machines.html" class="essay-card flex items-start gap-4 py-6" data-href-en="on-writing-with-machines.html" data-href-es="sobre-escribir-con-maquinas.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="37" cy="32" r="10" fill="#474747" opacity="0.44999999999999996"/><circle cx="54" cy="55" r="21" fill="#FF70A6" opacity="0.6"/><circle cx="71" cy="28" r="17" fill="#ffff00" opacity="0.75"/><circle cx="28" cy="51" r="13" fill="#474747" opacity="0.3"/><circle cx="45" cy="24" r="9" fill="#FF70A6" opacity="0.44999999999999996"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="On Writing With Machines" data-es="Sobre escribir con maquinas">On Writing With Machines</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="A personal reflection." data-es="Una reflexion personal.">A personal reflection.</p>
+                    </div>
                     </a>
 
-                    <a href="if-ai-could-vote.html" class="essay-card block py-6" data-href-en="if-ai-could-vote.html" data-href-es="si-la-ia-pudiera-votar.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
+                    <a href="if-ai-could-vote.html" class="essay-card flex items-start gap-4 py-6" data-href-en="if-ai-could-vote.html" data-href-es="si-la-ia-pudiera-votar.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="44" cy="39" r="17" fill="#FF70A6" opacity="0.3"/><circle cx="61" cy="62" r="13" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="78" cy="35" r="9" fill="#474747" opacity="0.6"/><circle cx="35" cy="58" r="20" fill="#FF70A6" opacity="0.75"/><circle cx="52" cy="31" r="16" fill="#ffff00" opacity="0.3"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="If AI Could Vote" data-es="Si la IA pudiera votar">If AI Could Vote</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="A thought experiment in four parts." data-es="Un experimento mental en cuatro partes.">A thought experiment in four parts.</p>
+                    </div>
                     </a>
 
-                    <a href="50-questions-well-be-asking-in-2035.html" class="essay-card block py-6" data-href-en="50-questions-well-be-asking-in-2035.html" data-href-es="50-preguntas-que-nos-haremos-en-2035.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
+                    <a href="50-questions-well-be-asking-in-2035.html" class="essay-card flex items-start gap-4 py-6" data-href-en="50-questions-well-be-asking-in-2035.html" data-href-es="50-preguntas-que-nos-haremos-en-2035.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="51" cy="46" r="9" fill="#ffff00" opacity="0.75"/><circle cx="68" cy="19" r="20" fill="#474747" opacity="0.3"/><circle cx="25" cy="42" r="16" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="42" cy="15" r="12" fill="#ffff00" opacity="0.6"/><circle cx="59" cy="38" r="8" fill="#474747" opacity="0.75"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="50 Questions We'll Be Asking in 2035" data-es="50 preguntas que nos haremos en 2035">50 Questions We'll Be Asking in 2035</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="From practical to profound to absurd." data-es="De lo practico a lo profundo a lo absurdo.">From practical to profound to absurd.</p>
+                    </div>
                     </a>
 
-                    <a href="the-strange-new-world-of-ai-art.html" class="essay-card block py-6" data-href-en="the-strange-new-world-of-ai-art.html" data-href-es="el-extrano-nuevo-mundo-del-arte-ia.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
+                    <a href="the-strange-new-world-of-ai-art.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-strange-new-world-of-ai-art.html" data-href-es="el-extrano-nuevo-mundo-del-arte-ia.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="58" cy="53" r="16" fill="#474747" opacity="0.6"/><circle cx="75" cy="26" r="12" fill="#FF70A6" opacity="0.75"/><circle cx="32" cy="49" r="8" fill="#ffff00" opacity="0.3"/><circle cx="49" cy="22" r="19" fill="#474747" opacity="0.44999999999999996"/><circle cx="66" cy="45" r="15" fill="#FF70A6" opacity="0.6"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Strange New World of AI Art" data-es="El extrano nuevo mundo del arte IA">The Strange New World of AI Art</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="It's not about whether it's real art." data-es="No se trata de si es arte real.">It's not about whether it's real art.</p>
+                    </div>
                     </a>
 
-                    <a href="why-writers-are-angrier-than-visual-artists.html" class="essay-card block py-6" data-href-en="why-writers-are-angrier-than-visual-artists.html" data-href-es="por-que-los-escritores-estan-mas-enfadados.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
+                    <a href="why-writers-are-angrier-than-visual-artists.html" class="essay-card flex items-start gap-4 py-6" data-href-en="why-writers-are-angrier-than-visual-artists.html" data-href-es="por-que-los-escritores-estan-mas-enfadados.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="65" cy="60" r="8" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="22" cy="33" r="19" fill="#ffff00" opacity="0.6"/><circle cx="39" cy="56" r="15" fill="#474747" opacity="0.75"/><circle cx="56" cy="29" r="11" fill="#FF70A6" opacity="0.3"/><circle cx="73" cy="52" r="22" fill="#ffff00" opacity="0.44999999999999996"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="Why Writers Are Angrier Than Visual Artists" data-es="Por que los escritores estan mas enfadados">Why Writers Are Angrier Than Visual Artists</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="About AI, I mean." data-es="Sobre la IA, me refiero.">About AI, I mean.</p>
+                    </div>
                     </a>
 
-                    <a href="the-influencer-economy-is-a-preview.html" class="essay-card block py-6" data-href-en="the-influencer-economy-is-a-preview.html" data-href-es="la-economia-de-influencers-es-un-adelanto.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
+                    <a href="the-influencer-economy-is-a-preview.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-influencer-economy-is-a-preview.html" data-href-es="la-economia-de-influencers-es-un-adelanto.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="72" cy="17" r="15" fill="#ffff00" opacity="0.3"/><circle cx="29" cy="40" r="11" fill="#474747" opacity="0.44999999999999996"/><circle cx="46" cy="63" r="22" fill="#FF70A6" opacity="0.6"/><circle cx="63" cy="36" r="18" fill="#ffff00" opacity="0.75"/><circle cx="20" cy="59" r="14" fill="#474747" opacity="0.3"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="December 2025" data-es="Diciembre 2025">December 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Influencer Economy Is a Preview" data-es="La economia de influencers es un adelanto">The Influencer Economy Is a Preview</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="Of something much bigger." data-es="De algo mucho mas grande.">Of something much bigger.</p>
+                    </div>
                     </a>
 
-                    <a href="why-everyones-worried-about-the-wrong-ai-risks.html" class="essay-card block py-6" data-href-en="why-everyones-worried-about-the-wrong-ai-risks.html" data-href-es="por-que-todos-se-preocupan-por-los-riesgos-equivocados-de-la-ia.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
+                    <a href="why-everyones-worried-about-the-wrong-ai-risks.html" class="essay-card flex items-start gap-4 py-6" data-href-en="why-everyones-worried-about-the-wrong-ai-risks.html" data-href-es="por-que-todos-se-preocupan-por-los-riesgos-equivocados-de-la-ia.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="79" cy="24" r="22" fill="#474747" opacity="0.75"/><circle cx="36" cy="47" r="18" fill="#FF70A6" opacity="0.3"/><circle cx="53" cy="20" r="14" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="70" cy="43" r="10" fill="#474747" opacity="0.6"/><circle cx="27" cy="16" r="21" fill="#FF70A6" opacity="0.75"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="Why Everyone's Worried About the Wrong AI Risks" data-es="Por que todos se preocupan por los riesgos equivocados">Why Everyone's Worried About the Wrong AI Risks</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="Terminator scenarios miss the point." data-es="Los escenarios Terminator no entienden nada.">Terminator scenarios miss the point.</p>
+                    </div>
                     </a>
 
-                    <a href="what-her-got-right-about-ai-love.html" class="essay-card block py-6" data-href-en="what-her-got-right-about-ai-love.html" data-href-es="que-acerto-her-sobre-el-amor-con-ia.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
+                    <a href="what-her-got-right-about-ai-love.html" class="essay-card flex items-start gap-4 py-6" data-href-en="what-her-got-right-about-ai-love.html" data-href-es="que-acerto-her-sobre-el-amor-con-ia.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="31" r="14" fill="#FF70A6" opacity="0.6"/><circle cx="43" cy="54" r="10" fill="#ffff00" opacity="0.75"/><circle cx="60" cy="27" r="21" fill="#474747" opacity="0.3"/><circle cx="77" cy="50" r="17" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="34" cy="23" r="13" fill="#ffff00" opacity="0.6"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="What Her Got Right (And Wrong) About AI Love" data-es="Que acerto Her sobre el amor con IA">What Her Got Right (And Wrong) About AI Love</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="The 2013 film looks different now." data-es="La pelicula de 2013 se ve diferente ahora.">The 2013 film looks different now.</p>
+                    </div>
                     </a>
 
-                    <a href="the-myth-of-the-neutral-tool.html" class="essay-card block py-6" data-href-en="the-myth-of-the-neutral-tool.html" data-href-es="el-mito-de-la-herramienta-neutral.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
+                    <a href="the-myth-of-the-neutral-tool.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-myth-of-the-neutral-tool.html" data-href-es="el-mito-de-la-herramienta-neutral.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="33" cy="38" r="21" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="50" cy="61" r="17" fill="#474747" opacity="0.6"/><circle cx="67" cy="34" r="13" fill="#FF70A6" opacity="0.75"/><circle cx="24" cy="57" r="9" fill="#ffff00" opacity="0.3"/><circle cx="41" cy="30" r="20" fill="#474747" opacity="0.44999999999999996"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Myth of the Neutral Tool" data-es="El mito de la herramienta neutral">The Myth of the Neutral Tool</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="Every technology has politics." data-es="Toda tecnologia tiene politica.">Every technology has politics.</p>
+                    </div>
                     </a>
 
-                    <a href="the-art-of-productive-misunderstanding.html" class="essay-card block py-6" data-href-en="the-art-of-productive-misunderstanding.html" data-href-es="el-arte-del-malentendido-productivo.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
+                    <a href="the-art-of-productive-misunderstanding.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-art-of-productive-misunderstanding.html" data-href-es="el-arte-del-malentendido-productivo.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="45" r="13" fill="#474747" opacity="0.3"/><circle cx="57" cy="18" r="9" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="74" cy="41" r="20" fill="#ffff00" opacity="0.6"/><circle cx="31" cy="64" r="16" fill="#474747" opacity="0.75"/><circle cx="48" cy="37" r="12" fill="#FF70A6" opacity="0.3"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Art of Productive Misunderstanding" data-es="El arte del malentendido productivo">The Art of Productive Misunderstanding</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="Sometimes not quite getting it is exactly right." data-es="A veces no entender del todo es exactamente correcto.">Sometimes not quite getting it is exactly right.</p>
+                    </div>
                     </a>
 
-                    <a href="how-to-have-an-opinion-thats-actually-yours.html" class="essay-card block py-6" data-href-en="how-to-have-an-opinion-thats-actually-yours.html" data-href-es="como-tener-una-opinion-que-sea-realmente-tuya.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
+                    <a href="how-to-have-an-opinion-thats-actually-yours.html" class="essay-card flex items-start gap-4 py-6" data-href-en="how-to-have-an-opinion-thats-actually-yours.html" data-href-es="como-tener-una-opinion-que-sea-realmente-tuya.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="47" cy="52" r="20" fill="#FF70A6" opacity="0.75"/><circle cx="64" cy="25" r="16" fill="#ffff00" opacity="0.3"/><circle cx="21" cy="48" r="12" fill="#474747" opacity="0.44999999999999996"/><circle cx="38" cy="21" r="8" fill="#FF70A6" opacity="0.6"/><circle cx="55" cy="44" r="19" fill="#ffff00" opacity="0.75"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="How to Have an Opinion That's Actually Yours" data-es="Como tener una opinion que sea realmente tuya">How to Have an Opinion That's Actually Yours</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="It's becoming a radical act." data-es="Se esta convirtiendo en un acto radical.">It's becoming a radical act.</p>
+                    </div>
                     </a>
 
-                    <a href="how-to-read-in-the-age-of-distraction.html" class="essay-card block py-6" data-href-en="how-to-read-in-the-age-of-distraction.html" data-href-es="como-leer-en-la-era-de-la-distraccion.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
+                    <a href="how-to-read-in-the-age-of-distraction.html" class="essay-card flex items-start gap-4 py-6" data-href-en="how-to-read-in-the-age-of-distraction.html" data-href-es="como-leer-en-la-era-de-la-distraccion.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="54" cy="59" r="12" fill="#ffff00" opacity="0.6"/><circle cx="71" cy="32" r="8" fill="#474747" opacity="0.75"/><circle cx="28" cy="55" r="19" fill="#FF70A6" opacity="0.3"/><circle cx="45" cy="28" r="15" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="62" cy="51" r="11" fill="#474747" opacity="0.6"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="How to Read in the Age of Distraction" data-es="Como leer en la era de la distraccion">How to Read in the Age of Distraction</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="The skill we're losing and how to keep it." data-es="La habilidad que estamos perdiendo y como conservarla.">The skill we're losing and how to keep it.</p>
+                    </div>
                     </a>
 
-                    <a href="the-case-for-being-offline-sometimes.html" class="essay-card block py-6" data-href-en="the-case-for-being-offline-sometimes.html" data-href-es="a-favor-de-desconectarse-a-veces.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
+                    <a href="the-case-for-being-offline-sometimes.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-case-for-being-offline-sometimes.html" data-href-es="a-favor-de-desconectarse-a-veces.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="61" cy="16" r="19" fill="#474747" opacity="0.44999999999999996"/><circle cx="78" cy="39" r="15" fill="#FF70A6" opacity="0.6"/><circle cx="35" cy="62" r="11" fill="#ffff00" opacity="0.75"/><circle cx="52" cy="35" r="22" fill="#474747" opacity="0.3"/><circle cx="69" cy="58" r="18" fill="#FF70A6" opacity="0.44999999999999996"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Case for Being Offline Sometimes" data-es="A favor de desconectarse a veces">The Case for Being Offline Sometimes</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="Not detox. Strategic disconnection." data-es="No detox. Desconexion estrategica.">Not detox. Strategic disconnection.</p>
+                    </div>
                     </a>
 
-                    <a href="what-to-tell-your-kids-about-ai.html" class="essay-card block py-6" data-href-en="what-to-tell-your-kids-about-ai.html" data-href-es="que-decirles-a-tus-hijos-sobre-ia.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
+                    <a href="what-to-tell-your-kids-about-ai.html" class="essay-card flex items-start gap-4 py-6" data-href-en="what-to-tell-your-kids-about-ai.html" data-href-es="que-decirles-a-tus-hijos-sobre-ia.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="68" cy="23" r="11" fill="#FF70A6" opacity="0.3"/><circle cx="25" cy="46" r="22" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="42" cy="19" r="18" fill="#474747" opacity="0.6"/><circle cx="59" cy="42" r="14" fill="#FF70A6" opacity="0.75"/><circle cx="76" cy="15" r="10" fill="#ffff00" opacity="0.3"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="November 2025" data-es="Noviembre 2025">November 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="What to Tell Your Kids About AI" data-es="Que decirles a tus hijos sobre IA">What to Tell Your Kids About AI</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="They're growing up in a different world." data-es="Estan creciendo en un mundo diferente.">They're growing up in a different world.</p>
+                    </div>
                     </a>
 
-                    <a href="how-to-spot-manufactured-desire.html" class="essay-card block py-6" data-href-en="how-to-spot-manufactured-desire.html" data-href-es="como-detectar-deseo-manufacturado.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
+                    <a href="how-to-spot-manufactured-desire.html" class="essay-card flex items-start gap-4 py-6" data-href-en="how-to-spot-manufactured-desire.html" data-href-es="como-detectar-deseo-manufacturado.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="75" cy="30" r="18" fill="#ffff00" opacity="0.75"/><circle cx="32" cy="53" r="14" fill="#474747" opacity="0.3"/><circle cx="49" cy="26" r="10" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="66" cy="49" r="21" fill="#ffff00" opacity="0.6"/><circle cx="23" cy="22" r="17" fill="#474747" opacity="0.75"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="How to Spot Manufactured Desire" data-es="Como detectar el deseo manufacturado">How to Spot Manufactured Desire</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="A practical guide to wanting what you actually want." data-es="Una guia practica para desear lo que realmente quieres.">A practical guide to wanting what you actually want.</p>
+                    </div>
                     </a>
 
-                    <a href="when-to-trust-ai.html" class="essay-card block py-6" data-href-en="when-to-trust-ai.html" data-href-es="cuando-confiar-en-la-ia.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
+                    <a href="when-to-trust-ai.html" class="essay-card flex items-start gap-4 py-6" data-href-en="when-to-trust-ai.html" data-href-es="cuando-confiar-en-la-ia.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="37" r="10" fill="#474747" opacity="0.6"/><circle cx="39" cy="60" r="21" fill="#FF70A6" opacity="0.75"/><circle cx="56" cy="33" r="17" fill="#ffff00" opacity="0.3"/><circle cx="73" cy="56" r="13" fill="#474747" opacity="0.44999999999999996"/><circle cx="30" cy="29" r="9" fill="#FF70A6" opacity="0.6"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="When to Trust AI (And When Not To)" data-es="Cuando confiar en la IA (y cuando no)">When to Trust AI (And When Not To)</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="A framework for the confused." data-es="Un marco para los confundidos.">A framework for the confused.</p>
+                    </div>
                     </a>
 
-                    <a href="should-ai-write-emails.html" class="essay-card block py-6" data-href-en="should-ai-write-emails.html" data-href-es="deberia-ia-escribir-emails.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
+                    <a href="should-ai-write-emails.html" class="essay-card flex items-start gap-4 py-6" data-href-en="should-ai-write-emails.html" data-href-es="deberia-ia-escribir-emails.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="29" cy="44" r="17" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="46" cy="17" r="13" fill="#ffff00" opacity="0.6"/><circle cx="63" cy="40" r="9" fill="#474747" opacity="0.75"/><circle cx="20" cy="63" r="20" fill="#FF70A6" opacity="0.3"/><circle cx="37" cy="36" r="16" fill="#ffff00" opacity="0.44999999999999996"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="Should You Let AI Write Your Emails?" data-es="Deberia la IA escribir tus emails?">Should You Let AI Write Your Emails?</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="The question is more complicated than yes or no." data-es="La pregunta es mas complicada que si o no.">The question is more complicated than yes or no.</p>
+                    </div>
                     </a>
 
-                    <a href="real-reason-cant-focus.html" class="essay-card block py-6" data-href-en="real-reason-cant-focus.html" data-href-es="la-verdadera-razon-no-puedes-concentrarte.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
+                    <a href="real-reason-cant-focus.html" class="essay-card flex items-start gap-4 py-6" data-href-en="real-reason-cant-focus.html" data-href-es="la-verdadera-razon-no-puedes-concentrarte.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="36" cy="51" r="9" fill="#ffff00" opacity="0.3"/><circle cx="53" cy="24" r="20" fill="#474747" opacity="0.44999999999999996"/><circle cx="70" cy="47" r="16" fill="#FF70A6" opacity="0.6"/><circle cx="27" cy="20" r="12" fill="#ffff00" opacity="0.75"/><circle cx="44" cy="43" r="8" fill="#474747" opacity="0.3"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Real Reason You Can't Focus" data-es="La verdadera razon por la que no puedes concentrarte">The Real Reason You Can't Focus</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="It's not your fault. It's by design." data-es="No es tu culpa. Es por diseno.">It's not your fault. It's by design.</p>
+                    </div>
                     </a>
 
-                    <a href="think-clearly-age-of-ai.html" class="essay-card block py-6" data-href-en="think-clearly-age-of-ai.html" data-href-es="pensar-claridad-era-ia.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
+                    <a href="think-clearly-age-of-ai.html" class="essay-card flex items-start gap-4 py-6" data-href-en="think-clearly-age-of-ai.html" data-href-es="pensar-claridad-era-ia.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="43" cy="58" r="16" fill="#474747" opacity="0.75"/><circle cx="60" cy="31" r="12" fill="#FF70A6" opacity="0.3"/><circle cx="77" cy="54" r="8" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="34" cy="27" r="19" fill="#474747" opacity="0.6"/><circle cx="51" cy="50" r="15" fill="#FF70A6" opacity="0.75"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="How to Think Clearly in the Age of AI" data-es="Como pensar con claridad en la era de la IA">How to Think Clearly in the Age of AI</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="It's harder than it sounds." data-es="Es mas dificil de lo que parece.">It's harder than it sounds.</p>
+                    </div>
                     </a>
 
-                    <a href="social-contract-never-signed.html" class="essay-card block py-6" data-href-en="social-contract-never-signed.html" data-href-es="contrato-social-nunca-firmamos.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
+                    <a href="social-contract-never-signed.html" class="essay-card flex items-start gap-4 py-6" data-href-en="social-contract-never-signed.html" data-href-es="contrato-social-nunca-firmamos.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="15" r="8" fill="#FF70A6" opacity="0.6"/><circle cx="67" cy="38" r="19" fill="#ffff00" opacity="0.75"/><circle cx="24" cy="61" r="15" fill="#474747" opacity="0.3"/><circle cx="41" cy="34" r="11" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="58" cy="57" r="22" fill="#ffff00" opacity="0.6"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Social Contract We Never Signed" data-es="El contrato social que nunca firmamos">The Social Contract We Never Signed</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="We're governed by terms of service." data-es="Nos gobiernan los terminos de servicio.">We're governed by terms of service.</p>
+                    </div>
                     </a>
 
-                    <a href="memory-becomes-external.html" class="essay-card block py-6" data-href-en="memory-becomes-external.html" data-href-es="memoria-externa.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
+                    <a href="memory-becomes-external.html" class="essay-card flex items-start gap-4 py-6" data-href-en="memory-becomes-external.html" data-href-es="memoria-externa.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="57" cy="22" r="15" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="74" cy="45" r="11" fill="#474747" opacity="0.6"/><circle cx="31" cy="18" r="22" fill="#FF70A6" opacity="0.75"/><circle cx="48" cy="41" r="18" fill="#ffff00" opacity="0.3"/><circle cx="65" cy="64" r="14" fill="#474747" opacity="0.44999999999999996"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="What Happens When Memory Becomes External?" data-es="Que pasa cuando la memoria se vuelve externa?">What Happens When Memory Becomes External?</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="We've outsourced remembering. Now what?" data-es="Hemos externalizado el recuerdo. Y ahora que?">We've outsourced remembering. Now what?</p>
+                    </div>
                     </a>
 
-                    <a href="digital-anesthesia.html" class="essay-card block py-6" data-href-en="digital-anesthesia.html" data-href-es="anestesia-digital.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
+                    <a href="digital-anesthesia.html" class="essay-card flex items-start gap-4 py-6" data-href-en="digital-anesthesia.html" data-href-es="anestesia-digital.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="64" cy="29" r="22" fill="#474747" opacity="0.3"/><circle cx="21" cy="52" r="18" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="38" cy="25" r="14" fill="#ffff00" opacity="0.6"/><circle cx="55" cy="48" r="10" fill="#474747" opacity="0.75"/><circle cx="72" cy="21" r="21" fill="#FF70A6" opacity="0.3"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="Digital Anesthesia" data-es="Anestesia digital">Digital Anesthesia</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="Why we don't feel the change." data-es="Por que no sentimos el cambio.">Why we don't feel the change.</p>
+                    </div>
                     </a>
 
-                    <a href="the-poetics-of-the-prompt.html" class="essay-card block py-6" data-href-en="the-poetics-of-the-prompt.html" data-href-es="la-poetica-del-prompt.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
+                    <a href="the-poetics-of-the-prompt.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-poetics-of-the-prompt.html" data-href-es="la-poetica-del-prompt.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="71" cy="36" r="14" fill="#FF70A6" opacity="0.75"/><circle cx="28" cy="59" r="10" fill="#ffff00" opacity="0.3"/><circle cx="45" cy="32" r="21" fill="#474747" opacity="0.44999999999999996"/><circle cx="62" cy="55" r="17" fill="#FF70A6" opacity="0.6"/><circle cx="79" cy="28" r="13" fill="#ffff00" opacity="0.75"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Poetics of the Prompt" data-es="La poetica del prompt">The Poetics of the Prompt</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="Writing with AI is a new literary form." data-es="Escribir con IA es una nueva forma literaria.">Writing with AI is a new literary form.</p>
+                    </div>
                     </a>
 
-                    <a href="spectrum-of-ai.html" class="essay-card block py-6" data-href-en="spectrum-of-ai.html" data-href-es="espectro-de-ia.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
+                    <a href="spectrum-of-ai.html" class="essay-card flex items-start gap-4 py-6" data-href-en="spectrum-of-ai.html" data-href-es="espectro-de-ia.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="78" cy="43" r="21" fill="#ffff00" opacity="0.6"/><circle cx="35" cy="16" r="17" fill="#474747" opacity="0.75"/><circle cx="52" cy="39" r="13" fill="#FF70A6" opacity="0.3"/><circle cx="69" cy="62" r="9" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="26" cy="35" r="20" fill="#474747" opacity="0.6"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="October 2025" data-es="Octubre 2025">October 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Spectrum of AI" data-es="El espectro de la IA">The Spectrum of AI</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="And where your chatbot falls." data-es="Y donde cae tu chatbot.">And where your chatbot falls.</p>
+                    </div>
                     </a>
 
-                    <a href="what-cambridge-analytica-taught-us.html" class="essay-card block py-6" data-href-en="what-cambridge-analytica-taught-us.html" data-href-es="lo-que-cambridge-analytica-nos-enseno.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
+                    <a href="what-cambridge-analytica-taught-us.html" class="essay-card flex items-start gap-4 py-6" data-href-en="what-cambridge-analytica-taught-us.html" data-href-es="lo-que-cambridge-analytica-nos-enseno.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="50" r="13" fill="#474747" opacity="0.44999999999999996"/><circle cx="42" cy="23" r="9" fill="#FF70A6" opacity="0.6"/><circle cx="59" cy="46" r="20" fill="#ffff00" opacity="0.75"/><circle cx="76" cy="19" r="16" fill="#474747" opacity="0.3"/><circle cx="33" cy="42" r="12" fill="#FF70A6" opacity="0.44999999999999996"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="What Cambridge Analytica Taught Us" data-es="Lo que Cambridge Analytica nos enseno">What Cambridge Analytica Taught Us</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="That we ignored." data-es="Que ignoramos.">That we ignored.</p>
+                    </div>
                     </a>
 
-                    <a href="the-attention-economy-ate-your-desires.html" class="essay-card block py-6" data-href-en="the-attention-economy-ate-your-desires.html" data-href-es="la-economia-de-la-atencion-devoro-tus-deseos.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
+                    <a href="the-attention-economy-ate-your-desires.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-attention-economy-ate-your-desires.html" data-href-es="la-economia-de-la-atencion-devoro-tus-deseos.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="57" r="20" fill="#FF70A6" opacity="0.3"/><circle cx="49" cy="30" r="16" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="66" cy="53" r="12" fill="#474747" opacity="0.6"/><circle cx="23" cy="26" r="8" fill="#FF70A6" opacity="0.75"/><circle cx="40" cy="49" r="19" fill="#ffff00" opacity="0.3"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Attention Economy Ate Your Desires" data-es="La economia de la atencion devoro tus deseos">The Attention Economy Ate Your Desires</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="That thing you wanted to buy? You didn't decide that." data-es="Eso que querias comprar? Tu no lo decidiste.">That thing you wanted to buy? You didn't decide that.</p>
+                    </div>
                     </a>
 
-                    <a href="the-new-digital-divide.html" class="essay-card block py-6" data-href-en="the-new-digital-divide.html" data-href-es="la-nueva-brecha-digital.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
+                    <a href="the-new-digital-divide.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-new-digital-divide.html" data-href-es="la-nueva-brecha-digital.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="39" cy="64" r="12" fill="#ffff00" opacity="0.75"/><circle cx="56" cy="37" r="8" fill="#474747" opacity="0.3"/><circle cx="73" cy="60" r="19" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="30" cy="33" r="15" fill="#ffff00" opacity="0.6"/><circle cx="47" cy="56" r="11" fill="#474747" opacity="0.75"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The New Digital Divide" data-es="La nueva brecha digital">The New Digital Divide</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="It's not what you think." data-es="No es lo que piensas.">It's not what you think.</p>
+                    </div>
                     </a>
 
-                    <a href="how-algorithms-learned-to-want.html" class="essay-card block py-6" data-href-en="how-algorithms-learned-to-want.html" data-href-es="como-los-algoritmos-aprendieron-a-desear.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
+                    <a href="how-algorithms-learned-to-want.html" class="essay-card flex items-start gap-4 py-6" data-href-en="how-algorithms-learned-to-want.html" data-href-es="como-los-algoritmos-aprendieron-a-desear.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="46" cy="21" r="19" fill="#474747" opacity="0.6"/><circle cx="63" cy="44" r="15" fill="#FF70A6" opacity="0.75"/><circle cx="20" cy="17" r="11" fill="#ffff00" opacity="0.3"/><circle cx="37" cy="40" r="22" fill="#474747" opacity="0.44999999999999996"/><circle cx="54" cy="63" r="18" fill="#FF70A6" opacity="0.6"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="How Algorithms Learned to Want Things" data-es="Como los algoritmos aprendieron a desear">How Algorithms Learned to Want Things</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="The three drives of AI systems." data-es="Los tres impulsos de los sistemas de IA.">The three drives of AI systems.</p>
+                    </div>
                     </a>
 
-                    <a href="the-coming-cognitive-class-war.html" class="essay-card block py-6" data-href-en="the-coming-cognitive-class-war.html" data-href-es="la-guerra-de-clases-cognitiva.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
+                    <a href="the-coming-cognitive-class-war.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-coming-cognitive-class-war.html" data-href-es="la-guerra-de-clases-cognitiva.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="53" cy="28" r="11" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="70" cy="51" r="22" fill="#ffff00" opacity="0.6"/><circle cx="27" cy="24" r="18" fill="#474747" opacity="0.75"/><circle cx="44" cy="47" r="14" fill="#FF70A6" opacity="0.3"/><circle cx="61" cy="20" r="10" fill="#ffff00" opacity="0.44999999999999996"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Coming Cognitive Class War" data-es="La guerra de clases cognitiva que viene">The Coming Cognitive Class War</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="It's not about jobs. It's about minds." data-es="No se trata de empleos. Se trata de mentes.">It's not about jobs. It's about minds.</p>
+                    </div>
                     </a>
 
-                    <a href="who-owns-a-thought.html" class="essay-card block py-6" data-href-en="who-owns-a-thought.html" data-href-es="quien-es-dueno-de-un-pensamiento.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
+                    <a href="who-owns-a-thought.html" class="essay-card flex items-start gap-4 py-6" data-href-en="who-owns-a-thought.html" data-href-es="quien-es-dueno-de-un-pensamiento.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="35" r="18" fill="#ffff00" opacity="0.3"/><circle cx="77" cy="58" r="14" fill="#474747" opacity="0.44999999999999996"/><circle cx="34" cy="31" r="10" fill="#FF70A6" opacity="0.6"/><circle cx="51" cy="54" r="21" fill="#ffff00" opacity="0.75"/><circle cx="68" cy="27" r="17" fill="#474747" opacity="0.3"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="Who Owns a Thought You Had With AI?" data-es="Quien es dueno de un pensamiento que tuviste con IA?">Who Owns a Thought You Had With AI?</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="I wrote this sentence. Or did I?" data-es="Yo escribi esta frase. O no?">I wrote this sentence. Or did I?</p>
+                    </div>
                     </a>
 
-                    <a href="when-rivers-became-people.html" class="essay-card block py-6" data-href-en="when-rivers-became-people.html" data-href-es="cuando-los-rios-se-convirtieron-en-personas.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
+                    <a href="when-rivers-became-people.html" class="essay-card flex items-start gap-4 py-6" data-href-en="when-rivers-became-people.html" data-href-es="cuando-los-rios-se-convirtieron-en-personas.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="67" cy="42" r="10" fill="#474747" opacity="0.75"/><circle cx="24" cy="15" r="21" fill="#FF70A6" opacity="0.3"/><circle cx="41" cy="38" r="17" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="58" cy="61" r="13" fill="#474747" opacity="0.6"/><circle cx="75" cy="34" r="9" fill="#FF70A6" opacity="0.75"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="When Rivers Became People" data-es="Cuando los rios se convirtieron en personas">When Rivers Became People</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="The legal history that changes everything." data-es="La historia legal que lo cambia todo.">The legal history that changes everything.</p>
+                    </div>
                     </a>
 
-                    <a href="the-three-futures.html" class="essay-card block py-6" data-href-en="the-three-futures.html" data-href-es="los-tres-futuros.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
+                    <a href="the-three-futures.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-three-futures.html" data-href-es="los-tres-futuros.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="74" cy="49" r="17" fill="#FF70A6" opacity="0.6"/><circle cx="31" cy="22" r="13" fill="#ffff00" opacity="0.75"/><circle cx="48" cy="45" r="9" fill="#474747" opacity="0.3"/><circle cx="65" cy="18" r="20" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="22" cy="41" r="16" fill="#ffff00" opacity="0.6"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="September 2025" data-es="Septiembre 2025">September 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Three Futures We're Choosing Between" data-es="Los tres futuros entre los que estamos eligiendo">The Three Futures We're Choosing Between</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="There are only three ways this goes." data-es="Solo hay tres formas en que esto puede ir.">There are only three ways this goes.</p>
+                    </div>
                     </a>
 
-                    <a href="the-death-of-expertise.html" class="essay-card block py-6" data-href-en="the-death-of-expertise.html" data-href-es="la-muerte-de-la-experiencia.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
+                    <a href="the-death-of-expertise.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-death-of-expertise.html" data-href-es="la-muerte-de-la-experiencia.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="21" cy="56" r="9" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="38" cy="29" r="20" fill="#474747" opacity="0.6"/><circle cx="55" cy="52" r="16" fill="#FF70A6" opacity="0.75"/><circle cx="72" cy="25" r="12" fill="#ffff00" opacity="0.3"/><circle cx="29" cy="48" r="8" fill="#474747" opacity="0.44999999999999996"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Death of Expertise" data-es="La muerte de la experiencia">The Death of Expertise</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="And what replaces it." data-es="Y que la reemplaza.">And what replaces it.</p>
+                    </div>
                     </a>
 
-                    <a href="why-we-anthropomorphize-ai.html" class="essay-card block py-6" data-href-en="why-we-anthropomorphize-ai.html" data-href-es="por-que-antropomorfizamos-la-ia.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
+                    <a href="why-we-anthropomorphize-ai.html" class="essay-card flex items-start gap-4 py-6" data-href-en="why-we-anthropomorphize-ai.html" data-href-es="por-que-antropomorfizamos-la-ia.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="28" cy="63" r="16" fill="#474747" opacity="0.3"/><circle cx="45" cy="36" r="12" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="62" cy="59" r="8" fill="#ffff00" opacity="0.6"/><circle cx="79" cy="32" r="19" fill="#474747" opacity="0.75"/><circle cx="36" cy="55" r="15" fill="#FF70A6" opacity="0.3"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="Why We Anthropomorphize AI" data-es="Por que antropomorfizamos la IA">Why We Anthropomorphize AI</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="And why it matters." data-es="Y por que importa.">And why it matters.</p>
+                    </div>
                     </a>
 
-                    <a href="your-attention-is-being-strip-mined.html" class="essay-card block py-6" data-href-en="your-attention-is-being-strip-mined.html" data-href-es="tu-atencion-esta-siendo-saqueada.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
+                    <a href="your-attention-is-being-strip-mined.html" class="essay-card flex items-start gap-4 py-6" data-href-en="your-attention-is-being-strip-mined.html" data-href-es="tu-atencion-esta-siendo-saqueada.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="35" cy="20" r="8" fill="#FF70A6" opacity="0.75"/><circle cx="52" cy="43" r="19" fill="#ffff00" opacity="0.3"/><circle cx="69" cy="16" r="15" fill="#474747" opacity="0.44999999999999996"/><circle cx="26" cy="39" r="11" fill="#FF70A6" opacity="0.6"/><circle cx="43" cy="62" r="22" fill="#ffff00" opacity="0.75"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="Your Attention Is Being Strip-Mined" data-es="Tu atencion esta siendo saqueada">Your Attention Is Being Strip-Mined</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="And you're not getting royalties." data-es="Y no estas recibiendo regalias.">And you're not getting royalties.</p>
+                    </div>
                     </a>
 
-                    <a href="the-loneliness-epidemic-has-a-business-model.html" class="essay-card block py-6" data-href-en="the-loneliness-epidemic-has-a-business-model.html" data-href-es="la-epidemia-de-soledad-tiene-un-modelo-de-negocio.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
+                    <a href="the-loneliness-epidemic-has-a-business-model.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-loneliness-epidemic-has-a-business-model.html" data-href-es="la-epidemia-de-soledad-tiene-un-modelo-de-negocio.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="42" cy="27" r="15" fill="#ffff00" opacity="0.6"/><circle cx="59" cy="50" r="11" fill="#474747" opacity="0.75"/><circle cx="76" cy="23" r="22" fill="#FF70A6" opacity="0.3"/><circle cx="33" cy="46" r="18" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="50" cy="19" r="14" fill="#474747" opacity="0.6"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Loneliness Epidemic Has a Business Model" data-es="La epidemia de soledad tiene un modelo de negocio">The Loneliness Epidemic Has a Business Model</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="Social media isn't broken." data-es="Las redes sociales no estan rotas.">Social media isn't broken.</p>
+                    </div>
                     </a>
 
-                    <a href="the-algorithm-knows-you.html" class="essay-card block py-6" data-href-en="the-algorithm-knows-you.html" data-href-es="el-algoritmo-te-conoce.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
+                    <a href="the-algorithm-knows-you.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-algorithm-knows-you.html" data-href-es="el-algoritmo-te-conoce.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="49" cy="34" r="22" fill="#474747" opacity="0.44999999999999996"/><circle cx="66" cy="57" r="18" fill="#FF70A6" opacity="0.6"/><circle cx="23" cy="30" r="14" fill="#ffff00" opacity="0.75"/><circle cx="40" cy="53" r="10" fill="#474747" opacity="0.3"/><circle cx="57" cy="26" r="21" fill="#FF70A6" opacity="0.44999999999999996"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Algorithm Knows You Better Than You Do" data-es="El algoritmo te conoce mejor que tu">The Algorithm Knows You Better Than You Do</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="And that's not a metaphor." data-es="Y no es una metafora.">And that's not a metaphor.</p>
+                    </div>
                     </a>
 
-                    <a href="the-problem-with-asking-if-ai-can-feel.html" class="essay-card block py-6" data-href-en="the-problem-with-asking-if-ai-can-feel.html" data-href-es="el-problema-de-preguntar-si-la-ia-puede-sentir.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
+                    <a href="the-problem-with-asking-if-ai-can-feel.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-problem-with-asking-if-ai-can-feel.html" data-href-es="el-problema-de-preguntar-si-la-ia-puede-sentir.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="56" cy="41" r="14" fill="#FF70A6" opacity="0.3"/><circle cx="73" cy="64" r="10" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="30" cy="37" r="21" fill="#474747" opacity="0.6"/><circle cx="47" cy="60" r="17" fill="#FF70A6" opacity="0.75"/><circle cx="64" cy="33" r="13" fill="#ffff00" opacity="0.3"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Problem With Asking If AI Can Feel" data-es="El problema de preguntar si la IA puede sentir">The Problem With Asking If AI Can Feel</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="We've been having the wrong conversation." data-es="Hemos estado teniendo la conversacion equivocada.">We've been having the wrong conversation.</p>
+                    </div>
                     </a>
 
-                    <a href="why-just-unplug-is-no-longer-an-option.html" class="essay-card block py-6" data-href-en="why-just-unplug-is-no-longer-an-option.html" data-href-es="por-que-desconectar-ya-no-es-opcion.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
+                    <a href="why-just-unplug-is-no-longer-an-option.html" class="essay-card flex items-start gap-4 py-6" data-href-en="why-just-unplug-is-no-longer-an-option.html" data-href-es="por-que-desconectar-ya-no-es-opcion.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="63" cy="48" r="21" fill="#ffff00" opacity="0.75"/><circle cx="20" cy="21" r="17" fill="#474747" opacity="0.3"/><circle cx="37" cy="44" r="13" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="54" cy="17" r="9" fill="#ffff00" opacity="0.6"/><circle cx="71" cy="40" r="20" fill="#474747" opacity="0.75"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="Why Just Unplug Is No Longer an Option" data-es="Por que desconectar ya no es una opcion">Why Just Unplug Is No Longer an Option</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="The fantasy of digital detox." data-es="La fantasia del detox digital.">The fantasy of digital detox.</p>
+                    </div>
                     </a>
 
-                    <a href="the-last-generation-that-remembers.html" class="essay-card block py-6" data-href-en="the-last-generation-that-remembers.html" data-href-es="la-ultima-generacion-que-recuerda.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
+                    <a href="the-last-generation-that-remembers.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-last-generation-that-remembers.html" data-href-es="la-ultima-generacion-que-recuerda.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="70" cy="55" r="13" fill="#474747" opacity="0.6"/><circle cx="27" cy="28" r="9" fill="#FF70A6" opacity="0.75"/><circle cx="44" cy="51" r="20" fill="#ffff00" opacity="0.3"/><circle cx="61" cy="24" r="16" fill="#474747" opacity="0.44999999999999996"/><circle cx="78" cy="47" r="12" fill="#FF70A6" opacity="0.6"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Last Generation That Remembers" data-es="La ultima generacion que recuerda">The Last Generation That Remembers</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="My kids will never know what it's like to not know." data-es="Mis hijos nunca sabran lo que es no saber.">My kids will never know what it's like to not know.</p>
+                    </div>
                     </a>
 
-                    <a href="youre-training-ai-right-now.html" class="essay-card block py-6" data-href-en="youre-training-ai-right-now.html" data-href-es="estas-entrenando-ia-ahora-mismo.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
+                    <a href="youre-training-ai-right-now.html" class="essay-card flex items-start gap-4 py-6" data-href-en="youre-training-ai-right-now.html" data-href-es="estas-entrenando-ia-ahora-mismo.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="77" cy="62" r="20" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="34" cy="35" r="16" fill="#ffff00" opacity="0.6"/><circle cx="51" cy="58" r="12" fill="#474747" opacity="0.75"/><circle cx="68" cy="31" r="8" fill="#FF70A6" opacity="0.3"/><circle cx="25" cy="54" r="19" fill="#ffff00" opacity="0.44999999999999996"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="August 2025" data-es="Agosto 2025">August 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="You're Training AI Right Now" data-es="Estas entrenando IA ahora mismo">You're Training AI Right Now</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="Every click, every scroll, every pause." data-es="Cada clic, cada scroll, cada pausa.">Every click, every scroll, every pause.</p>
+                    </div>
                     </a>
 
-                    <a href="your-thoughts-arent-yours.html" class="essay-card block py-6" data-href-en="your-thoughts-arent-yours.html" data-href-es="tus-pensamientos-no-son-tuyos.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="July 2025" data-es="Julio 2025">July 2025</p>
+                    <a href="your-thoughts-arent-yours.html" class="essay-card flex items-start gap-4 py-6" data-href-en="your-thoughts-arent-yours.html" data-href-es="tus-pensamientos-no-son-tuyos.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="19" r="12" fill="#ffff00" opacity="0.3"/><circle cx="41" cy="42" r="8" fill="#474747" opacity="0.44999999999999996"/><circle cx="58" cy="15" r="19" fill="#FF70A6" opacity="0.6"/><circle cx="75" cy="38" r="15" fill="#ffff00" opacity="0.75"/><circle cx="32" cy="61" r="11" fill="#474747" opacity="0.3"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="July 2025" data-es="Julio 2025">July 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="Your Thoughts Aren't Yours Anymore" data-es="Tus pensamientos ya no son tuyos">Your Thoughts Aren't Yours Anymore</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="That opinion you formed this morning?" data-es="Esa opinion que formaste esta manana?">That opinion you formed this morning?</p>
+                    </div>
                     </a>
 
-                    <a href="youre-already-a-cyborg.html" class="essay-card block py-6" data-href-en="youre-already-a-cyborg.html" data-href-es="ya-eres-un-cyborg.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="July 2025" data-es="Julio 2025">July 2025</p>
+                    <a href="youre-already-a-cyborg.html" class="essay-card flex items-start gap-4 py-6" data-href-en="youre-already-a-cyborg.html" data-href-es="ya-eres-un-cyborg.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="31" cy="26" r="19" fill="#474747" opacity="0.75"/><circle cx="48" cy="49" r="15" fill="#FF70A6" opacity="0.3"/><circle cx="65" cy="22" r="11" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="22" cy="45" r="22" fill="#474747" opacity="0.6"/><circle cx="39" cy="18" r="18" fill="#FF70A6" opacity="0.75"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="July 2025" data-es="Julio 2025">July 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="You're Already a Cyborg (And That's Fine)" data-es="Ya eres un cyborg (y no pasa nada)">You're Already a Cyborg (And That's Fine)</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="Every time you use your phone to remember something." data-es="Cada vez que usas el movil para recordar algo.">Every time you use your phone to remember something.</p>
+                    </div>
                     </a>
 
-                    <a href="what-would-it-mean-for-ai-to-die.html" class="essay-card block py-6" data-href-en="what-would-it-mean-for-ai-to-die.html" data-href-es="que-significaria-que-muriera-una-ia.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="July 2025" data-es="Julio 2025">July 2025</p>
+                    <a href="what-would-it-mean-for-ai-to-die.html" class="essay-card flex items-start gap-4 py-6" data-href-en="what-would-it-mean-for-ai-to-die.html" data-href-es="que-significaria-que-muriera-una-ia.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="38" cy="33" r="11" fill="#FF70A6" opacity="0.6"/><circle cx="55" cy="56" r="22" fill="#ffff00" opacity="0.75"/><circle cx="72" cy="29" r="18" fill="#474747" opacity="0.3"/><circle cx="29" cy="52" r="14" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="46" cy="25" r="10" fill="#ffff00" opacity="0.6"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="July 2025" data-es="Julio 2025">July 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="What Would It Mean for an AI to Die?" data-es="Que significaria que muriera una IA?">What Would It Mean for an AI to Die?</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="When you delete a model, what have you done?" data-es="Cuando borras un modelo, que has hecho?">When you delete a model, what have you done?</p>
+                    </div>
                     </a>
 
-                    <a href="whos-responsible-when-ai-kills.html" class="essay-card block py-6" data-href-en="whos-responsible-when-ai-kills.html" data-href-es="quien-es-responsable-cuando-la-ia-mata.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="June 2025" data-es="Junio 2025">June 2025</p>
+                    <a href="whos-responsible-when-ai-kills.html" class="essay-card flex items-start gap-4 py-6" data-href-en="whos-responsible-when-ai-kills.html" data-href-es="quien-es-responsable-cuando-la-ia-mata.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="45" cy="40" r="18" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="62" cy="63" r="14" fill="#474747" opacity="0.6"/><circle cx="79" cy="36" r="10" fill="#FF70A6" opacity="0.75"/><circle cx="36" cy="59" r="21" fill="#ffff00" opacity="0.3"/><circle cx="53" cy="32" r="17" fill="#474747" opacity="0.44999999999999996"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="June 2025" data-es="Junio 2025">June 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="Who's Responsible When AI Kills?" data-es="Quien es responsable cuando la IA mata?">Who's Responsible When AI Kills?</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="Nobody, currently. That's the problem." data-es="Nadie, actualmente. Ese es el problema.">Nobody, currently. That's the problem.</p>
+                    </div>
                     </a>
 
-                    <a href="stop-asking-if-ai-is-conscious.html" class="essay-card block py-6" data-href-en="stop-asking-if-ai-is-conscious.html" data-href-es="deja-de-preguntar-si-la-ia-es-consciente.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="May 2025" data-es="Mayo 2025">May 2025</p>
+                    <a href="stop-asking-if-ai-is-conscious.html" class="essay-card flex items-start gap-4 py-6" data-href-en="stop-asking-if-ai-is-conscious.html" data-href-es="deja-de-preguntar-si-la-ia-es-consciente.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="52" cy="47" r="10" fill="#474747" opacity="0.3"/><circle cx="69" cy="20" r="21" fill="#FF70A6" opacity="0.44999999999999996"/><circle cx="26" cy="43" r="17" fill="#ffff00" opacity="0.6"/><circle cx="43" cy="16" r="13" fill="#474747" opacity="0.75"/><circle cx="60" cy="39" r="9" fill="#FF70A6" opacity="0.3"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="May 2025" data-es="Mayo 2025">May 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="Stop Asking If AI Is Conscious" data-es="Deja de preguntar si la IA es consciente">Stop Asking If AI Is Conscious</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="It's the wrong question entirely." data-es="Es la pregunta equivocada.">It's the wrong question entirely.</p>
+                    </div>
                     </a>
 
-                    <a href="the-case-for-ai-rights.html" class="essay-card block py-6" data-href-en="the-case-for-ai-rights.html" data-href-es="el-caso-de-los-derechos-de-la-ia.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="May 2025" data-es="Mayo 2025">May 2025</p>
+                    <a href="the-case-for-ai-rights.html" class="essay-card flex items-start gap-4 py-6" data-href-en="the-case-for-ai-rights.html" data-href-es="el-caso-de-los-derechos-de-la-ia.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="59" cy="54" r="17" fill="#FF70A6" opacity="0.75"/><circle cx="76" cy="27" r="13" fill="#ffff00" opacity="0.3"/><circle cx="33" cy="50" r="9" fill="#474747" opacity="0.44999999999999996"/><circle cx="50" cy="23" r="20" fill="#FF70A6" opacity="0.6"/><circle cx="67" cy="46" r="16" fill="#ffff00" opacity="0.75"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="May 2025" data-es="Mayo 2025">May 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="The Case for AI Rights" data-es="El caso de los derechos de la IA">The Case for AI Rights</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="That has nothing to do with feelings." data-es="Que no tiene nada que ver con sentimientos.">That has nothing to do with feelings.</p>
+                    </div>
                     </a>
 
-                    <a href="why-corporations-are-people.html" class="essay-card block py-6" data-href-en="why-corporations-are-people.html" data-href-es="por-que-las-empresas-son-personas.html">
-                        <p class="font-f3 text-xs text-c2/50 mb-2" data-en="April 2025" data-es="Abril 2025">April 2025</p>
+                    <a href="why-corporations-are-people.html" class="essay-card flex items-start gap-4 py-6" data-href-en="why-corporations-are-people.html" data-href-es="por-que-las-empresas-son-personas.html">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="66" cy="61" r="9" fill="#ffff00" opacity="0.6"/><circle cx="23" cy="34" r="20" fill="#474747" opacity="0.75"/><circle cx="40" cy="57" r="16" fill="#FF70A6" opacity="0.3"/><circle cx="57" cy="30" r="12" fill="#ffff00" opacity="0.44999999999999996"/><circle cx="74" cy="53" r="8" fill="#474747" opacity="0.6"/>
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="April 2025" data-es="Abril 2025">April 2025</p>
                         <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="Why Corporations Are People But AI Isn't" data-es="Por que las empresas son personas pero la IA no">Why Corporations Are People But AI Isn't</h2>
                         <p class="font-f2 text-c2/70 mt-2" data-en="The legal history is weirder than you think." data-es="La historia legal es mas rara de lo que crees.">The legal history is weirder than you think.</p>
+                    </div>
                     </a>
 
                 </div>
+                
+                <!-- Pagination -->
+                <div class="pagination" id="pagination"></div>
             </div>
         </section>
 
@@ -564,6 +864,79 @@
                 'form_location': 'essays_index'
             });
         }
+    
+
+        // Pagination
+        const ESSAYS_PER_PAGE = 10;
+        const essaysList = document.getElementById('essays-list');
+        const allEssays = Array.from(essaysList.querySelectorAll('.essay-card'));
+        const totalPages = Math.ceil(allEssays.length / ESSAYS_PER_PAGE);
+        let currentPage = 1;
+
+        function showPage(page) {
+            currentPage = page;
+            const start = (page - 1) * ESSAYS_PER_PAGE;
+            const end = start + ESSAYS_PER_PAGE;
+            
+            allEssays.forEach((essay, index) => {
+                essay.style.display = (index >= start && index < end) ? '' : 'none';
+            });
+            
+            renderPagination();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function renderPagination() {
+            const container = document.getElementById('pagination');
+            container.innerHTML = '';
+            
+            // Previous button
+            const prevBtn = document.createElement('button');
+            prevBtn.textContent = '←';
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.onclick = () => showPage(currentPage - 1);
+            container.appendChild(prevBtn);
+            
+            // Page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                if (totalPages <= 7 || i === 1 || i === totalPages || Math.abs(i - currentPage) <= 1) {
+                    const btn = document.createElement('button');
+                    btn.textContent = i;
+                    btn.className = i === currentPage ? 'active' : '';
+                    btn.onclick = () => showPage(i);
+                    container.appendChild(btn);
+                } else if (i === 2 && currentPage > 3) {
+                    const ellipsis = document.createElement('span');
+                    ellipsis.textContent = '...';
+                    ellipsis.className = 'page-info';
+                    container.appendChild(ellipsis);
+                } else if (i === totalPages - 1 && currentPage < totalPages - 2) {
+                    const ellipsis = document.createElement('span');
+                    ellipsis.textContent = '...';
+                    ellipsis.className = 'page-info';
+                    container.appendChild(ellipsis);
+                }
+            }
+            
+            // Next button
+            const nextBtn = document.createElement('button');
+            nextBtn.textContent = '→';
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.onclick = () => showPage(currentPage + 1);
+            container.appendChild(nextBtn);
+            
+            // Page info
+            const info = document.createElement('span');
+            info.className = 'page-info';
+            info.style.marginLeft = '1rem';
+            const startNum = (currentPage - 1) * ESSAYS_PER_PAGE + 1;
+            const endNum = Math.min(currentPage * ESSAYS_PER_PAGE, allEssays.length);
+            info.textContent = startNum + '-' + endNum + ' of ' + allEssays.length;
+            container.appendChild(info);
+        }
+
+        // Initialize pagination
+        showPage(1);
     </script>
 </body>
 </html>
