@@ -413,6 +413,7 @@
             e.preventDefault();
             const email = document.getElementById('tmm-email').value;
 
+            // GTM tracking
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
                 'event': 'tmm_subscribe',
@@ -421,6 +422,22 @@
                 'email': email
             });
 
+            // Silent MailerLite submission
+            const formData = new FormData();
+            formData.append('fields[email]', email);
+            formData.append('fields[tmm_topic_id]', currentTopicId);
+            formData.append('fields[tmm_topic_label]', currentTopicLabel);
+            formData.append('fields[tmm_source_essay]', 'why-corporations-are-people');
+            formData.append('ml-submit', '1');
+            formData.append('anticsrf', 'true');
+
+            fetch('https://assets.mailerlite.com/jsonp/1588336/forms/177059477791442173/subscribe', {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            });
+
+            // Visual confirmation (unchanged)
             document.querySelector('.tmm-modal-content').innerHTML = `
                 <h4 class="font-f1 text-2xl mb-2">Got it!</h4>
                 <p class="font-f2 text-c2/70 text-sm mb-4">We'll let you know when we write about ${currentTopicLabel}.</p>
