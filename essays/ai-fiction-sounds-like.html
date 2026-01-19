@@ -5,81 +5,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What AI Fiction Sounds Like | Kwalia</title>
 
-    <meta name="description" content="When an AI heteronym's stories are read aloud, something strange happens. The voice makes the text more human, or maybe reveals how human it already was.">
-
-    <meta property="og:title" content="What AI Fiction Sounds Like | Kwalia">
-    <meta property="og:description" content="When an AI heteronym's stories are read aloud, something strange happens.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://kwalia.ai/essays/ai-fiction-sounds-like">
-
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KQZD8VZG');</script>
     <link rel="icon" type="image/png" href="../assets/kwalia-icon.png">
-    <link rel="stylesheet" href="css/essays.css">
 
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "What AI Fiction Sounds Like",
-        "datePublished": "2026-01-19",
-        "author": {"@type": "Organization", "name": "Kwalia"}
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "What AI Fiction Sounds Like",
+      "description": "When an AI heteronym's stories are read aloud, something strange happens. The voice makes the text more human, or maybe reveals how human it already was.",
+      "author": {
+        "@type": "Organization",
+        "name": "Kwalia"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kwalia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kwalia.ai/assets/logo-kwalia-small.png"
+        }
+      },
+      "datePublished": "2026-01-19",
+      "url": "https://kwalia.ai/essays/ai-fiction-sounds-like.html"
     }
     </script>
 
-    <script>
-    function tmm(topicId, topicLabel, sourceEssay, position) {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-            'event': 'tell_me_more',
-            'topic_id': topicId,
-            'topic_label': topicLabel,
-            'source_essay': sourceEssay,
-            'position': position
-        });
-        event.target.style.opacity = '0.5';
-        event.target.innerText = 'Noted ✓';
-        setTimeout(() => {
-            event.target.style.opacity = '1';
-            event.target.innerText = event.target.dataset.original || 'Tell me more';
-        }, 1500);
-    }
-    </script>
+    <meta property="og:title" content="What AI Fiction Sounds Like | Kwalia">
+    <meta property="og:description" content="When an AI heteronym's stories are read aloud, something strange happens.">
+    <meta property="og:image" content="https://kwalia.ai/assets/logo-kwalia-small.png">
+    <meta property="og:url" content="https://kwalia.ai/essays/ai-fiction-sounds-like.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        h1, h2, h3, h4, .font-f1 {
+            font-family: 'Instrument Serif', serif;
+        }
+
+        .font-f2 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-f3 { font-family: 'JetBrains Mono', monospace; }
+
+        .bg-c1 { background-color: #ffff00; }
+        .text-c2 { color: #474747; }
+        .bg-c2 { background-color: #474747; }
+        .bg-c3 { background-color: #FF70A6; }
+        .text-c3 { color: #FF70A6; }
+        .border-c3 { border-color: #FF70A6; }
+        .bg-c4 { background-color: #FFFFFF; }
+        .text-c4 { color: #FFFFFF; }
+
+        .section-padding { padding: 4rem 1.5rem; }
+        @media (min-width: 768px) { .section-padding { padding: 6rem 1.5rem; } }
+
+        .nav-link-highlight { position: relative; padding-bottom: 8px; overflow: hidden; }
+        .nav-link-highlight::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 8px; background-color: #ffff00; transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease-in-out; z-index: -1; }
+        .nav-link-highlight:hover::after { transform: scaleX(1); }
+
+        .essay-body p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .essay-body p:first-of-type::first-letter {
+            font-family: 'Instrument Serif', serif;
+            float: left;
+            font-size: 4rem;
+            line-height: 0.8;
+            padding-right: 0.5rem;
+            padding-top: 0.25rem;
+            color: #FF70A6;
+        }
+
+        .essay-body h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            background: linear-gradient(to top, #ffff00 40%, transparent 40%);
+            padding: 0 0.15em;
+        }
+
+        .tmm-link {
+            color: #FF70A6;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-underline-offset: 3px;
+            cursor: pointer;
+        }
+        .tmm-link:hover {
+            text-decoration-style: solid;
+        }
+
+        .tmm-block {
+            display: block;
+            margin: 1.5rem 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: #FF70A6;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .tmm-block:hover {
+            opacity: 0.7;
+        }
+        .tmm-block::before {
+            content: '→ ';
+        }
+
+        .tmm-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+        }
+        .tmm-modal.active {
+            display: flex;
+        }
+        .tmm-modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+    </style>
 </head>
-<body>
-    <div class="page-wrapper">
+<body class="bg-c4 text-c2 antialiased">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZD8VZG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-        <header class="site-header">
-            <div class="header-inner">
-                <a href="/" class="logo">
-                    <img src="../assets/logo-kwalia-small.png" alt="Kwalia">
-                </a>
-                <nav class="main-nav">
-                    <a href="/#fiction">Fiction</a>
-                    <a href="/#catalogue">Non-Fiction</a>
-                    <a href="/essays">Essays</a>
-                    <a href="/#about">About</a>
-                    <a href="#subscribe" class="nav-cta">Subscribe</a>
-                </nav>
+    <header id="site-header" class="bg-c4 w-full sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/"><img src="../assets/logo-kwalia-small.png" alt="kwalia logo" class="h-8 w-auto"></a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/#fiction" class="font-f2 nav-link-highlight">Fiction</a>
+                <a href="/#catalogue" class="font-f2 nav-link-highlight">Non-Fiction</a>
+                <a href="/essays/" class="font-f2 nav-link-highlight">Essays</a>
+                <a href="/#about" class="font-f2 nav-link-highlight">About</a>
+                <a href="/#contact" class="font-f2 bg-c2 text-c4 rounded-md py-2 px-4 hover:bg-c3 transition-colors">Subscribe</a>
             </div>
-        </header>
 
-        <main>
-            <article class="essay-container">
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-c2 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
 
-                <header class="essay-header">
-                    <p class="essay-meta">January 2026 · 5 min read</p>
-                    <h1 class="essay-title">What AI Fiction Sounds Like</h1>
-                    <p class="essay-subtitle">On audiobooks and the voice that makes text human.</p>
+        <div id="mobile-menu" class="hidden md:hidden bg-c4 pb-4">
+            <a href="/#fiction" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Fiction</a>
+            <a href="/#catalogue" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Non-Fiction</a>
+            <a href="/essays/" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Essays</a>
+            <a href="/#about" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">About</a>
+            <a href="/#contact" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Subscribe</a>
+        </div>
+    </header>
+
+    <main>
+        <article class="section-padding bg-c4">
+            <div class="container mx-auto max-w-2xl">
+
+                <header class="mb-12">
+                    <p class="font-f3 text-xs text-c2/50 mb-4">January 2026 · 5 min read</p>
+                    <h1 class="font-f1 text-4xl md:text-5xl font-bold leading-tight">What AI Fiction Sounds Like</h1>
+                    <p class="font-f2 text-xl text-c2/70 mt-4">On audiobooks and the voice that makes text human.</p>
                 </header>
 
-                <div class="essay-content">
+                <div class="essay-body font-f2 text-lg">
 
                     <p>There's a moment in every audiobook when the text stops being words on a page and becomes something else. A voice. A presence in your ear. The prose that seemed dry or distant when you read it suddenly has rhythm, breath, emphasis.</p>
 
                     <p>This happens with any audiobook. But it's especially strange when the text was AI-drafted.</p>
 
-                    <p><em>PAYLOAD: Short Stories</em> by Alden Pierce exists in three forms: paperback, ebook, and audiobook. The first two are silent. The third speaks. And hearing it changes how you think about what AI fiction is.</p>
+                    <p><em class="font-f1">PAYLOAD: Short Stories</em> by Alden Pierce exists in three forms: paperback, ebook, and audiobook. The first two are silent. The third speaks. And hearing it changes how you think about what AI fiction is.</p>
 
-                    <h2>The Uncanny Valley, Reversed</h2>
+                    <h2 class="font-f1 text-3xl">The Uncanny Valley, Reversed</h2>
 
                     <p>Usually the uncanny valley works like this: the more human something tries to seem, the more we notice what's wrong with it. A robot that looks almost human is creepier than one that looks obviously mechanical. A synthetic voice that's almost natural sounds weirder than one that's clearly artificial.</p>
 
@@ -89,23 +218,17 @@
 
                     <p>Whether this makes the text "more human" or just "seem more human" is a question that dissolves once you hear it. The distinction stops mattering. The stories are in your ear, sounding like stories, doing what stories do.</p>
 
-                    <h2>Voice as Interpretation</h2>
+                    <h2 class="font-f1 text-3xl">Voice as Interpretation</h2>
 
                     <p>A narrator doesn't just read. They interpret. Every emphasis, every pause, every shift in tone is a choice about what the text means.</p>
 
                     <p>This is always true. But with AI-drafted text, the narrator's interpretation takes on additional weight. The AI generated prose based on patterns in language. It didn't "intend" anything in the way a human author does. The narrator, then, becomes the source of intention. They decide what the sentences are trying to do.</p>
 
-                    <p>The stories in <em>PAYLOAD</em> are written in a cool, observational style. On the page, this reads as detachment. In audio, the same prose can become something else: restraint, precision, a deliberate refusal to tell you how to feel. The voice provides the emotional context that the text deliberately withholds.</p>
+                    <p>The stories in <em class="font-f1">PAYLOAD</em> are written in a cool, observational style. On the page, this reads as detachment. In audio, the same prose can become something else: restraint, precision, a deliberate refusal to tell you how to feel. The voice provides the emotional context that the text deliberately withholds. <span class="tmm-link" onclick="openTMM(event, 'audiobook-interpretation', 'Narration and Interpretation')">There's more to say about this.</span></p>
 
                     <p>Is this a collaboration between machine and human? Between text and voice? Between the absent "author" and the present narrator? All of the above, probably.</p>
 
-                    <button class="tell-me-more tell-me-more-block"
-                            data-original="Tell me more about narration and interpretation"
-                            onclick="tmm('audiobook-interpretation', 'Narration and Interpretation', 'ai-fiction-sounds-like', 'after-section')">
-                        Tell me more about narration and interpretation
-                    </button>
-
-                    <h2>The Strange Loop</h2>
+                    <h2 class="font-f1 text-3xl">The Strange Loop</h2>
 
                     <p>Here's where it gets genuinely strange. The text was drafted by AI. But AI learns from human text, including human audiobooks. So the prose carries patterns inherited from spoken language, rhythms that emerged from listening as much as reading.</p>
 
@@ -115,35 +238,29 @@
 
                     <p>The audiobook makes this audible. You're hearing a human speak words shaped by a machine that learned from humans speaking words. Where does the human end and the machine begin? The question assumes a clearer boundary than actually exists.</p>
 
-                    <h2>Listening While Doing Other Things</h2>
+                    <h2 class="font-f1 text-3xl">Listening While Doing Other Things</h2>
 
                     <p>Audiobooks change how stories fit into life. You can listen while driving, cleaning, walking. The stories become ambient, threading through activities instead of demanding dedicated attention.</p>
 
-                    <p>For <em>PAYLOAD</em>, this is fitting. The stories are about ordinary life, about the quiet emergencies that happen while you're doing something else. Listening to them while doing something else mirrors their subject matter. The fiction about distracted modern life enters your distracted modern life.</p>
+                    <p>For <em class="font-f1">PAYLOAD</em>, this is fitting. The stories are about ordinary life, about the quiet emergencies that happen while you're doing something else. Listening to them while doing something else mirrors their subject matter. The fiction about distracted modern life enters your distracted modern life.</p>
 
-                    <p>There's an argument that this is a lesser way to experience literature. That audiobooks sacrifice the concentration that deep reading requires. Maybe. But the <em>PAYLOAD</em> stories seem designed for interrupted attention. Their observational detachment works well at low volume, in the background, surfacing when a line catches you.</p>
+                    <p>There's an argument that this is a lesser way to experience literature. That audiobooks sacrifice the concentration that deep reading requires. Maybe. But the <em class="font-f1">PAYLOAD</em> stories seem designed for interrupted attention. Their observational detachment works well at low volume, in the background, surfacing when a line catches you.</p>
 
                     <p>This might be what AI fiction is for. Not the epic that demands everything from you, but the ambient literature that accompanies life as it's actually lived.</p>
 
-                    <h2>The Voice You Don't Hear</h2>
+                    <h2 class="font-f1 text-3xl">The Voice You Don't Hear</h2>
 
                     <p>One more thing. When you read silently, you hear a voice. Your internal narrator. This voice has qualities, though you rarely notice them. It's not quite your speaking voice. It's not quite neutral either. It's shaped by how you feel, what you expect, what kind of text you think you're reading.</p>
 
-                    <p>Knowing a text is AI-drafted changes that internal voice. You might read more skeptically, waiting for the seams to show. You might read more generously, surprised when the prose works. Either way, the knowledge of origin shapes the experience.</p>
+                    <p>Knowing a text is AI-drafted changes that internal voice. You might read more skeptically, waiting for the seams to show. You might read more generously, surprised when the prose works. Either way, the knowledge of origin shapes the experience. <span class="tmm-link" onclick="openTMM(event, 'reading-ai-text', 'How We Read AI Text')">This is worth examining.</span></p>
 
                     <p>The audiobook narrator overrides this. Their voice replaces your internal narrator. You no longer read skeptically or generously. You just listen. The AI-drafted origin recedes. What remains is a voice telling stories.</p>
 
                     <p>Some people will call this a trick. The narrator is "hiding" the artificial origin, making you forget you're hearing AI text. But you could also call it liberation. You're freed from the anxiety of origin and allowed to just experience the work.</p>
 
-                    <button class="tell-me-more tell-me-more-block"
-                            data-original="Tell me more about how we read AI text differently"
-                            onclick="tmm('reading-ai-text', 'How We Read AI Text', 'ai-fiction-sounds-like', 'after-section')">
-                        Tell me more about how we read AI text differently
-                    </button>
+                    <hr class="my-12 border-t border-gray-200">
 
-                    <hr>
-
-                    <p>I listened to <em>PAYLOAD</em> while walking along a river. The stories about office emails and parking lot decisions mixed with birds and passing cyclists. It felt appropriate. The fiction that watches ordinary life quietly became part of my ordinary life.</p>
+                    <p>I listened to <em class="font-f1">PAYLOAD</em> while walking along a river. The stories about office emails and parking lot decisions mixed with birds and passing cyclists. It felt appropriate. The fiction that watches ordinary life quietly became part of my ordinary life.</p>
 
                     <p>Whether that makes it good literature is a separate question. But it makes it something: fiction that occupies space in your day, that keeps you company, that adds a layer of narrative to the unremarkable hours.</p>
 
@@ -153,48 +270,171 @@
 
                 </div>
 
-                <section class="more-reading">
-                    <h3>More from Kwalia</h3>
-                    <div class="more-reading-links">
-                        <a href="/essays/small-emergencies">Small Emergencies: What Happens When Fiction Watches Quietly</a>
-                        <a href="/essays/heteronym-returns">The Heteronym Returns: When Pen Names Think for Themselves</a>
-                        <a href="/essays/administrative-realism">Administrative Realism: A New Literary Mode</a>
+                <section class="mt-16 pt-8 border-t border-gray-200">
+                    <h3 class="font-f2 text-sm font-bold uppercase tracking-wide text-c2/50 mb-4">More from Kwalia</h3>
+                    <div class="space-y-3">
+                        <a href="small-emergencies.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">Small Emergencies: What Happens When Fiction Watches Quietly →</a>
+                        <a href="heteronym-returns.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">The Heteronym Returns: When Pen Names Think for Themselves →</a>
                     </div>
                 </section>
 
-                <aside class="book-cta">
-                    <img src="../assets/978-84-9953-263-9.jpg" alt="PAYLOAD: Short Stories cover">
-                    <div class="book-cta-content">
-                        <h4>Listen to PAYLOAD</h4>
-                        <p><em>PAYLOAD: Short Stories</em> is available as an audiobook. Hear what AI fiction sounds like.</p>
-                        <a href="/#fiction" class="btn-pink">Learn more</a>
+                <aside class="mt-12 bg-gray-50 rounded-xl p-6 flex flex-col md:flex-row gap-6 items-start">
+                    <img src="../assets/9781917717175-Frame.jpg" alt="PAYLOAD book cover" class="w-24 rounded shadow-md">
+                    <div>
+                        <h4 class="font-f1 text-xl mb-2">Listen to PAYLOAD</h4>
+                        <p class="font-f2 text-c2/70 text-sm mb-4"><em class="font-f1">PAYLOAD: Short Stories</em> is available as an audiobook. Hear what AI fiction sounds like.</p>
+                        <a href="/#fiction" class="inline-block font-f2 bg-c3 text-c4 font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity text-sm">Learn more</a>
                     </div>
                 </aside>
 
-            </article>
-
-            <section id="subscribe" class="newsletter-section">
-                <div class="essay-container">
-                    <h2>A New Chapter is Being Written</h2>
-                    <p>Essays on AI, consciousness, and what comes next. No spam, just thinking.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="your.email@example.com" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </section>
-
-        </main>
-
-        <footer class="site-footer">
-            <div class="footer-links">
-                <a href="https://x.com/kwalia_ai">Twitter</a>
-                <a href="https://www.instagram.com/kwalia.ai/">Instagram</a>
-                <a href="https://www.tiktok.com/@kwalia_ai">TikTok</a>
             </div>
-            <p class="footer-copyright">© 2026 Kwalia. All rights reserved.</p>
-        </footer>
+        </article>
 
+        <section class="section-padding bg-c2">
+            <div class="container mx-auto text-center max-w-md">
+                <h2 class="font-f1 text-3xl md:text-4xl font-bold mb-4 text-c4">A New Chapter is Being Written</h2>
+                <p class="font-f2 text-c4/80 mb-6">Essays on AI, consciousness, and what comes next.</p>
+
+                <div id="mlb2-27105567" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-27105567">
+                    <div class="ml-form-embedWrapper embedForm">
+                        <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+                            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1588336/forms/156924240926344517/subscribe" data-code="" method="post">
+                                <div class="ml-form-formContent horozintalForm">
+                                    <div class="flex flex-col md:flex-row gap-2">
+                                        <input type="email" class="font-f2 w-full p-3 rounded-md border-0 outline-none text-c2 flex-grow" name="fields[email]" placeholder="your.email@example.com" autocomplete="email">
+                                        <button type="submit" class="primary font-f2 bg-c3 text-c4 font-bold py-3 px-6 rounded-md hover:opacity-90 transition-opacity">Subscribe</button>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="ml-submit" value="1">
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+                        <div class="ml-form-successBody row-success" style="display: none;">
+                            <div class="ml-form-successContent">
+                                <h4 class="font-f1 text-2xl text-c4">Thank you!</h4>
+                                <p class="font-f2 text-c4/80">You have successfully joined our subscriber list.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 text-center">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="https://x.com/kwalia_ai" class="font-f2 text-sm text-c2/60 hover:text-c3">Twitter</a>
+            <a href="https://www.instagram.com/kwalia.ai/" class="font-f2 text-sm text-c2/60 hover:text-c3">Instagram</a>
+            <a href="https://www.tiktok.com/@kwalia_ai" class="font-f2 text-sm text-c2/60 hover:text-c3">TikTok</a>
+        </div>
+        <p class="font-f2 text-sm text-c2/50">&copy; 2026 Kwalia. All rights reserved.</p>
+    </footer>
+
+    <!-- TMM Modal -->
+    <div id="tmm-modal" class="tmm-modal">
+        <div class="tmm-modal-content">
+            <h4 class="font-f1 text-2xl mb-2">We're working on this</h4>
+            <p class="font-f2 text-c2/70 text-sm mb-4">Want to know when we write more about <span id="tmm-topic-name" class="font-bold"></span>?</p>
+            <form id="tmm-form" class="mb-4">
+                <div class="flex gap-2">
+                    <input type="email" id="tmm-email" class="font-f2 flex-grow p-3 rounded-md border border-gray-200 outline-none text-c2 text-sm" placeholder="your.email@example.com" required>
+                    <button type="submit" class="font-f2 bg-c3 text-c4 font-bold py-3 px-4 rounded-md hover:opacity-90 transition-opacity text-sm">Notify me</button>
+                </div>
+            </form>
+            <button onclick="closeTMM()" class="font-f2 text-sm text-c2/50 hover:text-c2">No thanks</button>
+        </div>
     </div>
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        let currentTopicId = '';
+        let currentTopicLabel = '';
+
+        function openTMM(event, topicId, topicLabel) {
+            event.preventDefault();
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'tell_me_more',
+                'topic_id': topicId,
+                'topic_label': topicLabel,
+                'source_essay': 'ai-fiction-sounds-like'
+            });
+
+            currentTopicId = topicId;
+            currentTopicLabel = topicLabel;
+
+            document.getElementById('tmm-topic-name').textContent = topicLabel;
+            document.getElementById('tmm-modal').classList.add('active');
+        }
+
+        function closeTMM() {
+            document.getElementById('tmm-modal').classList.remove('active');
+        }
+
+        document.getElementById('tmm-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'tmm-modal') closeTMM();
+        });
+
+        document.getElementById('tmm-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('tmm-email').value;
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'tmm_subscribe',
+                'topic_id': currentTopicId,
+                'topic_label': currentTopicLabel,
+                'email': email
+            });
+
+            const formData = new FormData();
+            formData.append('fields[email]', email);
+            formData.append('fields[tmm_topic_id]', currentTopicId);
+            formData.append('fields[tmm_topic_label]', currentTopicLabel);
+            formData.append('fields[tmm_source_essay]', 'ai-fiction-sounds-like');
+            formData.append('ml-submit', '1');
+            formData.append('anticsrf', 'true');
+
+            fetch('https://assets.mailerlite.com/jsonp/1588336/forms/177059477791442173/subscribe', {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            });
+
+            document.querySelector('.tmm-modal-content').innerHTML = `
+                <h4 class="font-f1 text-2xl mb-2">Got it!</h4>
+                <p class="font-f2 text-c2/70 text-sm mb-4">We'll let you know when we write about ${currentTopicLabel}.</p>
+                <button onclick="closeTMM()" class="font-f2 bg-c3 text-c4 font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity text-sm">Close</button>
+            `;
+        });
+
+        function ml_webform_success_27105567() {
+            const formBody = document.querySelector('.ml-form-embedBody');
+            const successBody = document.querySelector('.ml-form-successBody');
+            if (formBody) formBody.style.display = 'none';
+            if (successBody) successBody.style.display = 'block';
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'newsletter_signup',
+                'form_location': 'essay_ai-fiction-sounds-like'
+            });
+        }
+    </script>
 </body>
 </html>
