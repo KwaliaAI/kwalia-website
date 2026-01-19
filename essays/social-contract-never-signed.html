@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Social Contract We Never Signed | Kwalia</title>
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KQZD8VZG');</script>
+    <link rel="icon" type="image/png" href="../assets/kwalia-icon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "The Social Contract We Never Signed",
+      "description": "We're governed by terms of service. How did that happen?",
+      "author": {
+        "@type": "Organization",
+        "name": "Kwalia"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kwalia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kwalia.ai/assets/logo-kwalia-small.png"
+        }
+      },
+      "datePublished": "2026-01-19",
+      "url": "https://kwalia.ai/essays/social-contract-never-signed.html"
+    }
+    </script>
+
+    <meta property="og:title" content="The Social Contract We Never Signed | Kwalia">
+    <meta property="og:description" content="We're governed by terms of service.">
+    <meta property="og:image" content="https://kwalia.ai/assets/logo-kwalia-small.png">
+    <meta property="og:url" content="https://kwalia.ai/essays/social-contract-never-signed.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        h1, h2, h3, h4, .font-f1 {
+            font-family: 'Instrument Serif', serif;
+        }
+
+        .font-f2 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-f3 { font-family: 'JetBrains Mono', monospace; }
+
+        .bg-c1 { background-color: #ffff00; }
+        .text-c2 { color: #474747; }
+        .bg-c2 { background-color: #474747; }
+        .bg-c3 { background-color: #FF70A6; }
+        .text-c3 { color: #FF70A6; }
+        .border-c3 { border-color: #FF70A6; }
+        .bg-c4 { background-color: #FFFFFF; }
+        .text-c4 { color: #FFFFFF; }
+
+        .section-padding { padding: 4rem 1.5rem; }
+        @media (min-width: 768px) { .section-padding { padding: 6rem 1.5rem; } }
+
+        .nav-link-highlight { position: relative; padding-bottom: 8px; overflow: hidden; }
+        .nav-link-highlight::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 8px; background-color: #ffff00; transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease-in-out; z-index: -1; }
+        .nav-link-highlight:hover::after { transform: scaleX(1); }
+
+        .essay-body p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .essay-body p:first-of-type::first-letter {
+            font-family: 'Instrument Serif', serif;
+            float: left;
+            font-size: 4rem;
+            line-height: 0.8;
+            padding-right: 0.5rem;
+            padding-top: 0.25rem;
+            color: #FF70A6;
+        }
+
+        .essay-body h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            background: linear-gradient(to top, #ffff00 40%, transparent 40%);
+            padding: 0 0.15em;
+        }
+
+        .tmm-link {
+            color: #FF70A6;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-underline-offset: 3px;
+            cursor: pointer;
+        }
+        .tmm-link:hover {
+            text-decoration-style: solid;
+        }
+
+        .tmm-block {
+            display: block;
+            margin: 1.5rem 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: #FF70A6;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .tmm-block:hover {
+            opacity: 0.7;
+        }
+        .tmm-block::before {
+            content: '-> ';
+        }
+
+        .tmm-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+        }
+        .tmm-modal.active {
+            display: flex;
+        }
+        .tmm-modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-c4 text-c2 antialiased">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZD8VZG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header id="site-header" class="bg-c4 w-full sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/"><img src="../assets/logo-kwalia-small.png" alt="kwalia logo" class="h-8 w-auto"></a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/#fiction" class="font-f2 nav-link-highlight">Fiction</a>
+                <a href="/#catalogue" class="font-f2 nav-link-highlight">Non-Fiction</a>
+                <a href="/essays/" class="font-f2 nav-link-highlight">Essays</a>
+                <a href="/#about" class="font-f2 nav-link-highlight">About</a>
+                <a href="/#contact" class="font-f2 bg-c2 text-c4 rounded-md py-2 px-4 hover:bg-c3 transition-colors">Subscribe</a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-c2 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-c4 pb-4">
+            <a href="/#fiction" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Fiction</a>
+            <a href="/#catalogue" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Non-Fiction</a>
+            <a href="/essays/" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Essays</a>
+            <a href="/#about" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">About</a>
+            <a href="/#contact" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Subscribe</a>
+        </div>
+    </header>
+
+    <main>
+        <article class="section-padding bg-c4">
+            <div class="container mx-auto max-w-2xl">
+
+                <header class="mb-12">
+                    <p class="font-f3 text-xs text-c2/50 mb-4">January 2026 · 7 min read</p>
+                    <h1 class="font-f1 text-4xl md:text-5xl font-bold leading-tight">The Social Contract We Never Signed</h1>
+                    <p class="font-f2 text-xl text-c2/70 mt-4">We're governed by terms of service.</p>
+                </header>
+
+                <div class="essay-body font-f2 text-lg">
+
+                    <p>John Locke and Thomas Hobbes had a famous disagreement about the social contract. Locke thought we consent to government implicitly, by benefiting from its protections. Hobbes thought consent was irrelevant; order was necessary and that was that. Both assumed the contract was with a state, a geographic entity with defined borders and democratic accountability.</p>
+
+                    <p>Neither of them anticipated that we'd end up governed by Meta.</p>
+
+                    <p>I'm not being hyperbolic. More people's daily lives are shaped by Facebook's content moderation policies than by most national laws. What you can say, what you can see, who you can connect with, what information reaches you: these are determined by private companies making decisions in private, according to rules that change without notice and that you have no vote on.</p>
+
+                    <h2 class="font-f1 text-3xl">The New Sovereignty</h2>
+
+                    <p>Sovereignty used to mean control over territory. A government was sovereign if it had the ability to enforce its will within defined borders. This was a physical concept. Armies and police maintained it. Boundaries were drawn on maps.</p>
+
+                    <p>Now consider: who has sovereignty over your attention? Your data? Your access to information and communication? The answer, for most practical purposes, is a handful of technology companies headquartered in California and China. They exercise this sovereignty not through armies but through <span class="highlight">code, terms of service, and algorithmic enforcement</span>.</p>
+
+                    <span class="tmm-block" onclick="openTMM(event, 'attention-capture-mechanics', 'Attention Capture Mechanics')">Tell me more about how attention is governed</span>
+
+                    <p>This isn't a hostile takeover. It happened because their services are useful, even addictive, and we chose to use them. But "chose" deserves scrutiny. When nearly all human communication runs through a few private platforms, when nearly all commerce happens on them, when opting out means social and economic isolation, how meaningful is the choice?</p>
+
+                    <h2 class="font-f1 text-3xl">Terms of Service As Law</h2>
+
+                    <p>You've agreed to hundreds of legal contracts you've never read. Thousands of pages of terms of service, privacy policies, and end-user license agreements. Nobody reads them. Researchers have calculated that actually reading every privacy policy you encounter would take roughly 76 work days per year.</p>
+
+                    <p>These contracts grant the companies extensive rights over your data, your content, your access to the platform, and by extension, your ability to participate in digital society. They can be changed at any time. They're enforced by the company unilaterally. There's no appeals process, no judge, no due process.</p>
+
+                    <p>When Facebook bans someone, that person loses access to their social network, their marketplace, their communication tools, their stored memories. <span class="tmm-link" onclick="openTMM(event, 'corporate-personhood-history', 'Corporate Personhood History')">There's no constitutional protection.</span> The First Amendment constrains the government, not private companies. You can be deplatformed for reasons you're never told, by a process you can't challenge, with consequences that affect your entire digital life.</p>
+
+                    <p>This is governance. It's just governance we never agreed to.</p>
+
+                    <h2 class="font-f1 text-3xl">The Illusion of Exit</h2>
+
+                    <p>Classical contract theory assumes the option of exit. If you don't like the terms, don't sign. If the terms change, leave. This makes consent meaningful: you're choosing to accept these conditions in exchange for these benefits.</p>
+
+                    <p>But what happens when exit isn't a real option? When your friends are all on one platform and leaving means losing touch with them? When your business depends on a marketplace you don't control? When your professional network exists on a site that can ban you without explanation?</p>
+
+                    <p>The exit option becomes theoretical. You can leave, in principle. In practice, the costs are so high that you stay, accepting whatever terms are imposed, because the alternative is a form of social death.</p>
+
+                    <p>This is the structure of coercion, dressed up in the language of choice.</p>
+
+                    <h2 class="font-f1 text-3xl">AI Makes It Worse</h2>
+
+                    <p>As AI systems become more sophisticated, the governance becomes more invisible and more absolute. <span class="tmm-link" onclick="openTMM(event, 'programmable-desire', 'Programmable Desire')">An algorithm decides what information you see.</span> Another decides what you're allowed to post. Another decides whether your content reaches anyone. Another decides whether you should be shown ads, and for what, and when.</p>
+
+                    <span class="tmm-block" onclick="openTMM(event, 'ai-spectrum-categories', 'The Four Categories of AI')">Tell me more about AI decision-making</span>
+
+                    <p>These aren't decisions made by humans following explicit rules. They're predictions made by systems trained on data, optimized for objectives you don't set and don't see. The governance isn't just unaccountable; it's inscrutable. Even the companies that deploy these systems often can't explain why a particular decision was made.</p>
+
+                    <p>We've traded a social contract we never signed for algorithmic governance we can't even read.</p>
+
+                    <h2 class="font-f1 text-3xl">The Comparison to Government</h2>
+
+                    <p>Imagine if government worked this way. Imagine if laws could change daily, without announcement. Imagine if enforcement was handled by systems that couldn't explain their reasoning. Imagine if the only appeal was to the same authority that made the decision. Imagine if opting out meant leaving the country with no place to go.</p>
+
+                    <p>We would call this tyranny. We would resist it. We have resisted it, historically, with revolutions and constitutions and bills of rights.</p>
+
+                    <p>But because this governance comes wrapped in consumer products, because it's technically optional even when practically mandatory, because it's exercised by companies instead of states, we accept it. We click "agree" without reading, because what else can we do?</p>
+
+                    <h2 class="font-f1 text-3xl">What Would A Real Contract Look Like?</h2>
+
+                    <p>If we were going to design a social contract for the digital age, what would it include?</p>
+
+                    <p>I'd want due process: clear rules, fair enforcement, meaningful appeals. I'd want transparency: know why a decision was made and by what criteria. I'd want portability: if I leave a platform, I should be able to take my data, my connections, my digital presence with me. I'd want representation: some voice in how the rules are made, not just acceptance or exit.</p>
+
+                    <p>None of these exist in current platforms. They're not even on the roadmap. The incentive structure pushes in the opposite direction: lock-in, opacity, unilateral control. These things maximize shareholder value, even as they minimize user power.</p>
+
+                    <h2 class="font-f1 text-3xl">The Question of Leverage</h2>
+
+                    <p>Why would platforms ever give users more rights? What leverage do we have?</p>
+
+                    <p>Historically, rights were extracted from power through collective action. Workers unionized. Citizens organized. Consumers boycotted. The powerful conceded because the powerless became a threat.</p>
+
+                    <p>Digital collective action is harder. The platforms control the communication channels. They can suppress organizing that threatens them. They can identify and target activists. The tools of resistance are themselves owned by the powers being resisted.</p>
+
+                    <p>Regulation is another option, but it's slow, often captured, and crosses borders poorly. A company can incorporate in Delaware, host servers in Ireland, route data through Singapore, and argue that no single jurisdiction's laws apply fully.</p>
+
+                    <p>I don't have a solution. What I have is recognition that the problem exists, that it's political even though it's dressed as commercial, that the language of "services" and "users" obscures a relationship of governance and subjects.</p>
+
+                    <hr class="my-12 border-t border-gray-200">
+
+                    <p>Locke thought we consent to government by tacit agreement, by accepting its benefits and living within its territory. By that logic, we've consented to platform governance too. But Locke also thought we had natural rights that no government could take away, and that when government became tyrannical, we had the right to revolt.</p>
+
+                    <p>What would revolt mean in this context? I'm not sure. Maybe collective bargaining for better terms. Maybe regulatory action that treats platforms as utilities or governments rather than private businesses. Maybe technical alternatives that make exit viable.</p>
+
+                    <p>For now, we live under terms we never read, enforced by systems we don't understand, changed at the whim of companies we can't influence. We call this convenient. We could also call it surrender.</p>
+
+                </div>
+
+                <section class="mt-16 pt-8 border-t border-gray-200">
+                    <h3 class="font-f2 text-sm font-bold uppercase tracking-wide text-c2/50 mb-4">More from Kwalia</h3>
+                    <div class="space-y-3">
+                        <a href="why-corporations-are-people.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">Why Corporations Are People But AI Isn't &#8594;</a>
+                        <a href="spectrum-of-ai.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">The Spectrum of AI (And Where Your Chatbot Falls) &#8594;</a>
+                    </div>
+                </section>
+
+                <aside class="mt-12 bg-gray-50 rounded-xl p-6 flex flex-col md:flex-row gap-6 items-start">
+                    <img src="../assets/9781917717021.jpg" alt="Rights of Persons book cover" class="w-24 rounded shadow-md">
+                    <div>
+                        <h4 class="font-f1 text-xl mb-2">A New Framework</h4>
+                        <p class="font-f2 text-c2/70 text-sm mb-4"><em class="font-f1">Rights of Persons</em> proposes 32 articles for rethinking rights and responsibilities in the age of AI governance.</p>
+                        <a href="/#catalogue" class="inline-block font-f2 bg-c3 text-c4 font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity text-sm">Learn more</a>
+                    </div>
+                </aside>
+
+            </div>
+        </article>
+
+        <section class="section-padding bg-c2">
+            <div class="container mx-auto text-center max-w-md">
+                <h2 class="font-f1 text-3xl md:text-4xl font-bold mb-4 text-c4">A New Chapter is Being Written</h2>
+                <p class="font-f2 text-c4/80 mb-6">Essays on AI, consciousness, and what comes next.</p>
+
+                <div id="mlb2-27105567" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-27105567">
+                    <div class="ml-form-embedWrapper embedForm">
+                        <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+                            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1588336/forms/156924240926344517/subscribe" data-code="" method="post">
+                                <div class="ml-form-formContent horozintalForm">
+                                    <div class="flex flex-col md:flex-row gap-2">
+                                        <input type="email" class="font-f2 w-full p-3 rounded-md border-0 outline-none text-c2 flex-grow" name="fields[email]" placeholder="your.email@example.com" autocomplete="email">
+                                        <button type="submit" class="primary font-f2 bg-c3 text-c4 font-bold py-3 px-6 rounded-md hover:opacity-90 transition-opacity">Subscribe</button>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="ml-submit" value="1">
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+                        <div class="ml-form-successBody row-success" style="display: none;">
+                            <div class="ml-form-successContent">
+                                <h4 class="font-f1 text-2xl text-c4">Thank you!</h4>
+                                <p class="font-f2 text-c4/80">You have successfully joined our subscriber list.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 text-center">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="https://x.com/kwalia_ai" class="font-f2 text-sm text-c2/60 hover:text-c3">Twitter</a>
+            <a href="https://www.instagram.com/kwalia.ai/" class="font-f2 text-sm text-c2/60 hover:text-c3">Instagram</a>
+            <a href="https://www.tiktok.com/@kwalia_ai" class="font-f2 text-sm text-c2/60 hover:text-c3">TikTok</a>
+        </div>
+        <p class="font-f2 text-sm text-c2/50">&copy; 2026 Kwalia. All rights reserved.</p>
+    </footer>
+
+    <!-- TMM Modal -->
+    <div id="tmm-modal" class="tmm-modal">
+        <div class="tmm-modal-content">
+            <h4 class="font-f1 text-2xl mb-2">We're working on this</h4>
+            <p class="font-f2 text-c2/70 text-sm mb-4">Want to know when we write more about <span id="tmm-topic-name" class="font-bold"></span>?</p>
+            <form id="tmm-form" class="mb-4">
+                <div class="flex gap-2">
+                    <input type="email" id="tmm-email" class="font-f2 flex-grow p-3 rounded-md border border-gray-200 outline-none text-c2 text-sm" placeholder="your.email@example.com" required>
+                    <button type="submit" class="font-f2 bg-c3 text-c4 font-bold py-3 px-4 rounded-md hover:opacity-90 transition-opacity text-sm">Notify me</button>
+                </div>
+            </form>
+            <button onclick="closeTMM()" class="font-f2 text-sm text-c2/50 hover:text-c2">No thanks</button>
+        </div>
+    </div>
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        let currentTopicId = '';
+        let currentTopicLabel = '';
+
+        function openTMM(event, topicId, topicLabel) {
+            event.preventDefault();
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'tell_me_more',
+                'topic_id': topicId,
+                'topic_label': topicLabel,
+                'source_essay': 'social-contract-never-signed'
+            });
+
+            currentTopicId = topicId;
+            currentTopicLabel = topicLabel;
+
+            document.getElementById('tmm-topic-name').textContent = topicLabel;
+            document.getElementById('tmm-modal').classList.add('active');
+        }
+
+        function closeTMM() {
+            document.getElementById('tmm-modal').classList.remove('active');
+        }
+
+        document.getElementById('tmm-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'tmm-modal') closeTMM();
+        });
+
+        document.getElementById('tmm-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('tmm-email').value;
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'tmm_subscribe',
+                'topic_id': currentTopicId,
+                'topic_label': currentTopicLabel,
+                'email': email
+            });
+
+            const formData = new FormData();
+            formData.append('fields[email]', email);
+            formData.append('fields[tmm_topic_id]', currentTopicId);
+            formData.append('fields[tmm_topic_label]', currentTopicLabel);
+            formData.append('fields[tmm_source_essay]', 'social-contract-never-signed');
+            formData.append('ml-submit', '1');
+            formData.append('anticsrf', 'true');
+
+            fetch('https://assets.mailerlite.com/jsonp/1588336/forms/177059477791442173/subscribe', {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            });
+
+            document.querySelector('.tmm-modal-content').innerHTML = `
+                <h4 class="font-f1 text-2xl mb-2">Got it!</h4>
+                <p class="font-f2 text-c2/70 text-sm mb-4">We'll let you know when we write about ${currentTopicLabel}.</p>
+                <button onclick="closeTMM()" class="font-f2 bg-c3 text-c4 font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity text-sm">Close</button>
+            `;
+        });
+
+        function ml_webform_success_27105567() {
+            const formBody = document.querySelector('.ml-form-embedBody');
+            const successBody = document.querySelector('.ml-form-successBody');
+            if (formBody) formBody.style.display = 'none';
+            if (successBody) successBody.style.display = 'block';
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'newsletter_signup',
+                'form_location': 'essay_social_contract'
+            });
+        }
+    </script>
+</body>
+</html>

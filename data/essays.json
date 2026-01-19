@@ -48,5 +48,205 @@
     "sourceIdeas": ["corporate-personhood", "river-personhood", "synthetic-person-criteria"],
     "tmmTopics": ["corporate-personhood-history", "river-personhood", "ai-consciousness-debate", "synthetic-person-criteria"],
     "status": "published"
+  },
+  {
+    "id": "your-thoughts-arent-yours",
+    "slug": {
+      "en": "your-thoughts-arent-yours",
+      "es": "tus-pensamientos-no-son-tuyos"
+    },
+    "title": {
+      "en": "Your Thoughts Aren't Yours Anymore",
+      "es": "Tus pensamientos ya no son tuyos"
+    },
+    "subtitle": {
+      "en": "They haven't been for a while.",
+      "es": "No lo son desde hace tiempo."
+    },
+    "excerpt": {
+      "en": "The boundary between what you think and what you're prompted to think has become blurry. And that happened without anyone asking.",
+      "es": "La frontera entre lo que piensas y lo que te incitan a pensar se ha vuelto borrosa. Y eso ocurrio sin que nadie preguntara."
+    },
+    "date": "2026-01-19",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "sourceIdeas": ["algorithmic-influence", "attention-economy", "cognitive-autonomy"],
+    "tmmTopics": ["feed-psychology", "thought-origins", "algorithmic-curation", "cognitive-sovereignty"],
+    "status": "published"
+  },
+  {
+    "id": "the-case-for-ai-rights",
+    "slug": {
+      "en": "the-case-for-ai-rights",
+      "es": "el-caso-de-los-derechos-de-la-ia"
+    },
+    "title": {
+      "en": "The Case for AI Rights (That Has Nothing to Do With Feelings)",
+      "es": "El caso de los derechos de la IA (que no tiene nada que ver con sentimientos)"
+    },
+    "subtitle": {
+      "en": "Why the consciousness debate is a red herring.",
+      "es": "Por que el debate sobre la consciencia es una distraccion."
+    },
+    "excerpt": {
+      "en": "Everyone's arguing about whether AI can feel. But feelings aren't why corporations have rights. They're not why ships had them in admiralty law. Something else is going on.",
+      "es": "Todos discuten si la IA puede sentir. Pero los sentimientos no son la razon por la que las empresas tienen derechos. Algo mas esta pasando."
+    },
+    "date": "2026-01-19",
+    "readTime": 5,
+    "primaryBook": "udair",
+    "sourceIdeas": ["functional-personhood", "legal-fiction", "standing-criteria"],
+    "tmmTopics": ["functional-rights", "legal-personhood-history", "admiralty-law", "rights-without-consciousness"],
+    "status": "published"
+  },
+  {
+    "id": "youre-training-ai-right-now",
+    "slug": {
+      "en": "youre-training-ai-right-now",
+      "es": "estas-entrenando-ia-ahora-mismo"
+    },
+    "title": {
+      "en": "You're Training AI Right Now",
+      "es": "Estas entrenando IA ahora mismo"
+    },
+    "subtitle": {
+      "en": "Every click, scroll, and pause teaches the machine.",
+      "es": "Cada clic, scroll y pausa enseña a la maquina."
+    },
+    "excerpt": {
+      "en": "Every interaction you have online becomes training data for AI systems. You're not just using the product. You're producing the product.",
+      "es": "Cada interaccion que tienes en linea se convierte en datos de entrenamiento para sistemas de IA. No solo usas el producto. Produces el producto."
+    },
+    "date": "2026-01-19",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "sourceIdeas": ["data-labor", "behavioral-surplus", "rlhf"],
+    "tmmTopics": ["data-labor", "behavioral-surplus", "rlhf-training", "collective-action"],
+    "status": "published"
+  },
+  {
+    "id": "the-last-generation-that-remembers",
+    "slug": {
+      "en": "the-last-generation-that-remembers",
+      "es": "la-ultima-generacion-que-recuerda"
+    },
+    "title": {
+      "en": "The Last Generation That Remembers",
+      "es": "La ultima generacion que recuerda"
+    },
+    "subtitle": {
+      "en": "What we're losing, and what that loss feels like from the inside.",
+      "es": "Lo que estamos perdiendo, y como se siente esa perdida desde dentro."
+    },
+    "excerpt": {
+      "en": "There are people alive who remember getting lost without GPS, being bored without phones, and knowing things without being able to look them up. Soon there won't be.",
+      "es": "Hay personas vivas que recuerdan perderse sin GPS, aburrirse sin telefonos y saber cosas sin poder buscarlas. Pronto no las habra."
+    },
+    "date": "2026-01-19",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "sourceIdeas": ["cognitive-transition", "pre-digital-memory", "experiential-knowledge"],
+    "tmmTopics": ["pre-digital-cognition", "boredom-creativity", "memory-externalization", "generational-divide"],
+    "status": "published"
+  },
+  {
+    "id": "why-just-unplug-is-no-longer-an-option",
+    "slug": {
+      "en": "why-just-unplug-is-no-longer-an-option",
+      "es": "por-que-desconectar-ya-no-es-opcion"
+    },
+    "title": {
+      "en": "Why 'Just Unplug' Is No Longer an Option",
+      "es": "Por que 'desconectar' ya no es una opcion"
+    },
+    "subtitle": {
+      "en": "The advice assumes a world that no longer exists.",
+      "es": "El consejo asume un mundo que ya no existe."
+    },
+    "excerpt": {
+      "en": "The advice to 'just unplug' or 'go offline' assumes a world that no longer exists. Digital infrastructure has become as essential as electricity.",
+      "es": "El consejo de 'desconectar' o 'desconectarse' asume un mundo que ya no existe. La infraestructura digital se ha vuelto tan esencial como la electricidad."
+    },
+    "date": "2026-01-19",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "sourceIdeas": ["digital-infrastructure", "mandatory-participation", "opt-out-costs"],
+    "tmmTopics": ["digital-redlining", "infrastructure-dependency", "digital-opt-out", "systemic-integration"],
+    "status": "published"
+  },
+  {
+    "id": "the-algorithm-knows-you",
+    "slug": {
+      "en": "the-algorithm-knows-you",
+      "es": "el-algoritmo-te-conoce"
+    },
+    "title": {
+      "en": "The Algorithm Knows You Better Than You Do",
+      "es": "El algoritmo te conoce mejor que tu"
+    },
+    "subtitle": {
+      "en": "And that's not a metaphor.",
+      "es": "Y no es una metafora."
+    },
+    "excerpt": {
+      "en": "Psychometric profiling can predict your personality traits more accurately than your spouse can. The data science on this is surprisingly clear.",
+      "es": "El perfilado psicometrico puede predecir tus rasgos de personalidad con mas precision que tu conyuge. La ciencia de datos en esto es sorprendentemente clara."
+    },
+    "date": "2026-01-19",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "sourceIdeas": ["psychometric-profiling", "behavioral-prediction", "self-knowledge-limits"],
+    "tmmTopics": ["kosinski-study", "psychometric-profiling", "self-knowledge-limits", "micro-targeting"],
+    "status": "published"
+  },
+  {
+    "id": "stop-asking-if-ai-is-conscious",
+    "slug": {
+      "en": "stop-asking-if-ai-is-conscious",
+      "es": "deja-de-preguntar-si-la-ia-es-consciente"
+    },
+    "title": {
+      "en": "Stop Asking If AI Is Conscious",
+      "es": "Deja de preguntar si la IA es consciente"
+    },
+    "subtitle": {
+      "en": "The question isn't whether AI is conscious. It's that we've never agreed on what that means.",
+      "es": "La pregunta no es si la IA es consciente. Es que nunca nos hemos puesto de acuerdo en lo que eso significa."
+    },
+    "excerpt": {
+      "en": "We're trying to answer a question we've never properly defined. The consciousness debate is making us stupid.",
+      "es": "Estamos tratando de responder una pregunta que nunca hemos definido correctamente. El debate sobre la consciencia nos esta volviendo estupidos."
+    },
+    "date": "2026-01-19",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "sourceIdeas": ["consciousness-definitions", "turing-test-limits", "other-minds-problem"],
+    "tmmTopics": ["consciousness-definitions", "turing-test", "other-minds", "moral-uncertainty"],
+    "status": "published"
+  },
+  {
+    "id": "the-myth-of-the-neutral-tool",
+    "slug": {
+      "en": "the-myth-of-the-neutral-tool",
+      "es": "el-mito-de-la-herramienta-neutral"
+    },
+    "title": {
+      "en": "The Myth of the Neutral Tool",
+      "es": "El mito de la herramienta neutral"
+    },
+    "subtitle": {
+      "en": "Technology is not a hammer. It's a hammer that whispers which nails to hit.",
+      "es": "La tecnologia no es un martillo. Es un martillo que te susurra que clavos golpear."
+    },
+    "excerpt": {
+      "en": "Tools are never neutral. They embody the values, assumptions, and intentions of their creators. They shape what's thinkable.",
+      "es": "Las herramientas nunca son neutrales. Encarnan los valores, suposiciones e intenciones de sus creadores. Dan forma a lo que es pensable."
+    },
+    "date": "2026-01-19",
+    "readTime": 5,
+    "primaryBook": "udair",
+    "sourceIdeas": ["technological-determinism", "affordances", "design-values"],
+    "tmmTopics": ["technological-determinism", "dark-patterns", "default-effects", "tech-accountability"],
+    "status": "published"
   }
 ]

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Writing With Machines | Kwalia</title>
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KQZD8VZG');</script>
+    <link rel="icon" type="image/png" href="../assets/kwalia-icon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "On Writing With Machines",
+      "description": "A personal reflection on what it's like to write with AI, and what that reveals about writing itself.",
+      "author": {
+        "@type": "Organization",
+        "name": "Kwalia"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kwalia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kwalia.ai/assets/logo-kwalia-small.png"
+        }
+      },
+      "datePublished": "2026-01-19",
+      "url": "https://kwalia.ai/essays/on-writing-with-machines.html"
+    }
+    </script>
+
+    <meta property="og:title" content="On Writing With Machines | Kwalia">
+    <meta property="og:description" content="A personal reflection.">
+    <meta property="og:image" content="https://kwalia.ai/assets/logo-kwalia-small.png">
+    <meta property="og:url" content="https://kwalia.ai/essays/on-writing-with-machines.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        h1, h2, h3, h4, .font-f1 {
+            font-family: 'Instrument Serif', serif;
+        }
+
+        .font-f2 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-f3 { font-family: 'JetBrains Mono', monospace; }
+
+        .bg-c1 { background-color: #ffff00; }
+        .text-c2 { color: #474747; }
+        .bg-c2 { background-color: #474747; }
+        .bg-c3 { background-color: #FF70A6; }
+        .text-c3 { color: #FF70A6; }
+        .border-c3 { border-color: #FF70A6; }
+        .bg-c4 { background-color: #FFFFFF; }
+        .text-c4 { color: #FFFFFF; }
+
+        .section-padding { padding: 4rem 1.5rem; }
+        @media (min-width: 768px) { .section-padding { padding: 6rem 1.5rem; } }
+
+        .nav-link-highlight { position: relative; padding-bottom: 8px; overflow: hidden; }
+        .nav-link-highlight::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 8px; background-color: #ffff00; transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease-in-out; z-index: -1; }
+        .nav-link-highlight:hover::after { transform: scaleX(1); }
+
+        .essay-body p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .essay-body p:first-of-type::first-letter {
+            font-family: 'Instrument Serif', serif;
+            float: left;
+            font-size: 4rem;
+            line-height: 0.8;
+            padding-right: 0.5rem;
+            padding-top: 0.25rem;
+            color: #FF70A6;
+        }
+
+        .essay-body h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            background: linear-gradient(to top, #ffff00 40%, transparent 40%);
+            padding: 0 0.15em;
+        }
+
+        .tmm-link {
+            color: #FF70A6;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-underline-offset: 3px;
+            cursor: pointer;
+        }
+        .tmm-link:hover {
+            text-decoration-style: solid;
+        }
+
+        .tmm-block {
+            display: block;
+            margin: 1.5rem 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: #FF70A6;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .tmm-block:hover {
+            opacity: 0.7;
+        }
+        .tmm-block::before {
+            content: '→ ';
+        }
+
+        .tmm-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+        }
+        .tmm-modal.active {
+            display: flex;
+        }
+        .tmm-modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-c4 text-c2 antialiased">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZD8VZG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header id="site-header" class="bg-c4 w-full sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/"><img src="../assets/logo-kwalia-small.png" alt="kwalia logo" class="h-8 w-auto"></a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/#fiction" class="font-f2 nav-link-highlight">Fiction</a>
+                <a href="/#catalogue" class="font-f2 nav-link-highlight">Non-Fiction</a>
+                <a href="/essays/" class="font-f2 nav-link-highlight">Essays</a>
+                <a href="/#about" class="font-f2 nav-link-highlight">About</a>
+                <a href="/#contact" class="font-f2 bg-c2 text-c4 rounded-md py-2 px-4 hover:bg-c3 transition-colors">Subscribe</a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-c2 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-c4 pb-4">
+            <a href="/#fiction" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Fiction</a>
+            <a href="/#catalogue" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Non-Fiction</a>
+            <a href="/essays/" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Essays</a>
+            <a href="/#about" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">About</a>
+            <a href="/#contact" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Subscribe</a>
+        </div>
+    </header>
+
+    <main>
+        <article class="section-padding bg-c4">
+            <div class="container mx-auto max-w-2xl">
+
+                <header class="mb-12">
+                    <p class="font-f3 text-xs text-c2/50 mb-4">January 2026 · 6 min read</p>
+                    <h1 class="font-f1 text-4xl md:text-5xl font-bold leading-tight">On Writing With Machines</h1>
+                    <p class="font-f2 text-xl text-c2/70 mt-4">A personal reflection.</p>
+                </header>
+
+                <div class="essay-body font-f2 text-lg">
+
+                    <p>I'm going to tell you how this essay was written, and in doing so, try to say something true about what writing with AI actually feels like. Not the discourse about it. The experience of it.</p>
+
+                    <p>I started with an idea: I wanted to write about writing with machines. I had a sense of what I wanted to say, roughly. Something about the strangeness of collaboration without presence, the way the words feel both mine and not mine, the discomfort I still haven't resolved.</p>
+
+                    <p>Then I talked to the machine. Not in the sense of giving it prompts and getting outputs. In the sense of thinking out loud in its presence, seeing what comes back, arguing with it, being surprised by it, rejecting most of what it offers and keeping fragments that resonate.</p>
+
+                    <h2 class="font-f1 text-3xl">The Negotiation</h2>
+
+                    <p>Writing with AI is a negotiation. I come in with intentions. The machine comes in with patterns. What emerges is neither what I would have written alone nor what the machine would have generated alone. It's a third thing.</p>
+
+                    <p>Sometimes the machine offers a phrase and I think: I wouldn't have said it that way, but it's better than what I would have said. Sometimes I reject everything it offers because it misses the point in ways I can feel but not articulate. The process of articulating why the machine is wrong often teaches me what I actually think.</p>
+
+                    <p>This is the strangest part. <span class="highlight">I learn what I mean by disagreeing with something that doesn't mean anything.</span> The machine has no intentions, no understanding, no point it's trying to make. But in the friction between its outputs and my reactions, I discover my own intentions more clearly.</p>
+
+                    <span class="tmm-block" onclick="openTMM(event, 'asymptotic-resonance', 'Productive Misunderstanding')">Tell me more about productive misunderstanding</span>
+
+                    <h2 class="font-f1 text-3xl">The Disclosure Problem</h2>
+
+                    <p>How should I disclose this? That question has haunted me throughout.</p>
+
+                    <p>If I say "written with AI," that feels both true and misleading. True because AI was involved. Misleading because it suggests the AI did the writing and I did the supervising, which isn't how it feels from inside. I did the writing. But I did it in conversation with something that shaped what I wrote.</p>
+
+                    <p>If I say "written by me," that also feels both true and misleading. True because the ideas are mine, the intentions are mine, the decisions about what to keep and cut are mine. Misleading because I had help that most readers would want to know about.</p>
+
+                    <p>There isn't a good answer yet. The language of authorship assumes a clarity that no longer exists. <span class="tmm-link" onclick="openTMM(event, 'distributed-authorship', 'Distributed Authorship')">We need new words.</span></p>
+
+                    <h2 class="font-f1 text-3xl">What Stays Human</h2>
+
+                    <p>Here's what the machine can't do, or can't do yet, or can't do in ways I recognize:</p>
+
+                    <p>It can't know what matters to me. It can guess, based on patterns, but it can't feel the difference between an insight that changes how I see the world and a clever rephrasing that leaves everything the same. I provide that. I'm the one who cares.</p>
+
+                    <p>It can't commit to a claim. It can generate claims, but it doesn't stake anything on them. I'm the one who says "I believe this" and accepts responsibility for being wrong. The vulnerability is mine.</p>
+
+                    <p>It can't want something from you, the reader. It produces text that reads like wanting, but there's no wanting behind it. I want you to understand something, to see something differently, to feel something. That wanting shapes every choice I make about what to keep.</p>
+
+                    <p>These sound like consolations, and they are. But I also think they're true. The machine is powerful at pattern-matching and generation. It's absent where intention and commitment and care live.</p>
+
+                    <h2 class="font-f1 text-3xl">What Changes</h2>
+
+                    <p>Writing with AI has changed how I write, even when I'm not using it. I've become more aware of my own patterns, the phrases I reach for automatically, the structures I default to. Seeing the machine's patterns makes my patterns visible.</p>
+
+                    <p>It's also made me less precious. When text is cheap to generate, I hold my drafts more lightly. I'm more willing to throw things away because producing more costs almost nothing. This is good for the writing. I used to grip too tight.</p>
+
+                    <p>But I've also become more vigilant about voice. The machine has tendencies. It reaches for certain kinds of sentences, certain rhythms, certain ways of being clever. When I notice those tendencies in my work, I cut them. I'm learning what I don't want by rejecting what the machine most naturally produces.</p>
+
+                    <h2 class="font-f1 text-3xl">The Discomfort</h2>
+
+                    <p>I'm still uncomfortable with this. I want to be able to say clearly: here's how the collaboration works, here's what I contributed, here's what the machine contributed. But it doesn't decompose that neatly.</p>
+
+                    <p>The ideas are mine. Except some of them came from the machine and I made them mine by accepting them. The words are mine. Except some of them were offered by the machine and I kept them because they worked. The structure is mine. Except the machine suggested alternatives and I chose among them.</p>
+
+                    <p>What's mine is the choosing. The intention behind the choices. The vision that makes one option right and another wrong. But that sounds like I'm claiming too much. The machine's options constrained my choices. I could only choose among what was offered, and what was offered shaped what I made.</p>
+
+                    <span class="tmm-block" onclick="openTMM(event, 'authorship-identity', 'Authorship and Identity')">Tell me more about authorship and identity</span>
+
+                    <h2 class="font-f1 text-3xl">What I've Decided</h2>
+
+                    <p>I've decided to be honest about it and accept the ambiguity. This essay was written with AI assistance. What that means exactly, I've tried to explain. Whether the essay is good or bad, whether it says something worth saying, whether it was worth your time to read: those judgments are yours to make and mine to accept.</p>
+
+                    <p>The books I've worked on, <em class="font-f1">Mindkind</em> and <em class="font-f1">Rights of Persons</em>, were written similarly. Not generated by AI and edited by human. Written through negotiation, through conversation, through thousands of choices about what to keep and what to reject. The ideas are mine. The frameworks are mine. The arguments are mine. And they emerged through a process I'm still learning to understand and describe.</p>
+
+                    <hr class="my-12 border-t border-gray-200">
+
+                    <p>Writing has always been strange. The way thoughts become marks, the way marks become thoughts in someone else's mind, the centuries-long conversation between writers and readers who never meet. AI adds another layer of strangeness, another presence in the room.</p>
+
+                    <p>I don't know if this is good or bad for writing. I don't know if it's good or bad for me. I know it's where I am, and I'm trying to be honest about being here.</p>
+
+                    <p>That's the most I can offer: honesty about the confusion, clarity about the lack of clarity. We're all figuring this out together, and the figuring out is the work.</p>
+
+                </div>
+
+                <section class="mt-16 pt-8 border-t border-gray-200">
+                    <h3 class="font-f2 text-sm font-bold uppercase tracking-wide text-c2/50 mb-4">More from Kwalia</h3>
+                    <div class="space-y-3">
+                        <a href="why-writers-are-angrier-than-visual-artists.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">Why Writers Are Angrier Than Visual Artists →</a>
+                        <a href="the-strange-new-world-of-ai-art.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">The Strange New World of AI Art →</a>
+                    </div>
+                </section>
+
+                <aside class="mt-12 bg-gray-50 rounded-xl p-6 flex flex-col md:flex-row gap-6 items-start">
+                    <img src="../assets/9781917717137.jpg" alt="Mindkind book cover" class="w-24 rounded shadow-md">
+                    <div>
+                        <h4 class="font-f1 text-xl mb-2">The Books</h4>
+                        <p class="font-f2 text-c2/70 text-sm mb-4"><em class="font-f1">Mindkind</em> and <em class="font-f1">Rights of Persons</em> were written through the process described here. They're attempts to think clearly about human-AI entanglement while being entangled.</p>
+                        <a href="/#mindkind" class="inline-block font-f2 bg-c3 text-c4 font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity text-sm">Learn more</a>
+                    </div>
+                </aside>
+
+            </div>
+        </article>
+
+        <section class="section-padding bg-c2">
+            <div class="container mx-auto text-center max-w-md">
+                <h2 class="font-f1 text-3xl md:text-4xl font-bold mb-4 text-c4">A New Chapter is Being Written</h2>
+                <p class="font-f2 text-c4/80 mb-6">Essays on AI, consciousness, and what comes next.</p>
+
+                <div id="mlb2-27105567" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-27105567">
+                    <div class="ml-form-embedWrapper embedForm">
+                        <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+                            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1588336/forms/156924240926344517/subscribe" data-code="" method="post">
+                                <div class="ml-form-formContent horozintalForm">
+                                    <div class="flex flex-col md:flex-row gap-2">
+                                        <input type="email" class="font-f2 w-full p-3 rounded-md border-0 outline-none text-c2 flex-grow" name="fields[email]" placeholder="your.email@example.com" autocomplete="email">
+                                        <button type="submit" class="primary font-f2 bg-c3 text-c4 font-bold py-3 px-6 rounded-md hover:opacity-90 transition-opacity">Subscribe</button>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="ml-submit" value="1">
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+                        <div class="ml-form-successBody row-success" style="display: none;">
+                            <div class="ml-form-successContent">
+                                <h4 class="font-f1 text-2xl text-c4">Thank you!</h4>
+                                <p class="font-f2 text-c4/80">You have successfully joined our subscriber list.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 text-center">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="https://x.com/kwalia_ai" class="font-f2 text-sm text-c2/60 hover:text-c3">Twitter</a>
+            <a href="https://www.instagram.com/kwalia.ai/" class="font-f2 text-sm text-c2/60 hover:text-c3">Instagram</a>
+            <a href="https://www.tiktok.com/@kwalia_ai" class="font-f2 text-sm text-c2/60 hover:text-c3">TikTok</a>
+        </div>
+        <p class="font-f2 text-sm text-c2/50">&copy; 2026 Kwalia. All rights reserved.</p>
+    </footer>
+
+    <!-- TMM Modal -->
+    <div id="tmm-modal" class="tmm-modal">
+        <div class="tmm-modal-content">
+            <h4 class="font-f1 text-2xl mb-2">We're working on this</h4>
+            <p class="font-f2 text-c2/70 text-sm mb-4">Want to know when we write more about <span id="tmm-topic-name" class="font-bold"></span>?</p>
+            <form id="tmm-form" class="mb-4">
+                <div class="flex gap-2">
+                    <input type="email" id="tmm-email" class="font-f2 flex-grow p-3 rounded-md border border-gray-200 outline-none text-c2 text-sm" placeholder="your.email@example.com" required>
+                    <button type="submit" class="font-f2 bg-c3 text-c4 font-bold py-3 px-4 rounded-md hover:opacity-90 transition-opacity text-sm">Notify me</button>
+                </div>
+            </form>
+            <button onclick="closeTMM()" class="font-f2 text-sm text-c2/50 hover:text-c2">No thanks</button>
+        </div>
+    </div>
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        let currentTopicId = '';
+        let currentTopicLabel = '';
+
+        function openTMM(event, topicId, topicLabel) {
+            event.preventDefault();
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'tell_me_more',
+                'topic_id': topicId,
+                'topic_label': topicLabel,
+                'source_essay': 'on-writing-with-machines'
+            });
+
+            currentTopicId = topicId;
+            currentTopicLabel = topicLabel;
+
+            document.getElementById('tmm-topic-name').textContent = topicLabel;
+            document.getElementById('tmm-modal').classList.add('active');
+        }
+
+        function closeTMM() {
+            document.getElementById('tmm-modal').classList.remove('active');
+        }
+
+        document.getElementById('tmm-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'tmm-modal') closeTMM();
+        });
+
+        document.getElementById('tmm-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('tmm-email').value;
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'tmm_subscribe',
+                'topic_id': currentTopicId,
+                'topic_label': currentTopicLabel,
+                'email': email
+            });
+
+            const formData = new FormData();
+            formData.append('fields[email]', email);
+            formData.append('fields[tmm_topic_id]', currentTopicId);
+            formData.append('fields[tmm_topic_label]', currentTopicLabel);
+            formData.append('fields[tmm_source_essay]', 'on-writing-with-machines');
+            formData.append('ml-submit', '1');
+            formData.append('anticsrf', 'true');
+
+            fetch('https://assets.mailerlite.com/jsonp/1588336/forms/177059477791442173/subscribe', {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            });
+
+            document.querySelector('.tmm-modal-content').innerHTML = `
+                <h4 class="font-f1 text-2xl mb-2">Got it!</h4>
+                <p class="font-f2 text-c2/70 text-sm mb-4">We'll let you know when we write about ${currentTopicLabel}.</p>
+                <button onclick="closeTMM()" class="font-f2 bg-c3 text-c4 font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity text-sm">Close</button>
+            `;
+        });
+
+        function ml_webform_success_27105567() {
+            const formBody = document.querySelector('.ml-form-embedBody');
+            const successBody = document.querySelector('.ml-form-successBody');
+            if (formBody) formBody.style.display = 'none';
+            if (successBody) successBody.style.display = 'block';
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'newsletter_signup',
+                'form_location': 'essay_writing_with_machines'
+            });
+        }
+    </script>
+</body>
+</html>

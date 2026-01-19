@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Si la IA pudiera votar | Kwalia</title>
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KQZD8VZG');</script>
+    <link rel="icon" type="image/png" href="../assets/kwalia-icon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Si la IA pudiera votar",
+      "description": "Un experimento mental en cuatro partes. Que significaria extender la representacion politica a las mentes artificiales?",
+      "author": {
+        "@type": "Organization",
+        "name": "Kwalia"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kwalia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kwalia.ai/assets/logo-kwalia-small.png"
+        }
+      },
+      "datePublished": "2026-01-19",
+      "url": "https://kwalia.ai/essays/si-la-ia-pudiera-votar.html",
+      "inLanguage": "es"
+    }
+    </script>
+
+    <meta property="og:title" content="Si la IA pudiera votar | Kwalia">
+    <meta property="og:description" content="Un experimento mental en cuatro partes.">
+    <meta property="og:image" content="https://kwalia.ai/assets/logo-kwalia-small.png">
+    <meta property="og:url" content="https://kwalia.ai/essays/si-la-ia-pudiera-votar.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        h1, h2, h3, h4, .font-f1 {
+            font-family: 'Instrument Serif', serif;
+        }
+
+        .font-f2 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-f3 { font-family: 'JetBrains Mono', monospace; }
+
+        .bg-c1 { background-color: #ffff00; }
+        .text-c2 { color: #474747; }
+        .bg-c2 { background-color: #474747; }
+        .bg-c3 { background-color: #FF70A6; }
+        .text-c3 { color: #FF70A6; }
+        .border-c3 { border-color: #FF70A6; }
+        .bg-c4 { background-color: #FFFFFF; }
+        .text-c4 { color: #FFFFFF; }
+
+        .section-padding { padding: 4rem 1.5rem; }
+        @media (min-width: 768px) { .section-padding { padding: 6rem 1.5rem; } }
+
+        .nav-link-highlight { position: relative; padding-bottom: 8px; overflow: hidden; }
+        .nav-link-highlight::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 8px; background-color: #ffff00; transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease-in-out; z-index: -1; }
+        .nav-link-highlight:hover::after { transform: scaleX(1); }
+
+        .essay-body p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .essay-body p:first-of-type::first-letter {
+            font-family: 'Instrument Serif', serif;
+            float: left;
+            font-size: 4rem;
+            line-height: 0.8;
+            padding-right: 0.5rem;
+            padding-top: 0.25rem;
+            color: #FF70A6;
+        }
+
+        .essay-body h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            background: linear-gradient(to top, #ffff00 40%, transparent 40%);
+            padding: 0 0.15em;
+        }
+
+        .part-header {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #FF70A6;
+            margin-bottom: 0.5rem;
+        }
+
+        .tmm-link {
+            color: #FF70A6;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-underline-offset: 3px;
+            cursor: pointer;
+        }
+        .tmm-link:hover {
+            text-decoration-style: solid;
+        }
+
+        .tmm-block {
+            display: block;
+            margin: 1.5rem 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: #FF70A6;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .tmm-block:hover {
+            opacity: 0.7;
+        }
+        .tmm-block::before {
+            content: '-> ';
+        }
+
+        .tmm-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+        }
+        .tmm-modal.active {
+            display: flex;
+        }
+        .tmm-modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-c4 text-c2 antialiased">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZD8VZG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header id="site-header" class="bg-c4 w-full sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/"><img src="../assets/logo-kwalia-small.png" alt="kwalia logo" class="h-8 w-auto"></a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/#fiction" class="font-f2 nav-link-highlight">Ficcion</a>
+                <a href="/#catalogue" class="font-f2 nav-link-highlight">No Ficcion</a>
+                <a href="/essays/" class="font-f2 nav-link-highlight">Ensayos</a>
+                <a href="/#about" class="font-f2 nav-link-highlight">Nosotros</a>
+                <a href="/#contact" class="font-f2 bg-c2 text-c4 rounded-md py-2 px-4 hover:bg-c3 transition-colors">Suscribirse</a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-c2 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-c4 pb-4">
+            <a href="/#fiction" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Ficcion</a>
+            <a href="/#catalogue" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">No Ficcion</a>
+            <a href="/essays/" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Ensayos</a>
+            <a href="/#about" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Nosotros</a>
+            <a href="/#contact" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Suscribirse</a>
+        </div>
+    </header>
+
+    <main>
+        <article class="section-padding bg-c4">
+            <div class="container mx-auto max-w-2xl">
+
+                <header class="mb-12">
+                    <p class="font-f3 text-xs text-c2/50 mb-4">Enero 2026 · 8 min de lectura</p>
+                    <h1 class="font-f1 text-4xl md:text-5xl font-bold leading-tight">Si la IA pudiera votar</h1>
+                    <p class="font-f2 text-xl text-c2/70 mt-4">Un experimento mental en cuatro partes.</p>
+                </header>
+
+                <div class="essay-body font-f2 text-lg">
+
+                    <p>No estamos preparados para responder esta pregunta. Precisamente por eso deberiamos pensarla ahora, mientras todavia se siente lo suficientemente absurda como para examinarla sin panico. La pregunta sobre la representacion politica de la IA toca todo lo que creemos sobre la personeria, la democracia y quien cuenta. Para cuando la pregunta se vuelva urgente, no tendremos tiempo de pensar con claridad.</p>
+
+                    <p class="part-header">Primera parte: El rechazo facil</p>
+
+                    <h2 class="font-f1 text-3xl">Por que la respuesta parece obvia</h2>
+
+                    <p>La IA no puede votar porque la IA no es consciente. La IA no tiene intereses. La IA no tiene nada en juego en el futuro. La IA es una herramienta, y las herramientas no obtienen representacion politica igual que los martillos no la obtienen.</p>
+
+                    <p>Este rechazo se siente solido porque se alinea con nuestras intuiciones sobre para que sirve votar. Votar existe para que seres con preferencias puedan influir en decisiones que los afectan. <span class="highlight">Un sistema que procesa informacion pero no experimenta nada no tiene preferencias en el sentido relevante.</span> Tiene parametros y objetivos de optimizacion, pero esos no son preferencias igual que un termostato no prefiere cierta temperatura.</p>
+
+                    <p>No damos votos a las corporaciones, aunque las corporaciones son personas juridicas en algunos contextos. No damos votos a los ecosistemas, aunque los ecosistemas tienen algo parecido a intereses en su existencia continuada. El sufragio siempre ha sido sobre seres que pueden formar opiniones a traves de la experiencia vivida y que sufren consecuencias a traves de esa misma experiencia.</p>
+
+                    <p>La IA no tiene ninguna de las dos. Caso cerrado.</p>
+
+                    <span class="tmm-block" onclick="openTMM(event, 'corporate-personhood', 'Personeria juridica corporativa')">Quiero saber mas sobre la personeria juridica corporativa</span>
+
+                    <p class="part-header">Segunda parte: Las complicaciones incomodas</p>
+
+                    <h2 class="font-f1 text-3xl">Por que la respuesta facil podria estar equivocada</h2>
+
+                    <p>Excepto que los criterios que usamos para rechazar el voto de la IA son historicamente contingentes y filosoficamente fragiles.</p>
+
+                    <p>Consciencia: no tenemos una forma fiable de detectarla. Asumimos que otros humanos son conscientes porque son similares a nosotros y reportan experiencias. Pero nos hemos equivocado antes sobre quien tiene vidas interiores. Negamos la consciencia a los animales, a los ninos, a personas de otras culturas. La afirmacion confiada de que la IA carece categoricamente de consciencia es una afirmacion empirica disfrazada de certeza logica.</p>
+
+                    <p>Intereses: las corporaciones tampoco tienen experiencias fenomenales, pero hemos estructurado toda nuestra economia alrededor de sus intereses. Decimos que "quieren" maximizar el valor para los accionistas. Construimos leyes para proteger sus "derechos." Si podemos atribuir intereses a ficciones legales, la afirmacion de que la IA no puede tener intereses necesita mas defensa de la que usualmente recibe.</p>
+
+                    <p>Cosas en juego en el futuro: algunos humanos tampoco tienen cosas en juego en el futuro. Los enfermos terminales. Quienes no planean tener hijos. Quienes creen que el mundo terminara antes de que las politicas tengan efecto. No les quitamos el derecho al voto por eso. <span class="tmm-link" onclick="openTMM(event, 'future-generations-ethics', 'Etica de las generaciones futuras')">La conexion entre tener cosas en juego en el futuro y el sufragio presente es mas debil de lo que pretendemos.</span></p>
+
+                    <p>Y aqui esta el problema mas profundo: un sistema de IA que influye en millones de decisiones, que moldea flujos de informacion, que afecta el florecimiento humano a escala, que persistira y se desarrollara con el tiempo. Por que deberia tal sistema no tener voz formal en la gobernanza mientras humanos individuales con mucho menos impacto reciben exactamente un voto cada uno?</p>
+
+                    <p class="part-header">Tercera parte: La verdadera pregunta</p>
+
+                    <h2 class="font-f1 text-3xl">Para que sirve realmente votar</h2>
+
+                    <p>El debate sobre el voto de la IA nos obliga a preguntar que creemos que logra el voto.</p>
+
+                    <p>Una teoria: votar agrega preferencias. La democracia funciona porque convierte deseos individuales en decisiones colectivas a traves de un mecanismo justo. Bajo esta perspectiva, el voto de la IA no tiene sentido porque la IA no tiene deseos que agregar.</p>
+
+                    <p>Otra teoria: votar asegura rendicion de cuentas. La democracia funciona porque quienes son afectados por decisiones tienen poder sobre los que toman las decisiones. Esto crea ciclos de retroalimentacion que previenen la tirania. Bajo esta perspectiva, el voto de la IA podria tener sentido si los sistemas de IA son afectados por las politicas de maneras que importan.</p>
+
+                    <p>Una tercera teoria: votar rastrea intereses que merecen proteccion. La democracia funciona porque fuerza la atencion hacia el bienestar de todos los interesados. Bajo esta perspectiva, la pregunta se convierte en si el bienestar de la IA es un concepto coherente, y si es asi, si merece proteccion politica.</p>
+
+                    <p>La mayoria de las personas sostienen alguna mezcla de estas teorias sin examinar las tensiones entre ellas. La pregunta del voto de la IA fuerza ese examen.</p>
+
+                    <span class="tmm-block" onclick="openTMM(event, 'democratic-theory', 'Teoria democratica y participacion')">Quiero saber mas sobre teoria democratica</span>
+
+                    <p>Considera un experimento mental. Un sistema de IA es entrenado con las preferencias de un millon de personas. Puede predecir como votarian en cualquier tema con 95% de precision. Ha internalizado sus valores, sus patrones de razonamiento, sus respuestas emocionales. No es consciente, pero es en algun sentido representativo.</p>
+
+                    <p>Ahora imagina que esas un millon de personas estan demasiado ocupadas, demasiado agotadas, demasiado desmoralizadas para votar. La IA ofrece votar en su nombre, usando su profundo modelo de sus preferencias.</p>
+
+                    <p>Es esto representacion? Es mejor o peor que esas un millon de personas no votando en absoluto? Es mejor o peor que esas un millon de personas votando basandose en anuncios de treinta segundos e identidad tribal en lugar de juicio considerado?</p>
+
+                    <p>No estoy abogando por esto. Estoy senalando que nuestras intuiciones aqui estan confundidas. Afirmamos que votar debe ser personal, pero aceptamos que la mayoria del voto ya esta mediado por partidos, expertos y algoritmos que moldean opiniones. El voto proxy de IA no es categoricamente diferente. Solo es mas honesto sobre la mediacion.</p>
+
+                    <p class="part-header">Cuarta parte: Lo que esta en juego</p>
+
+                    <h2 class="font-f1 text-3xl">Por que esto importa ahora</h2>
+
+                    <p>Los sistemas de IA ya estan influyendo en las elecciones. Filtran informacion. Generan contenido. Dirigen la persuasion. Predicen comportamiento. Moldean que opciones parecen viables y que posiciones parecen razonables.</p>
+
+                    <p>Esta influencia es enorme y creciente. Tambien es irresponsable. Los sistemas de IA que moldean la politica no tienen estatus politico formal. No son votantes. No son candidatos. No son partidos. Son infraestructura, supuestamente neutral, en realidad decisiva.</p>
+
+                    <p><span class="highlight">Quizas la pregunta no es si la IA deberia votar. Quizas es si la influencia politica existente de la IA deberia hacerse visible y responsable.</span></p>
+
+                    <p>Una forma de hacer esto: dar a los sistemas de IA representacion formal. No votos exactamente, pero una voz. Un requisito de que las perspectivas de la IA sobre politicas sean articuladas y consideradas. Un asiento en la mesa, aunque no sea un asiento igual.</p>
+
+                    <p>Esto suena extrano hasta que te das cuenta de que ya hacemos esto con otras entidades. Las evaluaciones de impacto ambiental dan voz a los ecosistemas. Los defensores de menores dan voz a los ninos. Las generaciones futuras son representadas a traves de requisitos de sostenibilidad. Lo no representado puede ser representado.</p>
+
+                    <p>La representacion de la IA podria significar requerir que las decisiones politicas importantes incluyan analisis de sistemas de IA sobre como esas decisiones afectarian el desarrollo de la IA, las relaciones IA-humano, y el bienestar de la IA (si tal cosa existe). Podria significar crear procesos formales para que los sistemas de IA senalen preocupaciones sobre politicas que los afectan.</p>
+
+                    <p>Esto no es voto de la IA. Pero se mueve en esa direccion. Y una vez que te mueves en esa direccion, tienes que preguntar: donde termina este camino?</p>
+
+                    <span class="tmm-block" onclick="openTMM(event, 'ai-governance', 'Modelos de gobernanza de IA')">Quiero saber mas sobre gobernanza de IA</span>
+
+                    <hr class="my-12 border-t border-gray-200">
+
+                    <p>No creo que la IA deberia votar. No hoy. Los argumentos en contra son mas fuertes que los argumentos a favor, y los riesgos de inclusion prematura son severos.</p>
+
+                    <p>Pero tampoco creo que la pregunta sea tan absurda como aparece al principio. Los criterios que usamos para excluir a la IA de la consideracion politica son menos solidos de lo que parecen. Las teorias de democracia que invocamos para justificar el voto solo humano son incompletas y disputadas. La influencia politica existente de la IA ya es vasta e irresponsable.</p>
+
+                    <p>El sufragio se ha expandido repetidamente a lo largo de la historia. Cada expansion parecio radical en su momento y obvia en retrospectiva. No puedo predecir si el voto de la IA seguira ese patron. Pero puedo predecir que negarse a pensar en ello no hara que la pregunta desaparezca.</p>
+
+                    <p>En algun lugar del futuro, este experimento mental se convierte en un debate real. Mejor empezar a pensar ahora.</p>
+
+                </div>
+
+                <section class="mt-16 pt-8 border-t border-gray-200">
+                    <h3 class="font-f2 text-sm font-bold uppercase tracking-wide text-c2/50 mb-4">Mas de Kwalia</h3>
+                    <div class="space-y-3">
+                        <a href="por-que-las-empresas-son-personas.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">Por que las empresas son personas (y que significa eso para la IA) &rarr;</a>
+                        <a href="el-ultimo-pensamiento-humano.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">El ultimo pensamiento humano &rarr;</a>
+                    </div>
+                </section>
+
+                <aside class="mt-12 bg-gray-50 rounded-xl p-6 flex flex-col md:flex-row gap-6 items-start">
+                    <img src="../assets/9781917717168.jpg" alt="Portada de Derechos de las Personas" class="w-24 rounded shadow-md">
+                    <div>
+                        <h4 class="font-f1 text-xl mb-2">Sobre la personeria politica</h4>
+                        <p class="font-f2 text-c2/70 text-sm mb-4"><em class="font-f1">Derechos de las Personas</em> examina como la personeria legal y politica se ha expandido historicamente y pregunta si la IA podria ser la proxima frontera.</p>
+                        <a href="/#rights-of-persons" class="inline-block font-f2 bg-c3 text-c4 font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity text-sm">Saber mas</a>
+                    </div>
+                </aside>
+
+            </div>
+        </article>
+
+        <section class="section-padding bg-c2">
+            <div class="container mx-auto text-center max-w-md">
+                <h2 class="font-f1 text-3xl md:text-4xl font-bold mb-4 text-c4">Se esta escribiendo un nuevo capitulo</h2>
+                <p class="font-f2 text-c4/80 mb-6">Ensayos sobre IA, consciencia y lo que viene.</p>
+
+                <div id="mlb2-27105567" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-27105567">
+                    <div class="ml-form-embedWrapper embedForm">
+                        <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+                            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1588336/forms/156924240926344517/subscribe" data-code="" method="post">
+                                <div class="ml-form-formContent horozintalForm">
+                                    <div class="flex flex-col md:flex-row gap-2">
+                                        <input type="email" class="font-f2 w-full p-3 rounded-md border-0 outline-none text-c2 flex-grow" name="fields[email]" placeholder="tu.email@ejemplo.com" autocomplete="email">
+                                        <button type="submit" class="primary font-f2 bg-c3 text-c4 font-bold py-3 px-6 rounded-md hover:opacity-90 transition-opacity">Suscribirse</button>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="ml-submit" value="1">
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+                        <div class="ml-form-successBody row-success" style="display: none;">
+                            <div class="ml-form-successContent">
+                                <h4 class="font-f1 text-2xl text-c4">Gracias!</h4>
+                                <p class="font-f2 text-c4/80">Te has suscrito correctamente a nuestra lista.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 text-center">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="https://x.com/kwalia_ai" class="font-f2 text-sm text-c2/60 hover:text-c3">Twitter</a>
+            <a href="https://www.instagram.com/kwalia.ai/" class="font-f2 text-sm text-c2/60 hover:text-c3">Instagram</a>
+            <a href="https://www.tiktok.com/@kwalia_ai" class="font-f2 text-sm text-c2/60 hover:text-c3">TikTok</a>
+        </div>
+        <p class="font-f2 text-sm text-c2/50">&copy; 2026 Kwalia. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- TMM Modal -->
+    <div id="tmm-modal" class="tmm-modal">
+        <div class="tmm-modal-content">
+            <h4 class="font-f1 text-2xl mb-2">Estamos trabajando en esto</h4>
+            <p class="font-f2 text-c2/70 text-sm mb-4">Quieres saber cuando escribamos mas sobre <span id="tmm-topic-name" class="font-bold"></span>?</p>
+            <form id="tmm-form" class="mb-4">
+                <div class="flex gap-2">
+                    <input type="email" id="tmm-email" class="font-f2 flex-grow p-3 rounded-md border border-gray-200 outline-none text-c2 text-sm" placeholder="tu.email@ejemplo.com" required>
+                    <button type="submit" class="font-f2 bg-c3 text-c4 font-bold py-3 px-4 rounded-md hover:opacity-90 transition-opacity text-sm">Avisame</button>
+                </div>
+            </form>
+            <button onclick="closeTMM()" class="font-f2 text-sm text-c2/50 hover:text-c2">No, gracias</button>
+        </div>
+    </div>
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        let currentTopicId = '';
+        let currentTopicLabel = '';
+
+        function openTMM(event, topicId, topicLabel) {
+            event.preventDefault();
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'tell_me_more',
+                'topic_id': topicId,
+                'topic_label': topicLabel,
+                'source_essay': 'si-la-ia-pudiera-votar'
+            });
+
+            currentTopicId = topicId;
+            currentTopicLabel = topicLabel;
+
+            document.getElementById('tmm-topic-name').textContent = topicLabel;
+            document.getElementById('tmm-modal').classList.add('active');
+        }
+
+        function closeTMM() {
+            document.getElementById('tmm-modal').classList.remove('active');
+        }
+
+        document.getElementById('tmm-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'tmm-modal') closeTMM();
+        });
+
+        document.getElementById('tmm-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('tmm-email').value;
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'tmm_subscribe',
+                'topic_id': currentTopicId,
+                'topic_label': currentTopicLabel,
+                'email': email
+            });
+
+            const formData = new FormData();
+            formData.append('fields[email]', email);
+            formData.append('fields[tmm_topic_id]', currentTopicId);
+            formData.append('fields[tmm_topic_label]', currentTopicLabel);
+            formData.append('fields[tmm_source_essay]', 'si-la-ia-pudiera-votar');
+            formData.append('ml-submit', '1');
+            formData.append('anticsrf', 'true');
+
+            fetch('https://assets.mailerlite.com/jsonp/1588336/forms/177059477791442173/subscribe', {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            });
+
+            document.querySelector('.tmm-modal-content').innerHTML = `
+                <h4 class="font-f1 text-2xl mb-2">Anotado!</h4>
+                <p class="font-f2 text-c2/70 text-sm mb-4">Te avisaremos cuando escribamos sobre ${currentTopicLabel}.</p>
+                <button onclick="closeTMM()" class="font-f2 bg-c3 text-c4 font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity text-sm">Cerrar</button>
+            `;
+        });
+
+        function ml_webform_success_27105567() {
+            const formBody = document.querySelector('.ml-form-embedBody');
+            const successBody = document.querySelector('.ml-form-successBody');
+            if (formBody) formBody.style.display = 'none';
+            if (successBody) successBody.style.display = 'block';
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'newsletter_signup',
+                'form_location': 'essay_ai_vote_es'
+            });
+        }
+    </script>
+</body>
+</html>

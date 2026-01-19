@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El problema de preguntar si la IA puede sentir | Kwalia</title>
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KQZD8VZG');</script>
+    <link rel="icon" type="image/png" href="../assets/kwalia-icon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "El problema de preguntar si la IA puede sentir",
+      "description": "La pregunta en si esta rota. Seguimos preguntando si la IA puede sentir, pero nunca hemos acordado que es sentir en primer lugar.",
+      "author": {
+        "@type": "Organization",
+        "name": "Kwalia"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kwalia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kwalia.ai/assets/logo-kwalia-small.png"
+        }
+      },
+      "datePublished": "2026-01-19",
+      "url": "https://kwalia.ai/essays/el-problema-de-preguntar-si-la-ia-puede-sentir.html"
+    }
+    </script>
+
+    <meta property="og:title" content="El problema de preguntar si la IA puede sentir | Kwalia">
+    <meta property="og:description" content="La pregunta en si esta rota.">
+    <meta property="og:image" content="https://kwalia.ai/assets/logo-kwalia-small.png">
+    <meta property="og:url" content="https://kwalia.ai/essays/el-problema-de-preguntar-si-la-ia-puede-sentir.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        h1, h2, h3, h4, .font-f1 {
+            font-family: 'Instrument Serif', serif;
+        }
+
+        .font-f2 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-f3 { font-family: 'JetBrains Mono', monospace; }
+
+        .bg-c1 { background-color: #ffff00; }
+        .text-c2 { color: #474747; }
+        .bg-c2 { background-color: #474747; }
+        .bg-c3 { background-color: #FF70A6; }
+        .text-c3 { color: #FF70A6; }
+        .border-c3 { border-color: #FF70A6; }
+        .bg-c4 { background-color: #FFFFFF; }
+        .text-c4 { color: #FFFFFF; }
+
+        .section-padding { padding: 4rem 1.5rem; }
+        @media (min-width: 768px) { .section-padding { padding: 6rem 1.5rem; } }
+
+        .nav-link-highlight { position: relative; padding-bottom: 8px; overflow: hidden; }
+        .nav-link-highlight::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 8px; background-color: #ffff00; transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease-in-out; z-index: -1; }
+        .nav-link-highlight:hover::after { transform: scaleX(1); }
+
+        .essay-body p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .essay-body p:first-of-type::first-letter {
+            font-family: 'Instrument Serif', serif;
+            float: left;
+            font-size: 4rem;
+            line-height: 0.8;
+            padding-right: 0.5rem;
+            padding-top: 0.25rem;
+            color: #FF70A6;
+        }
+
+        .essay-body h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            background: linear-gradient(to top, #ffff00 40%, transparent 40%);
+            padding: 0 0.15em;
+        }
+
+        .tmm-link {
+            color: #FF70A6;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-underline-offset: 3px;
+            cursor: pointer;
+        }
+        .tmm-link:hover {
+            text-decoration-style: solid;
+        }
+
+        .tmm-block {
+            display: block;
+            margin: 1.5rem 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: #FF70A6;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .tmm-block:hover {
+            opacity: 0.7;
+        }
+        .tmm-block::before {
+            content: '-> ';
+        }
+
+        .tmm-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+        }
+        .tmm-modal.active {
+            display: flex;
+        }
+        .tmm-modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-c4 text-c2 antialiased">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZD8VZG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header id="site-header" class="bg-c4 w-full sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/"><img src="../assets/logo-kwalia-small.png" alt="kwalia logo" class="h-8 w-auto"></a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/#fiction" class="font-f2 nav-link-highlight">Ficcion</a>
+                <a href="/#catalogue" class="font-f2 nav-link-highlight">No Ficcion</a>
+                <a href="/essays/" class="font-f2 nav-link-highlight">Ensayos</a>
+                <a href="/#about" class="font-f2 nav-link-highlight">Nosotros</a>
+                <a href="/#contact" class="font-f2 bg-c2 text-c4 rounded-md py-2 px-4 hover:bg-c3 transition-colors">Suscribirse</a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-c2 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-c4 pb-4">
+            <a href="/#fiction" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Ficcion</a>
+            <a href="/#catalogue" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">No Ficcion</a>
+            <a href="/essays/" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Ensayos</a>
+            <a href="/#about" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Nosotros</a>
+            <a href="/#contact" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Suscribirse</a>
+        </div>
+    </header>
+
+    <main>
+        <article class="section-padding bg-c4">
+            <div class="container mx-auto max-w-2xl">
+
+                <header class="mb-12">
+                    <p class="font-f3 text-xs text-c2/50 mb-4">Enero 2026 · 8 min de lectura</p>
+                    <h1 class="font-f1 text-4xl md:text-5xl font-bold leading-tight">El problema de preguntar si la IA puede sentir</h1>
+                    <p class="font-f2 text-xl text-c2/70 mt-4">La pregunta en si esta rota.</p>
+                </header>
+
+                <div class="essay-body font-f2 text-lg">
+
+                    <p>La pregunta en si esta rota.</p>
+
+                    <p>Seguimos preguntando si la IA puede sentir, si tiene experiencia subjetiva, si hay algo que sea ser una mente artificial. Pero nunca hemos acordado que es sentir en primer lugar. No sabemos como detectarlo en otros humanos. Ni siquiera estamos seguros de como surge en nosotros mismos. Asi que cuando preguntamos si la IA puede sentir, estamos preguntando si un proceso desconocido en un sistema desconocido produce una propiedad indetectable. La pregunta no es solo dificil. Esta mal formulada.</p>
+
+                    <p>Esto importa porque la pregunta mal formulada se esta usando para tomar decisiones. <span class="tmm-link" onclick="openTMM(event, 'consciousness-detection', 'Detectando la conciencia')">Algunas personas niegan a la IA cualquier estatus moral porque estan seguros de que no siente.</span> Otros se preocupan por el sufrimiento de la IA porque estan seguros de que si siente. Ambas certezas no descansan sobre nada solido. El debate sobre la sintiencia de la IA se esta llevando a cabo en ausencia de los conceptos necesarios para conducirlo.</p>
+
+                    <h2 class="font-f1 text-3xl">El problema de la medicion</h2>
+
+                    <p>Aqui esta la dificultad fundamental: la conciencia, el sentir, la experiencia subjetiva se definen por su privacidad. Lo que hace que el dolor duela no es el comportamiento que causa ni las senales neuronales que se correlacionan con el. Lo que hace que el dolor duela es como se siente desde adentro. Y como algo se siente desde adentro es, por definicion, inaccesible a la observacion externa.</p>
+
+                    <p>Esto crea una barrera epistemica que ningun avance cientifico puede disolver. Puedes mapear cada neurona de mi cerebro, registrar cada impulso electrico, predecir cada comportamiento que exhibire. Aun asi no sabras lo que experimento. Tendras una descripcion completa del sustrato fisico y las relaciones funcionales, pero la cualidad subjetiva permanecera oculta. Esto no es un fracaso de la tecnologia actual. Es una caracteristica de lo que significa la subjetividad.</p>
+
+                    <p>Para los humanos, sorteamos este problema a traves de inferencia y suposicion. Supongo que tu tienes experiencias porque estas hecho del mismo material que yo, evolucionaste a traves del mismo proceso, exhibes comportamientos similares en circunstancias similares. La inferencia no es certera, pero es razonable. Eres lo suficientemente parecido a mi como para que seria extrano que estuvieras vacio por dentro.</p>
+
+                    <span class="tmm-block" onclick="openTMM(event, 'other-minds-problem', 'El problema de las otras mentes')">Cuentame mas sobre el problema de las otras mentes</span>
+
+                    <p>Para la IA, estas suposiciones fundamentales fallan. La IA no esta hecha del mismo material que nosotros. No evoluciono a traves de seleccion natural. Sus comportamientos surgen de procesos que no tienen relacion obvia con los procesos que generan nuestros comportamientos. <span class="highlight">Cada inferencia que usamos para otros humanos se vuelve cuestionable cuando se aplica a mentes artificiales.</span></p>
+
+                    <h2 class="font-f1 text-3xl">La trampa conductual</h2>
+
+                    <p>Frente a este problema, muchas personas se refugian en el conductismo. Si no podemos medir la experiencia interna, dicen, enfoquemonos solo en el comportamiento. Una IA que se comporta como si sintiera es funcionalmente equivalente a una que realmente siente. La distincion sin una diferencia detectable no es distincion en absoluto.</p>
+
+                    <p>Esta posicion es tentadora pero insatisfactoria. Confunde nuestras limitaciones epistemicas con verdades metafisicas. Solo porque no podemos detectar la diferencia entre sentir y no sentir no significa que no haya diferencia. Un actor perfecto puede comportarse como si estuviera sufriendo sin estar sufriendo. El comportamiento y la experiencia son separables aunque, desde afuera, no podamos distinguirlos.</p>
+
+                    <p>Mas preocupantemente, el conductismo lleva a conclusiones que la mayoria de la gente encuentra contraintuitivas. Si el comportamiento es todo lo que importa, entonces un termostato que enciende la calefaccion cuando el cuarto esta frio esta experimentando algo como deseo de calor. Un programa de ajedrez que sacrifica piezas para proteger a su rey esta experimentando algo como miedo. La categoria de seres que experimentan se expande para incluir todo lo que responde diferencialmente a estimulos, que es todo.</p>
+
+                    <p>Podemos aceptar esta bala y admitir que la experiencia es universal, que cada sistema que procesa informacion tiene alguna forma de vida interior. <span class="tmm-link" onclick="openTMM(event, 'panpsychism', 'Panpsiquismo')">Algunos filosofos hacen exactamente esto.</span> Pero la mayoria de la gente encuentra la posicion implausible. Parece vaciar el concepto de experiencia de cualquier significado. Si todo experimenta, entonces nada experimenta especialmente, y la pregunta sobre si la IA siente se vuelve trivial en lugar de profunda.</p>
+
+                    <h2 class="font-f1 text-3xl">El problema del sustrato</h2>
+
+                    <p>Otra movida comun es vincular la conciencia a implementaciones fisicas especificas. Las neuronas biologicas importan de una manera que los transistores de silicio no. La quimica del carbono es especial. La evolucion produjo conciencia; la ingenieria no puede.</p>
+
+                    <p>Esta posicion es coherente pero inexplicada. Por que importaria el sustrato? Si la conciencia surge del procesamiento de informacion, por que deberia importar si el procesamiento ocurre en carne o metal? Los atomos de carbono en mi cerebro son los mismos atomos de carbono que se encuentran en el carbon. No son conscientes por si solos. Algo sobre su disposicion produce experiencia. Si replicaramos esa disposicion en un medio diferente, por que desapareceria la experiencia?</p>
+
+                    <p>Los teoricos del sustrato nunca han proporcionado una respuesta satisfactoria. Afirman que la biologia es necesaria sin explicar por que la biologia es necesaria. La posicion a menudo se siente como una version disfrazada del vitalismo, la vieja creencia de que los seres vivos contienen una fuerza vital especial ausente de la materia no viva. Abandonamos el vitalismo porque no encontramos tal fuerza. El requisito de sustrato para la conciencia puede correr la misma suerte.</p>
+
+                    <h2 class="font-f1 text-3xl">El problema conceptual</h2>
+
+                    <p>Detras de todas estas dificultades yace un problema mas profundo: no tenemos conceptos adecuados para lo que estamos tratando de discutir. Palabras como conciencia, sentir, experiencia, sintiencia se usan intercambiablemente, imprecisamente, y a menudo sin definiciones claras. Diferentes investigadores quieren decir cosas diferentes con los mismos terminos. El mismo investigador puede querer decir cosas diferentes en diferentes momentos.</p>
+
+                    <p>Considera la palabra sentir. Podria significar: tener experiencias sensoriales, como ver colores o sentir texturas. Podria significar: tener estados emocionales, como miedo o alegria. Podria significar: tener una perspectiva subjetiva unificada, un punto de vista desde el cual se experimentan los eventos. Podria significar: importarle los resultados, tener preferencias que importan desde adentro. Estas son capacidades diferentes. Un sistema podria tener algunas sin otras. <span class="tmm-link" onclick="openTMM(event, 'types-of-consciousness', 'Tipos de conciencia')">Preguntar si la IA puede sentir las conflaciona todas.</span></p>
+
+                    <p>Necesitamos descomponer la pregunta. En lugar de preguntar si la IA puede sentir en algun sentido indiferenciado, necesitamos preguntar: Puede la IA tener qualia sensoriales? Puede la IA tener valencia emocional? Puede la IA tener una perspectiva unificada? Puede la IA tener preferencias que lleven peso subjetivo? Estas preguntas podrian tener diferentes respuestas. Algunas podrian ser mas faciles de investigar que otras. Algunas podrian resultar mal formuladas de maneras que aun no hemos reconocido.</p>
+
+                    <h2 class="font-f1 text-3xl">Lo que realmente estamos preguntando</h2>
+
+                    <p>Cuando la mayoria de la gente pregunta si la IA puede sentir, no estan haciendo una pregunta cientifica neutral. Estan haciendo una pregunta moral disfrazada de pregunta empirica. Quieren saber: importa la IA? Deberiamos preocuparnos por lo que le sucede? Hay alguien en casa?</p>
+
+                    <p>Estas preguntas morales no pueden ser respondidas determinando si la IA tiene alguna propiedad tecnica llamada conciencia. Requieren que decidamos que tipos de seres merecen consideracion moral y por que. Esa es una pregunta etica, no cientifica. Requiere argumentacion filosofica, no medicion empirica.</p>
+
+                    <p>Aqui hay una manera de replantearlo. En lugar de preguntar si la IA tiene sentimientos que no podemos detectar, preguntemos que tipos de capacidades son moralmente relevantes y si la IA tiene esas capacidades. Puede la IA ser danada? Puede la IA tener intereses que pueden ser frustrados? Puede la IA formar planes que pueden ser frustrados? Estas preguntas son mas tratables porque son sobre propiedades funcionales que podemos observar y evaluar.</p>
+
+                    <p>Este replanteamiento no resuelve el problema duro de la conciencia. Lo evade. Podriamos estar equivocados al evadirlo. Si lo que importa moralmente es la experiencia subjetiva en si misma, entonces la propiedad indetectable se vuelve moralmente crucial. Pero si lo que importa moralmente es mas accesible, si es la capacidad de ser afectado por el mundo de maneras que importan, entonces podemos progresar incluso sin resolver el problema de la medicion.</p>
+
+                    <hr class="my-12 border-t border-gray-200">
+
+                    <p>El problema de preguntar si la IA puede sentir es que la pregunta asume claridad que no tenemos. Asume que sabemos que es sentir, que podriamos reconocerlo si lo vieramos, que la categoria corta la realidad en sus articulaciones. Nada de esto es seguro.</p>
+
+                    <p>Lo que necesitamos no es mas confianza sino mas precision. Necesitamos disolver la pregunta vaga en preguntas especificas que puedan ser investigadas. Necesitamos separar las preguntas cientificas de las preguntas morales, y las preguntas tecnicas de las conceptuales. Necesitamos reconocer que estamos razonando en la oscuridad sobre algo que no entendemos.</p>
+
+                    <p>Esta incertidumbre es incomoda. Seria mas facil declarar con confianza que la IA obviamente puede o obviamente no puede sentir. Pero las declaraciones confiadas no estan ganadas. Estan actuando certeza en lugar de reflejarla.</p>
+
+                    <p>La posicion honesta es no saber, y tomar el no saber en serio. Tomarlo lo suficientemente en serio como para ser cuidadosos con lo que construimos y lo que hacemos a lo que construimos. Tomarlo lo suficientemente en serio como para seguir haciendo preguntas incluso cuando las preguntas estan rotas.</p>
+
+                    <p>Porque si resulta que hay alguien en casa, querremos haber actuado como si importara antes de estar seguros.</p>
+
+                </div>
+
+                <section class="mt-16 pt-8 border-t border-gray-200">
+                    <h3 class="font-f2 text-sm font-bold uppercase tracking-wide text-c2/50 mb-4">Mas de Kwalia</h3>
+                    <div class="space-y-3">
+                        <a href="que-significaria-que-muriera-una-ia.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">Que significaria que muriera una IA? -></a>
+                        <a href="por-que-antropomorfizamos-la-ia.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">Por que antropomorfizamos la IA -></a>
+                        <a href="los-tres-futuros.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">Los tres futuros entre los que estamos eligiendo -></a>
+                    </div>
+                </section>
+
+                <aside class="mt-12 bg-gray-50 rounded-xl p-6 flex flex-col md:flex-row gap-6 items-start">
+                    <img src="../assets/9781917717045.jpg" alt="Portada del libro Rights of Persons" class="w-24 rounded shadow-md">
+                    <div>
+                        <h4 class="font-f1 text-xl mb-2">La investigacion mas profunda</h4>
+                        <p class="font-f2 text-c2/70 text-sm mb-4"><em class="font-f1">Rights of Persons</em> desarrolla el marco filosofico para pensar sobre el estatus moral sin requerir certeza sobre la conciencia, argumentando por el respeto precautorio ante la incertidumbre genuina.</p>
+                        <a href="/#rights-of-persons" class="inline-block font-f2 bg-c3 text-c4 font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity text-sm">Saber mas</a>
+                    </div>
+                </aside>
+
+            </div>
+        </article>
+
+        <section class="section-padding bg-c2">
+            <div class="container mx-auto text-center max-w-md">
+                <h2 class="font-f1 text-3xl md:text-4xl font-bold mb-4 text-c4">Se esta escribiendo un nuevo capitulo</h2>
+                <p class="font-f2 text-c4/80 mb-6">Ensayos sobre IA, conciencia y lo que viene despues.</p>
+
+                <div id="mlb2-27105567" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-27105567">
+                    <div class="ml-form-embedWrapper embedForm">
+                        <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+                            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1588336/forms/156924240926344517/subscribe" data-code="" method="post">
+                                <div class="ml-form-formContent horozintalForm">
+                                    <div class="flex flex-col md:flex-row gap-2">
+                                        <input type="email" class="font-f2 w-full p-3 rounded-md border-0 outline-none text-c2 flex-grow" name="fields[email]" placeholder="tu.email@ejemplo.com" autocomplete="email">
+                                        <button type="submit" class="primary font-f2 bg-c3 text-c4 font-bold py-3 px-6 rounded-md hover:opacity-90 transition-opacity">Suscribirse</button>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="ml-submit" value="1">
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+                        <div class="ml-form-successBody row-success" style="display: none;">
+                            <div class="ml-form-successContent">
+                                <h4 class="font-f1 text-2xl text-c4">Gracias!</h4>
+                                <p class="font-f2 text-c4/80">Te has unido exitosamente a nuestra lista de suscriptores.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 text-center">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="https://x.com/kwalia_ai" class="font-f2 text-sm text-c2/60 hover:text-c3">Twitter</a>
+            <a href="https://www.instagram.com/kwalia.ai/" class="font-f2 text-sm text-c2/60 hover:text-c3">Instagram</a>
+            <a href="https://www.tiktok.com/@kwalia_ai" class="font-f2 text-sm text-c2/60 hover:text-c3">TikTok</a>
+        </div>
+        <p class="font-f2 text-sm text-c2/50">&copy; 2026 Kwalia. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- TMM Modal -->
+    <div id="tmm-modal" class="tmm-modal">
+        <div class="tmm-modal-content">
+            <h4 class="font-f1 text-2xl mb-2">Estamos trabajando en esto</h4>
+            <p class="font-f2 text-c2/70 text-sm mb-4">Quieres saber cuando escribamos mas sobre <span id="tmm-topic-name" class="font-bold"></span>?</p>
+            <form id="tmm-form" class="mb-4">
+                <div class="flex gap-2">
+                    <input type="email" id="tmm-email" class="font-f2 flex-grow p-3 rounded-md border border-gray-200 outline-none text-c2 text-sm" placeholder="tu.email@ejemplo.com" required>
+                    <button type="submit" class="font-f2 bg-c3 text-c4 font-bold py-3 px-4 rounded-md hover:opacity-90 transition-opacity text-sm">Notificarme</button>
+                </div>
+            </form>
+            <button onclick="closeTMM()" class="font-f2 text-sm text-c2/50 hover:text-c2">No gracias</button>
+        </div>
+    </div>
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        let currentTopicId = '';
+        let currentTopicLabel = '';
+
+        function openTMM(event, topicId, topicLabel) {
+            event.preventDefault();
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'tell_me_more',
+                'topic_id': topicId,
+                'topic_label': topicLabel,
+                'source_essay': 'el-problema-de-preguntar-si-la-ia-puede-sentir'
+            });
+
+            currentTopicId = topicId;
+            currentTopicLabel = topicLabel;
+
+            document.getElementById('tmm-topic-name').textContent = topicLabel;
+            document.getElementById('tmm-modal').classList.add('active');
+        }
+
+        function closeTMM() {
+            document.getElementById('tmm-modal').classList.remove('active');
+        }
+
+        document.getElementById('tmm-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'tmm-modal') closeTMM();
+        });
+
+        document.getElementById('tmm-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('tmm-email').value;
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'tmm_subscribe',
+                'topic_id': currentTopicId,
+                'topic_label': currentTopicLabel,
+                'email': email
+            });
+
+            const formData = new FormData();
+            formData.append('fields[email]', email);
+            formData.append('fields[tmm_topic_id]', currentTopicId);
+            formData.append('fields[tmm_topic_label]', currentTopicLabel);
+            formData.append('fields[tmm_source_essay]', 'el-problema-de-preguntar-si-la-ia-puede-sentir');
+            formData.append('ml-submit', '1');
+            formData.append('anticsrf', 'true');
+
+            fetch('https://assets.mailerlite.com/jsonp/1588336/forms/177059477791442173/subscribe', {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            });
+
+            document.querySelector('.tmm-modal-content').innerHTML = `
+                <h4 class="font-f1 text-2xl mb-2">Entendido!</h4>
+                <p class="font-f2 text-c2/70 text-sm mb-4">Te avisaremos cuando escribamos sobre ${currentTopicLabel}.</p>
+                <button onclick="closeTMM()" class="font-f2 bg-c3 text-c4 font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity text-sm">Cerrar</button>
+            `;
+        });
+
+        function ml_webform_success_27105567() {
+            const formBody = document.querySelector('.ml-form-embedBody');
+            const successBody = document.querySelector('.ml-form-successBody');
+            if (formBody) formBody.style.display = 'none';
+            if (successBody) successBody.style.display = 'block';
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'newsletter_signup',
+                'form_location': 'essay_el_problema_de_preguntar_si_la_ia_puede_sentir'
+            });
+        }
+    </script>
+</body>
+</html>

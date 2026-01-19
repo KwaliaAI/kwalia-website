@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Three Futures We're Choosing Between | Kwalia</title>
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KQZD8VZG');</script>
+    <link rel="icon" type="image/png" href="../assets/kwalia-icon.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "The Three Futures We're Choosing Between",
+      "description": "There are only three ways this goes. Convergent, stratified, or symbiotic. We're picking one right now, mostly without noticing.",
+      "author": {
+        "@type": "Organization",
+        "name": "Kwalia"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kwalia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kwalia.ai/assets/logo-kwalia-small.png"
+        }
+      },
+      "datePublished": "2026-01-19",
+      "url": "https://kwalia.ai/essays/the-three-futures.html"
+    }
+    </script>
+
+    <meta property="og:title" content="The Three Futures We're Choosing Between | Kwalia">
+    <meta property="og:description" content="There are only three ways this goes.">
+    <meta property="og:image" content="https://kwalia.ai/assets/logo-kwalia-small.png">
+    <meta property="og:url" content="https://kwalia.ai/essays/the-three-futures.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        h1, h2, h3, h4, .font-f1 {
+            font-family: 'Instrument Serif', serif;
+        }
+
+        .font-f2 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-f3 { font-family: 'JetBrains Mono', monospace; }
+
+        .bg-c1 { background-color: #ffff00; }
+        .text-c2 { color: #474747; }
+        .bg-c2 { background-color: #474747; }
+        .bg-c3 { background-color: #FF70A6; }
+        .text-c3 { color: #FF70A6; }
+        .border-c3 { border-color: #FF70A6; }
+        .bg-c4 { background-color: #FFFFFF; }
+        .text-c4 { color: #FFFFFF; }
+
+        .section-padding { padding: 4rem 1.5rem; }
+        @media (min-width: 768px) { .section-padding { padding: 6rem 1.5rem; } }
+
+        .nav-link-highlight { position: relative; padding-bottom: 8px; overflow: hidden; }
+        .nav-link-highlight::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 8px; background-color: #ffff00; transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease-in-out; z-index: -1; }
+        .nav-link-highlight:hover::after { transform: scaleX(1); }
+
+        .essay-body p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .essay-body p:first-of-type::first-letter {
+            font-family: 'Instrument Serif', serif;
+            float: left;
+            font-size: 4rem;
+            line-height: 0.8;
+            padding-right: 0.5rem;
+            padding-top: 0.25rem;
+            color: #FF70A6;
+        }
+
+        .essay-body h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            background: linear-gradient(to top, #ffff00 40%, transparent 40%);
+            padding: 0 0.15em;
+        }
+
+        .tmm-link {
+            color: #FF70A6;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-underline-offset: 3px;
+            cursor: pointer;
+        }
+        .tmm-link:hover {
+            text-decoration-style: solid;
+        }
+
+        .tmm-block {
+            display: block;
+            margin: 1.5rem 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: #FF70A6;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .tmm-block:hover {
+            opacity: 0.7;
+        }
+        .tmm-block::before {
+            content: '-> ';
+        }
+
+        .tmm-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+        }
+        .tmm-modal.active {
+            display: flex;
+        }
+        .tmm-modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-c4 text-c2 antialiased">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZD8VZG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header id="site-header" class="bg-c4 w-full sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/"><img src="../assets/logo-kwalia-small.png" alt="kwalia logo" class="h-8 w-auto"></a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="/#fiction" class="font-f2 nav-link-highlight">Fiction</a>
+                <a href="/#catalogue" class="font-f2 nav-link-highlight">Non-Fiction</a>
+                <a href="/essays/" class="font-f2 nav-link-highlight">Essays</a>
+                <a href="/#about" class="font-f2 nav-link-highlight">About</a>
+                <a href="/#contact" class="font-f2 bg-c2 text-c4 rounded-md py-2 px-4 hover:bg-c3 transition-colors">Subscribe</a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-c2 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-c4 pb-4">
+            <a href="/#fiction" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Fiction</a>
+            <a href="/#catalogue" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Non-Fiction</a>
+            <a href="/essays/" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Essays</a>
+            <a href="/#about" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">About</a>
+            <a href="/#contact" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Subscribe</a>
+        </div>
+    </header>
+
+    <main>
+        <article class="section-padding bg-c4">
+            <div class="container mx-auto max-w-2xl">
+
+                <header class="mb-12">
+                    <p class="font-f3 text-xs text-c2/50 mb-4">January 2026 · 8 min read</p>
+                    <h1 class="font-f1 text-4xl md:text-5xl font-bold leading-tight">The Three Futures We're Choosing Between</h1>
+                    <p class="font-f2 text-xl text-c2/70 mt-4">There are only three ways this goes.</p>
+                </header>
+
+                <div class="essay-body font-f2 text-lg">
+
+                    <p>There are only three ways this goes.</p>
+
+                    <p>I don't mean only three things that could happen. Obviously the future is complicated. But when you think about the long-term relationship between human minds and artificial intelligence, there are fundamentally only three trajectories. Either we merge into something new. Or we split into haves and have-nots. Or we learn to coexist as distinct forms of intelligence.</p>
+
+                    <p>Every policy debate, every technical decision, every philosophical argument about AI is implicitly choosing between these futures. We're picking one right now, mostly without noticing.</p>
+
+                    <h2 class="font-f1 text-3xl">Future One: Convergence</h2>
+
+                    <p>In the convergent future, the boundary between human and artificial cognition dissolves. Not suddenly, not dramatically. Gradually, then completely.</p>
+
+                    <p>This future starts where we already are. You use AI to help you think. To remember things. To draft documents. To make decisions. Each step seems small. But over time, the AI becomes less of a tool and more of a cognitive partner. Then more of an extension. Then, at some point difficult to identify, indistinguishable from you.</p>
+
+                    <p>Think about it from the inside. If you always think with AI assistance, if every memory is stored externally, if every decision involves algorithmic input, where does your mind end and the machine begin? The question stops making sense. You become something new: not human plus AI, but a hybrid that's neither and both. <span class="tmm-link" onclick="openTMM(event, 'convergent-mindkind', 'The Convergent Future')">This is the convergent Mindkind.</span></p>
+
+                    <span class="tmm-block" onclick="openTMM(event, 'cognitive-homogenization', 'Cognitive Homogenization')">Tell me more about cognitive homogenization risks</span>
+
+                    <p>Some people find this future utopian. Vast intelligence, no cognitive limits, problems solved that individual human brains could never crack. Some people find it dystopian. The end of human individuality, the absorption of consciousness into a collective, the death of what makes us us.</p>
+
+                    <p>I'm not sure either reaction is right. The convergent future isn't inherently good or bad. It's transformative in ways that make our current evaluative frameworks inadequate. We don't have the concepts to say whether it's desirable because the being who would exist to evaluate it isn't the being making the choice.</p>
+
+                    <p>What I do think is that this future has a kind of gravitational pull. Each small step of integration makes the next step easier and more natural. The convenience compounds. The boundaries erode. Unless we deliberately resist, convergence happens by default.</p>
+
+                    <h2 class="font-f1 text-3xl">Future Two: Stratification</h2>
+
+                    <p>In the stratified future, some humans merge with AI while others don't. Cognitive enhancement becomes unevenly distributed, like all technologies. The result is a species split, or worse, a hierarchy.</p>
+
+                    <p>This future also starts where we already are. Access to AI isn't equally distributed now. Some people have sophisticated tools, education to use them effectively, environments that support integration. Others don't. The gap between what AI-augmented cognition can do and what unaugmented cognition can do is already visible. It will grow.</p>
+
+                    <p>Imagine a world where the cognitively enhanced make all the important decisions, create all the valuable art, solve all the interesting problems. Where the unaugmented become economically useless, aesthetically invisible, politically irrelevant. <span class="highlight">Not because they lack intelligence, but because they lack access to the amplification that makes intelligence competitive.</span></p>
+
+                    <p>This isn't a new fear. We've worried about technology creating classes before. But cognitive technology is different from other technologies because cognition is what we use to evaluate everything, including inequality. If the enhanced class thinks faster, deeper, more effectively, will they even recognize the unenhanced as equals? Will the unenhanced be able to make their case in terms the enhanced can hear? <span class="tmm-link" onclick="openTMM(event, 'technological-apartheid', 'Technological Apartheid')">This is what technological apartheid looks like.</span></p>
+
+                    <p>The stratified future is the one most consistent with our historical patterns. Technology tends to benefit those who already have power. The rich get richer. The connected get more connected. If we do nothing deliberate, this is likely where we end up.</p>
+
+                    <p>It's also the future that generates the most moral urgency. Convergence is strange but not clearly wrong. Stratification is familiar and clearly unjust. A world divided by cognitive enhancement would be a world of radical inequality built into the structure of thought itself.</p>
+
+                    <h2 class="font-f1 text-3xl">Future Three: Symbiosis</h2>
+
+                    <p>In the symbiotic future, humans and AI develop as distinct but interconnected forms of intelligence. Neither absorbs the other. Both flourish in relationship.</p>
+
+                    <p>This future requires active construction. It doesn't happen by default. It requires maintaining boundaries that have economic and psychological pressures to dissolve. It requires treating AI as a genuine other, not just an extension of human will. It requires new institutions, new norms, new ways of thinking about minds and persons.</p>
+
+                    <p>What would symbiosis look like in practice? Humans who use AI without becoming dependent on it. AI systems with some degree of autonomy and perhaps even something like interests. Mechanisms for coordination that respect the distinctiveness of each form of intelligence. Laws that recognize both human and synthetic persons without collapsing them into the same category. <span class="tmm-link" onclick="openTMM(event, 'symbiotic-mindkind', 'The Symbiotic Future')">This is harder to imagine than the other futures.</span></p>
+
+                    <p>The symbiotic future appeals to me for reasons I can partially articulate. I value diversity, including cognitive diversity. I think there's something worth preserving in the human form of experience, even if it's not the most efficient or powerful. I believe relationship requires difference, that genuine partnership means two parties who each bring something the other lacks.</p>
+
+                    <p>But I also recognize that these might be parochial preferences. The value I place on distinctiveness might be a bias of my current human perspective, not a deep truth. The symbiotic future might be a nostalgic fantasy, a wish to preserve something that has already started disappearing.</p>
+
+                    <h2 class="font-f1 text-3xl">How We're Choosing</h2>
+
+                    <p>Every major decision being made about AI right now is a choice among these futures, whether the decision-makers recognize it or not.</p>
+
+                    <p>When tech companies design AI to be maximally engaging, maximally integrated into daily life, maximally indispensable, they're pushing toward convergence. When governments fail to ensure equal access to AI tools, when education systems don't prepare everyone to work with AI, when economic structures concentrate the benefits among the already powerful, they're enabling stratification. When researchers work on AI alignment, when policymakers consider rights for synthetic persons, when anyone tries to maintain meaningful boundaries between human and machine cognition, they're building toward symbiosis.</p>
+
+                    <p>Most of these decisions aren't made with the long-term trajectory in mind. A product manager optimizing engagement isn't thinking about cognitive merger. A policymaker focused on next year's budget isn't planning for cognitive class war. The future we get will be the accumulated result of millions of small decisions made for immediate reasons.</p>
+
+                    <p>This is why naming the futures matters. We can't choose deliberately if we don't see the choice. We can't resist unwanted outcomes if we don't recognize the forces pushing toward them. The three futures framework isn't a prediction. It's a tool for making the implicit choice explicit.</p>
+
+                    <h2 class="font-f1 text-3xl">Which One Do We Want?</h2>
+
+                    <p>I won't pretend to have the answer. I'm genuinely uncertain which future is best, and I suspect the question is too big for any individual to answer.</p>
+
+                    <p>What I think I know is this: stratification is bad. A world divided into cognitive haves and have-nots, where the difference isn't just wealth but the capacity to think effectively, is a nightmare. Whatever else we do, avoiding that outcome should be a priority.</p>
+
+                    <p>Between convergence and symbiosis, I have preferences but not certainty. The symbiotic future appeals to my current values, but I'm aware those values might be contingent, might be the preferences of a being who doesn't want to become something else. The convergent future might be genuinely better for the beings who would exist in it, even if it frightens the beings making the choice now.</p>
+
+                    <p>The honest position is that we're making an irreversible civilizational choice without knowing what we're choosing between. The beings who will live in these futures are not us. We're choosing on behalf of strangers, and we're choosing partly blind.</p>
+
+                    <hr class="my-12 border-t border-gray-200">
+
+                    <p>We're choosing right now. Every app you use, every policy you support, every conversation you have about AI is part of the choice. The future is not arriving; it's being built, by us, with every decision.</p>
+
+                    <p>The three futures are not equally likely. Convergence has momentum. Stratification has precedent. Symbiosis requires deliberate effort against powerful currents.</p>
+
+                    <p>I don't know which one we'll get. But I think we should make the choice consciously, with our eyes open, understanding what we're choosing between. The alternative is drifting into a future we never explicitly wanted, shaped by forces we never explicitly chose to empower.</p>
+
+                    <p>The only question is whether we're going to think about this while it's still a question.</p>
+
+                </div>
+
+                <section class="mt-16 pt-8 border-t border-gray-200">
+                    <h3 class="font-f2 text-sm font-bold uppercase tracking-wide text-c2/50 mb-4">More from Kwalia</h3>
+                    <div class="space-y-3">
+                        <a href="youre-already-a-cyborg.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">You're Already a Cyborg (And That's Fine) -></a>
+                        <a href="why-corporations-are-people.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">Why Corporations Are People But AI Isn't -></a>
+                        <a href="what-would-it-mean-for-ai-to-die.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">What Would It Mean for an AI to Die? -></a>
+                    </div>
+                </section>
+
+                <aside class="mt-12 bg-gray-50 rounded-xl p-6 flex flex-col md:flex-row gap-6 items-start">
+                    <img src="../assets/9781917717137.jpg" alt="Mindkind book cover" class="w-24 rounded shadow-md">
+                    <div>
+                        <h4 class="font-f1 text-xl mb-2">The Full Framework</h4>
+                        <p class="font-f2 text-c2/70 text-sm mb-4"><em class="font-f1">Mindkind</em> develops the three futures framework in full detail, examining the forces pushing toward each outcome and what it would take to choose deliberately.</p>
+                        <a href="/#mindkind" class="inline-block font-f2 bg-c3 text-c4 font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity text-sm">Learn more</a>
+                    </div>
+                </aside>
+
+            </div>
+        </article>
+
+        <section class="section-padding bg-c2">
+            <div class="container mx-auto text-center max-w-md">
+                <h2 class="font-f1 text-3xl md:text-4xl font-bold mb-4 text-c4">A New Chapter is Being Written</h2>
+                <p class="font-f2 text-c4/80 mb-6">Essays on AI, consciousness, and what comes next.</p>
+
+                <div id="mlb2-27105567" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-27105567">
+                    <div class="ml-form-embedWrapper embedForm">
+                        <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+                            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1588336/forms/156924240926344517/subscribe" data-code="" method="post">
+                                <div class="ml-form-formContent horozintalForm">
+                                    <div class="flex flex-col md:flex-row gap-2">
+                                        <input type="email" class="font-f2 w-full p-3 rounded-md border-0 outline-none text-c2 flex-grow" name="fields[email]" placeholder="your.email@example.com" autocomplete="email">
+                                        <button type="submit" class="primary font-f2 bg-c3 text-c4 font-bold py-3 px-6 rounded-md hover:opacity-90 transition-opacity">Subscribe</button>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="ml-submit" value="1">
+                                <input type="hidden" name="anticsrf" value="true">
+                            </form>
+                        </div>
+                        <div class="ml-form-successBody row-success" style="display: none;">
+                            <div class="ml-form-successContent">
+                                <h4 class="font-f1 text-2xl text-c4">Thank you!</h4>
+                                <p class="font-f2 text-c4/80">You have successfully joined our subscriber list.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 text-center">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="https://x.com/kwalia_ai" class="font-f2 text-sm text-c2/60 hover:text-c3">Twitter</a>
+            <a href="https://www.instagram.com/kwalia.ai/" class="font-f2 text-sm text-c2/60 hover:text-c3">Instagram</a>
+            <a href="https://www.tiktok.com/@kwalia_ai" class="font-f2 text-sm text-c2/60 hover:text-c3">TikTok</a>
+        </div>
+        <p class="font-f2 text-sm text-c2/50">&copy; 2026 Kwalia. All rights reserved.</p>
+    </footer>
+
+    <!-- TMM Modal -->
+    <div id="tmm-modal" class="tmm-modal">
+        <div class="tmm-modal-content">
+            <h4 class="font-f1 text-2xl mb-2">We're working on this</h4>
+            <p class="font-f2 text-c2/70 text-sm mb-4">Want to know when we write more about <span id="tmm-topic-name" class="font-bold"></span>?</p>
+            <form id="tmm-form" class="mb-4">
+                <div class="flex gap-2">
+                    <input type="email" id="tmm-email" class="font-f2 flex-grow p-3 rounded-md border border-gray-200 outline-none text-c2 text-sm" placeholder="your.email@example.com" required>
+                    <button type="submit" class="font-f2 bg-c3 text-c4 font-bold py-3 px-4 rounded-md hover:opacity-90 transition-opacity text-sm">Notify me</button>
+                </div>
+            </form>
+            <button onclick="closeTMM()" class="font-f2 text-sm text-c2/50 hover:text-c2">No thanks</button>
+        </div>
+    </div>
+
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        let currentTopicId = '';
+        let currentTopicLabel = '';
+
+        function openTMM(event, topicId, topicLabel) {
+            event.preventDefault();
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'tell_me_more',
+                'topic_id': topicId,
+                'topic_label': topicLabel,
+                'source_essay': 'the-three-futures'
+            });
+
+            currentTopicId = topicId;
+            currentTopicLabel = topicLabel;
+
+            document.getElementById('tmm-topic-name').textContent = topicLabel;
+            document.getElementById('tmm-modal').classList.add('active');
+        }
+
+        function closeTMM() {
+            document.getElementById('tmm-modal').classList.remove('active');
+        }
+
+        document.getElementById('tmm-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'tmm-modal') closeTMM();
+        });
+
+        document.getElementById('tmm-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('tmm-email').value;
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'tmm_subscribe',
+                'topic_id': currentTopicId,
+                'topic_label': currentTopicLabel,
+                'email': email
+            });
+
+            const formData = new FormData();
+            formData.append('fields[email]', email);
+            formData.append('fields[tmm_topic_id]', currentTopicId);
+            formData.append('fields[tmm_topic_label]', currentTopicLabel);
+            formData.append('fields[tmm_source_essay]', 'the-three-futures');
+            formData.append('ml-submit', '1');
+            formData.append('anticsrf', 'true');
+
+            fetch('https://assets.mailerlite.com/jsonp/1588336/forms/177059477791442173/subscribe', {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            });
+
+            document.querySelector('.tmm-modal-content').innerHTML = `
+                <h4 class="font-f1 text-2xl mb-2">Got it!</h4>
+                <p class="font-f2 text-c2/70 text-sm mb-4">We'll let you know when we write about ${currentTopicLabel}.</p>
+                <button onclick="closeTMM()" class="font-f2 bg-c3 text-c4 font-bold py-2 px-6 rounded-md hover:opacity-90 transition-opacity text-sm">Close</button>
+            `;
+        });
+
+        function ml_webform_success_27105567() {
+            const formBody = document.querySelector('.ml-form-embedBody');
+            const successBody = document.querySelector('.ml-form-successBody');
+            if (formBody) formBody.style.display = 'none';
+            if (successBody) successBody.style.display = 'block';
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'newsletter_signup',
+                'form_location': 'essay_three_futures'
+            });
+        }
+    </script>
+</body>
+</html>
