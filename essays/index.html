@@ -1027,31 +1027,36 @@
         showPage(1);
 
         // Filter functionality
+        let activeFilter = 'all';
+
         document.querySelectorAll('.filter-pill').forEach(pill => {
             pill.addEventListener('click', () => {
                 const filter = pill.getAttribute('data-filter');
+                activeFilter = filter;
 
                 // Update active state
                 document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
                 pill.classList.add('active');
 
                 // Filter essays
-                document.querySelectorAll('.essay-card').forEach(card => {
-                    if (filter === 'all') {
-                        card.classList.remove('hidden');
-                    } else {
+                if (filter === 'all') {
+                    // Remove hidden class from all, re-enable pagination
+                    allEssays.forEach(card => card.classList.remove('hidden'));
+                    document.getElementById('pagination').style.display = '';
+                    showPage(1);
+                } else {
+                    // Show all matching essays, hide pagination
+                    document.getElementById('pagination').style.display = 'none';
+                    allEssays.forEach(card => {
+                        card.style.display = ''; // Reset pagination display
                         const tags = card.getAttribute('data-tags') || '';
                         if (tags.includes(filter)) {
                             card.classList.remove('hidden');
                         } else {
                             card.classList.add('hidden');
                         }
-                    }
-                });
-
-                // Reset pagination to page 1
-                currentPage = 1;
-                renderPagination();
+                    });
+                }
             });
         });
     </script>
