@@ -822,6 +822,7 @@
             let currentLang = 'en';
             function renderContent(lang) {
                 currentLang = lang;
+                localStorage.setItem('kwalia-lang', lang);
                 document.querySelectorAll('[data-key]').forEach(el => { if (content[lang][el.getAttribute('data-key')]) { el.innerHTML = content[lang][el.getAttribute('data-key')]; } });
                 document.querySelectorAll('[data-key-placeholder]').forEach(el => { if (content[lang][el.getAttribute('data-key-placeholder')]) { el.placeholder = content[lang][el.getAttribute('data-key-placeholder')]; } });
                 
@@ -976,8 +977,9 @@
                 }
             }
 
-            // Initial render
-            renderContent('en');
+            // Initial render - restore saved language preference
+            const savedLang = localStorage.getItem('kwalia-lang') || 'en';
+            renderContent(savedLang);
             initDoodle();
             if(animationFrameId) cancelAnimationFrame(animationFrameId);
             animateDoodle();
