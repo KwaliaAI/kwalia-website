@@ -154,6 +154,22 @@
         .essay-card.hidden {
             display: none !important;
         }
+        .tag-badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border: 1px solid #e5e5e5;
+            border-radius: 9999px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.7rem;
+            color: #888;
+            margin-right: 0.3rem;
+            margin-top: 0.5rem;
+        }
+        .tag-badge:hover {
+            border-color: #FF70A6;
+            color: #FF70A6;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="bg-c4 text-c2 antialiased">
@@ -954,37 +970,99 @@
         }
     
 
-        // Pagination
-        const ESSAYS_PER_PAGE = 10;
+        // Tag labels for display
+        const tagLabels = {
+            ailit: { en: '#AILit', es: '#AILit' },
+            creativity: { en: 'AI & Creativity', es: 'IA y Creatividad' },
+            consciousness: { en: 'Consciousness', es: 'Consciencia' },
+            attention: { en: 'Attention & Desire', es: 'Atención y Deseo' },
+            digital: { en: 'Digital Life', es: 'Vida Digital' },
+            rights: { en: 'AI Rights', es: 'Derechos IA' },
+            future: { en: 'The Future', es: 'El Futuro' }
+        };
+
+        // Add tag badges to each essay card
         const essaysList = document.getElementById('essays-list');
         const allEssays = Array.from(essaysList.querySelectorAll('.essay-card'));
-        const totalPages = Math.ceil(allEssays.length / ESSAYS_PER_PAGE);
+
+        allEssays.forEach(card => {
+            const tags = (card.getAttribute('data-tags') || '').split(' ').filter(t => t);
+            if (tags.length > 0) {
+                const tagContainer = document.createElement('div');
+                tagContainer.className = 'essay-tags';
+                tags.forEach(tag => {
+                    if (tagLabels[tag]) {
+                        const badge = document.createElement('span');
+                        badge.className = 'tag-badge';
+                        badge.setAttribute('data-filter', tag);
+                        badge.setAttribute('data-en', tagLabels[tag].en);
+                        badge.setAttribute('data-es', tagLabels[tag].es);
+                        badge.textContent = tagLabels[tag][currentLang] || tagLabels[tag].en;
+                        badge.onclick = (e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            document.querySelector('.filter-pill[data-filter="' + tag + '"]').click();
+                        };
+                        tagContainer.appendChild(badge);
+                    }
+                });
+                const contentDiv = card.querySelector('.flex-1');
+                if (contentDiv) contentDiv.appendChild(tagContainer);
+            }
+        });
+
+        // Pagination with filtering support
+        const ESSAYS_PER_PAGE = 10;
         let currentPage = 1;
+        let activeFilter = 'all';
+
+        function getVisibleEssays() {
+            if (activeFilter === 'all') return allEssays;
+            return allEssays.filter(card => {
+                const tags = card.getAttribute('data-tags') || '';
+                return tags.includes(activeFilter);
+            });
+        }
 
         function showPage(page) {
-            currentPage = page;
-            const start = (page - 1) * ESSAYS_PER_PAGE;
+            const visibleEssays = getVisibleEssays();
+            const totalPages = Math.ceil(visibleEssays.length / ESSAYS_PER_PAGE);
+
+            currentPage = Math.max(1, Math.min(page, totalPages));
+            const start = (currentPage - 1) * ESSAYS_PER_PAGE;
             const end = start + ESSAYS_PER_PAGE;
-            
-            allEssays.forEach((essay, index) => {
+
+            // Hide all essays first
+            allEssays.forEach(essay => essay.style.display = 'none');
+
+            // Show only visible essays for current page
+            visibleEssays.forEach((essay, index) => {
                 essay.style.display = (index >= start && index < end) ? '' : 'none';
             });
-            
+
             renderPagination();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function renderPagination() {
+            const visibleEssays = getVisibleEssays();
+            const totalPages = Math.ceil(visibleEssays.length / ESSAYS_PER_PAGE);
             const container = document.getElementById('pagination');
             container.innerHTML = '';
-            
+
+            if (totalPages <= 1) {
+                container.style.display = 'none';
+                return;
+            }
+            container.style.display = '';
+
             // Previous button
             const prevBtn = document.createElement('button');
             prevBtn.textContent = '←';
             prevBtn.disabled = currentPage === 1;
             prevBtn.onclick = () => showPage(currentPage - 1);
             container.appendChild(prevBtn);
-            
+
             // Page numbers
             for (let i = 1; i <= totalPages; i++) {
                 if (totalPages <= 7 || i === 1 || i === totalPages || Math.abs(i - currentPage) <= 1) {
@@ -1005,21 +1083,21 @@
                     container.appendChild(ellipsis);
                 }
             }
-            
+
             // Next button
             const nextBtn = document.createElement('button');
             nextBtn.textContent = '→';
             nextBtn.disabled = currentPage === totalPages;
             nextBtn.onclick = () => showPage(currentPage + 1);
             container.appendChild(nextBtn);
-            
+
             // Page info
             const info = document.createElement('span');
             info.className = 'page-info';
             info.style.marginLeft = '1rem';
             const startNum = (currentPage - 1) * ESSAYS_PER_PAGE + 1;
-            const endNum = Math.min(currentPage * ESSAYS_PER_PAGE, allEssays.length);
-            info.textContent = startNum + '-' + endNum + ' of ' + allEssays.length;
+            const endNum = Math.min(currentPage * ESSAYS_PER_PAGE, visibleEssays.length);
+            info.textContent = startNum + '-' + endNum + ' of ' + visibleEssays.length;
             container.appendChild(info);
         }
 
@@ -1027,8 +1105,6 @@
         showPage(1);
 
         // Filter functionality
-        let activeFilter = 'all';
-
         document.querySelectorAll('.filter-pill').forEach(pill => {
             pill.addEventListener('click', () => {
                 const filter = pill.getAttribute('data-filter');
@@ -1038,25 +1114,8 @@
                 document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
                 pill.classList.add('active');
 
-                // Filter essays
-                if (filter === 'all') {
-                    // Remove hidden class from all, re-enable pagination
-                    allEssays.forEach(card => card.classList.remove('hidden'));
-                    document.getElementById('pagination').style.display = '';
-                    showPage(1);
-                } else {
-                    // Show all matching essays, hide pagination
-                    document.getElementById('pagination').style.display = 'none';
-                    allEssays.forEach(card => {
-                        card.style.display = ''; // Reset pagination display
-                        const tags = card.getAttribute('data-tags') || '';
-                        if (tags.includes(filter)) {
-                            card.classList.remove('hidden');
-                        } else {
-                            card.classList.add('hidden');
-                        }
-                    });
-                }
+                // Reset to page 1 and show filtered results
+                showPage(1);
             });
         });
     </script>
