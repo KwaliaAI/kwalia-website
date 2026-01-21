@@ -205,7 +205,7 @@
         </section>
 
         <!-- Featured Essays Banner -->
-        <section id="essays-banner" class="py-12 md:py-16 bg-c1">
+        <section id="essays-banner" class="py-12 md:py-16 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
                     <div>
@@ -623,10 +623,10 @@
                     const excerpt = essay.excerpt[lang] || essay.excerpt.en;
 
                     return `
-                        <a href="/essays/${slug}.html" class="group bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-all border border-c2/10">
+                        <a href="/essays/${slug}.html" class="group bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all border-b-2 border-transparent hover:border-c1">
                             <h3 class="font-f1 text-xl md:text-2xl mb-2 group-hover:text-c3 transition-colors">${title}</h3>
                             <p class="font-f2 text-sm text-c2/70 line-clamp-2">${excerpt}</p>
-                            <span class="font-f3 text-xs text-c3 mt-3 inline-block">Read →</span>
+                            <span class="font-f3 text-xs text-c2/50 group-hover:text-c3 mt-3 inline-block transition-colors">Read →</span>
                         </a>
                     `;
                 }).join('');
