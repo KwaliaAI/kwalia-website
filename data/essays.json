@@ -1,5 +1,32 @@
 [
   {
+    "id": "escape-velocity",
+    "slug": {
+      "en": "escape-velocity",
+      "es": "velocidad-de-escape"
+    },
+    "title": {
+      "en": "Escape Velocity: The Last Year We Can Follow",
+      "es": "Velocidad de escape: El último año que podemos seguir el ritmo"
+    },
+    "subtitle": {
+      "en": "On the approaching threshold of recursive AI self-improvement.",
+      "es": "Sobre el umbral que se aproxima de la automejora recursiva de la IA."
+    },
+    "excerpt": {
+      "en": "2026 may be the last year in human history when ordinary people can genuinely understand and follow the progress of artificial intelligence.",
+      "es": "2026 puede ser el último año en la historia humana en que la gente común pueda genuinamente entender y seguir el progreso de la inteligencia artificial."
+    },
+    "date": "2026-01-21",
+    "readTime": 12,
+    "primaryBook": "mindkind",
+    "tags": [
+      "future",
+      "rights"
+    ],
+    "status": "published"
+  },
+  {
     "id": "dawn-synthetic-consciousness",
     "slug": {
       "en": "dawn-of-synthetic-consciousness",
