@@ -243,6 +243,29 @@ Edit `data/i18n/en.json` and `data/i18n/es.json`.
 
 ---
 
+## Important Notes
+
+### Python Version
+The build script requires Python 3.6+.
+
+### Images in Essays
+Markdown image syntax isn't supported. Use HTML directly:
+```html
+<img src="../assets/my-image.jpg" alt="Description">
+```
+Place images in `assets/` folder.
+
+### Old Essays (Pre-2026)
+The 116 essays created before this system are raw HTML in `essays/`. They were NOT migrated to Markdown. To edit those, modify the HTML directly. Only new essays use the `content/essays/` workflow.
+
+### Removing an Essay
+The build script adds/updates but doesn't delete. To remove an essay:
+1. Delete the `.md` file from `content/essays/`
+2. Delete the `.html` file from `essays/`
+3. Manually remove the entry from `data/essays.json`
+
+---
+
 ## Autonomous Execution
 
 When working on this project:
