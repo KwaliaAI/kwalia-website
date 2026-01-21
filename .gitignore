@@ -1,0 +1,28 @@
+# Working files
+SKILL*.md
+SKILL*.pdf
+*.md:Zone.Identifier
+
+# Old scripts (keep for reference but don't track)
+create_manifesto_essays.py
+fix_*.py
+extract_metadata.py
+ALL_ENGLISH_ESSAYS.md
+ESSAYS_PROJECT_DOCUMENTATION.md
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
