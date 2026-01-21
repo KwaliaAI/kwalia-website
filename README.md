@@ -171,7 +171,6 @@ Then open http://localhost:8000
 
 ## Writing Guidelines
 
-- **No AI tells**: Avoid patterns like "This is not X. This is Y.", excessive em dashes, words like "crucial", "essential", "delve", "tapestry"
 - **External links**: Use full URLs starting with `https://`
 - **Internal links**: Use relative paths like `other-essay.html`
 - **Images**: Place in `assets/` and reference as `../assets/image.jpg`
