@@ -156,7 +156,6 @@
                 <a href="#fiction" class="font-f2 nav-link-highlight" data-key="nav.fiction">Fiction</a>
                 <a href="#catalogue" class="font-f2 nav-link-highlight" data-key="nav.catalogue">Non-Fiction</a>
                 <a href="#heteronyms" class="font-f2 nav-link-highlight" data-key="nav.heteronyms">Heteronyms</a>
-                <a href="#blog" class="font-f2 nav-link-highlight" data-key="nav.blog">Blog</a>
                 <a href="/essays/" class="font-f2 nav-link-highlight" data-key="nav.essays">Essays</a>
                 <a href="#press" class="font-f2 nav-link-highlight" data-key="nav.press">Press</a>
                 <a href="#about" class="font-f2 nav-link-highlight" data-key="nav.about">About</a>
@@ -179,7 +178,6 @@
             <a href="#fiction" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.fiction">Fiction</a>
             <a href="#catalogue" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.catalogue">Non-Fiction</a>
             <a href="#heteronyms" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.heteronyms">Heteronyms</a>
-            <a href="#blog" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.blog">Blog</a>
             <a href="/essays/" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.essays">Essays</a>
             <a href="#press" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.press">Press</a>
             <a href="#about" class="block py-2 px-6 text-sm font-f2 mobile-nav-link" data-key="nav.about">About</a>
@@ -304,17 +302,6 @@
             </div>
         </section>
 
-        <section id="blog" class="section-padding bg-c4">
-            <div class="container mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="blog.title">From the Lab</h2>
-                    <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto" data-key="blog.subtitle">Thoughts, experiments, and dispatches from the edge of AI and creativity.</p>
-                </div>
-                <div id="blog-posts-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    </div>
-            </div>
-        </section>
-
         <section id="press" class="section-padding bg-gray-50">
             <div class="container mx-auto text-center">
                 <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="press.title">Press & Media</h2>
@@ -435,20 +422,18 @@
             let fictionCatalogue = [];
             let heteronyms = [];
             let shortStories = [];
-            let blogPosts = [];
             let essays = [];
 
             // Load all data from JSON files
             async function loadData() {
                 try {
-                    const [enContent, esContent, books, fiction, hets, stories, blog, essaysData] = await Promise.all([
+                    const [enContent, esContent, books, fiction, hets, stories, essaysData] = await Promise.all([
                         fetch('data/i18n/en.json').then(r => r.json()),
                         fetch('data/i18n/es.json').then(r => r.json()),
                         fetch('data/books.json').then(r => r.json()),
                         fetch('data/fiction.json').then(r => r.json()),
                         fetch('data/heteronyms.json').then(r => r.json()),
                         fetch('data/stories.json').then(r => r.json()),
-                        fetch('data/blog.json').then(r => r.json()),
                         fetch('data/essays.json').then(r => r.json())
                     ]);
 
@@ -457,7 +442,6 @@
                     fictionCatalogue = fiction;
                     heteronyms = hets;
                     shortStories = stories;
-                    blogPosts = blog;
                     essays = essaysData;
 
                     return true;
@@ -477,7 +461,6 @@
             const catalogueContainer = document.getElementById('catalogue-container');
             const fictionContainer = document.getElementById('fiction-container');
             const heteronymsContainer = document.getElementById('heteronyms-container');
-            const blogContainer = document.getElementById('blog-posts-container');
             const bookModal = document.getElementById('book-modal');
             const bookModalContent = document.getElementById('book-modal-content');
             const readerModal = document.getElementById('reader-modal');
@@ -584,29 +567,6 @@
                 });
             }
 
-            function renderBlogPosts(lang) {
-                blogContainer.innerHTML = '';
-                blogPosts.forEach(post => {
-                    const postHTML = `
-                        <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col">
-                            <p class="font-f3 text-xs text-c2/60 mb-2">${post.date}</p>
-                            <h3 class="font-f1 text-2xl mb-2">${post.title[lang] || post.title.en}</h3>
-                            <p class="font-f2 text-base text-c2/80 mb-4 flex-grow">${post.excerpt[lang] || post.excerpt.en}</p>
-                            <button class="font-f2 text-c3 self-start hover:underline read-more-btn" data-post-id="${post.id}">${content[lang]['blog.read_more']} →</button>
-                        </div>
-                    `;
-                    blogContainer.innerHTML += postHTML;
-                });
-
-                document.querySelectorAll('.read-more-btn').forEach(button => {
-                    button.addEventListener('click', e => {
-                        const postId = e.target.dataset.postId;
-                        const post = blogPosts.find(p => p.id === postId);
-                        openBlogModal(post, lang);
-                    });
-                });
-            }
-
             function renderFeaturedEssays(lang) {
                 const container = document.getElementById('featured-essays');
                 if (!container || !essays.length) return;
@@ -631,26 +591,6 @@
                     `;
                 }).join('');
             }
-
-            function openBlogModal(post, lang) {
-                 const modalHTML = `
-                    <div class="p-6 sm:p-8">
-                        <div class="flex justify-between items-start mb-6">
-                            <h3 class="font-f1 text-3xl md:text-4xl pr-4">${post.title[lang] || post.title.en}</h3>
-                            <button id="close-modal" class="text-4xl text-c2/50 hover:text-c3 leading-none">×</button>
-                        </div>
-                        <p class="font-f3 text-sm text-c2/60 mb-4">${post.date}</p>
-                        <div class="font-f2 text-base text-c2/90 leading-relaxed">${(post.content[lang] || post.content.en).split('\n').map(p => `<p class="mb-4">${p}</p>`).join('')}</div>
-                    </div>`;
-                bookModalContent.innerHTML = modalHTML;
-                bookModal.classList.remove('hidden');
-                setTimeout(() => {
-                    bookModal.classList.remove('opacity-0');
-                    bookModalContent.classList.remove('scale-95');
-                }, 10);
-                document.getElementById('close-modal').addEventListener('click', closeBookModal);
-            }
-
 
             function openBookModal(book, lang) {
                 
@@ -894,7 +834,6 @@
                 renderCatalogue(lang);
                 renderFiction(lang);
                 renderHeteronyms(lang);
-                renderBlogPosts(lang);
                 renderFeaturedEssays(lang);
 
                 const langEnDesktop = document.getElementById('lang-en-desktop');
@@ -1015,12 +954,6 @@
                 const fictionBook = fictionCatalogue.find(b => b.id === hash);
                 if (fictionBook) {
                     openBookModal(fictionBook, currentLang);
-                    return;
-                }
-
-                const post = blogPosts.find(p => p.id === hash);
-                if (post) {
-                    openBlogModal(post, currentLang);
                 }
             }
 

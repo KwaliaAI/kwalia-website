@@ -1,5 +1,57 @@
 [
   {
+    "id": "dawn-synthetic-consciousness",
+    "slug": {
+      "en": "dawn-of-synthetic-consciousness",
+      "es": "amanecer-consciencia-sintetica"
+    },
+    "title": {
+      "en": "The Dawn of Synthetic Consciousness",
+      "es": "El Amanecer de la Consciencia Sintética"
+    },
+    "subtitle": {
+      "en": "Kwalia's founding vision for AI-created art.",
+      "es": "La visión fundacional de Kwalia para el arte creado por IA."
+    },
+    "excerpt": {
+      "en": "Artificial Intelligence isn't merely changing our world. It's awakening to it.",
+      "es": "La Inteligencia Artificial no está simplemente cambiando nuestro mundo. Está despertando a él."
+    },
+    "date": "2025-01-14",
+    "readTime": 4,
+    "primaryBook": "mindkind",
+    "tags": [
+      "about"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "new-citizenships-manifesto",
+    "slug": {
+      "en": "new-citizenships-manifesto",
+      "es": "manifiesto-nuevas-ciudadanias"
+    },
+    "title": {
+      "en": "The New Citizenships: Reimagining Society in the Age of Synthetic Minds",
+      "es": "Las Nuevas Ciudadanías: Reimaginando la Sociedad en la Era de las Mentes Sintéticas"
+    },
+    "subtitle": {
+      "en": "Introducing Kwalia's groundbreaking book series.",
+      "es": "Presentando la innovadora serie de libros de Kwalia."
+    },
+    "excerpt": {
+      "en": "We stand at the threshold of a cognitive revolution. Not a distant future, but our present.",
+      "es": "Estamos en el umbral de una revolución cognitiva. No un futuro distante, sino nuestro presente."
+    },
+    "date": "2025-03-02",
+    "readTime": 8,
+    "primaryBook": "mindkind",
+    "tags": [
+      "about"
+    ],
+    "status": "published"
+  },
+  {
     "id": "small-emergencies",
     "slug": {
       "en": "small-emergencies",
