@@ -204,6 +204,24 @@
             </div>
         </section>
 
+        <!-- Featured Essays Banner -->
+        <section id="essays-banner" class="py-12 md:py-16 bg-c1">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
+                    <div>
+                        <h2 class="font-f1 text-3xl md:text-4xl font-bold text-c2" data-key="essays.banner.title">Latest Thinking</h2>
+                        <p class="font-f2 text-c2/70 mt-2" data-key="essays.banner.subtitle">Essays on AI, consciousness, and what comes next.</p>
+                    </div>
+                    <a href="/essays/" class="font-f2 text-c2 hover:text-c3 transition-colors mt-4 md:mt-0 inline-flex items-center gap-2" data-key="essays.banner.cta">
+                        Explore all essays →
+                    </a>
+                </div>
+                <div id="featured-essays" class="grid md:grid-cols-3 gap-6">
+                    <!-- Essays loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
         <section id="approach" class="section-padding bg-c4">
             <div class="container mx-auto">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -418,18 +436,20 @@
             let heteronyms = [];
             let shortStories = [];
             let blogPosts = [];
+            let essays = [];
 
             // Load all data from JSON files
             async function loadData() {
                 try {
-                    const [enContent, esContent, books, fiction, hets, stories, blog] = await Promise.all([
+                    const [enContent, esContent, books, fiction, hets, stories, blog, essaysData] = await Promise.all([
                         fetch('data/i18n/en.json').then(r => r.json()),
                         fetch('data/i18n/es.json').then(r => r.json()),
                         fetch('data/books.json').then(r => r.json()),
                         fetch('data/fiction.json').then(r => r.json()),
                         fetch('data/heteronyms.json').then(r => r.json()),
                         fetch('data/stories.json').then(r => r.json()),
-                        fetch('data/blog.json').then(r => r.json())
+                        fetch('data/blog.json').then(r => r.json()),
+                        fetch('data/essays.json').then(r => r.json())
                     ]);
 
                     content = { en: enContent, es: esContent };
@@ -438,6 +458,7 @@
                     heteronyms = hets;
                     shortStories = stories;
                     blogPosts = blog;
+                    essays = essaysData;
 
                     return true;
                 } catch (error) {
@@ -585,7 +606,32 @@
                     });
                 });
             }
-            
+
+            function renderFeaturedEssays(lang) {
+                const container = document.getElementById('featured-essays');
+                if (!container || !essays.length) return;
+
+                // Get 3 most recent essays
+                const featured = essays
+                    .filter(e => e.status === 'published')
+                    .sort((a, b) => new Date(b.date) - new Date(a.date))
+                    .slice(0, 3);
+
+                container.innerHTML = featured.map(essay => {
+                    const slug = essay.slug[lang] || essay.slug.en;
+                    const title = essay.title[lang] || essay.title.en;
+                    const excerpt = essay.excerpt[lang] || essay.excerpt.en;
+
+                    return `
+                        <a href="/essays/${slug}.html" class="group bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-all border border-c2/10">
+                            <h3 class="font-f1 text-xl md:text-2xl mb-2 group-hover:text-c3 transition-colors">${title}</h3>
+                            <p class="font-f2 text-sm text-c2/70 line-clamp-2">${excerpt}</p>
+                            <span class="font-f3 text-xs text-c3 mt-3 inline-block">Read →</span>
+                        </a>
+                    `;
+                }).join('');
+            }
+
             function openBlogModal(post, lang) {
                  const modalHTML = `
                     <div class="p-6 sm:p-8">
@@ -849,7 +895,8 @@
                 renderFiction(lang);
                 renderHeteronyms(lang);
                 renderBlogPosts(lang);
-                
+                renderFeaturedEssays(lang);
+
                 const langEnDesktop = document.getElementById('lang-en-desktop');
                 const langEsDesktop = document.getElementById('lang-es-desktop');
                 const langEnMobile = document.getElementById('lang-en-mobile');

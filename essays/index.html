@@ -37,6 +37,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -223,7 +224,26 @@
                     <h1 class="font-f1 text-5xl md:text-6xl font-bold" data-en="Essays" data-es="Ensayos">Essays</h1>
                     <p class="font-f2 text-lg mt-4 text-c2/80" data-en="Thinking about AI, consciousness, and what comes next." data-es="Reflexiones sobre IA, consciencia y lo que viene.">Thinking about AI, consciousness, and what comes next.</p>
 
-                    <div id="filter-pills" class="flex flex-wrap gap-2 mt-8">
+                    <!-- Search input -->
+                    <div class="mt-8 relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-c2/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                        <input type="text" id="essay-search"
+                            class="font-f2 w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-c3 focus:ring-1 focus:ring-c3 transition-colors"
+                            data-placeholder-en="Search essays..."
+                            data-placeholder-es="Buscar ensayos..."
+                            placeholder="Search essays...">
+                        <button id="clear-search" class="absolute inset-y-0 right-0 pr-3 flex items-center text-c2/40 hover:text-c3 hidden">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div id="filter-pills" class="flex flex-wrap gap-2 mt-4">
                         <button class="filter-pill active" data-filter="all" data-en="All" data-es="Todos">All</button>
                         <button class="filter-pill" data-filter="ailit" data-en="#AILit" data-es="#AILit">#AILit</button>
                         <button class="filter-pill" data-filter="creativity" data-en="AI & Creativity" data-es="IA y Creatividad">AI & Creativity</button>
@@ -1191,17 +1211,82 @@
             };
         });
 
-        // Pagination with filtering support
+        // Pagination with filtering and search support
         const ESSAYS_PER_PAGE = 10;
         let currentPage = 1;
         let activeFilter = 'all';
+        let searchQuery = '';
+        let searchResults = null;
+
+        // Initialize Fuse.js for fuzzy search
+        const essayData = allEssays.map((card, index) => ({
+            index: index,
+            title: card.querySelector('h2')?.textContent || '',
+            excerpt: card.querySelector('p.text-c2\\/70')?.textContent || '',
+            tags: card.getAttribute('data-tags') || ''
+        }));
+
+        const fuse = new Fuse(essayData, {
+            keys: ['title', 'excerpt', 'tags'],
+            threshold: 0.4,
+            includeScore: true
+        });
+
+        // Search input handling
+        const searchInput = document.getElementById('essay-search');
+        const clearSearchBtn = document.getElementById('clear-search');
+
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.trim();
+            clearSearchBtn.classList.toggle('hidden', !searchQuery);
+
+            if (searchQuery) {
+                searchResults = fuse.search(searchQuery).map(r => r.item.index);
+            } else {
+                searchResults = null;
+            }
+
+            showPage(1);
+        });
+
+        clearSearchBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            searchQuery = '';
+            searchResults = null;
+            clearSearchBtn.classList.add('hidden');
+            showPage(1);
+        });
+
+        // Update placeholder on language change
+        function updateSearchPlaceholder() {
+            const placeholder = searchInput.getAttribute('data-placeholder-' + currentLang);
+            if (placeholder) searchInput.placeholder = placeholder;
+        }
+
+        // Hook into language change
+        const originalSetLanguage = setLanguage;
+        setLanguage = function(lang) {
+            originalSetLanguage(lang);
+            updateSearchPlaceholder();
+        };
 
         function getVisibleEssays() {
-            if (activeFilter === 'all') return allEssays;
-            return allEssays.filter(card => {
-                const tags = card.getAttribute('data-tags') || '';
-                return tags.includes(activeFilter);
-            });
+            let essays = allEssays;
+
+            // Apply search filter
+            if (searchResults !== null) {
+                essays = essays.filter((_, index) => searchResults.includes(index));
+            }
+
+            // Apply tag filter
+            if (activeFilter !== 'all') {
+                essays = essays.filter(card => {
+                    const tags = card.getAttribute('data-tags') || '';
+                    return tags.includes(activeFilter);
+                });
+            }
+
+            return essays;
         }
 
         function showPage(page) {
@@ -1219,6 +1304,26 @@
             visibleEssays.forEach((essay, index) => {
                 essay.style.display = (index >= start && index < end) ? '' : 'none';
             });
+
+            // Show/hide no results message
+            let noResultsEl = document.getElementById('no-results');
+            if (!noResultsEl) {
+                noResultsEl = document.createElement('div');
+                noResultsEl.id = 'no-results';
+                noResultsEl.className = 'text-center py-12';
+                noResultsEl.innerHTML = `
+                    <p class="font-f2 text-c2/60 text-lg" data-en="No essays found." data-es="No se encontraron ensayos.">No essays found.</p>
+                    <button onclick="document.getElementById('clear-search').click(); document.querySelector('.filter-pill[data-filter=\\'all\\']').click();"
+                            class="font-f2 text-c3 mt-4 hover:underline" data-en="Clear filters" data-es="Limpiar filtros">Clear filters</button>
+                `;
+                essaysList.appendChild(noResultsEl);
+            }
+            noResultsEl.style.display = visibleEssays.length === 0 ? 'block' : 'none';
+            if (visibleEssays.length === 0) {
+                noResultsEl.querySelectorAll('[data-en]').forEach(el => {
+                    el.textContent = el.getAttribute('data-' + currentLang);
+                });
+            }
 
             renderPagination();
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1275,9 +1380,13 @@
             const info = document.createElement('span');
             info.className = 'page-info';
             info.style.marginLeft = '1rem';
-            const startNum = (currentPage - 1) * ESSAYS_PER_PAGE + 1;
-            const endNum = Math.min(currentPage * ESSAYS_PER_PAGE, visibleEssays.length);
-            info.textContent = startNum + '-' + endNum + ' of ' + visibleEssays.length;
+            if (visibleEssays.length === 0) {
+                info.textContent = '0 ' + (currentLang === 'es' ? 'resultados' : 'results');
+            } else {
+                const startNum = (currentPage - 1) * ESSAYS_PER_PAGE + 1;
+                const endNum = Math.min(currentPage * ESSAYS_PER_PAGE, visibleEssays.length);
+                info.textContent = startNum + '-' + endNum + ' of ' + visibleEssays.length;
+            }
             container.appendChild(info);
         }
 

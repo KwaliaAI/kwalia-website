@@ -59,5 +59,9 @@
   "reader.cta.text": "It's part of our upcoming collection.",
   "reader.cta.button": "Get the Book",
   "reader.loading": "Loading story...",
-  "reader.error": "Unable to load story. Please try again."
+  "reader.error": "Unable to load story. Please try again.",
+  "essays.banner.title": "Latest Thinking",
+  "essays.banner.subtitle": "Essays on AI, consciousness, and what comes next.",
+  "essays.banner.cta": "Explore all essays →",
+  "essays.search.placeholder": "Search essays..."
 }

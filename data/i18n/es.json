@@ -59,5 +59,9 @@
   "reader.cta.text": "Es parte de nuestra próxima colección.",
   "reader.cta.button": "Consigue el Libro",
   "reader.loading": "Cargando historia...",
-  "reader.error": "No se pudo cargar la historia. Por favor intente de nuevo."
+  "reader.error": "No se pudo cargar la historia. Por favor intente de nuevo.",
+  "essays.banner.title": "Últimos Ensayos",
+  "essays.banner.subtitle": "Reflexiones sobre IA, consciencia y lo que viene.",
+  "essays.banner.cta": "Explorar todos los ensayos →",
+  "essays.search.placeholder": "Buscar ensayos..."
 }
