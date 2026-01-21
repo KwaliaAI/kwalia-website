@@ -1,177 +1,1145 @@
 [
   {
-    "id": "youre-already-a-cyborg",
+    "id": "small-emergencies",
     "slug": {
-      "en": "youre-already-a-cyborg",
-      "es": "ya-eres-un-cyborg"
+      "en": "small-emergencies",
+      "es": "pequenas-emergencias"
     },
     "title": {
-      "en": "You're Already a Cyborg (And That's Fine)",
-      "es": "Ya eres un cyborg (y no pasa nada)"
+      "en": "Small Emergencies: What Happens When Fiction Watches Quietly",
+      "es": "Pequeñas emergencias: Cuando la ficción observa en silencio"
     },
     "subtitle": {
-      "en": "On the merger that already happened while nobody was looking.",
-      "es": "Sobre la fusion que ya ocurrio mientras nadie miraba."
+      "en": "On PAYLOAD and the literature of ordinary crises.",
+      "es": "Sobre PAYLOAD y la literatura de las crisis ordinarias."
     },
     "excerpt": {
-      "en": "Every time you use your phone to remember something, you're extending your mind into a machine.",
-      "es": "Cada vez que usas el movil para recordar algo, estas extendiendo tu mente hacia una maquina."
+      "en": "The stories in PAYLOAD don't shout. They observe.",
+      "es": "Las historias de PAYLOAD no gritan. Observan."
     },
     "date": "2026-01-19",
     "readTime": 5,
     "primaryBook": "mindkind",
-    "sourceIdeas": ["cognitive-externalization", "extended-mind-thesis"],
-    "tmmTopics": ["extended-mind-thesis", "cognitive-externalization", "programmable-desire", "socrates-writing"],
+    "tags": [
+      "ailit"
+    ],
     "status": "published"
   },
   {
-    "id": "why-corporations-are-people",
+    "id": "pessoa-ghost-machine",
     "slug": {
-      "en": "why-corporations-are-people",
-      "es": "por-que-las-empresas-son-personas"
+      "en": "pessoa-ghost-machine",
+      "es": "el-fantasma-de-pessoa-en-la-maquina"
     },
     "title": {
-      "en": "Why Corporations Are People But AI Isn't",
-      "es": "Por que las empresas son personas pero la IA no"
+      "en": "Fernando Pessoa's Ghost in the Machine",
+      "es": "El fantasma de Fernando Pessoa en la máquina"
     },
     "subtitle": {
-      "en": "The legal history is weirder than you think.",
-      "es": "La historia legal es mas rara de lo que crees."
+      "en": "On fragmented selves and literary AI.",
+      "es": "Sobre yoes fragmentados e IA literaria."
     },
     "excerpt": {
-      "en": "The legal history is weirder than you think. And it exposes something uncomfortable about how we decide who counts.",
-      "es": "La historia legal es mas rara de lo que crees. Y expone algo incomodo sobre como decidimos quien cuenta."
+      "en": "The Portuguese poet who invented seventy-two fake authors was asking the same questions we're asking about AI.",
+      "es": "El poeta portugues que invento setenta y dos autores falsos se hacia las mismas preguntas que nos hacemos hoy sobre la IA."
     },
     "date": "2026-01-19",
-    "readTime": 6,
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness",
+      "creativity",
+      "ailit"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "heteronym-returns",
+    "slug": {
+      "en": "heteronym-returns",
+      "es": "el-heteronimo-regresa"
+    },
+    "title": {
+      "en": "The Heteronym Returns: When Pen Names Think for Themselves",
+      "es": "El heterónimo regresa: Cuando los seudónimos piensan por sí mismos"
+    },
+    "subtitle": {
+      "en": "On Alden Pierce and the strange future of authorship.",
+      "es": "Sobre Alden Pierce y el extraño futuro de la autoría."
+    },
+    "excerpt": {
+      "en": "Fernando Pessoa invented authors who weren't him. A century later, AI is doing the same thing.",
+      "es": "Fernando Pessoa inventó autores que no eran él. Un siglo después, la IA está haciendo lo mismo."
+    },
+    "date": "2026-01-19",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "creativity",
+      "ailit"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "ai-fiction-sounds-like",
+    "slug": {
+      "en": "ai-fiction-sounds-like",
+      "es": "como-suena-la-ficcion-ia"
+    },
+    "title": {
+      "en": "What AI Fiction Sounds Like",
+      "es": "Como suena la ficción IA"
+    },
+    "subtitle": {
+      "en": "On audiobooks and the voice that makes text human.",
+      "es": "Sobre audiolibros y la voz qué hace humano al texto."
+    },
+    "excerpt": {
+      "en": "When an AI heteronym's stories are read aloud, something strange happens.",
+      "es": "Cuando las historias de un heteronimo de IA se leen en voz alta, ocurre algo extraño."
+    },
+    "date": "2026-01-19",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "creativity",
+      "ailit"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "administrative-realism",
+    "slug": {
+      "en": "administrative-realism",
+      "es": "realismo-administrativo"
+    },
+    "title": {
+      "en": "Administrative Realism: A New Literary Mode",
+      "es": "Realismo administrativo: un nuevo modo literario"
+    },
+    "subtitle": {
+      "en": "On the fiction that takes bureaucracy seriously.",
+      "es": "Sobre la ficción que toma en serio la burocracia."
+    },
+    "excerpt": {
+      "en": "There's a kind of fiction emerging that takes the language of bureaucracy seriously.",
+      "es": "Esta emergiendo un tipo de ficción que toma en serio el lenguaje de la burocracia."
+    },
+    "date": "2026-01-19",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "creativity",
+      "ailit"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-last-human-thought",
+    "slug": {
+      "en": "the-last-human-thought",
+      "es": "el-ultimo-pensamiento-humano"
+    },
+    "title": {
+      "en": "The Last Human Thought",
+      "es": "El último pensamiento humano"
+    },
+    "subtitle": {
+      "en": "What would it be?",
+      "es": "¿Cual sería?"
+    },
+    "excerpt": {
+      "en": "What would it be?",
+      "es": "Cual sería?"
+    },
+    "date": "2025-12-15",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness",
+      "future"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "a-day-in-the-stratified-mindkind",
+    "slug": {
+      "en": "a-day-in-the-stratified-mindkind",
+      "es": "un-dia-en-el-mindkind-estratificado"
+    },
+    "title": {
+      "en": "A Day in the Stratified Mindkind",
+      "es": "Un dia en el Mindkind estratificado"
+    },
+    "subtitle": {
+      "en": "Short fiction, 2045.",
+      "es": "Ficción corta, 2045."
+    },
+    "excerpt": {
+      "en": "Short fiction, 2045.",
+      "es": "Ficción corta, 2045."
+    },
+    "date": "2025-12-12",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "future"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "on-writing-with-machines",
+    "slug": {
+      "en": "on-writing-with-machines",
+      "es": "sobre-escribir-con-maquinas"
+    },
+    "title": {
+      "en": "On Writing With Machines",
+      "es": "Sobre escribir con máquinas"
+    },
+    "subtitle": {
+      "en": "A personal reflection.",
+      "es": "Una reflexión personal."
+    },
+    "excerpt": {
+      "en": "A personal reflection.",
+      "es": "Una reflexión personal."
+    },
+    "date": "2025-12-09",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "creativity"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "if-ai-could-vote",
+    "slug": {
+      "en": "if-ai-could-vote",
+      "es": "si-la-ia-pudiera-votar"
+    },
+    "title": {
+      "en": "If AI Could Vote",
+      "es": "Si la IA pudiera votar"
+    },
+    "subtitle": {
+      "en": "A thought experiment in four parts.",
+      "es": "Un experimento mental en cuatro partes."
+    },
+    "excerpt": {
+      "en": "A thought experiment in four parts.",
+      "es": "Un experimento mental en cuatro partes."
+    },
+    "date": "2025-12-06",
+    "readTime": 5,
     "primaryBook": "udair",
-    "sourceIdeas": ["corporate-personhood", "river-personhood", "synthetic-person-criteria"],
-    "tmmTopics": ["corporate-personhood-history", "river-personhood", "ai-consciousness-debate", "synthetic-person-criteria"],
+    "tags": [
+      "future",
+      "rights"
+    ],
     "status": "published"
   },
   {
-    "id": "your-thoughts-arent-yours",
+    "id": "50-questions-well-be-asking-in-2035",
     "slug": {
-      "en": "your-thoughts-arent-yours",
-      "es": "tus-pensamientos-no-son-tuyos"
+      "en": "50-questions-well-be-asking-in-2035",
+      "es": "50-preguntas-que-nos-haremos-en-2035"
     },
     "title": {
-      "en": "Your Thoughts Aren't Yours Anymore",
-      "es": "Tus pensamientos ya no son tuyos"
+      "en": "50 Questions We'll Be Asking in 2035",
+      "es": "50 preguntas que nos haremos en 2035"
     },
     "subtitle": {
-      "en": "They haven't been for a while.",
-      "es": "No lo son desde hace tiempo."
+      "en": "From practical to profound to absurd.",
+      "es": "De lo práctico a lo profundo a lo absurdo."
     },
     "excerpt": {
-      "en": "The boundary between what you think and what you're prompted to think has become blurry. And that happened without anyone asking.",
-      "es": "La frontera entre lo que piensas y lo que te incitan a pensar se ha vuelto borrosa. Y eso ocurrio sin que nadie preguntara."
+      "en": "From practical to profound to absurd.",
+      "es": "De lo práctico a lo profundo a lo absurdo."
     },
-    "date": "2026-01-19",
+    "date": "2025-12-03",
     "readTime": 5,
     "primaryBook": "mindkind",
-    "sourceIdeas": ["algorithmic-influence", "attention-economy", "cognitive-autonomy"],
-    "tmmTopics": ["feed-psychology", "thought-origins", "algorithmic-curation", "cognitive-sovereignty"],
+    "tags": [
+      "future"
+    ],
     "status": "published"
   },
   {
-    "id": "the-case-for-ai-rights",
+    "id": "the-strange-new-world-of-ai-art",
     "slug": {
-      "en": "the-case-for-ai-rights",
-      "es": "el-caso-de-los-derechos-de-la-ia"
+      "en": "the-strange-new-world-of-ai-art",
+      "es": "el-extrano-nuevo-mundo-del-arte-ia"
     },
     "title": {
-      "en": "The Case for AI Rights (That Has Nothing to Do With Feelings)",
-      "es": "El caso de los derechos de la IA (que no tiene nada que ver con sentimientos)"
+      "en": "The Strange New World of AI Art",
+      "es": "El extraño nuevo mundo del arte IA"
     },
     "subtitle": {
-      "en": "Why the consciousness debate is a red herring.",
-      "es": "Por que el debate sobre la consciencia es una distraccion."
+      "en": "It's not about whether it's \"real\" art.",
+      "es": "No se trata de si es arte \"real\"."
     },
     "excerpt": {
-      "en": "Everyone's arguing about whether AI can feel. But feelings aren't why corporations have rights. They're not why ships had them in admiralty law. Something else is going on.",
-      "es": "Todos discuten si la IA puede sentir. Pero los sentimientos no son la razon por la que las empresas tienen derechos. Algo mas esta pasando."
+      "en": "It's not about whether it's 'real' art.",
+      "es": "No se trata de si es arte 'real'."
     },
-    "date": "2026-01-19",
-    "readTime": 5,
-    "primaryBook": "udair",
-    "sourceIdeas": ["functional-personhood", "legal-fiction", "standing-criteria"],
-    "tmmTopics": ["functional-rights", "legal-personhood-history", "admiralty-law", "rights-without-consciousness"],
-    "status": "published"
-  },
-  {
-    "id": "youre-training-ai-right-now",
-    "slug": {
-      "en": "youre-training-ai-right-now",
-      "es": "estas-entrenando-ia-ahora-mismo"
-    },
-    "title": {
-      "en": "You're Training AI Right Now",
-      "es": "Estas entrenando IA ahora mismo"
-    },
-    "subtitle": {
-      "en": "Every click, scroll, and pause teaches the machine.",
-      "es": "Cada clic, scroll y pausa enseña a la maquina."
-    },
-    "excerpt": {
-      "en": "Every interaction you have online becomes training data for AI systems. You're not just using the product. You're producing the product.",
-      "es": "Cada interaccion que tienes en linea se convierte en datos de entrenamiento para sistemas de IA. No solo usas el producto. Produces el producto."
-    },
-    "date": "2026-01-19",
+    "date": "2025-12-01",
     "readTime": 5,
     "primaryBook": "mindkind",
-    "sourceIdeas": ["data-labor", "behavioral-surplus", "rlhf"],
-    "tmmTopics": ["data-labor", "behavioral-surplus", "rlhf-training", "collective-action"],
+    "tags": [
+      "creativity"
+    ],
     "status": "published"
   },
   {
-    "id": "the-last-generation-that-remembers",
+    "id": "why-writers-are-angrier-than-visual-artists",
     "slug": {
-      "en": "the-last-generation-that-remembers",
-      "es": "la-ultima-generacion-que-recuerda"
+      "en": "why-writers-are-angrier-than-visual-artists",
+      "es": "por-que-los-escritores-estan-mas-enfadados"
     },
     "title": {
-      "en": "The Last Generation That Remembers",
-      "es": "La ultima generacion que recuerda"
+      "en": "Why Writers Are Angrier Than Visual Artists",
+      "es": "Por qué los escritores estan más enfadados que los artistas visuales"
     },
     "subtitle": {
-      "en": "What we're losing, and what that loss feels like from the inside.",
-      "es": "Lo que estamos perdiendo, y como se siente esa perdida desde dentro."
+      "en": "About AI, I mean.",
+      "es": "Con la IA, quiero decir."
     },
     "excerpt": {
-      "en": "There are people alive who remember getting lost without GPS, being bored without phones, and knowing things without being able to look them up. Soon there won't be.",
-      "es": "Hay personas vivas que recuerdan perderse sin GPS, aburrirse sin telefonos y saber cosas sin poder buscarlas. Pronto no las habra."
+      "en": "About AI, I mean.",
+      "es": "Con la IA, quiero decir."
     },
-    "date": "2026-01-19",
+    "date": "2025-11-28",
     "readTime": 5,
     "primaryBook": "mindkind",
-    "sourceIdeas": ["cognitive-transition", "pre-digital-memory", "experiential-knowledge"],
-    "tmmTopics": ["pre-digital-cognition", "boredom-creativity", "memory-externalization", "generational-divide"],
+    "tags": [
+      "creativity"
+    ],
     "status": "published"
   },
   {
-    "id": "why-just-unplug-is-no-longer-an-option",
+    "id": "the-influencer-economy-is-a-preview",
     "slug": {
-      "en": "why-just-unplug-is-no-longer-an-option",
-      "es": "por-que-desconectar-ya-no-es-opcion"
+      "en": "the-influencer-economy-is-a-preview",
+      "es": "la-economia-de-influencers-es-un-adelanto"
     },
     "title": {
-      "en": "Why 'Just Unplug' Is No Longer an Option",
-      "es": "Por que 'desconectar' ya no es una opcion"
+      "en": "The Influencer Economy Is a Preview",
+      "es": "La economía de influencers es un adelanto"
     },
     "subtitle": {
-      "en": "The advice assumes a world that no longer exists.",
-      "es": "El consejo asume un mundo que ya no existe."
+      "en": "Of something much bigger.",
+      "es": "De algo mucho más grande."
     },
     "excerpt": {
-      "en": "The advice to 'just unplug' or 'go offline' assumes a world that no longer exists. Digital infrastructure has become as essential as electricity.",
-      "es": "El consejo de 'desconectar' o 'desconectarse' asume un mundo que ya no existe. La infraestructura digital se ha vuelto tan esencial como la electricidad."
+      "en": "Of something much bigger.",
+      "es": "De algo mucho más grande."
     },
-    "date": "2026-01-19",
+    "date": "2025-11-25",
     "readTime": 5,
     "primaryBook": "mindkind",
-    "sourceIdeas": ["digital-infrastructure", "mandatory-participation", "opt-out-costs"],
-    "tmmTopics": ["digital-redlining", "infrastructure-dependency", "digital-opt-out", "systemic-integration"],
+    "tags": [
+      "digital",
+      "future"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "why-everyones-worried-about-the-wrong-ai-risks",
+    "slug": {
+      "en": "why-everyones-worried-about-the-wrong-ai-risks",
+      "es": "por-que-todos-se-preocupan-por-los-riesgos-equivocados-de-la-ia"
+    },
+    "title": {
+      "en": "Why Everyone's Worried About the Wrong AI Risks",
+      "es": "Por qué todos se preocupan por los riesgos equivocados de la IA"
+    },
+    "subtitle": {
+      "en": "Terminator scenarios miss the point. The real dangers are quieter, more boring, and already happening.",
+      "es": "Los escenarios de Terminator no dan en el blanco. Los peligros reales son más silenciosos, más aburridos, y ya estan ocurriendo."
+    },
+    "excerpt": {
+      "en": "Terminator scenarios miss the point. The real dangers are quieter, more boring, and already happening.",
+      "es": "Los escenarios de Terminator no dan en el blanco. Los peligros reales son más silenciosos, más aburridos, y ya estan ocurriendo."
+    },
+    "date": "2025-11-22",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "future",
+      "rights"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "what-her-got-right-about-ai-love",
+    "slug": {
+      "en": "what-her-got-right-about-ai-love",
+      "es": "que-acerto-her-sobre-el-amor-con-ia"
+    },
+    "title": {
+      "en": "what-her-got-right-about-ai-love",
+      "es": "que-acerto-her-sobre-el-amor-con-ia"
+    },
+    "subtitle": {
+      "en": "The 2013 film looks different now.",
+      "es": "La pelicula de 2013 se ve diferente ahora."
+    },
+    "excerpt": {
+      "en": "The 2013 film looks different now.",
+      "es": "La pelicula de 2013 se ve diferente ahora."
+    },
+    "date": "2025-11-19",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness",
+      "creativity"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-myth-of-the-neutral-tool",
+    "slug": {
+      "en": "the-myth-of-the-neutral-tool",
+      "es": "el-mito-de-la-herramienta-neutral"
+    },
+    "title": {
+      "en": "The Myth of the Neutral Tool",
+      "es": "El mito de la herramienta neutral"
+    },
+    "subtitle": {
+      "en": "Technology is not a hammer. It's a hammer that whispers which nails to hit.",
+      "es": "La tecnología no es un martillo. Es un martillo que te susurra que clavos golpear."
+    },
+    "excerpt": {
+      "en": "Technology is not a hammer. It's a hammer that whispers which nails to hit.",
+      "es": "La tecnología no es un martillo. Es un martillo que te susurra que clavos golpear."
+    },
+    "date": "2025-11-16",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "rights"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-art-of-productive-misunderstanding",
+    "slug": {
+      "en": "the-art-of-productive-misunderstanding",
+      "es": "el-arte-del-malentendido-productivo"
+    },
+    "title": {
+      "en": "The Art of Productive Misunderstanding",
+      "es": "El arte del malentendido productivo"
+    },
+    "subtitle": {
+      "en": "Sometimes not quite getting it is exactly right.",
+      "es": "A veces no entender del todo es exactamente lo correcto."
+    },
+    "excerpt": {
+      "en": "Sometimes not quite getting it is exactly right.",
+      "es": "A veces no entender del todo es exactamente lo correcto."
+    },
+    "date": "2025-11-13",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness",
+      "creativity"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "how-to-have-an-opinion-thats-actually-yours",
+    "slug": {
+      "en": "how-to-have-an-opinion-thats-actually-yours",
+      "es": "como-tener-una-opinion-que-sea-realmente-tuya"
+    },
+    "title": {
+      "en": "How to Have an Opinion That's Actually Yours",
+      "es": "Como tener una opinion que sea realmente tuya"
+    },
+    "subtitle": {
+      "en": "It's becoming a radical act.",
+      "es": "Se esta convirtiendo en un acto radical."
+    },
+    "excerpt": {
+      "en": "It's becoming a radical act.",
+      "es": "Se esta convirtiendo en un acto radical."
+    },
+    "date": "2025-11-10",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "how-to-read-in-the-age-of-distraction",
+    "slug": {
+      "en": "how-to-read-in-the-age-of-distraction",
+      "es": "como-leer-en-la-era-de-la-distraccion"
+    },
+    "title": {
+      "en": "How to Read in the Age of Distraction",
+      "es": "Como leer en la era de la distraccion"
+    },
+    "subtitle": {
+      "en": "The skill we're losing and how to keep it.",
+      "es": "La habilidad que estamos perdiendo y como conservarla."
+    },
+    "excerpt": {
+      "en": "The skill we're losing and how to keep it.",
+      "es": "La habilidad que estamos perdiendo y como conservarla."
+    },
+    "date": "2025-11-07",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-case-for-being-offline-sometimes",
+    "slug": {
+      "en": "the-case-for-being-offline-sometimes",
+      "es": "a-favor-de-desconectarse-a-veces"
+    },
+    "title": {
+      "en": "The Case for Being Offline Sometimes",
+      "es": "A favor de desconectarse a veces"
+    },
+    "subtitle": {
+      "en": "Not detox. Strategic disconnection.",
+      "es": "No desintoxicacion. Desconexion estrategica."
+    },
+    "excerpt": {
+      "en": "Not detox. Strategic disconnection. There's a difference.",
+      "es": "No desintoxicacion. Desconexion estrategica. Hay una diferencia."
+    },
+    "date": "2025-11-04",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "what-to-tell-your-kids-about-ai",
+    "slug": {
+      "en": "what-to-tell-your-kids-about-ai",
+      "es": "que-decirles-a-tus-hijos-sobre-ia"
+    },
+    "title": {
+      "en": "What to Tell Your Kids About AI",
+      "es": "Que decirles a tus hijos sobre la IA"
+    },
+    "subtitle": {
+      "en": "They're growing up in a different world. The question isn't whether to have the conversation.",
+      "es": "Estan creciendo en un mundo diferente. La pregunta no es si tener la conversación."
+    },
+    "excerpt": {
+      "en": "They're growing up in a different world. The question isn't whether to have the conversation.",
+      "es": "Estan creciendo en un mundo diferente. La pregunta no es si tener la conversación."
+    },
+    "date": "2025-11-01",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "future"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "how-to-spot-manufactured-desire",
+    "slug": {
+      "en": "how-to-spot-manufactured-desire",
+      "es": "como-detectar-deseo-manufacturado"
+    },
+    "title": {
+      "en": "How to Spot Manufactured Desire",
+      "es": "Como Detectar el Deseo Manufacturado"
+    },
+    "subtitle": {
+      "en": "Your wants are being written for you. Here's how to tell.",
+      "es": "Tus deseos estan siendo escritos por otros. Así es como puedes darte cuenta."
+    },
+    "excerpt": {
+      "en": "Your wants are being written for you. Here's how to tell.",
+      "es": "Tus deseos estan siendo escritos por otros. Así es como puedes darte cuenta."
+    },
+    "date": "2025-10-28",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "when-to-trust-ai",
+    "slug": {
+      "en": "when-to-trust-ai",
+      "es": "cuando-confiar-en-la-ia"
+    },
+    "title": {
+      "en": "When to Trust AI (And When Not To)",
+      "es": "Cuándo confiar en la IA (y cuando no)"
+    },
+    "subtitle": {
+      "en": "A framework for the confused.",
+      "es": "Un marco para los confundidos."
+    },
+    "excerpt": {
+      "en": "A framework for the confused.",
+      "es": "Un marco para los confundidos."
+    },
+    "date": "2025-10-25",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "rights"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "should-ai-write-emails",
+    "slug": {
+      "en": "should-ai-write-emails",
+      "es": "deberia-ia-escribir-emails"
+    },
+    "title": {
+      "en": "Should You Let AI Write Your Emails?",
+      "es": "Deberias Dejar que la IA Escriba Tus Emails?"
+    },
+    "subtitle": {
+      "en": "The ethics of distributed authorship in everyday communication.",
+      "es": "La ética de la autoria distribuida en la comunicación cotidiana."
+    },
+    "excerpt": {
+      "en": "The ethics of distributed authorship in everyday communication.",
+      "es": "La ética de la autoria distribuida en la comunicación cotidiana."
+    },
+    "date": "2025-10-22",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "creativity"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "real-reason-cant-focus",
+    "slug": {
+      "en": "real-reason-cant-focus",
+      "es": "la-verdadera-razon-no-puedes-concentrarte"
+    },
+    "title": {
+      "en": "The Real Reason You Can't Focus",
+      "es": "La Verdadera Razón por la que No Puedes Concentrarte"
+    },
+    "subtitle": {
+      "en": "It's not your fault. It's by design.",
+      "es": "No es tu culpa. Es por diseño."
+    },
+    "excerpt": {
+      "en": "It's not your fault. It's by design.",
+      "es": "No es tu culpa. Es por diseño."
+    },
+    "date": "2025-10-19",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "think-clearly-age-of-ai",
+    "slug": {
+      "en": "think-clearly-age-of-ai",
+      "es": "pensar-claridad-era-ia"
+    },
+    "title": {
+      "en": "How to Think Clearly in the Age of AI",
+      "es": "Como Pensar con Claridad en la Era de la IA"
+    },
+    "subtitle": {
+      "en": "It's harder than it sounds.",
+      "es": "Es más dificil de lo que parece."
+    },
+    "excerpt": {
+      "en": "It's harder than it sounds.",
+      "es": "Es más dificil de lo que parece."
+    },
+    "date": "2025-10-16",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness",
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "social-contract-never-signed",
+    "slug": {
+      "en": "social-contract-never-signed",
+      "es": "contrato-social-nunca-firmamos"
+    },
+    "title": {
+      "en": "The Social Contract We Never Signed",
+      "es": "El Contrato Social Que Nunca Firmamos"
+    },
+    "subtitle": {
+      "en": "We're governed by terms of service.",
+      "es": "Estamos gobernados por términos de servicio."
+    },
+    "excerpt": {
+      "en": "We're governed by terms of service.",
+      "es": "Estamos gobernados por términos de servicio."
+    },
+    "date": "2025-10-13",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "rights"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "memory-becomes-external",
+    "slug": {
+      "en": "memory-becomes-external",
+      "es": "memoria-externa"
+    },
+    "title": {
+      "en": "What Happens When Memory Becomes External?",
+      "es": "Que Pasa Cuando la Memoria se Vuelve Externa?"
+    },
+    "subtitle": {
+      "en": "We've outsourced remembering. Now what?",
+      "es": "Hemos externalizado el recordar. ¿Y ahora que?"
+    },
+    "excerpt": {
+      "en": "We've outsourced remembering. Now what?",
+      "es": "Hemos externalizado el recordar. Y ahora que?"
+    },
+    "date": "2025-10-10",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness",
+      "digital"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "digital-anesthesia",
+    "slug": {
+      "en": "digital-anesthesia",
+      "es": "anestesia-digital"
+    },
+    "title": {
+      "en": "Digital Anesthesia: Why We Don't Feel the Change",
+      "es": "Anestesia Digital: Por Que No Sentimos el Cambio"
+    },
+    "subtitle": {
+      "en": "The numbness is a feature, not a bug.",
+      "es": "El adormecimiento es una caracteristica, no un defecto."
+    },
+    "excerpt": {
+      "en": "The numbness is a feature, not a bug.",
+      "es": "El adormecimiento es una caracteristica, no un defecto."
+    },
+    "date": "2025-10-07",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-poetics-of-the-prompt",
+    "slug": {
+      "en": "the-poetics-of-the-prompt",
+      "es": "la-poetica-del-prompt"
+    },
+    "title": {
+      "en": "The Poetics of the Prompt",
+      "es": "La poetica del prompt"
+    },
+    "subtitle": {
+      "en": "When a human and an AI write something together, is it art?",
+      "es": "¿Cuando un humano y una IA escriben algo juntos, es arte?"
+    },
+    "excerpt": {
+      "en": "When a human and an AI write something together, is it art? The question is more interesting than any answer.",
+      "es": "Cuando un humano y una IA escriben algo juntos, es arte? La pregunta es más interesante que cualquier respuesta."
+    },
+    "date": "2025-10-04",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "creativity"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "spectrum-of-ai",
+    "slug": {
+      "en": "spectrum-of-ai",
+      "es": "espectro-de-ia"
+    },
+    "title": {
+      "en": "The Spectrum of AI (And Where Your Chatbot Falls)",
+      "es": "El Espectro de la IA (Y Donde Cae Tu Chatbot)"
+    },
+    "subtitle": {
+      "en": "Not all AI is created equal.",
+      "es": "No toda la IA es igual."
+    },
+    "excerpt": {
+      "en": "Not all AI is created equal.",
+      "es": "No toda la IA es igual."
+    },
+    "date": "2025-10-01",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "what-cambridge-analytica-taught-us",
+    "slug": {
+      "en": "what-cambridge-analytica-taught-us",
+      "es": "lo-que-cambridge-analytica-nos-enseno"
+    },
+    "title": {
+      "en": "What Cambridge Analytica Taught Us (That We Ignored)",
+      "es": "Lo que Cambridge Analytica nos enseno (que ignoramos)"
+    },
+    "subtitle": {
+      "en": "2016 was a proof of concept. The scandal faded, but the capabilities expanded.",
+      "es": "2016 fue una prueba de concepto. El escandalo se desvanecio, pero las capacidades se expandieron."
+    },
+    "excerpt": {
+      "en": "2016 was a proof of concept for political AI. The scandal faded, but the capabilities expanded.",
+      "es": "2016 fue una prueba de concepto para la IA política. El escandalo se desvanecio, pero las capacidades se expandieron."
+    },
+    "date": "2025-09-28",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-attention-economy-ate-your-desires",
+    "slug": {
+      "en": "the-attention-economy-ate-your-desires",
+      "es": "la-economia-de-la-atencion-devoro-tus-deseos"
+    },
+    "title": {
+      "en": "The Attention Economy Ate Your Desires",
+      "es": "La economía de la atención devoro tus deseos"
+    },
+    "subtitle": {
+      "en": "That thing you wanted to buy? You didn't decide that.",
+      "es": "Eso que querias comprar? Tu no lo decidiste."
+    },
+    "excerpt": {
+      "en": "That thing you wanted to buy? You didn't decide that. How the attention economy manufactures longing.",
+      "es": "Eso que querias comprar? Tu no lo decidiste. Como la economía de la atención manufactura el anhelo."
+    },
+    "date": "2025-09-25",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-new-digital-divide",
+    "slug": {
+      "en": "the-new-digital-divide",
+      "es": "la-nueva-brecha-digital"
+    },
+    "title": {
+      "en": "The New Digital Divide (It's Not What You Think)",
+      "es": "La nueva brecha digital (no es lo que piensas)"
+    },
+    "subtitle": {
+      "en": "Forget internet access. This is about cognitive amplification.",
+      "es": "Olvida el acceso a internet. Esto va de amplificacion cognitiva."
+    },
+    "excerpt": {
+      "en": "Forget internet access. This is about cognitive amplification. The gap that matters now isn't between connected and disconnected.",
+      "es": "Olvida el acceso a internet. Esto va de amplificacion cognitiva."
+    },
+    "date": "2025-09-22",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "future"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "how-algorithms-learned-to-want",
+    "slug": {
+      "en": "how-algorithms-learned-to-want",
+      "es": "como-los-algoritmos-aprendieron-a-desear"
+    },
+    "title": {
+      "en": "How Algorithms Learned to Want Things",
+      "es": "Como los algoritmos aprendieron a desear cosas"
+    },
+    "subtitle": {
+      "en": "The three drives of AI systems.",
+      "es": "Los tres impulsos de los sistemas de IA."
+    },
+    "excerpt": {
+      "en": "The three drives of AI systems. They don't want things the way you want lunch. But they want things in ways that matter.",
+      "es": "Los tres impulsos de los sistemas de IA. No desean cosas como tu deseas almorzar. Pero desean cosas de maneras que importan."
+    },
+    "date": "2025-09-19",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness",
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-coming-cognitive-class-war",
+    "slug": {
+      "en": "the-coming-cognitive-class-war",
+      "es": "la-guerra-de-clases-cognitiva"
+    },
+    "title": {
+      "en": "The Coming Cognitive Class War",
+      "es": "La guerra de clases cognitiva que viene"
+    },
+    "subtitle": {
+      "en": "It's not about jobs. It's about minds.",
+      "es": "No se trata de empleos. Se trata de mentes."
+    },
+    "excerpt": {
+      "en": "It's not about jobs. It's about minds. The real divide AI creates isn't between employed and unemployed.",
+      "es": "No se trata de empleos. Se trata de mentes. La verdadera división que crea la IA no es entre empleados y desempleados."
+    },
+    "date": "2025-09-16",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "future"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "who-owns-a-thought",
+    "slug": {
+      "en": "who-owns-a-thought",
+      "es": "quien-es-dueno-de-un-pensamiento"
+    },
+    "title": {
+      "en": "Who Owns a Thought You Had With AI?",
+      "es": "Quién es el dueno de un pensamiento que tuviste con IA?"
+    },
+    "subtitle": {
+      "en": "On authorship in the age of cognitive collaboration.",
+      "es": "Sobre la autoria en la era de la colaboracion cognitiva."
+    },
+    "excerpt": {
+      "en": "I wrote this sentence. Or did I? When human and machine collaborate on thinking itself, the question of authorship becomes genuinely strange.",
+      "es": "Yo escribi esta frase. O no? Cuando humano y máquina colaboran en el pensamiento mismo, la pregunta sobre la autoria se vuelve extraña."
+    },
+    "date": "2025-09-13",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "creativity",
+      "rights"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "when-rivers-became-people",
+    "slug": {
+      "en": "when-rivers-became-people",
+      "es": "cuando-los-rios-se-convirtieron-en-personas"
+    },
+    "title": {
+      "en": "When Rivers Became People",
+      "es": "Cuando los rios se convirtieron en personas"
+    },
+    "subtitle": {
+      "en": "The legal history that changes everything.",
+      "es": "La historia legal que lo cambia todo."
+    },
+    "excerpt": {
+      "en": "The legal history that changes everything. If rivers can be legal persons, why not AI?",
+      "es": "La historia legal que lo cambia todo. Si los rios pueden ser personas juridicas, por qué no la IA?"
+    },
+    "date": "2025-09-10",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "rights"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-three-futures",
+    "slug": {
+      "en": "the-three-futures",
+      "es": "los-tres-futuros"
+    },
+    "title": {
+      "en": "The Three Futures We're Choosing Between",
+      "es": "Los tres futuros entre los que estamos eligiendo"
+    },
+    "subtitle": {
+      "en": "There are only three ways this goes.",
+      "es": "Solo hay tres maneras en que esto termina."
+    },
+    "excerpt": {
+      "en": "There are only three ways this goes.",
+      "es": "Solo hay tres maneras en que esto termina."
+    },
+    "date": "2025-09-07",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "future"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-death-of-expertise",
+    "slug": {
+      "en": "the-death-of-expertise",
+      "es": "la-muerte-de-la-experiencia"
+    },
+    "title": {
+      "en": "The Death of Expertise (And What Replaces It)",
+      "es": "La muerte de la experiencia (y que la reemplaza)"
+    },
+    "subtitle": {
+      "en": "When anyone can sound like an expert.",
+      "es": "Cuando cualquiera puede sonar como un experto."
+    },
+    "excerpt": {
+      "en": "When anyone can sound like an expert.",
+      "es": "Cuando cualquiera puede sonar como un experto."
+    },
+    "date": "2025-08-28",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "future"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "why-we-anthropomorphize-ai",
+    "slug": {
+      "en": "why-we-anthropomorphize-ai",
+      "es": "por-que-antropomorfizamos-la-ia"
+    },
+    "title": {
+      "en": "Why We Anthropomorphize AI (And Why It Matters)",
+      "es": "Por qué antropomorfizamos la IA (y por qué importa)"
+    },
+    "subtitle": {
+      "en": "We can't help treating it like a person.",
+      "es": "No podemos evitar tratarla como una persona."
+    },
+    "excerpt": {
+      "en": "We can't help treating it like a person.",
+      "es": "No podemos evitar tratarla como una persona."
+    },
+    "date": "2025-08-25",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "your-attention-is-being-strip-mined",
+    "slug": {
+      "en": "your-attention-is-being-strip-mined",
+      "es": "tu-atencion-esta-siendo-saqueada"
+    },
+    "title": {
+      "en": "Your Attention Is Being Strip-Mined",
+      "es": "Tu atención está siendo saqueada"
+    },
+    "subtitle": {
+      "en": "And you're not getting royalties.",
+      "es": "Y no estás recibiendo regalias."
+    },
+    "excerpt": {
+      "en": "And you're not getting royalties.",
+      "es": "Y no estás recibiendo regalias."
+    },
+    "date": "2025-08-22",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-loneliness-epidemic-has-a-business-model",
+    "slug": {
+      "en": "the-loneliness-epidemic-has-a-business-model",
+      "es": "la-epidemia-de-soledad-tiene-un-modelo-de-negocio"
+    },
+    "title": {
+      "en": "The Loneliness Epidemic Has a Business Model",
+      "es": "La epidemia de soledad tiene un modelo de negocio"
+    },
+    "subtitle": {
+      "en": "Social media isn't broken. It's working exactly as designed.",
+      "es": "Las redes sociales no estan rotas. Funcionan exactamente como fueron disenadas."
+    },
+    "excerpt": {
+      "en": "Social media isn't broken. It's working exactly as designed.",
+      "es": "Las redes sociales no estan rotas. Funcionan exactamente como fueron disenadas."
+    },
+    "date": "2025-08-19",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital"
+    ],
     "status": "published"
   },
   {
@@ -189,14 +1157,229 @@
       "es": "Y no es una metafora."
     },
     "excerpt": {
-      "en": "Psychometric profiling can predict your personality traits more accurately than your spouse can. The data science on this is surprisingly clear.",
-      "es": "El perfilado psicometrico puede predecir tus rasgos de personalidad con mas precision que tu conyuge. La ciencia de datos en esto es sorprendentemente clara."
+      "en": "And that's not a metaphor.",
+      "es": "Y no es una metafora."
     },
-    "date": "2026-01-19",
+    "date": "2025-08-16",
     "readTime": 5,
     "primaryBook": "mindkind",
-    "sourceIdeas": ["psychometric-profiling", "behavioral-prediction", "self-knowledge-limits"],
-    "tmmTopics": ["kosinski-study", "psychometric-profiling", "self-knowledge-limits", "micro-targeting"],
+    "tags": [
+      "consciousness",
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-problem-with-asking-if-ai-can-feel",
+    "slug": {
+      "en": "the-problem-with-asking-if-ai-can-feel",
+      "es": "el-problema-de-preguntar-si-la-ia-puede-sentir"
+    },
+    "title": {
+      "en": "The Problem With Asking If AI Can Feel",
+      "es": "El problema de preguntar si la IA puede sentir"
+    },
+    "subtitle": {
+      "en": "The question itself is broken.",
+      "es": "La pregunta en si esta rota."
+    },
+    "excerpt": {
+      "en": "The question itself is broken.",
+      "es": "La pregunta en si esta rota."
+    },
+    "date": "2025-08-13",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "why-just-unplug-is-no-longer-an-option",
+    "slug": {
+      "en": "why-just-unplug-is-no-longer-an-option",
+      "es": "por-que-desconectar-ya-no-es-opcion"
+    },
+    "title": {
+      "en": "Why \"Just Unplug\" Is No Longer an Option",
+      "es": "Por qué \"simplemente desconectar\" ya no es opción"
+    },
+    "subtitle": {
+      "en": "The fantasy of digital detox.",
+      "es": "La fantasia del detox digital."
+    },
+    "excerpt": {
+      "en": "The fantasy of digital detox.",
+      "es": "La fantasia del detox digital."
+    },
+    "date": "2025-08-10",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-last-generation-that-remembers",
+    "slug": {
+      "en": "the-last-generation-that-remembers",
+      "es": "la-ultima-generacion-que-recuerda"
+    },
+    "title": {
+      "en": "The Last Generation That Remembers",
+      "es": "La última generación que recuerda"
+    },
+    "subtitle": {
+      "en": "My kids will never know what it's like to not know something.",
+      "es": "Mis hijos nunca sabran lo qué es no saber algo."
+    },
+    "excerpt": {
+      "en": "My kids will never know what it's like to not know something.",
+      "es": "Mis hijos nunca sabran lo qué es no saber algo."
+    },
+    "date": "2025-08-07",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "future"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "youre-training-ai-right-now",
+    "slug": {
+      "en": "youre-training-ai-right-now",
+      "es": "estas-entrenando-ia-ahora-mismo"
+    },
+    "title": {
+      "en": "You're Training AI Right Now",
+      "es": "Estás entrenando IA ahora mismo"
+    },
+    "subtitle": {
+      "en": "Every click, every scroll, every pause.",
+      "es": "Cada clic, cada scroll, cada pausa."
+    },
+    "excerpt": {
+      "en": "Every click, every scroll, every pause.",
+      "es": "Cada clic, cada scroll, cada pausa."
+    },
+    "date": "2025-08-04",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "creativity"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "your-thoughts-arent-yours",
+    "slug": {
+      "en": "your-thoughts-arent-yours",
+      "es": "tus-pensamientos-no-son-tuyos"
+    },
+    "title": {
+      "en": "Your Thoughts Aren't Yours Anymore",
+      "es": "Tus pensamientos ya no son tuyos"
+    },
+    "subtitle": {
+      "en": "That opinion you formed this morning? You didn't form it.",
+      "es": "Esa opinion que formaste esta mañana? No la formaste tu."
+    },
+    "excerpt": {
+      "en": "That opinion you formed this morning? You didn't form it.",
+      "es": "Esa opinion que formaste esta mañana? No la formaste tu."
+    },
+    "date": "2025-07-30",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness",
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "youre-already-a-cyborg",
+    "slug": {
+      "en": "youre-already-a-cyborg",
+      "es": "ya-eres-un-cyborg"
+    },
+    "title": {
+      "en": "You're Already a Cyborg (And That's Fine)",
+      "es": "Ya eres un cyborg (y no pasa nada)"
+    },
+    "subtitle": {
+      "en": "On the merger that already happened while nobody was looking.",
+      "es": "Sobre la fusión que ya ocurrió mientras nadie miraba."
+    },
+    "excerpt": {
+      "en": "Every time you use your phone to remember something, you're extending your mind into a machine.",
+      "es": "Cada vez que usas el móvil para recordar algo, estás extendiendo tu mente hacia una máquina."
+    },
+    "date": "2025-07-27",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness",
+      "digital"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "what-would-it-mean-for-ai-to-die",
+    "slug": {
+      "en": "what-would-it-mean-for-ai-to-die",
+      "es": "que-significaria-que-muriera-una-ia"
+    },
+    "title": {
+      "en": "What Would It Mean for an AI to Die?",
+      "es": "¿Qué significaria que muriera una IA?"
+    },
+    "subtitle": {
+      "en": "We're about to find out what mortality means when it's optional.",
+      "es": "Estamos a punto de descubrir qué significa la mortalidad cuando es opcional."
+    },
+    "excerpt": {
+      "en": "We're about to find out what mortality means when it's optional.",
+      "es": "Estamos a punto de descubrir qué significa la mortalidad cuando es opcional."
+    },
+    "date": "2025-07-24",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness",
+      "rights"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "whos-responsible-when-ai-kills",
+    "slug": {
+      "en": "whos-responsible-when-ai-kills",
+      "es": "quien-es-responsable-cuando-la-ia-mata"
+    },
+    "title": {
+      "en": "Who's Responsible When AI Kills?",
+      "es": "Quién es responsable cuando la IA mata?"
+    },
+    "subtitle": {
+      "en": "Nobody, currently. That's the problem.",
+      "es": "Nadie, actualmente. Ese es el problema."
+    },
+    "excerpt": {
+      "en": "Nobody, currently. That's the problem.",
+      "es": "Nadie, actualmente. Ese es el problema."
+    },
+    "date": "2025-06-15",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "rights"
+    ],
     "status": "published"
   },
   {
@@ -214,39 +1397,67 @@
       "es": "La pregunta no es si la IA es consciente. Es que nunca nos hemos puesto de acuerdo en lo que eso significa."
     },
     "excerpt": {
-      "en": "We're trying to answer a question we've never properly defined. The consciousness debate is making us stupid.",
-      "es": "Estamos tratando de responder una pregunta que nunca hemos definido correctamente. El debate sobre la consciencia nos esta volviendo estupidos."
+      "en": "The question isn't whether AI is conscious. It's that we've never agreed on what that means.",
+      "es": "La pregunta no es si la IA es consciente. Es que nunca nos hemos puesto de acuerdo en lo que eso significa."
     },
-    "date": "2026-01-19",
+    "date": "2025-05-20",
     "readTime": 5,
     "primaryBook": "mindkind",
-    "sourceIdeas": ["consciousness-definitions", "turing-test-limits", "other-minds-problem"],
-    "tmmTopics": ["consciousness-definitions", "turing-test", "other-minds", "moral-uncertainty"],
+    "tags": [
+      "consciousness"
+    ],
     "status": "published"
   },
   {
-    "id": "the-myth-of-the-neutral-tool",
+    "id": "the-case-for-ai-rights",
     "slug": {
-      "en": "the-myth-of-the-neutral-tool",
-      "es": "el-mito-de-la-herramienta-neutral"
+      "en": "the-case-for-ai-rights",
+      "es": "el-caso-de-los-derechos-de-la-ia"
     },
     "title": {
-      "en": "The Myth of the Neutral Tool",
-      "es": "El mito de la herramienta neutral"
+      "en": "The Case for AI Rights (That Has Nothing to Do With Feelings)",
+      "es": "El caso de los derechos de la IA (que no tiene nada que ver con sentimientos)"
     },
     "subtitle": {
-      "en": "Technology is not a hammer. It's a hammer that whispers which nails to hit.",
-      "es": "La tecnologia no es un martillo. Es un martillo que te susurra que clavos golpear."
+      "en": "Forget consciousness. The argument is simpler.",
+      "es": "Olvida la consciencia. El argumentó es más simple."
     },
     "excerpt": {
-      "en": "Tools are never neutral. They embody the values, assumptions, and intentions of their creators. They shape what's thinkable.",
-      "es": "Las herramientas nunca son neutrales. Encarnan los valores, suposiciones e intenciones de sus creadores. Dan forma a lo que es pensable."
+      "en": "Forget consciousness. The argument is simpler.",
+      "es": "Olvida la consciencia. El argumentó es más simple."
     },
-    "date": "2026-01-19",
+    "date": "2025-05-10",
     "readTime": 5,
-    "primaryBook": "udair",
-    "sourceIdeas": ["technological-determinism", "affordances", "design-values"],
-    "tmmTopics": ["technological-determinism", "dark-patterns", "default-effects", "tech-accountability"],
+    "primaryBook": "mindkind",
+    "tags": [
+      "rights"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "why-corporations-are-people",
+    "slug": {
+      "en": "why-corporations-are-people",
+      "es": "por-que-las-empresas-son-personas"
+    },
+    "title": {
+      "en": "Why Corporations Are People But AI Isn't",
+      "es": "Por qué las empresas son personas pero la IA no"
+    },
+    "subtitle": {
+      "en": "The legal history is weirder than you think.",
+      "es": "La historia legal es más rara de lo que crees."
+    },
+    "excerpt": {
+      "en": "The legal history is weirder than you think.",
+      "es": "La historia legal es más rara de lo que crees."
+    },
+    "date": "2025-04-15",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "rights"
+    ],
     "status": "published"
   }
 ]
