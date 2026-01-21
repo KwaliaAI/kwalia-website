@@ -965,6 +965,19 @@
             animateDoodle();
             window.addEventListener('resize', initDoodle);
             handleDeepLink();
+
+            // Re-scroll to hash after dynamic content loads (fixes navigation from other pages)
+            if (window.location.hash && window.location.hash.length > 1) {
+                const targetElement = document.querySelector(window.location.hash);
+                if (targetElement) {
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - document.getElementById('site-header').offsetHeight,
+                            behavior: 'smooth'
+                        });
+                    }, 100);
+                }
+            }
         });
     </script>
 </body>
