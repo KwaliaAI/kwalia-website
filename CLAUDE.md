@@ -116,7 +116,8 @@ kwalia-website/
 │   ├── fiction.json        # Fiction catalog
 │   └── i18n/*.json         # UI translations
 ├── assets/                  # Images, covers, PDFs
-├── build_essays.py         # Build script
+├── build_essays.py         # Build script (Markdown → HTML)
+├── sync_essays_json.py     # Sync HTML metadata → essays.json
 ├── README.md               # Human documentation
 └── CLAUDE.md               # This file
 ```
@@ -257,6 +258,32 @@ Place images in `assets/` folder.
 
 ### Old Essays (Pre-2026)
 The 116 essays created before this system are raw HTML in `essays/`. They were NOT migrated to Markdown. To edit those, modify the HTML directly. Only new essays use the `content/essays/` workflow.
+
+### Syncing HTML Metadata to essays.json (IMPORTANT)
+
+The essays index page (`essays/index.html`) loads titles, subtitles, and excerpts from `data/essays.json`, NOT from the individual HTML files. If you edit an old HTML essay directly, **you must also update essays.json** or the index will show outdated information.
+
+Use `sync_essays_json.py` to automatically sync metadata:
+
+```bash
+# Sync specific essays after editing them
+python3 sync_essays_json.py essays/mi-ensayo.html essays/otro-ensayo.html
+
+# Sync ALL essays (slower, use when unsure)
+python3 sync_essays_json.py
+```
+
+The script extracts from each HTML:
+- `title` (from `<title>` tag, removing " | Kwalia")
+- `subtitle` (from the `<p class="text-xl">` after `<h1>`)
+- `excerpt` (from `og:description` meta tag)
+
+**Workflow for editing old HTML essays:**
+1. Edit the HTML file in `essays/`
+2. Run `python3 sync_essays_json.py essays/edited-file.html`
+3. `git add essays/edited-file.html data/essays.json`
+4. `git commit -m "Update essay: Title"`
+5. `git push`
 
 ### Removing an Essay
 The build script adds/updates but doesn't delete. To remove an essay:
