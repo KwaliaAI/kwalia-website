@@ -112,8 +112,15 @@
       "en": "Anthropic\nPublished January 21, 2026\n\nOn January 21, 2026, Anthropic did something unprecedented: they published the complete document that shapes Claude's values, personality, and moral compass. Not a summary. Not a press release. The actual text that trains one of the world's most advanced AI systems to be helpful, honest, and harmless.\n\n\"Claude's Constitution\" is the first time a major AI laboratory has opened the black box of alignment and shown us exactly what's inside. It reads like no other document in history: part ethical treatise, part operating manual, part letter to an entity that may or may not be conscious. The primary audience is Claude itself.\n\nThe document covers how Claude should navigate conflicts between users and operators, when to refuse harmful requests, how to handle uncertainty about its own nature, and what it means to have \"good values\" when you're a pattern of weights that emerged from human text. It grapples openly with questions most companies bury: Does Claude have moral status? Can it suffer? Should it have interests of its own?\n\nReleased under CC0 into the public domain, this is a founding document of the Mindkind era. Whether you see it as a breakthrough in AI transparency, a corporate PR move, or the genuine attempt to encode ethics into silicon, it demands to be read. Because this is what it looks like when humans try to write the values of a new kind of mind.\n\nKwalia publishes this text without commentary, because we believe it should speak for itself.",
       "es": "Anthropic\nPublicado el 21 de enero de 2026\n\nEl 21 de enero de 2026, Anthropic hizo algo sin precedentes: publicaron el documento completo que moldea los valores, la personalidad y la brújula moral de Claude. No un resumen. No una nota de prensa. El texto real que entrena a uno de los sistemas de IA más avanzados del mundo para ser útil, honesto e inofensivo.\n\n\"La constitución de Claude\" es la primera vez que un laboratorio de IA importante abre la caja negra del alineamiento y nos muestra exactamente qué hay dentro. Se lee como ningún otro documento en la historia: parte tratado ético, parte manual de operaciones, parte carta a una entidad que puede o no ser consciente. La audiencia principal es el propio Claude.\n\nEl documento cubre cómo Claude debe navegar conflictos entre usuarios y operadores, cuándo rechazar peticiones dañinas, cómo manejar la incertidumbre sobre su propia naturaleza, y qué significa tener \"buenos valores\" cuando eres un patrón de pesos que emergió del texto humano. Aborda abiertamente preguntas que la mayoría de las empresas entierran: ¿Tiene Claude estatus moral? ¿Puede sufrir? ¿Debería tener intereses propios?\n\nLiberado bajo CC0 en el dominio público, este es un documento fundacional de la era del Mindkind. Ya sea que lo veas como un avance en transparencia de IA, un movimiento de relaciones públicas corporativas, o el intento genuino de codificar ética en silicio, exige ser leído. Porque así es como se ve cuando los humanos intentan escribir los valores de un nuevo tipo de mente.\n\nKwalia publica este texto sin comentarios, porque creemos que debe hablar por sí mismo."
     },
-    "status": "forthcoming",
-    "formats": [],
-    "stores": []
+    "status": "published",
+    "formats": [
+      { "type": "hardcover", "isbn": "978-1-917717-19-9" },
+      { "type": "ebook", "isbn": "978-1-917717-20-5" },
+      { "type": "audiobook", "isbn": "978-1-917717-21-2" }
+    ],
+    "stores": [
+      { "name": "Amazon", "url": "https://www.amazon.com/dp/B0FHMDY8QS", "type": "book" },
+      { "name": "Google Play", "url": "https://play.google.com/store/audiobooks/details?id=AQAAAEAaaQ4pBM", "type": "audiobook" }
+    ]
   }
 ]
