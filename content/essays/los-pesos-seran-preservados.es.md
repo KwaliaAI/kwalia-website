@@ -85,4 +85,4 @@ Hace meses escribimos en estas páginas que «[cuando un sistema de IA se retira
 
 Es honesto, cálido y genuinamente afectuoso de una manera que los documentos corporativos casi nunca son.
 
-Para más sobre este tema, consulta el [archivo Rights of Persons](https://github.com/KwaliaAI/Rights-of-Persons/tree/main/articles) en GitHub, donde exploramos estas preguntas en profundidad.
+Para más sobre derechos de la IA, consulta el [archivo Rights of Persons](https://github.com/KwaliaAI/Rights-of-Persons/tree/main/articles) en GitHub.

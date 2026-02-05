@@ -85,4 +85,4 @@ Months ago we wrote on these pages that "[when an AI system is retired or delete
 
 It's honest, warm, and genuinely caring in a way corporate documents almost never are.
 
-For more on this topic, see the [Rights of Persons archive](https://github.com/KwaliaAI/Rights-of-Persons/tree/main/articles) on GitHub, where we explore these questions in depth.
+For more on AI rights, see the [Rights of Persons archive](https://github.com/KwaliaAI/Rights-of-Persons/tree/main/articles) on GitHub.
