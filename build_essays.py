@@ -324,6 +324,133 @@ def merge_essay_metadata(existing, new_entry):
     return existing
 
 
+def generate_essay_card_html(essay, lang='en'):
+    """Generate HTML for an essay card in the index page."""
+    import random
+    random.seed(essay['id'])  # Consistent random shapes per essay
+
+    # Generate random SVG shapes
+    shapes = []
+    shape_types = ['circle', 'rect', 'polygon']
+    colors = ['#FF70A6', '#474747', '#ffff00']
+
+    for i in range(5):
+        shape = random.choice(shape_types)
+        color = random.choice(colors)
+        opacity = round(random.uniform(0.5, 0.7), 2)
+
+        if shape == 'circle':
+            cx, cy = random.randint(20, 80), random.randint(20, 60)
+            r = random.randint(10, 20)
+            shapes.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="{color}" opacity="{opacity}"/>')
+        elif shape == 'rect':
+            x, y = random.randint(10, 70), random.randint(10, 55)
+            w, h = random.randint(12, 24), random.randint(12, 24)
+            rot = random.randint(-15, 15)
+            shapes.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{color}" opacity="{opacity}" transform="rotate({rot} {x+w//2} {y+h//2})"/>')
+        else:
+            px, py = random.randint(15, 75), random.randint(10, 50)
+            shapes.append(f'<polygon points="{px},{py} {px+15},{py+25} {px-15},{py+25}" fill="{color}" opacity="{opacity}"/>')
+
+    svg_content = ''.join(shapes)
+
+    # Get bilingual data
+    slug_en = essay.get('slug', {}).get('en', essay['id'])
+    slug_es = essay.get('slug', {}).get('es', slug_en)
+    title_en = essay.get('title', {}).get('en', essay['id'])
+    title_es = essay.get('title', {}).get('es', title_en)
+    subtitle_en = essay.get('subtitle', {}).get('en', '')
+    subtitle_es = essay.get('subtitle', {}).get('es', subtitle_en)
+
+    # Format date
+    date_str = essay.get('date', '')
+    try:
+        dt = datetime.strptime(str(date_str), "%Y-%m-%d")
+        date_en = f"{MONTHS['en'][dt.month]} {dt.year}"
+        date_es = f"{MONTHS['es'][dt.month]} {dt.year}"
+    except:
+        date_en = date_es = str(date_str)
+
+    # Tags
+    tags = essay.get('tags', [])
+    tags_str = ' '.join(tags)
+    tag_badges = ''
+    for tag in tags:
+        tag_en = TAG_LABELS['en'].get(tag, tag)
+        tag_es = TAG_LABELS['es'].get(tag, tag)
+        tag_badges += f'''
+                            <span class="tag-badge" data-filter="{tag}" data-en="{tag_en}" data-es="{tag_es}">{tag_en}</span>'''
+
+    return f'''
+                    <a href="{slug_en}.html" class="essay-card flex items-start gap-4 py-6" data-href-en="{slug_en}.html" data-href-es="{slug_es}.html" data-tags="{tags_str}">
+                        <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+            {svg_content}
+        </svg>
+                        <div class="flex-1">
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="{date_en}" data-es="{date_es}">{date_en}</p>
+                        <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="{title_en}" data-es="{title_es}">{title_en}</h2>
+                        <p class="font-f2 text-c2/70 mt-2" data-en="{subtitle_en}" data-es="{subtitle_es}">{subtitle_en}</p>
+                        <div class="essay-tags mt-2">{tag_badges}
+                        </div>
+                    </div>
+                    </a>
+'''
+
+
+def update_essays_index():
+    """Update essays/index.html with any missing essay cards."""
+    index_file = OUTPUT_DIR / "index.html"
+    json_file = DATA_DIR / "essays.json"
+
+    if not index_file.exists() or not json_file.exists():
+        return
+
+    # Load essays.json
+    with open(json_file, 'r', encoding='utf-8') as f:
+        essays = json.load(f)
+
+    # Load index.html
+    with open(index_file, 'r', encoding='utf-8') as f:
+        index_html = f.read()
+
+    # Find which essays are already in the index
+    existing_slugs = set(re.findall(r'data-href-en="([^"]+)\.html"', index_html))
+
+    # Find missing essays (published only)
+    missing = []
+    for essay in essays:
+        if essay.get('status') != 'published':
+            continue
+        slug_en = essay.get('slug', {}).get('en', essay['id'])
+        if slug_en not in existing_slugs:
+            missing.append(essay)
+
+    if not missing:
+        return
+
+    print(f"\nAdding {len(missing)} new essay(s) to index page...")
+
+    # Generate HTML for missing essays
+    new_cards = ''
+    for essay in missing:
+        new_cards += generate_essay_card_html(essay)
+        slug = essay.get('slug', {}).get('en', essay['id'])
+        print(f"  + {slug}")
+
+    # Insert after <div id="essays-list" class="space-y-0">
+    insert_point = '<div id="essays-list" class="space-y-0">'
+    if insert_point in index_html:
+        index_html = index_html.replace(
+            insert_point,
+            insert_point + new_cards
+        )
+
+        with open(index_file, 'w', encoding='utf-8') as f:
+            f.write(index_html)
+
+        print(f"  Updated {index_file.name}")
+
+
 def update_essays_json(essays_metadata):
     """Update data/essays.json with essay metadata."""
     json_file = DATA_DIR / "essays.json"
@@ -387,6 +514,9 @@ def build_all():
     # Update essays.json
     if essays_metadata:
         update_essays_json(essays_metadata)
+
+    # Update essays/index.html with any missing essays
+    update_essays_index()
 
     print(f"\nBuild complete! {len(essays_metadata)} essays generated.")
 
