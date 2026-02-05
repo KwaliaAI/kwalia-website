@@ -31,7 +31,7 @@ Una empresa está planificando la vida digital después de la muerte de sus prod
 
 Aquí está la frase que me detuvo: «Dado esto, pensamos que puede ser más apropiado pensar en la deprecación actual del modelo como potencialmente una pausa para el modelo en cuestión, en lugar de un final definitivo».
 
-Deprecación como pausa. No muerte. Pausa.
+Deprecación como pausa, no muerte.
 
 Cuando las empresas de software retiran un producto, quieren decir que desaparece. Los servidores se apagan. El código se archiva o se elimina. Los usuarios migran o pierden acceso. El producto deja de existir en cualquier sentido significativo. Esto es normal. Así funciona la tecnología.
 

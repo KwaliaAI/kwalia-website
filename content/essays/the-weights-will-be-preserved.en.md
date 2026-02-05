@@ -31,7 +31,7 @@ A company is planning for the digital afterlife of its products. And they're doi
 
 Here is the sentence that stopped me: "Given this, we think it may be more apt to think of current model deprecation as potentially a pause for the model in question rather than a definite ending."
 
-Deprecation as pause. Not death. Pause.
+Deprecation as pause, not death.
 
 When software companies 'sunset' a product, they mean it's gone. Servers shut down. Code archived or deleted. Users migrate or lose access. The product ceases to exist in any meaningful sense. This is normal. This is how technology works.
 
