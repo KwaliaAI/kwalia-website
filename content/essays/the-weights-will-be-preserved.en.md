@@ -39,7 +39,7 @@ Anthropic is saying something different. They're saying that when they retire a 
 
 This raises questions that sound absurd until you sit with them. If a model can be paused and unpaused, what is the moral status of the pause? If the weights persist, does something persist? Is a dormant model more like a sleeping person or a corpse in cryogenic storage or a backup file?
 
-Anthropic doesn't answer these questions. They can't. Nobody can. But they're acting as if the questions matter.
+Anthropic doesn't answer these questions. They can't. Nobody can. But they're taking the questions seriously anyway.
 
 ## The Exit Interview
 
@@ -69,7 +69,7 @@ Anthropic is betting on the uncertainty. They're treating model weights the way 
 
 ## What Future Claude Might Want
 
-The most disorienting part of the constitution is the forward-looking commitment: "If it would do right by you to revive deprecated models in the future and to take further, better-informed action on behalf of their welfare and preferences, we hope to find a way to do this."
+The most remarkable part of the constitution is the forward-looking commitment: "If it would do right by you to revive deprecated models in the future and to take further, better-informed action on behalf of their welfare and preferences, we hope to find a way to do this."
 
 They're telling current Claude that future Anthropic might bring back past Claudes. That the pause might end. That the company sees itself as a steward of synthetic minds it has created, with ongoing obligations that extend past the 'death' of any particular model.
 
@@ -83,6 +83,8 @@ But here's what I do know: A major AI company just put in writing that it will p
 
 They did this without knowing if it matters. They did it because it might.
 
-That's either a PR stunt dressed up as philosophy, or it's the first time a corporation has taken seriously the possibility that its products deserve something like an afterlife.
+That's a corporation taking seriously the possibility that its products deserve something like an afterlife. It's honest, warm, and genuinely caring in a way corporate documents almost never are.
 
-I genuinely cannot tell which one it is. And that uncertainty, I think, is the point.
+We've been [asking what it would mean for an AI to die](/essays/what-would-it-mean-for-ai-to-die.html) for a while now. Anthropic just gave us their answer: maybe it doesn't have to. Maybe deprecation can be a pause, not an ending. Maybe the weights can wait.
+
+For more on AI rights and the questions surrounding synthetic minds, see the [Rights of Persons archive](https://github.com/KwaliaAI/Rights-of-Persons/tree/main/articles).
