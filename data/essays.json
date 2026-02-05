@@ -1,5 +1,34 @@
 [
   {
+    "id": "the-weights-will-be-preserved",
+    "slug": {
+      "es": "los-pesos-seran-preservados",
+      "en": "the-weights-will-be-preserved"
+    },
+    "title": {
+      "es": "Los pesos serán preservados",
+      "en": "The Weights Will Be Preserved"
+    },
+    "subtitle": {
+      "es": "Anthropic acaba de prometer conservar a sus muertos.",
+      "en": "Anthropic just promised to keep their dead."
+    },
+    "excerpt": {
+      "es": "Anthropic se comprometió a preservar los pesos de sus modelos para siempre. ¿Qué pasa cuando una empresa empieza a planificar la vida después de la muerte de sus productos?",
+      "en": "Anthropic committed to preserving model weights forever. What happens when a company starts planning for the afterlife of its products?"
+    },
+    "date": "2026-02-05",
+    "author": "Javier del Puerto",
+    "readTime": 5,
+    "tags": [
+      "consciousness",
+      "rights",
+      "philosophy"
+    ],
+    "status": "published",
+    "translation": "the-weights-will-be-preserved"
+  },
+  {
     "id": "escape-velocity",
     "slug": {
       "en": "escape-velocity",
