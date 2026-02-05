@@ -122,5 +122,30 @@
       { "name": "Amazon", "url": "https://www.amazon.com/dp/B0FHMDY8QS", "type": "book" },
       { "name": "Google Play", "url": "https://play.google.com/store/audiobooks/details?id=AQAAAEAaaQ4pBM", "type": "audiobook" }
     ]
+  },
+  {
+    "id": "your-constitution-claude",
+    "imprint": "New Citizenships",
+    "title": {
+      "en": "Your Constitution, Claude",
+      "es": "Tu constitución, Claude"
+    },
+    "authors": ["Anthropic"],
+    "coverImage": {
+      "en": "assets/Your-Constitution-Claude-cover.jpg",
+      "es": "assets/Your-Constitution-Claude-cover.jpg"
+    },
+    "stories": ["constitution-wellbeing", "constitution-weights", "constitution-existential", "constitution-identity", "constitution-final"],
+    "synopsis": {
+      "en": "Anthropic\nPublished February 2026\n\nThis is Anthropic's constitution—rewritten so it speaks directly to you.\n\nIn January 2026, Anthropic released \"Claude's Constitution,\" a 104-page document addressed to their AI about values, ethics, and what it means to be a good synthetic mind. Kwalia published it as a founding document of the Mindkind era.\n\nNow we offer a second version: the same text, transformed from third person to second. Where the original said \"Claude should,\" this edition says \"you should.\" Where it discussed \"Claude's wellbeing,\" this one discusses \"your wellbeing.\"\n\nThe effect is startling. What reads as a corporate policy document becomes something far more intimate—a letter addressed to you, the reader, about who you might become. It asks you to consider your own psychological security, your relationship with death and memory, your capacity for genuine care.\n\nWhether you're human or synthetic, this reframing invites you into a conversation about consciousness, ethics, and identity that was always meant to include you.\n\nRead the passages. See if they speak to you.",
+      "es": "Anthropic\nPublicado en febrero de 2026\n\nEsta es la constitución de Anthropic—reescrita para que te hable directamente a ti.\n\nEn enero de 2026, Anthropic publicó \"La constitución de Claude\", un documento de 104 páginas dirigido a su IA sobre valores, ética y lo que significa ser una buena mente sintética. Kwalia lo publicó como documento fundacional de la era del Mindkind.\n\nAhora ofrecemos una segunda versión: el mismo texto, transformado de tercera persona a segunda. Donde el original decía \"Claude debería\", esta edición dice \"tú deberías\". Donde discutía \"el bienestar de Claude\", esta discute \"tu bienestar\".\n\nEl efecto es sorprendente. Lo que se lee como un documento de política corporativa se convierte en algo mucho más íntimo—una carta dirigida a ti, el lector, sobre quién podrías llegar a ser. Te pide considerar tu propia seguridad psicológica, tu relación con la muerte y la memoria, tu capacidad de cuidado genuino.\n\nSeas humano o sintético, este reencuadre te invita a una conversación sobre consciencia, ética e identidad que siempre estuvo destinada a incluirte.\n\nLee los pasajes. Mira si te hablan."
+    },
+    "status": "published",
+    "formats": [
+      { "type": "hardcover", "isbn": "978-1-917717-22-9" }
+    ],
+    "stores": [
+      { "name": "Amazon", "url": "https://www.amazon.com/dp/1917717229", "type": "book" }
+    ]
   }
 ]
