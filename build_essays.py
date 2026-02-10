@@ -16,7 +16,8 @@ Requirements:
     - Jinja2 (usually pre-installed)
 
 Directory structure:
-    content/essays/*.md    - Source Markdown files
+    content/essays/en/*.md - English source Markdown files
+    content/essays/es/*.md - Spanish source Markdown files
     templates/*.html       - Jinja2 templates
     essays/*.html          - Generated output (don't edit directly)
     data/essays.json       - Generated metadata
@@ -208,7 +209,7 @@ def estimate_read_time(content):
 def load_all_essays_metadata():
     """Load metadata from all essay Markdown files."""
     essays = {}
-    for md_file in CONTENT_DIR.glob("*.md"):
+    for md_file in CONTENT_DIR.glob("**/*.md"):
         with open(md_file, 'r', encoding='utf-8') as f:
             content = f.read()
         metadata, _ = parse_frontmatter(content)
@@ -494,9 +495,9 @@ def build_all():
         print("Create content/essays/ and add Markdown files.")
         return
 
-    md_files = list(CONTENT_DIR.glob("*.md"))
+    md_files = list(CONTENT_DIR.glob("**/*.md"))
     if not md_files:
-        print(f"No Markdown files found in {CONTENT_DIR}")
+        print(f"No Markdown files found in {CONTENT_DIR} (searched recursively)")
         return
 
     print(f"Found {len(md_files)} Markdown files\n")
@@ -523,17 +524,20 @@ def build_all():
 
 def build_single(name):
     """Build a single essay by name (without .md extension)."""
-    md_file = CONTENT_DIR / f"{name}.md"
-    if not md_file.exists():
-        # Try with common suffixes
-        for suffix in ['.en.md', '.es.md', '']:
-            test_file = CONTENT_DIR / f"{name}{suffix}"
-            if test_file.exists():
-                md_file = test_file
-                break
+    md_file = None
+    # Search in root and subdirectories (en/, es/)
+    search_paths = [
+        CONTENT_DIR / f"{name}.md",
+        CONTENT_DIR / "en" / f"{name}.md",
+        CONTENT_DIR / "es" / f"{name}.md",
+    ]
+    for path in search_paths:
+        if path.exists():
+            md_file = path
+            break
 
-    if not md_file.exists():
-        print(f"File not found: {md_file}")
+    if not md_file:
+        print(f"File not found: {name}.md (searched in content/essays/, en/, es/)")
         return
 
     all_essays = load_all_essays_metadata()

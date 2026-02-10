@@ -43,11 +43,16 @@ When asked to write/add a new essay, follow ALL these steps:
 
 #### Step 1: Write the essay in BOTH languages
 
-Create two Markdown files:
+Create two Markdown files in the language-specific folders:
 ```
-content/essays/essay-slug.en.md      # English
-content/essays/slug-en-espanol.es.md  # Spanish
+content/essays/en/essay-slug.md      # English
+content/essays/es/slug-en-espanol.md  # Spanish
 ```
+
+**Naming convention:**
+- **EN essays:** Use the English slug as filename (e.g., `the-weights-will-be-preserved.md`)
+- **ES essays:** Use the Spanish slug as filename (e.g., `los-pesos-seran-preservados.md`)
+- No language suffix needed — the folder (`en/` or `es/`) indicates the language
 
 Use this frontmatter template:
 ```yaml
@@ -168,7 +173,8 @@ kwalia-website/
 │   └── *.html              # Generated essays (DON'T EDIT)
 ├── content/
 │   └── essays/
-│       └── *.md            # Source Markdown (EDIT THESE)
+│       ├── en/*.md         # English source Markdown
+│       └── es/*.md         # Spanish source Markdown
 ├── templates/
 │   ├── essay-en.html       # English template
 │   └── essay-es.html       # Spanish template
