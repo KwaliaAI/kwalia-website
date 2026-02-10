@@ -37,27 +37,31 @@ netlify api getSite --data '{"site_id": "edb8cf3b-e8fa-4e00-a872-4d8e8d25b383"}'
 
 ## Quick Reference
 
-### Adding a New Essay
+### COMPLETE WORKFLOW: Adding a New Essay
 
-1. **Create the Markdown file**:
-   ```
-   content/essays/essay-slug.en.md    # English
-   content/essays/slug-en-espanol.es.md  # Spanish
-   ```
+When asked to write/add a new essay, follow ALL these steps:
 
-2. **Use this frontmatter template**:
-   ```yaml
-   ---
-   id: essay-slug
-   lang: en
-   slug: essay-slug
-   title: "Essay Title Here"
-   subtitle: "Brief description for below title and SEO."
-   date: 2026-01-21
-   author: Javier del Puerto
-   tags:
-     - future
-   related:
+#### Step 1: Write the essay in BOTH languages
+
+Create two Markdown files:
+```
+content/essays/essay-slug.en.md      # English
+content/essays/slug-en-espanol.es.md  # Spanish
+```
+
+Use this frontmatter template:
+```yaml
+---
+id: essay-slug
+lang: en
+slug: essay-slug
+title: "Essay Title Here"
+subtitle: "Brief description for below title and SEO."
+date: 2026-02-10
+author: Javier del Puerto
+tags:
+  - future
+related:
      - youre-already-a-cyborg
    book: mindkind
    translation: slug-en-espanol
@@ -68,23 +72,55 @@ netlify api getSite --data '{"site_id": "edb8cf3b-e8fa-4e00-a872-4d8e8d25b383"}'
    Essay content in Markdown...
    ```
 
-3. **Build**:
-   ```bash
-   python3 build_essays.py
-   ```
+#### Step 2: Build the HTML files
 
-4. **Commit**:
-   ```bash
-   git add .
-   git commit -m "Add essay: Essay Title"
-   git push
-   ```
+```bash
+cd ~/kwalia-website-local
+python3 build_essays.py
+```
+
+This generates `essays/essay-slug.html` and `essays/slug-en-espanol.html`.
+
+#### Step 3: Generate OG images (social preview cards)
+
+```bash
+./publish-essay.sh \
+  --slug-en "essay-slug" \
+  --slug-es "slug-en-espanol" \
+  --title-en "Essay Title Here" \
+  --title-es "Título del Ensayo Aquí" \
+  --subtitle-en "Brief description" \
+  --subtitle-es "Descripción breve" \
+  --category "AI Rights"
+```
+
+This creates:
+- `assets/og/essay-slug.jpg` (EN preview card)
+- `assets/og/slug-en-espanol.jpg` (ES preview card)
+- Updates OG meta tags in both HTML files
+
+#### Step 4: Commit and push
+
+```bash
+git add content/essays/ essays/ assets/og/ data/essays.json
+git commit -m "Add essay: Essay Title"
+git push origin main
+```
+
+Netlify auto-deploys in ~4 seconds. The essay is live.
+
+#### Step 5: (Optional) Clear Telegram cache
+
+If sharing on Telegram immediately, send the URL to `@WebpageBot` to refresh the preview cache.
+
+---
 
 ### Editing an Existing Essay
 
 1. Edit the `.md` file in `content/essays/`
 2. Run `python3 build_essays.py`
-3. Commit and push
+3. If title/subtitle changed, regenerate OG image with `./publish-essay.sh`
+4. Commit and push
 
 ### DO NOT edit files in `essays/` directly
 Those are generated. Edit the source in `content/essays/` instead.
