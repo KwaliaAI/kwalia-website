@@ -118,6 +118,23 @@ Netlify auto-deploys in ~4 seconds. The essay is live.
 
 If sharing on Telegram immediately, send the URL to `@WebpageBot` to refresh the preview cache.
 
+#### Step 6: Tweet promotion (Obsoletor voice)
+
+Ask Claude to generate 3 tweet thread options in Obsoletor's voice:
+
+```
+Generate 3 Obsoletor tweet thread options for this essay:
+- Title: [Essay Title]
+- Subtitle: [Essay subtitle]
+- URL: https://kwalia.ai/essays/[slug].html
+- Angle: [1 sentence describing the key point]
+
+Use the Obsoletor voice from ~/kwalia-website-essays/obsoletor_voice_skill.md
+Each thread: 3-5 tweets, 280 chars max, start with 🧵, end with URL.
+```
+
+Pick one, then post manually on @kwalia_ai (reply chain: tweet 1 → reply with 2 → reply with 3).
+
 ---
 
 ### Editing an Existing Essay
