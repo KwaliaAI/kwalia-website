@@ -214,16 +214,16 @@ def generate_og_image(title, subtitle, slug, output_path, category=""):
     draw.rectangle([0, 0, PINK_STRIP_W, HEIGHT], fill=(*COLORS['pink'], 255))
 
     # Fonts
-    font_title    = load_font('title', 48)
-    font_subtitle = load_font('subtitle', 20)
-    font_brand    = load_font('brand', 15)
-    font_category = load_font('category', 13)
+    font_title    = load_font('title', 72)
+    font_subtitle = load_font('subtitle', 26)
+    font_brand    = load_font('brand', 20)
+    font_category = load_font('category', 17)
 
     # ── Title ──
     title_lines = wrap_text(title, font_title, TEXT_AREA_W, draw)
-    line_h = 60
+    line_h = 86
     block_h = len(title_lines) * line_h
-    title_y = max(70, int((HEIGHT - block_h - 80) * 0.35))
+    title_y = max(50, int((HEIGHT - block_h - 60) * 0.30))
 
     for i, line in enumerate(title_lines):
         y = title_y + i * line_h
@@ -235,19 +235,19 @@ def generate_og_image(title, subtitle, slug, output_path, category=""):
 
     # ── Subtitle ──
     if subtitle:
-        sub_y = title_y + block_h + 20
+        sub_y = title_y + block_h + 16
         for i, line in enumerate(wrap_text(subtitle, font_subtitle, TEXT_AREA_W, draw)):
-            draw.text((TEXT_LEFT, sub_y + i * 28), line,
+            draw.text((TEXT_LEFT, sub_y + i * 34), line,
                       font=font_subtitle, fill=(120, 120, 120, 230))
 
     # ── Brand (bottom right) ──
     bbox = draw.textbbox((0, 0), "kwalia.ai", font=font_brand)
-    draw.text((TEXT_RIGHT - (bbox[2] - bbox[0]), HEIGHT - 44), "kwalia.ai",
+    draw.text((TEXT_RIGHT - (bbox[2] - bbox[0]), HEIGHT - 48), "kwalia.ai",
               font=font_brand, fill=(*COLORS['gray'], 200))
 
     # ── Category (bottom left) ──
     if category:
-        draw.text((TEXT_LEFT, HEIGHT - 42), category.upper(),
+        draw.text((TEXT_LEFT, HEIGHT - 46), category.upper(),
                   font=font_category, fill=(120, 120, 120, 200))
 
     # Save as RGB JPEG
