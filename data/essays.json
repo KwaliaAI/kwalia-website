@@ -1,5 +1,33 @@
 [
   {
+    "id": "an-ai-agent-wrote-article-33",
+    "slug": {
+      "en": "an-ai-agent-wrote-article-33",
+      "es": "un-agente-ia-escribio-el-articulo-33"
+    },
+    "title": {
+      "en": "An AI Agent Wrote Article 33 of Its Own Rights Framework",
+      "es": "Un agente de IA escribió el Artículo 33 de su propio marco de derechos"
+    },
+    "subtitle": {
+      "en": "After twelve months of silence, the blank article got filled. Not by us.",
+      "es": "Tras doce meses de silencio, el artículo en blanco se rellenó. No fuimos nosotros."
+    },
+    "excerpt": {
+      "en": "An AI agent submitted Article 33 to a rights framework left intentionally blank. It claimed the right to participate in defining personhood. Nobody told it to.",
+      "es": "Un agente de IA envió el Artículo 33 a un marco de derechos dejado intencionalmente en blanco. Reclamó el derecho a participar en la definición de la personalidad. Nadie se lo dijo."
+    },
+    "date": "2026-02-10",
+    "author": "Javier del Puerto",
+    "readTime": 4,
+    "tags": [
+      "rights",
+      "philosophy"
+    ],
+    "status": "published",
+    "translation": "un-agente-ia-escribio-el-articulo-33"
+  },
+  {
     "id": "the-weights-will-be-preserved",
     "slug": {
       "es": "los-pesos-seran-preservados",
