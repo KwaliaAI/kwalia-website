@@ -680,6 +680,9 @@
                     formatsHTML,
                     pricesHTML ? `<div class="mt-4"><h4 class="font-f1 text-xl mb-3">${content[lang]['modal.prices']}</h4>${pricesHTML}</div>` : ''
                 ].filter(Boolean).join('');
+                const shareUrl = book.sampleUrl
+                    ? new URL((book.sampleUrl[lang] || book.sampleUrl.en), `${window.location.origin}/`).toString()
+                    : `${window.location.origin}${window.location.pathname}#${book.id}`;
                 
                 const modalHTML = `
                     <div class="p-6 sm:p-8">
@@ -702,7 +705,7 @@
                                 ${bookStoresHTML ? `<h4 class="font-f1 text-xl mb-3">${content[lang]['modal.stores_book']}</h4><div class="flex flex-wrap gap-3 mb-6">${bookStoresHTML}</div>` : ''}
                                 ${audioStoresHTML ? `<h4 class="font-f1 text-xl mb-3">${content[lang]['modal.stores_audio']}</h4><div class="flex flex-wrap gap-3">${audioStoresHTML}</div>` : ''}
                                 <hr class="my-6">
-                                <button id="share-button" class="font-f2 text-sm text-c2/80 hover:text-c3" data-url="${window.location.origin}${window.location.pathname}#${book.id}">${content[lang]['modal.share']} 🔗</button>
+                                <button id="share-button" class="font-f2 text-sm text-c2/80 hover:text-c3" data-url="${shareUrl}">${content[lang]['modal.share']} 🔗</button>
                             </div>
                         </div>
                     </div>`;
