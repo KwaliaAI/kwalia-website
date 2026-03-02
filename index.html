@@ -433,11 +433,11 @@
             let shortStories = [];
             let essays = [];
 
-            // Editorial shelf order for New Citizenships titles: newest launch first, oldest last.
+            // Editorial shelf order for New Citizenships titles: newest block first, with related titles kept adjacent.
             const newCitizenshipsDisplayRank = new Map([
-                ['your-constitution-claude', 0],
-                ['synthropology', 1],
-                ['apophenia', 2],
+                ['synthropology', 0],
+                ['apophenia', 1],
+                ['your-constitution-claude', 2],
                 ['claudes-constitution', 3],
                 ['mindkind', 4],
                 ['udair', 5]
