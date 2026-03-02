@@ -431,11 +431,11 @@
                     const [enContent, esContent, books, fiction, hets, stories, essaysData] = await Promise.all([
                         fetch('data/i18n/en.json').then(r => r.json()),
                         fetch('data/i18n/es.json').then(r => r.json()),
-                        fetch('data/books.json').then(r => r.json()),
+                        fetch('data/books.json?v=20260302-war-and-ai').then(r => r.json()),
                         fetch('data/fiction.json').then(r => r.json()),
                         fetch('data/heteronyms.json').then(r => r.json()),
                         fetch('data/stories.json').then(r => r.json()),
-                        fetch('data/essays.json').then(r => r.json())
+                        fetch('data/essays.json?v=20260302-war-and-ai').then(r => r.json())
                     ]);
 
                     content = { en: enContent, es: esContent };
@@ -471,12 +471,17 @@
 
             function renderCatalogue(lang) {
                 catalogueContainer.innerHTML = '';
-                bookCatalogue.forEach(book => {
+                const sortedCatalogue = [...bookCatalogue].sort((left, right) => Number(Boolean(right.featured)) - Number(Boolean(left.featured)));
+
+                sortedCatalogue.forEach(book => {
                     const coverUrl = book.coverImage[lang] || book.coverImage.en || "";
+                    const hasSample = (book.stories && book.stories.length > 0) || Boolean(book.sampleUrl);
+                    const bookStatus = (book.statusText && (book.statusText[lang] || book.statusText.en))
+                        || (book.status && book.status !== 'published' ? (content[lang][`status.${book.status}`] || '') : '');
 
                     // Logic to add "Read Sample" badge if the book has stories
                     let badgeHTML = '';
-                    if (book.stories && book.stories.length > 0) {
+                    if (hasSample) {
                         badgeHTML = `<span class="absolute top-3 right-3 bg-white/90 text-slate-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm backdrop-blur-sm z-10">Read Sample</span>`;
                     }
 
@@ -498,6 +503,7 @@
                             <div class="pt-2 text-center">
                                 <p class="font-f1 text-2xl">${bookTitle}</p>
                                 <p class="font-f2 text-sm text-c2/80">${bookAuthors}</p>
+                                ${bookStatus ? `<p class="font-f3 text-xs uppercase tracking-[0.18em] text-c3 mt-2">${bookStatus}</p>` : ''}
                             </div>
                         </div>`;
                     catalogueContainer.innerHTML += bookHTML;
@@ -616,24 +622,33 @@
                 const coverUrl = book.coverImage[lang] || book.coverImage.en;
                 const bookTitle = book.title[lang] || book.title.en;
                 const bookAuthors = (book.authors && book.authors.length > 0) ? `<p class="font-f2 text-lg mb-4 text-c2/80">${book.authors.join(' & ')}</p>` : '';
+                const bookStatus = (book.statusText && (book.statusText[lang] || book.statusText.en))
+                    || (book.status && book.status !== 'published' ? (content[lang][`status.${book.status}`] || '') : '');
+                const bookImprint = book.imprintLine || '';
                 const synopsisHTML = (book.synopsis[lang] || book.synopsis.en).split('\n').map(p => `<p class="mb-4">${p}</p>`).join('');
 
                 // Special handling for fiction: Multiple stories support
-                let readStoryHTML = '';
+                let sampleActionsHTML = '';
+                if (book.sampleUrl) {
+                    const sampleUrl = book.sampleUrl[lang] || book.sampleUrl.en;
+                    const sampleLabel = (book.sampleLabel && (book.sampleLabel[lang] || book.sampleLabel.en))
+                        || (lang === 'es' ? 'Leer muestra' : 'Read sample');
+                    sampleActionsHTML += `<a href="${sampleUrl}" class="font-f2 bg-c1 text-c2 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity mb-4 mr-2">${sampleLabel}</a>`;
+                }
                 if (book.stories && book.stories.length > 0) {
                     book.stories.forEach(storyId => {
                         const story = shortStories.find(s => s.id === storyId);
                         if (story) {
                             const btnLabel = story.title[lang] || story.title.en;
-                            readStoryHTML += `<button class="font-f2 bg-c1 text-c2 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity mb-4 mr-2" onclick="openReader('${storyId}', '${lang}')">Read "${btnLabel}"</button>`;
+                            sampleActionsHTML += `<button class="font-f2 bg-c1 text-c2 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity mb-4 mr-2" onclick="openReader('${storyId}', '${lang}')">Read "${btnLabel}"</button>`;
                         }
                     });
                 } else if (book.imprint === 'Fiction' || book.id === 'placeholder-book') {
                      // Fallback for placeholder
-                     readStoryHTML = `<button class="font-f2 bg-c1 text-c2 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity mb-4 mr-2" onclick="openReader('placeholder-story', '${lang}')">Read a Short Story</button>`;
+                     sampleActionsHTML = `<button class="font-f2 bg-c1 text-c2 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity mb-4 mr-2" onclick="openReader('placeholder-story', '${lang}')">Read a Short Story</button>`;
                 }
 
-                const bookStoresHTML = book.stores.filter(s => s.type === 'book').map(store => {
+                const bookStoresHTML = (book.stores || []).filter(s => s.type === 'book').map(store => {
                     const eventData = {
                         'event': 'click_buy_now',
                         'book_title': book.title.en,
@@ -641,7 +656,7 @@
                     };
                     return `<a href="${store.url}" onclick="dataLayer.push(${JSON.stringify(eventData)})" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`;
                 }).join(' ');
-                const audioStoresHTML = book.stores.filter(s => s.type === 'audiobook').map(store => {
+                const audioStoresHTML = (book.stores || []).filter(s => s.type === 'audiobook').map(store => {
                      const eventData = {
                         'event': 'click_buy_now',
                         'book_title': book.title.en,
@@ -649,7 +664,14 @@
                     };
                     return `<a href="${store.url}" onclick="dataLayer.push(${JSON.stringify(eventData)})" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`;
                 }).join(' ');
-                const formatsHTML = book.formats.map(format => `<div class="font-f2 text-sm text-c2/80"><span class="font-bold">${content[lang][`format.${format.type}`]}:</span> ${format.isbn}</div>`).join('');
+                const formatsHTML = (book.formats || []).map(format => `<div class="font-f2 text-sm text-c2/80"><span class="font-bold">${content[lang][`format.${format.type}`]}:</span> ${format.isbn}</div>`).join('');
+                const pricesHTML = (book.prices || []).map(price => `<div class="font-f2 text-sm text-c2/80"><span class="font-bold">${content[lang][`format.${price.type}`]}:</span> ${price.amount}</div>`).join('');
+                const detailsHTML = [
+                    bookStatus ? `<div class="font-f3 text-xs uppercase tracking-[0.18em] text-c3">${bookStatus}</div>` : '',
+                    bookImprint ? `<div class="font-f2 text-sm text-c2/70">${bookImprint}</div>` : '',
+                    formatsHTML,
+                    pricesHTML ? `<div class="mt-4"><h4 class="font-f1 text-xl mb-3">${content[lang]['modal.prices']}</h4>${pricesHTML}</div>` : ''
+                ].filter(Boolean).join('');
                 
                 const modalHTML = `
                     <div class="p-6 sm:p-8">
@@ -664,13 +686,11 @@
                             <div class="md:col-span-2">
                                 ${bookAuthors}
                                 <div class="font-f2 text-base text-c2/90 leading-relaxed">${synopsisHTML}</div>
-                                <hr class="my-6">
+                                ${sampleActionsHTML || detailsHTML ? '<hr class="my-6">' : ''}
                                 
-                                ${readStoryHTML}
+                                ${sampleActionsHTML}
 
-                                <h4 class="font-f1 text-xl mb-3" data-key="modal.details">${content[lang]['modal.details']}</h4>
-                                ${formatsHTML}
-                                <hr class="my-6">
+                                ${detailsHTML ? `<h4 class="font-f1 text-xl mb-3" data-key="modal.details">${content[lang]['modal.details']}</h4>${detailsHTML}<hr class="my-6">` : ''}
                                 ${bookStoresHTML ? `<h4 class="font-f1 text-xl mb-3">${content[lang]['modal.stores_book']}</h4><div class="flex flex-wrap gap-3 mb-6">${bookStoresHTML}</div>` : ''}
                                 ${audioStoresHTML ? `<h4 class="font-f1 text-xl mb-3">${content[lang]['modal.stores_audio']}</h4><div class="flex flex-wrap gap-3">${audioStoresHTML}</div>` : ''}
                                 <hr class="my-6">

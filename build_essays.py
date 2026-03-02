@@ -51,6 +51,12 @@ BOOKS = {
         "title": "Universal Declaration of AI Rights",
         "image": "9781917717021.jpg",
         "description": "proposes a framework for AI rights and personhood in an age of synthetic minds."
+    },
+    "war-and-ai": {
+        "id": "war-and-ai",
+        "title": "War and AI: The Algorithmic Battlefield",
+        "image": "War-and-AI-cover-EN-FINAL.jpg",
+        "description": "extends the argument into the battlefield, where AI systems already shape targeting, escalation, and the human cost of war."
     }
 }
 

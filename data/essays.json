@@ -1,5 +1,29 @@
 [
   {
+    "id": "war-and-ai-preface",
+    "slug": {
+      "en": "war-and-ai-preface"
+    },
+    "title": {
+      "en": "War and AI: Preface"
+    },
+    "subtitle": {
+      "en": "A free sample from War and AI: The Algorithmic Battlefield."
+    },
+    "excerpt": {
+      "en": "This book comes from fear."
+    },
+    "date": "2026-03-02",
+    "author": "Javier del Puerto & Rado Molina",
+    "readTime": 5,
+    "tags": [
+      "future",
+      "society"
+    ],
+    "status": "published",
+    "translation": null
+  },
+  {
     "id": "an-ai-agent-wrote-article-33",
     "slug": {
       "en": "an-ai-agent-wrote-article-33",
