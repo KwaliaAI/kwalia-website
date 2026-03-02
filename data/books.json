@@ -77,6 +77,31 @@
     "stores": []
   },
   {
+    "id": "synthropology",
+    "imprint": "New Citizenships",
+    "imprintLine": "Kwalia Books, London, UK - #0007",
+    "title": {
+      "en": "Synthropology: A New Science for the Machine Age",
+      "es": "Sintropología: Una nueva ciencia para la era de las máquinas"
+    },
+    "authors": ["Javier del Puerto", "Rado Molina"],
+    "coverImage": {
+      "en": "assets/Synthropology-EN.png",
+      "es": "assets/Synthropology-EN.png"
+    },
+    "synopsis": {
+      "en": "PLACEHOLDER — blurb coming from Gemini",
+      "es": "PLACEHOLDER — blurb coming from Gemini"
+    },
+    "statusText": {
+      "en": "Coming Spring 2026",
+      "es": "Primavera 2026"
+    },
+    "status": "forthcoming",
+    "formats": [],
+    "stores": []
+  },
+  {
     "id": "war-and-ai",
     "featured": true,
     "imprint": "Kwalia Books",
