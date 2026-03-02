@@ -151,6 +151,17 @@ Book catalog data. Edit manually to add/update books.
 
 UI translations for the main website.
 
+## Reusable UI Patterns
+
+### Top Announcement Rail
+
+For launch weeks, use a single-line announcement rail at the top of `index.html`, inside `#site-header` and above the main nav.
+
+- Keep it text-only. Do not turn it into a heavy promo banner.
+- Use `font-f3`, uppercase tracking, and `text-c3` so it matches the lightweight "coming soon" status treatment.
+- Link it directly to the active launch asset (book hash, sample page, or press page).
+- Add the copy to both `data/i18n/en.json` and `data/i18n/es.json` so it can be reused cleanly for future launches.
+
 ## Deployment
 
 The site is hosted on GitHub Pages. Pushing to `main` automatically deploys.
