@@ -449,7 +449,7 @@
                     const [enContent, esContent, books, fiction, hets, stories, essaysData] = await Promise.all([
                         fetch('data/i18n/en.json').then(r => r.json()),
                         fetch('data/i18n/es.json').then(r => r.json()),
-                        fetch('data/books.json?v=20260302-synthropology-order').then(r => r.json()),
+                        fetch('data/books.json?v=20260302-synthropology-blurb').then(r => r.json()),
                         fetch('data/fiction.json').then(r => r.json()),
                         fetch('data/heteronyms.json').then(r => r.json()),
                         fetch('data/stories.json').then(r => r.json()),
