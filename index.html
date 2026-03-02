@@ -433,13 +433,23 @@
             let shortStories = [];
             let essays = [];
 
+            // Editorial shelf order for New Citizenships titles: newest launch first, oldest last.
+            const newCitizenshipsDisplayRank = new Map([
+                ['your-constitution-claude', 0],
+                ['synthropology', 1],
+                ['apophenia', 2],
+                ['claudes-constitution', 3],
+                ['mindkind', 4],
+                ['udair', 5]
+            ]);
+
             // Load all data from JSON files
             async function loadData() {
                 try {
                     const [enContent, esContent, books, fiction, hets, stories, essaysData] = await Promise.all([
                         fetch('data/i18n/en.json').then(r => r.json()),
                         fetch('data/i18n/es.json').then(r => r.json()),
-                        fetch('data/books.json?v=20260302-war-and-ai').then(r => r.json()),
+                        fetch('data/books.json?v=20260302-synthropology-order').then(r => r.json()),
                         fetch('data/fiction.json').then(r => r.json()),
                         fetch('data/heteronyms.json').then(r => r.json()),
                         fetch('data/stories.json').then(r => r.json()),
@@ -479,7 +489,23 @@
 
             function renderCatalogue(lang) {
                 catalogueContainer.innerHTML = '';
-                const sortedCatalogue = [...bookCatalogue].sort((left, right) => Number(Boolean(right.featured)) - Number(Boolean(left.featured)));
+                const sourceOrder = new Map(bookCatalogue.map((book, index) => [book.id, index]));
+                const sortedCatalogue = [...bookCatalogue].sort((left, right) => {
+                    const featuredDelta = Number(Boolean(right.featured)) - Number(Boolean(left.featured));
+                    if (featuredDelta !== 0) return featuredDelta;
+
+                    const leftIsNewCitizenships = left.imprint === 'New Citizenships';
+                    const rightIsNewCitizenships = right.imprint === 'New Citizenships';
+                    if (leftIsNewCitizenships && rightIsNewCitizenships) {
+                        const leftRank = newCitizenshipsDisplayRank.get(left.id);
+                        const rightRank = newCitizenshipsDisplayRank.get(right.id);
+                        if (leftRank === undefined && rightRank !== undefined) return 1;
+                        if (leftRank !== undefined && rightRank === undefined) return -1;
+                        if (leftRank !== rightRank) return leftRank - rightRank;
+                    }
+
+                    return (sourceOrder.get(left.id) || 0) - (sourceOrder.get(right.id) || 0);
+                });
 
                 sortedCatalogue.forEach(book => {
                     const coverUrl = book.coverImage[lang] || book.coverImage.en || "";
