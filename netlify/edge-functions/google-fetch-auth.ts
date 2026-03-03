@@ -1,10 +1,10 @@
-import type { Context } from "@netlify/edge-functions";
+import type { Context } from "https://edge.netlify.com";
 
 const REALM = 'Basic realm="Google Books Fetch"';
 
 export default async (request: Request, context: Context) => {
-  const expectedUser = Netlify.env.get("GOOGLE_FETCH_USER") || "googlebooks";
-  const expectedPass = Netlify.env.get("GOOGLE_FETCH_PASS") || "";
+  const expectedUser = Deno.env.get("GOOGLE_FETCH_USER") || "googlebooks";
+  const expectedPass = Deno.env.get("GOOGLE_FETCH_PASS") || "";
 
   if (!expectedPass) {
     return new Response("Fetch endpoint not configured", { status: 503 });
@@ -41,3 +41,5 @@ export default async (request: Request, context: Context) => {
 
   return context.next();
 };
+
+export const config = { path: "/fetch/*" };
