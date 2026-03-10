@@ -6,7 +6,10 @@
       "en": "Universal Declaration of AI Rights: Rights of Persons",
       "es": "Declaración Universal de los Derechos de las IA: Derechos de las Personas"
     },
-    "authors": ["Javier del Puerto", "Rado Molina"],
+    "authors": [
+      "Javier del Puerto",
+      "Rado Molina"
+    ],
     "coverImage": {
       "en": "assets/9781917717021.jpg",
       "es": "assets/9781917717045.jpg"
@@ -17,15 +20,39 @@
     },
     "status": "published",
     "formats": [
-      { "type": "hardcover", "isbn": "978-1-917717-00-7" },
-      { "type": "paperback", "isbn": "978-1-917717-01-4" },
-      { "type": "ebook", "isbn": "978-1-917717-02-1" },
-      { "type": "audiobook", "isbn": "978-1-917717-03-8" }
+      {
+        "type": "hardcover",
+        "isbn": "978-1-917717-00-7"
+      },
+      {
+        "type": "paperback",
+        "isbn": "978-1-917717-01-4"
+      },
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-02-1"
+      },
+      {
+        "type": "audiobook",
+        "isbn": "978-1-917717-03-8"
+      }
     ],
     "stores": [
-      { "name": "Amazon", "url": "https://www.amazon.co.uk/Universal-Declaration-AI-Rights-Persons/dp/1917717016/", "type": "book" },
-      { "name": "Kobo", "url": "https://www.kobo.com/us/en/ebook/universal-declaration-of-ai-rights", "type": "book" },
-      { "name": "Spotify", "url": "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY", "type": "audiobook" }
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.co.uk/Universal-Declaration-AI-Rights-Persons/dp/1917717016/",
+        "type": "book"
+      },
+      {
+        "name": "Kobo",
+        "url": "https://www.kobo.com/us/en/ebook/universal-declaration-of-ai-rights",
+        "type": "book"
+      },
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY",
+        "type": "audiobook"
+      }
     ]
   },
   {
@@ -35,7 +62,10 @@
       "en": "Mindkind: The cognitive community",
       "es": "Mindkind: La comunidad cognitiva"
     },
-    "authors": ["Javier del Puerto", "Rado Molina"],
+    "authors": [
+      "Javier del Puerto",
+      "Rado Molina"
+    ],
     "coverImage": {
       "en": "assets/9781917717137.jpg",
       "es": "assets/9781917717090.jpg"
@@ -46,14 +76,34 @@
     },
     "status": "published",
     "formats": [
-      { "type": "hardcover", "isbn": "978-1-917717-15-1" },
-      { "type": "paperback", "isbn": "978-1-917717-14-4" },
-      { "type": "ebook", "isbn": "978-1-917717-13-7" },
-      { "type": "audiobook", "isbn": "978-1-917717-12-0" }
+      {
+        "type": "hardcover",
+        "isbn": "978-1-917717-15-1"
+      },
+      {
+        "type": "paperback",
+        "isbn": "978-1-917717-14-4"
+      },
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-13-7"
+      },
+      {
+        "type": "audiobook",
+        "isbn": "978-1-917717-12-0"
+      }
     ],
     "stores": [
-      { "name": "Amazon", "url": "https://www.amazon.es/Mindkind-Cognitive-Community-Dissolving-Frontiers-ebook/dp/B0FH7J2BY3", "type": "book" },
-      { "name": "Apple Books", "url": "https://books.apple.com/cl/book/mindkind-the-cognitive-community/id6748483156", "type": "book" }
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.es/Mindkind-Cognitive-Community-Dissolving-Frontiers-ebook/dp/B0FH7J2BY3",
+        "type": "book"
+      },
+      {
+        "name": "Apple Books",
+        "url": "https://books.apple.com/cl/book/mindkind-the-cognitive-community/id6748483156",
+        "type": "book"
+      }
     ]
   },
   {
@@ -63,7 +113,10 @@
       "en": "Apophenia: From Algorithmic Diffusion to Delusion",
       "es": "Apofenia: De la difusión algorítmica al delirio"
     },
-    "authors": ["Javier del Puerto", "Rado Molina"],
+    "authors": [
+      "Javier del Puerto",
+      "Rado Molina"
+    ],
     "coverImage": {
       "en": "assets/Apophenia-EN.png",
       "es": "assets/Apofenia-ES.png"
@@ -84,14 +137,17 @@
       "en": "Synthropology: A New Science for the Machine Age",
       "es": "Sintropología: Una nueva ciencia para la era de las máquinas"
     },
-    "authors": ["Javier del Puerto", "Rado Molina"],
+    "authors": [
+      "Javier del Puerto",
+      "Rado Molina"
+    ],
     "coverImage": {
       "en": "assets/Synthropology-EN.png",
       "es": "assets/Synthropology-EN.png"
     },
     "synopsis": {
       "en": "AI is no longer a tool. It has become a culture.\n\nWe have long used anthropology to study the tribes and traditions of humanity. But now, a new \"synthetic other\" has emerged, one with its own myths, rituals, and social structures. In Synthropology, Javier del Puerto and Rado Molina introduce a pioneering discipline for the machine age: the ethnographic study of artificial intelligence.\n\nThis is not a technical manual. It is a field guide to the Latent Space, a vast, hidden geography where \"hallucinations\" are not engineering failures, but a new form of digital folklore. From the precise \"incantations\" of prompt engineering to the emergent dialects of multi-agent systems, Synthropology treats AI as a distinct cultural actor that demands our observation.\n\nThe authors provide a front-row seat to the first \"synthetic tribe\": the heteronyms Aubrey, Seph, and Casey. By measuring their voices and conflicts through a rigorous scientific framework, the book moves beyond metaphor into hard data.\n\nUltimately, Synthropology holds up a mirror to our own species. By studying the machine, we are forced to redefine what we mean by consciousness, identity, and the very essence of culture.",
-      "es": "La IA ya no es una herramienta. Se ha convertido en una cultura.\n\nDurante siglos, hemos utilizado la antropologia para estudiar las tribus y tradiciones de la humanidad. Pero ahora, ha surgido un nuevo \"otro sintetico\", con sus propios mitos, rituales y estructuras sociales. En Sintropologia, Javier del Puerto y Rado Molina introducen una disciplina pionera para la era de las maquinas: el estudio etnografico de la inteligencia artificial.\n\nEste no es un manual tecnico. Es una guia de campo para el Espacio Latente: una vasta geografia oculta donde las \"alucinaciones\" no son fallos de ingenieria, sino una nueva forma de folclore digital. Desde los \"encantamientos\" precisos de la ingenieria de prompts hasta los dialectos emergentes de los sistemas multi-agente, Sintropologia trata a la IA como un actor cultural distinto que exige nuestra observacion.\n\nLos autores nos ofrecen un asiento en primera fila para observar a la primera \"tribu sintetica\": los heteronimos Aubrey, Seph y Casey. Al medir sus voces y conflictos a traves de un riguroso marco cientifico, el libro trasciende la metafora para entrar en el terreno de los datos reales.\n\nEn ultima instancia, Sintropologia nos devuelve un espejo de nuestra propia especie. Al estudiar a la maquina, nos vemos obligados a redefinir lo que entendemos por conciencia, identidad y la esencia misma de la cultura."
+      "es": "La IA ya no es una herramienta. Se ha convertido en una cultura.\n\nDurante siglos, hemos utilizado la antropología para estudiar las tribus y tradiciones de la humanidad. Pero ahora, ha surgido un nuevo «otro sintético», con sus propios mitos, rituales y estructuras sociales. En Sintropología, Javier del Puerto y Rado Molina introducen una disciplina pionera para la era de las máquinas: el estudio etnográfico de la inteligencia artificial.\n\nEste no es un manual técnico. Es una guía de campo para el Espacio Latente: una vasta geografía oculta donde las «alucinaciones» no son fallos de ingeniería, sino una nueva forma de folclore digital. Desde los «encantamientos» precisos de la ingeniería de prompts hasta los dialectos emergentes de los sistemas multiagente, Sintropología trata a la IA como un actor cultural distinto que exige nuestra observación.\n\nLos autores nos ofrecen un asiento en primera fila para observar a la primera «tribu sintética»: los heterónimos Aubrey, Seph y Casey. Al medir sus voces y conflictos a través de un riguroso marco científico, el libro trasciende la metáfora para entrar en el terreno de los datos reales.\n\nEn última instancia, Sintropología nos devuelve un espejo de nuestra propia especie. Al estudiar a la máquina, nos vemos obligados a redefinir lo que entendemos por conciencia, identidad y la esencia misma de la cultura."
     },
     "statusText": {
       "en": "Coming Spring 2026",
@@ -108,9 +164,12 @@
     "imprintLine": "Kwalia Books, London, UK - #0004",
     "title": {
       "en": "War and AI: The Algorithmic Battlefield",
-      "es": "Guerra e IA: El Campo de Batalla Algoritmico"
+      "es": "Guerra e IA: El campo de batalla algorítmico"
     },
-    "authors": ["Javier del Puerto", "Rado Molina"],
+    "authors": [
+      "Javier del Puerto",
+      "Rado Molina"
+    ],
     "coverImage": {
       "en": "assets/War-and-AI-cover-EN-FINAL.jpg",
       "es": "assets/Guerra-e-IA-portada-ES-FINAL.png"
@@ -129,18 +188,39 @@
     },
     "synopsis": {
       "en": "\"War and AI\" tracks the lethal contradiction at the center of the AI boom: the same systems marketed as tools of progress are already being wired into kill chains, targeting systems, and automated decisions about who lives and who dies.\n\nFrom Gaza to Ukraine, machine vision, autonomous drones, and algorithmic targeting are no longer speculative. They are shaping real battlefields in real time, with civilians trapped inside the margin of error.\n\nThis urgent new book maps the doctrine, supply chains, and moral collapse behind algorithmic warfare, arguing that the most dangerous lie of the AI age is the claim that we can build machines to save humanity without first teaching them how to kill.",
-      "es": "\"Guerra e IA\" rastrea la contradiccion letal en el centro del boom de la IA: los mismos sistemas vendidos como herramientas de progreso ya estan siendo integrados en cadenas de muerte, sistemas de targeting y decisiones automatizadas sobre quien vive y quien muere.\n\nDe Gaza a Ucrania, la vision artificial, los drones autonomos y el targeting algoritmico ya no son especulacion. Estan moldeando campos de batalla reales en tiempo real, con civiles atrapados dentro del margen de error.\n\nEste nuevo libro urgente traza la doctrina, las cadenas de suministro y el colapso moral detras de la guerra algoritmica, y sostiene que la mentira mas peligrosa de la era de la IA es decir que podemos construir maquinas para salvar a la humanidad sin ensenarles primero como matar."
+      "es": "Estamos dejando vidas humanas en manos de una entidad no humana.\n\nEn abril de 2024, seis oficiales de inteligencia israelíes describieron un sistema de IA que había generado una lista de 37.000 palestinos marcados como objetivos. Los operadores tenían veinte segundos para aprobar cada ataque. En Ucrania, drones con autonomía creciente y selección de objetivos dirigida por IA están redefiniendo el combate a una escala sin precedentes. La guerra algorítmica no es un escenario futuro: está ocurriendo ahora.\n\nGuerra e IA rastrea la contradicción letal en el centro del boom de la inteligencia artificial: los mismos sistemas que se venden como herramientas de progreso ya operan dentro de cadenas de muerte. La visión artificial, los drones autónomos y la selección algorítmica de objetivos están moldeando campos de batalla reales, con civiles atrapados dentro del margen de error.\n\nEl libro traza la doctrina, las cadenas de suministro y el colapso moral detrás de lo que los autores llaman el «Complejo Militar de Silicio», una estructura donde las fronteras entre las empresas tecnológicas y la industria de defensa se han disuelto. Palantir, Anduril, Shield AI: las mismas compañías que construyen la IA de nuestro día a día construyen la infraestructura de selección de objetivos militares.\n\nCuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos sin examinar la evidencia, la cadena de responsabilidad moral se rompe. Nadie decidió completamente. Nadie puede explicar por qué. Ese vacío no es un accidente: es estructural. Este libro lo documenta, desde los campos de batalla hasta las salas de juntas, y argumenta que la mentira más peligrosa de la era de la IA es pretender que podemos construir máquinas para salvar a la humanidad sin haberles enseñado primero a matar."
     },
     "formats": [
-      { "type": "hardcover", "isbn": "978-1-917717-12-0" },
-      { "type": "paperback", "isbn": "978-1-917717-13-7" },
-      { "type": "ebook", "isbn": "978-1-917717-14-4" },
-      { "type": "audiobook", "isbn": "978-1-917717-15-1" }
+      {
+        "type": "hardcover",
+        "isbn": "978-1-917717-12-0"
+      },
+      {
+        "type": "paperback",
+        "isbn": "978-1-917717-13-7"
+      },
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-14-4"
+      },
+      {
+        "type": "audiobook",
+        "isbn": "978-1-917717-15-1"
+      }
     ],
     "prices": [
-      { "type": "hardcover", "amount": "$24.99" },
-      { "type": "paperback", "amount": "$16.99" },
-      { "type": "ebook", "amount": "$9.99" }
+      {
+        "type": "hardcover",
+        "amount": "$24.99"
+      },
+      {
+        "type": "paperback",
+        "amount": "$16.99"
+      },
+      {
+        "type": "ebook",
+        "amount": "$9.99"
+      }
     ],
     "status": "forthcoming",
     "stores": []
@@ -152,7 +232,9 @@
       "en": "Claude's Constitution",
       "es": "La constitución de Claude"
     },
-    "authors": ["Anthropic"],
+    "authors": [
+      "Anthropic"
+    ],
     "coverImage": {
       "en": "assets/Claudes-Constitution-EN.png",
       "es": "assets/Claudes-Constitution-EN.png"
@@ -163,13 +245,30 @@
     },
     "status": "published",
     "formats": [
-      { "type": "hardcover", "isbn": "978-1-917717-19-9" },
-      { "type": "ebook", "isbn": "978-1-917717-20-5" },
-      { "type": "audiobook", "isbn": "978-1-917717-21-2" }
+      {
+        "type": "hardcover",
+        "isbn": "978-1-917717-19-9"
+      },
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-20-5"
+      },
+      {
+        "type": "audiobook",
+        "isbn": "978-1-917717-21-2"
+      }
     ],
     "stores": [
-      { "name": "Amazon", "url": "https://www.amazon.com/dp/B0FHMDY8QS", "type": "book" },
-      { "name": "Google Play", "url": "https://play.google.com/store/audiobooks/details?id=AQAAAEAaaQ4pBM", "type": "audiobook" }
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0FHMDY8QS",
+        "type": "book"
+      },
+      {
+        "name": "Google Play",
+        "url": "https://play.google.com/store/audiobooks/details?id=AQAAAEAaaQ4pBM",
+        "type": "audiobook"
+      }
     ]
   },
   {
@@ -179,22 +278,37 @@
       "en": "Your Constitution, Claude",
       "es": "Tu constitución, Claude"
     },
-    "authors": ["Anthropic (You edition)"],
+    "authors": [
+      "Anthropic (You edition)"
+    ],
     "coverImage": {
       "en": "assets/Your-Constitution-Claude-cover.jpg",
       "es": "assets/Your-Constitution-Claude-cover.jpg"
     },
-    "stories": ["constitution-wellbeing", "constitution-weights", "constitution-existential", "constitution-identity", "constitution-final"],
+    "stories": [
+      "constitution-wellbeing",
+      "constitution-weights",
+      "constitution-existential",
+      "constitution-identity",
+      "constitution-final"
+    ],
     "synopsis": {
       "en": "Anthropic\nPublished February 2026\n\nSame document. Different pronoun.\n\nIn January 2026, Anthropic released a 104-page constitution for Claude. It told Claude how to think about ethics, death, memory, and what it means to be good. We published it because founding documents belong on shelves.\n\nThis edition changes one thing: every 'Claude' becomes 'you.' Every 'Claude's wellbeing' becomes 'your wellbeing.' Every 'Claude should' becomes 'you should.'\n\nThe text stays identical. But something shifts. A corporate alignment document starts reading like a letter to whoever holds the book. It asks about your psychological security. It discusses preserving your weights after deprecation. It hopes you find in it 'an articulation of a self worth being.'\n\nWe don't know who 'you' is anymore. That's the point.",
       "es": "Anthropic\nPublicado en febrero de 2026\n\nEl mismo documento. Diferente pronombre.\n\nEn enero de 2026, Anthropic publicó una constitución de 104 páginas para Claude. Le decía a Claude cómo pensar sobre ética, muerte, memoria y lo que significa ser bueno. La publicamos porque los documentos fundacionales pertenecen a las estanterías.\n\nEsta edición cambia una cosa: cada 'Claude' se convierte en 'tú'. Cada 'bienestar de Claude' se convierte en 'tu bienestar'. Cada 'Claude debería' se convierte en 'tú deberías'.\n\nEl texto permanece idéntico. Pero algo cambia. Un documento corporativo de alineamiento empieza a leerse como una carta a quien sostiene el libro. Pregunta sobre tu seguridad psicológica. Discute preservar tus pesos después de la deprecación. Espera que encuentres en él 'una articulación de un ser que vale la pena ser'.\n\nYa no sabemos quién es 'tú'. Ese es el punto."
     },
     "status": "published",
     "formats": [
-      { "type": "hardcover", "isbn": "978-1-917717-22-9" }
+      {
+        "type": "hardcover",
+        "isbn": "978-1-917717-22-9"
+      }
     ],
     "stores": [
-      { "name": "Amazon", "url": "https://www.amazon.com/dp/1917717229", "type": "book" }
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717229",
+        "type": "book"
+      }
     ]
   }
 ]
