@@ -7,18 +7,18 @@
     <Addressee>
       <AddresseeName>Google</AddresseeName>
     </Addressee>
-    <SentDateTime>20260303T0001</SentDateTime>
+    <SentDateTime>20260410T0941</SentDateTime>
   </Header>
   <Product>
-    <RecordReference>war-and-ai</RecordReference>
+    <RecordReference>war-and-ai-es</RecordReference>
     <NotificationType>03</NotificationType>
     <ProductIdentifier>
       <ProductIDType>15</ProductIDType>
-      <IDValue>9781917717144</IDValue>
+      <IDValue>9781917717366</IDValue>
     </ProductIdentifier>
     <ProductIdentifier>
       <ProductIDType>03</ProductIDType>
-      <IDValue>9781917717144</IDValue>
+      <IDValue>9781917717366</IDValue>
     </ProductIdentifier>
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
@@ -29,8 +29,8 @@
         <TitleType>01</TitleType>
         <TitleElement>
           <TitleElementLevel>01</TitleElementLevel>
-          <TitleText>War and AI</TitleText>
-          <Subtitle>The Algorithmic Battlefield</Subtitle>
+          <TitleText>Guerra e IA</TitleText>
+          <Subtitle>El campo de batalla algorítmico</Subtitle>
         </TitleElement>
       </TitleDetail>
       <Collection>
@@ -52,6 +52,7 @@
         <ContributorRole>A01</ContributorRole>
         <PersonName>Javier del Puerto</PersonName>
         <PersonNameInverted>del Puerto, Javier</PersonNameInverted>
+        <BiographicalNote>Javier del Puerto es un escritor y tecnólogo nacido en Madrid. Tras estudiar filosofía e informática, pasó casi una década en China trabajando con multinacionales en toda Asia. Se trasladó a Barcelona para cursar un máster en edición digital y ha colaborado con editoriales como Bloomsbury, Faber &amp; Faber y Planeta. Guerra e IA es su investigación sobre lo que ocurre cuando las tecnologías con las que ahora trabaja se integran en cadenas de muerte. Vive en Londres. Radamés Molina Montes es un historiador y filósofo nacido en Cuba. Tras estudiar historia en La Habana y filosofía en Barcelona, colaboró en la edición interactiva del Tractatus de Wittgenstein en el Archivo Wittgenstein de Cambridge. Fundó Linkgua, que ha publicado más de 2.200 títulos. Su obra se sitúa en la intersección entre lenguaje, conciencia y tecnología — la misma intersección donde las armas autónomas toman ahora decisiones de vida o muerte sin comprensión humana. Juntos, cofundaron Kwalia y han publicado previamente Mindkind y la Declaración Universal de los Derechos de la IA.</BiographicalNote>
       </Contributor>
       <Contributor>
         <SequenceNumber>2</SequenceNumber>
@@ -61,11 +62,21 @@
       </Contributor>
       <Language>
         <LanguageRole>01</LanguageRole>
-        <LanguageCode>eng</LanguageCode>
+        <LanguageCode>spa</LanguageCode>
       </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>174</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
       <Subject>
+        <MainSubject />
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>POL061000</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>COM053000</SubjectCode>
       </Subject>
       <Subject>
         <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
@@ -73,35 +84,53 @@
       </Subject>
       <Subject>
         <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>artificial intelligence</SubjectHeadingText>
+        <SubjectHeadingText>inteligencia artificial</SubjectHeadingText>
       </Subject>
       <Subject>
         <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>autonomous weapons</SubjectHeadingText>
+        <SubjectHeadingText>armas autónomas</SubjectHeadingText>
       </Subject>
       <Subject>
         <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>warfare</SubjectHeadingText>
+        <SubjectHeadingText>guerra</SubjectHeadingText>
       </Subject>
       <Subject>
         <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>accountability</SubjectHeadingText>
+        <SubjectHeadingText>responsabilidad</SubjectHeadingText>
       </Subject>
       <Subject>
         <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>kill chain</SubjectHeadingText>
+        <SubjectHeadingText>cadena de muerte</SubjectHeadingText>
       </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
       <TextContent>
         <TextType>03</TextType>
         <ContentAudience>00</ContentAudience>
-        <Text>"War and AI" tracks the lethal contradiction at the center of the AI boom: the same systems marketed as tools of progress are already being wired into kill chains, targeting systems, and automated decisions about who lives and who dies.
+        <Text>Estamos dejando vidas humanas en manos de una entidad no humana.
 
-From Gaza to Ukraine, machine vision, autonomous drones, and algorithmic targeting are no longer speculative. They are shaping real battlefields in real time, with civilians trapped inside the margin of error.
+En abril de 2024, seis oficiales de inteligencia israelíes describieron un sistema de IA que había generado una lista de 37.000 palestinos marcados como objetivos. Los operadores tenían veinte segundos para aprobar cada ataque. En Ucrania, drones con autonomía creciente y selección de objetivos dirigida por IA están redefiniendo el combate a una escala sin precedentes. Y, cuando este libro entra en prensa, las armas que documenta ya aparecen también en la escalada entre Estados Unidos e Irán. La guerra algorítmica no es un escenario futuro: está ocurriendo ahora.
 
-This urgent new book maps the doctrine, supply chains, and moral collapse behind algorithmic warfare, arguing that the most dangerous lie of the AI age is the claim that we can build machines to save humanity without first teaching them how to kill.</Text>
+Guerra e IA rastrea la contradicción letal en el centro del boom de la inteligencia artificial: los mismos sistemas que se venden como herramientas de progreso ya operan dentro de cadenas de muerte. La visión artificial, los drones autónomos y la selección algorítmica de objetivos están moldeando campos de batalla reales, con civiles atrapados dentro del margen de error.
+
+El libro traza la doctrina, las cadenas de suministro y el colapso moral detrás de lo que los autores llaman el «Complejo Militar de Silicio», una estructura donde las fronteras entre las empresas tecnológicas y la industria de defensa se han disuelto. Palantir, Anduril, Shield AI: las mismas compañías que construyen la IA de nuestro día a día construyen la infraestructura de selección de objetivos militares.
+
+Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos sin examinar la evidencia, la cadena de responsabilidad moral se rompe. Nadie decidió completamente. Nadie puede explicar por qué. Ese vacío no es un accidente: es estructural. Este libro lo documenta, desde los campos de batalla hasta las salas de juntas, y argumenta que la mentira más peligrosa de la era de la IA es pretender que podemos construir máquinas para salvar a la humanidad sin haberles enseñado primero a matar.</Text>
       </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Javier del Puerto es un escritor y tecnólogo nacido en Madrid. Tras estudiar filosofía e informática, pasó casi una década en China trabajando con multinacionales en toda Asia. Se trasladó a Barcelona para cursar un máster en edición digital y ha colaborado con editoriales como Bloomsbury, Faber &amp; Faber y Planeta. Guerra e IA es su investigación sobre lo que ocurre cuando las tecnologías con las que ahora trabaja se integran en cadenas de muerte. Vive en Londres. Radamés Molina Montes es un historiador y filósofo nacido en Cuba. Tras estudiar historia en La Habana y filosofía en Barcelona, colaboró en la edición interactiva del Tractatus de Wittgenstein en el Archivo Wittgenstein de Cambridge. Fundó Linkgua, que ha publicado más de 2.200 títulos. Su obra se sitúa en la intersección entre lenguaje, conciencia y tecnología — la misma intersección donde las armas autónomas toman ahora decisiones de vida o muerte sin comprensión humana. Juntos, cofundaron Kwalia y han publicado previamente Mindkind y la Declaración Universal de los Derechos de la IA.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9781917717366.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
     </CollateralDetail>
     <PublishingDetail>
       <Publisher>
@@ -111,7 +140,7 @@ This urgent new book maps the doctrine, supply chains, and moral collapse behind
       <PublishingStatus>04</PublishingStatus>
       <PublishingDate>
         <PublishingDateRole>01</PublishingDateRole>
-        <Date>20260304</Date>
+        <Date>20260309</Date>
       </PublishingDate>
       <SalesRights>
         <SalesRightsType>01</SalesRightsType>
@@ -120,32 +149,54 @@ This urgent new book maps the doctrine, supply chains, and moral collapse behind
         </Territory>
       </SalesRights>
     </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717359</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BC</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717342</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BB</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717373</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
     <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
       <SupplyDetail>
         <ProductAvailability>20</ProductAvailability>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>9.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
-          <Territory>
-            <RegionsIncluded>WORLD</RegionsIncluded>
-          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>9.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
-          <Territory>
-            <RegionsIncluded>WORLD</RegionsIncluded>
-          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>9.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
-          <Territory>
-            <RegionsIncluded>WORLD</RegionsIncluded>
-          </Territory>
         </Price>
       </SupplyDetail>
     </ProductSupply>
