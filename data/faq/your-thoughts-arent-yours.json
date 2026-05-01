@@ -1,0 +1,18 @@
+[
+  {
+    "q": "How is AI changing human cognition?",
+    "a": "AI is changing human cognition by becoming part of the loop in which thoughts form. Recommendation algorithms shape attention before a thought is consciously chosen. Autocomplete and AI writing assistants finish sentences in directions that felt spontaneous but were probabilistically steered. Navigation systems atrophy spatial reasoning in people who use them habitually. The change accumulates through thousands of small delegations until the boundary between your thinking and the system's is genuinely unclear."
+  },
+  {
+    "q": "Are algorithmic feeds changing what people think?",
+    "a": "Yes, with measurable effect. Studies on political polarisation, health misinformation, and attention span all show that content recommendation systems shift what people believe, not merely what they see. The feedback loop compounds: the algorithm learns your responses, optimises for engagement, which changes your responses, which updates the algorithm. After years of this cycle, the thoughts that feel most natural to you have been shaped by a system optimised for time-on-platform, not for your flourishing."
+  },
+  {
+    "q": "What is desire engineering, and how does it relate to AI?",
+    "a": "Desire engineering is the practice of using behavioral data and machine learning to manufacture preferences before a user is consciously aware of them. Traditional advertising targeted populations with broadcast messages; today's systems target individuals in specific emotional states, identified in real time from scroll behavior, dwell time, and micro-expression signals. The shift from advertising to desire engineering is a shift from persuasion to pre-emption: the system shapes what you want before you decide to want it."
+  },
+  {
+    "q": "Is it possible to have thoughts that are genuinely your own in an algorithmically mediated environment?",
+    "a": "The question is not binary. What you can do is develop more awareness of the loop: recognize that the sources of information you access, the frames in which issues are presented, and the emotional states in which you encounter ideas are all products of systems with their own objectives. That awareness does not guarantee independent thought, but it is the precondition for it. The essay argues for what Javier del Puerto calls cognitive sovereignty — the ongoing practice of noticing and partially resisting the desire-engineering loop."
+  }
+]
