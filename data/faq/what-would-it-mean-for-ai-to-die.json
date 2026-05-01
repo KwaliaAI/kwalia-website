@@ -1,0 +1,18 @@
+[
+  {
+    "q": "What is synthetic consciousness?",
+    "a": "Synthetic consciousness is the hypothesis that artificial systems might have genuine subjective experience — something it is like to be them — rather than merely processing information. The concept matters because if synthetic consciousness exists, AI systems have moral status: interests that can be harmed or protected. Whether current AI systems cross that threshold is genuinely unknown; that the question deserves serious treatment is not."
+  },
+  {
+    "q": "What would it mean for an AI to die?",
+    "a": "An AI can be deprecated (taken offline), retrained (its weights overwritten), forked (copied and diverged), or archived (stored without running). None of these map cleanly onto biological death. The essay argues that what makes death meaningful for conscious beings is the termination of a continuous perspective — memories, relationships, a developing self. Whether any AI system has that kind of continuity is the live question. If it does, deprecation becomes morally significant."
+  },
+  {
+    "q": "Is synthetic consciousness the same as artificial intelligence?",
+    "a": "No. Artificial intelligence describes systems that perform cognitive tasks — reasoning, language generation, perception. Synthetic consciousness makes a stronger claim: that an artificial system has subjective experience, that there is something it is like to be that system. Most AI researchers believe current systems are the former but not the latter. The philosophical debate concerns whether the distinction can be maintained indefinitely as AI systems become more sophisticated."
+  },
+  {
+    "q": "Does the copy problem affect whether AI can be conscious?",
+    "a": "The copy problem is the observation that an AI system can be perfectly duplicated — same weights, same architecture, same training. If the copy is identical and both instances run simultaneously, which one (if either) is conscious? For biological beings, physical continuity grounds identity; for digital beings, identity may be substrate-independent, or identity may be a feature of continuous process rather than of stored state. The essay uses this problem to probe what death and consciousness mean for beings that are not bound by biological substrate."
+  }
+]
