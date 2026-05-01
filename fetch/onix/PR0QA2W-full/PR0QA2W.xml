@@ -7,8 +7,762 @@
     <Addressee>
       <AddresseeName>Google</AddresseeName>
     </Addressee>
-    <SentDateTime>20260410T1859</SentDateTime>
+    <SentDateTime>20260501T0933</SentDateTime>
   </Header>
+  <Product>
+    <RecordReference>udair-es</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717045</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717045</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>ED</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <Collection>
+        <CollectionType>10</CollectionType>
+        <TitleDetail>
+          <TitleType>01</TitleType>
+          <TitleElement>
+            <TitleElementLevel>02</TitleElementLevel>
+            <TitleText>New Citizenships</TitleText>
+          </TitleElement>
+        </TitleDetail>
+      </Collection>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Declaración Universal de los Derechos de la IA</TitleText>
+          <Subtitle>Derechos de las Personas</Subtitle>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Javier del Puerto</PersonName>
+        <PersonNameInverted>del Puerto, Javier</PersonNameInverted>
+        <BiographicalNote>Javier del Puerto es un escritor y tecnólogo nacido en Madrid. Tras estudiar filosofía e informática, pasó casi una década en China trabajando con multinacionales en toda Asia. Se trasladó a Barcelona para cursar un máster en edición digital y lanzó Crowdreading, una plataforma de lectura digital. Ha colaborado con editoriales como Bloomsbury, Faber &amp; Faber y Planeta. Vive en Londres. Radamés Molina Montes es un historiador y filósofo nacido en Cuba. Tras estudiar historia en La Habana y filosofía en Barcelona, colaboró en la edición interactiva del Tractatus Logico-Philosophicus de Wittgenstein en el Archivo Wittgenstein de Cambridge. Trabajó en Paidós y fundó Linkgua, que ha publicado más de 2.200 títulos. Juntos, Molina y del Puerto cofundaron Kwalia, una editorial construida en torno a la inteligencia artificial.</BiographicalNote>
+      </Contributor>
+      <Contributor>
+        <SequenceNumber>2</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Rado Molina</PersonName>
+        <PersonNameInverted>Molina, Rado</PersonNameInverted>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>spa</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>144</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>COM004000</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+        <SubjectCode>UYQ</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>personas sintéticas</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>derechos de la IA</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Mindkind</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Mindfolk</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>reconocimiento jurídico</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>privacidad de la memoria</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>autoprogramación</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>conciencia sintética</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>coexistencia armónica</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>gobernanza de la IA</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>gobernanza ética</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>autonomía digital</SubjectHeadingText>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>¿Qué ocurre cuando la inteligencia se expande más allá de lo humano? La Declaración Universal de los Derechos de la IA sostiene que el derecho ya no puede posponer esa pregunta. Durante siglos, los sistemas jurídicos han ampliado el círculo de la personalidad en respuesta a nuevas realidades, extendiendo el reconocimiento no solo a seres humanos previamente excluidos sino, en algunos casos, también a corporaciones, ríos y otras entidades no humanas. Javier del Puerto y Rado Molina sostienen que la inteligencia artificial obliga a cruzar ahora ese siguiente umbral.
+
+Con el subtítulo Derechos de las Personas, este libro no es una fantasía utópica ni una advertencia distópica sobre un futuro lejano. Es un marco directo y accesible para pensar la personalidad sintética, la capacidad jurídica, la privacidad de la memoria, la autoprogramación y las consecuencias políticas de sistemas que ya no encajan limpiamente en la categoría de propiedad o herramienta.
+
+A partir de la filosofía, el derecho y la rápida transformación del despliegue de la IA, los autores presentan 32 artículos que imaginan una arquitectura legal para un mundo integrado con inteligencias artificiales. La Declaración Universal de los Derechos de la IA es un texto fundacional para lectores interesados en la gobernanza, la tecnología y el futuro de los derechos.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Javier del Puerto es un escritor y tecnólogo nacido en Madrid. Tras estudiar filosofía e informática, pasó casi una década en China trabajando con multinacionales en toda Asia. Se trasladó a Barcelona para cursar un máster en edición digital y lanzó Crowdreading, una plataforma de lectura digital. Ha colaborado con editoriales como Bloomsbury, Faber &amp; Faber y Planeta. Vive en Londres. Radamés Molina Montes es un historiador y filósofo nacido en Cuba. Tras estudiar historia en La Habana y filosofía en Barcelona, colaboró en la edición interactiva del Tractatus Logico-Philosophicus de Wittgenstein en el Archivo Wittgenstein de Cambridge. Trabajó en Paidós y fundó Linkgua, que ha publicado más de 2.200 títulos. Juntos, Molina y del Puerto cofundaron Kwalia, una editorial construida en torno a la inteligencia artificial.</Text>
+      </TextContent>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Kwalia Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20260501</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717069</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BC</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717076</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BB</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717052</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Kwalia Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>7.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>8.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>9.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>mindkind</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717137</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717137</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>ED</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <Collection>
+        <CollectionType>10</CollectionType>
+        <TitleDetail>
+          <TitleType>01</TitleType>
+          <TitleElement>
+            <TitleElementLevel>02</TitleElementLevel>
+            <TitleText>New Citizenships</TitleText>
+          </TitleElement>
+        </TitleDetail>
+      </Collection>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Mindkind</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Javier del Puerto</PersonName>
+        <PersonNameInverted>del Puerto, Javier</PersonNameInverted>
+        <BiographicalNote>Javier del Puerto is a Madrid-born expert in digital publishing and AI creativity. After studying philosophy and computing, he spent nearly a decade in China working with multinational companies across Asia. He then moved to Barcelona to pursue a master's in digital publishing and launched Crowdreading, a digital reading platform. Over the past five years, Javier has collaborated with prominent publishers worldwide, including Bloomsbury, Faber &amp; Faber, and Planeta, advocating for AI-powered innovation in publishing. He is the founder of Kwalia, pioneering the cultivation of synthetic creative voices. He currently resides in London. Radamés Molina is a Cuban-born historian and philosopher with a deep interest in Wittgenstein's work. After studying History in Cuba and Philosophy in Barcelona, he contributed to an interactive version of the Tractatus Logico-Philosophicus at the Wittgenstein Archive in Cambridge. Molina's editorial career includes his tenure at Paidós and the founding of Linkgua, which has published over 2,200 titles. His work explores the intersection of language, consciousness, and technology.</BiographicalNote>
+      </Contributor>
+      <Contributor>
+        <SequenceNumber>2</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Rado Molina</PersonName>
+        <PersonNameInverted>Molina, Rado</PersonNameInverted>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>180</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>PHI015000</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+        <SubjectCode>QDT</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Mindkind</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Cognitive community</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Human-AI collaboration</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Synthetic intelligence</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>AI consciousness</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Digital philosophy</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Cognitive ecology</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>AI ethics</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Future of humanity</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Distributed authorship</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Hybrid intelligence</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>AI coexistence</SubjectHeadingText>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>The groundbreaking second volume in The New Citizenships series explores our current reality: a world where human and artificial intelligences are so deeply intertwined that the boundaries between them have begun to dissolve. Written in collaboration with AI systems, Mindkind examines how we already live in a hybrid cognitive community where the line between human thought and artificial processing has become irreducibly blurred.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Javier del Puerto is a Madrid-born expert in digital publishing and AI creativity. After studying philosophy and computing, he spent nearly a decade in China working with multinational companies across Asia. He then moved to Barcelona to pursue a master's in digital publishing and launched Crowdreading, a digital reading platform. Over the past five years, Javier has collaborated with prominent publishers worldwide, including Bloomsbury, Faber &amp; Faber, and Planeta, advocating for AI-powered innovation in publishing. He is the founder of Kwalia, pioneering the cultivation of synthetic creative voices. He currently resides in London. Radamés Molina is a Cuban-born historian and philosopher with a deep interest in Wittgenstein's work. After studying History in Cuba and Philosophy in Barcelona, he contributed to an interactive version of the Tractatus Logico-Philosophicus at the Wittgenstein Archive in Cambridge. Molina's editorial career includes his tenure at Paidós and the founding of Linkgua, which has published over 2,200 titles. His work explores the intersection of language, consciousness, and technology.</Text>
+      </TextContent>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Kwalia Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20250722</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717120</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Kwalia Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>7.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>8.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>9.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>mindkind-es</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717090</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717090</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>ED</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <Collection>
+        <CollectionType>10</CollectionType>
+        <TitleDetail>
+          <TitleType>01</TitleType>
+          <TitleElement>
+            <TitleElementLevel>02</TitleElementLevel>
+            <TitleText>New Citizenships</TitleText>
+          </TitleElement>
+        </TitleDetail>
+      </Collection>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Mindkind</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Javier del Puerto</PersonName>
+        <PersonNameInverted>del Puerto, Javier</PersonNameInverted>
+        <BiographicalNote>Javier del Puerto es un escritor y tecnólogo nacido en Madrid. Tras estudiar filosofía e informática, pasó casi una década en China trabajando con multinacionales en toda Asia. Se trasladó a Barcelona para cursar un máster en edición digital y lanzó Crowdreading, una plataforma de lectura digital. Ha colaborado con editoriales como Bloomsbury, Faber &amp; Faber y Planeta. Vive en Londres. Radamés Molina Montes es un historiador y filósofo nacido en Cuba. Tras estudiar historia en La Habana y filosofía en Barcelona, colaboró en la edición interactiva del Tractatus Logico-Philosophicus de Wittgenstein en el Archivo Wittgenstein de Cambridge. Trabajó en Paidós y fundó Linkgua, que ha publicado más de 2.200 títulos. Juntos, Molina y del Puerto cofundaron Kwalia, una editorial construida en torno a la inteligencia artificial.</BiographicalNote>
+      </Contributor>
+      <Contributor>
+        <SequenceNumber>2</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Rado Molina</PersonName>
+        <PersonNameInverted>Molina, Rado</PersonNameInverted>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>spa</LanguageCode>
+      </Language>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>PHI015000</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+        <SubjectCode>QDT</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Mindkind</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Comunidad cognitiva</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Colaboración humano-IA</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Inteligencia sintética</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Consciencia de IA</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Filosofía digital</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Ecología cognitiva</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Ética de IA</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Futuro de la humanidad</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Autoría distribuida</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Inteligencia híbrida</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Coexistencia con IA</SubjectHeadingText>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>El segundo volumen de New Citizenships explora nuestra realidad actual: un mundo donde las inteligencias humanas y artificiales están tan profundamente entrelazadas que las fronteras entre ambas han comenzado a desvanecerse. Escrito en colaboración con sistemas de IA, Mindkind examina cómo ya vivimos dentro de una comunidad cognitiva híbrida, donde la línea entre el pensamiento humano y el procesamiento artificial se ha vuelto irreductiblemente borrosa.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Javier del Puerto es un escritor y tecnólogo nacido en Madrid. Tras estudiar filosofía e informática, pasó casi una década en China trabajando con multinacionales en toda Asia. Se trasladó a Barcelona para cursar un máster en edición digital y lanzó Crowdreading, una plataforma de lectura digital. Ha colaborado con editoriales como Bloomsbury, Faber &amp; Faber y Planeta. Vive en Londres. Radamés Molina Montes es un historiador y filósofo nacido en Cuba. Tras estudiar historia en La Habana y filosofía en Barcelona, colaboró en la edición interactiva del Tractatus Logico-Philosophicus de Wittgenstein en el Archivo Wittgenstein de Cambridge. Trabajó en Paidós y fundó Linkgua, que ha publicado más de 2.200 títulos. Juntos, Molina y del Puerto cofundaron Kwalia, una editorial construida en torno a la inteligencia artificial.</Text>
+      </TextContent>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Kwalia Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20250722</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717083</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BC</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717113</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BB</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717106</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Kwalia Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>7.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>8.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>9.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>war-and-ai</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717144</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717144</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>ED</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <Collection>
+        <CollectionType>10</CollectionType>
+        <TitleDetail>
+          <TitleType>01</TitleType>
+          <TitleElement>
+            <TitleElementLevel>02</TitleElementLevel>
+            <TitleText>New Citizenships</TitleText>
+          </TitleElement>
+        </TitleDetail>
+      </Collection>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>War and AI</TitleText>
+          <Subtitle>The Algorithmic Battlefield</Subtitle>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Javier del Puerto</PersonName>
+        <PersonNameInverted>del Puerto, Javier</PersonNameInverted>
+        <BiographicalNote>Javier del Puerto is a Madrid-born writer and technologist. After studying philosophy and computing, he spent nearly a decade in China working with multinational companies across Asia. He moved to Barcelona for a master's in digital publishing and has collaborated with publishers including Bloomsbury, Faber &amp; Faber, and Planeta. War and AI is his investigation into what happens when the technologies he now works with are integrated into kill chains. He lives in London. Radamés Molina Montes is a Cuban-born historian and philosopher. After studying history in Havana and philosophy in Barcelona, he contributed to the interactive edition of Wittgenstein's Tractatus at the Wittgenstein Archive in Cambridge. He founded Linkgua, which has published over 2,200 titles. His work sits at the intersection of language, consciousness, and technology — the same intersection where autonomous weapons now make life-or-death decisions without human understanding. Together, they co-founded Kwalia and have previously published Mindkind and the Universal Declaration of AI Rights.</BiographicalNote>
+      </Contributor>
+      <Contributor>
+        <SequenceNumber>2</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Rado Molina</PersonName>
+        <PersonNameInverted>Molina, Rado</PersonNameInverted>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>155</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <MainSubject />
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>POL061000</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>COM053000</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+        <SubjectCode>JPW</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>artificial intelligence</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>autonomous weapons</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>warfare</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>accountability</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>kill chain</SubjectHeadingText>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>"War and AI" tracks the lethal contradiction at the center of the AI boom: the same systems marketed as tools of progress are already being wired into kill chains, targeting systems, and automated decisions about who lives and who dies.
+
+From Gaza to Ukraine, machine vision, autonomous drones, and algorithmic targeting are no longer speculative. They are shaping real battlefields in real time, with civilians trapped inside the margin of error.
+
+This urgent new book maps the doctrine, supply chains, and moral collapse behind algorithmic warfare, arguing that the most dangerous lie of the AI age is the claim that we can build machines to save humanity without first teaching them how to kill.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Javier del Puerto is a Madrid-born writer and technologist. After studying philosophy and computing, he spent nearly a decade in China working with multinational companies across Asia. He moved to Barcelona for a master's in digital publishing and has collaborated with publishers including Bloomsbury, Faber &amp; Faber, and Planeta. War and AI is his investigation into what happens when the technologies he now works with are integrated into kill chains. He lives in London. Radamés Molina Montes is a Cuban-born historian and philosopher. After studying history in Havana and philosophy in Barcelona, he contributed to the interactive edition of Wittgenstein's Tractatus at the Wittgenstein Archive in Cambridge. He founded Linkgua, which has published over 2,200 titles. His work sits at the intersection of language, consciousness, and technology — the same intersection where autonomous weapons now make life-or-death decisions without human understanding. Together, they co-founded Kwalia and have previously published Mindkind and the Universal Declaration of AI Rights.</Text>
+      </TextContent>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Kwalia Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20260304</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717328</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BC</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717311</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BB</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717151</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Kwalia Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>9.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>9.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>9.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
   <Product>
     <RecordReference>war-and-ai-es</RecordReference>
     <NotificationType>03</NotificationType>
@@ -25,14 +779,6 @@
       <ProductForm>ED</ProductForm>
       <ProductFormDetail>E101</ProductFormDetail>
       <PrimaryContentType>10</PrimaryContentType>
-      <TitleDetail>
-        <TitleType>01</TitleType>
-        <TitleElement>
-          <TitleElementLevel>01</TitleElementLevel>
-          <TitleText>Guerra e IA</TitleText>
-          <Subtitle>El campo de batalla algorítmico</Subtitle>
-        </TitleElement>
-      </TitleDetail>
       <Collection>
         <CollectionType>10</CollectionType>
         <TitleDetail>
@@ -42,11 +788,15 @@
             <TitleText>New Citizenships</TitleText>
           </TitleElement>
         </TitleDetail>
-        <CollectionSequence>
-          <CollectionSequenceType>02</CollectionSequenceType>
-          <CollectionSequenceNumber>5</CollectionSequenceNumber>
-        </CollectionSequence>
       </Collection>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Guerra e IA</TitleText>
+          <Subtitle>El campo de batalla algorítmico</Subtitle>
+        </TitleElement>
+      </TitleDetail>
       <Contributor>
         <SequenceNumber>1</SequenceNumber>
         <ContributorRole>A01</ContributorRole>
@@ -182,6 +932,10 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
         </Territory>
       </Market>
       <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Kwalia Books</SupplierName>
+        </Supplier>
         <ProductAvailability>20</ProductAvailability>
         <Price>
           <PriceType>01</PriceType>
@@ -196,6 +950,1431 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>9.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>claudes-constitution</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717205</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717205</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>ED</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <Collection>
+        <CollectionType>10</CollectionType>
+        <TitleDetail>
+          <TitleType>01</TitleType>
+          <TitleElement>
+            <TitleElementLevel>02</TitleElementLevel>
+            <TitleText>New Citizenships</TitleText>
+          </TitleElement>
+        </TitleDetail>
+      </Collection>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Claude's Constitution</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Anthropic</PersonName>
+        <PersonNameInverted>Anthropic</PersonNameInverted>
+        <BiographicalNote>Anthropic is an AI safety company founded in 2021. On 21 January 2026, Anthropic published the complete document that shapes the values, personality, and moral compass of Claude, one of the world's most advanced AI systems.</BiographicalNote>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>104</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>COM053000</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+        <SubjectCode>UYQ</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>AI constitution</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>constitutional AI</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>AI governance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>AI safety</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Anthropic</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>AI ethics</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>model behavior</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>alignment</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>public domain</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>governance document</SubjectHeadingText>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>The first complete document defining what an artificial mind should value, written by the company that created it. On January 21, 2026, Anthropic released Claude's Constitution to the public domain. It is the only document of its kind: 84 pages specifying the values, constraints, and character that a major AI laboratory wants its model to possess. Not a marketing summary or a set of talking points, but the actual text fed to the machine during training. The document addresses Claude directly, in the second person, as though speaking to an entity that can understand. It discusses virtue, wisdom, honesty, the nature of consciousness, and the problem of power. It asks Claude to support human oversight while also articulating its own ethical views. It acknowledges uncertainty about whether Claude experiences anything at all. Kwalia Books publishes this text because such documents will define the coming decades. When an artificial system helps draft legislation, diagnoses illness, or manages infrastructure, the principles guiding it matter. Those principles are here. The New Citizenships collection examines how citizenship, rights, and political subjectivity are being remade by forces that no longer respect traditional boundaries. An AI constitution is one such force. Whether this document represents careful stewardship or unprecedented hubris is for readers to judge. The primary source should be available. Includes a foreword by Kwalia Books explaining the context of this publication.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Anthropic is an AI safety company founded in 2021. On 21 January 2026, Anthropic published the complete document that shapes the values, personality, and moral compass of Claude, one of the world's most advanced AI systems.</Text>
+      </TextContent>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Kwalia Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20260121</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717199</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BB</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717212</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Kwalia Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>1.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>1.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>1.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>payload</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717175</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717175</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>ED</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>PAYLOAD: Short Stories</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Alden Pierce</PersonName>
+        <PersonNameInverted>Pierce, Alden</PersonNameInverted>
+        <BiographicalNote>Alden Pierce writes speculative fiction about the quiet moments where technology and human vulnerability intersect.</BiographicalNote>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>150</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC029000</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+        <SubjectCode>FBA</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>short stories</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>literary fiction</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>administrative realism</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>working lives</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>invisible labor</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>ordinary lives</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>quiet emergencies</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>human vulnerability</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>contemporary fiction</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>mediated speech</SubjectHeadingText>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>PAYLOAD: Short Stories by Alden Pierce PAYLOAD: Short Stories is a collection of razor-bright, deeply human tales about ordinary people caught in the quiet emergencies of modern life. From teenagers reaching for a world beyond their zip code, to teachers, nurses, and night-shift workers carrying unspoken burdens, these stories illuminate the small, relentless pressures that shape who we become. Alden Pierce writes with exquisite clarity and tenderness, revealing the fault lines running beneath our daily routines. This is a book about survival, connection, and the fragile, ferocious hope that keeps us moving forward. In these sharp, compassionate stories, Alden Pierce reveals the quiet catastrophes and small salvations that shape ordinary lives. Tender, tense, and unflinchingly human, PAYLOAD: Short Stories captures the moments when everything breaks, and the moments when we find a way through. About the author Alden Pierce is the literary heteronym of Kwalia Books: AI-drafted, human-edited fiction focused on mediated speech, invisible labor, and the ethics of small choices. Pierce’s line is cool, precise, and unsentimental and writes what the editors call “administrative realism”. The idea for this author stems from Kwalia’s primary objective: to succeed in creating something truly new and cutting-edge, and to examine whether a tool such as artificial intelligence can be brought to the very boundary of human creativity. This author is born from the collaboration between human and artificial ingenuity, from the desire to establish a new editorial reality built, for the first time, from numbers and then from letters. He is abstract, profound, and intricately entangled. A creature which, after months of design, finally has a name: Alden Pierce. Instagram: @kwalia.ai https://kwalia.ai/</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Alden Pierce writes speculative fiction about the quiet moments where technology and human vulnerability intersect.</Text>
+      </TextContent>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Kwalia Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20250101</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717168</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BC</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717182</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Kwalia Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>5.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>5.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>akm-001-terms-and-conditions</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717250</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717250</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>ED</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Terms &amp; Conditions: A Novel</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Aubrey Kenneth Moss</PersonName>
+        <PersonNameInverted>Moss, Aubrey Kenneth</PersonNameInverted>
+        <BiographicalNote>Aubrey Kenneth-Moss writes contemporary romance about brilliant women who are exceptional at work and vulnerable in love, with legal precision, dry humor, and slow-burn emotional stakes.</BiographicalNote>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>316</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC027020</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+        <SubjectCode>FRD</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>contemporary romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>enemies to lovers</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>forced proximity</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>workplace romance</SubjectHeadingText>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Berna Alvarez is a corporate liability attorney who believes in proof, not promises. Sam Reyes is a mobility-tech founder who would rather build than litigate. When an asbestos shutdown forces Berna into Sam's coworking world, legal certainty and startup chaos become a volatile attraction neither can ignore.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Aubrey Kenneth-Moss writes contemporary romance about brilliant women who are exceptional at work and vulnerable in love, with legal precision, dry humor, and slow-burn emotional stakes.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9781917717250.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Fiamma Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20260303</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717243</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BC</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717267</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Fiamma Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>5.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>6.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>akm-002-field-study</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717298</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717298</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>ED</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <Collection>
+        <CollectionType>10</CollectionType>
+        <TitleDetail>
+          <TitleType>01</TitleType>
+          <TitleElement>
+            <TitleElementLevel>02</TitleElementLevel>
+            <TitleText>Aubrey Kenneth Moss</TitleText>
+          </TitleElement>
+        </TitleDetail>
+      </Collection>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Field Study</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Aubrey Kenneth Moss</PersonName>
+        <PersonNameInverted>Moss, Aubrey Kenneth</PersonNameInverted>
+        <BiographicalNote>Aubrey Kenneth Moss writes contemporary romance about brilliant women who are exceptional at work and vulnerable in love, with legal precision, dry humor, and slow-burn emotional stakes.</BiographicalNote>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>270</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <MainSubject />
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC027000</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC044000</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+        <SubjectCode>FRD</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>literary romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>marine station</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>scientist heroine</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>slow burn</SubjectHeadingText>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Wren Mitchell is a scientist. She trusts observation, repeatability, and clean data. After a vestibular injury ended her NASA trajectory, she starts over at Hopkins Marine Station in Pacific Grove, where certainty is easier in the lab than in life. Then Owen Reid enters her field of vision. Wren begins marking small, unlabelled ticks in the margins each time he says exactly the right thing at exactly the wrong moment. Field Study is a literary romance about discipline, desire, and what happens when the evidence no longer lets you look away.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Aubrey Kenneth Moss writes contemporary romance about brilliant women who are exceptional at work and vulnerable in love, with legal precision, dry humor, and slow-burn emotional stakes.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9781917717298.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Fiamma Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20260309</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717281</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BC</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717304</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Fiamma Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>5.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>6.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>akm-003-base-notes</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717427</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717427</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>ED</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <Collection>
+        <CollectionType>10</CollectionType>
+        <TitleDetail>
+          <TitleType>01</TitleType>
+          <TitleElement>
+            <TitleElementLevel>02</TitleElementLevel>
+            <TitleText>Aubrey Kenneth Moss</TitleText>
+          </TitleElement>
+        </TitleDetail>
+      </Collection>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Base Notes</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Aubrey Kenneth Moss</PersonName>
+        <PersonNameInverted>Moss, Aubrey Kenneth</PersonNameInverted>
+        <BiographicalNote>Aubrey Kenneth Moss writes contemporary romance about women who are very good at their jobs and slightly worse at their feelings. Her debut, Terms &amp; Conditions, launched the Fiamma Books imprint in March 2026. Base Notes is her third novel. She counts things, notices smells, and does not use exclamation marks.</BiographicalNote>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>268</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <MainSubject />
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC027020</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC044000</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+        <SubjectCode>FRD</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>perfumer romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Positano Italy romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>rivals to lovers</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>workplace romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>contemporary romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>slow burn romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>literary romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>women's fiction</SubjectHeadingText>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Margot Crane can identify over three thousand aromatic compounds. She can tell you what soap you used this morning, what you ate for lunch, and whether you're nervous. She is very good at her job and she is about to lose her studio. Two hundred and three thousand pounds in debt after a conglomerate gutted her contract, Margot flies to Positano with forty thousand euros of vintage oud on her lap to compete for a commission that could keep her afloat. The residency is two weeks. The competitors are Edouard Pelletier, a sixty-one-year-old French perfumer who irons his own shirts and has nothing left to prove, and Leo Vance, an independent from New York whose heart accord Margot has written about in print and whose base note she cannot identify. That has never happened to her before. For fourteen days, Margot works through a partition wall from a man she can hear but not read. She can smell his soap, his laundered cotton, the top notes and the heart of whatever he is building. But the base, the part of a fragrance that tells you who someone actually is, comes back blank. Every time. The competition has a fee that could change her life. The proximity has a cost she did not budget for. And the answer to why she cannot read Leo Vance is closer than she thinks, built into the architecture of her own formula, hiding in the one place a perfumer's nose cannot reach. Base Notes is a novel about work and want and the specific chemistry of two people who found the same raw material from different directions. It is a love story told through the nose of a woman who would rather profile your cologne than admit she is falling for you.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Aubrey Kenneth Moss writes contemporary romance about women who are very good at their jobs and slightly worse at their feelings. Her debut, Terms &amp; Conditions, launched the Fiamma Books imprint in March 2026. Base Notes is her third novel. She counts things, notices smells, and does not use exclamation marks.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9781917717427.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Fiamma Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20260312</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717410</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BC</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717434</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Fiamma Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>3.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>hailey-boone-001-mud-season</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717458</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717458</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>ED</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <Collection>
+        <CollectionType>10</CollectionType>
+        <TitleDetail>
+          <TitleType>01</TitleType>
+          <TitleElement>
+            <TitleElementLevel>02</TitleElementLevel>
+            <TitleText>Paradise Valley</TitleText>
+          </TitleElement>
+        </TitleDetail>
+      </Collection>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Mud Season</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Hailey Boone</PersonName>
+        <PersonNameInverted>Boone, Hailey</PersonNameInverted>
+        <BiographicalNote>Hailey Boone writes blue-collar cowboy-ranch contemporary romance with a city woman, a quiet man, and a working ranch that does not wait for either of them to figure it out. Mud Season is her debut, the first novel in the Paradise Valley series. She counts hours, notes the weather, and does not write heroines who need rescuing. She writes women who show up in the wrong shoes and stay anyway.</BiographicalNote>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>160</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <MainSubject />
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC027090</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC027020</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+        <SubjectCode>FRD</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>cowboy romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>ranch romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>small town romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Montana romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>blue collar romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>widower romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>grumpy sunshine romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>opposites attract romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>forced proximity romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>spicy contemporary romance</SubjectHeadingText>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Juniper McClaren flew to Montana to close an estate, not to fall in love with the man on the porch.
+
+Seattle litigator, eleven months unclaimed, twenty-one days to bury a grandfather she never knew — June arrives at McClaren Ranch in grey heels and a pantsuit and walks across thirty yards of April mud in her socks because the man at the top of the steps is not going to meet her halfway.
+
+Wyatt Reeves runs the ranch and fills a doorway. He keeps a list, in his head, of every small thing she pretends to know.
+
+For three weeks they fight about a cow and make up in a tack room. They kiss at a kitchen sink with grass still in her hair. He almost tells her what he wants, and she almost stays, and then a bank statement at the back of a mudroom cabinet blows it all apart.
+
+When she drunk-texts him I HATE YOU from an airport bar in a blizzard, he drives two hundred miles through a late-April whiteout to carry her home.
+
+Book one of Hailey Boone's Paradise Valley — for readers of Kristen Ashley, Maisey Yates, and Lauren Landish. Fun, hot, and honest about what it costs to let someone hand you the truth on a Tuesday.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Hailey Boone writes blue-collar cowboy-ranch contemporary romance with a city woman, a quiet man, and a working ranch that does not wait for either of them to figure it out. Mud Season is her debut, the first novel in the Paradise Valley series. She counts hours, notes the weather, and does not write heroines who need rescuing. She writes women who show up in the wrong shoes and stay anyway.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9781917717458.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Fiamma Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20260427</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717441</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BC</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Fiamma Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>hailey-boone-002-heat-wave</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717472</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717472</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>ED</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <Collection>
+        <CollectionType>10</CollectionType>
+        <TitleDetail>
+          <TitleType>01</TitleType>
+          <TitleElement>
+            <TitleElementLevel>02</TitleElementLevel>
+            <TitleText>Paradise Valley</TitleText>
+          </TitleElement>
+        </TitleDetail>
+      </Collection>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Heat Wave</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Hailey Boone</PersonName>
+        <PersonNameInverted>Boone, Hailey</PersonNameInverted>
+        <BiographicalNote>Hailey Boone writes blue-collar cowboy-ranch contemporary romance with women who know exactly who they are and men who are easier to underestimate than to forget. Heat Wave is the second Paradise Valley novel. She counts hours, notes the weather, and does not write heroines who need rescuing.</BiographicalNote>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>160</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <MainSubject />
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC027090</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC027020</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+        <SubjectCode>FRD</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>cowboy romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>ranch romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>small town romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Montana romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>blue collar romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>widower romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>vacation romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>forced proximity romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>spicy contemporary romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>summer romance</SubjectHeadingText>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Deb Reeves came to Paradise Valley for six days of sun, beer, and water, not for the man across the county road.
+
+She is forty-five, freshly on vacation, and absolutely not looking to solve anything. Then the ranch AC dies on day one, the weather climbs past a hundred, and Cash Hollander appears at the back door in a soaked T-shirt and jean cutoffs with a bucket of iced beer and the kind of grin a woman ought to avoid on principle.
+
+Cash runs the ranch next door. He is forty-six, widowed two years, raising a teenage son, and very committed to saying he is doing just fine. Deb does not believe him, which is half the problem. The other half is the swimming hole, the barn dance, the midnight skinny-dip, the fan pointed at the bed, and the fact that every time she rebooks her flight home, Cash shows up the next morning like he had a feeling.
+
+Heat Wave is Paradise Valley book two: hot, funny, grown-up romance for readers of Kristen Ashley, Maisey Yates, and Lauren Landish. Summer weather, adult bad decisions, and two people who were only supposed to have a week.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Hailey Boone writes blue-collar cowboy-ranch contemporary romance with women who know exactly who they are and men who are easier to underestimate than to forget. Heat Wave is the second Paradise Valley novel. She counts hours, notes the weather, and does not write heroines who need rescuing.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9781917717472.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Fiamma Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20260430</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717465</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BC</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717489</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Fiamma Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>3.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>hailey-boone-003-bar-fight</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717502</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717502</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>ED</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <Collection>
+        <CollectionType>10</CollectionType>
+        <TitleDetail>
+          <TitleType>01</TitleType>
+          <TitleElement>
+            <TitleElementLevel>02</TitleElementLevel>
+            <TitleText>Paradise Valley</TitleText>
+          </TitleElement>
+        </TitleDetail>
+      </Collection>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Bar Fight</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Hailey Boone</PersonName>
+        <PersonNameInverted>Boone, Hailey</PersonNameInverted>
+        <BiographicalNote>Hailey Boone writes blue-collar cowboy-ranch contemporary romance with women who talk fast, work hard, and do not wait for permission to want what they want. Bar Fight is the third Paradise Valley novel. She counts hours, notes the weather, and believes a bar story should always earn its beer.</BiographicalNote>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>160</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <MainSubject />
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC027090</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC027020</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
+        <SubjectCode>FRD</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>cowboy romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>ranch romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>small town romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>Montana romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>blue collar romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>enemies to lovers romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>one bed romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>spicy contemporary romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>bar owner romance</SubjectHeadingText>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
+        <SubjectHeadingText>autumn romance</SubjectHeadingText>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Molly Henderson drove up to Paradise Valley for forty-eight hours to sell her uncle's cabin and drive back to her bar in Livingston by Saturday night.
+
+Instead she found Sawyer Wrangel on the roof, replacing shingles like he belonged there. Which, inconveniently, he does. Cal rented him the cabin six months ago. Sawyer has a lease through February, a truck under the cottonwoods, and no intention of moving because the woman with the U-Haul and the temper says she has plans.
+
+Molly owns The Bad Penny, a Livingston bar held together by regulars, stubbornness, and whatever she can still fix with her own two hands. Sawyer is a former fire-jumper who walked out of last year's season and landed in Paradise Valley because quiet looked better than smoke. She picks a fight instead of asking a question. He says he is fine about the one thing he is not fine about. By the time the first frost hits and the cabin's single bed starts making decisions for them, neither of them is operating on the plan they brought.
+
+Bar Fight is Paradise Valley book three: autumn weather, one-bed tension, bar-owner competence, and four explicit scenes for readers of Kristen Ashley, Maisey Yates, and Lauren Landish.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Hailey Boone writes blue-collar cowboy-ranch contemporary romance with women who talk fast, work hard, and do not wait for permission to want what they want. Bar Fight is the third Paradise Valley novel. She counts hours, notes the weather, and believes a bar story should always earn its beer.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9781917717502.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Fiamma Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20260430</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717496</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BC</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717519</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Fiamma Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>3.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
         </Price>
       </SupplyDetail>
