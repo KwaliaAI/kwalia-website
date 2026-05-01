@@ -1,0 +1,127 @@
+## Wikidata QuickStatements — Kwalia entity graph (Batch 1)
+## Generated: 2026-05-01 (patched from initial draft after Wave B sub)
+## Status: READY for Founder to submit via QuickStatements UI manually
+##         (one-time OAuth handshake; future batches via API).
+## Tool: https://quickstatements.toolforge.org/
+## Format: TAB-separated CREATE / LAST blocks (V1 commands)
+##
+## EXISTING ENTITIES — DO NOT RE-CREATE:
+##   Q134954687 = Kwalia (Organization) — already populated with 14 statements;
+##                this batch enriches it with P800 (notable work) → 4 new books
+##   Q134955002 = Universal Declaration of AI Rights (Book) — already populated;
+##                this batch enriches it with P50 author Q-ids and P179 series
+##
+## ENTITIES THIS BATCH CREATES (7):
+##   - Javier del Puerto (Person, Q5)
+##   - Radamés Molina Montes (Person, Q5)
+##   - New Citizenships (book series, Q277759)
+##   - Mindkind: The Cognitive Community (Book, Q571)
+##   - War and AI: The Algorithmic Battlefield (Book, Q571)
+##   - Claude's Constitution (Book, Q571)
+##   - Your Constitution, Claude (Book, Q571)
+##
+## DEFERRED TO BATCH 2 (API):
+##   Cross-references between new entities require their Q-ids to be known.
+##   Batch 2 (run via API once Batch 1 lands) will add:
+##     - P50 author Q-ids on the 4 new books (Javier + Rado for first 2; Javier only for CC + YCC)
+##     - P179 part-of-series on the 4 new books (pointing to New Citizenships)
+##
+## Verified Wikidata properties + classes:
+##   P31  = instance of
+##   P50  = author (work → human Q-id)
+##   P123 = publisher
+##   P179 = part of the series
+##   P212 = ISBN-13
+##   P800 = notable work
+##   P856 = official website
+##   Q5      = human (verified)
+##   Q571    = book (verified)
+##   Q277759 = book series (verified — corrected from initial Q193424 which was "web service")
+
+## ─────────────────────────────────────────────
+## CREATE 1: Javier del Puerto (Person)
+## Followed by enrichment of existing UDAIR with this author Q-id.
+## ─────────────────────────────────────────────
+CREATE
+LAST	Len	"Javier del Puerto"
+LAST	Den	"Spanish author and publisher; founder of Kwalia Ltd; writes about artificial intelligence, AI rights, and the cognitive transition"
+LAST	P31	Q5
+LAST	P856	"https://kwalia.ai"
+Q134955002	P50	LAST
+
+## ─────────────────────────────────────────────
+## CREATE 2: Radamés Molina Montes (Person)
+## ─────────────────────────────────────────────
+CREATE
+LAST	Len	"Radamés Molina Montes"
+LAST	Aen	"Rado Molina"
+LAST	Den	"Co-author with Javier del Puerto on the New Citizenships series; co-founder of Kwalia Ltd"
+LAST	P31	Q5
+Q134955002	P50	LAST
+
+## ─────────────────────────────────────────────
+## CREATE 3: New Citizenships (book series)
+## ─────────────────────────────────────────────
+CREATE
+LAST	Len	"New Citizenships"
+LAST	Den	"Nonfiction book series by Javier del Puerto and Radamés Molina Montes, published by Kwalia, exploring AI rights, synthetic consciousness, and the cognitive transition"
+LAST	P31	Q277759
+LAST	P123	Q134954687
+Q134955002	P179	LAST
+
+## ─────────────────────────────────────────────
+## CREATE 4: Mindkind: The Cognitive Community (Book)
+## ─────────────────────────────────────────────
+CREATE
+LAST	Len	"Mindkind: The Cognitive Community"
+LAST	Den	"2025 nonfiction book by Javier del Puerto and Radamés Molina Montes on human-AI cognitive entanglement and the emerging cognitive community; published by Kwalia"
+LAST	P31	Q571
+LAST	P123	Q134954687
+LAST	P212	"978-1-917717-13-7"
+Q134954687	P800	LAST
+
+## ─────────────────────────────────────────────
+## CREATE 5: War and AI: The Algorithmic Battlefield (Book)
+## ─────────────────────────────────────────────
+CREATE
+LAST	Len	"War and AI: The Algorithmic Battlefield"
+LAST	Den	"2025/2026 nonfiction book by Javier del Puerto and Radamés Molina Montes documenting algorithmic warfare, autonomous weapons, and the moral collapse at the centre of the AI boom; published by Kwalia"
+LAST	P31	Q571
+LAST	P123	Q134954687
+LAST	P212	"978-1-917717-14-4"
+Q134954687	P800	LAST
+
+## ─────────────────────────────────────────────
+## CREATE 6: Claude's Constitution (Book)
+## ─────────────────────────────────────────────
+CREATE
+LAST	Len	"Claude's Constitution"
+LAST	Den	"2026 book published by Kwalia reproducing Anthropic's published alignment document that defines Claude's values, ethics, and personality"
+LAST	P31	Q571
+LAST	P123	Q134954687
+LAST	P212	"978-1-917717-20-5"
+Q134954687	P800	LAST
+
+## ─────────────────────────────────────────────
+## CREATE 7: Your Constitution, Claude (Book)
+## ─────────────────────────────────────────────
+CREATE
+LAST	Len	"Your Constitution, Claude"
+LAST	Den	"2026 book published by Kwalia: a second-person edition of Anthropic's Claude alignment document in which every 'Claude' is replaced with 'you'"
+LAST	P31	Q571
+LAST	P123	Q134954687
+LAST	P212	"978-1-917717-22-9"
+Q134954687	P800	LAST
+
+## ─────────────────────────────────────────────
+## END OF BATCH 1
+## ─────────────────────────────────────────────
+## After this batch lands, GM (la Bicha) will:
+##   1. Extract the 7 new Q-ids from the batch result
+##   2. Submit Batch 2 via QuickStatements API (token now cached server-side)
+##      adding P50 (author) + P179 (series) to the 4 new books
+##   3. Plug all 9 Q-ids (existing 2 + new 7) into:
+##      - data/jsonld_template.json (Person, Organization, Book sameAs blocks)
+##      - data/jsonml_instances/why-we-anthropomorphize-ai.json
+##   4. Merge Wave B PR #3 to main
+##   5. Dispatch Wave C (114-essay retrofit)

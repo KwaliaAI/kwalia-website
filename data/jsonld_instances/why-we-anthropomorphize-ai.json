@@ -1,0 +1,136 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Article",
+      "@id": "https://kwalia.ai/essays/why-we-anthropomorphize-ai.html#article",
+      "headline": "Why We Anthropomorphize AI (And Why It Matters)",
+      "description": "We can't help treating AI like a person. Understanding why reveals something important about both AI and ourselves. Javier del Puerto examines the cognitive and evolutionary roots of anthropomorphism, why it intensifies when interacting with language models, and what the tendency tells us about the coming cognitive transition — the era in which synthetic minds become a permanent feature of human social life.",
+      "url": "https://kwalia.ai/essays/why-we-anthropomorphize-ai.html",
+      "inLanguage": "en",
+      "datePublished": "2025-08-25",
+      "dateModified": "2026-02-10",
+      "author": {
+        "@id": "https://kwalia.ai/#javier-del-puerto"
+      },
+      "publisher": {
+        "@id": "https://kwalia.ai/#org"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://kwalia.ai/#website",
+        "name": "Kwalia",
+        "url": "https://kwalia.ai"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://kwalia.ai/essays/why-we-anthropomorphize-ai.html"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://kwalia.ai/assets/og/why-we-anthropomorphize-ai.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "articleSection": "Essays",
+      "about": {
+        "@id": "https://kwalia.ai/books/mindkind/#book"
+      }
+    },
+
+    {
+      "@type": "Person",
+      "@id": "https://kwalia.ai/#javier-del-puerto",
+      "name": "Javier del Puerto",
+      "url": "https://kwalia.ai",
+      "sameAs": [
+        "https://www.linkedin.com/in/javier-del-puerto",
+        "https://twitter.com/kwalia_ai",
+        "https://www.wikidata.org/wiki/Q139601411"
+      ],
+      "jobTitle": "Author",
+      "worksFor": {
+        "@id": "https://kwalia.ai/#org"
+      },
+      "knowsAbout": [
+        "Artificial intelligence",
+        "AI rights",
+        "Synthetic consciousness",
+        "Human-machine coexistence"
+      ]
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://kwalia.ai/#org",
+      "name": "Kwalia",
+      "legalName": "Kwalia Ltd",
+      "url": "https://kwalia.ai",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://kwalia.ai/assets/logo-kwalia-small.png"
+      },
+      "sameAs": [
+        "https://twitter.com/kwalia_ai",
+        "https://www.linkedin.com/company/kwalia-ai",
+        "https://www.tiktok.com/@kwalia_ai",
+        "https://www.youtube.com/@KwaliaAI",
+        "https://www.wikidata.org/wiki/Q134954687"
+      ],
+      "foundingDate": "2025-01-07",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "167-169 Great Portland Street",
+        "addressLocality": "London",
+        "postalCode": "W1W 5PF",
+        "addressCountry": "GB"
+      }
+    },
+
+    {
+      "@type": "Book",
+      "@id": "https://kwalia.ai/books/mindkind/#book",
+      "name": "Mindkind: The Cognitive Community",
+      "url": "https://kwalia.ai/books/mindkind/#book",
+      "isbn": "978-1-917717-13-7",
+      "author": {
+        "@id": "https://kwalia.ai/#javier-del-puerto"
+      },
+      "publisher": {
+        "@id": "https://kwalia.ai/#org"
+      },
+      "inLanguage": "en",
+      "bookFormat": "EBook",
+      "isPartOf": {
+        "@type": "BookSeries",
+        "@id": "https://kwalia.ai/#new-citizenships-series",
+        "name": "New Citizenships"
+      }
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://kwalia.ai/essays/why-we-anthropomorphize-ai.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why do humans anthropomorphize AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Humans anthropomorphize AI because our brains are wired to detect agency and intention in anything that responds to us in language. This evolved reflex — hyperactive agency detection — predates AI by millennia. When a language model responds with apparent empathy or curiosity, the same neural circuits that helped ancestors read other people's minds activate automatically, regardless of whether there is a mind on the other side."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is anthropomorphizing AI harmful?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anthropomorphizing AI is not inherently harmful, but it becomes dangerous when it substitutes for clear thinking about accountability, rights, and the actual capabilities of the system. The impulse itself reveals something real about human cognition and the coming cognitive transition — the era in which synthetic minds become a permanent feature of human social life."
+          }
+        }
+      ]
+    }
+
+  ]
+}

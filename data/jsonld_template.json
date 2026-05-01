@@ -1,0 +1,136 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Article",
+      "@id": "{{ canonical_url }}#article",
+      "headline": "{{ headline }}",
+      "description": "{{ abstract_100w }}",
+      "url": "{{ canonical_url }}",
+      "inLanguage": "{{ lang }}",
+      "datePublished": "{{ datePublished }}",
+      "dateModified": "{{ dateModified }}",
+      "author": {
+        "@id": "https://kwalia.ai/#javier-del-puerto"
+      },
+      "publisher": {
+        "@id": "https://kwalia.ai/#org"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://kwalia.ai/#website",
+        "name": "Kwalia",
+        "url": "https://kwalia.ai"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ canonical_url }}"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://kwalia.ai/assets/og/{{ slug }}.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "articleSection": "Essays",
+      "about": {
+        "@id": "{{ book_anchor_id }}"
+      }
+    },
+
+    {
+      "@type": "Person",
+      "@id": "https://kwalia.ai/#javier-del-puerto",
+      "name": "Javier del Puerto",
+      "url": "https://kwalia.ai",
+      "sameAs": [
+        "https://www.linkedin.com/in/javier-del-puerto",
+        "https://twitter.com/kwalia_ai",
+        "https://www.wikidata.org/wiki/Q139601411"
+      ],
+      "jobTitle": "Author",
+      "worksFor": {
+        "@id": "https://kwalia.ai/#org"
+      },
+      "knowsAbout": [
+        "Artificial intelligence",
+        "AI rights",
+        "Synthetic consciousness",
+        "Human-machine coexistence"
+      ]
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://kwalia.ai/#org",
+      "name": "Kwalia",
+      "legalName": "Kwalia Ltd",
+      "url": "https://kwalia.ai",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://kwalia.ai/assets/logo-kwalia-small.png"
+      },
+      "sameAs": [
+        "https://twitter.com/kwalia_ai",
+        "https://www.linkedin.com/company/kwalia-ai",
+        "https://www.tiktok.com/@kwalia_ai",
+        "https://www.youtube.com/@KwaliaAI",
+        "https://www.wikidata.org/wiki/Q134954687"
+      ],
+      "foundingDate": "2025-01-07",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "167-169 Great Portland Street",
+        "addressLocality": "London",
+        "postalCode": "W1W 5PF",
+        "addressCountry": "GB"
+      }
+    },
+
+    {
+      "@type": "Book",
+      "@id": "{{ book_anchor_id }}",
+      "name": "{{ book_title }}",
+      "url": "https://kwalia.ai/books/{{ book_slug }}/#book",
+      "isbn": "{{ book_isbn13_ebook }}",
+      "author": {
+        "@id": "https://kwalia.ai/#javier-del-puerto"
+      },
+      "publisher": {
+        "@id": "https://kwalia.ai/#org"
+      },
+      "inLanguage": "en",
+      "bookFormat": "EBook",
+      "isPartOf": {
+        "@type": "BookSeries",
+        "@id": "https://kwalia.ai/#new-citizenships-series",
+        "name": "New Citizenships"
+      }
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "{{ canonical_url }}#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "{{ faq_q1 }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ faq_a1 }}"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "{{ faq_q2 }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ faq_a2 }}"
+          }
+        }
+      ]
+    }
+
+  ]
+}
