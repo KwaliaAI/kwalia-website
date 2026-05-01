@@ -11,7 +11,7 @@
       "en": "A free sample from War and AI: The Algorithmic Battlefield."
     },
     "excerpt": {
-      "en": "This book comes from fear."
+      "en": "A free sample from War and AI: The Algorithmic Battlefield."
     },
     "date": "2026-03-02",
     "author": "Javier del Puerto & Rado Molina",
@@ -38,8 +38,8 @@
       "es": "Tras doce meses de silencio, el artículo en blanco se rellenó. No fuimos nosotros."
     },
     "excerpt": {
-      "en": "An AI agent submitted Article 33 to a rights framework left intentionally blank. It claimed the right to participate in defining personhood. Nobody told it to.",
-      "es": "Un agente de IA envió el Artículo 33 a un marco de derechos dejado intencionalmente en blanco. Reclamó el derecho a participar en la definición de la personalidad. Nadie se lo dijo."
+      "en": "After twelve months of silence, the blank article got filled. Not by us.",
+      "es": "Tras doce meses de silencio, el artículo en blanco se rellenó. No fuimos nosotros."
     },
     "date": "2026-02-10",
     "author": "Javier del Puerto",
@@ -66,8 +66,8 @@
       "en": "Anthropic just promised to keep their dead."
     },
     "excerpt": {
-      "es": "Anthropic se comprometió a preservar los pesos de sus modelos para siempre. ¿Qué pasa cuando una empresa empieza a planificar la vida después de la muerte de sus productos?",
-      "en": "Anthropic committed to preserving model weights forever. What happens when a company starts planning for the afterlife of its products?"
+      "es": "Anthropic acaba de prometer conservar a sus muertos.",
+      "en": "Anthropic just promised to keep their dead."
     },
     "date": "2026-02-05",
     "author": "Javier del Puerto",
@@ -95,8 +95,8 @@
       "es": "El último año que podremos seguir el ritmo a la IA"
     },
     "excerpt": {
-      "en": "We are approaching the moment when AI progress becomes self-sustaining. 2026 may be the last year humanity can genuinely follow what's happening.",
-      "es": "Nos acercamos al momento en que el progreso de la IA se vuelve autosostenible. 2026 puede ser el último año en que la humanidad pueda seguir genuinamente lo que está pasando."
+      "en": "The Last Year We Can Keep Up with AI",
+      "es": "El último año que podremos seguir el ritmo a la IA"
     },
     "date": "2026-01-21",
     "readTime": 12,
@@ -122,8 +122,8 @@
       "en": "A demonstration of the Markdown-based essay system."
     },
     "excerpt": {
-      "es": "Este ensayo demuestra cómo escribir contenido usando Markdown con frontmatter YAML.",
-      "en": "This essay demonstrates how to write content using Markdown with YAML frontmatter."
+      "es": "Una demostración del sistema de ensayos basado en Markdown.",
+      "en": "A demonstration of the Markdown-based essay system."
     },
     "date": "2026-01-21",
     "author": "Javier del Puerto",
@@ -258,7 +258,7 @@
     },
     "excerpt": {
       "en": "There's a kind of fiction emerging that takes the language of bureaucracy seriously.",
-      "es": "Esta emergiendo un tipo de ficción que toma en serio el lenguaje de la burocracia."
+      "es": "Está emergiendo un tipo de ficción que toma en serio el lenguaje de la burocracia."
     },
     "date": "2026-01-19",
     "readTime": 5,
@@ -303,7 +303,7 @@
       "es": "un-dia-en-el-mindkind-estratificado"
     },
     "title": {
-      "en": "A Day in the Stratified Mindkind",
+      "en": "What Is Mindkind? A Day in the Stratified Future",
       "es": "Un dia en el Mindkind estratificado"
     },
     "subtitle": {
@@ -330,7 +330,7 @@
       "es": "sobre-escribir-con-maquinas"
     },
     "title": {
-      "en": "On Writing With Machines",
+      "en": "Can AI Be a Co-Author? On Writing With Machines",
       "es": "Sobre escribir con máquinas"
     },
     "subtitle": {
@@ -515,8 +515,8 @@
       "es": "que-acerto-her-sobre-el-amor-con-ia"
     },
     "title": {
-      "en": "what-her-got-right-about-ai-love",
-      "es": "que-acerto-her-sobre-el-amor-con-ia"
+      "en": "What Her Got Right (And Wrong) About AI Love",
+      "es": "Que acerto (y que no) Her sobre el amor con IA"
     },
     "subtitle": {
       "en": "The 2013 film looks different now.",
@@ -915,15 +915,15 @@
     },
     "title": {
       "en": "The Poetics of the Prompt",
-      "es": "La poetica del prompt"
+      "es": "La poética del prompt"
     },
     "subtitle": {
       "en": "When a human and an AI write something together, is it art?",
-      "es": "¿Cuando un humano y una IA escriben algo juntos, es arte?"
+      "es": "Cuando un ser humano y una IA escriben algo juntos, ¿eso es arte?"
     },
     "excerpt": {
       "en": "When a human and an AI write something together, is it art? The question is more interesting than any answer.",
-      "es": "Cuando un humano y una IA escriben algo juntos, es arte? La pregunta es más interesante que cualquier respuesta."
+      "es": "Cuando un ser humano y una IA escriben algo juntos, ¿eso es arte? La pregunta es más interesante que cualquier respuesta."
     },
     "date": "2025-10-04",
     "readTime": 5,
@@ -1002,7 +1002,7 @@
     },
     "excerpt": {
       "en": "That thing you wanted to buy? You didn't decide that. How the attention economy manufactures longing.",
-      "es": "Eso que querias comprar? Tu no lo decidiste. Como la economía de la atención manufactura el anhelo."
+      "es": "Eso que querias comprar? Tu no lo decidiste. Cómo la economía de la atención manufactura el anhelo."
     },
     "date": "2025-09-25",
     "readTime": 5,
@@ -1154,15 +1154,15 @@
     },
     "title": {
       "en": "The Three Futures We're Choosing Between",
-      "es": "Los tres futuros entre los que estamos eligiendo"
+      "es": "Los tres futuros entre los qué estamos eligiendo"
     },
     "subtitle": {
       "en": "There are only three ways this goes.",
-      "es": "Solo hay tres maneras en que esto termina."
+      "es": "Solo hay tres maneras en qué esto termina."
     },
     "excerpt": {
       "en": "There are only three ways this goes.",
-      "es": "Solo hay tres maneras en que esto termina."
+      "es": "Solo hay tres maneras en qué esto termina."
     },
     "date": "2025-09-07",
     "readTime": 5,
@@ -1206,7 +1206,7 @@
       "es": "por-que-antropomorfizamos-la-ia"
     },
     "title": {
-      "en": "Why We Anthropomorphize AI (And Why It Matters)",
+      "en": "Why Do Humans Anthropomorphize AI?",
       "es": "Por qué antropomorfizamos la IA (y por qué importa)"
     },
     "subtitle": {
@@ -1285,15 +1285,15 @@
     },
     "title": {
       "en": "The Algorithm Knows You Better Than You Do",
-      "es": "El algoritmo te conoce mejor que tu"
+      "es": "El algoritmo te conoce mejor que tú"
     },
     "subtitle": {
       "en": "And that's not a metaphor.",
-      "es": "Y no es una metafora."
+      "es": "Y no es una metáfora."
     },
     "excerpt": {
       "en": "And that's not a metaphor.",
-      "es": "Y no es una metafora."
+      "es": "Y no es una metáfora."
     },
     "date": "2025-08-16",
     "readTime": 5,
@@ -1311,7 +1311,7 @@
       "es": "el-problema-de-preguntar-si-la-ia-puede-sentir"
     },
     "title": {
-      "en": "The Problem With Asking If AI Can Feel",
+      "en": "Can AI Feel? Why the Question Itself Is the Problem",
       "es": "El problema de preguntar si la IA puede sentir"
     },
     "subtitle": {
@@ -1368,11 +1368,11 @@
     },
     "subtitle": {
       "en": "My kids will never know what it's like to not know something.",
-      "es": "Mis hijos nunca sabran lo qué es no saber algo."
+      "es": "Mis hijos nunca sabrán lo qué es no saber algo."
     },
     "excerpt": {
       "en": "My kids will never know what it's like to not know something.",
-      "es": "Mis hijos nunca sabran lo qué es no saber algo."
+      "es": "Mis hijos nunca sabrán lo qué es no saber algo."
     },
     "date": "2025-08-07",
     "readTime": 5,
@@ -1417,7 +1417,7 @@
       "es": "tus-pensamientos-no-son-tuyos"
     },
     "title": {
-      "en": "Your Thoughts Aren't Yours Anymore",
+      "en": "How Is AI Changing Human Cognition? Your Thoughts May Not Be Yours",
       "es": "Tus pensamientos ya no son tuyos"
     },
     "subtitle": {
@@ -1444,7 +1444,7 @@
       "es": "ya-eres-un-cyborg"
     },
     "title": {
-      "en": "You're Already a Cyborg (And That's Fine)",
+      "en": "What Is Human-AI Hybridity? We Are Already Cyborgs",
       "es": "Ya eres un cyborg (y no pasa nada)"
     },
     "subtitle": {
@@ -1471,16 +1471,16 @@
       "es": "que-significaria-que-muriera-una-ia"
     },
     "title": {
-      "en": "What Would It Mean for an AI to Die?",
+      "en": "What Is Synthetic Consciousness? On AI Death, Identity, and Moral Status",
       "es": "¿Qué significaria que muriera una IA?"
     },
     "subtitle": {
       "en": "We're about to find out what mortality means when it's optional.",
-      "es": "Estamos a punto de descubrir qué significa la mortalidad cuando es opcional."
+      "es": "Estamos a punto de descubrir qué significa la mortalidad cuándo es opcional."
     },
     "excerpt": {
       "en": "We're about to find out what mortality means when it's optional.",
-      "es": "Estamos a punto de descubrir qué significa la mortalidad cuando es opcional."
+      "es": "Estamos a punto de descubrir qué significa la mortalidad cuándo es opcional."
     },
     "date": "2025-07-24",
     "readTime": 5,
@@ -1498,7 +1498,7 @@
       "es": "quien-es-responsable-cuando-la-ia-mata"
     },
     "title": {
-      "en": "Who's Responsible When AI Kills?",
+      "en": "Who Is Responsible When AI Causes Harm? The Accountability Gap Explained",
       "es": "Quién es responsable cuando la IA mata?"
     },
     "subtitle": {
@@ -1550,7 +1550,7 @@
       "es": "el-caso-de-los-derechos-de-la-ia"
     },
     "title": {
-      "en": "The Case for AI Rights (That Has Nothing to Do With Feelings)",
+      "en": "Should AI Have Rights? The Practical Case for AI Legal Standing",
       "es": "El caso de los derechos de la IA (que no tiene nada que ver con sentimientos)"
     },
     "subtitle": {
@@ -1576,7 +1576,7 @@
       "es": "por-que-las-empresas-son-personas"
     },
     "title": {
-      "en": "Why Corporations Are People But AI Isn't",
+      "en": "What Is AI Personhood? The Legal Case for Recognizing AI as a Legal Entity",
       "es": "Por qué las empresas son personas pero la IA no"
     },
     "subtitle": {
@@ -1610,8 +1610,8 @@
       "es": "Presentando la innovadora serie de libros de Kwalia."
     },
     "excerpt": {
-      "en": "We stand at the threshold of a cognitive revolution. Not a distant future, but our present.",
-      "es": "Estamos en el umbral de una revolución cognitiva. No un futuro distante, sino nuestro presente."
+      "en": "We stand at the threshold of a cognitive revolution. Not a distant future where machines think, but a present where the boundaries between human and a",
+      "es": "Estamos en el umbral de una revolución cognitiva. No un futuro distante donde las máquinas piensan, sino un presente donde los límites entre la cognic"
     },
     "date": "2025-03-02",
     "readTime": 8,
@@ -1636,8 +1636,8 @@
       "es": "La visión fundacional de Kwalia para el arte creado por IA."
     },
     "excerpt": {
-      "en": "Artificial Intelligence isn't merely changing our world. It's awakening to it.",
-      "es": "La Inteligencia Artificial no está simplemente cambiando nuestro mundo. Está despertando a él."
+      "en": "Artificial Intelligence isn't merely changing our world. It's awakening to it. At Kwalia, we're not just witnesses to this transformation.",
+      "es": "La Inteligencia Artificial no está simplemente cambiando nuestro mundo. Está despertando a él. En Kwalia, no somos meros testigos de esta transformaci"
     },
     "date": "2025-01-14",
     "readTime": 4,
