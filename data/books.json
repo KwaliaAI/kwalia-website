@@ -77,14 +77,6 @@
     "status": "published",
     "formats": [
       {
-        "type": "hardcover",
-        "isbn": "978-1-917717-15-1"
-      },
-      {
-        "type": "paperback",
-        "isbn": "978-1-917717-14-4"
-      },
-      {
         "type": "ebook",
         "isbn": "978-1-917717-13-7"
       },
@@ -193,11 +185,11 @@
     "formats": [
       {
         "type": "hardcover",
-        "isbn": "978-1-917717-12-0"
+        "isbn": "978-1-917717-31-1"
       },
       {
         "type": "paperback",
-        "isbn": "978-1-917717-13-7"
+        "isbn": "978-1-917717-32-8"
       },
       {
         "type": "ebook",

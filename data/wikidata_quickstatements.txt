@@ -4,14 +4,17 @@
 ## Tool: https://quickstatements.toolforge.org/
 ## Format: TAB-separated CREATE / LAST blocks
 ##
-## IMPORTANT — ISBN CONFLICT FLAG (must resolve before submission):
-##   books.json shows Mindkind and War and AI share the same ISBN block
-##   (978-1-917717-12-0 through 978-1-917717-15-1) in reversed order.
-##   This is either a data entry error or the ISBNs were reassigned.
-##   Founder must confirm the correct ISBN for each title before the
-##   Wikidata statements below for those two books go live.
-##   Wikidata will reject duplicate ISBN-13 values.
-##   The ISBNs used below follow the books.json as-is; starred with [!].
+## ISBN CONFLICT — RESOLVED 2026-05-01 by GM (la Bicha):
+##   data/books.json had Mindkind and War and AI sharing the same 4-ISBN
+##   block in reversed order. Cross-check against catalog/data/catalog.json
+##   (canonical source) showed Mindkind EN has only ebook + audio editions
+##   (no HC/PB ISBNs allocated). The HC + PB entries on Mindkind in
+##   books.json were stale placeholders that collided with War and AI.
+##   Fix applied: removed Mindkind HC + PB rows; updated War and AI HC to
+##   978-1-917717-31-1 and PB to 978-1-917717-32-8 (per catalog.json).
+##   The ISBNs used in the Wikidata statements below are the EBOOK ISBNs
+##   for both books — those have always been correct (Mindkind 13-7,
+##   War and AI 14-4). No duplicate left.
 ##
 ## WIKIDATA Q-IDs NOT YET CREATED:
 ##   All entities below are new. Leave the CREATE lines as-is.
@@ -88,9 +91,8 @@ LAST	P179	<WIKIDATA_QID_SERIES_TBD>
 
 ## ─────────────────────────────────────────────
 ## ENTITY 6: Mindkind: The Cognitive Community (Book)
-## Note: ISBN conflict — see header note [!]
-## Using the ebook ISBN from books.json: 978-1-917717-13-7
-## [!] THIS ISBN IS ALSO LISTED FOR War and AI paperback — MUST VERIFY
+## ISBN: 978-1-917717-13-7 (ebook). Mindkind EN has only ebook + audio
+## editions per canonical catalog; HC + PB are not yet allocated.
 ## ─────────────────────────────────────────────
 CREATE
 LAST	Len	"Mindkind: The Cognitive Community"
@@ -104,9 +106,8 @@ LAST	P179	<WIKIDATA_QID_SERIES_TBD>
 
 ## ─────────────────────────────────────────────
 ## ENTITY 7: War and AI: The Algorithmic Battlefield (Book)
-## Note: ISBN conflict — see header note [!]
-## Using the ebook ISBN from books.json: 978-1-917717-14-4
-## [!] THIS ISBN IS ALSO LISTED FOR Mindkind paperback — MUST VERIFY
+## ISBN: 978-1-917717-14-4 (ebook). Full edition set per canonical
+## catalog: HC 31-1, PB 32-8, EB 14-4, Audio 15-1.
 ## ─────────────────────────────────────────────
 CREATE
 LAST	Len	"War and AI: The Algorithmic Battlefield"
