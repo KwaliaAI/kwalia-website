@@ -63,7 +63,7 @@ STABLE_PERSON = {
     "sameAs": [
         "https://www.linkedin.com/in/javier-del-puerto",
         "https://twitter.com/kwalia_ai",
-        "https://www.wikidata.org/wiki/<WIKIDATA_QID_JAVIER_TBD>"
+        "https://www.wikidata.org/wiki/Q139601411"
     ],
     "jobTitle": "Author",
     "worksFor": {"@id": "https://kwalia.ai/#org"},
@@ -90,7 +90,7 @@ STABLE_ORG = {
         "https://www.linkedin.com/company/kwalia-ai",
         "https://www.tiktok.com/@kwalia_ai",
         "https://www.youtube.com/@KwaliaAI",
-        "https://www.wikidata.org/wiki/<WIKIDATA_QID_KWALIA_TBD>"
+        "https://www.wikidata.org/wiki/Q134954687"
     ],
     "foundingDate": "2025-01-07",
     "address": {

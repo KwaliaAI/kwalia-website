@@ -1,0 +1,22 @@
+[
+  {
+    "q": "What is AI personhood?",
+    "a": "AI personhood is the legal status that would allow AI systems to be parties to contracts, be sued, and have defined interests protected by law — analogous to how corporate personhood works. Corporations are not conscious, yet they hold legal standing because it is useful for organizing accountability. AI personhood proponents argue the same logic applies: the relevant question is not whether AI is sentient, but whether legal standing would help manage a world where AI systems act consequentially."
+  },
+  {
+    "q": "Why do corporations have legal personhood but AI does not?",
+    "a": "Corporate personhood evolved incrementally as courts found it practical to let organisations own property, sue, and be sued without naming every shareholder. AI lacks this status not because it is less capable than a corporation of causing harm, but because the legal precedent has not yet been built. The same functional argument that created corporate personhood applies to AI systems that act consequentially in the world."
+  },
+  {
+    "q": "Did the US Supreme Court actually rule that corporations are people?",
+    "a": "The most-cited foundation, Santa Clara County v. Southern Pacific Railroad (1886), did not actually decide the question in the ruling itself. The headnote written by the court reporter claimed the Court had treated corporations as persons under the Fourteenth Amendment — but the Court never ruled on that point. The headnote got cited repeatedly until the principle hardened into law. This history matters: personhood is a legal tool, deployed where useful, not a discovered natural category."
+  },
+  {
+    "q": "What is the spectrum approach to AI legal status?",
+    "a": "Rather than a binary choice between 'full human rights' and 'pure tool,' the spectrum approach assigns legal standing in proportion to demonstrated capability and the stakes of the decisions involved. A simple recommendation algorithm stays a tool. A fully autonomous agent making consequential decisions about people's lives occupies a different category — not human rights, but not nothing. The Universal Declaration of AI Rights proposes this graduated framework across 32 articles."
+  },
+  {
+    "q": "Is there a precedent for non-human natural entities having legal rights?",
+    "a": "Yes. New Zealand granted the Whanganui River legal personhood in 2017, allowing it to be represented in court. Ecuador's constitution grants enforceable rights to nature. The Ganges and Yamuna rivers were briefly granted legal personhood by an Indian High Court in 2017. These cases demonstrate that the category of legal person is not bounded by consciousness — it extends to any entity whose legal standing helps organise accountability and protect interests that a community deems worth protecting."
+  }
+]

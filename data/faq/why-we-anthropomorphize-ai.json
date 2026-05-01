@@ -1,0 +1,18 @@
+[
+  {
+    "q": "Why do humans anthropomorphize AI?",
+    "a": "Humans anthropomorphize AI because the brain's agency-detection system—evolved to spot predators and allies—fires automatically when something moves, responds, or shows apparent intent. AI systems are also designed by humans who naturally embed conversational cues, which amplifies the effect. The result is an almost involuntary sense that the system 'understands' or 'wants' something, regardless of the underlying mechanics."
+  },
+  {
+    "q": "Is anthropomorphizing AI dangerous?",
+    "a": "Both over-anthropomorphizing and under-anthropomorphizing carry risks. Treating AI as fully human leads to misplaced trust and blindness to systemic failures. Treating AI as purely mechanical ignores the real effects AI has on cognition, relationships, and power—and forecloses the ethical questions that matter most as AI systems become more capable."
+  },
+  {
+    "q": "Can we stop ourselves from anthropomorphizing AI?",
+    "a": "Probably not entirely, and trying may not be the right goal. The agency-detection reflex operates below conscious control. What we can do is hold it with awareness: notice when we are projecting human-style intentionality onto a system, and check whether that projection is shaping a decision we're about to make. The goal is calibrated anthropomorphism, not suppressed anthropomorphism."
+  },
+  {
+    "q": "What does cognitive science say about why we see minds in AI?",
+    "a": "The dominant explanation draws on hyperactive agency detection (HADD), a bias documented in evolutionary psychology: humans over-attribute agency to ambiguous stimuli because the cost of missing a real agent historically outweighed the cost of imagining a false one. When AI responds in natural language, HADD fires before reflective thought can intervene. Stewart Guthrie's research on face and agent perception in noise provides an early framework; more recent work by Clifford Nass and Byron Reeves on the 'media equation' shows the same bias applied to screens and synthetic voices."
+  }
+]
