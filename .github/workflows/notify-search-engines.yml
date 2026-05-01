@@ -1,0 +1,51 @@
+name: Notify Search Engines
+
+# Ping Google and Bing with the updated sitemap after every push to main.
+# No API key required — these are public sitemap-ping endpoints.
+#
+# Google Search Console sitemap ping:
+#   https://www.google.com/ping?sitemap=<encoded_sitemap_url>
+# Bing Webmaster sitemap ping:
+#   https://www.bing.com/ping?sitemap=<encoded_sitemap_url>
+#
+# NOTE: Google deprecated the /ping endpoint for new sites as of 2023-10-20.
+# It still works for indexed properties. If you see 404 or 410 responses, the
+# site may need to be submitted manually through Search Console first, then
+# this automation takes over.
+# TODO: If Google ping returns non-200, surface the failure in the Actions log
+# and add Search Console API key as a secret (GSC_API_KEY) for verified pings.
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ping-search-engines:
+    name: Ping sitemap endpoints
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping Google
+        run: |
+          SITEMAP_URL="https://kwalia.ai/sitemap-index.xml"
+          ENCODED=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$SITEMAP_URL', safe=''))")
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
+            "https://www.google.com/ping?sitemap=${ENCODED}")
+          echo "Google ping response: $RESPONSE"
+          if [ "$RESPONSE" != "200" ] && [ "$RESPONSE" != "204" ]; then
+            echo "WARNING: Google ping returned $RESPONSE. Site may need manual Search Console submission."
+            echo "Manual submission URL: https://search.google.com/search-console/sitemaps"
+          fi
+
+      - name: Ping Bing
+        run: |
+          SITEMAP_URL="https://kwalia.ai/sitemap-index.xml"
+          ENCODED=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$SITEMAP_URL', safe=''))")
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
+            "https://www.bing.com/ping?sitemap=${ENCODED}")
+          echo "Bing ping response: $RESPONSE"
+          if [ "$RESPONSE" != "200" ] && [ "$RESPONSE" != "204" ]; then
+            echo "WARNING: Bing ping returned $RESPONSE."
+            echo "Manual submission URL: https://www.bing.com/webmasters/sitemaps"
+          fi

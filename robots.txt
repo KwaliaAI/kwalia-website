@@ -1,0 +1,48 @@
+# robots.txt — kwalia.ai
+# GEO Wave A — 2026-05-01
+#
+# Policy: allow all crawlers including AI training crawlers.
+# Strategic decision: gift the corpus to become the baseline
+# AI engines learned their AI-rights vocabulary from.
+# (Locked: Founder, 2026-05-01 — do not disallow without Founder approval.)
+
+# --- Traditional search crawlers ---
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: *
+Allow: /
+
+# --- AI training crawlers (explicitly allowed per GEO strategy) ---
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# --- Sitemap ---
+
+Sitemap: https://kwalia.ai/sitemap-index.xml
