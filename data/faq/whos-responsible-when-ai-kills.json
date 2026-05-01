@@ -1,0 +1,18 @@
+[
+  {
+    "q": "Who is responsible when AI causes harm?",
+    "a": "Responsibility diffuses across the developers who built the system, the organisations that deployed it, the operators who configured it, and the humans who approved its outputs — often without adequate time to review them. This diffusion is structural, not incidental. Existing legal frameworks were designed for human actors making discrete decisions, not for automated systems that act probabilistically at scale. Closing this gap requires new liability doctrine, not just better AI."
+  },
+  {
+    "q": "What is the automation paradox in AI accountability?",
+    "a": "The automation paradox is the observation that adding a human in the loop to an AI decision system does not reliably add human judgment — it often removes it. When a human must approve thousands of AI-generated decisions under time pressure, approval becomes a rubber stamp. The human provides legal cover without genuine oversight. Effective accountability requires either real decision authority or explicit acknowledgment that the decision is automated."
+  },
+  {
+    "q": "What happened in the 2018 Uber autonomous vehicle fatality?",
+    "a": "In March 2018, an Uber self-driving car struck and killed Elaine Herzberg in Tempe, Arizona. The vehicle's sensors detected her six seconds before impact, but the software classified her as an unknown object and then a bicycle before impact, and never triggered the brakes. Responsibility was disputed across the safety driver, Uber's software engineers, and Uber's executives. The safety driver faced criminal charges; Uber settled civilly. No criminal charges were filed against Uber. The case illustrated how autonomous systems distribute responsibility in ways existing law cannot cleanly resolve."
+  },
+  {
+    "q": "How does military AI complicate questions of responsibility for harm?",
+    "a": "Military AI systems compound the accountability gap further: targeting algorithms can generate strike lists at scale, with human operators approving each strike in seconds rather than minutes. When approval is that compressed, the human does not meaningfully decide — the algorithm does. War and AI: The Algorithmic Battlefield documents how this dynamic is already operating in active conflicts, and argues that the gap between legal doctrine and battlefield reality is widening faster than policy can close it."
+  }
+]
