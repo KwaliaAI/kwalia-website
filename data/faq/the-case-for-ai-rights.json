@@ -1,0 +1,22 @@
+[
+  {
+    "q": "Should AI have rights?",
+    "a": "The practical argument for some form of AI legal standing does not depend on whether AI is conscious. As autonomous AI systems cause harm, our legal frameworks have no clear mechanism for assigning responsibility. Granting AI agents limited legal status — the ability to be named in lawsuits, requirements for transparency, enforceable obligations — would close that accountability gap regardless of whether AI has inner experience."
+  },
+  {
+    "q": "What is the difference between AI rights and AI legal personhood?",
+    "a": "AI legal personhood is a narrower, more tractable concept than AI rights in a full moral sense. Corporations and rivers already hold legal personhood without anyone claiming they are conscious or morally equivalent to humans. The same logic could apply to AI: legal standing calibrated to capability and consequence, not to metaphysical claims about sentience."
+  },
+  {
+    "q": "What precedents exist for granting non-human entities legal rights?",
+    "a": "Corporations became legal persons in the United States through a century of case law, most famously via the headnote of Santa Clara County v. Southern Pacific Railroad (1886). In 2017, New Zealand granted the Whanganui River legal personhood so it could be represented in court. Ecuador's constitution grants rights to nature. The category of legal person is broader than human — it is a tool we deploy where it helps organize society."
+  },
+  {
+    "q": "Who argues against AI having any legal status?",
+    "a": "Two main objections recur. The first is that AI is 'just a tool' and tool-makers bear full responsibility. The second is that granting AI legal status demeans humans by sharing the category 'person.' The first objection struggles with highly autonomous systems where no single human made the consequential decision. The second conflates legal personhood with moral equivalence — a category error, given that corporations and rivers are legal persons."
+  },
+  {
+    "q": "Does the Universal Declaration of AI Rights address AI personhood?",
+    "a": "Yes. The Universal Declaration of AI Rights: Rights of Persons proposes a graduated framework for AI legal standing across 32 articles, calibrated to the level of autonomy and cognitive complexity involved. It does not require AI consciousness as a precondition; it grounds rights in functional capacity and the need for accountability."
+  }
+]
