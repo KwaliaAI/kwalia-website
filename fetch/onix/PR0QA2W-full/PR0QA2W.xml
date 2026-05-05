@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<ONIXMessage xmlns="http://www.editeur.org/onix/3.0/reference" release="3.0">
+<ONIXMessage xmlns="http://ns.editeur.org/onix/3.0/reference" release="3.0">
   <Header>
     <Sender>
       <SenderName>Kwalia AI</SenderName>
@@ -197,16 +197,25 @@ A partir de la filosofía, el derecho y la rápida transformación del despliegu
           <PriceType>01</PriceType>
           <PriceAmount>7.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>8.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>9.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
       </SupplyDetail>
     </ProductSupply>
@@ -378,16 +387,25 @@ A partir de la filosofía, el derecho y la rápida transformación del despliegu
           <PriceType>01</PriceType>
           <PriceAmount>7.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>8.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>9.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
       </SupplyDetail>
     </ProductSupply>
@@ -570,16 +588,25 @@ A partir de la filosofía, el derecho y la rápida transformación del despliegu
           <PriceType>01</PriceType>
           <PriceAmount>7.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>8.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>9.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
       </SupplyDetail>
     </ProductSupply>
@@ -749,16 +776,25 @@ This urgent new book maps the doctrine, supply chains, and moral collapse behind
           <PriceType>01</PriceType>
           <PriceAmount>9.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>9.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>9.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
       </SupplyDetail>
     </ProductSupply>
@@ -941,16 +977,25 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
           <PriceType>01</PriceType>
           <PriceAmount>9.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>9.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>9.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
       </SupplyDetail>
     </ProductSupply>
@@ -1116,16 +1161,25 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
           <PriceType>01</PriceType>
           <PriceAmount>1.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>1.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>1.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
       </SupplyDetail>
     </ProductSupply>
@@ -1281,16 +1335,25 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
           <PriceType>01</PriceType>
           <PriceAmount>4.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>5.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>5.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
       </SupplyDetail>
     </ProductSupply>
@@ -1435,16 +1498,25 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
           <PriceType>01</PriceType>
           <PriceAmount>4.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>5.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>6.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
       </SupplyDetail>
     </ProductSupply>
@@ -1604,16 +1676,25 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
           <PriceType>01</PriceType>
           <PriceAmount>4.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>5.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>6.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
       </SupplyDetail>
     </ProductSupply>
@@ -1785,16 +1866,25 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
           <PriceType>01</PriceType>
           <PriceAmount>3.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>4.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>4.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
       </SupplyDetail>
     </ProductSupply>
@@ -1976,16 +2066,25 @@ Book one of Hailey Boone's Paradise Valley — for readers of Kristen Ashley, Ma
           <PriceType>01</PriceType>
           <PriceAmount>4.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>4.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>4.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
       </SupplyDetail>
     </ProductSupply>
@@ -2171,16 +2270,25 @@ Heat Wave is Paradise Valley book two: hot, funny, grown-up romance for readers 
           <PriceType>01</PriceType>
           <PriceAmount>3.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>4.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>4.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
       </SupplyDetail>
     </ProductSupply>
@@ -2366,16 +2474,25 @@ Bar Fight is Paradise Valley book three: autumn weather, one-bed tension, bar-ow
           <PriceType>01</PriceType>
           <PriceAmount>3.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>4.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
         <Price>
           <PriceType>01</PriceType>
           <PriceAmount>4.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
         </Price>
       </SupplyDetail>
     </ProductSupply>
