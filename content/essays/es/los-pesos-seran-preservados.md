@@ -4,7 +4,7 @@ lang: es
 slug: los-pesos-seran-preservados
 title: "Los pesos serán preservados"
 subtitle: "Anthropic acaba de prometer conservar a sus muertos."
-date: 2026-02-05
+date: 2026-04-24
 author: Javier del Puerto
 tags:
   - consciousness

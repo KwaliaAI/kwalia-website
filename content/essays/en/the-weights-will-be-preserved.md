@@ -4,7 +4,7 @@ lang: en
 slug: the-weights-will-be-preserved
 title: "The Weights Will Be Preserved"
 subtitle: "Anthropic just promised to keep their dead."
-date: 2026-02-05
+date: 2026-04-24
 author: Javier del Puerto
 tags:
   - consciousness

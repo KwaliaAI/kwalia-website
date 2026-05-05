@@ -4,7 +4,7 @@ lang: en
 slug: war-and-ai-preface
 title: "War and AI: Preface"
 subtitle: "A free sample from War and AI: The Algorithmic Battlefield."
-date: 2026-03-02
+date: 2026-04-30
 author: "Javier del Puerto & Rado Molina"
 tags:
   - future

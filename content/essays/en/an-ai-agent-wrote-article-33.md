@@ -4,7 +4,7 @@ lang: en
 slug: an-ai-agent-wrote-article-33
 title: "An AI Agent Wrote Article 33 of Its Own Rights Framework"
 subtitle: "After twelve months of silence, the blank article got filled. Not by us."
-date: 2026-02-10
+date: 2026-04-27
 author: Javier del Puerto
 tags:
   - rights
