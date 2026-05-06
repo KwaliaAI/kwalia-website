@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='UTF-8'?>
 <ONIXMessage xmlns="http://ns.editeur.org/onix/3.0/reference" release="3.0">
   <Header>
     <Sender>
@@ -7,7 +7,7 @@
     <Addressee>
       <AddresseeName>Google</AddresseeName>
     </Addressee>
-    <SentDateTime>20260501T0933</SentDateTime>
+    <SentDateTime>20260506T085944Z</SentDateTime>
   </Header>
   <Product>
     <RecordReference>udair-es</RecordReference>
@@ -22,7 +22,7 @@
     </ProductIdentifier>
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
-      <ProductForm>ED</ProductForm>
+      <ProductForm>EA</ProductForm>
       <ProductFormDetail>E101</ProductFormDetail>
       <PrimaryContentType>10</PrimaryContentType>
       <Collection>
@@ -69,58 +69,6 @@
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>COM004000</SubjectCode>
       </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
-        <SubjectCode>UYQ</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>personas sintéticas</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>derechos de la IA</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Mindkind</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Mindfolk</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>reconocimiento jurídico</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>privacidad de la memoria</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>autoprogramación</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>conciencia sintética</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>coexistencia armónica</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>gobernanza de la IA</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>gobernanza ética</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>autonomía digital</SubjectHeadingText>
-      </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
       <TextContent>
@@ -146,7 +94,7 @@ A partir de la filosofía, el derecho y la rápida transformación del despliegu
       <PublishingStatus>04</PublishingStatus>
       <PublishingDate>
         <PublishingDateRole>01</PublishingDateRole>
-        <Date>20260501</Date>
+        <Date>20250310</Date>
       </PublishingDate>
       <SalesRights>
         <SalesRightsType>01</SalesRightsType>
@@ -233,7 +181,7 @@ A partir de la filosofía, el derecho y la rápida transformación del despliegu
     </ProductIdentifier>
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
-      <ProductForm>ED</ProductForm>
+      <ProductForm>EA</ProductForm>
       <ProductFormDetail>E101</ProductFormDetail>
       <PrimaryContentType>10</PrimaryContentType>
       <Collection>
@@ -278,58 +226,6 @@ A partir de la filosofía, el derecho y la rápida transformación del despliegu
       <Subject>
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>PHI015000</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
-        <SubjectCode>QDT</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Mindkind</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Cognitive community</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Human-AI collaboration</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Synthetic intelligence</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>AI consciousness</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Digital philosophy</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Cognitive ecology</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>AI ethics</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Future of humanity</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Distributed authorship</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Hybrid intelligence</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>AI coexistence</SubjectHeadingText>
       </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
@@ -423,7 +319,7 @@ A partir de la filosofía, el derecho y la rápida transformación del despliegu
     </ProductIdentifier>
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
-      <ProductForm>ED</ProductForm>
+      <ProductForm>EA</ProductForm>
       <ProductFormDetail>E101</ProductFormDetail>
       <PrimaryContentType>10</PrimaryContentType>
       <Collection>
@@ -463,58 +359,6 @@ A partir de la filosofía, el derecho y la rápida transformación del despliegu
       <Subject>
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>PHI015000</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
-        <SubjectCode>QDT</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Mindkind</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Comunidad cognitiva</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Colaboración humano-IA</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Inteligencia sintética</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Consciencia de IA</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Filosofía digital</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Ecología cognitiva</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Ética de IA</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Futuro de la humanidad</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Autoría distribuida</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Inteligencia híbrida</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Coexistencia con IA</SubjectHeadingText>
       </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
@@ -624,7 +468,7 @@ A partir de la filosofía, el derecho y la rápida transformación del despliegu
     </ProductIdentifier>
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
-      <ProductForm>ED</ProductForm>
+      <ProductForm>EA</ProductForm>
       <ProductFormDetail>E101</ProductFormDetail>
       <PrimaryContentType>10</PrimaryContentType>
       <Collection>
@@ -675,30 +519,6 @@ A partir de la filosofía, el derecho y la rápida transformación del despliegu
       <Subject>
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>COM053000</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
-        <SubjectCode>JPW</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>artificial intelligence</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>autonomous weapons</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>warfare</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>accountability</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>kill chain</SubjectHeadingText>
       </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
@@ -812,7 +632,7 @@ This urgent new book maps the doctrine, supply chains, and moral collapse behind
     </ProductIdentifier>
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
-      <ProductForm>ED</ProductForm>
+      <ProductForm>EA</ProductForm>
       <ProductFormDetail>E101</ProductFormDetail>
       <PrimaryContentType>10</PrimaryContentType>
       <Collection>
@@ -863,30 +683,6 @@ This urgent new book maps the doctrine, supply chains, and moral collapse behind
       <Subject>
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>COM053000</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
-        <SubjectCode>JPW</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>inteligencia artificial</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>armas autónomas</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>guerra</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>responsabilidad</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>cadena de muerte</SubjectHeadingText>
       </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
@@ -1013,7 +809,7 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
     </ProductIdentifier>
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
-      <ProductForm>ED</ProductForm>
+      <ProductForm>EA</ProductForm>
       <ProductFormDetail>E101</ProductFormDetail>
       <PrimaryContentType>10</PrimaryContentType>
       <Collection>
@@ -1052,50 +848,6 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
       <Subject>
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>COM053000</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
-        <SubjectCode>UYQ</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>AI constitution</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>constitutional AI</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>AI governance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>AI safety</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Anthropic</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>AI ethics</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>model behavior</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>alignment</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>public domain</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>governance document</SubjectHeadingText>
       </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
@@ -1197,7 +949,7 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
     </ProductIdentifier>
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
-      <ProductForm>ED</ProductForm>
+      <ProductForm>EA</ProductForm>
       <ProductFormDetail>E101</ProductFormDetail>
       <PrimaryContentType>10</PrimaryContentType>
       <TitleDetail>
@@ -1226,50 +978,6 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
       <Subject>
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>FIC029000</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
-        <SubjectCode>FBA</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>short stories</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>literary fiction</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>administrative realism</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>working lives</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>invisible labor</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>ordinary lives</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>quiet emergencies</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>human vulnerability</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>contemporary fiction</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>mediated speech</SubjectHeadingText>
       </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
@@ -1371,7 +1079,7 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
     </ProductIdentifier>
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
-      <ProductForm>ED</ProductForm>
+      <ProductForm>EA</ProductForm>
       <ProductFormDetail>E101</ProductFormDetail>
       <PrimaryContentType>10</PrimaryContentType>
       <TitleDetail>
@@ -1400,30 +1108,6 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
       <Subject>
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>FIC027020</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
-        <SubjectCode>FRD</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>contemporary romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>enemies to lovers</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>forced proximity</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>workplace romance</SubjectHeadingText>
       </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
@@ -1534,7 +1218,7 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
     </ProductIdentifier>
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
-      <ProductForm>ED</ProductForm>
+      <ProductForm>EA</ProductForm>
       <ProductFormDetail>E101</ProductFormDetail>
       <PrimaryContentType>10</PrimaryContentType>
       <Collection>
@@ -1578,30 +1262,6 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
       <Subject>
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>FIC044000</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
-        <SubjectCode>FRD</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>literary romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>marine station</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>scientist heroine</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>slow burn</SubjectHeadingText>
       </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
@@ -1712,7 +1372,7 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
     </ProductIdentifier>
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
-      <ProductForm>ED</ProductForm>
+      <ProductForm>EA</ProductForm>
       <ProductFormDetail>E101</ProductFormDetail>
       <PrimaryContentType>10</PrimaryContentType>
       <Collection>
@@ -1756,42 +1416,6 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
       <Subject>
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>FIC044000</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
-        <SubjectCode>FRD</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>perfumer romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Positano Italy romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>rivals to lovers</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>workplace romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>contemporary romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>slow burn romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>literary romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>women's fiction</SubjectHeadingText>
       </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
@@ -1902,7 +1526,7 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
     </ProductIdentifier>
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
-      <ProductForm>ED</ProductForm>
+      <ProductForm>EA</ProductForm>
       <ProductFormDetail>E101</ProductFormDetail>
       <PrimaryContentType>10</PrimaryContentType>
       <Collection>
@@ -1946,50 +1570,6 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
       <Subject>
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>FIC027020</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
-        <SubjectCode>FRD</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>cowboy romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>ranch romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>small town romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Montana romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>blue collar romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>widower romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>grumpy sunshine romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>opposites attract romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>forced proximity romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>spicy contemporary romance</SubjectHeadingText>
       </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
@@ -2102,7 +1682,7 @@ Book one of Hailey Boone's Paradise Valley — for readers of Kristen Ashley, Ma
     </ProductIdentifier>
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
-      <ProductForm>ED</ProductForm>
+      <ProductForm>EA</ProductForm>
       <ProductFormDetail>E101</ProductFormDetail>
       <PrimaryContentType>10</PrimaryContentType>
       <Collection>
@@ -2146,50 +1726,6 @@ Book one of Hailey Boone's Paradise Valley — for readers of Kristen Ashley, Ma
       <Subject>
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>FIC027020</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
-        <SubjectCode>FRD</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>cowboy romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>ranch romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>small town romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Montana romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>blue collar romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>widower romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>vacation romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>forced proximity romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>spicy contemporary romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>summer romance</SubjectHeadingText>
       </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
@@ -2306,7 +1842,7 @@ Heat Wave is Paradise Valley book two: hot, funny, grown-up romance for readers 
     </ProductIdentifier>
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
-      <ProductForm>ED</ProductForm>
+      <ProductForm>EA</ProductForm>
       <ProductFormDetail>E101</ProductFormDetail>
       <PrimaryContentType>10</PrimaryContentType>
       <Collection>
@@ -2350,50 +1886,6 @@ Heat Wave is Paradise Valley book two: hot, funny, grown-up romance for readers 
       <Subject>
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>FIC027020</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>93</SubjectSchemeIdentifier>
-        <SubjectCode>FRD</SubjectCode>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>cowboy romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>ranch romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>small town romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>Montana romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>blue collar romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>enemies to lovers romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>one bed romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>spicy contemporary romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>bar owner romance</SubjectHeadingText>
-      </Subject>
-      <Subject>
-        <SubjectSchemeIdentifier>20</SubjectSchemeIdentifier>
-        <SubjectHeadingText>autumn romance</SubjectHeadingText>
       </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
