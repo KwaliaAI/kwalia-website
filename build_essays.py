@@ -27,9 +27,11 @@ import os
 import re
 import json
 import yaml
+import unicodedata
 from pathlib import Path
 from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
+from urllib.parse import quote, unquote, urlsplit, urlunsplit
 
 # Paths
 BASE_DIR = Path(__file__).parent
@@ -37,6 +39,7 @@ CONTENT_DIR = BASE_DIR / "content" / "essays"
 TEMPLATES_DIR = BASE_DIR / "templates"
 OUTPUT_DIR = BASE_DIR / "essays"
 DATA_DIR = BASE_DIR / "data"
+BASE_URL = "https://kwalia.ai"
 
 # Book metadata for the "Go Deeper" section
 BOOKS = {
@@ -95,6 +98,35 @@ MONTHS = {
 }
 
 
+def strip_accents(value):
+    """Return an ASCII slug/path equivalent for internal URLs."""
+    return ''.join(
+        char
+        for char in unicodedata.normalize('NFKD', value)
+        if not unicodedata.combining(char)
+    )
+
+
+def normalize_internal_url(url):
+    """Keep internal Markdown links aligned to ASCII slug filenames."""
+    if not url or url.startswith(('#', 'mailto:', 'tel:', 'javascript:', 'data:')):
+        return url
+
+    parsed = urlsplit(url)
+    if parsed.scheme and parsed.scheme not in ('http', 'https'):
+        return url
+    if parsed.netloc and parsed.netloc not in ('kwalia.ai', 'www.kwalia.ai'):
+        return url
+
+    decoded_path = unquote(parsed.path)
+    normalized_path = strip_accents(decoded_path)
+    if normalized_path == decoded_path:
+        return url
+
+    safe_path = quote(normalized_path, safe='/:._-~%')
+    return urlunsplit((parsed.scheme, parsed.netloc, safe_path, parsed.query, parsed.fragment))
+
+
 def simple_markdown_to_html(text):
     """
     Convert Markdown to HTML using regex.
@@ -141,7 +173,7 @@ def simple_markdown_to_html(text):
     # Links [text](url) - handle target="_blank" for external links
     def replace_link(match):
         link_text = match.group(1)
-        url = match.group(2)
+        url = normalize_internal_url(match.group(2))
         if url.startswith('http://') or url.startswith('https://'):
             return f'<a href="{url}" target="_blank" rel="noopener noreferrer">{link_text}</a>'
         else:
@@ -227,6 +259,57 @@ def load_all_essays_metadata():
     return essays
 
 
+def load_essay_slug_pairs():
+    """Return bilingual slug pairs from data/essays.json when available."""
+    json_file = DATA_DIR / "essays.json"
+    if not json_file.exists():
+        return {}
+
+    try:
+        essays = json.loads(json_file.read_text(encoding='utf-8'))
+    except Exception:
+        return {}
+
+    pairs_by_slug = {}
+    for essay in essays:
+        slug_data = essay.get('slug', {})
+        if not isinstance(slug_data, dict):
+            continue
+        en_slug = slug_data.get('en')
+        es_slug = slug_data.get('es')
+        pair = {k: v for k, v in {'en': en_slug, 'es': es_slug}.items() if v}
+        if en_slug:
+            pairs_by_slug[en_slug] = pair
+        if es_slug:
+            pairs_by_slug[es_slug] = pair
+
+    return pairs_by_slug
+
+
+def build_indexing_links(slug, lang, metadata):
+    """Build canonical and reciprocal hreflang links for one essay."""
+    canonical_url = f"{BASE_URL}/essays/{slug}.html"
+    pairs_by_slug = load_essay_slug_pairs()
+    pair = pairs_by_slug.get(slug)
+
+    translation_slug = metadata.get('translation')
+    if not pair and translation_slug:
+        if lang == 'en':
+            pair = {'en': slug, 'es': translation_slug}
+        elif lang == 'es':
+            pair = {'en': translation_slug, 'es': slug}
+
+    alternate_urls = []
+    if pair and pair.get('en') and pair.get('es'):
+        alternate_urls = [
+            {'hreflang': 'en', 'href': f"{BASE_URL}/essays/{pair['en']}.html"},
+            {'hreflang': 'es', 'href': f"{BASE_URL}/essays/{pair['es']}.html"},
+            {'hreflang': 'x-default', 'href': f"{BASE_URL}/essays/{pair['en']}.html"},
+        ]
+
+    return canonical_url, alternate_urls
+
+
 def build_essay(md_file, all_essays=None):
     """Build a single essay from Markdown to HTML."""
     print(f"Building: {md_file.name}")
@@ -249,6 +332,7 @@ def build_essay(md_file, all_essays=None):
 
     # Prepare template data
     slug = metadata.get('slug', metadata['id'])
+    canonical_url, alternate_urls = build_indexing_links(slug, lang, metadata)
     data = {
         'id': metadata['id'],
         'slug': slug,
@@ -262,6 +346,8 @@ def build_essay(md_file, all_essays=None):
         'read_time': metadata.get('read_time') or estimate_read_time(markdown_content),
         'content': html_content,
         'translation_slug': metadata.get('translation'),
+        'canonical_url': canonical_url,
+        'alternate_urls': alternate_urls,
     }
 
     # Add related essays

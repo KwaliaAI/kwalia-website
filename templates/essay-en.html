@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Indexing contract -->
+    <link rel="canonical" href="{{ canonical_url }}">
+    {% for alternate in alternate_urls %}
+    <link rel="alternate" hreflang="{{ alternate.hreflang }}" href="{{ alternate.href }}">
+    {% endfor %}
+    <!-- /Indexing contract -->
     <title>{{ title }} | Kwalia</title>
 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

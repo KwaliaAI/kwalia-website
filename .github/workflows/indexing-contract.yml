@@ -1,0 +1,19 @@
+name: Indexing Contract
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-indexing-contract:
+    name: Validate static indexing contract
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate canonical, hreflang, sitemap, and links
+        run: python3 scripts/validate_indexing_contract.py
