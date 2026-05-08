@@ -41,12 +41,81 @@ class LinkParser(HTMLParser):
             self.links.append((tag, href))
 
 
+class EssayCardParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.cards: list[dict[str, str]] = []
+        self.current: dict[str, str] | None = None
+        self.card_depth = 0
+        self.capture_field: str | None = None
+        self.capture_tag: str | None = None
+        self.capture_parts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs):
+        attrs_dict = dict(attrs)
+        classes = set((attrs_dict.get("class") or "").split())
+
+        if tag == "a" and "essay-card" in classes and self.current is None:
+            self.current = {
+                "href": attrs_dict.get("href", ""),
+                "data_href_en": attrs_dict.get("data-href-en", ""),
+                "data_href_es": attrs_dict.get("data-href-es", ""),
+                "data_tags": attrs_dict.get("data-tags", ""),
+            }
+            self.card_depth = 1
+            return
+
+        if self.current is None:
+            return
+
+        self.card_depth += 1
+        if tag == "h2":
+            self.current["title_en"] = attrs_dict.get("data-en", "")
+            self.current["title_es"] = attrs_dict.get("data-es", "")
+            self.capture_field = "title_visible"
+            self.capture_tag = tag
+            self.capture_parts = []
+        elif tag == "p" and "text-c2/70" in classes:
+            self.current["subtitle_en"] = attrs_dict.get("data-en", "")
+            self.current["subtitle_es"] = attrs_dict.get("data-es", "")
+            self.capture_field = "subtitle_visible"
+            self.capture_tag = tag
+            self.capture_parts = []
+
+    def handle_data(self, data: str):
+        if self.current is not None and self.capture_field:
+            self.capture_parts.append(data)
+
+    def handle_endtag(self, tag: str):
+        if self.current is None:
+            return
+
+        if self.capture_field and tag == self.capture_tag:
+            self.current[self.capture_field] = normalize_text("".join(self.capture_parts))
+            self.capture_field = None
+            self.capture_tag = None
+            self.capture_parts = []
+
+        self.card_depth -= 1
+        if self.card_depth == 0:
+            self.cards.append(self.current)
+            self.current = None
+
+
 def has_non_ascii(value: str) -> bool:
     return any(ord(char) > 127 for char in value)
 
 
+def normalize_text(value: str) -> str:
+    return " ".join(value.split())
+
+
+def load_essays() -> list[dict]:
+    return json.loads(ESSAYS_JSON.read_text(encoding="utf-8"))
+
+
 def load_slug_pairs() -> dict[str, dict[str, str]]:
-    entries = json.loads(ESSAYS_JSON.read_text(encoding="utf-8"))
+    entries = load_essays()
     pairs_by_slug: dict[str, dict[str, str]] = {}
     for entry in entries:
         slug_data = entry.get("slug", {})
@@ -182,6 +251,84 @@ def validate_sitemap(errors: list[str]) -> None:
                 errors.append(f"{sitemap.name} lists missing URL: {url}")
 
 
+def validate_essay_listing_contract(errors: list[str]) -> None:
+    index_path = REPO_ROOT / "essays" / "index.html"
+    html = index_path.read_text(encoding="utf-8")
+    parser = EssayCardParser()
+    parser.feed(html)
+
+    entries = load_essays()
+    published_entries = [
+        entry
+        for entry in entries
+        if entry.get("status") == "published"
+        and isinstance(entry.get("slug"), dict)
+        and entry["slug"].get("en")
+    ]
+
+    cards_by_slug: dict[str, dict[str, str]] = {}
+    for card in parser.cards:
+        href_en = card.get("data_href_en", "")
+        slug = href_en.removesuffix(".html")
+        if slug in cards_by_slug:
+            errors.append(f"essays/index.html has duplicate essay card for slug: {slug}")
+        cards_by_slug[slug] = card
+
+    expected_slugs = {entry["slug"]["en"] for entry in published_entries}
+    actual_slugs = set(cards_by_slug)
+    for slug in sorted(expected_slugs - actual_slugs):
+        errors.append(f"essays/index.html missing published essay card from data/essays.json: {slug}")
+    for slug in sorted(actual_slugs - expected_slugs):
+        errors.append(f"essays/index.html has essay card not published in data/essays.json: {slug}")
+
+    for entry in published_entries:
+        slug_data = entry["slug"]
+        slug_en = slug_data["en"]
+        slug_es = slug_data.get("es") or slug_en
+        card = cards_by_slug.get(slug_en)
+        if not card:
+            continue
+
+        expected_href_en = f"{slug_en}.html"
+        expected_href_es = f"{slug_es}.html"
+        if card.get("href") != expected_href_en:
+            errors.append(f"essays/index.html card href mismatch for {slug_en}: {card.get('href')!r} != {expected_href_en!r}")
+        if card.get("data_href_en") != expected_href_en:
+            errors.append(f"essays/index.html data-href-en mismatch for {slug_en}: {card.get('data_href_en')!r} != {expected_href_en!r}")
+        if card.get("data_href_es") != expected_href_es:
+            errors.append(f"essays/index.html data-href-es mismatch for {slug_en}: {card.get('data_href_es')!r} != {expected_href_es!r}")
+
+        tags = entry.get("tags") or []
+        expected_tags = " ".join(tags)
+        if card.get("data_tags") != expected_tags:
+            errors.append(f"essays/index.html data-tags mismatch for {slug_en}: {card.get('data_tags')!r} != {expected_tags!r}")
+
+        title = entry.get("title") or {}
+        subtitle = entry.get("subtitle") or {}
+        title_en = title.get("en", "")
+        subtitle_en = subtitle.get("en", "")
+        expected = {
+            "title_en": normalize_text(title_en),
+            "title_es": normalize_text(title.get("es") or title_en),
+            "title_visible": normalize_text(title_en),
+            "subtitle_en": normalize_text(subtitle_en),
+            "subtitle_es": normalize_text(subtitle.get("es") or subtitle_en),
+            "subtitle_visible": normalize_text(subtitle_en),
+        }
+        for field, expected_value in expected.items():
+            actual_value = normalize_text(card.get(field, ""))
+            if actual_value != expected_value:
+                errors.append(f"essays/index.html {field} mismatch for {slug_en}: {actual_value!r} != {expected_value!r}")
+
+    required_search_snippets = [
+        "keys: ['title', 'excerpt', 'tags', 'href']",
+        "ignoreLocation: true",
+    ]
+    for snippet in required_search_snippets:
+        if snippet not in html:
+            errors.append(f"essays/index.html search contract missing snippet: {snippet}")
+
+
 def main() -> int:
     errors: list[str] = []
     validate_canonicals(errors)
@@ -194,6 +341,7 @@ def main() -> int:
         validate_page_links(path, errors)
 
     validate_sitemap(errors)
+    validate_essay_listing_contract(errors)
 
     if errors:
         print("Indexing contract FAILED:")

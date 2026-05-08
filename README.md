@@ -2,6 +2,12 @@
 
 The official website for [Kwalia](https://kwalia.ai) - AI First Entertainment.
 
+## Canonical Contract
+
+Before making site, essay, SEO, indexing, metadata, or deployment changes, read `docs/KWALIA_SITE_CONTRACT.md`.
+
+That file is the source map for what to edit, what is generated, what must be synced, and which validation gates block release.
+
 ## Project Structure
 
 ```
@@ -20,6 +26,8 @@ kwalia-website/
 │   ├── books.json         # Book catalog
 │   ├── fiction.json       # Fiction catalog
 │   └── i18n/              # Translations
+├── docs/
+│   └── KWALIA_SITE_CONTRACT.md
 ├── assets/                 # Images, PDFs
 ├── build_essays.py        # Build script
 ├── README.md              # This file
@@ -92,6 +100,7 @@ Run the build script:
 
 ```bash
 python3 build_essays.py
+python3 scripts/validate_indexing_contract.py
 ```
 
 This will:
@@ -99,6 +108,7 @@ This will:
 - Apply the appropriate template (EN or ES)
 - Output to `essays/`
 - Update `data/essays.json`
+- Verify the generated essay listing/search contract is in sync
 
 ### 5. Commit and push
 
@@ -164,7 +174,9 @@ For launch weeks, use a single-line announcement rail at the top of `index.html`
 
 ## Deployment
 
-The site is hosted on GitHub Pages. Pushing to `main` automatically deploys.
+The site is hosted on Netlify. Pushing to `main` automatically deploys.
+
+After deployment, read production back from `https://kwalia.ai` for the changed page or data file before marking the work done.
 
 ## Local Development
 

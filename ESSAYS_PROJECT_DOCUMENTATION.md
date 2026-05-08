@@ -1,5 +1,8 @@
 # KWALIA ESSAYS: Documentación Completa del Proyecto
 
+> Historical project note. This file is not the canonical technical contract for current site work.
+> Use `docs/KWALIA_SITE_CONTRACT.md` for the active source map, generated-file rules, validation gates, and release blockers.
+
 **Fecha de creación:** 2026-01-19
 **Sesión principal:** `6ea3db25-a027-4f0b-b2fc-315f48164ff7`
 **Respaldo de:** ~/CLAUDE.md (sección KWALIA ESSAYS)

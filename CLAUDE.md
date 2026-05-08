@@ -8,6 +8,9 @@ Kwalia is an AI-first entertainment company publishing books and essays about AI
 
 **Website**: https://kwalia.ai
 **GitHub**: https://github.com/KwaliaAI/kwalia-website
+**Canonical site contract**: `docs/KWALIA_SITE_CONTRACT.md`
+
+Read the canonical site contract before changing site, essay, SEO, indexing, metadata, or deployment behavior. It defines the source map, generated files, sync steps, release blockers, and validation gates.
 
 ---
 
@@ -80,11 +83,13 @@ related:
 #### Step 2: Build the HTML files
 
 ```bash
-cd ~/kwalia-website-local
+cd /home/oss/workspace/kwalia-website-google-play
 python3 build_essays.py
+python3 scripts/validate_indexing_contract.py
 ```
 
 This generates `essays/essay-slug.html` and `essays/slug-en-espanol.html`.
+The validation step blocks stale `data/essays.json` versus `essays/index.html` drift, broken canonical/hreflang tags, missing links, sitemap drift, and search contract regressions.
 
 #### Step 3: Generate OG images (social preview cards)
 
@@ -142,7 +147,8 @@ Pick one, then post manually on @kwalia_ai (reply chain: tweet 1 → reply with 
 1. Edit the `.md` file in `content/essays/`
 2. Run `python3 build_essays.py`
 3. If title/subtitle changed, regenerate OG image with `./publish-essay.sh`
-4. Commit and push
+4. Run `python3 scripts/validate_indexing_contract.py`
+5. Commit and push
 
 ### DO NOT edit files in `essays/` directly
 Those are generated. Edit the source in `content/essays/` instead.
