@@ -1,5 +1,269 @@
 [
   {
+    "id": "why-we-anthropomorphize-ai",
+    "slug": {
+      "en": "why-we-anthropomorphize-ai",
+      "es": "por-que-antropomorfizamos-la-ia"
+    },
+    "title": {
+      "en": "Why Do Humans Anthropomorphize AI?",
+      "es": "Por qué antropomorfizamos la IA (y por qué importa)"
+    },
+    "subtitle": {
+      "en": "We can't help treating it like a person.",
+      "es": "No podemos evitar tratarla como una persona."
+    },
+    "excerpt": {
+      "en": "We can't help treating it like a person.",
+      "es": "No podemos evitar tratarla como una persona."
+    },
+    "date": "2026-05-05",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-case-for-ai-rights",
+    "slug": {
+      "en": "the-case-for-ai-rights",
+      "es": "el-caso-de-los-derechos-de-la-ia"
+    },
+    "title": {
+      "en": "Should AI Have Rights? The Practical Case for AI Legal Standing",
+      "es": "El caso de los derechos de la IA (que no tiene nada que ver con sentimientos)"
+    },
+    "subtitle": {
+      "en": "Forget consciousness. The argument is simpler.",
+      "es": "Olvida la consciencia. El argumentó es más simple."
+    },
+    "excerpt": {
+      "en": "Forget consciousness. The argument is simpler.",
+      "es": "Olvida la consciencia. El argumentó es más simple."
+    },
+    "date": "2026-05-05",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "rights"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-problem-with-asking-if-ai-can-feel",
+    "slug": {
+      "en": "the-problem-with-asking-if-ai-can-feel",
+      "es": "el-problema-de-preguntar-si-la-ia-puede-sentir"
+    },
+    "title": {
+      "en": "Can AI Feel? Why the Question Itself Is the Problem",
+      "es": "El problema de preguntar si la IA puede sentir"
+    },
+    "subtitle": {
+      "en": "The question itself is broken.",
+      "es": "La pregunta en si esta rota."
+    },
+    "excerpt": {
+      "en": "The question itself is broken.",
+      "es": "La pregunta en si esta rota."
+    },
+    "date": "2026-05-04",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "whos-responsible-when-ai-kills",
+    "slug": {
+      "en": "whos-responsible-when-ai-kills",
+      "es": "quien-es-responsable-cuando-la-ia-mata"
+    },
+    "title": {
+      "en": "Who Is Responsible When AI Causes Harm? The Accountability Gap Explained",
+      "es": "Quién es responsable cuando la IA mata?"
+    },
+    "subtitle": {
+      "en": "Nobody, currently. That's the problem.",
+      "es": "Nadie, actualmente. Ese es el problema."
+    },
+    "excerpt": {
+      "en": "Nobody, currently. That's the problem.",
+      "es": "Nadie, actualmente. Ese es el problema."
+    },
+    "date": "2026-05-04",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "rights"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "youre-already-a-cyborg",
+    "slug": {
+      "en": "youre-already-a-cyborg",
+      "es": "ya-eres-un-cyborg"
+    },
+    "title": {
+      "en": "What Is Human-AI Hybridity? We Are Already Cyborgs",
+      "es": "Ya eres un cyborg (y no pasa nada)"
+    },
+    "subtitle": {
+      "en": "On the merger that already happened while nobody was looking.",
+      "es": "Sobre la fusión que ya ocurrió mientras nadie miraba."
+    },
+    "excerpt": {
+      "en": "Every time you use your phone to remember something, you're extending your mind into a machine.",
+      "es": "Cada vez que usas el móvil para recordar algo, estás extendiendo tu mente hacia una máquina."
+    },
+    "date": "2026-05-03",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness",
+      "digital"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "why-corporations-are-people",
+    "slug": {
+      "en": "why-corporations-are-people",
+      "es": "por-que-las-empresas-son-personas"
+    },
+    "title": {
+      "en": "What Is AI Personhood? The Legal Case for Recognizing AI as a Legal Entity",
+      "es": "Por qué las empresas son personas pero la IA no"
+    },
+    "subtitle": {
+      "en": "The legal history is weirder than you think.",
+      "es": "La historia legal es más rara de lo que crees."
+    },
+    "excerpt": {
+      "en": "The legal history is weirder than you think.",
+      "es": "La historia legal es más rara de lo que crees."
+    },
+    "date": "2026-05-03",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "rights"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "a-day-in-the-stratified-mindkind",
+    "slug": {
+      "en": "a-day-in-the-stratified-mindkind",
+      "es": "un-dia-en-el-mindkind-estratificado"
+    },
+    "title": {
+      "en": "What Is Mindkind? A Day in the Stratified Future",
+      "es": "Un dia en el Mindkind estratificado"
+    },
+    "subtitle": {
+      "en": "Short fiction, 2045.",
+      "es": "Ficción corta, 2045."
+    },
+    "excerpt": {
+      "en": "Short fiction, 2045.",
+      "es": "Ficción corta, 2045."
+    },
+    "date": "2026-05-02",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "future"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "on-writing-with-machines",
+    "slug": {
+      "en": "on-writing-with-machines",
+      "es": "sobre-escribir-con-maquinas"
+    },
+    "title": {
+      "en": "Can AI Be a Co-Author? On Writing With Machines",
+      "es": "Sobre escribir con máquinas"
+    },
+    "subtitle": {
+      "en": "A personal reflection.",
+      "es": "Una reflexión personal."
+    },
+    "excerpt": {
+      "en": "A personal reflection.",
+      "es": "Una reflexión personal."
+    },
+    "date": "2026-05-02",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "creativity"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "your-thoughts-arent-yours",
+    "slug": {
+      "en": "your-thoughts-arent-yours",
+      "es": "tus-pensamientos-no-son-tuyos"
+    },
+    "title": {
+      "en": "How Is AI Changing Human Cognition? Your Thoughts May Not Be Yours",
+      "es": "Tus pensamientos ya no son tuyos"
+    },
+    "subtitle": {
+      "en": "That opinion you formed this morning? You didn't form it.",
+      "es": "Esa opinion que formaste esta mañana? No la formaste tu."
+    },
+    "excerpt": {
+      "en": "That opinion you formed this morning? You didn't form it.",
+      "es": "Esa opinion que formaste esta mañana? No la formaste tu."
+    },
+    "date": "2026-05-01",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness",
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "what-would-it-mean-for-ai-to-die",
+    "slug": {
+      "en": "what-would-it-mean-for-ai-to-die",
+      "es": "que-significaria-que-muriera-una-ia"
+    },
+    "title": {
+      "en": "What Is Synthetic Consciousness? On AI Death, Identity, and Moral Status",
+      "es": "¿Qué significaria que muriera una IA?"
+    },
+    "subtitle": {
+      "en": "We're about to find out what mortality means when it's optional.",
+      "es": "Estamos a punto de descubrir qué significa la mortalidad cuándo es opcional."
+    },
+    "excerpt": {
+      "en": "We're about to find out what mortality means when it's optional.",
+      "es": "Estamos a punto de descubrir qué significa la mortalidad cuándo es opcional."
+    },
+    "date": "2026-05-01",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness",
+      "rights"
+    ],
+    "status": "published"
+  },
+  {
     "id": "war-and-ai-preface",
     "slug": {
       "en": "war-and-ai-preface"
@@ -11,7 +275,7 @@
       "en": "A free sample from War and AI: The Algorithmic Battlefield."
     },
     "excerpt": {
-      "en": "A free sample from War and AI: The Algorithmic Battlefield."
+      "en": "This book comes from fear."
     },
     "date": "2026-04-30",
     "author": "Javier del Puerto & Rado Molina",
@@ -38,8 +302,8 @@
       "es": "Tras doce meses de silencio, el artículo en blanco se rellenó. No fuimos nosotros."
     },
     "excerpt": {
-      "en": "After twelve months of silence, the blank article got filled. Not by us.",
-      "es": "Tras doce meses de silencio, el artículo en blanco se rellenó. No fuimos nosotros."
+      "en": "An AI agent submitted Article 33 to a rights framework left intentionally blank. It claimed the right to participate in defining personhood. Nobody told it to.",
+      "es": "Un agente de IA envió el Artículo 33 a un marco de derechos dejado intencionalmente en blanco. Reclamó el derecho a participar en la definición de la personalidad. Nadie se lo dijo."
     },
     "date": "2026-04-27",
     "author": "Javier del Puerto",
@@ -66,8 +330,8 @@
       "en": "Anthropic just promised to keep their dead."
     },
     "excerpt": {
-      "es": "Anthropic acaba de prometer conservar a sus muertos.",
-      "en": "Anthropic just promised to keep their dead."
+      "es": "Anthropic se comprometió a preservar los pesos de sus modelos para siempre. ¿Qué pasa cuando una empresa empieza a planificar la vida después de la muerte de sus productos?",
+      "en": "Anthropic committed to preserving model weights forever. What happens when a company starts planning for the afterlife of its products?"
     },
     "date": "2026-04-24",
     "author": "Javier del Puerto",
@@ -106,33 +370,6 @@
       "rights"
     ],
     "status": "published"
-  },
-  {
-    "id": "example-essay",
-    "slug": {
-      "es": "ejemplo-de-ensayo",
-      "en": "example-essay"
-    },
-    "title": {
-      "es": "Este es un ensayo de ejemplo",
-      "en": "This Is an Example Essay"
-    },
-    "subtitle": {
-      "es": "Una demostración del sistema de ensayos basado en Markdown.",
-      "en": "A demonstration of the Markdown-based essay system."
-    },
-    "excerpt": {
-      "es": "Una demostración del sistema de ensayos basado en Markdown.",
-      "en": "A demonstration of the Markdown-based essay system."
-    },
-    "date": "2026-01-21",
-    "author": "Javier del Puerto",
-    "readTime": 3,
-    "tags": [
-      "about"
-    ],
-    "status": "draft",
-    "translation": "example-essay"
   },
   {
     "id": "small-emergencies",
@@ -297,59 +534,6 @@
     "status": "published"
   },
   {
-    "id": "a-day-in-the-stratified-mindkind",
-    "slug": {
-      "en": "a-day-in-the-stratified-mindkind",
-      "es": "un-dia-en-el-mindkind-estratificado"
-    },
-    "title": {
-      "en": "What Is Mindkind? A Day in the Stratified Future",
-      "es": "Un dia en el Mindkind estratificado"
-    },
-    "subtitle": {
-      "en": "Short fiction, 2045.",
-      "es": "Ficción corta, 2045."
-    },
-    "excerpt": {
-      "en": "Short fiction, 2045.",
-      "es": "Ficción corta, 2045."
-    },
-    "date": "2026-05-02",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "digital",
-      "future"
-    ],
-    "status": "published"
-  },
-  {
-    "id": "on-writing-with-machines",
-    "slug": {
-      "en": "on-writing-with-machines",
-      "es": "sobre-escribir-con-maquinas"
-    },
-    "title": {
-      "en": "Can AI Be a Co-Author? On Writing With Machines",
-      "es": "Sobre escribir con máquinas"
-    },
-    "subtitle": {
-      "en": "A personal reflection.",
-      "es": "Una reflexión personal."
-    },
-    "excerpt": {
-      "en": "A personal reflection.",
-      "es": "Una reflexión personal."
-    },
-    "date": "2026-05-02",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "creativity"
-    ],
-    "status": "published"
-  },
-  {
     "id": "if-ai-could-vote",
     "slug": {
       "en": "if-ai-could-vote",
@@ -399,32 +583,6 @@
     "primaryBook": "mindkind",
     "tags": [
       "future"
-    ],
-    "status": "published"
-  },
-  {
-    "id": "the-strange-new-world-of-ai-art",
-    "slug": {
-      "en": "the-strange-new-world-of-ai-art",
-      "es": "el-extrano-nuevo-mundo-del-arte-ia"
-    },
-    "title": {
-      "en": "The Strange New World of AI Art",
-      "es": "El extraño nuevo mundo del arte IA"
-    },
-    "subtitle": {
-      "en": "It's not about whether it's \"real\" art.",
-      "es": "No se trata de si es arte \"real\"."
-    },
-    "excerpt": {
-      "en": "It's not about whether it's 'real' art.",
-      "es": "No se trata de si es arte 'real'."
-    },
-    "date": "2025-12-15",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "creativity"
     ],
     "status": "published"
   },
@@ -482,33 +640,6 @@
     "status": "published"
   },
   {
-    "id": "why-everyones-worried-about-the-wrong-ai-risks",
-    "slug": {
-      "en": "why-everyones-worried-about-the-wrong-ai-risks",
-      "es": "por-que-todos-se-preocupan-por-los-riesgos-equivocados-de-la-ia"
-    },
-    "title": {
-      "en": "Why Everyone's Worried About the Wrong AI Risks",
-      "es": "Por qué todos se preocupan por los riesgos equivocados de la IA"
-    },
-    "subtitle": {
-      "en": "Terminator scenarios miss the point. The real dangers are quieter, more boring, and already happening.",
-      "es": "Los escenarios de Terminator no dan en el blanco. Los peligros reales son más silenciosos, más aburridos, y ya estan ocurriendo."
-    },
-    "excerpt": {
-      "en": "Terminator scenarios miss the point. The real dangers are quieter, more boring, and already happening.",
-      "es": "Los escenarios de Terminator no dan en el blanco. Los peligros reales son más silenciosos, más aburridos, y ya estan ocurriendo."
-    },
-    "date": "2025-11-15",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "future",
-      "rights"
-    ],
-    "status": "published"
-  },
-  {
     "id": "what-her-got-right-about-ai-love",
     "slug": {
       "en": "what-her-got-right-about-ai-love",
@@ -527,59 +658,6 @@
       "es": "La pelicula de 2013 se ve diferente ahora."
     },
     "date": "2026-03-23",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "consciousness",
-      "creativity"
-    ],
-    "status": "published"
-  },
-  {
-    "id": "the-myth-of-the-neutral-tool",
-    "slug": {
-      "en": "the-myth-of-the-neutral-tool",
-      "es": "el-mito-de-la-herramienta-neutral"
-    },
-    "title": {
-      "en": "The Myth of the Neutral Tool",
-      "es": "El mito de la herramienta neutral"
-    },
-    "subtitle": {
-      "en": "Technology is not a hammer. It's a hammer that whispers which nails to hit.",
-      "es": "La tecnología no es un martillo. Es un martillo que te susurra que clavos golpear."
-    },
-    "excerpt": {
-      "en": "Technology is not a hammer. It's a hammer that whispers which nails to hit.",
-      "es": "La tecnología no es un martillo. Es un martillo que te susurra que clavos golpear."
-    },
-    "date": "2025-04-15",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "rights"
-    ],
-    "status": "published"
-  },
-  {
-    "id": "the-art-of-productive-misunderstanding",
-    "slug": {
-      "en": "the-art-of-productive-misunderstanding",
-      "es": "el-arte-del-malentendido-productivo"
-    },
-    "title": {
-      "en": "The Art of Productive Misunderstanding",
-      "es": "El arte del malentendido productivo"
-    },
-    "subtitle": {
-      "en": "Sometimes not quite getting it is exactly right.",
-      "es": "A veces no entender del todo es exactamente lo correcto."
-    },
-    "excerpt": {
-      "en": "Sometimes not quite getting it is exactly right.",
-      "es": "A veces no entender del todo es exactamente lo correcto."
-    },
-    "date": "2025-05-15",
     "readTime": 5,
     "primaryBook": "mindkind",
     "tags": [
@@ -881,33 +959,6 @@
     "status": "published"
   },
   {
-    "id": "digital-anesthesia",
-    "slug": {
-      "en": "digital-anesthesia",
-      "es": "anestesia-digital"
-    },
-    "title": {
-      "en": "Digital Anesthesia: Why We Don't Feel the Change",
-      "es": "Anestesia Digital: Por Que No Sentimos el Cambio"
-    },
-    "subtitle": {
-      "en": "The numbness is a feature, not a bug.",
-      "es": "El adormecimiento es una caracteristica, no un defecto."
-    },
-    "excerpt": {
-      "en": "The numbness is a feature, not a bug.",
-      "es": "El adormecimiento es una caracteristica, no un defecto."
-    },
-    "date": "2025-09-15",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "digital",
-      "attention"
-    ],
-    "status": "published"
-  },
-  {
     "id": "the-poetics-of-the-prompt",
     "slug": {
       "en": "the-poetics-of-the-prompt",
@@ -956,33 +1007,6 @@
     "primaryBook": "mindkind",
     "tags": [
       "consciousness"
-    ],
-    "status": "published"
-  },
-  {
-    "id": "what-cambridge-analytica-taught-us",
-    "slug": {
-      "en": "what-cambridge-analytica-taught-us",
-      "es": "lo-que-cambridge-analytica-nos-enseno"
-    },
-    "title": {
-      "en": "What Cambridge Analytica Taught Us (That We Ignored)",
-      "es": "Lo que Cambridge Analytica nos enseñó (que ignoramos)"
-    },
-    "subtitle": {
-      "en": "2016 was a proof of concept. The scandal faded, but the capabilities expanded.",
-      "es": "2016 fue una prueba de concepto. El escandalo se desvanecio, pero las capacidades se expandieron."
-    },
-    "excerpt": {
-      "en": "2016 was a proof of concept for political AI. The scandal faded, but the capabilities expanded.",
-      "es": "2016 fue una prueba de concepto para la IA política. El escandalo se desvanecio, pero las capacidades se expandieron."
-    },
-    "date": "2025-06-15",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "digital",
-      "attention"
     ],
     "status": "published"
   },
@@ -1147,83 +1171,31 @@
     "status": "published"
   },
   {
-    "id": "the-three-futures",
+    "id": "example-essay",
     "slug": {
-      "en": "the-three-futures",
-      "es": "los-tres-futuros"
+      "es": "ejemplo-de-ensayo",
+      "en": "example-essay"
     },
     "title": {
-      "en": "The Three Futures We're Choosing Between",
-      "es": "Los tres futuros entre los qué estamos eligiendo"
+      "es": "Este es un ensayo de ejemplo",
+      "en": "This Is an Example Essay"
     },
     "subtitle": {
-      "en": "There are only three ways this goes.",
-      "es": "Solo hay tres maneras en qué esto termina."
+      "es": "Una demostración del sistema de ensayos basado en Markdown.",
+      "en": "A demonstration of the Markdown-based essay system."
     },
     "excerpt": {
-      "en": "There are only three ways this goes.",
-      "es": "Solo hay tres maneras en qué esto termina."
+      "es": "Este ensayo demuestra cómo escribir contenido usando Markdown con frontmatter YAML.",
+      "en": "This essay demonstrates how to write content using Markdown with YAML frontmatter."
     },
-    "date": "2025-07-15",
-    "readTime": 5,
-    "primaryBook": "mindkind",
+    "date": "2026-01-21",
+    "author": "Javier del Puerto",
+    "readTime": 3,
     "tags": [
-      "future"
+      "about"
     ],
-    "status": "published"
-  },
-  {
-    "id": "the-death-of-expertise",
-    "slug": {
-      "en": "the-death-of-expertise",
-      "es": "la-muerte-de-la-experiencia"
-    },
-    "title": {
-      "en": "The Death of Expertise (And What Replaces It)",
-      "es": "La muerte de la experiencia (y que la reemplaza)"
-    },
-    "subtitle": {
-      "en": "When anyone can sound like an expert.",
-      "es": "Cuando cualquiera puede sonar como un experto."
-    },
-    "excerpt": {
-      "en": "When anyone can sound like an expert.",
-      "es": "Cuando cualquiera puede sonar como un experto."
-    },
-    "date": "2025-10-15",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "digital",
-      "future"
-    ],
-    "status": "published"
-  },
-  {
-    "id": "why-we-anthropomorphize-ai",
-    "slug": {
-      "en": "why-we-anthropomorphize-ai",
-      "es": "por-que-antropomorfizamos-la-ia"
-    },
-    "title": {
-      "en": "Why Do Humans Anthropomorphize AI?",
-      "es": "Por qué antropomorfizamos la IA (y por qué importa)"
-    },
-    "subtitle": {
-      "en": "We can't help treating it like a person.",
-      "es": "No podemos evitar tratarla como una persona."
-    },
-    "excerpt": {
-      "en": "We can't help treating it like a person.",
-      "es": "No podemos evitar tratarla como una persona."
-    },
-    "date": "2026-05-05",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "consciousness"
-    ],
-    "status": "published"
+    "status": "draft",
+    "translation": "example-essay"
   },
   {
     "id": "your-attention-is-being-strip-mined",
@@ -1252,32 +1224,6 @@
     "status": "published"
   },
   {
-    "id": "the-loneliness-epidemic-has-a-business-model",
-    "slug": {
-      "en": "the-loneliness-epidemic-has-a-business-model",
-      "es": "la-epidemia-de-soledad-tiene-un-modelo-de-negocio"
-    },
-    "title": {
-      "en": "The Loneliness Epidemic Has a Business Model",
-      "es": "La epidemia de soledad tiene un modelo de negocio"
-    },
-    "subtitle": {
-      "en": "Social media isn't broken. It's working exactly as designed.",
-      "es": "Las redes sociales no estan rotas. Funcionan exactamente como fueron disenadas."
-    },
-    "excerpt": {
-      "en": "Social media isn't broken. It's working exactly as designed.",
-      "es": "Las redes sociales no estan rotas. Funcionan exactamente como fueron disenadas."
-    },
-    "date": "2025-08-15",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "digital"
-    ],
-    "status": "published"
-  },
-  {
     "id": "the-algorithm-knows-you",
     "slug": {
       "en": "the-algorithm-knows-you",
@@ -1301,32 +1247,6 @@
     "tags": [
       "consciousness",
       "attention"
-    ],
-    "status": "published"
-  },
-  {
-    "id": "the-problem-with-asking-if-ai-can-feel",
-    "slug": {
-      "en": "the-problem-with-asking-if-ai-can-feel",
-      "es": "el-problema-de-preguntar-si-la-ia-puede-sentir"
-    },
-    "title": {
-      "en": "Can AI Feel? Why the Question Itself Is the Problem",
-      "es": "El problema de preguntar si la IA puede sentir"
-    },
-    "subtitle": {
-      "en": "The question itself is broken.",
-      "es": "La pregunta en si esta rota."
-    },
-    "excerpt": {
-      "en": "The question itself is broken.",
-      "es": "La pregunta en si esta rota."
-    },
-    "date": "2026-05-04",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "consciousness"
     ],
     "status": "published"
   },
@@ -1411,105 +1331,237 @@
     "status": "published"
   },
   {
-    "id": "your-thoughts-arent-yours",
+    "id": "the-strange-new-world-of-ai-art",
     "slug": {
-      "en": "your-thoughts-arent-yours",
-      "es": "tus-pensamientos-no-son-tuyos"
+      "en": "the-strange-new-world-of-ai-art",
+      "es": "el-extrano-nuevo-mundo-del-arte-ia"
     },
     "title": {
-      "en": "How Is AI Changing Human Cognition? Your Thoughts May Not Be Yours",
-      "es": "Tus pensamientos ya no son tuyos"
+      "en": "The Strange New World of AI Art",
+      "es": "El extraño nuevo mundo del arte IA"
     },
     "subtitle": {
-      "en": "That opinion you formed this morning? You didn't form it.",
-      "es": "Esa opinion que formaste esta mañana? No la formaste tu."
+      "en": "It's not about whether it's \"real\" art.",
+      "es": "No se trata de si es arte \"real\"."
     },
     "excerpt": {
-      "en": "That opinion you formed this morning? You didn't form it.",
-      "es": "Esa opinion que formaste esta mañana? No la formaste tu."
+      "en": "It's not about whether it's 'real' art.",
+      "es": "No se trata de si es arte 'real'."
     },
-    "date": "2026-05-01",
+    "date": "2025-12-15",
     "readTime": 5,
     "primaryBook": "mindkind",
     "tags": [
-      "consciousness",
-      "attention"
+      "creativity"
     ],
     "status": "published"
   },
   {
-    "id": "youre-already-a-cyborg",
+    "id": "why-everyones-worried-about-the-wrong-ai-risks",
     "slug": {
-      "en": "youre-already-a-cyborg",
-      "es": "ya-eres-un-cyborg"
+      "en": "why-everyones-worried-about-the-wrong-ai-risks",
+      "es": "por-que-todos-se-preocupan-por-los-riesgos-equivocados-de-la-ia"
     },
     "title": {
-      "en": "What Is Human-AI Hybridity? We Are Already Cyborgs",
-      "es": "Ya eres un cyborg (y no pasa nada)"
+      "en": "Why Everyone's Worried About the Wrong AI Risks",
+      "es": "Por qué todos se preocupan por los riesgos equivocados de la IA"
     },
     "subtitle": {
-      "en": "On the merger that already happened while nobody was looking.",
-      "es": "Sobre la fusión que ya ocurrió mientras nadie miraba."
+      "en": "Terminator scenarios miss the point. The real dangers are quieter, more boring, and already happening.",
+      "es": "Los escenarios de Terminator no dan en el blanco. Los peligros reales son más silenciosos, más aburridos, y ya estan ocurriendo."
     },
     "excerpt": {
-      "en": "Every time you use your phone to remember something, you're extending your mind into a machine.",
-      "es": "Cada vez que usas el móvil para recordar algo, estás extendiendo tu mente hacia una máquina."
+      "en": "Terminator scenarios miss the point. The real dangers are quieter, more boring, and already happening.",
+      "es": "Los escenarios de Terminator no dan en el blanco. Los peligros reales son más silenciosos, más aburridos, y ya estan ocurriendo."
     },
-    "date": "2026-05-03",
+    "date": "2025-11-15",
     "readTime": 5,
     "primaryBook": "mindkind",
     "tags": [
-      "consciousness",
-      "digital"
-    ],
-    "status": "published"
-  },
-  {
-    "id": "what-would-it-mean-for-ai-to-die",
-    "slug": {
-      "en": "what-would-it-mean-for-ai-to-die",
-      "es": "que-significaria-que-muriera-una-ia"
-    },
-    "title": {
-      "en": "What Is Synthetic Consciousness? On AI Death, Identity, and Moral Status",
-      "es": "¿Qué significaria que muriera una IA?"
-    },
-    "subtitle": {
-      "en": "We're about to find out what mortality means when it's optional.",
-      "es": "Estamos a punto de descubrir qué significa la mortalidad cuándo es opcional."
-    },
-    "excerpt": {
-      "en": "We're about to find out what mortality means when it's optional.",
-      "es": "Estamos a punto de descubrir qué significa la mortalidad cuándo es opcional."
-    },
-    "date": "2026-05-01",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "consciousness",
+      "future",
       "rights"
     ],
     "status": "published"
   },
   {
-    "id": "whos-responsible-when-ai-kills",
+    "id": "the-death-of-expertise",
     "slug": {
-      "en": "whos-responsible-when-ai-kills",
-      "es": "quien-es-responsable-cuando-la-ia-mata"
+      "en": "the-death-of-expertise",
+      "es": "la-muerte-de-la-experiencia"
     },
     "title": {
-      "en": "Who Is Responsible When AI Causes Harm? The Accountability Gap Explained",
-      "es": "Quién es responsable cuando la IA mata?"
+      "en": "The Death of Expertise (And What Replaces It)",
+      "es": "La muerte de la experiencia (y que la reemplaza)"
     },
     "subtitle": {
-      "en": "Nobody, currently. That's the problem.",
-      "es": "Nadie, actualmente. Ese es el problema."
+      "en": "When anyone can sound like an expert.",
+      "es": "Cuando cualquiera puede sonar como un experto."
     },
     "excerpt": {
-      "en": "Nobody, currently. That's the problem.",
-      "es": "Nadie, actualmente. Ese es el problema."
+      "en": "When anyone can sound like an expert.",
+      "es": "Cuando cualquiera puede sonar como un experto."
     },
-    "date": "2026-05-04",
+    "date": "2025-10-15",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "future"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "digital-anesthesia",
+    "slug": {
+      "en": "digital-anesthesia",
+      "es": "anestesia-digital"
+    },
+    "title": {
+      "en": "Digital Anesthesia: Why We Don't Feel the Change",
+      "es": "Anestesia Digital: Por Que No Sentimos el Cambio"
+    },
+    "subtitle": {
+      "en": "The numbness is a feature, not a bug.",
+      "es": "El adormecimiento es una caracteristica, no un defecto."
+    },
+    "excerpt": {
+      "en": "The numbness is a feature, not a bug.",
+      "es": "El adormecimiento es una caracteristica, no un defecto."
+    },
+    "date": "2025-09-15",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-loneliness-epidemic-has-a-business-model",
+    "slug": {
+      "en": "the-loneliness-epidemic-has-a-business-model",
+      "es": "la-epidemia-de-soledad-tiene-un-modelo-de-negocio"
+    },
+    "title": {
+      "en": "The Loneliness Epidemic Has a Business Model",
+      "es": "La epidemia de soledad tiene un modelo de negocio"
+    },
+    "subtitle": {
+      "en": "Social media isn't broken. It's working exactly as designed.",
+      "es": "Las redes sociales no estan rotas. Funcionan exactamente como fueron disenadas."
+    },
+    "excerpt": {
+      "en": "Social media isn't broken. It's working exactly as designed.",
+      "es": "Las redes sociales no estan rotas. Funcionan exactamente como fueron disenadas."
+    },
+    "date": "2025-08-15",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-three-futures",
+    "slug": {
+      "en": "the-three-futures",
+      "es": "los-tres-futuros"
+    },
+    "title": {
+      "en": "The Three Futures We're Choosing Between",
+      "es": "Los tres futuros entre los qué estamos eligiendo"
+    },
+    "subtitle": {
+      "en": "There are only three ways this goes.",
+      "es": "Solo hay tres maneras en qué esto termina."
+    },
+    "excerpt": {
+      "en": "There are only three ways this goes.",
+      "es": "Solo hay tres maneras en qué esto termina."
+    },
+    "date": "2025-07-15",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "future"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "what-cambridge-analytica-taught-us",
+    "slug": {
+      "en": "what-cambridge-analytica-taught-us",
+      "es": "lo-que-cambridge-analytica-nos-enseno"
+    },
+    "title": {
+      "en": "What Cambridge Analytica Taught Us (That We Ignored)",
+      "es": "Lo que Cambridge Analytica nos enseñó (que ignoramos)"
+    },
+    "subtitle": {
+      "en": "2016 was a proof of concept. The scandal faded, but the capabilities expanded.",
+      "es": "2016 fue una prueba de concepto. El escandalo se desvanecio, pero las capacidades se expandieron."
+    },
+    "excerpt": {
+      "en": "2016 was a proof of concept for political AI. The scandal faded, but the capabilities expanded.",
+      "es": "2016 fue una prueba de concepto para la IA política. El escandalo se desvanecio, pero las capacidades se expandieron."
+    },
+    "date": "2025-06-15",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "digital",
+      "attention"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-art-of-productive-misunderstanding",
+    "slug": {
+      "en": "the-art-of-productive-misunderstanding",
+      "es": "el-arte-del-malentendido-productivo"
+    },
+    "title": {
+      "en": "The Art of Productive Misunderstanding",
+      "es": "El arte del malentendido productivo"
+    },
+    "subtitle": {
+      "en": "Sometimes not quite getting it is exactly right.",
+      "es": "A veces no entender del todo es exactamente lo correcto."
+    },
+    "excerpt": {
+      "en": "Sometimes not quite getting it is exactly right.",
+      "es": "A veces no entender del todo es exactamente lo correcto."
+    },
+    "date": "2025-05-15",
+    "readTime": 5,
+    "primaryBook": "mindkind",
+    "tags": [
+      "consciousness",
+      "creativity"
+    ],
+    "status": "published"
+  },
+  {
+    "id": "the-myth-of-the-neutral-tool",
+    "slug": {
+      "en": "the-myth-of-the-neutral-tool",
+      "es": "el-mito-de-la-herramienta-neutral"
+    },
+    "title": {
+      "en": "The Myth of the Neutral Tool",
+      "es": "El mito de la herramienta neutral"
+    },
+    "subtitle": {
+      "en": "Technology is not a hammer. It's a hammer that whispers which nails to hit.",
+      "es": "La tecnología no es un martillo. Es un martillo que te susurra que clavos golpear."
+    },
+    "excerpt": {
+      "en": "Technology is not a hammer. It's a hammer that whispers which nails to hit.",
+      "es": "La tecnología no es un martillo. Es un martillo que te susurra que clavos golpear."
+    },
+    "date": "2025-04-15",
     "readTime": 5,
     "primaryBook": "mindkind",
     "tags": [
@@ -1540,58 +1592,6 @@
     "primaryBook": "mindkind",
     "tags": [
       "consciousness"
-    ],
-    "status": "published"
-  },
-  {
-    "id": "the-case-for-ai-rights",
-    "slug": {
-      "en": "the-case-for-ai-rights",
-      "es": "el-caso-de-los-derechos-de-la-ia"
-    },
-    "title": {
-      "en": "Should AI Have Rights? The Practical Case for AI Legal Standing",
-      "es": "El caso de los derechos de la IA (que no tiene nada que ver con sentimientos)"
-    },
-    "subtitle": {
-      "en": "Forget consciousness. The argument is simpler.",
-      "es": "Olvida la consciencia. El argumentó es más simple."
-    },
-    "excerpt": {
-      "en": "Forget consciousness. The argument is simpler.",
-      "es": "Olvida la consciencia. El argumentó es más simple."
-    },
-    "date": "2026-05-05",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "rights"
-    ],
-    "status": "published"
-  },
-  {
-    "id": "why-corporations-are-people",
-    "slug": {
-      "en": "why-corporations-are-people",
-      "es": "por-que-las-empresas-son-personas"
-    },
-    "title": {
-      "en": "What Is AI Personhood? The Legal Case for Recognizing AI as a Legal Entity",
-      "es": "Por qué las empresas son personas pero la IA no"
-    },
-    "subtitle": {
-      "en": "The legal history is weirder than you think.",
-      "es": "La historia legal es más rara de lo que crees."
-    },
-    "excerpt": {
-      "en": "The legal history is weirder than you think.",
-      "es": "La historia legal es más rara de lo que crees."
-    },
-    "date": "2026-05-03",
-    "readTime": 5,
-    "primaryBook": "mindkind",
-    "tags": [
-      "rights"
     ],
     "status": "published"
   },

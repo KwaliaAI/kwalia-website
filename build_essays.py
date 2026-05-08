@@ -27,6 +27,7 @@ import os
 import re
 import json
 import yaml
+import html
 import unicodedata
 from pathlib import Path
 from datetime import datetime
@@ -422,6 +423,9 @@ def generate_essay_card_html(essay, lang='en'):
     import random
     random.seed(essay['id'])  # Consistent random shapes per essay
 
+    def esc(value, quote=True):
+        return html.escape(str(value or ''), quote=quote)
+
     # Generate random SVG shapes
     shapes = []
     shape_types = ['circle', 'rect', 'polygon']
@@ -472,17 +476,17 @@ def generate_essay_card_html(essay, lang='en'):
         tag_en = TAG_LABELS['en'].get(tag, tag)
         tag_es = TAG_LABELS['es'].get(tag, tag)
         tag_badges += f'''
-                            <span class="tag-badge" data-filter="{tag}" data-en="{tag_en}" data-es="{tag_es}">{tag_en}</span>'''
+                            <span class="tag-badge" data-filter="{esc(tag)}" data-en="{esc(tag_en)}" data-es="{esc(tag_es)}">{esc(tag_en, quote=False)}</span>'''
 
     return f'''
-                    <a href="{slug_en}.html" class="essay-card flex items-start gap-4 py-6" data-href-en="{slug_en}.html" data-href-es="{slug_es}.html" data-tags="{tags_str}">
+                    <a href="{esc(slug_en)}.html" class="essay-card flex items-start gap-4 py-6" data-href-en="{esc(slug_en)}.html" data-href-es="{esc(slug_es)}.html" data-tags="{esc(tags_str)}">
                         <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
             {svg_content}
         </svg>
                         <div class="flex-1">
-                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="{date_en}" data-es="{date_es}">{date_en}</p>
-                        <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="{title_en}" data-es="{title_es}">{title_en}</h2>
-                        <p class="font-f2 text-c2/70 mt-2" data-en="{subtitle_en}" data-es="{subtitle_es}">{subtitle_en}</p>
+                            <p class="font-f3 text-xs text-c2/50 mb-2" data-en="{esc(date_en)}" data-es="{esc(date_es)}">{esc(date_en, quote=False)}</p>
+                        <h2 class="font-f1 text-2xl md:text-3xl transition-colors" data-en="{esc(title_en)}" data-es="{esc(title_es)}">{esc(title_en, quote=False)}</h2>
+                        <p class="font-f2 text-c2/70 mt-2" data-en="{esc(subtitle_en)}" data-es="{esc(subtitle_es)}">{esc(subtitle_en, quote=False)}</p>
                         <div class="essay-tags mt-2">{tag_badges}
                         </div>
                     </div>
@@ -491,7 +495,7 @@ def generate_essay_card_html(essay, lang='en'):
 
 
 def update_essays_index():
-    """Update essays/index.html with any missing essay cards."""
+    """Refresh essays/index.html cards from data/essays.json."""
     index_file = OUTPUT_DIR / "index.html"
     json_file = DATA_DIR / "essays.json"
 
@@ -506,42 +510,31 @@ def update_essays_index():
     with open(index_file, 'r', encoding='utf-8') as f:
         index_html = f.read()
 
-    # Find which essays are already in the index
-    existing_slugs = set(re.findall(r'data-href-en="([^"]+)\.html"', index_html))
-
-    # Find missing essays (published only)
-    missing = []
-    for essay in essays:
-        if essay.get('status') != 'published':
-            continue
-        slug_en = essay.get('slug', {}).get('en', essay['id'])
-        if slug_en not in existing_slugs:
-            missing.append(essay)
-
-    if not missing:
+    published = [essay for essay in essays if essay.get('status') == 'published']
+    if not published:
         return
 
-    print(f"\nAdding {len(missing)} new essay(s) to index page...")
-
-    # Generate HTML for missing essays
+    print(f"\nRefreshing {len(published)} essay card(s) in index page...")
     new_cards = ''
-    for essay in missing:
+    for essay in published:
         new_cards += generate_essay_card_html(essay)
-        slug = essay.get('slug', {}).get('en', essay['id'])
-        print(f"  + {slug}")
 
-    # Insert after <div id="essays-list" class="space-y-0">
-    insert_point = '<div id="essays-list" class="space-y-0">'
-    if insert_point in index_html:
-        index_html = index_html.replace(
-            insert_point,
-            insert_point + new_cards
-        )
+    start_marker = '<div id="essays-list" class="space-y-0">'
+    end_marker = '\n                </div>\n                \n                <!-- Pagination -->'
+    if start_marker not in index_html or end_marker not in index_html:
+        print(f"  Could not find essay-list markers in {index_file.name}")
+        return
 
+    start = index_html.index(start_marker) + len(start_marker)
+    end = index_html.index(end_marker, start)
+    updated_html = index_html[:start] + new_cards + index_html[end:]
+    if updated_html != index_html:
         with open(index_file, 'w', encoding='utf-8') as f:
-            f.write(index_html)
+            f.write(updated_html)
 
         print(f"  Updated {index_file.name}")
+    else:
+        print(f"  {index_file.name} already up to date")
 
 
 def update_essays_json(essays_metadata):
