@@ -1,22 +1,22 @@
 [
   {
     "q": "¿De dónde viene el término «subclase permanente»?",
-    "a": "Kyle Chayka lo popularizó en The New Yorker en octubre de 2025, presentándolo como un meme de Silicon Valley que se había endurecido hasta volverse una cosmovisión. Jasmine Sun le dio su autoridad actual en The New York Times en mayo de 2026, después de tres meses de entrevistas con investigadores y empleados de laboratorios. La palabra inglesa underclass tiene una larga historia sociológica, a menudo desagradable, pero su uso en la era de la IA se estabilizó entre esas dos piezas."
+    "a": "Kyle Chayka lo popularizó en The New Yorker en octubre de 2025, presentándolo como un meme de Silicon Valley que se había endurecido hasta volverse una cosmovisión. Jasmine Sun le dio su autoridad actual en The New York Times en mayo de 2026, después de tres meses de entrevistas con investigadores y empleados de empresas de IA. La palabra inglesa underclass tiene una larga historia sociológica, a menudo desagradable, pero su uso en la era de la IA se estabilizó entre esos dos artículos."
   },
   {
     "q": "¿Es la tesis de la subclase permanente lo mismo que la posición doomer sobre la IA?",
-    "a": "No. El doomerismo de IA se ha centrado tradicionalmente en el riesgo existencial: superinteligencia desalineada, pérdida de control, desenlaces de extinción. La tesis de la subclase permanente da por hecho que el alineamiento se sostiene básicamente y que la catástrofe es estructural y económica. El modo de fallo no es la extinción sino la estratificación. Algunas personas sostienen las dos posiciones a la vez, pero son teorías distintas, con implicaciones de política distintas."
+    "a": "No. El catastrofismo de la IA se enfoca en el riesgo existencial, como la superinteligencia desalineada, la pérdida de control o la extinción. La tesis de la subclase permanente asume que el alineamiento funciona y que la catástrofe es estructural y económica. El problema no es la extinción, sino la estratificación. Aunque algunas personas defienden ambas posturas, son teorías distintas con implicaciones políticas diferentes."
   },
   {
     "q": "¿Cree Anthropic en la subclase permanente?",
-    "a": "El CEO de Anthropic, Dario Amodei, ha advertido explícitamente sobre una «subclase desempleada o de salarios muy bajos» si el trabajo cognitivo pierde su valor económico. Anthropic sigue publicando modelos de frontera. Esto no es hipocresía; refleja la posición de que la tecnología va a construirse de un modo o de otro, y prefieren ser ellos quienes la construyan con cuidado. Si eso resulta convincente depende de cuánto peso le des a la moderación corporativa voluntaria bajo presión competitiva."
+    "a": "El CEO de Anthropic, Dario Amodei, ha advertido explícitamente sobre una «subclase desempleada o de salarios muy bajos» si el trabajo cognitivo pierde su valor económico. No obstante, Anthropic sigue publicando modelos de frontera. Esto refleja la posición tras la que se parapetan: la tecnología va a construirse de un modo o de otro, y prefieren ser ellos quienes la construyan con cuidado. La credibilidad de este argumento depende del peso que se le dé a la moderación corporativa voluntaria bajo presión competitiva."
   },
   {
-    "q": "¿Es «agarrar la bolsa» una estrategia real de supervivencia?",
-    "a": "Para la mayoría de la gente, no. La analogía romana del ensayo de Marcus Plutowski en LessWrong es la pertinente. En un cambio de paradigma real, los derechos de propiedad y los instrumentos financieros que almacenan la riqueza actual dependen de instituciones que pueden no sobrevivir al cambio. Un senador que acumuló oro en el 410 d. C. no se lo pasó a sus tataranietos. El registro histórico de las discontinuidades sistémicas no es amable con los balances privados."
+    "q": "¿Es «coger el dinero y correr» una estrategia real de supervivencia?",
+    "a": "Para la mayoría de la gente, no. Aquí resulta relevante la analogía romana del ensayo de Marcus Plutowski en LessWrong. En un cambio de paradigma real, los derechos de propiedad y los instrumentos financieros actuales dependen de instituciones que podrían no sobrevivir a la transición. Por ejemplo, un senador que acumuló oro en el 410 d. C. no pudo transferirlo a sus tataranietos. El historial de las discontinuidades sistémicas no es favorable a los balances privados."
   },
   {
     "q": "¿Cuál es la posición de Kwalia?",
-    "a": "El mecanismo económico es real, y la compresión salarial para los trabajadores cognitivos va a ser severa. El marco de la «permanencia» es retórico: presume que las instituciones de hoy se mantendrán mientras la tecnología que las desestabiliza llega a término, y las dos cosas no pueden ser ciertas a la vez. El trabajo que importa está en el nivel institucional, no en el del escape personal. El argumento largo está en Mindkind (2025)."
+    "a": "El mecanismo económico es real, y la compresión salarial para los trabajadores cognitivos será severa. Sin embargo, el marco de la «permanencia» es retórico: parte de la idea de que las instituciones de hoy se mantendrán mientras la tecnología que las desestabiliza llega a su culminación, y ambas cosas no pueden ser ciertas al mismo tiempo. El trabajo importante se halla en el ámbito institucional, no en el del escape personal. El argumento completo se desarrolla en Mindkind (2025)."
   }
 ]
