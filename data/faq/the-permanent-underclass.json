@@ -1,0 +1,22 @@
+[
+  {
+    "q": "Where did the term 'permanent underclass' come from?",
+    "a": "Kyle Chayka popularised it in The New Yorker in October 2025, reporting it as a Silicon Valley meme that had hardened into a worldview. Jasmine Sun gave it its current authority in The New York Times in May 2026 after three months of interviews with researchers and lab employees. The word 'underclass' itself has a long sociological history, often unpleasant, but its AI-era usage stabilised between those two pieces."
+  },
+  {
+    "q": "Is the permanent-underclass thesis the same as the AI doomer position?",
+    "a": "No. AI doom traditionally focused on existential risk: misaligned superintelligence, loss of control, extinction-class outcomes. The permanent-underclass thesis assumes alignment basically holds and the catastrophe is structural and economic. The failure mode is not extinction but stratification. Some people hold both, but they are different theories with different policy implications."
+  },
+  {
+    "q": "Does Anthropic believe in the permanent underclass?",
+    "a": "Anthropic's CEO Dario Amodei has explicitly warned about an 'unemployed or very-low-wage underclass' if cognitive labour loses its economic value. Anthropic continues to ship frontier models. This is not hypocrisy; it reflects the position that the technology is going to be built either way, and they prefer to be the ones building it carefully. Whether that is convincing depends on how much weight you give to voluntary corporate restraint under competitive pressure."
+  },
+  {
+    "q": "Is 'grab the bag' actually a survival strategy?",
+    "a": "For most people, no. The Roman analogy from Marcus Plutowski's LessWrong essay is the relevant one. In a real paradigm shift, the property rights and financial instruments that store today's wealth depend on institutions that may not outlive the shift. A senator who hoarded gold in 410 AD did not pass it to his great-grandchildren. The historical record on systemic discontinuities is not kind to private balance sheets."
+  },
+  {
+    "q": "What is Kwalia's position?",
+    "a": "The economic mechanism is real, and the wage compression for cognitive workers is going to be severe. The 'permanent' framing is rhetorical: it presumes today's institutions will hold while the technology that destabilises them runs to completion, and both can't be true at once. The work that matters is at the institutional level, not the personal-escape level. The longer argument is in Mindkind (2025)."
+  }
+]
