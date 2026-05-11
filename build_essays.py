@@ -191,7 +191,7 @@ def simple_markdown_to_html(text):
         if not p:
             continue
         # Don't wrap if already has block-level HTML
-        if p.startswith('<h2') or p.startswith('<h3') or p.startswith('<blockquote'):
+        if p.startswith('<h2') or p.startswith('<h3') or p.startswith('<blockquote') or p.startswith('<figure'):
             html_parts.append(p)
         else:
             # Replace single newlines with spaces (for wrapped lines in source)

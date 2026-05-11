@@ -1,5 +1,30 @@
 [
   {
+    "id": "the-permanent-underclass",
+    "slug": {
+      "en": "the-permanent-underclass"
+    },
+    "title": {
+      "en": "What is the permanent underclass?"
+    },
+    "subtitle": {
+      "en": "The narrative that AI will freeze the human class structure forever, and why it is both true enough to fear and rigged enough to sell."
+    },
+    "excerpt": {
+      "en": "The permanent underclass is the idea that AI will close, in the next few months or years, a window in which human labour can still produce generational wealth. It is partly a sober economic argument and partly a sales pitch."
+    },
+    "date": "2026-05-08",
+    "author": "Javier del Puerto",
+    "readTime": 13,
+    "tags": [
+      "society",
+      "future",
+      "philosophy"
+    ],
+    "status": "published",
+    "translation": null
+  },
+  {
     "id": "why-we-anthropomorphize-ai",
     "slug": {
       "en": "why-we-anthropomorphize-ai",
