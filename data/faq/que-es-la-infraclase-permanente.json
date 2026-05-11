@@ -1,0 +1,22 @@
+[
+  {
+    "q": "¿De dónde viene el término «infraclase permanente»?",
+    "a": "Kyle Chayka lo popularizó en The New Yorker en octubre de 2025, presentándolo como un meme de Silicon Valley que se había endurecido hasta volverse una cosmovisión. Jasmine Sun le dio su autoridad actual en The New York Times en mayo de 2026, tras tres meses de entrevistas con investigadores y empleados de laboratorios. La palabra «infraclase» tiene una larga historia sociológica, a menudo desagradable, pero su uso en la era de la IA se estabilizó entre esas dos piezas."
+  },
+  {
+    "q": "¿Es la tesis de la infraclase permanente lo mismo que la posición doomer sobre la IA?",
+    "a": "No. El doomerismo de IA se ha centrado tradicionalmente en el riesgo existencial: superinteligencia desalineada, pérdida de control, desenlaces de extinción. La tesis de la infraclase permanente asume que el alineamiento se sostiene básicamente y que la catástrofe es estructural y económica. El modo de fallo no es la extinción sino la estratificación. Algunas personas sostienen las dos posiciones a la vez, pero son teorías distintas con implicaciones de política distintas."
+  },
+  {
+    "q": "¿Cree Anthropic en la infraclase permanente?",
+    "a": "El CEO de Anthropic, Dario Amodei, ha advertido explícitamente sobre una «infraclase desempleada o de salarios muy bajos» si el trabajo cognitivo pierde su valor económico. Anthropic sigue publicando modelos de frontera. Esto no es hipocresía; refleja la posición según la cual la tecnología va a construirse de un modo o de otro, y prefieren ser ellos quienes la construyan con cuidado. Si eso resulta convincente depende de cuánto peso le des a la moderación corporativa voluntaria bajo presión competitiva."
+  },
+  {
+    "q": "¿Es «agarrar la bolsa» una estrategia real de supervivencia?",
+    "a": "Para la mayoría de la gente, no. La analogía romana del ensayo de Marcus Plutowski en LessWrong es la pertinente. En un cambio de paradigma real, los derechos de propiedad y los instrumentos financieros que almacenan la riqueza actual dependen de instituciones que pueden no sobrevivir al cambio. Un senador que acumuló oro en el 410 d. C. no se lo pasó a sus tataranietos. El registro histórico de las discontinuidades sistémicas no es amable con los balances privados."
+  },
+  {
+    "q": "¿Cuál es la posición de Kwalia?",
+    "a": "El mecanismo económico es real, y la compresión salarial para los trabajadores cognitivos va a ser severa. El marco de la «permanencia» es retórico: presume que las instituciones de hoy se mantendrán mientras la tecnología que las desestabiliza llega a término, y las dos cosas no pueden ser ciertas a la vez. El trabajo que importa está en el nivel institucional, no en el nivel del escape personal. El argumento largo está en Mindkind (2025)."
+  }
+]
