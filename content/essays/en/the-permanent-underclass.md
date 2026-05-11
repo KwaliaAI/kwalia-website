@@ -16,7 +16,7 @@ related:
   - your-thoughts-arent-yours-anymore
   - youre-already-a-cyborg
 book: mindkind
-translation: que-es-la-infraclase-permanente
+translation: que-es-la-subclase-permanente
 status: published
 excerpt: "The permanent underclass is the idea that AI will close, in the next few months or years, a window in which human labour can still produce generational wealth. It is partly a sober economic argument and partly a sales pitch."
 ---

@@ -1,3 +1,7 @@
+# Slug-rename redirect (infraclase → subclase) — 2026-05-11
+/essays/que-es-la-infraclase-permanente.html /essays/que-es-la-subclase-permanente.html 301
+/essays/que-es-la-infraclase-permanente /essays/que-es-la-subclase-permanente 301
+
 # Search Console 404 repairs - 2026-05-07
 /essays/por-que-los-escritores-estan-m%C3%A1s-enfadados.html /essays/por-que-los-escritores-estan-mas-enfadados.html 301
 /essays/por-que-desconectar-ya-no-es-opci%C3%B3n.html /essays/por-que-desconectar-ya-no-es-opcion.html 301
