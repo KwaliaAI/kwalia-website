@@ -15,5 +15,8 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Run indexing contract regression tests
+        run: python3 scripts/test_indexing_contract.py
+
       - name: Validate canonical, hreflang, sitemap, and links
         run: python3 scripts/validate_indexing_contract.py

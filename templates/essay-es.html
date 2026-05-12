@@ -10,6 +10,8 @@
 {% endfor %}
     <!-- /Indexing contract -->
     <title>{{ title }} | Kwalia</title>
+    <meta name="description" content="{{ subtitle }}">
+    <meta name="author" content="{{ author }}">
 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -24,41 +26,28 @@
         'essay_title': '{{ title }}',
         'essay_category': '{{ tags[0] if tags else "general" }}',
         'essay_author': '{{ author }}',
-        'page_path': '/essays/{{ slug }}.html'
+        'page_path': '/essays/{{ slug }}'
     });
     </script>
     <link rel="icon" type="image/png" href="../assets/kwalia-icon.png">
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "{{ title }}",
-      "description": "{{ subtitle }}",
-      "author": {
-        "@type": "Person",
-        "name": "{{ author }}",
-        "url": "https://kwalia.ai/#about"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Kwalia",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://kwalia.ai/assets/logo-kwalia-small.png"
-        }
-      },
-      "datePublished": "{{ date }}",
-      "url": "https://kwalia.ai/essays/{{ slug }}.html"
-    }
+{{ structured_data_json }}
     </script>
 
     <meta property="og:title" content="{{ title }} | Kwalia">
     <meta property="og:description" content="{{ subtitle }}">
-    <meta property="og:image" content="https://kwalia.ai/assets/logo-kwalia-small.png">
-    <meta property="og:url" content="https://kwalia.ai/essays/{{ slug }}.html">
+    <meta property="og:image" content="{{ og_image_url }}">
+    {% if has_custom_og_image %}
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    {% endif %}
+    <meta property="og:url" content="{{ canonical_url }}">
     <meta property="og:type" content="article">
     <meta name="twitter:card" content="summary_large_image">
+    {% if has_custom_og_image %}
+    <meta name="twitter:image" content="{{ og_image_url }}">
+    {% endif %}
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -158,7 +147,7 @@
                 <a href="/#contact" class="font-f2 bg-c2 text-c4 rounded-md py-2 px-4 hover:bg-c3 transition-colors">Suscribirse</a>
                 {% if translation_slug %}
                 <div class="flex items-center border border-gray-300 rounded-full overflow-hidden ml-4">
-                    <a href="{{ translation_slug }}.html" class="font-f3 text-xs px-3 py-1 hover:bg-gray-100 transition-colors">EN</a>
+                    <a href="{{ translation_slug }}" class="font-f3 text-xs px-3 py-1 hover:bg-gray-100 transition-colors">EN</a>
                     <span class="font-f3 text-xs px-3 py-1 bg-c2 text-c4">ES</span>
                 </div>
                 {% endif %}
@@ -176,7 +165,7 @@
             <a href="/#contact" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Suscribirse</a>
             {% if translation_slug %}
             <div class="flex items-center justify-center mt-4 pt-4 border-t border-gray-200">
-                <a href="{{ translation_slug }}.html" class="font-f3 text-sm px-4 py-1 border border-gray-300 rounded-full hover:bg-gray-100">EN</a>
+                <a href="{{ translation_slug }}" class="font-f3 text-sm px-4 py-1 border border-gray-300 rounded-full hover:bg-gray-100">EN</a>
                 <span class="font-f3 text-sm px-4 py-1 bg-c2 text-c4 rounded-full ml-2">ES</span>
             </div>
             {% endif %}
@@ -218,7 +207,7 @@
                     <h3 class="font-f2 text-sm font-bold uppercase tracking-wide text-c2/50 mb-4">Más de Kwalia</h3>
                     <div class="space-y-3">
                         {% for rel in related %}
-                        <a href="{{ rel.slug }}.html" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">{{ rel.title }} &#8594;</a>
+                        <a href="{{ rel.slug }}" class="block font-f1 text-xl text-c2 hover:text-c3 transition-colors">{{ rel.title }} &#8594;</a>
                         {% endfor %}
                     </div>
                 </section>

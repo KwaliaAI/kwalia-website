@@ -49,11 +49,13 @@ import sys
 from copy import deepcopy
 from datetime import date
 from pathlib import Path
+from urllib.parse import urlsplit, urlunsplit
 
 # ── Repo root (the directory that contains data/ and scripts/)
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CSV = REPO_ROOT / "data" / "essay_inventory.csv"
 DEFAULT_TEMPLATE = REPO_ROOT / "data" / "jsonld_template.json"
+BASE_URL = "https://kwalia.ai"
 
 STABLE_PERSON = {
     "@type": "Person",
@@ -113,6 +115,20 @@ def load_csv_row(csv_path: Path, slug: str) -> dict:
             if row.get("slug") == slug:
                 return row
     return {}
+
+
+def normalize_canonical_url(url: str | None, slug: str) -> str:
+    """Keep JSON-LD canonicals aligned to the extensionless essay contract."""
+    fallback = f"{BASE_URL}/essays/{slug}"
+    if not url:
+        return fallback
+    parsed = urlsplit(url)
+    if parsed.netloc not in ("kwalia.ai", "www.kwalia.ai"):
+        return url
+    path = parsed.path
+    if path.startswith("/essays/") and path.endswith(".html"):
+        path = path[:-5]
+    return urlunsplit(("https", "kwalia.ai", path, "", ""))
 
 
 def extract_from_html(html_path: Path) -> dict:
@@ -178,7 +194,7 @@ def build_graph(
 ) -> dict:
     """Assemble the @graph dict from parts."""
     today = date.today().isoformat()
-    canonical_url = html_info.get("url") or f"https://kwalia.ai/essays/{slug}.html"
+    canonical_url = normalize_canonical_url(html_info.get("url") or csv_row.get("url"), slug)
     headline = html_info.get("headline") or csv_row.get("title", slug)
     description = html_info.get("description") or csv_row.get("meta_description", "")
     date_published = html_info.get("datePublished") or csv_row.get("last_git_modified", today)

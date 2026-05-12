@@ -104,7 +104,7 @@
     <meta property="og:title" content="Kwalia | AI First Entertainment">
     <meta property="og:description" content="We believe that artificial intelligence can craft stories and non-fiction books powerful enough to inspire, challenge, and transform the world.">
     <meta property="og:image" content="https://kwalia.ai/assets/logo-kwalia-small.png">
-    <meta property="og:url" content="https://kwalia.ai">
+    <meta property="og:url" content="https://kwalia.ai/">
     <meta name="twitter:card" content="summary_large_image">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -116,13 +116,13 @@
     <style>
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 80px; 
+            scroll-padding-top: 80px;
         }
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #FFFFFF;
         }
-        
+
         h1, h2, h3, h4, .font-f1 {
             font-family: 'Instrument Serif', serif;
         }
@@ -137,10 +137,10 @@
         .border-c3 { border-color: #FF70A6; }
         .bg-c4 { background-color: #FFFFFF; }
         .text-c4 { color: #FFFFFF; }
-        
+
         .section-padding { padding: 4rem 1.5rem; }
         @media (min-width: 768px) { .section-padding { padding: 6rem 1.5rem; } }
-        
+
         .nav-link-highlight { position: relative; padding-bottom: 8px; overflow: hidden; }
         .nav-link-highlight::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 8px; background-color: #ffff00; transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease-in-out; z-index: -1; }
         .nav-link-highlight:hover::after { transform: scaleX(1); }
@@ -154,7 +154,7 @@
     <header id="site-header" class="bg-c4 w-full sticky top-0 z-50 shadow-sm">
         <!-- Reusable announcement rail: keep it to one line, mono uppercase, accent color, and point to the current launch asset. -->
         <a
-            href="/essays/war-and-ai-preface.html"
+            href="/essays/war-and-ai-preface"
             class="block border-b border-c2/10 px-6 py-3 text-center font-f3 text-[11px] md:text-xs uppercase tracking-[0.22em] text-c3 hover:text-c2 transition-colors"
             data-key="announcement.war_and_ai"
         >
@@ -162,7 +162,7 @@
         </a>
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home"><img src="assets/logo-kwalia-small.png" alt="kwalia logo" class="h-8 w-auto"></a>
-            
+
             <div class="hidden md:flex items-center space-x-8">
                 <a href="#fiction" class="font-f2 nav-link-highlight" data-key="nav.fiction">Fiction</a>
                 <a href="#catalogue" class="font-f2 nav-link-highlight" data-key="nav.catalogue">Non-Fiction</a>
@@ -284,7 +284,7 @@
             <div class="container mx-auto text-center">
                 <h2 class="font-f1 text-4xl md:text-5xl font-bold mb-4 text-c4" data-key="contact.title">A New Chapter is Being Written</h2>
                 <p class="font-f2 text-lg max-w-2xl mx-auto mb-8 text-c4/80" data-key="contact.subtitle">Be the first to know about new titles, author announcements, and experiments in AI entertainment.</p>
-                
+
                 <div class="max-w-md mx-auto">
                     <div id="mlb2-27105567" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-27105567">
                         <div class="ml-form-embedWrapper embedForm">
@@ -317,9 +317,9 @@
             <div class="container mx-auto text-center">
                 <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="press.title">Press & Media</h2>
                 <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto mb-12" data-key="press.subtitle">For all media inquiries, assets, and press releases.</p>
-                
+
                 <div class="max-w-4xl mx-auto text-left space-y-12">
-                    
+
                     <div>
                         <h3 class="font-f1 text-2xl mb-4 border-b pb-2" data-key="press.coverage.title">In the Media</h3>
                         <ul class="space-y-3 pt-2">
@@ -354,7 +354,7 @@
                 <p class="mt-16 font-f2 text-sm text-c2/80" data-key="press.contact">For media inquiries, please contact info@kwalia.ai</p>
             </div>
         </section>
-        
+
         <section id="about" class="section-padding bg-c4">
              <div class="container mx-auto text-center">
                 <h2 class="font-f1 text-4xl md:text-5xl font-bold mb-4" data-key="about.title">About Kwalia</h2>
@@ -381,7 +381,7 @@
         <div id="book-modal-content" class="bg-c4 rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300">
              </div>
     </div>
-    
+
     <div id="reader-modal" class="fixed inset-0 bg-white z-50 hidden modal-enter opacity-0 overflow-y-auto">
         <div class="max-w-3xl mx-auto px-6 py-12">
              <div class="flex justify-between items-start mb-8 sticky top-0 bg-white/90 backdrop-blur-sm py-4 border-b">
@@ -402,20 +402,20 @@
             </div>
         </div>
     </div>
-    
+
     <script>
         (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
         (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
         ml('account', '1588336');
     </script>
-    
+
     <script>
         function ml_webform_success_27105567() {
             var form = document.querySelector('.ml-subscribe-form-27105567 .row-form');
             var success = document.querySelector('.ml-subscribe-form-27105567 .row-success');
             form.style.display = 'none';
             success.style.display = 'block';
-            
+
             // Track newsletter signup
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
@@ -425,7 +425,7 @@
         }
     </script>
     <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', async () => {
             // Data variables - loaded from JSON files
@@ -559,7 +559,7 @@
                 fictionContainer.innerHTML = '';
                 fictionCatalogue.forEach(book => {
                     const coverUrl = book.coverImage[lang] || book.coverImage.en || "";
-                    
+
                     // Logic to add "Read Sample" badge if the book has stories
                     let badgeHTML = '';
                     if (book.stories && book.stories.length > 0) {
@@ -567,7 +567,7 @@
                     }
 
                     let coverHTML = `<div class="w-full h-96 bg-c3 flex items-center justify-center font-f3 text-lg text-center p-4 rounded-lg shadow-md text-c4 relative">${badgeHTML} ${book.coverText || ''}</div>`;
-                    
+
                     if (coverUrl) {
                         // Wrapped in a relative div to position the badge
                         coverHTML = `
@@ -638,7 +638,7 @@
                     const excerpt = essay.excerpt[lang] || essay.excerpt.en;
 
                     return `
-                        <a href="/essays/${slug}.html" class="group bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all border-b-2 border-transparent hover:border-c1">
+                        <a href="/essays/${slug}" class="group bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all border-b-2 border-transparent hover:border-c1">
                             <h3 class="font-f1 text-xl md:text-2xl mb-2 group-hover:text-c3 transition-colors">${title}</h3>
                             <p class="font-f2 text-sm text-c2/70 line-clamp-2">${excerpt}</p>
                             <span class="font-f3 text-xs text-c2/50 group-hover:text-c3 mt-3 inline-block transition-colors">Read →</span>
@@ -648,7 +648,7 @@
             }
 
             function openBookModal(book, lang) {
-                
+
                 // Track book details view
                 window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({
@@ -712,7 +712,7 @@
                 const shareUrl = book.sampleUrl
                     ? new URL((book.sampleUrl[lang] || book.sampleUrl.en), `${window.location.origin}/`).toString()
                     : `${window.location.origin}${window.location.pathname}#${book.id}`;
-                
+
                 const modalHTML = `
                     <div class="p-6 sm:p-8">
                         <div class="flex justify-between items-start mb-6">
@@ -727,7 +727,7 @@
                                 ${bookAuthors}
                                 <div class="font-f2 text-base text-c2/90 leading-relaxed">${synopsisHTML}</div>
                                 ${sampleActionsHTML || detailsHTML ? '<hr class="my-6">' : ''}
-                                
+
                                 ${sampleActionsHTML}
 
                                 ${detailsHTML ? `<h4 class="font-f1 text-xl mb-3" data-key="modal.details">${content[lang]['modal.details']}</h4>${detailsHTML}<hr class="my-6">` : ''}
@@ -745,7 +745,7 @@
                     bookModal.classList.remove('opacity-0');
                     bookModalContent.classList.remove('scale-95');
                 }, 10);
-                
+
                 document.getElementById('close-modal').addEventListener('click', closeBookModal);
                 document.getElementById('share-button').addEventListener('click', async e => {
                     const urlToCopy = e.target.dataset.url;
@@ -782,7 +782,7 @@
                     }
                 }, 200);
             }
-            
+
             bookModal.addEventListener('click', e => {
                 if (e.target === bookModal) {
                     closeBookModal();
@@ -794,11 +794,11 @@
                 const story = shortStories.find(s => s.id === storyId);
                 if (!story) return;
 
-                closeBookModal(); 
+                closeBookModal();
 
                 const storyTitle = story.title[lang] || story.title.en;
                 const storyUrl = story.src[lang] || story.src.en;
-                
+
                 // --- EXCERPT LOGIC ---
                 const isExcerpt = story.isExcerpt || false;
                 const buttonTextEn = isExcerpt ? "Continue reading on Amazon" : "Buy on Amazon";
@@ -806,7 +806,7 @@
 
                 // --- BUTTON SETUP ---
                 const buyBtn = document.getElementById('reader-buy-link');
-                
+
                 buyBtn.href = "https://www.amazon.co.uk/PAYLOAD-Short-Stories-Alden-Pierce-ebook/dp/B0G7KTMSTM";
                 buyBtn.target = "_blank";
                 buyBtn.rel = "noopener noreferrer";
@@ -865,7 +865,7 @@
                         `;
                     });
             };
-            
+
             function closeReader() {
                 readerModal.classList.add('opacity-0');
                 setTimeout(() => {
@@ -883,7 +883,7 @@
                 localStorage.setItem('kwalia-lang', lang);
                 document.querySelectorAll('[data-key]').forEach(el => { if (content[lang][el.getAttribute('data-key')]) { el.innerHTML = content[lang][el.getAttribute('data-key')]; } });
                 document.querySelectorAll('[data-key-placeholder]').forEach(el => { if (content[lang][el.getAttribute('data-key-placeholder')]) { el.placeholder = content[lang][el.getAttribute('data-key-placeholder')]; } });
-                
+
                 // Press links logic (nota: no existe versión ES de AI Rights, usa EN como fallback)
                 const udairPressLink = document.getElementById('udair-press-link');
                 if (udairPressLink) {
@@ -917,7 +917,7 @@
                 langEnDesktop.classList.toggle('font-bold', lang === 'en');
                 langEsDesktop.classList.toggle('opacity-50', lang !== 'es');
                 langEsDesktop.classList.toggle('font-bold', lang === 'es');
-                
+
                 if (langEnMobile) {
                     langEnMobile.classList.toggle('opacity-50', lang !== 'en');
                     langEnMobile.classList.toggle('font-bold', lang === 'en');
@@ -1010,7 +1010,7 @@
                     mobileMenu.classList.add('hidden');
                 });
             });
-            
+
             // Handle deep linking on page load
             function handleDeepLink() {
                 const hash = window.location.hash.substring(1);
@@ -1054,7 +1054,5 @@
     </script>
 </body>
 </html>
-
-
 
 

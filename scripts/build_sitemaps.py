@@ -16,6 +16,7 @@ import csv
 import sys
 from datetime import date
 from pathlib import Path
+from urllib.parse import urlsplit, urlunsplit
 from xml.etree import ElementTree as ET
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -42,12 +43,22 @@ def load_inventory():
         return list(csv.DictReader(fh))
 
 
+def normalize_url(url: str) -> str:
+    parsed = urlsplit(url)
+    if parsed.netloc not in ("kwalia.ai", "www.kwalia.ai"):
+        return url
+    path = parsed.path
+    if path.startswith("/essays/") and path.endswith(".html"):
+        path = path[:-5]
+    return urlunsplit((parsed.scheme or "https", parsed.netloc or "kwalia.ai", path, parsed.query, parsed.fragment))
+
+
 def build_urlset(rows, changefreq: str) -> ET.Element:
     """Build a <urlset> element from a list of inventory rows."""
     urlset = ET.Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
     for row in rows:
         url_el = ET.SubElement(urlset, "url")
-        ET.SubElement(url_el, "loc").text = row["url"]
+        ET.SubElement(url_el, "loc").text = normalize_url(row["url"])
         lastmod = row.get("last_git_modified", "").strip()
         if lastmod:
             ET.SubElement(url_el, "lastmod").text = lastmod

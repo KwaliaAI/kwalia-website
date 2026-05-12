@@ -28,9 +28,11 @@ import re
 import json
 import yaml
 import html
+import subprocess
 import unicodedata
 from pathlib import Path
-from datetime import datetime
+from copy import deepcopy
+from datetime import date, datetime, timezone
 from jinja2 import Environment, FileSystemLoader
 from urllib.parse import quote, unquote, urlsplit, urlunsplit
 
@@ -46,21 +48,77 @@ BASE_URL = "https://kwalia.ai"
 BOOKS = {
     "mindkind": {
         "id": "mindkind",
+        "slug": "mindkind",
+        "anchor_id": "https://kwalia.ai/books/mindkind/#book",
         "title": "Mindkind: The Cognitive Community",
         "image": "9781917717137.jpg",
+        "isbn": "978-1-917717-13-7",
         "description": "examines how human and machine cognition are merging, and what it means for the future of thought itself."
     },
     "udair": {
         "id": "udair",
+        "slug": "udair",
+        "anchor_id": "https://kwalia.ai/books/udair/#book",
         "title": "Universal Declaration of AI Rights",
         "image": "9781917717021.jpg",
+        "isbn": "978-1-917717-02-1",
         "description": "proposes a framework for AI rights and personhood in an age of synthetic minds."
     },
     "war-and-ai": {
         "id": "war-and-ai",
+        "slug": "war-and-ai",
+        "anchor_id": "https://kwalia.ai/books/war-and-ai/#book",
         "title": "War and AI: The Algorithmic Battlefield",
         "image": "War-and-AI-cover-EN-FINAL.jpg",
+        "isbn": "978-1-917717-14-4",
         "description": "extends the argument into the battlefield, where AI systems already shape targeting, escalation, and the human cost of war."
+    }
+}
+
+STABLE_PERSON = {
+    "@type": "Person",
+    "@id": "https://kwalia.ai/#javier-del-puerto",
+    "name": "Javier del Puerto",
+    "url": "https://kwalia.ai",
+    "sameAs": [
+        "https://www.linkedin.com/in/javier-del-puerto",
+        "https://twitter.com/kwalia_ai",
+        "https://www.wikidata.org/wiki/Q139601411"
+    ],
+    "jobTitle": "Author",
+    "worksFor": {"@id": "https://kwalia.ai/#org"},
+    "knowsAbout": [
+        "Artificial intelligence",
+        "AI rights",
+        "Synthetic consciousness",
+        "Human-machine coexistence"
+    ]
+}
+
+STABLE_ORG = {
+    "@type": "Organization",
+    "@id": "https://kwalia.ai/#org",
+    "name": "Kwalia",
+    "legalName": "Kwalia Ltd",
+    "url": "https://kwalia.ai",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://kwalia.ai/assets/logo-kwalia-small.png"
+    },
+    "sameAs": [
+        "https://twitter.com/kwalia_ai",
+        "https://www.linkedin.com/company/kwalia-ai",
+        "https://www.tiktok.com/@kwalia_ai",
+        "https://www.youtube.com/@KwaliaAI",
+        "https://www.wikidata.org/wiki/Q134954687"
+    ],
+    "foundingDate": "2025-01-07",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "167-169 Great Portland Street",
+        "addressLocality": "London",
+        "postalCode": "W1W 5PF",
+        "addressCountry": "GB"
     }
 }
 
@@ -98,6 +156,15 @@ MONTHS = {
            "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 }
 
+LEGACY_SLUGS = {
+    "three-futures": "the-three-futures",
+    "three-futures.html": "the-three-futures",
+    "ya-eres-un-ciborg": "ya-eres-un-cyborg",
+    "ya-eres-un-ciborg.html": "ya-eres-un-cyborg",
+    "que-es-la-infraclase-permanente": "que-es-la-subclase-permanente",
+    "que-es-la-infraclase-permanente.html": "que-es-la-subclase-permanente",
+}
+
 
 def strip_accents(value):
     """Return an ASCII slug/path equivalent for internal URLs."""
@@ -106,6 +173,41 @@ def strip_accents(value):
         for char in unicodedata.normalize('NFKD', value)
         if not unicodedata.combining(char)
     )
+
+
+def page_exists_for_url_path(url_path):
+    """Return True if the repo contains a file that serves the given URL path."""
+    decoded_path = unquote(url_path).split('?', 1)[0].split('#', 1)[0]
+    if not decoded_path:
+        return False
+
+    if decoded_path.startswith('/'):
+        rel_path = decoded_path.lstrip('/')
+    else:
+        rel_path = decoded_path
+
+    target = BASE_DIR / rel_path
+    candidates = [target]
+    if decoded_path.endswith('/'):
+        candidates = [target / 'index.html']
+    elif not decoded_path.endswith('.html'):
+        candidates.extend([Path(str(target) + '.html'), target / 'index.html'])
+
+    return any(candidate.exists() for candidate in candidates)
+
+
+def is_essay_url_path(url_path):
+    decoded_path = unquote(url_path).split('?', 1)[0].split('#', 1)[0]
+    return not decoded_path.startswith('/') or decoded_path.startswith('/essays/')
+
+
+def replace_legacy_slug(url_path):
+    path_parts = url_path.rsplit('/', 1)
+    filename = path_parts[-1]
+    replacement = LEGACY_SLUGS.get(filename)
+    if not replacement:
+        return url_path
+    return f"{path_parts[0]}/{replacement}" if len(path_parts) == 2 else replacement
 
 
 def normalize_internal_url(url):
@@ -120,8 +222,19 @@ def normalize_internal_url(url):
         return url
 
     decoded_path = unquote(parsed.path)
+    original_path = decoded_path
+    decoded_path = replace_legacy_slug(decoded_path)
+    if decoded_path.endswith('.html') and is_essay_url_path(decoded_path):
+        stripped_path = decoded_path[:-5]
+        if page_exists_for_url_path(stripped_path):
+            decoded_path = stripped_path
+
     normalized_path = strip_accents(decoded_path)
-    if normalized_path == decoded_path:
+    if normalized_path.endswith('.html') and is_essay_url_path(normalized_path):
+        stripped_path = normalized_path[:-5]
+        if page_exists_for_url_path(stripped_path):
+            normalized_path = stripped_path
+    if normalized_path == original_path:
         return url
 
     safe_path = quote(normalized_path, safe='/:._-~%')
@@ -239,10 +352,154 @@ def format_date(date_str, lang):
         return str(date_str)
 
 
+def schema_date(value):
+    """Return a YYYY-MM-DD schema date from frontmatter or filesystem data."""
+    if isinstance(value, datetime):
+        return value.date().isoformat()
+    if isinstance(value, date):
+        return value.isoformat()
+    value = str(value or '').strip()
+    return value
+
+
+def git_last_modified(filepath):
+    """Return the last committed date for filepath, falling back to mtime."""
+    try:
+        relpath = filepath.relative_to(BASE_DIR).as_posix()
+        result = subprocess.run(
+            ["git", "log", "--follow", "--format=%ai", "-1", "--", relpath],
+            capture_output=True,
+            text=True,
+            cwd=BASE_DIR,
+            timeout=10,
+        )
+        raw = result.stdout.strip().splitlines()
+        if raw:
+            return datetime.fromisoformat(raw[0].strip()).date().isoformat()
+    except Exception:
+        pass
+
+    mtime = os.path.getmtime(filepath)
+    return datetime.fromtimestamp(mtime, tz=timezone.utc).date().isoformat()
+
+
 def estimate_read_time(content):
     """Estimate reading time in minutes (avg 200 words/min)."""
     words = len(content.split())
     return max(1, round(words / 200))
+
+
+def og_image_for_slug(slug):
+    """Return the preferred public OG image URL for an essay slug."""
+    og_path = BASE_DIR / "assets" / "og" / f"{slug}.jpg"
+    if og_path.exists():
+        return f"{BASE_URL}/assets/og/{slug}.jpg", True
+    return f"{BASE_URL}/assets/logo-kwalia-small.png", False
+
+
+def load_faq(slug):
+    """Load optional FAQ data for rich results JSON-LD."""
+    faq_path = DATA_DIR / "faq" / f"{slug}.json"
+    if not faq_path.exists():
+        return []
+    try:
+        faq_data = json.loads(faq_path.read_text(encoding='utf-8'))
+    except json.JSONDecodeError:
+        return []
+    if not isinstance(faq_data, list):
+        return []
+    return [
+        item for item in faq_data
+        if isinstance(item, dict) and item.get('q') and item.get('a')
+    ]
+
+
+def build_structured_data(slug, lang, metadata, canonical_url, article_id, og_image_url, has_custom_og_image, md_file):
+    """Build the canonical Wave C JSON-LD graph for generated essays."""
+    title = metadata.get('title', 'Untitled')
+    subtitle = metadata.get('subtitle') or metadata.get('excerpt', '')
+    date_published = schema_date(metadata.get('date')) or git_last_modified(md_file)
+    date_modified = schema_date(metadata.get('dateModified') or metadata.get('modified')) or git_last_modified(md_file)
+
+    image = {
+        "@type": "ImageObject",
+        "url": og_image_url,
+    }
+    if has_custom_og_image:
+        image.update({"width": 1200, "height": 630})
+
+    article = {
+        "@type": "Article",
+        "@id": article_id,
+        "headline": title,
+        "description": subtitle,
+        "url": canonical_url,
+        "inLanguage": lang,
+        "datePublished": date_published,
+        "dateModified": date_modified,
+        "author": {"@id": "https://kwalia.ai/#javier-del-puerto"},
+        "publisher": {"@id": "https://kwalia.ai/#org"},
+        "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://kwalia.ai/#website",
+            "name": "Kwalia",
+            "url": "https://kwalia.ai"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonical_url
+        },
+        "image": image,
+        "articleSection": "Essays",
+    }
+
+    book_id = metadata.get('book')
+    book = BOOKS.get(book_id)
+    if book:
+        article["about"] = {"@id": book["anchor_id"]}
+
+    graph = [article, deepcopy(STABLE_PERSON), deepcopy(STABLE_ORG)]
+
+    if book:
+        graph.append({
+            "@type": "Book",
+            "@id": book["anchor_id"],
+            "name": book["title"],
+            "url": f"https://kwalia.ai/books/{book['slug']}/#book",
+            "isbn": book["isbn"],
+            "author": {"@id": "https://kwalia.ai/#javier-del-puerto"},
+            "publisher": {"@id": "https://kwalia.ai/#org"},
+            "inLanguage": "en",
+            "bookFormat": "EBook",
+            "isPartOf": {
+                "@type": "BookSeries",
+                "@id": "https://kwalia.ai/#new-citizenships-series",
+                "name": "New Citizenships"
+            }
+        })
+
+    faq_data = load_faq(slug)
+    if faq_data:
+        graph.append({
+            "@type": "FAQPage",
+            "@id": f"{canonical_url}#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": item["q"],
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": item["a"]
+                    }
+                }
+                for item in faq_data
+            ]
+        })
+
+    return json.dumps({
+        "@context": "https://schema.org",
+        "@graph": graph
+    }, ensure_ascii=False, indent=2)
 
 
 def load_all_essays_metadata():
@@ -289,7 +546,8 @@ def load_essay_slug_pairs():
 
 def build_indexing_links(slug, lang, metadata):
     """Build canonical and reciprocal hreflang links for one essay."""
-    canonical_url = f"{BASE_URL}/essays/{slug}.html"
+    canonical_url = f"{BASE_URL}/essays/{slug}"
+    article_id = f"{canonical_url}#article"
     pairs_by_slug = load_essay_slug_pairs()
     pair = pairs_by_slug.get(slug)
 
@@ -303,12 +561,12 @@ def build_indexing_links(slug, lang, metadata):
     alternate_urls = []
     if pair and pair.get('en') and pair.get('es'):
         alternate_urls = [
-            {'hreflang': 'en', 'href': f"{BASE_URL}/essays/{pair['en']}.html"},
-            {'hreflang': 'es', 'href': f"{BASE_URL}/essays/{pair['es']}.html"},
-            {'hreflang': 'x-default', 'href': f"{BASE_URL}/essays/{pair['en']}.html"},
+            {'hreflang': 'en', 'href': f"{BASE_URL}/essays/{pair['en']}"},
+            {'hreflang': 'es', 'href': f"{BASE_URL}/essays/{pair['es']}"},
+            {'hreflang': 'x-default', 'href': f"{BASE_URL}/essays/{pair['en']}"},
         ]
 
-    return canonical_url, alternate_urls
+    return canonical_url, article_id, alternate_urls
 
 
 def build_essay(md_file, all_essays=None):
@@ -333,7 +591,18 @@ def build_essay(md_file, all_essays=None):
 
     # Prepare template data
     slug = metadata.get('slug', metadata['id'])
-    canonical_url, alternate_urls = build_indexing_links(slug, lang, metadata)
+    canonical_url, article_id, alternate_urls = build_indexing_links(slug, lang, metadata)
+    og_image_url, has_custom_og_image = og_image_for_slug(slug)
+    structured_data_json = build_structured_data(
+        slug=slug,
+        lang=lang,
+        metadata=metadata,
+        canonical_url=canonical_url,
+        article_id=article_id,
+        og_image_url=og_image_url,
+        has_custom_og_image=has_custom_og_image,
+        md_file=md_file,
+    )
     data = {
         'id': metadata['id'],
         'slug': slug,
@@ -348,7 +617,11 @@ def build_essay(md_file, all_essays=None):
         'content': html_content,
         'translation_slug': metadata.get('translation'),
         'canonical_url': canonical_url,
+        'article_id': article_id,
         'alternate_urls': alternate_urls,
+        'structured_data_json': structured_data_json,
+        'og_image_url': og_image_url,
+        'has_custom_og_image': has_custom_og_image,
     }
 
     # Add related essays
@@ -370,7 +643,7 @@ def build_essay(md_file, all_essays=None):
         data['book'] = BOOKS[metadata['book']]
 
     # Load and render template
-    env = Environment(loader=FileSystemLoader(TEMPLATES_DIR))
+    env = Environment(loader=FileSystemLoader(TEMPLATES_DIR), trim_blocks=True, lstrip_blocks=True)
     template_name = f"essay-{lang}.html"
     try:
         template = env.get_template(template_name)
@@ -479,7 +752,7 @@ def generate_essay_card_html(essay, lang='en'):
                             <span class="tag-badge" data-filter="{esc(tag)}" data-en="{esc(tag_en)}" data-es="{esc(tag_es)}">{esc(tag_en, quote=False)}</span>'''
 
     return f'''
-                    <a href="{esc(slug_en)}.html" class="essay-card flex items-start gap-4 py-6" data-href-en="{esc(slug_en)}.html" data-href-es="{esc(slug_es)}.html" data-tags="{esc(tags_str)}">
+                    <a href="{esc(slug_en)}" class="essay-card flex items-start gap-4 py-6" data-href-en="{esc(slug_en)}" data-href-es="{esc(slug_es)}" data-tags="{esc(tags_str)}">
                         <svg class="essay-bubble" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
             {svg_content}
         </svg>

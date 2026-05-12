@@ -21,6 +21,7 @@ import sys
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urlsplit
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 BASE_URL = "https://kwalia.ai"
@@ -52,6 +53,7 @@ class EssayParser(HTMLParser):
         self.title = ""
         self.meta_description = ""
         self.jsonld_type = ""
+        self.article_author_types = []
         self._in_title = False
         self._in_script_jsonld = False
         self._jsonld_buf = []
@@ -103,7 +105,8 @@ class EssayParser(HTMLParser):
                 if raw:
                     try:
                         data = json.loads(raw)
-                        self.jsonld_type = data.get("@type", "")
+                        self.jsonld_type = jsonld_type(data)
+                        self.article_author_types.extend(article_author_types(data))
                     except (json.JSONDecodeError, AttributeError):
                         pass
                 self._in_script_jsonld = False
@@ -138,12 +141,152 @@ class EssayParser(HTMLParser):
         return len(combined.split())
 
 
+def jsonld_type(value) -> str:
+    if isinstance(value, dict):
+        direct_type = value.get("@type")
+        if direct_type:
+            return direct_type
+        graph = value.get("@graph")
+        if isinstance(graph, list):
+            for item in graph:
+                item_type = jsonld_type(item)
+                if item_type == "Article":
+                    return item_type
+            for item in graph:
+                item_type = jsonld_type(item)
+                if item_type:
+                    return item_type
+    elif isinstance(value, list):
+        for item in value:
+            item_type = jsonld_type(item)
+            if item_type:
+                return item_type
+    return ""
+
+
+def article_nodes(value):
+    if isinstance(value, dict):
+        if value.get("@type") == "Article":
+            yield value
+        graph = value.get("@graph")
+        if isinstance(graph, list):
+            for item in graph:
+                yield from article_nodes(item)
+    elif isinstance(value, list):
+        for item in value:
+            yield from article_nodes(item)
+
+
+def jsonld_type_values(value) -> list[str]:
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, list):
+        return [item for item in value if isinstance(item, str)]
+    return []
+
+
+def jsonld_id_aliases(node_id) -> list[str]:
+    if not isinstance(node_id, str) or not node_id:
+        return []
+
+    aliases = [node_id]
+    parsed = urlsplit(node_id)
+    if parsed.fragment:
+        aliases.append(f"#{parsed.fragment}")
+    if node_id.startswith("#"):
+        aliases.append(f"{BASE_URL}/{node_id}")
+
+    deduped = []
+    for alias in aliases:
+        if alias not in deduped:
+            deduped.append(alias)
+    return deduped
+
+
+def jsonld_nodes(value):
+    if isinstance(value, dict):
+        if "@id" in value and len(value) > 1:
+            yield value
+        graph = value.get("@graph")
+        if isinstance(graph, list):
+            for item in graph:
+                yield from jsonld_nodes(item)
+        for key, item in value.items():
+            if key == "@graph":
+                continue
+            if isinstance(item, (dict, list)):
+                yield from jsonld_nodes(item)
+    elif isinstance(value, list):
+        for item in value:
+            yield from jsonld_nodes(item)
+
+
+def jsonld_node_index(value) -> dict[str, dict]:
+    nodes = {}
+    for node in jsonld_nodes(value):
+        for alias in jsonld_id_aliases(node.get("@id")):
+            nodes.setdefault(alias, node)
+    return nodes
+
+
+def resolve_jsonld_reference(value: dict, nodes_by_id: dict[str, dict]) -> dict | None:
+    ref_id = value.get("@id")
+    if not isinstance(ref_id, str):
+        return None
+    for alias in jsonld_id_aliases(ref_id):
+        node = nodes_by_id.get(alias)
+        if node is not None and node is not value:
+            return node
+    return None
+
+
+def author_type_values(author, nodes_by_id: dict[str, dict], seen: set[str] | None = None) -> list[str]:
+    seen = seen or set()
+    if isinstance(author, list):
+        values = []
+        for item in author:
+            values.extend(author_type_values(item, nodes_by_id, seen))
+        return values
+    if not isinstance(author, dict):
+        return []
+
+    types = jsonld_type_values(author.get("@type"))
+    if types:
+        return types
+    if author.get("name") == "Kwalia":
+        return ["Organization"]
+
+    ref_id = author.get("@id")
+    if isinstance(ref_id, str):
+        if ref_id in seen:
+            return []
+        referenced = resolve_jsonld_reference(author, nodes_by_id)
+        if referenced is not None:
+            return author_type_values(referenced, nodes_by_id, seen | {ref_id})
+    return []
+
+
+def article_author_types(value) -> list[str]:
+    author_types = []
+    nodes_by_id = jsonld_node_index(value)
+    for article in article_nodes(value):
+        authors = article.get("author")
+        if isinstance(authors, dict):
+            authors = [authors]
+        if not isinstance(authors, list):
+            continue
+        for author in authors:
+            author_types.extend(author_type_values(author, nodes_by_id))
+    return author_types
+
+
 def git_last_modified(filepath: Path) -> str:
     """Return ISO-8601 date of last git commit that touched filepath,
     or file mtime as fallback."""
     try:
+        relpath = filepath.relative_to(REPO_ROOT).as_posix()
         result = subprocess.run(
-            ["git", "log", "--follow", "--format=%ai", "--", str(filepath)],
+            ["git", "log", "--follow", "--format=%ai", "--", relpath],
             capture_output=True,
             text=True,
             cwd=REPO_ROOT,
@@ -185,7 +328,8 @@ def audit_html_file(filepath: Path, section: str):
     parser.feed(html_text)
 
     slug = filepath.stem  # filename without .html
-    url = f"{BASE_URL}/{section}/{filepath.name}"
+    url_slug = slug if section == "essays" else filepath.name
+    url = f"{BASE_URL}/{section}/{url_slug}"
 
     title = parser.title.strip()
     # Strip " | Kwalia" suffix if present
@@ -215,11 +359,9 @@ def audit_html_file(filepath: Path, section: str):
     if wc < 200:
         notes_parts.append(f"LOW word count ({wc})")
 
-    # Check JSON-LD author — should be Person not Organization
-    if '"Organization"' in html_text and '"author"' in html_text:
-        # crude check: author block uses Organization type
-        if re.search(r'"author"\s*:\s*\{[^}]*"@type"\s*:\s*"Organization"', html_text):
-            notes_parts.append("author @type=Organization (should be Person per GEO mandate)")
+    # Check JSON-LD Article author — should be Person, including @id refs.
+    for author_type in sorted({value for value in parser.article_author_types if value != "Person"}):
+        notes_parts.append(f"author @type={author_type} (should be Person per GEO mandate)")
 
     return {
         "section": section,
@@ -257,7 +399,7 @@ def main():
     OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
 
     with open(OUT_CSV, "w", newline="", encoding="utf-8") as fh:
-        writer = csv.DictWriter(fh, fieldnames=FIELDNAMES)
+        writer = csv.DictWriter(fh, fieldnames=FIELDNAMES, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 

@@ -5,3 +5,9 @@
 [[edge_functions]]
   function = "google-fetch-auth"
   path = "/fetch/*"
+
+[[headers]]
+  for = "/assets/your-constitution-claude-press-release.pdf"
+
+  [headers.values]
+    X-Robots-Tag = "noindex"
