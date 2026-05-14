@@ -7,7 +7,7 @@
     <Addressee>
       <AddresseeName>Google</AddresseeName>
     </Addressee>
-    <SentDateTime>20260508T084211Z</SentDateTime>
+    <SentDateTime>20260514T152542Z</SentDateTime>
   </Header>
   <Product>
     <RecordReference>udair-es</RecordReference>
@@ -1951,6 +1951,328 @@ Bar Fight is Paradise Valley book three: autumn weather, one-bed tension, bar-ow
         <ProductIdentifier>
           <ProductIDType>15</ProductIDType>
           <IDValue>9781917717519</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Fiamma Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>3.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>hailey-boone-004-cold-snap</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717533</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717533</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>EA</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <Collection>
+        <CollectionType>10</CollectionType>
+        <TitleDetail>
+          <TitleType>01</TitleType>
+          <TitleElement>
+            <TitleElementLevel>02</TitleElementLevel>
+            <TitleText>Paradise Valley</TitleText>
+          </TitleElement>
+        </TitleDetail>
+      </Collection>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Cold Snap</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Hailey Boone</PersonName>
+        <PersonNameInverted>Boone, Hailey</PersonNameInverted>
+        <BiographicalNote>Hailey Boone writes blue-collar cowboy-ranch contemporary romance with women who get through the day and men steady enough to meet them there. Cold Snap is the fourth Paradise Valley novel. She counts hours, notes the weather, and believes winter is better when somebody brings coffee.</BiographicalNote>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>180</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <MainSubject />
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC027090</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC027020</SubjectCode>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>At the end of Galloway Road, Robin McKee's mail truck is in a ditch, her daughter's daycare closes at five, and the man knocking on the window is too warm for the coldest week in fifteen years.
+
+Robin has been carrying mail through Paradise Valley since the divorce, since the move home, since the kid. She is good at being fine. She is less good at accepting help, especially from Wes Galloway, a retired saddle-bronc rider who has been back at his uncle's boarding stable for nine days and already looks too much like shelter.
+
+Wes pulls her truck out of the snow, hands her coffee, and keeps appearing at the end of her route with exactly what she refuses to ask for. Firewood. A plowed drive. Patience. By Christmas Eve, Robin's furnace is dead, the cold snap is finally breaking, and the man she has spent twelve days resisting is the only warm place she wants to be.
+
+Cold Snap is Paradise Valley book four: grumpy heroine, sunshine cowboy, single-mom stakes, slow-burn winter heat, and four explicit scenes for readers of Kristen Ashley, Maisey Yates, Lauren Landish, and Lyla Sage.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Hailey Boone writes blue-collar cowboy-ranch contemporary romance with women who get through the day and men steady enough to meet them there. Cold Snap is the fourth Paradise Valley novel. She counts hours, notes the weather, and believes winter is better when somebody brings coffee.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9781917717533.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Fiamma Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20260513</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717526</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BC</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717540</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Fiamma Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>3.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>casey-blake-001-wrong-side-of-the-ice</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717564</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717564</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>EA</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <Collection>
+        <CollectionType>10</CollectionType>
+        <TitleDetail>
+          <TitleType>01</TitleType>
+          <TitleElement>
+            <TitleElementLevel>02</TitleElementLevel>
+            <TitleText>Hartwell University Hockey</TitleText>
+          </TitleElement>
+        </TitleDetail>
+      </Collection>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Wrong Side of the Ice</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Casey Blake</PersonName>
+        <PersonNameInverted>Blake, Casey</PersonNameInverted>
+        <BiographicalNote>Casey Blake writes college sports romance for Fiamma Contemporary. Wrong Side of the Ice is her Hartwell University Hockey debut.</BiographicalNote>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>170</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <MainSubject />
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC027020</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>FIC027000</SubjectCode>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Nora Voss trusts files, pain scales, and what a player will not say when he says he is fine.
+
+Gabe Cahill arrives at Hartwell University with a Grade II ankle sprain, a transfer file full of careful notes, and eleven days to prove he can play in the conference semifinal. Nora is the athletic trainer who can clear him or bench him. She is good at her job, precise with a tape roll, and very committed to not noticing the tall right wing who closes her training-room door like he already knows the rules.
+
+Gabe is cooperative. Too cooperative. He answers every question except the one that matters: how much it really hurts when the skate comes off and nobody is watching. Nora knows better than to trust a charming athlete with a countdown clock. She knows much better than to touch him after hours.
+
+Then she does.
+
+Now the ankle is borderline, the clearance form is open, and Nora has to decide whether her judgment is still clean enough to sign her name to it. Wrong Side of the Ice is Hartwell University Hockey book one: college hockey, athletic-trainer competence, professional-conflict stakes, group-chat comedy, and four explicit scenes for readers of Hannah Grace, Elle Kennedy, Sarah Adams, and Mariana Zapata.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Casey Blake writes college sports romance for Fiamma Contemporary. Wrong Side of the Ice is her Hartwell University Hockey debut.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9781917717564.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Fiamma Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20260513</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717557</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BC</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717571</IDValue>
         </ProductIdentifier>
         <ProductForm>AJ</ProductForm>
       </RelatedProduct>
