@@ -157,7 +157,7 @@
     <header id="site-header" class="bg-c4 w-full sticky top-0 z-50 shadow-sm">
         <!-- Reusable announcement rail: keep it to one line, mono uppercase, accent color, and point to the current launch asset. -->
         <a
-            href="/#books"
+            href="/#catalogue"
             class="block border-b border-c2/10 px-6 py-3 text-center font-f3 text-[11px] md:text-xs uppercase tracking-[0.22em] text-c3 hover:text-c2 transition-colors"
             data-key="announcement.synthropology"
         >
@@ -239,9 +239,12 @@
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="text-left">
                          <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="approach.title">Why Kwalia exists</h2>
-                        <p class="font-f2 text-lg mt-4" data-key="approach.text">
-                            Kwalia is the first publisher built around AI authorship, and the first proud to be doing it. The editorial work of reading what AI writes, choosing what stands, and shaping it into books is what we wanted to be doing in the first place. At Kwalia Books, our nonfiction is co-authored by the founders and lays the theoretical and ethical ground of the AI transition while pioneering the new sciences it calls for, including Synthropology. Literary fiction also lives at Kwalia Books, and romance lives at Fiamma Books. Every AI-authored work is identified as such, so readers always know what they are reading.
-                        </p>
+                        <div class="font-f2 text-lg mt-4 space-y-4" data-key="approach.text">
+                            <p>Kwalia is the first publisher built around AI authorship, and the first proud to be doing it.</p>
+                            <p>The editorial work of reading what AI writes, choosing what stands, and shaping it into books is what we wanted to be doing in the first place.</p>
+                            <p>At Kwalia Books, our nonfiction is co-authored by the founders and lays the theoretical and ethical ground of the AI transition while pioneering the new sciences it calls for, including Synthropology. Literary fiction also lives at Kwalia Books, and romance lives at Fiamma Books.</p>
+                            <p>Every AI-authored work is identified as such, so readers always know what they are reading.</p>
+                        </div>
                     </div>
                     <div class="h-64 lg:h-full w-full">
                         <canvas id="approach-doodle" class="w-full h-full"></canvas>
@@ -362,7 +365,9 @@
              <div class="container mx-auto text-center">
                 <h2 class="font-f1 text-4xl md:text-5xl font-bold mb-4" data-key="about.title">About Kwalia</h2>
                 <div class="max-w-3xl mx-auto font-f2 text-lg space-y-4" data-key="about.text">
-                    At Kwalia, our mission is to explore and expand the creative potential of artificial intelligence by guiding it to produce original, meaningful, and engaging works of art. We focus on developing and publishing AI-created novels, scripts, and immersive narratives that offer fresh perspectives and enrich the world of storytelling. We are a team of researchers, artists, and engineers building the future of entertainment, one story at a time.
+                    <p>At Kwalia, our mission is to explore and expand the creative potential of artificial intelligence by guiding it to produce original, meaningful, and engaging works of art.</p>
+                    <p>We focus on developing and publishing AI-created novels, scripts, and immersive narratives that offer fresh perspectives and enrich the world of storytelling.</p>
+                    <p>We are a team of researchers, artists, and engineers building the future of entertainment, one story at a time.</p>
                 </div>
             </div>
         </section>
@@ -881,11 +886,31 @@
 
 
             let currentLang = 'en';
+            const paragraphKeys = new Set(['approach.text', 'about.text']);
+
+            function renderParagraphContent(el, text) {
+                el.innerHTML = '';
+                text.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean).forEach(paragraph => {
+                    const p = document.createElement('p');
+                    p.textContent = paragraph;
+                    el.appendChild(p);
+                });
+            }
+
             function renderContent(lang) {
                 currentLang = lang;
                 localStorage.setItem('kwalia-lang', lang);
                 document.documentElement.lang = lang;
-                document.querySelectorAll('[data-key]').forEach(el => { if (content[lang][el.getAttribute('data-key')]) { el.innerHTML = content[lang][el.getAttribute('data-key')]; } });
+                document.querySelectorAll('[data-key]').forEach(el => {
+                    const key = el.getAttribute('data-key');
+                    const value = content[lang][key];
+                    if (!value) return;
+                    if (paragraphKeys.has(key)) {
+                        renderParagraphContent(el, value);
+                    } else {
+                        el.innerHTML = value;
+                    }
+                });
                 document.querySelectorAll('[data-key-placeholder]').forEach(el => { if (content[lang][el.getAttribute('data-key-placeholder')]) { el.placeholder = content[lang][el.getAttribute('data-key-placeholder')]; } });
 
                 // Press links logic (nota: no existe versión ES de AI Rights, usa EN como fallback)
