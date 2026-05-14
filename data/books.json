@@ -174,10 +174,6 @@
       "en": "Read the Preface",
       "es": "Leer el prefacio"
     },
-    "statusText": {
-      "en": "Coming this week",
-      "es": "Llega esta semana"
-    },
     "synopsis": {
       "en": "\"War and AI\" tracks the lethal contradiction at the center of the AI boom: the same systems marketed as tools of progress are already being wired into kill chains, targeting systems, and automated decisions about who lives and who dies.\n\nFrom Gaza to Ukraine, machine vision, autonomous drones, and algorithmic targeting are no longer speculative. They are shaping real battlefields in real time, with civilians trapped inside the margin of error.\n\nThis urgent new book maps the doctrine, supply chains, and moral collapse behind algorithmic warfare, arguing that the most dangerous lie of the AI age is the claim that we can build machines to save humanity without first teaching them how to kill.",
       "es": "Estamos dejando vidas humanas en manos de una entidad no humana.\n\nEn abril de 2024, seis oficiales de inteligencia israelíes describieron un sistema de IA que había generado una lista de 37.000 palestinos marcados como objetivos. Los operadores tenían veinte segundos para aprobar cada ataque. En Ucrania, drones con autonomía creciente y selección de objetivos dirigida por IA están redefiniendo el combate a una escala sin precedentes. La guerra algorítmica no es un escenario futuro: está ocurriendo ahora.\n\nGuerra e IA rastrea la contradicción letal en el centro del boom de la inteligencia artificial: los mismos sistemas que se venden como herramientas de progreso ya operan dentro de cadenas de muerte. La visión artificial, los drones autónomos y la selección algorítmica de objetivos están moldeando campos de batalla reales, con civiles atrapados dentro del margen de error.\n\nEl libro traza la doctrina, las cadenas de suministro y el colapso moral detrás de lo que los autores llaman el «Complejo Militar de Silicio», una estructura donde las fronteras entre las empresas tecnológicas y la industria de defensa se han disuelto. Palantir, Anduril, Shield AI: las mismas compañías que construyen la IA de nuestro día a día construyen la infraestructura de selección de objetivos militares.\n\nCuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos sin examinar la evidencia, la cadena de responsabilidad moral se rompe. Nadie decidió completamente. Nadie puede explicar por qué. Ese vacío no es un accidente: es estructural. Este libro lo documenta, desde los campos de batalla hasta las salas de juntas, y argumenta que la mentira más peligrosa de la era de la IA es pretender que podemos construir máquinas para salvar a la humanidad sin haberles enseñado primero a matar."
@@ -214,7 +210,7 @@
         "amount": "$9.99"
       }
     ],
-    "status": "forthcoming",
+    "status": "published",
     "stores": []
   },
   {
