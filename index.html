@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
     <!-- Indexing contract -->
     <link rel="canonical" href="https://kwalia.ai/">
     <!-- /Indexing contract -->
@@ -883,6 +884,7 @@
             function renderContent(lang) {
                 currentLang = lang;
                 localStorage.setItem('kwalia-lang', lang);
+                document.documentElement.lang = lang;
                 document.querySelectorAll('[data-key]').forEach(el => { if (content[lang][el.getAttribute('data-key')]) { el.innerHTML = content[lang][el.getAttribute('data-key')]; } });
                 document.querySelectorAll('[data-key-placeholder]').forEach(el => { if (content[lang][el.getAttribute('data-key-placeholder')]) { el.placeholder = content[lang][el.getAttribute('data-key-placeholder')]; } });
 
@@ -1032,7 +1034,13 @@
             }
 
             // Initial render - restore saved language preference
-            const savedLang = localStorage.getItem('kwalia-lang') || 'en';
+            function initialLanguage() {
+                const normalizedPath = window.location.pathname.replace(/\/+$/, '');
+                if (normalizedPath === '/es') return 'es';
+                return localStorage.getItem('kwalia-lang') || 'en';
+            }
+
+            const savedLang = initialLanguage();
             renderContent(savedLang);
             initDoodle();
             if(animationFrameId) cancelAnimationFrame(animationFrameId);
