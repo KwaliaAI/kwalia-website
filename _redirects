@@ -1,3 +1,7 @@
+# Homepage language route - 2026-05-14
+/es /index.html 200
+/es/ /index.html 200
+
 # Slug-rename redirect (infraclase → subclase) — 2026-05-11
 /essays/que-es-la-infraclase-permanente.html /essays/que-es-la-subclase-permanente.html 301
 /essays/que-es-la-infraclase-permanente /essays/que-es-la-subclase-permanente 301
