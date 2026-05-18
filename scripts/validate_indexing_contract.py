@@ -612,11 +612,12 @@ def validate_redirect_policy(errors: list[str]) -> None:
         if len(parts) < 3:
             continue
         source, target, status = parts[:3]
+        status_code = status.rstrip("!")
         if (
             source.startswith("/essays/")
             and source.endswith(".html")
             and target == "/essays/"
-            and status == "301"
+            and status_code == "301"
             and source not in ALLOWED_TEMPLATE_REDIRECT_SOURCES
         ):
             errors.append(f"_redirects contains a broad essay .html redirect to /essays/: {source}")

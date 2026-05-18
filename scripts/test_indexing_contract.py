@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import importlib.util
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 VALIDATOR_PATH = SCRIPT_DIR / "validate_indexing_contract.py"
@@ -84,11 +85,31 @@ def test_template_public_essay_url_detection(validator) -> None:
     assert not validator.TEMPLATE_PUBLIC_ESSAY_URL_RE.search("'/essays/' + slug")
 
 
+def test_forced_broad_essay_redirect_fails(validator) -> None:
+    original_root = validator.REPO_ROOT
+    with TemporaryDirectory() as tmpdir:
+        tmp_root = Path(tmpdir)
+        (tmp_root / "_redirects").write_text(
+            "/essays/foo.html /essays/ 301!\n"
+            "/essays/%24%7Bslug%7D.html /essays/ 301!\n",
+            encoding="utf-8",
+        )
+        validator.REPO_ROOT = tmp_root
+        errors: list[str] = []
+        try:
+            validator.validate_redirect_policy(errors)
+        finally:
+            validator.REPO_ROOT = original_root
+
+    assert errors == ["_redirects contains a broad essay .html redirect to /essays/: /essays/foo.html"]
+
+
 def main() -> int:
     validator = load_validator()
     test_org_author_id_reference_fails(validator)
     test_person_author_id_reference_passes(validator)
     test_template_public_essay_url_detection(validator)
+    test_forced_broad_essay_redirect_fails(validator)
     print("Indexing contract regression tests OK.")
     return 0
 
