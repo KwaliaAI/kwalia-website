@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/">
     <!-- Indexing contract -->
     <link rel="canonical" href="https://kwalia.ai/">
     <!-- /Indexing contract -->
+    <base href="/">
     <title>Kwalia | AI First Entertainment</title>
 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -645,13 +645,14 @@
                     const title = essay.title[lang] || essay.title.en;
                     const excerpt = essay.excerpt[lang] || essay.excerpt.en;
 
-                    return `
-                        <a href="/essays/${slug}" class="group bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all border-b-2 border-transparent hover:border-c1">
-                            <h3 class="font-f1 text-xl md:text-2xl mb-2 group-hover:text-c3 transition-colors">${title}</h3>
-                            <p class="font-f2 text-sm text-c2/70 line-clamp-2">${excerpt}</p>
-                            <span class="font-f3 text-xs text-c2/50 group-hover:text-c3 mt-3 inline-block transition-colors">Read →</span>
-                        </a>
-                    `;
+                    const href = '/essays/' + slug;
+                    return [
+                        '<a href="', href, '" class="group bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all border-b-2 border-transparent hover:border-c1">',
+                        '<h3 class="font-f1 text-xl md:text-2xl mb-2 group-hover:text-c3 transition-colors">', title, '</h3>',
+                        '<p class="font-f2 text-sm text-c2/70 line-clamp-2">', excerpt, '</p>',
+                        '<span class="font-f3 text-xs text-c2/50 group-hover:text-c3 mt-3 inline-block transition-colors">Read →</span>',
+                        '</a>'
+                    ].join('');
                 }).join('');
             }
 

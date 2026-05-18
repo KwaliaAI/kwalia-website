@@ -2,6 +2,12 @@
 /es /index.html 200
 /es/ /index.html 200
 
+# Phantom JS template URL crawled by Google - 2026-05-18
+/essays/${slug} /essays/ 301
+/essays/${slug}.html /essays/ 301
+/essays/%24%7Bslug%7D /essays/ 301
+/essays/%24%7Bslug%7D.html /essays/ 301
+
 # Slug-rename redirect (infraclase → subclase) — 2026-05-11
 /essays/que-es-la-infraclase-permanente.html /essays/que-es-la-subclase-permanente.html 301
 /essays/que-es-la-infraclase-permanente /essays/que-es-la-subclase-permanente 301

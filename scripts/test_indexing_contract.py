@@ -78,10 +78,17 @@ def test_person_author_id_reference_passes(validator) -> None:
     assert author_types_for_html(validator, html) == []
 
 
+def test_template_public_essay_url_detection(validator) -> None:
+    assert validator.TEMPLATE_PUBLIC_ESSAY_URL_RE.search('/essays/${slug}')
+    assert validator.TEMPLATE_PUBLIC_ESSAY_URL_RE.search('https://kwalia.ai/essays/${slug}.html')
+    assert not validator.TEMPLATE_PUBLIC_ESSAY_URL_RE.search("'/essays/' + slug")
+
+
 def main() -> int:
     validator = load_validator()
     test_org_author_id_reference_fails(validator)
     test_person_author_id_reference_passes(validator)
+    test_template_public_essay_url_detection(validator)
     print("Indexing contract regression tests OK.")
     return 0
 
