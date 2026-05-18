@@ -34,7 +34,13 @@ RAW_PUBLIC_ESSAY_HTML_RE = re.compile(
     r"https://kwalia\.ai/essays/[^\"'<>\s)]+\.html(?:#[^\"'<>\s)]*)?"
     r"|(?<![A-Za-z0-9:/._-])/essays/[^\"'<>\s)]+\.html(?:#[^\"'<>\s)]*)?"
 )
-BAD_ESSAY_REDIRECT_RE = re.compile(r"^/essays/[^ \t]*\.html[ \t]+/essays/[ \t]+301\b", re.MULTILINE)
+TEMPLATE_PUBLIC_ESSAY_URL_RE = re.compile(
+    r"(?:https://kwalia\.ai)?/essays/\$\{[^}]+\}(?:\.html)?"
+)
+ALLOWED_TEMPLATE_REDIRECT_SOURCES = {
+    "/essays/${slug}.html",
+    "/essays/%24%7Bslug%7D.html",
+}
 QUERY_ALIAS_PATHS = ("/essays/?filter=creativity", "/essays/?filter=digital")
 PDF_CANONICAL_PATH = "/assets/your-constitution-claude-press-release.pdf"
 PDF_NOINDEX_HEADER = "noindex"
@@ -353,6 +359,8 @@ def validate_page_links(path: Path, errors: list[str]) -> None:
 
     for match in RAW_PUBLIC_ESSAY_HTML_RE.finditer(html):
         errors.append(f"{path.relative_to(REPO_ROOT)} contains raw .html essay URL: {match.group(0)}")
+    for match in TEMPLATE_PUBLIC_ESSAY_URL_RE.finditer(html):
+        errors.append(f"{path.relative_to(REPO_ROOT)} contains crawlable template essay URL: {match.group(0)}")
 
     page_url = f"{BASE_URL}/{path.relative_to(REPO_ROOT).as_posix()}"
     if path.name == "index.html":
@@ -596,8 +604,22 @@ def validate_netlify_policy(errors: list[str]) -> None:
 
 def validate_redirect_policy(errors: list[str]) -> None:
     redirects = (REPO_ROOT / "_redirects").read_text(encoding="utf-8")
-    if BAD_ESSAY_REDIRECT_RE.search(redirects):
-        errors.append("_redirects contains a broad essay .html redirect to /essays/")
+    for line in redirects.splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        parts = stripped.split()
+        if len(parts) < 3:
+            continue
+        source, target, status = parts[:3]
+        if (
+            source.startswith("/essays/")
+            and source.endswith(".html")
+            and target == "/essays/"
+            and status == "301"
+            and source not in ALLOWED_TEMPLATE_REDIRECT_SOURCES
+        ):
+            errors.append(f"_redirects contains a broad essay .html redirect to /essays/: {source}")
 
 
 def validate_essay_listing_contract(errors: list[str]) -> None:

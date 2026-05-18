@@ -7,6 +7,7 @@ Reads data/essay_inventory.csv and emits:
   sitemap-news.xml     (changefreq weekly, if rows exist)
   sitemap-answers.xml  (changefreq monthly, if rows exist)
   sitemap-index.xml    (master index referencing the above)
+  sitemap.xml          (conventional alias of sitemap-index.xml)
 
 All files are written to the repo root (Netlify publish = ".").
 Idempotent: running multiple times produces the same output.
@@ -115,9 +116,12 @@ def main():
         ET.SubElement(sitemap_el, "lastmod").text = TODAY
 
     index_path = REPO_ROOT / "sitemap-index.xml"
+    alias_path = REPO_ROOT / "sitemap.xml"
     write_sitemap(index_path, sitemapindex)
+    write_sitemap(alias_path, sitemapindex)
 
     print(f"\nSitemap index: {index_path.name} ({len(generated)} sitemaps)")
+    print(f"Sitemap alias: {alias_path.name}")
     for filename, count in generated:
         print(f"  {filename}: {count} entries")
 
