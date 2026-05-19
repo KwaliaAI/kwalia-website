@@ -38,7 +38,7 @@ You can use **bold text** and *italic text*. You can also create [links to other
 
 > Blockquotes work too. They get styled with the pink left border.
 
-Internal links like [this essay about cyborgs](youre-already-a-cyborg.html) don't get the external link treatment.
+Internal links like [this essay about cyborgs](youre-already-a-cyborg) don't get the external link treatment.
 
 ## Why This Matters
 
