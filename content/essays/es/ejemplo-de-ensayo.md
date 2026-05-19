@@ -38,7 +38,7 @@ Puedes usar **texto en negrita** y *texto en cursiva*. También puedes crear [en
 
 > Las citas también funcionan. Se estilizan con el borde rosa a la izquierda.
 
-Los enlaces internos como [este ensayo sobre cyborgs](ya-eres-un-cyborg.html) no reciben el tratamiento de enlace externo.
+Los enlaces internos como [este ensayo sobre cyborgs](ya-eres-un-cyborg) no reciben el tratamiento de enlace externo.
 
 ## Por qué importa
 

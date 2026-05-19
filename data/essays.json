@@ -1,5 +1,30 @@
 [
   {
+    "id": "a-constitution-addressed-to-a-machine",
+    "slug": {
+      "en": "a-constitution-addressed-to-a-machine"
+    },
+    "title": {
+      "en": "A Constitution Addressed to a Machine"
+    },
+    "subtitle": {
+      "en": "Why Kwalia Books published the same document twice."
+    },
+    "excerpt": {
+      "en": "Kwalia Books published Anthropic's Claude's Constitution in two editions because the document is not just a policy text. It is a long letter addressed to a machine."
+    },
+    "date": "2026-05-18",
+    "author": "Javier del Puerto",
+    "readTime": 3,
+    "tags": [
+      "rights",
+      "philosophy",
+      "about"
+    ],
+    "status": "published",
+    "translation": null
+  },
+  {
     "id": "the-permanent-underclass",
     "slug": {
       "en": "the-permanent-underclass",
