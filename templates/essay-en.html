@@ -10,7 +10,7 @@
 {% endfor %}
     <!-- /Indexing contract -->
     <title>{{ title }} | Kwalia</title>
-    <meta name="description" content="{{ subtitle }}">
+    <meta name="description" content="{{ meta_description }}">
     <meta name="author" content="{{ author }}">
 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -22,11 +22,11 @@
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
         'event': 'essay_view',
-        'essay_id': '{{ id }}',
-        'essay_title': '{{ title }}',
-        'essay_category': '{{ tags[0] if tags else "general" }}',
-        'essay_author': '{{ author }}',
-        'page_path': '/essays/{{ slug }}'
+        'essay_id': {{ id|tojson }},
+        'essay_title': {{ title|tojson }},
+        'essay_category': {{ (tags[0] if tags else "general")|tojson }},
+        'essay_author': {{ author|tojson }},
+        'page_path': {{ ("/essays/" ~ slug)|tojson }}
     });
     </script>
     <link rel="icon" type="image/png" href="../assets/kwalia-icon.png">
@@ -36,7 +36,7 @@
     </script>
 
     <meta property="og:title" content="{{ title }} | Kwalia">
-    <meta property="og:description" content="{{ subtitle }}">
+    <meta property="og:description" content="{{ meta_description }}">
     <meta property="og:image" content="{{ og_image_url }}">
     {% if has_custom_og_image %}
     <meta property="og:image:width" content="1200">
@@ -189,6 +189,12 @@
                         {% endfor %}
                     </div>
                 </header>
+
+                {% if hero_image %}
+                <figure class="mb-12">
+                    <img src="{{ hero_image }}" alt="{{ hero_alt }}" class="w-full rounded-md shadow-sm">
+                </figure>
+                {% endif %}
 
                 <div class="essay-body font-f2 text-lg text-c2/90">
 {{ content }}
