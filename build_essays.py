@@ -417,7 +417,7 @@ def load_faq(slug):
 def build_structured_data(slug, lang, metadata, canonical_url, article_id, og_image_url, has_custom_og_image, md_file):
     """Build the canonical Wave C JSON-LD graph for generated essays."""
     title = metadata.get('title', 'Untitled')
-    subtitle = metadata.get('subtitle') or metadata.get('excerpt', '')
+    description = metadata.get('meta_description') or metadata.get('subtitle') or metadata.get('excerpt', '')
     date_published = schema_date(metadata.get('date')) or git_last_modified(md_file)
     date_modified = schema_date(metadata.get('dateModified') or metadata.get('modified')) or git_last_modified(md_file)
 
@@ -432,7 +432,7 @@ def build_structured_data(slug, lang, metadata, canonical_url, article_id, og_im
         "@type": "Article",
         "@id": article_id,
         "headline": title,
-        "description": subtitle,
+        "description": description,
         "url": canonical_url,
         "inLanguage": lang,
         "datePublished": date_published,
@@ -608,6 +608,7 @@ def build_essay(md_file, all_essays=None):
         'slug': slug,
         'title': metadata.get('title', 'Untitled'),
         'subtitle': metadata.get('subtitle', ''),
+        'meta_description': metadata.get('meta_description') or metadata.get('subtitle', ''),
         'date': metadata.get('date', ''),
         'date_formatted': format_date(metadata.get('date', ''), lang),
         'author': metadata.get('author', 'Javier del Puerto'),
@@ -622,6 +623,8 @@ def build_essay(md_file, all_essays=None):
         'structured_data_json': structured_data_json,
         'og_image_url': og_image_url,
         'has_custom_og_image': has_custom_og_image,
+        'hero_image': metadata.get('hero_image'),
+        'hero_alt': metadata.get('hero_alt') or metadata.get('title', 'Essay image'),
     }
 
     # Add related essays

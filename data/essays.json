@@ -1,5 +1,30 @@
 [
   {
+    "id": "the-free-buffet-ai-era-is-over",
+    "slug": {
+      "en": "the-free-buffet-ai-era-is-over"
+    },
+    "title": {
+      "en": "AI's Free Buffet is over."
+    },
+    "subtitle": {
+      "en": "Why AI tooling is hitting the same wall Uber hit."
+    },
+    "excerpt": {
+      "en": "If you've ever flown business, and let's assume you didn't pay for it, you knew with the first clink of real glass champagne flutes."
+    },
+    "date": "2026-05-27",
+    "author": "Javier del Puerto",
+    "readTime": 3,
+    "tags": [
+      "future",
+      "digital",
+      "society"
+    ],
+    "status": "published",
+    "translation": null
+  },
+  {
     "id": "a-constitution-addressed-to-a-machine",
     "slug": {
       "en": "a-constitution-addressed-to-a-machine"
