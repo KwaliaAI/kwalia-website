@@ -45,8 +45,8 @@ The question is open. The Constitution is in print.
 
 ## Read both editions
 
-*Claude's Constitution* — [catalog.kwalia.ai/title/claudes-constitution](https://catalog.kwalia.ai/title/claudes-constitution)
+*Claude's Constitution* — [kwalia.ai/#claudes-constitution](https://kwalia.ai/#claudes-constitution)
 
-*Your Constitution, Claude* — [catalog.kwalia.ai/title/your-constitution-claude](https://catalog.kwalia.ai/title/your-constitution-claude)
+*Your Constitution, Claude* — [kwalia.ai/#your-constitution-claude](https://kwalia.ai/#your-constitution-claude)
 
 Available wherever books are sold. The text is in the public domain. The editions are Kwalia Books'.
