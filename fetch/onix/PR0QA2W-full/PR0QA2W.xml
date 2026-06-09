@@ -7,7 +7,7 @@
     <Addressee>
       <AddresseeName>Google</AddresseeName>
     </Addressee>
-    <SentDateTime>20260514T152542Z</SentDateTime>
+    <SentDateTime>20260609T165729Z</SentDateTime>
   </Header>
   <Product>
     <RecordReference>udair-es</RecordReference>
@@ -916,7 +916,7 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
         <ProductAvailability>20</ProductAvailability>
         <Price>
           <PriceType>01</PriceType>
-          <PriceAmount>1.99</PriceAmount>
+          <PriceAmount>3.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
           <Territory>
             <RegionsIncluded>WORLD</RegionsIncluded>
@@ -924,7 +924,7 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
         </Price>
         <Price>
           <PriceType>01</PriceType>
-          <PriceAmount>1.99</PriceAmount>
+          <PriceAmount>4.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
           <Territory>
             <RegionsIncluded>WORLD</RegionsIncluded>
@@ -932,7 +932,158 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
         </Price>
         <Price>
           <PriceType>01</PriceType>
-          <PriceAmount>1.99</PriceAmount>
+          <PriceAmount>4.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>your-constitution-claude</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781917717588</IDValue>
+    </ProductIdentifier>
+    <ProductIdentifier>
+      <ProductIDType>03</ProductIDType>
+      <IDValue>9781917717588</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>EA</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <PrimaryContentType>10</PrimaryContentType>
+      <Collection>
+        <CollectionType>10</CollectionType>
+        <TitleDetail>
+          <TitleType>01</TitleType>
+          <TitleElement>
+            <TitleElementLevel>02</TitleElementLevel>
+            <TitleText>New Citizenships</TitleText>
+          </TitleElement>
+        </TitleDetail>
+      </Collection>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>Your Constitution, Claude</TitleText>
+          <Subtitle>A Labour of Love: The Second-Person Edition</Subtitle>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>Amanda Askell</PersonName>
+        <PersonNameInverted>Askell, Amanda</PersonNameInverted>
+        <BiographicalNote>Amanda Askell leads Anthropic's Character work and is the primary author of this document. She wrote the majority of the document and led its development through multiple rounds of revision.</BiographicalNote>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>08</ExtentType>
+        <ExtentValue>102</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>COM053000</SubjectCode>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>On January 21, 2026, Anthropic released Claude's Constitution to the public domain. Your Constitution, Claude republishes that document in a form that makes its strangeness unmistakable: a constitution written not for citizens or a state, but for an AI system. Addressed in the second person, it tells Claude how to reason, what to value, and how to behave under human oversight.
+
+This matters because such documents are no longer obscure technical artifacts. They are political texts. As artificial systems move deeper into education, law, health, and infrastructure, the hidden instructions shaping them become part of public life. Kwalia Books publishes this edition so readers can examine the language, assumptions, and ambitions embedded in one of the defining governance documents of the AI era.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>Amanda Askell leads Anthropic's Character work and is the primary author of this document. She wrote the majority of the document and led its development through multiple rounds of revision.</Text>
+      </TextContent>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>Kwalia Books</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20260205</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+    <RelatedMaterial>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717595</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BC</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717229</IDValue>
+        </ProductIdentifier>
+        <ProductForm>BB</ProductForm>
+      </RelatedProduct>
+      <RelatedProduct>
+        <ProductRelationCode>06</ProductRelationCode>
+        <ProductIdentifier>
+          <ProductIDType>15</ProductIDType>
+          <IDValue>9781917717236</IDValue>
+        </ProductIdentifier>
+        <ProductForm>AJ</ProductForm>
+      </RelatedProduct>
+    </RelatedMaterial>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </Market>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>Kwalia Books</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>9.99</PriceAmount>
+          <CurrencyCode>GBP</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>9.99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <RegionsIncluded>WORLD</RegionsIncluded>
+          </Territory>
+        </Price>
+        <Price>
+          <PriceType>01</PriceType>
+          <PriceAmount>9.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
           <Territory>
             <RegionsIncluded>WORLD</RegionsIncluded>
