@@ -7,7 +7,7 @@
     <Addressee>
       <AddresseeName>Google</AddresseeName>
     </Addressee>
-    <SentDateTime>20260609T165729Z</SentDateTime>
+    <SentDateTime>20260611T090551Z</SentDateTime>
   </Header>
   <Product>
     <RecordReference>udair-es</RecordReference>
@@ -992,8 +992,17 @@ Cuando una IA selecciona un objetivo y un humano lo aprueba en veinte segundos s
         <ExtentUnit>03</ExtentUnit>
       </Extent>
       <Subject>
+        <MainSubject />
         <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
         <SubjectCode>COM053000</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>SCI075000</SubjectCode>
+      </Subject>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>COM004000</SubjectCode>
       </Subject>
     </DescriptiveDetail>
     <CollateralDetail>
@@ -1067,7 +1076,7 @@ This matters because such documents are no longer obscure technical artifacts. T
         <ProductAvailability>20</ProductAvailability>
         <Price>
           <PriceType>01</PriceType>
-          <PriceAmount>9.99</PriceAmount>
+          <PriceAmount>1.99</PriceAmount>
           <CurrencyCode>GBP</CurrencyCode>
           <Territory>
             <RegionsIncluded>WORLD</RegionsIncluded>
@@ -1075,7 +1084,7 @@ This matters because such documents are no longer obscure technical artifacts. T
         </Price>
         <Price>
           <PriceType>01</PriceType>
-          <PriceAmount>9.99</PriceAmount>
+          <PriceAmount>1.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
           <Territory>
             <RegionsIncluded>WORLD</RegionsIncluded>
@@ -1083,7 +1092,7 @@ This matters because such documents are no longer obscure technical artifacts. T
         </Price>
         <Price>
           <PriceType>01</PriceType>
-          <PriceAmount>9.99</PriceAmount>
+          <PriceAmount>1.99</PriceAmount>
           <CurrencyCode>USD</CurrencyCode>
           <Territory>
             <RegionsIncluded>WORLD</RegionsIncluded>
