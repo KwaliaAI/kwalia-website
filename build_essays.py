@@ -767,6 +767,8 @@ def generate_essay_card_html(essay, lang='en'):
                         </div>
                     </div>
                     </a>
+                    <!-- SEO: keep Spanish variants crawlable even before the language toggle runs. -->
+                    <a href="{esc(slug_es)}" class="sr-only" lang="es">Versión en español: {esc(title_es, quote=False)}</a>
 '''
 
 
