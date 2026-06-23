@@ -161,7 +161,7 @@
             class="block border-b border-c2/10 px-6 py-3 text-center font-f3 text-[11px] md:text-xs uppercase tracking-[0.22em] text-c3 hover:text-c2 transition-colors"
             data-key="announcement.synthropology"
         >
-            Out 1 June 2026: Synthropology. A New Science of Synthetic Culture
+            Out now: Synthropology. A New Science of Synthetic Culture
         </a>
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home"><img src="assets/logo-kwalia-small.png" alt="kwalia logo" class="h-8 w-auto"></a>
@@ -253,13 +253,21 @@
             </div>
         </section>
 
-        <section id="fiction" class="section-padding bg-gray-50">
+        <!--
+            AI Law & Governance Library (AILGL) series block.
+            Mirrors the New Citizenships (#catalogue) section. Rendered by renderAILGL().
+            Readiness slot: hidden until at least one book in data/books.json has
+            imprint === "AI Law & Governance Library". Adding Volume 1 at publish time is a
+            single books.json entry (status: forthcoming until live; formats/stores empty
+            until purchasable). No ghost/placeholder title ships live from this section.
+        -->
+        <section id="ailgl" class="section-padding bg-gray-50 hidden">
             <div class="container mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="fiction.title">New Fiction</h2>
-                    <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto" data-key="fiction.subtitle">#AILit begins here.</p>
+                    <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="catalogue_ailgl.title">AI Law &amp; Governance Library</h2>
+                    <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto" data-key="catalogue_ailgl.subtitle">The world's foundational laws and governance texts on artificial intelligence, in clean reference editions.</p>
                 </div>
-                <div id="fiction-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div id="ailgl-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     </div>
             </div>
         </section>
@@ -275,21 +283,13 @@
             </div>
         </section>
 
-        <!--
-            AI Law & Governance Library (AILGL) series block.
-            Mirrors the New Citizenships (#catalogue) section. Rendered by renderAILGL().
-            Readiness slot: hidden until at least one book in data/books.json has
-            imprint === "AI Law & Governance Library". Adding Volume 1 at publish time is a
-            single books.json entry (status: forthcoming until live; formats/stores empty
-            until purchasable). No ghost/placeholder title ships live from this section.
-        -->
-        <section id="ailgl" class="section-padding bg-c1/30 hidden">
+        <section id="fiction" class="section-padding bg-gray-50">
             <div class="container mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="catalogue_ailgl.title">AI Law &amp; Governance Library</h2>
-                    <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto" data-key="catalogue_ailgl.subtitle">The world's foundational laws and governance texts on artificial intelligence, in clean reference editions.</p>
+                    <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="fiction.title">New Fiction</h2>
+                    <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto" data-key="fiction.subtitle">#AILit begins here.</p>
                 </div>
-                <div id="ailgl-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div id="fiction-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     </div>
             </div>
         </section>
