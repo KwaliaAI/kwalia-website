@@ -463,15 +463,16 @@
             let shortStories = [];
             let essays = [];
 
-            // Editorial shelf order for New Citizenships titles: newest block first, with related titles kept adjacent.
-            const newCitizenshipsDisplayRank = new Map([
-                ['synthropology', 0],
-                ['apophenia', 1],
-                ['your-constitution-claude', 2],
-                ['claudes-constitution', 3],
-                ['mindkind', 4],
-                ['udair', 5]
-            ]);
+            // Single source of truth for New Citizenships card order. First id = top-left. To add a book to the top, prepend its id. Unlisted books render last.
+            const catalogueOrder = [
+                'synthropology',
+                'war-and-ai',
+                'apophenia',
+                'your-constitution-claude',
+                'claudes-constitution',
+                'mindkind',
+                'udair'
+            ];
 
             // Load all data from JSON files
             async function loadData() {
@@ -588,23 +589,12 @@
                 // AI Law & Governance Library titles render in their own #ailgl series block,
                 // so keep them out of the New Citizenships grid to avoid double-listing.
                 const catalogueBooks = bookCatalogue.filter(book => book.imprint !== 'AI Law & Governance Library');
-                const sourceOrder = new Map(catalogueBooks.map((book, index) => [book.id, index]));
-                const sortedCatalogue = [...catalogueBooks].sort((left, right) => {
-                    const featuredDelta = Number(Boolean(right.featured)) - Number(Boolean(left.featured));
-                    if (featuredDelta !== 0) return featuredDelta;
-
-                    const leftIsNewCitizenships = left.imprint === 'New Citizenships';
-                    const rightIsNewCitizenships = right.imprint === 'New Citizenships';
-                    if (leftIsNewCitizenships && rightIsNewCitizenships) {
-                        const leftRank = newCitizenshipsDisplayRank.get(left.id);
-                        const rightRank = newCitizenshipsDisplayRank.get(right.id);
-                        if (leftRank === undefined && rightRank !== undefined) return 1;
-                        if (leftRank !== undefined && rightRank === undefined) return -1;
-                        if (leftRank !== rightRank) return leftRank - rightRank;
-                    }
-
-                    return (sourceOrder.get(left.id) || 0) - (sourceOrder.get(right.id) || 0);
-                });
+                // Order strictly by position in catalogueOrder. Ids not listed sort to the end.
+                const rank = id => {
+                    const index = catalogueOrder.indexOf(id);
+                    return index === -1 ? Infinity : index;
+                };
+                const sortedCatalogue = [...catalogueBooks].sort((left, right) => rank(left.id) - rank(right.id));
 
                 sortedCatalogue.forEach(book => {
                     catalogueContainer.innerHTML += buildBookCardHTML(book, lang);
