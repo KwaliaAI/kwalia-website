@@ -275,6 +275,25 @@
             </div>
         </section>
 
+        <!--
+            AI Law & Governance Library (AILGL) series block.
+            Mirrors the New Citizenships (#catalogue) section. Rendered by renderAILGL().
+            Readiness slot: hidden until at least one book in data/books.json has
+            imprint === "AI Law & Governance Library". Adding Volume 1 at publish time is a
+            single books.json entry (status: forthcoming until live; formats/stores empty
+            until purchasable). No ghost/placeholder title ships live from this section.
+        -->
+        <section id="ailgl" class="section-padding bg-c1/30 hidden">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="catalogue_ailgl.title">AI Law &amp; Governance Library</h2>
+                    <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto" data-key="catalogue_ailgl.subtitle">The world's foundational laws and governance texts on artificial intelligence, in clean reference editions.</p>
+                </div>
+                <div id="ailgl-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    </div>
+            </div>
+        </section>
+
         <section id="heteronyms" class="section-padding bg-c4">
             <div class="container mx-auto">
                 <div class="text-center mb-12">
@@ -498,10 +517,79 @@
             const readerMeta = document.getElementById('reader-meta');
             const readerBuyLink = document.getElementById('reader-buy-link');
 
+            // Shared card markup used by both the New Citizenships (#catalogue) grid and the
+            // AI Law & Governance Library (#ailgl) grid, so any series renders consistently.
+            function buildBookCardHTML(book, lang) {
+                const coverUrl = book.coverImage[lang] || book.coverImage.en || "";
+                const hasSample = (book.stories && book.stories.length > 0) || Boolean(book.sampleUrl);
+                const bookStatus = (book.statusText && (book.statusText[lang] || book.statusText.en))
+                    || (book.status && book.status !== 'published' ? (content[lang][`status.${book.status}`] || '') : '');
+
+                let badgeHTML = '';
+                if (hasSample) {
+                    badgeHTML = `<span class="absolute top-3 right-3 bg-white/90 text-slate-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm backdrop-blur-sm z-10">Read Sample</span>`;
+                }
+
+                let coverHTML = `<div class="w-full h-96 bg-c1 flex items-center justify-center font-f3 text-lg text-center p-4 rounded-lg shadow-md relative">${badgeHTML} ${book.coverText || ''}</div>`;
+                if (coverUrl) {
+                    coverHTML = `
+                        <div class="relative w-full h-96 rounded-lg shadow-md overflow-hidden bg-gray-100 group">
+                            ${badgeHTML}
+                            <img src="${coverUrl}" alt="${book.title.en} cover" class="w-full h-full object-contain p-2 transition-transform duration-500 group-hover:scale-105">
+                        </div>`;
+                }
+
+                const bookTitle = book.title[lang] || book.title.en;
+                const bookAuthors = (book.authors && book.authors.length > 0) ? book.authors.join(' & ') : content[lang]['status.forthcoming'];
+
+                return `
+                    <div class="flex flex-col gap-4 cursor-pointer book-item" data-book-id="${book.id}">
+                        ${coverHTML}
+                        <div class="pt-2 text-center">
+                            <p class="font-f1 text-2xl">${bookTitle}</p>
+                            <p class="font-f2 text-sm text-c2/80">${bookAuthors}</p>
+                            ${bookStatus ? `<p class="font-f3 text-xs uppercase tracking-[0.18em] text-c3 mt-2">${bookStatus}</p>` : ''}
+                        </div>
+                    </div>`;
+            }
+
+            // AI Law & Governance Library series block. Readiness slot: renders only the
+            // books whose imprint is the AILGL series. When none exist yet, the section stays
+            // hidden so no placeholder/ghost title is published live. Adding Volume 1 is a
+            // single books.json entry with imprint "AI Law & Governance Library".
+            function renderAILGL(lang) {
+                const section = document.getElementById('ailgl');
+                const container = document.getElementById('ailgl-container');
+                if (!section || !container) return;
+
+                const ailglBooks = bookCatalogue
+                    .filter(book => book.imprint === 'AI Law & Governance Library')
+                    .sort((a, b) => (a.volume || 0) - (b.volume || 0));
+
+                if (ailglBooks.length === 0) {
+                    section.classList.add('hidden');
+                    container.innerHTML = '';
+                    return;
+                }
+
+                section.classList.remove('hidden');
+                container.innerHTML = ailglBooks.map(book => buildBookCardHTML(book, lang)).join('');
+
+                container.querySelectorAll('.book-item').forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        const book = bookCatalogue.find(b => b.id === e.currentTarget.dataset.bookId);
+                        if (book) openBookModal(book, lang);
+                    });
+                });
+            }
+
             function renderCatalogue(lang) {
                 catalogueContainer.innerHTML = '';
-                const sourceOrder = new Map(bookCatalogue.map((book, index) => [book.id, index]));
-                const sortedCatalogue = [...bookCatalogue].sort((left, right) => {
+                // AI Law & Governance Library titles render in their own #ailgl series block,
+                // so keep them out of the New Citizenships grid to avoid double-listing.
+                const catalogueBooks = bookCatalogue.filter(book => book.imprint !== 'AI Law & Governance Library');
+                const sourceOrder = new Map(catalogueBooks.map((book, index) => [book.id, index]));
+                const sortedCatalogue = [...catalogueBooks].sort((left, right) => {
                     const featuredDelta = Number(Boolean(right.featured)) - Number(Boolean(left.featured));
                     if (featuredDelta !== 0) return featuredDelta;
 
@@ -519,39 +607,7 @@
                 });
 
                 sortedCatalogue.forEach(book => {
-                    const coverUrl = book.coverImage[lang] || book.coverImage.en || "";
-                    const hasSample = (book.stories && book.stories.length > 0) || Boolean(book.sampleUrl);
-                    const bookStatus = (book.statusText && (book.statusText[lang] || book.statusText.en))
-                        || (book.status && book.status !== 'published' ? (content[lang][`status.${book.status}`] || '') : '');
-
-                    // Logic to add "Read Sample" badge if the book has stories
-                    let badgeHTML = '';
-                    if (hasSample) {
-                        badgeHTML = `<span class="absolute top-3 right-3 bg-white/90 text-slate-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm backdrop-blur-sm z-10">Read Sample</span>`;
-                    }
-
-                    let coverHTML = `<div class="w-full h-96 bg-c1 flex items-center justify-center font-f3 text-lg text-center p-4 rounded-lg shadow-md relative">${badgeHTML} ${book.coverText || ''}</div>`;
-                    if (coverUrl) {
-                        coverHTML = `
-                            <div class="relative w-full h-96 rounded-lg shadow-md overflow-hidden bg-gray-100 group">
-                                ${badgeHTML}
-                                <img src="${coverUrl}" alt="${book.title.en} cover" class="w-full h-full object-contain p-2 transition-transform duration-500 group-hover:scale-105">
-                            </div>`;
-                    }
-
-                    const bookTitle = book.title[lang] || book.title.en;
-                    const bookAuthors = (book.authors && book.authors.length > 0) ? book.authors.join(' & ') : content[lang]['status.forthcoming'];
-
-                    const bookHTML = `
-                        <div class="flex flex-col gap-4 cursor-pointer book-item" data-book-id="${book.id}">
-                            ${coverHTML}
-                            <div class="pt-2 text-center">
-                                <p class="font-f1 text-2xl">${bookTitle}</p>
-                                <p class="font-f2 text-sm text-c2/80">${bookAuthors}</p>
-                                ${bookStatus ? `<p class="font-f3 text-xs uppercase tracking-[0.18em] text-c3 mt-2">${bookStatus}</p>` : ''}
-                            </div>
-                        </div>`;
-                    catalogueContainer.innerHTML += bookHTML;
+                    catalogueContainer.innerHTML += buildBookCardHTML(book, lang);
                 });
 
                 document.querySelectorAll('#catalogue-container .book-item').forEach(item => {
@@ -934,6 +990,7 @@
                 }
 
                 renderCatalogue(lang);
+                renderAILGL(lang);
                 renderFiction(lang);
                 renderHeteronyms(lang);
                 renderFeaturedEssays(lang);

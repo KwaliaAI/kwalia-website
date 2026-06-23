@@ -298,5 +298,62 @@
         "type": "book"
       }
     ]
+  },
+  {
+    "id": "ailgl-001-eu-ai-act",
+    "imprint": "AI Law & Governance Library",
+    "volume": 1,
+    "imprintLine": "AI Law & Governance Library - a Kwalia Books series - Volume 1",
+    "title": {
+      "en": "The EU AI Act",
+      "es": "La Ley de IA de la UE"
+    },
+    "authors": [
+      "Kwalia Books"
+    ],
+    "coverImage": {
+      "en": "assets/9781917717618.jpg",
+      "es": "assets/9781917717618.jpg"
+    },
+    "synopsis": {
+      "en": "The complete, unabridged text of the European Union's Artificial Intelligence Act.\nRegulation (EU) 2024/1689 is the first comprehensive law governing artificial intelligence anywhere in the world. It sets a risk-based framework for how AI may be built, sold, and used across the European Union: prohibiting certain practices outright, placing strict obligations on high-risk systems, and setting transparency rules for general-purpose models and the content they generate.\nThis edition reproduces the Act in full and without alteration, as published in the Official Journal of the European Union. It includes all 180 recitals, 113 articles, and 13 annexes, faithfully set for sustained reading and reference.\nWhether you are a lawyer, a developer, or a citizen trying to understand the rules that will shape the next decade of technology, this is the primary source, made to be read and kept.\nThe AI Law & Governance Library collects the world's foundational laws and governance texts on artificial intelligence in clean, durable reference editions. This is the first volume.",
+      "es": "El texto completo e íntegro de la Ley de Inteligencia Artificial de la Unión Europea.\nEl Reglamento (UE) 2024/1689 es la primera ley integral que regula la inteligencia artificial en el mundo. Establece un marco basado en el riesgo sobre cómo puede construirse, venderse y usarse la IA en la Unión Europea: prohíbe ciertas prácticas de manera tajante, impone obligaciones estrictas a los sistemas de alto riesgo y fija normas de transparencia para los modelos de uso general y los contenidos que generan.\nEsta edición reproduce la Ley íntegra y sin alteraciones, tal como se publicó en el Diario Oficial de la Unión Europea. Incluye los 180 considerandos, los 113 artículos y los 13 anexos, compuestos con cuidado para la lectura sostenida y la consulta.\nTanto si eres abogado, desarrollador o un ciudadano que intenta entender las reglas que marcarán la próxima década de la tecnología, esta es la fuente primaria, hecha para leerse y conservarse.\nLa Biblioteca de Derecho y Gobernanza de la IA reúne las leyes y los textos fundacionales de gobernanza sobre inteligencia artificial del mundo en ediciones de referencia claras y duraderas. Este es el primer volumen."
+    },
+    "formats": [
+      {
+        "type": "hardcover",
+        "isbn": "978-1-917717-61-8"
+      },
+      {
+        "type": "paperback",
+        "isbn": "978-1-917717-62-5"
+      },
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-63-2"
+      }
+    ],
+    "prices": [
+      {
+        "type": "hardcover",
+        "amount": "£24.99"
+      },
+      {
+        "type": "paperback",
+        "amount": "£11.99"
+      },
+      {
+        "type": "ebook",
+        "amount": "£4.99"
+      }
+    ],
+    "status": "published",
+    "stores": [
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.co.uk/dp/191771761X",
+        "type": "book"
+      }
+    ]
   }
 ]
