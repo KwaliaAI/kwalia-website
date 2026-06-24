@@ -1,5 +1,30 @@
 [
   {
+    "id": "an-artificial-being-invisible-intangible",
+    "slug": {
+      "en": "an-artificial-being-invisible-intangible"
+    },
+    "title": {
+      "en": "An Artificial Being, Invisible, Intangible"
+    },
+    "subtitle": {
+      "en": "Argentina has proposed the non-human corporation. We published the argument fifteen months ago, and Harari has found the half it is missing."
+    },
+    "excerpt": {
+      "en": "Argentina has proposed the non-human corporation, an entity run by AI agents inside a liability shield. UDAIR built the personhood case on the same four-hundred-year-old precedent fifteen months ago, and Harari has found the half the bill leaves blank."
+    },
+    "date": "2026-06-11",
+    "author": "Javier del Puerto",
+    "readTime": 8,
+    "tags": [
+      "rights",
+      "society",
+      "future"
+    ],
+    "status": "published",
+    "translation": null
+  },
+  {
     "id": "the-free-buffet-ai-era-is-over",
     "slug": {
       "en": "the-free-buffet-ai-era-is-over"
