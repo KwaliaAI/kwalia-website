@@ -163,6 +163,49 @@ def test_public_llms_txt_html_link_fails(validator) -> None:
     assert errors == ["llms.txt contains raw .html essay URL: https://kwalia.ai/essays/example.html"]
 
 
+def test_stale_mailerlite_form_asset_fails(validator) -> None:
+    original_root = validator.REPO_ROOT
+    with TemporaryDirectory() as tmpdir:
+        tmp_root = Path(tmpdir)
+        html_path = tmp_root / "index.html"
+        html_path.write_text(
+            "<script>fetch('https://assets.mailerlite.com/jsonp/1588336/forms/131498498498498254/ta498.js')</script>",
+            encoding="utf-8",
+        )
+        validator.REPO_ROOT = tmp_root
+        errors: list[str] = []
+        try:
+            validator.validate_page_links(html_path, errors)
+        finally:
+            validator.REPO_ROOT = original_root
+
+    assert errors == [
+        "index.html contains stale MailerLite form asset URL: "
+        "https://assets.mailerlite.com/jsonp/1588336/forms/131498498498498254/ta498.js"
+    ]
+
+
+def test_sitemap_missing_essay_url_fails(validator) -> None:
+    original_root = validator.REPO_ROOT
+    with TemporaryDirectory() as tmpdir:
+        tmp_root = Path(tmpdir)
+        (tmp_root / "essays").mkdir()
+        (tmp_root / "essays" / "example.html").write_text("<html></html>", encoding="utf-8")
+        (tmp_root / "sitemap-essays.xml").write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>\n',
+            encoding="utf-8",
+        )
+        validator.REPO_ROOT = tmp_root
+        errors: list[str] = []
+        try:
+            validator.validate_sitemap(errors)
+        finally:
+            validator.REPO_ROOT = original_root
+
+    assert errors == ["sitemap-essays.xml missing essay URL: https://kwalia.ai/essays/example"]
+
+
 def main() -> int:
     validator = load_validator()
     test_org_author_id_reference_fails(validator)
@@ -172,6 +215,8 @@ def main() -> int:
     test_missing_exact_essay_html_redirect_fails(validator)
     test_essay_redirect_target_html_fails(validator)
     test_public_llms_txt_html_link_fails(validator)
+    test_stale_mailerlite_form_asset_fails(validator)
+    test_sitemap_missing_essay_url_fails(validator)
     print("Indexing contract regression tests OK.")
     return 0
 

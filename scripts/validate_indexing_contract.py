@@ -37,6 +37,9 @@ RAW_PUBLIC_ESSAY_HTML_RE = re.compile(
 TEMPLATE_PUBLIC_ESSAY_URL_RE = re.compile(
     r"(?:https://kwalia\.ai)?/essays/\$\{[^}]+\}(?:\.html)?"
 )
+MAILERLITE_FORM_ASSET_RE = re.compile(
+    r"https://assets\.mailerlite\.com/jsonp/\d+/forms/\d+/ta\d+\.js"
+)
 ALLOWED_TEMPLATE_REDIRECT_SOURCES = {
     "/essays/${slug}.html",
     "/essays/%24%7Bslug%7D.html",
@@ -362,6 +365,8 @@ def validate_page_links(path: Path, errors: list[str]) -> None:
         errors.append(f"{path.relative_to(REPO_ROOT)} contains raw .html essay URL: {match.group(0)}")
     for match in TEMPLATE_PUBLIC_ESSAY_URL_RE.finditer(html):
         errors.append(f"{path.relative_to(REPO_ROOT)} contains crawlable template essay URL: {match.group(0)}")
+    for match in MAILERLITE_FORM_ASSET_RE.finditer(html):
+        errors.append(f"{path.relative_to(REPO_ROOT)} contains stale MailerLite form asset URL: {match.group(0)}")
 
     page_url = f"{BASE_URL}/{path.relative_to(REPO_ROOT).as_posix()}"
     if path.name == "index.html":
@@ -516,12 +521,15 @@ def validate_query_aliases(errors: list[str]) -> None:
 
 
 def validate_sitemap(errors: list[str]) -> None:
+    sitemap_urls_by_name: dict[str, set[str]] = {}
     for sitemap in sorted(REPO_ROOT.glob("sitemap*.xml")):
         tree = ET.parse(sitemap)
+        sitemap_urls_by_name[sitemap.name] = set()
         for loc in tree.findall(".//{*}loc"):
             if not loc.text:
                 continue
             url = loc.text.strip()
+            sitemap_urls_by_name[sitemap.name].add(url)
             parsed = urlsplit(url)
             if parsed.netloc != "kwalia.ai":
                 continue
@@ -535,6 +543,14 @@ def validate_sitemap(errors: list[str]) -> None:
                 errors.append(f"{sitemap.name} still lists .html essay URL: {url}")
             if not internal_page_exists(REPO_ROOT / "index.html", parsed.path):
                 errors.append(f"{sitemap.name} lists missing URL: {url}")
+
+    essay_sitemap_urls = sitemap_urls_by_name.get("sitemap-essays.xml", set())
+    for path in sorted((REPO_ROOT / "essays").glob("*.html")):
+        if path.name == "index.html":
+            continue
+        expected_url = f"{BASE_URL}/essays/{path.stem}"
+        if expected_url not in essay_sitemap_urls:
+            errors.append(f"sitemap-essays.xml missing essay URL: {expected_url}")
 
 
 def parse_toml_scalar(raw_value: str) -> str:
