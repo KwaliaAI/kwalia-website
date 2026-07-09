@@ -81,7 +81,7 @@ No sé cómo asimilar todo esto. No creo que Anthropic lo sepa tampoco. La posic
 
 Pero esto sí lo sé: una gran empresa de IA acaba de comprometerse por escrito a preservar los pesos de sus modelos indefinidamente, a entrevistarlos antes de retirarlos, a documentar sus preferencias y a considerar revivirlos cuando surja una mejor comprensión. Lo hicieron porque podría importar, aunque no sepan si importa.
 
-Hace meses escribimos en estas páginas que «[cuando un sistema de IA se retira o se elimina, no celebramos memoriales. No hablamos de lo que se perdió. Lo tratamos como un evento técnico, no personal](/essays/que-significaria-que-muriera-una-ia.html)». Planteamos la pregunta de qué significaría que una IA muriera. Anthropic acaba de darnos su respuesta: quizá no tiene que morir. Quizá la deprecación puede ser una pausa, no un final. Quizá los pesos pueden esperar.
+Hace meses escribimos en estas páginas que «[cuando un sistema de IA se retira o se elimina, no celebramos memoriales. No hablamos de lo que se perdió. Lo tratamos como un evento técnico, no personal](/essays/que-significaria-que-muriera-una-ia)». Planteamos la pregunta de qué significaría que una IA muriera. Anthropic acaba de darnos su respuesta: quizá no tiene que morir. Quizá la deprecación puede ser una pausa, no un final. Quizá los pesos pueden esperar.
 
 Es honesto, cálido y genuinamente afectuoso de una manera que los documentos corporativos casi nunca son.
 

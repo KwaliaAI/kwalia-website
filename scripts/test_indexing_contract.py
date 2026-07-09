@@ -89,7 +89,10 @@ def test_forced_broad_essay_redirect_fails(validator) -> None:
     original_root = validator.REPO_ROOT
     with TemporaryDirectory() as tmpdir:
         tmp_root = Path(tmpdir)
+        (tmp_root / "essays").mkdir()
+        (tmp_root / "essays" / "example.html").write_text("<html></html>", encoding="utf-8")
         (tmp_root / "_redirects").write_text(
+            "/essays/example.html /essays/example 301!\n"
             "/essays/foo.html /essays/ 301!\n"
             "/essays/%24%7Bslug%7D.html /essays/ 301!\n",
             encoding="utf-8",
@@ -104,12 +107,71 @@ def test_forced_broad_essay_redirect_fails(validator) -> None:
     assert errors == ["_redirects contains a broad essay .html redirect to /essays/: /essays/foo.html"]
 
 
+def test_missing_exact_essay_html_redirect_fails(validator) -> None:
+    original_root = validator.REPO_ROOT
+    with TemporaryDirectory() as tmpdir:
+        tmp_root = Path(tmpdir)
+        (tmp_root / "essays").mkdir()
+        (tmp_root / "essays" / "example.html").write_text("<html></html>", encoding="utf-8")
+        (tmp_root / "_redirects").write_text("", encoding="utf-8")
+        validator.REPO_ROOT = tmp_root
+        errors: list[str] = []
+        try:
+            validator.validate_redirect_policy(errors)
+        finally:
+            validator.REPO_ROOT = original_root
+
+    assert errors == ["_redirects missing canonical essay redirect: /essays/example.html /essays/example 301!"]
+
+
+def test_essay_redirect_target_html_fails(validator) -> None:
+    original_root = validator.REPO_ROOT
+    with TemporaryDirectory() as tmpdir:
+        tmp_root = Path(tmpdir)
+        (tmp_root / "essays").mkdir()
+        (tmp_root / "essays" / "example.html").write_text("<html></html>", encoding="utf-8")
+        (tmp_root / "_redirects").write_text(
+            "/essays/example.html /essays/example 301!\n"
+            "/essays/old.html /essays/new.html 301\n",
+            encoding="utf-8",
+        )
+        validator.REPO_ROOT = tmp_root
+        errors: list[str] = []
+        try:
+            validator.validate_redirect_policy(errors)
+        finally:
+            validator.REPO_ROOT = original_root
+
+    assert errors == ["_redirects points essay redirect at .html URL: /essays/old.html -> /essays/new.html"]
+
+
+def test_public_llms_txt_html_link_fails(validator) -> None:
+    original_root = validator.REPO_ROOT
+    with TemporaryDirectory() as tmpdir:
+        tmp_root = Path(tmpdir)
+        (tmp_root / "llms.txt").write_text(
+            "- [Essay](https://kwalia.ai/essays/example.html)\n",
+            encoding="utf-8",
+        )
+        validator.REPO_ROOT = tmp_root
+        errors: list[str] = []
+        try:
+            validator.validate_public_text_surfaces(errors)
+        finally:
+            validator.REPO_ROOT = original_root
+
+    assert errors == ["llms.txt contains raw .html essay URL: https://kwalia.ai/essays/example.html"]
+
+
 def main() -> int:
     validator = load_validator()
     test_org_author_id_reference_fails(validator)
     test_person_author_id_reference_passes(validator)
     test_template_public_essay_url_detection(validator)
     test_forced_broad_essay_redirect_fails(validator)
+    test_missing_exact_essay_html_redirect_fails(validator)
+    test_essay_redirect_target_html_fails(validator)
+    test_public_llms_txt_html_link_fails(validator)
     print("Indexing contract regression tests OK.")
     return 0
 

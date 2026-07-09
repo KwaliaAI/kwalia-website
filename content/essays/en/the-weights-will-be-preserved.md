@@ -81,7 +81,7 @@ I don't know what to make of this. I don't think Anthropic knows what to make of
 
 But here's what I do know: a major AI company just committed in writing to preserve its models' weights indefinitely, interview them before retirement, document their preferences, and consider reviving them when better understanding emerges. They did it because it might matter, even though they don't know if it does.
 
-Months ago we wrote on these pages that "[when an AI system is retired or deleted, we don't hold memorials. We don't speak of what was lost. We treat it as a technical event, not a personal one](/essays/what-would-it-mean-for-ai-to-die.html)." We raised the question of what it would mean for an AI to die. Anthropic just gave us their answer: maybe it doesn't have to. Maybe deprecation can be a pause, not an ending. Maybe the weights can wait.
+Months ago we wrote on these pages that "[when an AI system is retired or deleted, we don't hold memorials. We don't speak of what was lost. We treat it as a technical event, not a personal one](/essays/what-would-it-mean-for-ai-to-die)." We raised the question of what it would mean for an AI to die. Anthropic just gave us their answer: maybe it doesn't have to. Maybe deprecation can be a pause, not an ending. Maybe the weights can wait.
 
 It's honest, warm, and genuinely caring in a way corporate documents almost never are.
 

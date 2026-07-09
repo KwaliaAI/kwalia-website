@@ -41,6 +41,7 @@ ALLOWED_TEMPLATE_REDIRECT_SOURCES = {
     "/essays/${slug}.html",
     "/essays/%24%7Bslug%7D.html",
 }
+PUBLIC_TEXT_SURFACES = ("llms.txt",)
 QUERY_ALIAS_PATHS = ("/essays/?filter=creativity", "/essays/?filter=digital")
 PDF_CANONICAL_PATH = "/assets/your-constitution-claude-press-release.pdf"
 PDF_NOINDEX_HEADER = "noindex"
@@ -604,6 +605,7 @@ def validate_netlify_policy(errors: list[str]) -> None:
 
 def validate_redirect_policy(errors: list[str]) -> None:
     redirects = (REPO_ROOT / "_redirects").read_text(encoding="utf-8")
+    redirect_rules: set[tuple[str, str, str]] = set()
     for line in redirects.splitlines():
         stripped = line.strip()
         if not stripped or stripped.startswith("#"):
@@ -612,6 +614,7 @@ def validate_redirect_policy(errors: list[str]) -> None:
         if len(parts) < 3:
             continue
         source, target, status = parts[:3]
+        redirect_rules.add((source, target, status))
         status_code = status.rstrip("!")
         if (
             source.startswith("/essays/")
@@ -621,6 +624,34 @@ def validate_redirect_policy(errors: list[str]) -> None:
             and source not in ALLOWED_TEMPLATE_REDIRECT_SOURCES
         ):
             errors.append(f"_redirects contains a broad essay .html redirect to /essays/: {source}")
+        if (
+            target.startswith("/essays/")
+            and target.endswith(".html")
+            and source not in ALLOWED_TEMPLATE_REDIRECT_SOURCES
+        ):
+            errors.append(f"_redirects points essay redirect at .html URL: {source} -> {target}")
+
+    for path in sorted((REPO_ROOT / "essays").glob("*.html")):
+        if path.name == "index.html":
+            continue
+        slug = path.stem
+        expected = (f"/essays/{slug}.html", f"/essays/{slug}", "301!")
+        if expected not in redirect_rules:
+            errors.append(
+                "_redirects missing canonical essay redirect: "
+                f"{expected[0]} {expected[1]} {expected[2]}"
+            )
+
+
+def validate_public_text_surfaces(errors: list[str]) -> None:
+    for rel_path in PUBLIC_TEXT_SURFACES:
+        path = REPO_ROOT / rel_path
+        if not path.exists():
+            errors.append(f"{rel_path} is missing")
+            continue
+        text = path.read_text(encoding="utf-8", errors="replace")
+        for match in RAW_PUBLIC_ESSAY_HTML_RE.finditer(text):
+            errors.append(f"{rel_path} contains raw .html essay URL: {match.group(0)}")
 
 
 def validate_essay_listing_contract(errors: list[str]) -> None:
@@ -716,6 +747,7 @@ def main() -> int:
     validate_sitemap(errors)
     validate_netlify_policy(errors)
     validate_redirect_policy(errors)
+    validate_public_text_surfaces(errors)
     validate_essay_listing_contract(errors)
 
     if errors:
