@@ -503,18 +503,45 @@ def build_structured_data(slug, lang, metadata, canonical_url, article_id, og_im
 
 
 def load_all_essays_metadata():
-    """Load metadata from all essay Markdown files."""
+    """Load metadata from generated data and all essay Markdown files."""
     essays = {}
+    json_file = DATA_DIR / "essays.json"
+    if json_file.exists():
+        try:
+            for entry in json.loads(json_file.read_text(encoding='utf-8')):
+                if not entry.get('id'):
+                    continue
+                base_entry = {'file': json_file.name, **entry}
+                essays[entry['id']] = base_entry
+                slug_data = entry.get('slug', {})
+                if isinstance(slug_data, dict):
+                    for slug in slug_data.values():
+                        if slug:
+                            essays.setdefault(slug, base_entry)
+                elif slug_data:
+                    essays.setdefault(slug_data, base_entry)
+        except Exception:
+            pass
+
     for md_file in CONTENT_DIR.glob("**/*.md"):
         with open(md_file, 'r', encoding='utf-8') as f:
             content = f.read()
         metadata, _ = parse_frontmatter(content)
         if metadata.get('id'):
-            essays[metadata['id']] = {
+            entry = {
                 'file': md_file.name,
                 **metadata
             }
+            essays[metadata['id']] = entry
+            if metadata.get('slug'):
+                essays[metadata['slug']] = entry
     return essays
+
+
+def localized_metadata_value(value, lang, fallback=''):
+    if isinstance(value, dict):
+        return value.get(lang) or value.get('en') or next((item for item in value.values() if item), fallback)
+    return value or fallback
 
 
 def load_essay_slug_pairs():
@@ -634,10 +661,11 @@ def build_essay(md_file, all_essays=None):
             if rel_id in all_essays:
                 rel = all_essays[rel_id]
                 # Get the version in the same language if available
-                rel_slug = rel.get('slug', rel_id)
+                rel_slug = localized_metadata_value(rel.get('slug'), lang, rel_id)
+                rel_title = localized_metadata_value(rel.get('title'), lang, rel_id)
                 related_list.append({
                     'slug': rel_slug,
-                    'title': rel.get('title', rel_id)
+                    'title': rel_title
                 })
         data['related'] = related_list
 

@@ -65,8 +65,8 @@
   "reader.cta.button": "Get the Book",
   "reader.loading": "Loading story...",
   "reader.error": "Unable to load story. Please try again.",
-  "essays.banner.title": "Latest Thinking",
-  "essays.banner.subtitle": "Essays on AI, consciousness, and what comes next.",
-  "essays.banner.cta": "Explore all essays →",
+  "essays.banner.title": "Core Thinking",
+  "essays.banner.subtitle": "Start with the essays on AI rights, human cognition, attention, and future society.",
+  "essays.banner.cta": "Start with the core essays →",
   "essays.search.placeholder": "Search essays..."
 }

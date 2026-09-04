@@ -51,6 +51,18 @@ PDF_NOINDEX_HEADER = "noindex"
 TRACKING_QUERY_CLEANUP_FUNCTION = "tracking-query-cleanup"
 TRACKING_QUERY_CLEANUP_PATH = "/"
 TRACKING_QUERY_CLEANUP_FILE = REPO_ROOT / "netlify" / "edge-functions" / "tracking-query-cleanup.ts"
+CORE_READING_PATH_SLUGS = (
+    "the-case-for-ai-rights",
+    "what-would-it-mean-for-ai-to-die",
+    "escape-velocity",
+    "how-to-read-in-the-age-of-distraction",
+    "your-thoughts-arent-yours",
+    "youre-already-a-cyborg",
+    "the-permanent-underclass",
+    "the-death-of-expertise",
+    "the-three-futures",
+)
+CORE_READING_PATHS_ANCHOR = "/essays/#core-reading-paths"
 
 
 class LinkParser(HTMLParser):
@@ -174,6 +186,48 @@ def markdown_source_slugs() -> set[str]:
         match = re.search(r"^slug:\s*[\"']?([^\"'\n]+)", text, re.MULTILINE)
         slugs.add(match.group(1).strip() if match else path.stem)
     return slugs
+
+
+def markdown_related_values(path: Path) -> list[str]:
+    values: list[str] = []
+    in_related = False
+    for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
+        if re.match(r"^related:\s*$", line):
+            in_related = True
+            continue
+        if not in_related:
+            continue
+        if line.strip() == "---":
+            break
+        if re.match(r"^[A-Za-z_][\w-]*:", line):
+            break
+        match = re.match(r"^\s*-\s*([^#\n]+)", line)
+        if match:
+            values.append(match.group(1).strip().strip("\"'"))
+    return values
+
+
+def essay_lookup_keys() -> set[str]:
+    keys: set[str] = set()
+    if ESSAYS_JSON.exists():
+        for entry in load_essays():
+            entry_id = entry.get("id")
+            if entry_id:
+                keys.add(entry_id)
+            slug_data = entry.get("slug", {})
+            if isinstance(slug_data, dict):
+                keys.update(slug for slug in slug_data.values() if slug)
+            elif slug_data:
+                keys.add(str(slug_data))
+
+    for path in (REPO_ROOT / "content" / "essays").glob("**/*.md"):
+        text = path.read_text(encoding="utf-8", errors="replace")
+        for field in ("id", "slug"):
+            match = re.search(rf"^{field}:\s*[\"']?([^\"'\n]+)", text, re.MULTILINE)
+            if match:
+                keys.add(match.group(1).strip())
+
+    return keys
 
 
 def canonical_links(html: str) -> list[str]:
@@ -548,6 +602,10 @@ def validate_sitemap(errors: list[str]) -> None:
                 errors.append(f"{sitemap.name} lists missing URL: {url}")
 
     essay_sitemap_urls = sitemap_urls_by_name.get("sitemap-essays.xml", set())
+    essays_index_url = f"{BASE_URL}/essays/"
+    if (REPO_ROOT / "essays" / "index.html").exists() and essays_index_url not in essay_sitemap_urls:
+        errors.append(f"sitemap-essays.xml missing essays index URL: {essays_index_url}")
+
     for path in sorted((REPO_ROOT / "essays").glob("*.html")):
         if path.name == "index.html":
             continue
@@ -815,6 +873,49 @@ def validate_essay_listing_contract(errors: list[str]) -> None:
             errors.append(f"essays/index.html search contract missing snippet: {snippet}")
 
 
+def validate_core_reading_paths(errors: list[str]) -> None:
+    index_path = REPO_ROOT / "essays" / "index.html"
+    html = index_path.read_text(encoding="utf-8")
+    start_marker = '<section id="core-reading-paths"'
+    end_marker = '\n\n                <div id="essays-list"'
+
+    if start_marker not in html:
+        errors.append("essays/index.html is missing the core reading paths section")
+        return
+    if end_marker not in html:
+        errors.append("essays/index.html core reading paths section is missing its expected boundary")
+        return
+
+    start = html.index(start_marker)
+    end = html.index(end_marker, start)
+    core_html = html[start:end]
+
+    if '"@type": "ItemList"' not in html or "Core Kwalia reading paths" not in html:
+        errors.append("essays/index.html is missing the core reading paths ItemList JSON-LD")
+
+    for slug in CORE_READING_PATH_SLUGS:
+        if f'href="{slug}"' not in core_html:
+            errors.append(f"essays/index.html core reading paths missing visible link: {slug}")
+        if f"https://kwalia.ai/essays/{slug}" not in html:
+            errors.append(f"essays/index.html core reading paths missing ItemList URL: {slug}")
+        if not internal_page_exists(index_path, f"/essays/{slug}"):
+            errors.append(f"essays/index.html core reading paths points to missing essay: {slug}")
+
+
+def validate_related_frontmatter(errors: list[str]) -> None:
+    lookup = essay_lookup_keys()
+    for path in sorted((REPO_ROOT / "content" / "essays").glob("**/*.md")):
+        for related in markdown_related_values(path):
+            if related not in lookup:
+                errors.append(f"{path.relative_to(REPO_ROOT)} related essay is unknown: {related}")
+
+
+def validate_homepage_core_entry_link(errors: list[str]) -> None:
+    homepage = (REPO_ROOT / "index.html").read_text(encoding="utf-8")
+    if f'href="{CORE_READING_PATHS_ANCHOR}"' not in homepage:
+        errors.append(f"index.html is missing the homepage link to {CORE_READING_PATHS_ANCHOR}")
+
+
 def main() -> int:
     errors: list[str] = []
     validate_canonicals(errors)
@@ -833,6 +934,9 @@ def main() -> int:
     validate_redirect_policy(errors)
     validate_public_text_surfaces(errors)
     validate_essay_listing_contract(errors)
+    validate_core_reading_paths(errors)
+    validate_related_frontmatter(errors)
+    validate_homepage_core_entry_link(errors)
 
     if errors:
         print("Indexing contract FAILED:")

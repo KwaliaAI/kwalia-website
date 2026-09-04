@@ -65,8 +65,8 @@
   "reader.cta.button": "Consigue el Libro",
   "reader.loading": "Cargando historia...",
   "reader.error": "No se pudo cargar la historia. Por favor intente de nuevo.",
-  "essays.banner.title": "Últimos Ensayos",
-  "essays.banner.subtitle": "Reflexiones sobre IA, consciencia y lo que viene.",
-  "essays.banner.cta": "Explorar todos los ensayos →",
+  "essays.banner.title": "Pensamiento central",
+  "essays.banner.subtitle": "Empieza por los ensayos sobre derechos de la IA, cognición humana, atención y sociedad futura.",
+  "essays.banner.cta": "Empieza por los ensayos centrales →",
   "essays.search.placeholder": "Buscar ensayos..."
 }

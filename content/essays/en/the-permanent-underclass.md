@@ -13,7 +13,7 @@ tags:
 read_time: 13
 related:
   - a-day-in-the-stratified-mindkind
-  - your-thoughts-arent-yours-anymore
+  - your-thoughts-arent-yours
   - youre-already-a-cyborg
 book: mindkind
 translation: que-es-la-subclase-permanente

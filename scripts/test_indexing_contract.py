@@ -206,6 +206,27 @@ def test_sitemap_missing_essay_url_fails(validator) -> None:
     assert errors == ["sitemap-essays.xml missing essay URL: https://kwalia.ai/essays/example"]
 
 
+def test_sitemap_missing_essays_index_url_fails(validator) -> None:
+    original_root = validator.REPO_ROOT
+    with TemporaryDirectory() as tmpdir:
+        tmp_root = Path(tmpdir)
+        (tmp_root / "essays").mkdir()
+        (tmp_root / "essays" / "index.html").write_text("<html></html>", encoding="utf-8")
+        (tmp_root / "sitemap-essays.xml").write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>\n',
+            encoding="utf-8",
+        )
+        validator.REPO_ROOT = tmp_root
+        errors: list[str] = []
+        try:
+            validator.validate_sitemap(errors)
+        finally:
+            validator.REPO_ROOT = original_root
+
+    assert errors == ["sitemap-essays.xml missing essays index URL: https://kwalia.ai/essays/"]
+
+
 def test_asset_pdf_wildcard_noindex_header_required(validator) -> None:
     original_root = validator.REPO_ROOT
     with TemporaryDirectory() as tmpdir:
@@ -277,6 +298,108 @@ def test_tracking_query_cleanup_policy_required(validator) -> None:
     ]
 
 
+def test_core_reading_paths_missing_section_fails(validator) -> None:
+    original_root = validator.REPO_ROOT
+    with TemporaryDirectory() as tmpdir:
+        tmp_root = Path(tmpdir)
+        (tmp_root / "essays").mkdir()
+        (tmp_root / "essays" / "index.html").write_text("<html></html>", encoding="utf-8")
+        validator.REPO_ROOT = tmp_root
+        errors: list[str] = []
+        try:
+            validator.validate_core_reading_paths(errors)
+        finally:
+            validator.REPO_ROOT = original_root
+
+    assert errors == ["essays/index.html is missing the core reading paths section"]
+
+
+def test_core_reading_paths_required_links_pass(validator) -> None:
+    original_root = validator.REPO_ROOT
+    with TemporaryDirectory() as tmpdir:
+        tmp_root = Path(tmpdir)
+        essays_dir = tmp_root / "essays"
+        essays_dir.mkdir()
+        links = "\n".join(
+            f'<a href="{slug}">{slug}</a>' for slug in validator.CORE_READING_PATH_SLUGS
+        )
+        item_urls = "\n".join(
+            f'"https://kwalia.ai/essays/{slug}"' for slug in validator.CORE_READING_PATH_SLUGS
+        )
+        for slug in validator.CORE_READING_PATH_SLUGS:
+            (essays_dir / f"{slug}.html").write_text("<html></html>", encoding="utf-8")
+        (essays_dir / "index.html").write_text(
+            f"""
+<section id="core-reading-paths">
+  {links}
+</section>
+
+                <div id="essays-list"></div>
+<script type="application/ld+json">{{"@type": "ItemList", "name": "Core Kwalia reading paths", "itemListElement": [{item_urls}]}}</script>
+""",
+            encoding="utf-8",
+        )
+        validator.REPO_ROOT = tmp_root
+        errors: list[str] = []
+        try:
+            validator.validate_core_reading_paths(errors)
+        finally:
+            validator.REPO_ROOT = original_root
+
+    assert errors == []
+
+
+def test_homepage_core_entry_link_required(validator) -> None:
+    original_root = validator.REPO_ROOT
+    with TemporaryDirectory() as tmpdir:
+        tmp_root = Path(tmpdir)
+        (tmp_root / "index.html").write_text('<a href="/essays/">Essays</a>', encoding="utf-8")
+        validator.REPO_ROOT = tmp_root
+        errors: list[str] = []
+        try:
+            validator.validate_homepage_core_entry_link(errors)
+        finally:
+            validator.REPO_ROOT = original_root
+
+    assert errors == ["index.html is missing the homepage link to /essays/#core-reading-paths"]
+
+
+def test_unknown_related_frontmatter_fails(validator) -> None:
+    original_root = validator.REPO_ROOT
+    original_essays_json = validator.ESSAYS_JSON
+    with TemporaryDirectory() as tmpdir:
+        tmp_root = Path(tmpdir)
+        content_dir = tmp_root / "content" / "essays" / "en"
+        content_dir.mkdir(parents=True)
+        (tmp_root / "data").mkdir()
+        validator.ESSAYS_JSON = tmp_root / "data" / "essays.json"
+        validator.ESSAYS_JSON.write_text(
+            '[{"id": "known-essay", "slug": {"en": "known-essay"}}]',
+            encoding="utf-8",
+        )
+        (content_dir / "example.md").write_text(
+            """---
+id: example
+slug: example
+related:
+  - known-essay
+  - missing-essay
+---
+Body.
+""",
+            encoding="utf-8",
+        )
+        validator.REPO_ROOT = tmp_root
+        errors: list[str] = []
+        try:
+            validator.validate_related_frontmatter(errors)
+        finally:
+            validator.REPO_ROOT = original_root
+            validator.ESSAYS_JSON = original_essays_json
+
+    assert errors == ["content/essays/en/example.md related essay is unknown: missing-essay"]
+
+
 def main() -> int:
     validator = load_validator()
     test_org_author_id_reference_fails(validator)
@@ -288,9 +411,14 @@ def main() -> int:
     test_public_llms_txt_html_link_fails(validator)
     test_stale_mailerlite_form_asset_fails(validator)
     test_sitemap_missing_essay_url_fails(validator)
+    test_sitemap_missing_essays_index_url_fails(validator)
     test_asset_pdf_wildcard_noindex_header_required(validator)
     test_asset_pdf_wildcard_noindex_header_passes(validator)
     test_tracking_query_cleanup_policy_required(validator)
+    test_core_reading_paths_missing_section_fails(validator)
+    test_core_reading_paths_required_links_pass(validator)
+    test_homepage_core_entry_link_required(validator)
+    test_unknown_related_frontmatter_fails(validator)
     print("Indexing contract regression tests OK.")
     return 0
 
