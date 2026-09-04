@@ -206,6 +206,77 @@ def test_sitemap_missing_essay_url_fails(validator) -> None:
     assert errors == ["sitemap-essays.xml missing essay URL: https://kwalia.ai/essays/example"]
 
 
+def test_asset_pdf_wildcard_noindex_header_required(validator) -> None:
+    original_root = validator.REPO_ROOT
+    with TemporaryDirectory() as tmpdir:
+        tmp_root = Path(tmpdir)
+        (tmp_root / "netlify.toml").write_text(
+            """
+[[headers]]
+  for = "/assets/one.pdf"
+
+  [headers.values]
+    X-Robots-Tag = "noindex"
+""",
+            encoding="utf-8",
+        )
+        validator.REPO_ROOT = tmp_root
+        errors: list[str] = []
+        try:
+            validator.validate_netlify_policy(errors)
+        finally:
+            validator.REPO_ROOT = original_root
+
+    assert errors == ["netlify.toml is missing the asset PDF noindex header policy: /assets/*.pdf"]
+
+
+def test_asset_pdf_wildcard_noindex_header_passes(validator) -> None:
+    original_root = validator.REPO_ROOT
+    with TemporaryDirectory() as tmpdir:
+        tmp_root = Path(tmpdir)
+        (tmp_root / "netlify.toml").write_text(
+            """
+[[headers]]
+  for = "/assets/*.pdf"
+
+  [headers.values]
+    X-Robots-Tag = "noindex"
+""",
+            encoding="utf-8",
+        )
+        validator.REPO_ROOT = tmp_root
+        errors: list[str] = []
+        try:
+            validator.validate_netlify_policy(errors)
+        finally:
+            validator.REPO_ROOT = original_root
+
+    assert errors == []
+
+
+def test_tracking_query_cleanup_policy_required(validator) -> None:
+    original_root = validator.REPO_ROOT
+    original_file = validator.TRACKING_QUERY_CLEANUP_FILE
+    with TemporaryDirectory() as tmpdir:
+        tmp_root = Path(tmpdir)
+        (tmp_root / "netlify.toml").write_text("", encoding="utf-8")
+        validator.REPO_ROOT = tmp_root
+        validator.TRACKING_QUERY_CLEANUP_FILE = (
+            tmp_root / "netlify" / "edge-functions" / "tracking-query-cleanup.ts"
+        )
+        errors: list[str] = []
+        try:
+            validator.validate_tracking_query_cleanup_policy(errors)
+        finally:
+            validator.REPO_ROOT = original_root
+            validator.TRACKING_QUERY_CLEANUP_FILE = original_file
+
+    assert errors == [
+        "netlify.toml is missing the tracking query cleanup edge function: tracking-query-cleanup /",
+        "tracking query cleanup edge function is missing: netlify/edge-functions/tracking-query-cleanup.ts",
+    ]
+
+
 def main() -> int:
     validator = load_validator()
     test_org_author_id_reference_fails(validator)
@@ -217,6 +288,9 @@ def main() -> int:
     test_public_llms_txt_html_link_fails(validator)
     test_stale_mailerlite_form_asset_fails(validator)
     test_sitemap_missing_essay_url_fails(validator)
+    test_asset_pdf_wildcard_noindex_header_required(validator)
+    test_asset_pdf_wildcard_noindex_header_passes(validator)
+    test_tracking_query_cleanup_policy_required(validator)
     print("Indexing contract regression tests OK.")
     return 0
 

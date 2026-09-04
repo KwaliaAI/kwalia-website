@@ -46,8 +46,11 @@ ALLOWED_TEMPLATE_REDIRECT_SOURCES = {
 }
 PUBLIC_TEXT_SURFACES = ("llms.txt",)
 QUERY_ALIAS_PATHS = ("/essays/?filter=creativity", "/essays/?filter=digital")
-PDF_CANONICAL_PATH = "/assets/your-constitution-claude-press-release.pdf"
+PDF_ASSET_HEADER_PATH = "/assets/*.pdf"
 PDF_NOINDEX_HEADER = "noindex"
+TRACKING_QUERY_CLEANUP_FUNCTION = "tracking-query-cleanup"
+TRACKING_QUERY_CLEANUP_PATH = "/"
+TRACKING_QUERY_CLEANUP_FILE = REPO_ROOT / "netlify" / "edge-functions" / "tracking-query-cleanup.ts"
 
 
 class LinkParser(HTMLParser):
@@ -601,22 +604,86 @@ def netlify_header_blocks() -> list[dict[str, object]]:
     return blocks
 
 
+def netlify_edge_function_blocks() -> list[dict[str, str]]:
+    netlify_toml_path = REPO_ROOT / "netlify.toml"
+    if not netlify_toml_path.exists():
+        return []
+
+    netlify_toml = netlify_toml_path.read_text(encoding="utf-8")
+    blocks: list[dict[str, str]] = []
+    current: dict[str, str] | None = None
+
+    for line in netlify_toml.splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        if stripped == "[[edge_functions]]":
+            current = {}
+            blocks.append(current)
+            continue
+        if stripped.startswith("["):
+            current = None
+            continue
+        if current is None or "=" not in stripped:
+            continue
+
+        key, raw_value = stripped.split("=", 1)
+        current[key.strip()] = parse_toml_scalar(raw_value)
+
+    return blocks
+
+
 def validate_netlify_policy(errors: list[str]) -> None:
-    matches = [block for block in netlify_header_blocks() if block.get("for") == PDF_CANONICAL_PATH]
+    matches = [block for block in netlify_header_blocks() if block.get("for") == PDF_ASSET_HEADER_PATH]
     if not matches:
-        errors.append("netlify.toml is missing the PDF noindex header policy")
+        errors.append(f"netlify.toml is missing the asset PDF noindex header policy: {PDF_ASSET_HEADER_PATH}")
         return
 
     values = matches[-1].get("values", {})
     if not isinstance(values, dict):
-        errors.append("netlify.toml has an invalid PDF header policy")
+        errors.append("netlify.toml has an invalid asset PDF noindex header policy")
         return
     if "Link" in values:
-        errors.append("netlify.toml must not canonicalize the PDF to the download shim")
+        errors.append("netlify.toml must not canonicalize PDF assets to the download shim")
     x_robots = values.get("X-Robots-Tag")
     tokens = [token.strip().lower() for token in str(x_robots or "").split(",")]
     if PDF_NOINDEX_HEADER not in tokens:
-        errors.append("netlify.toml has an incorrect PDF noindex header policy")
+        errors.append("netlify.toml has an incorrect asset PDF noindex header policy")
+
+
+def validate_tracking_query_cleanup_policy(errors: list[str]) -> None:
+    matches = [
+        block
+        for block in netlify_edge_function_blocks()
+        if block.get("function") == TRACKING_QUERY_CLEANUP_FUNCTION
+        and block.get("path") == TRACKING_QUERY_CLEANUP_PATH
+    ]
+    if not matches:
+        errors.append(
+            "netlify.toml is missing the tracking query cleanup edge function: "
+            f"{TRACKING_QUERY_CLEANUP_FUNCTION} {TRACKING_QUERY_CLEANUP_PATH}"
+        )
+
+    if not TRACKING_QUERY_CLEANUP_FILE.exists():
+        errors.append(
+            "tracking query cleanup edge function is missing: "
+            f"{TRACKING_QUERY_CLEANUP_FILE.relative_to(REPO_ROOT)}"
+        )
+        return
+
+    source = TRACKING_QUERY_CLEANUP_FILE.read_text(encoding="utf-8")
+    required_snippets = [
+        "ref=proof-of-usefulness",
+        "status: 301",
+        "Location",
+        "context.next()",
+    ]
+    for snippet in required_snippets:
+        if snippet not in source:
+            errors.append(
+                "tracking query cleanup edge function is missing expected snippet: "
+                f"{snippet}"
+            )
 
 
 def validate_redirect_policy(errors: list[str]) -> None:
@@ -762,6 +829,7 @@ def main() -> int:
 
     validate_sitemap(errors)
     validate_netlify_policy(errors)
+    validate_tracking_query_cleanup_policy(errors)
     validate_redirect_policy(errors)
     validate_public_text_surfaces(errors)
     validate_essay_listing_contract(errors)

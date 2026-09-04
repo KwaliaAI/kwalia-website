@@ -6,6 +6,10 @@
   function = "google-fetch-auth"
   path = "/fetch/*"
 
+[[edge_functions]]
+  function = "tracking-query-cleanup"
+  path = "/"
+
 [[headers]]
   for = "/fetch/*"
 
@@ -16,7 +20,7 @@
     X-Robots-Tag = "noindex"
 
 [[headers]]
-  for = "/assets/your-constitution-claude-press-release.pdf"
+  for = "/assets/*.pdf"
 
   [headers.values]
     X-Robots-Tag = "noindex"
