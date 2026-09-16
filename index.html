@@ -480,8 +480,8 @@
                     const [enContent, esContent, books, fiction, hets, stories, essaysData] = await Promise.all([
                         fetch('data/i18n/en.json').then(r => r.json()),
                         fetch('data/i18n/es.json').then(r => r.json()),
-                        fetch('data/books.json?v=20260302-synthropology-blurb').then(r => r.json()),
-                        fetch('data/fiction.json').then(r => r.json()),
+                        fetch('data/books.json?v=20260916-us-purchase-tracking').then(r => r.json()),
+                        fetch('data/fiction.json?v=20260916-us-purchase-tracking').then(r => r.json()),
                         fetch('data/heteronyms.json').then(r => r.json()),
                         fetch('data/stories.json').then(r => r.json()),
                         fetch('data/essays.json?v=20260302-war-and-ai').then(r => r.json())
@@ -702,6 +702,19 @@
                 }).join('');
             }
 
+            // The existing GTM container maps click_buy_now to GA4 purchase_intent.
+            // Keep one event per click; country and anonymous users are supplied by GA4.
+            function trackPurchaseClick(book, store, storyTitle = null) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    event: 'click_buy_now',
+                    book_title: book.title.en,
+                    store_name: store.name,
+                    // Clear the previous reader value on subsequent catalogue clicks.
+                    story_read: storyTitle
+                });
+            }
+
             function openBookModal(book, lang) {
 
                 // Track book details view
@@ -740,22 +753,9 @@
                      sampleActionsHTML = `<button class="font-f2 bg-c1 text-c2 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity mb-4 mr-2" onclick="openReader('placeholder-story', '${lang}')">Read a Short Story</button>`;
                 }
 
-                const bookStoresHTML = (book.stores || []).filter(s => s.type === 'book').map(store => {
-                    const eventData = {
-                        'event': 'click_buy_now',
-                        'book_title': book.title.en,
-                        'store_name': store.name
-                    };
-                    return `<a href="${store.url}" onclick="dataLayer.push(${JSON.stringify(eventData)})" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`;
-                }).join(' ');
-                const audioStoresHTML = (book.stores || []).filter(s => s.type === 'audiobook').map(store => {
-                     const eventData = {
-                        'event': 'click_buy_now',
-                        'book_title': book.title.en,
-                        'store_name': store.name
-                    };
-                    return `<a href="${store.url}" onclick="dataLayer.push(${JSON.stringify(eventData)})" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`;
-                }).join(' ');
+                const storeLinkHTML = (store, index) => `<a href="${store.url}" data-store-index="${index}" id="buy-${book.id}-${store.type}-${index}" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`;
+                const bookStoresHTML = (book.stores || []).map((store, index) => store.type === 'book' ? storeLinkHTML(store, index) : '').join(' ');
+                const audioStoresHTML = (book.stores || []).map((store, index) => store.type === 'audiobook' ? storeLinkHTML(store, index) : '').join(' ');
                 const formatsHTML = (book.formats || []).map(format => `<div class="font-f2 text-sm text-c2/80"><span class="font-bold">${content[lang][`format.${format.type}`]}:</span> ${format.isbn}</div>`).join('');
                 const pricesHTML = (book.prices || []).map(price => `<div class="font-f2 text-sm text-c2/80"><span class="font-bold">${content[lang][`format.${price.type}`]}:</span> ${price.amount}</div>`).join('');
                 const detailsHTML = [
@@ -795,6 +795,10 @@
                     </div>`;
 
                 bookModalContent.innerHTML = modalHTML;
+                bookModalContent.querySelectorAll('[data-store-index]').forEach(link => {
+                    const store = book.stores[Number(link.dataset.storeIndex)];
+                    link.addEventListener('click', () => trackPurchaseClick(book, store));
+                });
                 bookModal.classList.remove('hidden');
                 setTimeout(() => {
                     bookModal.classList.remove('opacity-0');
@@ -862,20 +866,18 @@
                 // --- BUTTON SETUP ---
                 const buyBtn = document.getElementById('reader-buy-link');
 
-                buyBtn.href = "https://www.amazon.co.uk/PAYLOAD-Short-Stories-Alden-Pierce-ebook/dp/B0G7KTMSTM";
-                buyBtn.target = "_blank";
-                buyBtn.rel = "noopener noreferrer";
-                buyBtn.textContent = lang === 'es' ? buttonTextEs : buttonTextEn; // Use conditional text
-
-                buyBtn.onclick = function() {
-                    window.dataLayer = window.dataLayer || [];
-                    window.dataLayer.push({
-                        'event': 'click_buy_now',
-                        'book_title': 'PAYLOAD (from Reader)',
-                        'store_name': 'Amazon',
-                        'story_read': storyTitle
-                    });
-                };
+                const sourceBook = [...bookCatalogue, ...fictionCatalogue].find(book => (book.stories || []).includes(storyId));
+                const amazonStore = sourceBook && (sourceBook.stores || []).find(store => store.name === 'Amazon' && store.type === 'book');
+                buyBtn.hidden = !amazonStore;
+                buyBtn.onclick = null;
+                buyBtn.removeAttribute('href');
+                if (amazonStore) {
+                    buyBtn.href = amazonStore.url;
+                    buyBtn.target = "_blank";
+                    buyBtn.rel = "noopener noreferrer";
+                    buyBtn.textContent = lang === 'es' ? buttonTextEs : buttonTextEn;
+                    buyBtn.onclick = () => trackPurchaseClick(sourceBook, amazonStore, story.title.en);
+                }
 
                 // Show loading state
                 readerContent.innerHTML = `

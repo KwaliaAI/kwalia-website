@@ -40,7 +40,7 @@
     "stores": [
       {
         "name": "Amazon",
-        "url": "https://www.amazon.co.uk/Universal-Declaration-AI-Rights-Persons/dp/1917717016/",
+        "url": "https://www.amazon.com/dp/1917717016",
         "type": "book"
       },
       {
@@ -88,7 +88,7 @@
     "stores": [
       {
         "name": "Amazon",
-        "url": "https://www.amazon.es/Mindkind-Cognitive-Community-Dissolving-Frontiers-ebook/dp/B0FH7J2BY3",
+        "url": "https://www.amazon.com/dp/B0FH7J2BY3",
         "type": "book"
       },
       {
@@ -152,7 +152,7 @@
     "stores": [
       {
         "name": "Amazon",
-        "url": "https://www.amazon.co.uk/dp/1917717385",
+        "url": "https://www.amazon.com/dp/1917717385",
         "type": "book"
       }
     ]
@@ -358,7 +358,7 @@
     "stores": [
       {
         "name": "Amazon",
-        "url": "https://www.amazon.co.uk/dp/191771761X",
+        "url": "https://www.amazon.com/dp/191771761X",
         "type": "book"
       }
     ]

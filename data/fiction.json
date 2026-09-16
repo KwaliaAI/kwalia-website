@@ -23,7 +23,7 @@
       { "type": "audiobook", "isbn": "978-1-917717-18-2" }
     ],
     "stores": [
-      { "name": "Amazon", "url": "https://www.amazon.co.uk/PAYLOAD-Short-Stories-Alden-Pierce-ebook/dp/B0G7KTMSTM", "type": "book" },
+      { "name": "Amazon", "url": "https://www.amazon.com/dp/B0G7KTMSTM", "type": "book" },
       { "name": "Google Play", "url": "https://play.google.com/store/audiobooks/details/Alden_Pierce_PAYLOAD_Short_Stories?id=AQAAAEDqVW4VlM", "type": "audiobook" }
     ],
     "stories": ["morphine", "sesame", "quiet"]
