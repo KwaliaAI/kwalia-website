@@ -39,17 +39,25 @@ class PageText(HTMLParser):
         if any(tag == 'h1' for tag, _ in self.stack): self.titles.append(value)
 
 
-def text_findings(text, source, title=False):
+def text_findings(text, source, title=False, allow_dialogue=False):
     found = []
     def add(rule, excerpt): found.append(dict(source=source, rule=rule, excerpt=excerpt.strip()[:240]))
-    for sentence in re.split(r'[.!\n]+', text):
+    # These cited English paper titles retain their original punctuation.
+    question_text = text
+    for citation in ('What Is It Like to Be a Bat?', 'What is consciousness, and could machines have it?'):
+        question_text = question_text.replace('«' + citation + '»', '«' + citation[:-1] + '»')
+    for sentence in re.split(r'[.!\n]+', question_text):
         openings = 0
         for i, char in enumerate(sentence):
             if char == '¿': openings += 1
             elif char == '?':
                 if openings: openings -= 1
                 else: add('missing_open_question', sentence[max(0,i-180):i+1])
-    for m in re.finditer('—', text): add('em_dash', text[max(0,m.start()-70):m.end()+70])
+    for m in re.finditer('—', text):
+        line = text[text.rfind('\n', 0, m.start())+1:]
+        if allow_dialogue and line.lstrip().startswith('—'):
+            continue  # GM explicitly preserved Spanish fiction dialogue and attribution rayas.
+        add('em_dash', text[max(0,m.start()-70):m.end()+70])
     for m in re.finditer(r'\bno solo\b[^.!?\n]{0,500}\bsino\b', text, re.I): add('no_solo_sino', m[0])
     for m in re.finditer(r'\bno sólo\b', text, re.I): add('no_solo_accent', m[0])
     words = re.findall(r'\b[^\W\d_]+\b', text, re.UNICODE)
@@ -73,7 +81,8 @@ def scan(root=ROOT):
         page = PageText(path.read_text())
         pages[path.stem] = page
         if page.lang == 'es':
-            findings += text_findings(''.join(page.parts), str(path.relative_to(root)))
+            findings += text_findings(''.join(page.parts), str(path.relative_to(root)),
+                                      allow_dialogue=path.stem=='un-dia-en-el-mindkind-estratificado')
             findings += [f for f in text_findings(''.join(page.titles), str(path.relative_to(root)), True) if f['rule']=='title_case_review']
         if path.name == 'index.html':
             for i, value in enumerate(page.labels): findings += text_findings(value, f'essays/index.html:data-es[{i}]')
@@ -97,8 +106,19 @@ def scan(root=ROOT):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--json', type=Path, help='write full findings for human review')
+    parser.add_argument('--pages', nargs='+', help='gate only these approved essay slugs; full audit remains the default')
     args=parser.parse_args()
     findings=scan()
+    if args.pages:
+        sources = {'essays/' + slug + '.html' for slug in args.pages}
+        missing = [slug for slug in args.pages if not (ROOT/'essays'/f'{slug}.html').exists()]
+        if missing: parser.error('missing release pages: ' + ', '.join(missing))
+        entries = json.loads((ROOT/'data/essays.json').read_text())
+        metadata_prefixes = tuple(f'data/essays.json[{i}].' for i, entry in enumerate(entries)
+                                  if entry.get('slug', {}).get('es') in args.pages)
+        findings = [f for f in findings if f['source'] in sources
+                    or f['source'].startswith(metadata_prefixes)]
+        print('Release scope: ' + ', '.join(args.pages))
     counts=Counter(f['rule'] for f in findings)
     for rule in ('missing_open_question','em_dash','no_solo_sino','no_solo_accent','title_case_review','translation_ratio'):
         print(f'{rule}: {counts[rule]}')

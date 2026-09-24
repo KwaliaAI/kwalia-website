@@ -529,13 +529,19 @@ def load_all_essays_metadata():
             content = f.read()
         metadata, _ = parse_frontmatter(content)
         if metadata.get('id') and metadata.get('status', 'published') == 'published':
-            entry = {
-                'file': md_file.name,
-                **metadata
-            }
+            # A translation augments the bilingual entry; it must not replace
+            # the English slug/title used by English related-essay links.
+            prior = essays.get(metadata['id'], {})
+            entry = {**prior, **metadata, 'file': md_file.name}
+            lang = metadata.get('lang', 'en')
+            for key in ('slug', 'title', 'subtitle', 'excerpt'):
+                values = prior.get(key, {})
+                entry[key] = dict(values) if isinstance(values, dict) else {}
+                if metadata.get(key):
+                    entry[key][lang] = metadata[key]
             essays[metadata['id']] = entry
-            if metadata.get('slug'):
-                essays[metadata['slug']] = entry
+            for slug in entry['slug'].values():
+                essays[slug] = entry
     return essays
 
 

@@ -24,3 +24,9 @@
 
   [headers.values]
     X-Robots-Tag = "noindex"
+
+# Temporary previous-edition archives are retained for rollback, not discovery.
+[[headers]]
+  for = "/archive/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
