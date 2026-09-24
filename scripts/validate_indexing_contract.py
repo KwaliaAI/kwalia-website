@@ -828,7 +828,7 @@ def validate_essay_listing_contract(errors: list[str]) -> None:
     for entry in published_entries:
         slug_data = entry["slug"]
         slug_en = slug_data["en"]
-        slug_es = slug_data.get("es") or slug_en
+        slug_es = slug_data.get("es") or ""
         card = cards_by_slug.get(slug_en)
         if not card:
             continue

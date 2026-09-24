@@ -700,12 +700,12 @@
 
                 // Get 3 most recent essays
                 const featured = essays
-                    .filter(e => e.status === 'published')
+                    .filter(e => e.status === 'published' && e.slug?.[lang])
                     .sort((a, b) => new Date(b.date) - new Date(a.date))
                     .slice(0, 3);
 
                 container.innerHTML = featured.map(essay => {
-                    const slug = essay.slug[lang] || essay.slug.en;
+                    const slug = essay.slug[lang];
                     const title = essay.title[lang] || essay.title.en;
                     const excerpt = essay.excerpt[lang] || essay.excerpt.en;
 

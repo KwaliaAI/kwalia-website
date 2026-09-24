@@ -785,7 +785,7 @@ def generate_essay_card_html(essay, lang='en'):
 
     # Get bilingual data
     slug_en = essay.get('slug', {}).get('en', essay['id'])
-    slug_es = essay.get('slug', {}).get('es', slug_en)
+    slug_es = essay.get('slug', {}).get('es', '')
     title_en = essay.get('title', {}).get('en', essay['id'])
     title_es = essay.get('title', {}).get('es', title_en)
     subtitle_en = essay.get('subtitle', {}).get('en', '')
@@ -823,9 +823,9 @@ def generate_essay_card_html(essay, lang='en'):
                         </div>
                     </div>
                     </a>
-                    <!-- SEO: keep Spanish variants crawlable even before the language toggle runs. -->
+''' + (f'''                    <!-- SEO: keep Spanish variants crawlable even before the language toggle runs. -->
                     <a href="{esc(slug_es)}" class="sr-only" lang="es">Versión en español: {esc(title_es, quote=False)}</a>
-'''
+''' if slug_es else '')
 
 
 def update_essays_index():
