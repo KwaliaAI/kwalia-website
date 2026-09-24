@@ -2,7 +2,7 @@
 id: what-her-got-right-about-ai-love
 lang: es
 slug: que-acerto-her-sobre-el-amor-con-ia
-title: "Qué acertó (y qué no) *Her* sobre el amor con una IA"
+title: "Qué acertó (y qué no) Her sobre el amor con una IA"
 subtitle: "La película de 2013 se ve distinta ahora."
 date: 2026-03-23
 author: Javier del Puerto
