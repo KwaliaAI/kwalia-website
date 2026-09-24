@@ -596,6 +596,34 @@ def build_indexing_links(slug, lang, metadata):
     return canonical_url, article_id, alternate_urls
 
 
+def essay_nav_context(lang='en', bilingual=False, cta='/#contact'):
+    return dict(nav_lang=lang, nav_bilingual=bilingual, nav_cta=cta,
+                nav_labels={code: json.loads((DATA_DIR / 'i18n' / f'{code}.json').read_text())
+                            for code in ('en', 'es')})
+
+
+def update_essay_navigation():
+    """Refresh index and legacy HTML-only essays from the same template partial."""
+    env = Environment(loader=FileSystemLoader(TEMPLATES_DIR), trim_blocks=True, lstrip_blocks=True)
+    partial = env.get_template('essay-nav-links.html')
+    for page in sorted(OUTPUT_DIR.glob('*.html')):
+        original = page.read_text(encoding='utf-8')
+        lang = re.search(r'<html[^>]*lang="([^"]+)"', original).group(1)
+        context = essay_nav_context(lang, page.name == 'index.html',
+                                    '#subscribe' if page.name == 'index.html' else '/#contact')
+        updated = original
+        for mobile, marker in ((False, '<div class="hidden md:flex items-center space-x-8">'),
+                               (True, '<div id="mobile-menu" class="hidden md:hidden bg-c4 pb-4">')):
+            pattern = '(' + re.escape(marker) + r')\s*(?:<a\b[^>]*>.*?</a>\s*)+'
+            links = partial.render(**context, nav_mobile=mobile)
+            updated, count = re.subn(pattern, lambda m: m[1] + '\n' + links + '\n',
+                                     updated, count=1, flags=re.S)
+            if count != 1:
+                raise ValueError(f'Navigation marker missing in {page}: {marker}')
+        if updated != original:
+            page.write_text(updated, encoding='utf-8')
+
+
 def build_essay(md_file, all_essays=None):
     """Build a single essay from Markdown to HTML."""
     print(f"Building: {md_file.name}")
@@ -682,7 +710,7 @@ def build_essay(md_file, all_essays=None):
         print(f"  Error loading template {template_name}: {e}")
         return None
 
-    html_output = template.render(**data)
+    html_output = template.render(**data, **essay_nav_context(lang))
 
     # Write output file
     output_file = OUTPUT_DIR / f"{slug}.html"
@@ -909,6 +937,7 @@ def build_all():
 
     # Update essays/index.html with any missing essays
     update_essays_index()
+    update_essay_navigation()
 
     print(f"\nBuild complete! {len(essays_metadata)} essays generated.")
 
@@ -936,6 +965,7 @@ def build_single(name):
 
     if result:
         update_essays_json([result])
+        update_essay_navigation()
         print("\nBuild complete!")
 
 

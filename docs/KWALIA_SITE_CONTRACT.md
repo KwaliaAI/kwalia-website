@@ -21,6 +21,7 @@ Do not use older local clones as canonical without proving they match GitHub `ma
 | Main homepage | `index.html`, `data/books.json`, `data/fiction.json`, `data/essays.json`, `data/i18n/*.json` | Browser-rendered homepage sections | Static smoke check plus live readback after deploy |
 | Essay article content | `content/essays/en/*.md`, `content/essays/es/*.md` | `essays/*.html`, `data/essays.json` | `python3 build_essays.py`, then indexing contract |
 | Historical/manual essay pages | `essays/*.html` only when no Markdown source exists | `data/essays.json` after sync | `python3 sync_essays_json.py`, then indexing contract |
+| Essay navigation (index, generated and historical articles) | `templates/essay-nav-links.html`, homepage labels in `data/i18n/*.json` | `build_essays.py` refreshes both menus across `essays/*.html`; language switches retained | Indexing validator checks menu links/order/labels; desktop/mobile live readback |
 | Essay listing and search | `data/essays.json`, `build_essays.py`, `essays/index.html` | Search cards embedded in `essays/index.html` | `python3 scripts/validate_indexing_contract.py` |
 | Canonical, hreflang, sitemap, internal links | Essay HTML, `data/essays.json`, sitemap XML files | Search engine crawl contract | `python3 scripts/validate_indexing_contract.py` |
 | OG/social cards | `assets/og/*.jpg`, `og_generator.py`, `update_og_tags.py`, `publish-essay.sh` | OG image references in essay HTML | Regenerate when title/subtitle changes |

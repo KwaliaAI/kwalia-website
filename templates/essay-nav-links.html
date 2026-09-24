@@ -1,0 +1,4 @@
+{# Labels share the homepage's i18n data; signup destination depends on page. #}
+{% for key, target in [('fiction', '/#fiction'), ('catalogue', '/#catalogue'), ('heteronyms', '/#heteronyms'), ('essays', '/essays/'), ('press', '/#press'), ('about', '/#about'), ('cta', nav_cta)] %}
+<a href="{{ target }}" class="{% if nav_mobile %}block py-2 px-6 text-sm font-f2 mobile-nav-link{% elif key == 'cta' %}font-f2 bg-c2 text-c4 rounded-md py-2 px-4 hover:bg-c3 transition-colors{% else %}font-f2 nav-link-highlight{% endif %}"{% if nav_bilingual %} data-en="{{ nav_labels.en['nav.' + key]|e }}" data-es="{{ nav_labels.es['nav.' + key]|e }}"{% endif %}>{{ nav_labels[nav_lang]['nav.' + key]|e }}</a>
+{% endfor %}

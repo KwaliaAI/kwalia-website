@@ -916,8 +916,32 @@ def validate_homepage_core_entry_link(errors: list[str]) -> None:
         errors.append(f"index.html is missing the homepage link to {CORE_READING_PATHS_ANCHOR}")
 
 
+def validate_essay_navigation(errors: list[str]) -> None:
+    """Catch nav drift on generated and historical essays, in both menus."""
+    keys = ('fiction', 'catalogue', 'heteronyms', 'essays', 'press', 'about', 'cta')
+    labels = {lang: json.loads((REPO_ROOT / 'data' / 'i18n' / f'{lang}.json').read_text())
+              for lang in ('en', 'es')}
+    for path in sorted((REPO_ROOT / 'essays').glob('*.html')):
+        text = path.read_text()
+        lang = re.search(r'<html[^>]*lang="([^"]+)"', text)[1]
+        hrefs = ['/#fiction', '/#catalogue', '/#heteronyms', '/essays/', '/#press', '/#about',
+                 '#subscribe' if path.name == 'index.html' else '/#contact']
+        for marker in ('<div class="hidden md:flex items-center space-x-8">',
+                       '<div id="mobile-menu" class="hidden md:hidden bg-c4 pb-4">'):
+            block = re.search(re.escape(marker) + r'\s*((?:<a\b[^>]*>.*?</a>\s*)+)', text, re.S)
+            links = re.findall(r'<a href="([^"]+)"[^>]*>(.*?)</a>', block[1], re.S) if block else []
+            if links != list(zip(hrefs, [labels[lang]['nav.' + key] for key in keys])):
+                errors.append(f'{path.name}: essay navigation differs from homepage ({marker})')
+            if path.name == 'index.html' and block:
+                for code in ('en', 'es'):
+                    actual = re.findall(fr'data-{code}="([^"]+)"', block[1])
+                    if actual != [labels[code]['nav.' + key] for key in keys]:
+                        errors.append(f'{path.name}: navigation {code} toggle labels drifted')
+
+
 def main() -> int:
     errors: list[str] = []
+    validate_essay_navigation(errors)
     validate_canonicals(errors)
     validate_query_aliases(errors)
 

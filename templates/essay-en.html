@@ -143,9 +143,8 @@
             <a href="/"><img src="../assets/logo-kwalia-small.png" alt="kwalia logo" class="h-8 w-auto"></a>
 
             <div class="hidden md:flex items-center space-x-8">
-                <a href="/essays/" class="font-f2 nav-link-highlight">Essays</a>
-                <a href="/#contact" class="font-f2 bg-c2 text-c4 rounded-md py-2 px-4 hover:bg-c3 transition-colors">Subscribe</a>
-                {% if translation_slug %}
+            {% with nav_mobile=false %}{% include 'essay-nav-links.html' %}{% endwith %}
+{% if translation_slug %}
                 <div class="flex items-center border border-gray-300 rounded-full overflow-hidden ml-4">
                     <span class="font-f3 text-xs px-3 py-1 bg-c2 text-c4">EN</span>
                     <a href="{{ translation_slug }}" class="font-f3 text-xs px-3 py-1 hover:bg-gray-100 transition-colors">ES</a>
@@ -161,9 +160,8 @@
         </nav>
 
         <div id="mobile-menu" class="hidden md:hidden bg-c4 pb-4">
-            <a href="/essays/" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Essays</a>
-            <a href="/#contact" class="block py-2 px-6 text-sm font-f2 mobile-nav-link">Subscribe</a>
-            {% if translation_slug %}
+            {% with nav_mobile=true %}{% include 'essay-nav-links.html' %}{% endwith %}
+{% if translation_slug %}
             <div class="flex items-center justify-center mt-4 pt-4 border-t border-gray-200">
                 <span class="font-f3 text-sm px-4 py-1 bg-c2 text-c4 rounded-full">EN</span>
                 <a href="{{ translation_slug }}" class="font-f3 text-sm px-4 py-1 border border-gray-300 rounded-full ml-2 hover:bg-gray-100">ES</a>
