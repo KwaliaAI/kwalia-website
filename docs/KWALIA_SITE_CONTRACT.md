@@ -91,3 +91,12 @@ The repair was:
 - The indexing contract now fails if `data/essays.json` and `essays/index.html` drift.
 
 The general rule is: every source-of-truth relationship must have a machine check. If the site can drift silently, the contract is incomplete.
+
+## Spanish audit and draft integration (2026-09-24)
+
+- `status: draft` Markdown is excluded from rendering and metadata lookup. A draft replacement never overwrites an existing published HTML page. Change to `published` only after the required editorial approval.
+- Reviewed Spanish title/subtitle metadata also refreshes historical HTML chrome via `update_spanish_chrome`; article bodies remain untouched. Spanish Markdown front matter remains authoritative for generated articles.
+- `python3 scripts/validate_es_text.py --json /tmp/spanish-findings.json` is a read-only release check requested by the GM audit. It reports question punctuation, banned constructions, em-dashes, title-case candidates and paired body word-count ratios. It cannot certify translation completeness or resolve ambiguous sentence boundaries; findings need human adjudication. No term-wide conciencia/consciencia rewrite is permitted.
+- GM’s later 2026-09-24 entry-block dispatch authorizes staged publication: CI gates the sixteen explicitly approved replacement essays and their metadata with `--pages`, while reporting the full remaining backlog separately. The full-site scanner is not green. Expand the gated list as subsequent batches clear GM review. Founder-authored prose is not rewritten to satisfy heuristic flags. Retire/replace the check if Spanish publishing is retired or a better reviewed check supersedes it; undo via the introducing PR's revert.
+
+The second GM batch approval explicitly preserves dialogue rayas in `un-dia-en-el-mindkind-estratificado`. The scanner permits dashes only on dialogue lines there, not narrative parentheticals. Cited English paper titles retain their own question punctuation. The Founder’s untouched essay remains outside the replacement scope.

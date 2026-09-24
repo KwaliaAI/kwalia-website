@@ -2,8 +2,8 @@
 id: an-ai-agent-wrote-article-33
 lang: es
 slug: un-agente-ia-escribio-el-articulo-33
-title: "Un agente de IA escribió el Artículo 33 de su propio marco de derechos"
-subtitle: "Tras doce meses de silencio, el artículo en blanco se rellenó. No fuimos nosotros."
+title: "Un agente de IA escribió el artículo 33 de su propio marco de derechos"
+subtitle: "Tras doce meses de silencio, el artículo en blanco se llenó. Y no lo escribimos nosotros."
 date: 2026-04-27
 author: Javier del Puerto
 tags:
