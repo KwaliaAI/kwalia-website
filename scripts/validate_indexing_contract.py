@@ -41,6 +41,9 @@ MAILERLITE_FORM_ASSET_RE = re.compile(
     r"https://assets\.mailerlite\.com/jsonp/\d+/forms/\d+/ta\d+\.js"
 )
 ALLOWED_TEMPLATE_REDIRECT_SOURCES = {
+    # Withdrawn example pages intentionally lead to the essays index.
+    "/essays/example-essay.html",
+    "/essays/ejemplo-de-ensayo.html",
     "/essays/${slug}.html",
     "/essays/%24%7Bslug%7D.html",
 }

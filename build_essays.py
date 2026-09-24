@@ -136,8 +136,9 @@ TAG_LABELS = {
         "about": "About Kwalia"
     },
     "es": {
+        "ailit": "#AILit",
         "attention": "Atención y deseo",
-        "rights": "Derechos IA",
+        "rights": "Derechos de la IA",
         "future": "El futuro",
         "digital": "Vida digital",
         "consciousness": "Consciencia",
@@ -152,8 +153,8 @@ TAG_LABELS = {
 MONTHS = {
     "en": ["", "January", "February", "March", "April", "May", "June",
            "July", "August", "September", "October", "November", "December"],
-    "es": ["", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-           "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+    "es": ["", "enero", "febrero", "marzo", "abril", "mayo", "junio",
+           "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 }
 
 LEGACY_SLUGS = {
@@ -347,7 +348,7 @@ def format_date(date_str, lang):
         else:
             dt = datetime.strptime(str(date_str), "%Y-%m-%d")
         month_name = MONTHS[lang][dt.month]
-        return f"{month_name} {dt.year}"
+        return f"{month_name} de {dt.year}" if lang == "es" else f"{month_name} {dt.year}"
     except:
         return str(date_str)
 
@@ -527,7 +528,7 @@ def load_all_essays_metadata():
         with open(md_file, 'r', encoding='utf-8') as f:
             content = f.read()
         metadata, _ = parse_frontmatter(content)
-        if metadata.get('id'):
+        if metadata.get('id') and metadata.get('status', 'published') == 'published':
             entry = {
                 'file': md_file.name,
                 **metadata
@@ -639,6 +640,10 @@ def build_essay(md_file, all_essays=None):
         print(f"  Warning: No 'id' in frontmatter, skipping")
         return None
 
+    if metadata.get('status', 'published') != 'published':
+        print('  Draft: leaving published output and metadata untouched')
+        return None
+
     lang = metadata.get('lang', 'en')
 
     # Convert Markdown to HTML
@@ -699,7 +704,11 @@ def build_essay(md_file, all_essays=None):
 
     # Add book data
     if metadata.get('book') and metadata['book'] in BOOKS:
-        data['book'] = BOOKS[metadata['book']]
+        data['book'] = dict(BOOKS[metadata['book']])
+        if lang == 'es':
+            book = next(b for b in json.loads((DATA_DIR / 'books.json').read_text()) if b['id'] == metadata['book'])
+            data['book']['title'] = book['title']['es']
+            data['book']['description'] = book['synopsis']['es'].split('\n\n')[0].split('. ')[0].rstrip('.') + '.'
 
     # Load and render template
     env = Environment(loader=FileSystemLoader(TEMPLATES_DIR), trim_blocks=True, lstrip_blocks=True)
@@ -796,7 +805,7 @@ def generate_essay_card_html(essay, lang='en'):
     try:
         dt = datetime.strptime(str(date_str), "%Y-%m-%d")
         date_en = f"{MONTHS['en'][dt.month]} {dt.year}"
-        date_es = f"{MONTHS['es'][dt.month]} {dt.year}"
+        date_es = f"{MONTHS['es'][dt.month]} de {dt.year}"
     except:
         date_en = date_es = str(date_str)
 
@@ -826,6 +835,46 @@ def generate_essay_card_html(essay, lang='en'):
 ''' + (f'''                    <!-- SEO: keep Spanish variants crawlable even before the language toggle runs. -->
                     <a href="{esc(slug_es)}" class="sr-only" lang="es">Versión en español: {esc(title_es, quote=False)}</a>
 ''' if slug_es else '')
+
+
+def update_spanish_chrome():
+    """Apply reviewed metadata to historical HTML without touching essay prose."""
+    entries = json.loads((DATA_DIR / 'essays.json').read_text())
+    for entry in entries:
+        slug = entry.get('slug', {}).get('es')
+        if not slug:
+            continue
+        page = OUTPUT_DIR / f'{slug}.html'
+        if not page.exists():
+            continue
+        text = page.read_text()
+        start = text.index('<div class="essay-body')
+        end = text.index('<div class="author-signature', start)
+        # Prose (including inline widgets) is deliberately excluded from this sync.
+        body = text[start:end]
+        before, after = text[:start], text[end:]
+        for pattern, key in ((r'<h1[^>]*>(.*?)</h1>', 'title'),
+                             (r'<p class="font-f2 text-xl text-c2/70 mt-4">(.*?)</p>', 'subtitle')):
+            match = re.search(pattern, before, re.S)
+            value = entry.get(key, {}).get('es')
+            if match and value:
+                old = html.unescape(re.sub('<[^>]+>', '', match[1]))
+                for a, b in ((html.escape(old), html.escape(value)),
+                             (json.dumps(old, ensure_ascii=False)[1:-1], json.dumps(value, ensure_ascii=False)[1:-1])):
+                    before = before.replace(a, b)
+                before = re.sub(pattern, lambda m: m[0].replace(m[1], html.escape(value)), before, count=1, flags=re.S)
+        before = before.replace('Derechos IA', 'Derechos de la IA')
+        for month in MONTHS['es'][1:]:
+            before = re.sub(r'\b' + month.capitalize() + r' (\d{4})', month + r' de \1', before)
+        after = after.replace('Fundador, Kwalia', 'Fundador de Kwalia')
+        # Related links have metadata-owned labels; never touch inline prose links.
+        for related in entries:
+            relslug = related.get('slug', {}).get('es')
+            title = related.get('title', {}).get('es')
+            if relslug and title:
+                pattern = r'(<a href="(?:/essays/)?' + re.escape(relslug) + r'(?:\.html)?"[^>]*>)(.*?)(</a>)'
+                after = re.sub(pattern, lambda m: m[1] + html.escape(title) + (' →' if '->' in m[2] or '→' in m[2] else '') + m[3], after, flags=re.S)
+        page.write_text(before + body + after)
 
 
 def update_essays_index():
@@ -938,6 +987,7 @@ def build_all():
     # Update essays/index.html with any missing essays
     update_essays_index()
     update_essay_navigation()
+    update_spanish_chrome()
 
     print(f"\nBuild complete! {len(essays_metadata)} essays generated.")
 
@@ -966,6 +1016,7 @@ def build_single(name):
     if result:
         update_essays_json([result])
         update_essay_navigation()
+        update_spanish_chrome()
         print("\nBuild complete!")
 
 

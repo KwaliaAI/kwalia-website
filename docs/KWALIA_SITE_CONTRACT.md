@@ -91,3 +91,10 @@ The repair was:
 - The indexing contract now fails if `data/essays.json` and `essays/index.html` drift.
 
 The general rule is: every source-of-truth relationship must have a machine check. If the site can drift silently, the contract is incomplete.
+
+## Spanish audit and draft integration (2026-09-24)
+
+- `status: draft` Markdown is excluded from rendering and metadata lookup. A draft replacement never overwrites an existing published HTML page. Change to `published` only after the required editorial approval.
+- Reviewed Spanish title/subtitle metadata also refreshes historical HTML chrome via `update_spanish_chrome`; article bodies remain untouched. Spanish Markdown front matter remains authoritative for generated articles.
+- `python3 scripts/validate_es_text.py --json /tmp/spanish-findings.json` is a read-only release check requested by the GM audit. It reports question punctuation, banned constructions, em-dashes, title-case candidates and paired body word-count ratios. It cannot certify translation completeness or resolve ambiguous sentence boundaries; findings need human adjudication. No term-wide conciencia/consciencia rewrite is permitted.
+- The September audit branch is held while pre-existing prose findings remain. Do not describe this scanner as passing or bypass it to merge. Retire/replace the check if Spanish publishing is retired or a better reviewed check supersedes it; undo via the introducing PR's revert.
