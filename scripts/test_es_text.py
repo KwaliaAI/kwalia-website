@@ -24,6 +24,9 @@ def main():
     page=PageText('<html lang="es"><script>what?</script><div class="essay-body"><p>¿Qué ocurre?</p><div>Otra frase.</div></div><footer>Pie</footer></html>')
     assert 'what?' not in ''.join(page.parts) and 'Pie' not in ''.join(page.body)
     b=load_builder()
+    for rule in ('---', '***', '___', '- - -'):
+        assert b.simple_markdown_to_html('Before.\n\n' + rule + '\n\nAfter.') == '<p>Before.</p>\n\n<hr>\n\n<p>After.</p>'
+    assert b.simple_markdown_to_html('An inline --- remains.') == '<p>An inline --- remains.</p>'
     with TemporaryDirectory() as tmp:
         tmp=Path(tmp);b.OUTPUT_DIR=tmp/'essays';b.OUTPUT_DIR.mkdir()
         b.DATA_DIR=tmp/'data';b.DATA_DIR.mkdir();(b.DATA_DIR/'essays.json').write_text('[]')
@@ -69,6 +72,15 @@ Texto de prueba.
         assert loaded['fixture']['slug']=={'en':'fixture-en','es':'fixture-es'}
         assert loaded['fixture']['title']=={'en':'English title','es':'Una prueba'}
         assert loaded['fixture-en']==loaded['fixture-es']
+        # translation may name the metadata ID rather than the English URL slug.
+        entry['slug']['es']='fixture-es'
+        entry['slug']['en']='different-english-slug'
+        (b.DATA_DIR/'essays.json').write_text(json.dumps([entry]))
+        source.write_text(source.read_text().replace('translation: fixture-en', 'translation: fixture'))
+        b.build_essay(source)
+        rendered=output.read_text()
+        assert rendered.count('href="different-english-slug"') == 2
+        assert 'href="fixture"' not in rendered
 
     print('Spanish scanner and draft/publication regression checks PASS')
 
