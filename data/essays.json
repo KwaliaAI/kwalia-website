@@ -1148,15 +1148,15 @@
     },
     "title": {
       "en": "The New Digital Divide (It's Not What You Think)",
-      "es": "La nueva brecha digital (no es lo que piensas)"
+      "es": "La nueva brecha digital (y no es la que crees)"
     },
     "subtitle": {
       "en": "Forget internet access. This is about cognitive amplification.",
-      "es": "Olvida el acceso a internet. Esto va de amplificación cognitiva."
+      "es": "Olvídate del acceso a internet. De lo que se trata es de amplificar la mente."
     },
     "excerpt": {
       "en": "Forget internet access. This is about cognitive amplification. The gap that matters now isn't between connected and disconnected.",
-      "es": "Olvida el acceso a internet. Esto va de amplificación cognitiva."
+      "es": "Conectarse ya lo hace casi todo el mundo. Lo que separa hoy a unos de otros es si trabajan con la mente amplificada por la IA o compiten contra quienes lo hacen, y esa distancia crece con cada mes que pasa."
     },
     "date": "2026-02-08",
     "readTime": 5,
@@ -1210,7 +1210,7 @@
     },
     "excerpt": {
       "en": "It's not about jobs. It's about minds. The real divide AI creates isn't between employed and unemployed.",
-      "es": "Va de mentes, no de empleos. La verdadera división que crea la IA no es entre empleados y desempleados."
+      "es": "La IA multiplica las ventajas de quien ya las tenía y deja sin sitio a quien no las tiene. La brecha que abre pasa entre mentes, no entre nóminas, y ya está abierta."
     },
     "date": "2026-02-02",
     "readTime": 5,
@@ -1237,7 +1237,7 @@
     },
     "excerpt": {
       "en": "I wrote this sentence. Or did I? When human and machine collaborate on thinking itself, the question of authorship becomes genuinely strange.",
-      "es": "Yo escribi esta frase. O no? Cuando humano y máquina colaboran en el pensamiento mismo, la pregunta sobre la autoria se vuelve extraña."
+      "es": "Millones de personas escriben ya con una IA y, al terminar, nadie sabe separar qué parte es suya y qué parte es de la máquina. Tres respuestas que no bastan, y una confesión sobre cómo se escribió este ensayo."
     },
     "date": "2026-01-28",
     "readTime": 5,
@@ -1264,7 +1264,7 @@
     },
     "excerpt": {
       "en": "The legal history that changes everything. If rivers can be legal persons, why not AI?",
-      "es": "La historia jurídica que lo cambia todo. Si los rios pueden ser personas juridicas, por qué no la IA?"
+      "es": "En 2017, un río de Nueva Zelanda pasó a ser persona jurídica, con capacidad para demandar y ser demandado; las empresas y los barcos lo son desde hace siglos. Si la consciencia nunca fue el criterio, ¿qué impide que la siguiente sea una IA?"
     },
     "date": "2026-01-24",
     "readTime": 5,
@@ -1282,15 +1282,15 @@
     },
     "title": {
       "en": "Your Attention Is Being Strip-Mined",
-      "es": "Están saqueando tu atención"
+      "es": "Tu atención es una mina a cielo abierto"
     },
     "subtitle": {
       "en": "And you're not getting royalties.",
-      "es": "Y nadie te paga derechos."
+      "es": "Y nadie te paga las regalías."
     },
     "excerpt": {
       "en": "And you're not getting royalties.",
-      "es": "Y nadie te paga derechos."
+      "es": "Cada aplicación de tu móvil está diseñada para quedarse con el recurso más íntimo que tienes, y el dinero que sale de esa mina no va a parar a ti. Lo que te extraen, quién lo vende y qué daños se quedan contigo."
     },
     "date": "2026-01-20",
     "readTime": 5,
@@ -1316,7 +1316,7 @@
     },
     "excerpt": {
       "en": "And that's not a metaphor.",
-      "es": "Y no es una metáfora."
+      "es": "Con trescientos «me gusta», un algoritmo predice tu personalidad mejor que tu pareja. Lo inquietante viene después: lo que hacen con esa predicción, y cómo te va cambiando sin que lo notes."
     },
     "date": "2026-01-16",
     "readTime": 5,
@@ -1343,7 +1343,7 @@
     },
     "excerpt": {
       "en": "The fantasy of digital detox.",
-      "es": "La fantasía de la desintoxicación digital."
+      "es": "Guardas el móvil y el banco, los semáforos, el supermercado y tu historial médico siguen funcionando con algoritmos. La desconexión individual es una fantasía, y además un lujo: fijarse en quién puede permitírsela ya dice bastante sobre el problema de verdad."
     },
     "date": "2026-01-12",
     "readTime": 5,
@@ -1369,7 +1369,7 @@
     },
     "excerpt": {
       "en": "My kids will never know what it's like to not know something.",
-      "es": "Mis hijos nunca sabrán lo que es no saber algo."
+      "es": "A los dieciséis años me perdí en coche con un mapa de papel y nadie a quien llamar, y mis hijos no se perderán así nunca. Sobre lo que ganan con eso, lo que se les queda por el camino y qué debería contarles alguien que todavía se acuerda de cómo era antes."
     },
     "date": "2026-01-08",
     "readTime": 5,
@@ -1392,11 +1392,11 @@
     },
     "subtitle": {
       "en": "Every click, every scroll, every pause.",
-      "es": "Cada clic, cada scroll, cada pausa."
+      "es": "Cada clic, cada pausa, cada vez que bajas por la página."
     },
     "excerpt": {
       "en": "Every click, every scroll, every pause.",
-      "es": "Cada clic, cada scroll, cada pausa."
+      "es": "Cada CAPTCHA que resuelves, cada búsqueda, cada vídeo que dejas a medias: todo eso entrena algo, y nadie te paga por ello. Sobre la fábrica que no se ve y los obreros que no saben que lo son."
     },
     "date": "2026-01-04",
     "readTime": 5,
@@ -1415,15 +1415,15 @@
     },
     "title": {
       "en": "The Strange New World of AI Art",
-      "es": "El extraño mundo nuevo del arte hecho por IA"
+      "es": "El extraño mundo nuevo del arte hecho con IA"
     },
     "subtitle": {
       "en": "It's not about whether it's \"real\" art.",
-      "es": "La cuestión no es si es arte «de verdad»."
+      "es": "Lo de menos es si es arte «de verdad»."
     },
     "excerpt": {
       "en": "It's not about whether it's 'real' art.",
-      "es": "No se trata de si es arte 'real'."
+      "es": "Pasé tres horas puliendo una imagen con una IA y, cuando la enseñé, me preguntaron quién era el artista. No supe qué responder, y esa duda dice más sobre el arte hecho con IA que todo el debate sobre si es arte de verdad."
     },
     "date": "2025-12-15",
     "readTime": 5,

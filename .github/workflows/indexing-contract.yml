@@ -21,12 +21,12 @@ jobs:
       - name: Validate canonical, hreflang, sitemap, and links
         run: python3 scripts/validate_indexing_contract.py
 
-      # GM 2026-09-24: release 16 approved essays; further essay work is on Founder hold.
+      # GM 2026-09-29: gate all 36 approved essays; remaining prose stays on hold.
       - name: Audit all Spanish text (remaining editorial backlog)
         continue-on-error: true
         run: python3 scripts/validate_es_text.py
 
-      - name: Gate approved Spanish essays (16)
+      - name: Gate approved Spanish essays (36)
         run: >-
           python3 scripts/validate_es_text.py --pages
           el-caso-de-los-derechos-de-la-ia
@@ -45,3 +45,23 @@ jobs:
           sobre-escribir-con-maquinas
           como-suena-la-ficcion-ia
           el-ultimo-pensamiento-humano
+          por-que-los-escritores-estan-mas-enfadados
+          la-economia-de-influencers-es-un-adelanto
+          que-acerto-her-sobre-el-amor-con-ia
+          a-favor-de-desconectarse-a-veces
+          que-decirles-a-tus-hijos-sobre-ia
+          cuando-confiar-en-la-ia
+          la-verdadera-razon-no-puedes-concentrarte
+          pensar-claridad-era-ia
+          espectro-de-ia
+          la-economia-de-la-atencion-devoro-tus-deseos
+          la-nueva-brecha-digital
+          la-guerra-de-clases-cognitiva
+          quien-es-dueno-de-un-pensamiento
+          cuando-los-rios-se-convirtieron-en-personas
+          tu-atencion-esta-siendo-saqueada
+          el-algoritmo-te-conoce
+          por-que-desconectar-ya-no-es-opcion
+          la-ultima-generacion-que-recuerda
+          estas-entrenando-ia-ahora-mismo
+          el-extrano-nuevo-mundo-del-arte-ia
