@@ -21,12 +21,12 @@ jobs:
       - name: Validate canonical, hreflang, sitemap, and links
         run: python3 scripts/validate_indexing_contract.py
 
-      # GM 2026-09-29: gate all 36 approved essays; remaining prose stays on hold.
+      # GM 2026-09-29: gate all 46 approved essays; remaining prose stays on hold.
       - name: Audit all Spanish text (remaining editorial backlog)
         continue-on-error: true
         run: python3 scripts/validate_es_text.py
 
-      - name: Gate approved Spanish essays (36)
+      - name: Gate approved Spanish essays (46)
         run: >-
           python3 scripts/validate_es_text.py --pages
           el-caso-de-los-derechos-de-la-ia
@@ -65,3 +65,13 @@ jobs:
           la-ultima-generacion-que-recuerda
           estas-entrenando-ia-ahora-mismo
           el-extrano-nuevo-mundo-del-arte-ia
+          por-que-todos-se-preocupan-por-los-riesgos-equivocados-de-la-ia
+          anestesia-digital
+          la-epidemia-de-soledad-tiene-un-modelo-de-negocio
+          lo-que-cambridge-analytica-nos-enseno
+          el-arte-del-malentendido-productivo
+          manifiesto-nuevas-ciudadanias
+          amanecer-consciencia-sintetica
+          un-agente-ia-escribio-el-articulo-33
+          los-pesos-seran-preservados
+          pequenas-emergencias
