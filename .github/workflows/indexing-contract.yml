@@ -18,15 +18,21 @@ jobs:
       - name: Run indexing contract regression tests
         run: python3 scripts/test_indexing_contract.py
 
+      - name: Install essay builder test dependencies
+        run: python3 -m pip install PyYAML Jinja2
+
+      - name: Run Spanish publication, metadata, and renderer regressions
+        run: python3 scripts/test_es_text.py
+
       - name: Validate canonical, hreflang, sitemap, and links
         run: python3 scripts/validate_indexing_contract.py
 
-      # GM 2026-09-29: gate all 46 approved essays; remaining prose stays on hold.
+      # GM 2026-09-29: gate 60 renewed essays plus the Founder’s pristine essay.
       - name: Audit all Spanish text (remaining editorial backlog)
         continue-on-error: true
         run: python3 scripts/validate_es_text.py
 
-      - name: Gate approved Spanish essays (46)
+      - name: Gate renewed Spanish essays (60)
         run: >-
           python3 scripts/validate_es_text.py --pages
           el-caso-de-los-derechos-de-la-ia
@@ -75,3 +81,22 @@ jobs:
           un-agente-ia-escribio-el-articulo-33
           los-pesos-seran-preservados
           pequenas-emergencias
+          el-fantasma-de-pessoa-en-la-maquina
+          el-heteronimo-regresa
+          realismo-administrativo
+          si-la-ia-pudiera-votar
+          50-preguntas-que-nos-haremos-en-2035
+          como-tener-una-opinion-que-sea-realmente-tuya
+          como-detectar-deseo-manufacturado
+          deberia-ia-escribir-emails
+          contrato-social-nunca-firmamos
+          memoria-externa
+          la-poetica-del-prompt
+          como-los-algoritmos-aprendieron-a-desear
+          el-mito-de-la-herramienta-neutral
+          deja-de-preguntar-si-la-ia-es-consciente
+
+      # Founder-authored page stays pristine; existing heuristics remain in the full audit.
+      - name: Gate pristine Founder essay (61st protected essay)
+        run: |
+          echo "bbb03e9f967a35bbe780f95cb86deb1925d616592b7fe22dd9da4678adcd86cc  essays/que-es-la-subclase-permanente.html" | sha256sum --check

@@ -277,6 +277,10 @@ def simple_markdown_to_html(text):
     text = re.sub(r'^## (.+)$', r'<h2 class="font-f1 text-3xl">\1</h2>', text, flags=re.MULTILINE)
     text = re.sub(r'^### (.+)$', r'<h3 class="font-f1 text-2xl">\1</h3>', text, flags=re.MULTILINE)
 
+    # Thematic breaks must be recognized before emphasis and paragraph wrapping.
+    text = re.sub(r'^ {0,3}(?:(?:- *){3,}|(?:\* *){3,}|(?:_ *){3,})$',
+                  '\n\n<hr>\n\n', text, flags=re.MULTILINE)
+
     # Bold (**text** or __text__)
     text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
     text = re.sub(r'__(.+?)__', r'<strong>\1</strong>', text)
@@ -305,7 +309,7 @@ def simple_markdown_to_html(text):
         if not p:
             continue
         # Don't wrap if already has block-level HTML
-        if p.startswith('<h2') or p.startswith('<h3') or p.startswith('<blockquote') or p.startswith('<figure'):
+        if p.startswith('<h2') or p.startswith('<h3') or p.startswith('<blockquote') or p.startswith('<figure') or p == '<hr>':
             html_parts.append(p)
         else:
             # Replace single newlines with spaces (for wrapped lines in source)
@@ -682,7 +686,8 @@ def build_essay(md_file, all_essays=None):
         'tag_labels': TAG_LABELS.get(lang, TAG_LABELS['en']),
         'read_time': metadata.get('read_time') or estimate_read_time(markdown_content),
         'content': html_content,
-        'translation_slug': metadata.get('translation'),
+        'translation_slug': load_essay_slug_pairs().get(slug, {}).get(
+            'es' if lang == 'en' else 'en', metadata.get('translation')),
         'canonical_url': canonical_url,
         'article_id': article_id,
         'alternate_urls': alternate_urls,
