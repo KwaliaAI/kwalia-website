@@ -19,6 +19,7 @@ Do not use older local clones as canonical without proving they match GitHub `ma
 | Surface | Canonical source | Generated or derived files | Required checks |
 |---|---|---|---|
 | Main homepage | `index.html`, `data/books.json`, `data/fiction.json`, `data/essays.json`, `data/i18n/*.json` | Browser-rendered homepage sections | Static smoke check plus live readback after deploy |
+| Homepage book catalogue | `KwaliaAI/catalog` `data/catalog.json` + approved presentation in `data/books.overrides.json` | **GENERATED** `data/books.json`, provenance/selection in `data/books.source.json` | `python3 scripts/build_books_json.py <catalogue-path>`, then repeat with `--check`; `python3 scripts/test_books_builder.py`; indexing validator and desktop/mobile EN/ES smoke |
 | Essay article content | `content/essays/en/*.md`, `content/essays/es/*.md` | `essays/*.html`, `data/essays.json` | `python3 build_essays.py`, then indexing contract |
 | Historical/manual essay pages | `essays/*.html` only when no Markdown source exists | `data/essays.json` after sync | `python3 sync_essays_json.py`, then indexing contract |
 | Essay navigation (index, generated and historical articles) | `templates/essay-nav-links.html`, homepage labels in `data/i18n/*.json` | `build_essays.py` refreshes both menus across `essays/*.html`; language switches retained | Indexing validator checks menu links/order/labels; desktop/mobile live readback |
@@ -29,6 +30,35 @@ Do not use older local clones as canonical without proving they match GitHub `ma
 | Styling and design tokens | `STYLE_GUIDE.md`, inline Tailwind classes, templates | Rendered pages | Desktop/mobile visual check for touched pages |
 
 ## Mandatory Workflow
+
+For books, use a clean committed catalogue checkout. The builder defaults to
+`../catalog/data/catalog.json`; pass an explicit path when using a worktree.
+`books.source.json` records the exact catalogue commit and SHA256, overlay hash,
+output hash and row selection decisions. Regenerate after catalogue merges or
+approved overlay changes; this is an explicit cross-repository sync, not a runtime
+Supabase query or an automatic cross-repository deployment trigger. Never edit
+generated book data directly. CI validates artifact hashes and mapping/selection
+regressions; the local `--check` verifies against the recorded catalogue input.
+
+The explicit channel test and field mapping are in the builder header. Neither a
+routing plan nor lifecycle/sale flags alone prove channel availability. Spanish
+fields use the existing English fallback when missing. `siteVisible: false` rows
+are filtered before cards, modals and deep links; Bliss and legacy essay
+recommendation targets are retained this way until verified channel evidence exists. This run creates no dedicated Bliss page.
+
+The eight former site rows are preserved as an approved migration snapshot in
+the overlay. `--baseline --output /tmp/books-baseline.json` reproduces them byte
+for byte, including their original English copy and USD prices. That mode is a
+migration proof, not the normal catalogue mapping. Normal generation uses
+catalogue English copy/GBP prices and hides rows without channel evidence;
+the source manifest lists each decision. Existing presentation art, Spanish copy,
+sample controls and approved store URLs remain overlay data. New retail links
+use explicit catalogue ASINs only for formats marked available; a print ASIN in
+notes is not sufficient while its format is still publishing.
+
+Undo before merge: close the catalogue and website PRs. Retire the builder if
+the homepage catalogue moves to another reviewed source; remove its overlay,
+manifest and test step together. Production readback remains GM's post-merge step.
 
 1. Verify the active repo, branch, and live target before changing anything.
 2. Identify which row in the source map the change touches.

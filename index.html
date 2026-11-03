@@ -504,7 +504,7 @@
                     const [enContent, esContent, books, fiction, hets, stories, essaysData] = await Promise.all([
                         fetch('data/i18n/en.json').then(r => r.json()),
                         fetch('data/i18n/es.json').then(r => r.json()),
-                        fetch('data/books.json?v=20260916-us-purchase-tracking').then(r => r.json()),
+                        fetch('data/books.json?v=20261103-catalogue').then(r => r.json()),
                         fetch('data/fiction.json?v=20260916-us-purchase-tracking').then(r => r.json()),
                         fetch('data/heteronyms.json').then(r => r.json()),
                         fetch('data/stories.json').then(r => r.json()),
@@ -512,7 +512,7 @@
                     ]);
 
                     content = { en: enContent, es: esContent };
-                    bookCatalogue = books;
+                    bookCatalogue = books.filter(book => book.siteVisible !== false);
                     fictionCatalogue = fiction;
                     heteronyms = hets;
                     shortStories = stories;
