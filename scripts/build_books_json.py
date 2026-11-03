@@ -8,7 +8,7 @@ transitional: retire it when catalogue channel evidence is backfilled for those
 rows. Missing evidence never proves an approved legacy title is off sale.
 Routing plans, lifecycle and sale flags alone are not channel evidence. Fiamma
 and translation duplicates never appear. Other missing-channel rows are retained
-with siteVisible=false for essay readers; audio storefronts use platform_links.
+with siteVisible=false for essay readers; audio storefronts use distribution_plan.audiobook.platform_links.
 
 Field precedence: an approved legacy row supplies ALL public fields,
 including English/Spanish copy, status, formats, prices and store links, verbatim.
@@ -18,7 +18,7 @@ The overlay's legacyVisible control is never emitted as a public book field.
 For new rows: title/subtitle, authors, blurb_300, series/volume, ISBN formats and
 GBP prices come from the catalogue. Art, Spanish copy and sample controls come
 from presentation; absent Spanish uses the existing English fallback. Stores use
-explicit per-format live KDP ASINs, else approved URLs; audio uses platform_links.
+explicit per-format live KDP ASINs, else approved URLs; audio uses distribution_plan.audiobook.platform_links.
 
 --baseline reproduces the approved eight public rows byte for byte, stripping
 only the overlay visibility control. Normal generation preserves these same
@@ -119,7 +119,7 @@ def build_row(row, overlay, channels):
     asins = metadata.get("kdp_asins") or {}
     states = metadata.get("kdp_format_status") or {}
     if audio_only:
-        book["stores"] = row.get("platform_links") or []
+        book["stores"] = ((row.get("distribution_plan") or {}).get("audiobook") or {}).get("platform_links") or []
     elif asins:
         book["stores"] = [{"name": "Amazon", "url": f"https://www.amazon.com/dp/{asin}", "type": "book"}
                           for kind, asin in asins.items() if states.get(kind) == "live"]
