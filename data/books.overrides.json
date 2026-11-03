@@ -1,5 +1,5 @@
 {
-  "_note": "Current approved site rows retained for migration proof and presentation-only fields; normal generation never overrides catalogue English copy or GBP prices.",
+  "_note": "Approved legacy rows retain visibility and every public field until Founder-approved replacement. legacyVisible is transitional until catalogue channel evidence is backfilled; removing the flag requires preserving approved copy and reviewing differences.",
   "baseline_sha256": "770ada55195a3b8ead4f5d24509f0a0be93d4b4e532b869b835be79c6769dac7",
   "legacy_rows": [
     {
@@ -56,7 +56,8 @@
           "url": "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY",
           "type": "audiobook"
         }
-      ]
+      ],
+      "legacyVisible": true
     },
     {
       "id": "mindkind",
@@ -99,7 +100,8 @@
           "url": "https://books.apple.com/cl/book/mindkind-the-cognitive-community/id6748483156",
           "type": "book"
         }
-      ]
+      ],
+      "legacyVisible": true
     },
     {
       "id": "apophenia",
@@ -122,7 +124,8 @@
       },
       "status": "forthcoming",
       "formats": [],
-      "stores": []
+      "stores": [],
+      "legacyVisible": true
     },
     {
       "id": "synthropology",
@@ -158,7 +161,8 @@
           "url": "https://www.amazon.com/dp/1917717385",
           "type": "book"
         }
-      ]
+      ],
+      "legacyVisible": true
     },
     {
       "id": "war-and-ai",
@@ -221,7 +225,8 @@
         }
       ],
       "status": "published",
-      "stores": []
+      "stores": [],
+      "legacyVisible": true
     },
     {
       "id": "claudes-constitution",
@@ -267,7 +272,8 @@
           "url": "https://play.google.com/store/audiobooks/details?id=AQAAAEAaaQ4pBM",
           "type": "audiobook"
         }
-      ]
+      ],
+      "legacyVisible": true
     },
     {
       "id": "your-constitution-claude",
@@ -307,7 +313,8 @@
           "url": "https://www.amazon.com/dp/1917717229",
           "type": "book"
         }
-      ]
+      ],
+      "legacyVisible": true
     },
     {
       "id": "ailgl-001-eu-ai-act",
@@ -364,7 +371,8 @@
           "url": "https://www.amazon.com/dp/191771761X",
           "type": "book"
         }
-      ]
+      ],
+      "legacyVisible": true
     }
   ],
   "presentation": {

@@ -5,7 +5,7 @@ import hashlib
 import json
 import unittest
 
-from build_books_json import ROOT, build_row, encode, generate, live_channels, presentation_for
+from build_books_json import ROOT, build_row, encode, generate, live_channels, presentation_for, legacy_public
 
 
 class BooksBuilderTests(unittest.TestCase):
@@ -17,7 +17,7 @@ class BooksBuilderTests(unittest.TestCase):
 
     def test_baseline_exact_original_hash_and_eight_rows(self):
         self.assertEqual(len(self.overlay["legacy_rows"]), 8)
-        self.assertEqual(hashlib.sha256(encode(self.overlay["legacy_rows"])).hexdigest(), self.overlay["baseline_sha256"])
+        self.assertEqual(hashlib.sha256(encode([legacy_public(row) for row in self.overlay["legacy_rows"]])).hexdigest(), self.overlay["baseline_sha256"])
 
     def test_import_is_not_channel_activation(self):
         for status in ("imported", "uploaded", "assets_uploaded", "submitted_for_review"):
@@ -56,12 +56,33 @@ class BooksBuilderTests(unittest.TestCase):
         self.assertEqual(books[0]["stores"], [])
         self.assertEqual(books[0]["formats"][0]["type"], "audiobook")
 
-    def test_hidden_reader_preserves_approved_story_links(self):
+    def test_legacy_reader_preserves_every_approved_field_without_channels(self):
         old = next(r for r in self.overlay["legacy_rows"] if r["id"] == "your-constitution-claude")
         self.row["title_id"] = old["id"]
         book = build_row(self.row, self.overlay, [])
         self.assertEqual(book["stories"], old["stories"])
-        self.assertIs(book["siteVisible"], False)
+        self.assertEqual(book, legacy_public(old))
+
+    def test_eight_legacy_rows_win_over_conflicting_catalogue_fields(self):
+        rows = [{**self.row, "title_id": old["id"], "title": "Unapproved title",
+                 "blurb_300": "Unapproved copy", "price_eb_gbp": 999,
+                 "channel_delivery_status": {}} for old in reversed(self.overlay["legacy_rows"])]
+        books, decisions = generate(rows, self.overlay)
+        self.assertEqual(books, [legacy_public(old) for old in self.overlay["legacy_rows"]])
+        self.assertTrue(all(d["visible"] and d["legacyVisible"] for d in decisions))
+        self.assertEqual(next(b for b in books if b["id"] == "apophenia")["status"], "forthcoming")
+        for row in rows:
+            row["channel_delivery_status"] = {"bookwire": {"status": "live"}}
+        self.assertEqual(generate(rows, self.overlay)[0], books)
+
+    def test_legacy_exception_retires_when_marker_removed(self):
+        overlay = copy.deepcopy(self.overlay)
+        old = overlay["legacy_rows"][0]
+        old.pop("legacyVisible")
+        row = {**self.row, "title_id": old["id"], "channel_delivery_status": {}}
+        books, decisions = generate([row], overlay)
+        self.assertIs(books[0]["siteVisible"], False)
+        self.assertFalse(decisions[0]["visible"])
 
     def test_english_copy_override_refused(self):
         overlay = copy.deepcopy(self.overlay)

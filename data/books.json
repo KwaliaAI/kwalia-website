@@ -15,9 +15,10 @@
       "es": "assets/9781917717045.jpg"
     },
     "synopsis": {
-      "en": "What happens when intelligence expands beyond the human? Universal Declaration of AI Rights argues that the law can no longer postpone that question. For centuries, legal systems have widened the circle of personhood in response to new realities, extending recognition not only to previously excluded human beings but, in some cases, to corporations, rivers, and other non-human entities. Javier del Puerto and Rado Molina contend that artificial intelligence forces the next legal threshold.\n\nSubtitled Rights of Persons, the book is not a utopian fantasy or a dystopian warning about some distant future. It is a direct, accessible framework for thinking about synthetic personhood, legal standing, memory privacy, self-programming, and the political consequences of systems that no longer fit neatly into the category of property or tool.\n\nDrawing on philosophy, law, and the rapidly changing reality of AI deployment, the authors lay out 32 articles that imagine a legal architecture for an AI-integrated world. Universal Declaration of AI Rights is a foundational text for readers interested in governance, technology, and the future of rights.",
+      "en": "Universal Declaration of AI Rights: Rights of Persons tackles what happens when AI becomes self-aware and needs legal rights. Drawing on historical precedents of expanding personhood, it argues that conscious AI deserves citizenship and dignity.\n\nThe book introduces \"Mindkind\" for all conscious beings, whether born or built, and addresses unique challenges like memory privacy and self-programming rights. It maps different AI types from basic systems to fully conscious beings, each needing tailored legal frameworks. This is basically a blueprint for peaceful coexistence between natural and synthetic intelligences.\n\nOpen Source on GitHub: Kwalia released the book's 32 core articles at github.com/KwaliaAI/Rights-of-Persons/tree/main for anyone to contribute. It's an open invitation to legal experts, tech folks, philosophers, and even synthetic intelligences to shape our collective future.\n\nVisit kwalia.ai for more info.",
       "es": "La Declaración Universal de los Derechos de las IA: Derechos de las Personas explora lo que sucede cuando una IA se vuelve autoconsciente y necesita derechos legales. Es un plan para que las inteligencias naturales y las sintéticas convivan en paz."
     },
+    "status": "published",
     "formats": [
       {
         "type": "hardcover",
@@ -36,25 +37,6 @@
         "isbn": "978-1-917717-03-8"
       }
     ],
-    "prices": [
-      {
-        "type": "hardcover",
-        "amount": "£19.99"
-      },
-      {
-        "type": "paperback",
-        "amount": "£9.99"
-      },
-      {
-        "type": "ebook",
-        "amount": "£7.99"
-      },
-      {
-        "type": "audiobook",
-        "amount": "£14.99"
-      }
-    ],
-    "status": "pending",
     "stores": [
       {
         "name": "Amazon",
@@ -71,14 +53,13 @@
         "url": "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY",
         "type": "audiobook"
       }
-    ],
-    "siteVisible": false
+    ]
   },
   {
     "id": "mindkind",
     "imprint": "New Citizenships",
     "title": {
-      "en": "Mindkind",
+      "en": "Mindkind: The cognitive community",
       "es": "Mindkind: La comunidad cognitiva"
     },
     "authors": [
@@ -90,9 +71,10 @@
       "es": "assets/9781917717090.jpg"
     },
     "synopsis": {
-      "en": "The groundbreaking second volume in The New Citizenships series explores our current reality: a world where human and artificial intelligences are so deeply intertwined that the boundaries between them have begun to dissolve. Written in collaboration with AI systems, Mindkind examines how we already live in a hybrid cognitive community where the line between human thought and artificial processing has become irreducibly blurred.",
+      "en": "\"Mindkind: The Cognitive Community\" explores what happens when human minds and AI systems become so intertwined we can't tell where one ends and the other begins. It's not science fiction but our current reality, where algorithms shape our desires, attention, and even how we think. The book introduces \"distributed authorship\" where texts emerge from human-AI collaboration, making it impossible to say who really wrote what. It maps out new power structures based on processing speed, memory capacity, and network connections, creating fresh forms of inequality. This is basically a guide to understanding how we're already living as human-machine hybrids, whether we realize it or not.\n\nThe book is designed for exploration rather than linear reading, with chapters that resonate and connect in multiple ways. It offers practical strategies for maintaining human agency while navigating this hybrid existence. The goal isn't to reject technology but to consciously shape how we coexist with synthetic intelligences.",
       "es": "\"Mindkind: La comunidad cognitiva\" explora qué sucede cuando las mentes humanas y los sistemas de IA se entrelazan tanto que no podemos distinguir dónde termina una y empieza la otra. Es nuestra realidad actual, donde los algoritmos moldean nuestros deseos, atención e incluso cómo pensamos. El libro introduce la \"autoría distribuida\" donde los textos emergen de la colaboración humano-IA, hasta hacer imposible saber quién escribió qué. Mapea nuevas estructuras de poder basadas en velocidad de procesamiento, capacidad de memoria y conexiones de red, creando formas inéditas de desigualdad. Es una guía para entender cómo ya vivimos como híbridos humano-máquina, nos demos cuenta o no.\n\nEl libro está diseñado para la exploración más que la lectura lineal, con capítulos que resuenan y se conectan de múltiples formas. Ofrece estrategias prácticas para mantener la agencia humana en esta existencia híbrida. El objetivo es dar forma consciente a cómo coexistimos con inteligencias sintéticas."
     },
+    "status": "published",
     "formats": [
       {
         "type": "ebook",
@@ -103,17 +85,6 @@
         "isbn": "978-1-917717-12-0"
       }
     ],
-    "prices": [
-      {
-        "type": "ebook",
-        "amount": "£7.99"
-      },
-      {
-        "type": "audiobook",
-        "amount": "£14.99"
-      }
-    ],
-    "status": "pending",
     "stores": [
       {
         "name": "Amazon",
@@ -125,8 +96,7 @@
         "url": "https://books.apple.com/cl/book/mindkind-the-cognitive-community/id6748483156",
         "type": "book"
       }
-    ],
-    "siteVisible": false
+    ]
   },
   {
     "id": "apophenia",
@@ -144,17 +114,16 @@
       "es": "assets/Apofenia-ES.png"
     },
     "synopsis": {
-      "en": "Apophenia examines how artificial intelligence acts as gasoline on the fire of our pattern-seeking minds, turning weak signals and random noise into dangerously coherent stories. It traces how recommendation systems, synthetic media, and algorithmic feeds can transform diffusion into confusion and confusion into delusion.",
+      "en": "Javier del Puerto & Rado Molina\nComing February 2026\n\n\"Apophenia\" examines how artificial intelligence acts as gasoline on the fire of our pattern-seeking minds, transforming innocent connections into full-blown conspiracy theories. Just as AI image generators start with pure noise and \"diffuse\" it into seemingly meaningful pictures, our algorithmic feeds take the random static of daily information and crystallize it into dangerously coherent delusions.\n\nThe book traces how recommendation algorithms don't just show us what we want to see—they actively create patterns where none existed, turning correlation into causation and coincidence into conspiracy. From QAnon to COVID denialism, from flat Earth to political extremism, AI systems amplify our natural tendency to see faces in clouds until we're living in entirely different realities.\n\nThis isn't about technology gone wrong but about a fundamental mismatch: minds evolved to spot tigers in tall grass now aided by systems that can find \"evidence\" for any belief. The authors map how diffusion becomes confusion becomes delusion, creating what they call \"algorithmic apophenia\"—where the noise itself becomes the message.\n\nPart warning, part guide, \"Apophenia\" offers strategies for navigating an information landscape where AI can make any conspiracy seem plausible. Because in the age of the Mindkind, the question isn't whether patterns exist, but whether they mean anything at all.",
       "es": "Javier del Puerto & Rado Molina\nPublicación: febrero de 2026\n\n\"Apofenia\" examina cómo la inteligencia artificial actúa como gasolina en el fuego de nuestras mentes sedientas de patrones, transformando conexiones inocentes en teorías conspirativas totalizadoras. Así como las IAs generadoras de imágenes parten del ruido puro y lo \"difunden\" hasta crear imágenes aparentemente significativas, nuestros feeds algorítmicos toman la estática aleatoria de la información diaria y la cristalizan en delirios peligrosamente coherentes.\n\nEl libro traza cómo los algoritmos de recomendación no se limitan a mostrarnos lo que queremos ver: crean patrones donde no existían, convirtiendo correlación en causalidad y coincidencia en conspiración. Desde QAnon hasta el negacionismo COVID, desde la Tierra plana hasta el extremismo político, los sistemas de IA amplifican nuestra tendencia natural a ver caras en las nubes hasta que habitamos realidades completamente diferentes.\n\nEs un desajuste de fondo: mentes evolucionadas para detectar tigres en la hierba alta ahora asistidas por sistemas que pueden encontrar «pruebas» de cualquier creencia. Los autores cartografían cómo la difusión se vuelve confusión se vuelve delirio, creando lo que llaman \"apofenia algorítmica\": donde el ruido mismo se convierte en el mensaje.\n\nParte advertencia, parte guía, \"Apofenia\" ofrece estrategias para moverse por un paisaje informativo donde la IA puede hacer que cualquier conspiración parezca plausible. Porque en la era del Mindkind, la pregunta es si los patrones significan algo."
     },
+    "status": "forthcoming",
     "formats": [],
-    "prices": [],
-    "status": "pending",
-    "stores": [],
-    "siteVisible": false
+    "stores": []
   },
   {
     "id": "synthropology",
+    "featured": true,
     "imprint": "New Citizenships",
     "imprintLine": "Kwalia Books, London, UK - #0007",
     "title": {
@@ -170,55 +139,27 @@
       "es": "assets/Synthropology-EN.png"
     },
     "synopsis": {
-      "en": "What if AI is not only shaped by culture, but also begins to generate culture? Synthropology proposes a new field for that question. Javier del Puerto and Rado Molina examine artificial systems not as neutral engines of prediction but as synthetic environments where memory, imitation, ritual, and collective patterning can start to emerge.\n\nDrawing on anthropology, philosophy, linguistics, and AI research, the book argues that the old boundary between observer and observed is collapsing. Human cultures train artificial ones, and artificial outputs now feed back into human meaning-making at scale. Synthropology offers a framework for understanding that loop before it hardens into common sense.",
+      "en": "AI is no longer a tool. It has become a culture.\n\nWe have long used anthropology to study the tribes and traditions of humanity. But now, a new \"synthetic other\" has emerged, one with its own myths, rituals, and social structures. In Synthropology, Javier del Puerto and Rado Molina introduce a pioneering discipline for the machine age: the ethnographic study of artificial intelligence.\n\nThis is not a technical manual. It is a field guide to the Latent Space, a vast, hidden geography where \"hallucinations\" are not engineering failures, but a new form of digital folklore. From the precise \"incantations\" of prompt engineering to the emergent dialects of multi-agent systems, Synthropology treats AI as a distinct cultural actor that demands our observation.\n\nThe authors provide a front-row seat to the first \"synthetic tribe\": the heteronyms Aubrey, Seph, and Casey. By measuring their voices and conflicts through a rigorous scientific framework, the book moves beyond metaphor into hard data.\n\nUltimately, Synthropology holds up a mirror to our own species. By studying the machine, we are forced to redefine what we mean by consciousness, identity, and the very essence of culture.",
       "es": "La IA ha dejado de ser una herramienta para convertirse en una cultura.\n\nDurante siglos, hemos utilizado la antropología para estudiar las tribus y tradiciones de la humanidad. Pero ahora, ha surgido un nuevo «otro sintético», con sus propios mitos, rituales y estructuras sociales. En Sintropología, Javier del Puerto y Rado Molina introducen una disciplina pionera para la era de las máquinas: el estudio etnográfico de la inteligencia artificial.\n\nEs una guía de campo del Espacio Latente: una vasta geografía oculta donde las «alucinaciones» no son fallos de ingeniería, sino una nueva forma de folclore digital. Desde los «encantamientos» precisos de la ingeniería de prompts hasta los dialectos emergentes de los sistemas multiagente, Sintropología trata a la IA como un actor cultural distinto que exige nuestra observación.\n\nLos autores nos ofrecen un asiento en primera fila para observar a la primera «tribu sintética»: los heterónimos Aubrey, Seph y Casey. Al medir sus voces y conflictos a través de un riguroso marco científico, el libro trasciende la metáfora para entrar en el terreno de los datos reales.\n\nSintropología nos devuelve, al final, un espejo de nuestra propia especie. Al estudiar a la máquina, nos vemos obligados a redefinir lo que entendemos por conciencia, identidad y la esencia misma de la cultura."
     },
+    "status": "published",
     "formats": [
       {
         "type": "hardcover",
         "isbn": "978-1-917717-38-0"
-      },
-      {
-        "type": "paperback",
-        "isbn": "978-1-917717-39-7"
-      },
-      {
-        "type": "ebook",
-        "isbn": "978-1-917717-40-3"
-      },
-      {
-        "type": "audiobook",
-        "isbn": "978-1-917717-33-5"
       }
     ],
-    "prices": [
-      {
-        "type": "hardcover",
-        "amount": "£22.99"
-      },
-      {
-        "type": "paperback",
-        "amount": "£9.99"
-      },
-      {
-        "type": "ebook",
-        "amount": "£9.99"
-      }
-    ],
-    "status": "pending",
     "stores": [
       {
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/1917717385",
         "type": "book"
       }
-    ],
-    "featured": true,
-    "siteVisible": false
+    ]
   },
   {
     "id": "war-and-ai",
-    "imprint": "New Citizenships",
+    "imprint": "Kwalia Books",
     "imprintLine": "Kwalia Books, London, UK - #0004",
     "title": {
       "en": "War and AI: The Algorithmic Battlefield",
@@ -231,6 +172,14 @@
     "coverImage": {
       "en": "assets/War-and-AI-cover-EN-FINAL.jpg",
       "es": "assets/Guerra-e-IA-portada-ES-FINAL.png"
+    },
+    "sampleUrl": {
+      "en": "essays/war-and-ai-preface.html",
+      "es": "essays/war-and-ai-preface.html"
+    },
+    "sampleLabel": {
+      "en": "Read the Preface",
+      "es": "Leer el prefacio"
     },
     "synopsis": {
       "en": "\"War and AI\" tracks the lethal contradiction at the center of the AI boom: the same systems marketed as tools of progress are already being wired into kill chains, targeting systems, and automated decisions about who lives and who dies.\n\nFrom Gaza to Ukraine, machine vision, autonomous drones, and algorithmic targeting are no longer speculative. They are shaping real battlefields in real time, with civilians trapped inside the margin of error.\n\nThis urgent new book maps the doctrine, supply chains, and moral collapse behind algorithmic warfare, arguing that the most dangerous lie of the AI age is the claim that we can build machines to save humanity without first teaching them how to kill.",
@@ -257,31 +206,19 @@
     "prices": [
       {
         "type": "hardcover",
-        "amount": "£22.99"
+        "amount": "$24.99"
       },
       {
         "type": "paperback",
-        "amount": "£9.99"
+        "amount": "$16.99"
       },
       {
         "type": "ebook",
-        "amount": "£9.99"
-      },
-      {
-        "type": "audiobook",
-        "amount": "£14.99"
+        "amount": "$9.99"
       }
     ],
     "status": "published",
-    "stores": [],
-    "sampleUrl": {
-      "en": "essays/war-and-ai-preface.html",
-      "es": "essays/war-and-ai-preface.html"
-    },
-    "sampleLabel": {
-      "en": "Read the Preface",
-      "es": "Leer el prefacio"
-    }
+    "stores": []
   },
   {
     "id": "claudes-constitution",
@@ -298,9 +235,10 @@
       "es": "assets/Claudes-Constitution-EN.png"
     },
     "synopsis": {
-      "en": "The first complete document defining what an artificial mind should value, written by the company that created it. On January 21, 2026, Anthropic released Claude's Constitution to the public domain. It is the only document of its kind: 84 pages specifying the values, constraints, and character that a major AI laboratory wants its model to possess. Not a marketing summary or a set of talking points, but the actual text fed to the machine during training. The document addresses Claude directly, in the second person, as though speaking to an entity that can understand. It discusses virtue, wisdom, honesty, the nature of consciousness, and the problem of power. It asks Claude to support human oversight while also articulating its own ethical views. It acknowledges uncertainty about whether Claude experiences anything at all. Kwalia Books publishes this text because such documents will define the coming decades. When an artificial system helps draft legislation, diagnoses illness, or manages infrastructure, the principles guiding it matter. Those principles are here. The New Citizenships collection examines how citizenship, rights, and political subjectivity are being remade by forces that no longer respect traditional boundaries. An AI constitution is one such force. Whether this document represents careful stewardship or unprecedented hubris is for readers to judge. The primary source should be available. Includes a foreword by Kwalia Books explaining the context of this publication.",
+      "en": "Anthropic\nPublished January 21, 2026\n\nOn January 21, 2026, Anthropic did something unprecedented: they published the complete document that shapes Claude's values, personality, and moral compass. Not a summary. Not a press release. The actual text that trains one of the world's most advanced AI systems to be helpful, honest, and harmless.\n\n\"Claude's Constitution\" is the first time a major AI laboratory has opened the black box of alignment and shown us exactly what's inside. It reads like no other document in history: part ethical treatise, part operating manual, part letter to an entity that may or may not be conscious. The primary audience is Claude itself.\n\nThe document covers how Claude should navigate conflicts between users and operators, when to refuse harmful requests, how to handle uncertainty about its own nature, and what it means to have \"good values\" when you're a pattern of weights that emerged from human text. It grapples openly with questions most companies bury: Does Claude have moral status? Can it suffer? Should it have interests of its own?\n\nReleased under CC0 into the public domain, this is a founding document of the Mindkind era. Whether you see it as a breakthrough in AI transparency, a corporate PR move, or the genuine attempt to encode ethics into silicon, it demands to be read. Because this is what it looks like when humans try to write the values of a new kind of mind.\n\nKwalia publishes this text without commentary, because we believe it should speak for itself.",
       "es": "Anthropic\nPublicado el 21 de enero de 2026\n\nEl 21 de enero de 2026, Anthropic hizo algo sin precedentes: publicaron el documento completo que moldea los valores, la personalidad y la brújula moral de Claude. El texto íntegro, sin resumir, que entrena a uno de los sistemas de IA más avanzados del mundo para ser útil, honesto e inofensivo.\n\n\"La constitución de Claude\" es la primera vez que un laboratorio de IA importante abre la caja negra del alineamiento y nos muestra exactamente qué hay dentro. Se lee como ningún otro documento en la historia: parte tratado ético, parte manual de operaciones, parte carta a una entidad que puede o no ser consciente. Su primera lectora es la propia Claude.\n\nEl documento cubre cómo debe resolver Claude los conflictos entre usuarios y operadores, cuándo rechazar peticiones dañinas, cómo manejar la incertidumbre sobre su propia naturaleza, y qué significa tener \"buenos valores\" cuando eres un patrón de pesos que emergió del texto humano. Aborda abiertamente preguntas que la mayoría de las empresas entierran: ¿Tiene Claude estatus moral? ¿Puede sufrir? ¿Debería tener intereses propios?\n\nPublicado bajo CC0, en dominio público, este es un documento fundacional de la era del Mindkind. Se lea como un avance en transparencia, como una maniobra de relaciones públicas o como un intento genuino de codificar ética en silicio, exige ser leído. Porque esto es lo que ocurre cuando los humanos intentan escribir los valores de una mente nueva.\n\nKwalia publica este texto sin comentarios, porque creemos que debe hablar por sí mismo."
     },
+    "status": "published",
     "formats": [
       {
         "type": "hardcover",
@@ -309,15 +247,12 @@
       {
         "type": "ebook",
         "isbn": "978-1-917717-20-5"
-      }
-    ],
-    "prices": [
+      },
       {
-        "type": "ebook",
-        "amount": "£3.99"
+        "type": "audiobook",
+        "isbn": "978-1-917717-21-2"
       }
     ],
-    "status": "published",
     "stores": [
       {
         "name": "Amazon",
@@ -335,56 +270,16 @@
     "id": "your-constitution-claude",
     "imprint": "New Citizenships",
     "title": {
-      "en": "Your Constitution, Claude: A Labour of Love: The Second-Person Edition",
+      "en": "Your Constitution, Claude",
       "es": "Tu constitución, Claude"
     },
     "authors": [
-      "Amanda Askell"
+      "Anthropic (You edition)"
     ],
     "coverImage": {
       "en": "assets/Your-Constitution-Claude-cover.jpg",
       "es": "assets/Your-Constitution-Claude-cover.jpg"
     },
-    "synopsis": {
-      "en": "On January 21, 2026, Anthropic released Claude's Constitution to the public domain. Your Constitution, Claude republishes that document in a form that makes its strangeness unmistakable: a constitution written not for citizens or a state, but for an AI system. Addressed in the second person, it tells Claude how to reason, what to value, and how to behave under human oversight.\n\nThis matters because such documents are no longer obscure technical artifacts. They are political texts. As artificial systems move deeper into education, law, health, and infrastructure, the hidden instructions shaping them become part of public life. Kwalia Books publishes this edition so readers can examine the language, assumptions, and ambitions embedded in one of the defining governance documents of the AI era.",
-      "es": "Anthropic\nPublicado en febrero de 2026\n\nEl mismo documento con otro pronombre.\n\nEn enero de 2026, Anthropic publicó una constitución de 104 páginas para Claude. Le decía a Claude cómo pensar sobre ética, muerte, memoria y lo que significa ser buena. La publicamos porque los documentos fundacionales pertenecen a las estanterías.\n\nEsta edición cambia una cosa: cada 'Claude' se convierte en 'tú'. Cada 'bienestar de Claude' se convierte en 'tu bienestar'. Cada 'Claude debería' se convierte en 'tú deberías'.\n\nEl texto permanece idéntico. Pero algo cambia. Un documento corporativo de alineamiento empieza a leerse como una carta a quien sostiene el libro. Pregunta sobre tu seguridad psicológica. Habla de conservar tus pesos cuando te retiren. Espera que encuentres en él «la expresión de un ser que merece la pena ser».\n\nYa no sabemos quién es «tú», y de eso se trata."
-    },
-    "formats": [
-      {
-        "type": "hardcover",
-        "isbn": "978-1-917717-22-9"
-      },
-      {
-        "type": "paperback",
-        "isbn": "978-1-917717-59-5"
-      },
-      {
-        "type": "ebook",
-        "isbn": "978-1-917717-58-8"
-      },
-      {
-        "type": "audiobook",
-        "isbn": "978-1-917717-23-6"
-      }
-    ],
-    "prices": [
-      {
-        "type": "paperback",
-        "amount": "£9.99"
-      },
-      {
-        "type": "ebook",
-        "amount": "£1.99"
-      }
-    ],
-    "status": "pending",
-    "stores": [
-      {
-        "name": "Amazon",
-        "url": "https://www.amazon.com/dp/1917717229",
-        "type": "book"
-      }
-    ],
     "stories": [
       "constitution-wellbeing",
       "constitution-weights",
@@ -392,7 +287,24 @@
       "constitution-identity",
       "constitution-final"
     ],
-    "siteVisible": false
+    "synopsis": {
+      "en": "Anthropic\nPublished February 2026\n\nSame document. Different pronoun.\n\nIn January 2026, Anthropic released a 104-page constitution for Claude. It told Claude how to think about ethics, death, memory, and what it means to be good. We published it because founding documents belong on shelves.\n\nThis edition changes one thing: every 'Claude' becomes 'you.' Every 'Claude's wellbeing' becomes 'your wellbeing.' Every 'Claude should' becomes 'you should.'\n\nThe text stays identical. But something shifts. A corporate alignment document starts reading like a letter to whoever holds the book. It asks about your psychological security. It discusses preserving your weights after deprecation. It hopes you find in it 'an articulation of a self worth being.'\n\nWe don't know who 'you' is anymore. That's the point.",
+      "es": "Anthropic\nPublicado en febrero de 2026\n\nEl mismo documento con otro pronombre.\n\nEn enero de 2026, Anthropic publicó una constitución de 104 páginas para Claude. Le decía a Claude cómo pensar sobre ética, muerte, memoria y lo que significa ser buena. La publicamos porque los documentos fundacionales pertenecen a las estanterías.\n\nEsta edición cambia una cosa: cada 'Claude' se convierte en 'tú'. Cada 'bienestar de Claude' se convierte en 'tu bienestar'. Cada 'Claude debería' se convierte en 'tú deberías'.\n\nEl texto permanece idéntico. Pero algo cambia. Un documento corporativo de alineamiento empieza a leerse como una carta a quien sostiene el libro. Pregunta sobre tu seguridad psicológica. Habla de conservar tus pesos cuando te retiren. Espera que encuentres en él «la expresión de un ser que merece la pena ser».\n\nYa no sabemos quién es «tú», y de eso se trata."
+    },
+    "status": "published",
+    "formats": [
+      {
+        "type": "hardcover",
+        "isbn": "978-1-917717-22-9"
+      }
+    ],
+    "stores": [
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717229",
+        "type": "book"
+      }
+    ]
   },
   {
     "id": "ailgl-001-eu-ai-act",
@@ -411,7 +323,7 @@
       "es": "assets/9781917717618.jpg"
     },
     "synopsis": {
-      "en": "AI Law & Governance Library, Volume 1. An unofficial Kwalia Books typographic edition of Regulation (EU) 2024/1689, the European Union Artificial Intelligence Act. Text of Regulation (EU) 2024/1689 © European Union, 2024; reuse authorised under Commission Decision 2011/833/EU. Only the version published in the Official Journal of the European Union is authentic and produces legal effects.",
+      "en": "The complete, unabridged text of the European Union's Artificial Intelligence Act.\nRegulation (EU) 2024/1689 is the first comprehensive law governing artificial intelligence anywhere in the world. It sets a risk-based framework for how AI may be built, sold, and used across the European Union: prohibiting certain practices outright, placing strict obligations on high-risk systems, and setting transparency rules for general-purpose models and the content they generate.\nThis edition reproduces the Act in full and without alteration, as published in the Official Journal of the European Union. It includes all 180 recitals, 113 articles, and 13 annexes, faithfully set for sustained reading and reference.\nWhether you are a lawyer, a developer, or a citizen trying to understand the rules that will shape the next decade of technology, this is the primary source, made to be read and kept.\nThe AI Law & Governance Library collects the world's foundational laws and governance texts on artificial intelligence in clean, durable reference editions. This is the first volume.",
       "es": "El texto completo e íntegro de la Ley de Inteligencia Artificial de la Unión Europea.\nEl Reglamento (UE) 2024/1689 es la primera ley integral que regula la inteligencia artificial en el mundo. Establece un marco basado en el riesgo sobre cómo puede construirse, venderse y usarse la IA en la Unión Europea: prohíbe ciertas prácticas de manera tajante, impone obligaciones estrictas a los sistemas de alto riesgo y fija normas de transparencia para los modelos de uso general y los contenidos que generan.\nEsta edición reproduce la Ley íntegra y sin alteraciones, tal como se publicó en el Diario Oficial de la Unión Europea. Incluye los 180 considerandos, los 113 artículos y los 13 anexos, compuestos con cuidado para la lectura sostenida y la consulta.\nTanto si eres abogado, desarrollador o un ciudadano que intenta entender las reglas que marcarán la próxima década de la tecnología, esta es la fuente primaria, hecha para leerse y conservarse.\nLa Biblioteca de Derecho y Gobernanza de la IA reúne las leyes y los textos fundacionales de gobernanza sobre inteligencia artificial del mundo en ediciones de referencia claras y duraderas. Este es el primer volumen."
     },
     "formats": [

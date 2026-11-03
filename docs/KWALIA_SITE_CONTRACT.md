@@ -40,21 +40,32 @@ Supabase query or an automatic cross-repository deployment trigger. Never edit
 generated book data directly. CI validates artifact hashes and mapping/selection
 regressions; the local `--check` verifies against the recorded catalogue input.
 
-The explicit channel test and field mapping are in the builder header. Neither a
-routing plan nor lifecycle/sale flags alone prove channel availability. Spanish
-fields use the existing English fallback when missing. `siteVisible: false` rows
-are filtered before cards, modals and deep links; Bliss and legacy essay
-recommendation targets are retained this way until verified channel evidence exists. This run creates no dedicated Bliss page.
+The explicit channel test and field mapping are in the builder header. A primary
+row is visible when that test passes OR its approved overlay row has
+`legacyVisible: true`. The latter is transitional and ends when catalogue channel
+evidence is backfilled for those rows. Missing evidence is a catalogue gap, not
+proof that an approved legacy title is off sale. Routing plans and lifecycle/sale
+flags alone still do not prove channel availability.
 
-The eight former site rows are preserved as an approved migration snapshot in
-the overlay. `--baseline --output /tmp/books-baseline.json` reproduces them byte
-for byte, including their original English copy and USD prices. That mode is a
-migration proof, not the normal catalogue mapping. Normal generation uses
-catalogue English copy/GBP prices and hides rows without channel evidence;
-the source manifest lists each decision. Existing presentation art, Spanish copy,
-sample controls and approved store URLs remain overlay data. New retail links
-use explicit catalogue ASINs only for formats marked available; a print ASIN in
-notes is not sufficient while its format is still publishing.
+All eight approved legacy rows keep every public field verbatim and in production
+order: English/Spanish text, authors, formats, prices, status, art, links and sample
+controls. Approved legacy values win over conflicting catalogue values until the
+Founder approves replacement. Channel backfill does not approve copy changes.
+Apophenia remains the identical forthcoming card. The overlay visibility control
+is stripped from generated public data. `--baseline` reproduces these same eight
+public records byte for byte; normal generation also preserves them and adds
+Volume 2 as the ninth visible card. PAYLOAD stays on its existing fiction surface;
+its missing-channel primary record remains hidden. Both Bliss rows remain
+`siteVisible: false`, with `stores: []`; there is no new Bliss page.
+
+For new titles, catalogue English copy/GBP prices and approved presentation fields
+are mapped as documented in the builder. Missing Spanish uses the existing English
+fallback. New retail links use explicit catalogue ASINs only for live formats;
+Volume 2 has one Kindle link, with no print link while print is still publishing.
+The source manifest records channels and the legacy exception separately for each
+row, without inventing channel status. Retire the legacy visibility exception per
+row after verified channel backfill; retain approved field precedence until the
+Founder approves any differences.
 
 Undo before merge: close the catalogue and website PRs. Retire the builder if
 the homepage catalogue moves to another reviewed source; remove its overlay,

@@ -1,36 +1,28 @@
 #!/usr/bin/env python3
 """Build the homepage catalogue; Python 3 stdlib only.
 
-Selection: kwalia-books, English primary records, with explicit channel status
-live/updated, or partially_live with a per-format KDP status of live. A routing
-plan, published lifecycle or enable_for_sale alone is not channel evidence.
-Explicit channel evidence takes precedence over stale title-level sale/stage
-flags (Volume 2). Fiamma never appears. Missing-channel rows are reported, not
-promoted by inference. Spanish editions are represented by the approved overlay,
-not duplicate primary cards. Primary rows without verified channels are retained
-with siteVisible=false (including Bliss and legacy essay recommendation targets);
-the homepage filters that flag before rendering/deep links.
+Selection: kwalia-books English primary records are visible with explicit channel
+status live/updated, or partially_live with a per-format KDP status of live, OR
+approved overlay legacyVisible=true. The legacy visibility exception is
+transitional: retire it when catalogue channel evidence is backfilled for those
+rows. Missing evidence never proves an approved legacy title is off sale.
+Routing plans, lifecycle and sale flags alone are not channel evidence. Fiamma
+and translation duplicates never appear. Other missing-channel rows are retained
+with siteVisible=false for essay readers; Bliss stores remain empty.
 
-Field mapping:
-| Site field | Source |
-| id | title_id |
-| imprint, volume | series_title (else approved overlay/imprint), series_number/ailgl_volume |
-| imprintLine, featured, sampleUrl, sampleLabel, stories | approved site overlay only |
-| title.en | title + ': ' + subtitle, except Library titles use title alone |
-| title.es, synopsis.es | approved site overlay; absent => existing English fallback |
-| authors | authors (split the catalogue collective ' & ') |
-| synopsis.en | blurb_300 verbatim |
-| formats | isbn_hc/pb/eb/audio, dashed; inactive audio excluded |
-| prices | price_hc/pb/eb/audio_gbp, formatted as £x.xx |
-| coverImage | assets/<hc else pb else eb else audio ISBN>.jpg; existing art in overlay |
-| stores | explicit KDP ASINs (per-format live only), else approved legacy links;
-|        | audiobook-only: catalogue platform_links only, otherwise [] |
-| status | published when explicit channel test passes, otherwise pending |
+Field precedence: an approved legacy row supplies ALL public fields,
+including English/Spanish copy, status, formats, prices and store links, verbatim.
+Catalogue differences require Founder approval before replacement; channel
+backfill alone does not approve new public copy. Apophenia stays forthcoming.
+The overlay's legacyVisible control is never emitted as a public book field.
+For new rows: title/subtitle, authors, blurb_300, series/volume, ISBN formats and
+GBP prices come from the catalogue. Art, Spanish copy and sample controls come
+from presentation; absent Spanish uses the existing English fallback. Stores use
+explicit per-format live KDP ASINs, else approved URLs; audio uses platform_links.
 
---baseline reproduces the pre-migration eight-row snapshot byte for byte. It is
-a migration proof only, NOT the normal selection/mapping: the old forthcoming
-Apophenia card, English copy and USD prices conflict with those rules. Normal
-generation reports excluded rows and never uses snapshot English copy/prices.
+--baseline reproduces the approved eight public rows byte for byte, stripping
+only the overlay visibility control. Normal generation preserves these same
+rows in the same order and appends new catalogue titles.
 The source manifest records the exact clean catalogue commit and content hash.
 Run explicitly after catalogue changes; --check detects stale committed output.
 """
@@ -69,6 +61,10 @@ def dashed(isbn):
     return f"{digits[:3]}-{digits[3]}-{digits[4:10]}-{digits[10:12]}-{digits[12]}"
 
 
+def legacy_public(row):
+    return {key: value for key, value in row.items() if key != "legacyVisible"}
+
+
 def presentation_for(tid, overlay):
     old = next((r for r in overlay["legacy_rows"] if r["id"] == tid), {})
     fields = ("imprint", "imprintLine", "coverImage", "featured", "sampleUrl", "sampleLabel", "stories", "stores")
@@ -87,6 +83,12 @@ def presentation_for(tid, overlay):
 
 def build_row(row, overlay, channels):
     tid = row["title_id"]
+    old = next((r for r in overlay["legacy_rows"] if r["id"] == tid), {})
+    if old:
+        book = legacy_public(old)
+        if not channels and old.get("legacyVisible") is not True:
+            book["siteVisible"] = False
+        return book
     view = presentation_for(tid, overlay)
     library = row.get("series_title") == "AI Law & Governance Library"
     title = row["title"]
@@ -138,20 +140,24 @@ def generate(rows, overlay):
     for row in rows:
         tid = row["title_id"]
         channels = live_channels(row)
+        legacy = next((r for r in overlay["legacy_rows"] if r["id"] == tid), {})
+        legacy_visible = legacy.get("legacyVisible") is True
         reason = None
         if row.get("imprint") != "kwalia-books":
             reason = "other imprint"
         elif row.get("language") not in (None, "eng", "en"):
             reason = "translation edition; approved bilingual overlay is the site surface"
-        elif not row.get("blurb_300"):
+        elif not row.get("blurb_300") and not legacy_visible:
             reason = "no approved English synopsis"
         if reason:
             decisions.append({"id": tid, "included": False, "reason": reason})
             continue
         book = build_row(row, overlay, channels)
         books.append(book)
-        decisions.append({"id": tid, "included": True, "visible": bool(channels), "channels": channels,
-                          **({"reason": "no explicit active channel; lifecycle/sale flag alone is insufficient"} if not channels else {})})
+        decisions.append({"id": tid, "included": True, "visible": bool(channels) or legacy_visible, "channels": channels,
+                          "legacyVisible": legacy_visible,
+                          **({"reason": "approved legacy visibility; transitional until catalogue channel backfill"} if legacy_visible and not channels else
+                             {"reason": "no explicit active channel; lifecycle/sale flag alone is insufficient"} if not channels else {})})
     order = {r["id"]: n for n, r in enumerate(overlay["legacy_rows"])}
     books.sort(key=lambda row: order.get(row["id"], len(order)))
     return books, decisions
@@ -176,7 +182,7 @@ def main():
     rows = json.loads(source)
     overlay = json.loads(args.overrides.read_bytes())
     if args.baseline:
-        output = encode(overlay["legacy_rows"])
+        output = encode([legacy_public(row) for row in overlay["legacy_rows"]])
         if hashlib.sha256(output).hexdigest() != overlay["baseline_sha256"]:
             parser.error("Baseline no longer matches the original eight-row snapshot.")
         decisions = []
