@@ -31,7 +31,7 @@ const root = path.resolve(__dirname, '..');
         }
         const page = await context.newPage();
         page.on('pageerror', error => errors.push(error.message));
-        await page.goto('https://kwalia.ai/#udair', { waitUntil: 'domcontentloaded' });
+        await page.goto('https://kwalia.ai/#ailgl-001-eu-ai-act', { waitUntil: 'domcontentloaded' });
         await page.waitForSelector('#book-modal [href*="amazon"]');
         await page.waitForFunction(() => window.google_tag_manager && window.google_tag_manager['GTM-KQZD8VZG']);
         // Wait for the GA destination to initialize before checking its wire event.
@@ -59,12 +59,12 @@ const root = path.resolve(__dirname, '..');
         for (const lang of ['en', 'es']) {
             // Use the site's actual card click path and both language versions.
             await page.evaluate(lang => { localStorage.setItem('kwalia-lang', lang); }, lang);
-            await page.evaluate(() => history.replaceState(null, '', '/#udair'));
+            await page.evaluate(() => history.replaceState(null, '', '/#ailgl-001-eu-ai-act'));
             await page.reload({ waitUntil: 'domcontentloaded' });
             await page.waitForSelector('#book-modal [href*="amazon"]');
             await page.locator('#close-modal').click();
             for (const book of books) {
-                if (!(book.stores || []).length) continue;
+                if (book.siteVisible === false || !(book.stores || []).length) continue;
                 await page.locator(`[data-book-id="${book.id}"]`).click();
                 for (const [index, store] of book.stores.entries()) {
                     if (store.name === 'Amazon') assert.equal(new URL(store.url).hostname, 'www.amazon.com');
@@ -86,18 +86,18 @@ const root = path.resolve(__dirname, '..');
         }
         await waitForPurchases(checked);
         // A catalogue click after a sample must not inherit that sample's title.
-        await page.evaluate(() => history.replaceState(null, '', '/#udair'));
+        await page.evaluate(() => history.replaceState(null, '', '/#ailgl-001-eu-ai-act'));
         await page.reload({ waitUntil: 'domcontentloaded' });
         await page.waitForSelector('#book-modal [href*="amazon"]');
-        const udair = books.find(b => b.id === 'udair');
+        const seedBook = books.find(b => b.id === 'ailgl-001-eu-ai-act');
         await page.evaluate(() => window.dataLayer.push({ story_read: 'Previous sample' }));
-        await clickAndCheck('[data-store-index="0"]', udair, udair.stores[0]);
+        await clickAndCheck('[data-store-index="0"]', seedBook, seedBook.stores[0]);
         for (let i = 0; i < 100 && hits.filter(h => h.get('en') === 'purchase_intent').length < checked + 1; i++) await page.waitForTimeout(100);
         const purchases = hits.filter(h => h.get('en') === 'purchase_intent');
         assert.equal(purchases.length, checked + 1, 'Exactly one GA4 purchase_intent request per click');
         assert(purchases.every(h => h.get('tid') === 'G-N4RP2L7569'));
-        assert(purchases.some(h => h.get('ep.book_title') === udair.title.en && h.get('ep.store_name') === 'Amazon'));
-        assert(purchases.some(h => h.get('ep.book_title') === 'Your Constitution, Claude'), 'Reader attribution must reach GA4');
+        assert(purchases.some(h => h.get('ep.book_title') === seedBook.title.en && h.get('ep.store_name') === 'Amazon'));
+        assert(purchases.some(h => h.get('ep.book_title') === books.find(b => b.id === 'your-constitution-claude').title.en), 'Reader attribution must reach GA4');
         assert.deepEqual(errors, []);
         console.log(JSON.stringify({ mode: process.env.KWALIA_TEST_LIVE ? 'live' : 'local overlay', buttonsChecked: checked + 1, ga4: 'G-N4RP2L7569', event: 'purchase_intent', interceptedPurchaseEvents: purchases.length, errors }, null, 2));
     } finally {

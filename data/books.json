@@ -385,6 +385,13 @@
         "type": "book"
       }
     ],
+    "stories": [
+      "constitution-wellbeing",
+      "constitution-weights",
+      "constitution-existential",
+      "constitution-identity",
+      "constitution-final"
+    ],
     "siteVisible": false
   },
   {

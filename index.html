@@ -482,6 +482,7 @@
             // Data variables - loaded from JSON files
             let content = {};
             let bookCatalogue = [];
+            let readerBookCatalogue = [];
             let fictionCatalogue = [];
             let heteronyms = [];
             let shortStories = [];
@@ -513,6 +514,7 @@
 
                     content = { en: enContent, es: esContent };
                     bookCatalogue = books.filter(book => book.siteVisible !== false);
+                    readerBookCatalogue = books;
                     fictionCatalogue = fiction;
                     heteronyms = hets;
                     shortStories = stories;
@@ -890,7 +892,7 @@
                 // --- BUTTON SETUP ---
                 const buyBtn = document.getElementById('reader-buy-link');
 
-                const sourceBook = [...bookCatalogue, ...fictionCatalogue].find(book => (book.stories || []).includes(storyId));
+                const sourceBook = [...readerBookCatalogue, ...fictionCatalogue].find(book => (book.stories || []).includes(storyId));
                 const amazonStore = sourceBook && (sourceBook.stores || []).find(store => store.name === 'Amazon' && store.type === 'book');
                 buyBtn.hidden = !amazonStore;
                 buyBtn.onclick = null;

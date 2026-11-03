@@ -15,7 +15,7 @@ Field mapping:
 | Site field | Source |
 | id | title_id |
 | imprint, volume | series_title (else approved overlay/imprint), series_number/ailgl_volume |
-| imprintLine, featured, sampleUrl, sampleLabel | approved site overlay only |
+| imprintLine, featured, sampleUrl, sampleLabel, stories | approved site overlay only |
 | title.en | title + ': ' + subtitle, except Library titles use title alone |
 | title.es, synopsis.es | approved site overlay; absent => existing English fallback |
 | authors | authors (split the catalogue collective ' & ') |
@@ -71,7 +71,7 @@ def dashed(isbn):
 
 def presentation_for(tid, overlay):
     old = next((r for r in overlay["legacy_rows"] if r["id"] == tid), {})
-    fields = ("imprint", "imprintLine", "coverImage", "featured", "sampleUrl", "sampleLabel", "stores")
+    fields = ("imprint", "imprintLine", "coverImage", "featured", "sampleUrl", "sampleLabel", "stories", "stores")
     result = {key: old[key] for key in fields if key in old}
     for key in ("title", "synopsis"):
         if "es" in old.get(key, {}):
@@ -125,7 +125,7 @@ def build_row(row, overlay, channels):
         # Preserve approved site URLs rather than deriving an unverified retailer ID
         # from an ISBN alone. Volume 1's ISBN-10 link is already in this overlay.
         book["stores"] = view.get("stores", [])
-    for key in ("featured", "sampleUrl", "sampleLabel"):
+    for key in ("featured", "sampleUrl", "sampleLabel", "stories"):
         if key in view:
             book[key] = view[key]
     if not channels:

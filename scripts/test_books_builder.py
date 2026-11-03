@@ -56,6 +56,13 @@ class BooksBuilderTests(unittest.TestCase):
         self.assertEqual(books[0]["stores"], [])
         self.assertEqual(books[0]["formats"][0]["type"], "audiobook")
 
+    def test_hidden_reader_preserves_approved_story_links(self):
+        old = next(r for r in self.overlay["legacy_rows"] if r["id"] == "your-constitution-claude")
+        self.row["title_id"] = old["id"]
+        book = build_row(self.row, self.overlay, [])
+        self.assertEqual(book["stories"], old["stories"])
+        self.assertIs(book["siteVisible"], False)
+
     def test_english_copy_override_refused(self):
         overlay = copy.deepcopy(self.overlay)
         overlay["presentation"]["example"] = {"synopsis": {"en": "Unauthorized"}}
