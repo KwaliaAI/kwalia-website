@@ -827,8 +827,8 @@
                 }
 
                 const storeLinkHTML = (store, index) => `<a href="${store.url}" data-store-index="${index}" id="buy-${book.id}-${store.type}-${index}" target="_blank" rel="noopener noreferrer" class="${book.imprint === 'Kwalia Bliss' ? 'font-f2 text-sm text-c2/80 hover:text-c3' : 'font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity'}">${store.name}</a>`;
-                const bookStoresHTML = (book.stores || []).map((store, index) => store.type === 'book' ? storeLinkHTML(store, index) : '').join(' ');
-                const audioStoresHTML = (book.stores || []).map((store, index) => store.type === 'audiobook' ? storeLinkHTML(store, index) : '').join(' ');
+                const bookStoresHTML = (book.stores || []).map((store, index) => store.type === 'book' ? storeLinkHTML(store, index) : '').filter(Boolean).join(' ');
+                const audioStoresHTML = (book.stores || []).map((store, index) => store.type === 'audiobook' ? storeLinkHTML(store, index) : '').filter(Boolean).join(' ');
                 const formatsHTML = (book.formats || []).map(format => `<div class="font-f2 text-sm text-c2/80"><span class="font-bold">${content[lang][`format.${format.type}`]}:</span> ${format.isbn}</div>`).join('');
                 const pricesHTML = (book.prices || []).map(price => `<div class="font-f2 text-sm text-c2/80"><span class="font-bold">${content[lang][`format.${price.type}`]}:</span> ${price.amount}</div>`).join('');
                 const detailsHTML = [
