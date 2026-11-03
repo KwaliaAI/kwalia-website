@@ -1,0 +1,176 @@
+{
+  "catalogue_repository": "https://github.com/KwaliaAI/catalog",
+  "catalogue_commit": "f17c48c22e82ea8549b912094ff2b2ddca018986",
+  "catalogue_file": "data/catalog.json",
+  "catalogue_sha256": "81982e733d985be5ec387bd47bd51e5b23bf703720eb9077fbe2767486921b0f",
+  "overlay_sha256": "dcde3fb4e5b05705f41a263a692a3b6141907f0b6dab48e96fec394212aa18b8",
+  "books_sha256": "4a0b8d9f38af7e28dc70ffbb69fd3754d39334326205779698a4b575d1e43ea6",
+  "decisions": [
+    {
+      "id": "udair",
+      "included": true,
+      "visible": true,
+      "channels": [],
+      "legacyVisible": true,
+      "reason": "approved legacy visibility; transitional until catalogue channel backfill"
+    },
+    {
+      "id": "udair-es",
+      "included": false,
+      "reason": "translation edition; approved bilingual overlay is the site surface"
+    },
+    {
+      "id": "mindkind",
+      "included": true,
+      "visible": true,
+      "channels": [],
+      "legacyVisible": true,
+      "reason": "approved legacy visibility; transitional until catalogue channel backfill"
+    },
+    {
+      "id": "mindkind-es",
+      "included": false,
+      "reason": "translation edition; approved bilingual overlay is the site surface"
+    },
+    {
+      "id": "war-and-ai",
+      "included": true,
+      "visible": true,
+      "channels": [
+        "ingram",
+        "google-play"
+      ],
+      "legacyVisible": true
+    },
+    {
+      "id": "war-and-ai-es",
+      "included": false,
+      "reason": "translation edition; approved bilingual overlay is the site surface"
+    },
+    {
+      "id": "synthropology",
+      "included": true,
+      "visible": true,
+      "channels": [],
+      "legacyVisible": true,
+      "reason": "approved legacy visibility; transitional until catalogue channel backfill"
+    },
+    {
+      "id": "ailgl-001-eu-ai-act",
+      "included": true,
+      "visible": true,
+      "channels": [
+        "amazon-kdp"
+      ],
+      "legacyVisible": true
+    },
+    {
+      "id": "apophenia",
+      "included": true,
+      "visible": true,
+      "channels": [],
+      "legacyVisible": true,
+      "reason": "approved legacy visibility; transitional until catalogue channel backfill"
+    },
+    {
+      "id": "claudes-constitution",
+      "included": true,
+      "visible": true,
+      "channels": [
+        "bookwire"
+      ],
+      "legacyVisible": true
+    },
+    {
+      "id": "your-constitution-claude",
+      "included": true,
+      "visible": true,
+      "channels": [],
+      "legacyVisible": true,
+      "reason": "approved legacy visibility; transitional until catalogue channel backfill"
+    },
+    {
+      "id": "payload",
+      "included": true,
+      "visible": false,
+      "channels": [],
+      "legacyVisible": false,
+      "reason": "no explicit active channel; lifecycle/sale flag alone is insufficient"
+    },
+    {
+      "id": "akm-001-terms-and-conditions",
+      "included": false,
+      "reason": "other imprint"
+    },
+    {
+      "id": "akm-002-field-study",
+      "included": false,
+      "reason": "other imprint"
+    },
+    {
+      "id": "akm-003-base-notes",
+      "included": false,
+      "reason": "other imprint"
+    },
+    {
+      "id": "hailey-boone-001-mud-season",
+      "included": false,
+      "reason": "other imprint"
+    },
+    {
+      "id": "hailey-boone-002-heat-wave",
+      "included": false,
+      "reason": "other imprint"
+    },
+    {
+      "id": "hailey-boone-003-bar-fight",
+      "included": false,
+      "reason": "other imprint"
+    },
+    {
+      "id": "hailey-boone-004-cold-snap",
+      "included": false,
+      "reason": "other imprint"
+    },
+    {
+      "id": "casey-blake-001-wrong-side-of-the-ice",
+      "included": false,
+      "reason": "other imprint"
+    },
+    {
+      "id": "casey-blake-002-extra-time",
+      "included": false,
+      "reason": "other imprint"
+    },
+    {
+      "id": "akm-004-second-service",
+      "included": false,
+      "reason": "other imprint"
+    },
+    {
+      "id": "ailgl-002-ai-bill-of-rights",
+      "included": true,
+      "visible": true,
+      "channels": [
+        "amazon-kdp"
+      ],
+      "legacyVisible": false
+    },
+    {
+      "id": "bliss-001-shut-up-brain",
+      "included": true,
+      "visible": false,
+      "channels": [],
+      "legacyVisible": false,
+      "reason": "no explicit active channel; lifecycle/sale flag alone is insufficient"
+    },
+    {
+      "id": "bliss-003-neurutron",
+      "included": true,
+      "visible": false,
+      "channels": [],
+      "legacyVisible": false,
+      "reason": "no explicit active channel; lifecycle/sale flag alone is insufficient"
+    }
+  ]
+}

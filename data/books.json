@@ -362,5 +362,165 @@
         "type": "book"
       }
     ]
+  },
+  {
+    "id": "payload",
+    "imprint": "Kwalia Books",
+    "title": {
+      "en": "PAYLOAD: Short Stories"
+    },
+    "authors": [
+      "Alden Pierce"
+    ],
+    "coverImage": {
+      "en": "assets/9781917717168.jpg"
+    },
+    "synopsis": {
+      "en": "PAYLOAD: Short Stories by Alden Pierce PAYLOAD: Short Stories is a collection of razor-bright, deeply human tales about ordinary people caught in the quiet emergencies of modern life. From teenagers reaching for a world beyond their zip code, to teachers, nurses, and night-shift workers carrying unspoken burdens, these stories illuminate the small, relentless pressures that shape who we become. Alden Pierce writes with exquisite clarity and tenderness, revealing the fault lines running beneath our daily routines. This is a book about survival, connection, and the fragile, ferocious hope that keeps us moving forward. In these sharp, compassionate stories, Alden Pierce reveals the quiet catastrophes and small salvations that shape ordinary lives. Tender, tense, and unflinchingly human, PAYLOAD: Short Stories captures the moments when everything breaks, and the moments when we find a way through. About the author Alden Pierce is the literary heteronym of Kwalia Books: AI-drafted, human-edited fiction focused on mediated speech, invisible labor, and the ethics of small choices. Pierce’s line is cool, precise, and unsentimental and writes what the editors call “administrative realism”. The idea for this author stems from Kwalia’s primary objective: to succeed in creating something truly new and cutting-edge, and to examine whether a tool such as artificial intelligence can be brought to the very boundary of human creativity. This author is born from the collaboration between human and artificial ingenuity, from the desire to establish a new editorial reality built, for the first time, from numbers and then from letters. He is abstract, profound, and intricately entangled. A creature which, after months of design, finally has a name: Alden Pierce. Instagram: @kwalia.ai https://kwalia.ai/"
+    },
+    "formats": [
+      {
+        "type": "paperback",
+        "isbn": "978-1-917717-16-8"
+      },
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-17-5"
+      },
+      {
+        "type": "audiobook",
+        "isbn": "978-1-917717-18-2"
+      }
+    ],
+    "prices": [
+      {
+        "type": "ebook",
+        "amount": "£4.99"
+      },
+      {
+        "type": "audiobook",
+        "amount": "£14.99"
+      }
+    ],
+    "status": "pending",
+    "stores": [],
+    "siteVisible": false
+  },
+  {
+    "id": "ailgl-002-ai-bill-of-rights",
+    "imprint": "AI Law & Governance Library",
+    "volume": 2,
+    "title": {
+      "en": "Blueprint for an AI Bill of Rights",
+      "es": null
+    },
+    "authors": [
+      "Kwalia Books"
+    ],
+    "coverImage": {
+      "en": "assets/9781917717700.jpg"
+    },
+    "synopsis": {
+      "en": "FIVE PRINCIPLES FOR AN AUTOMATED AGE\n\nIn October 2022 the White House Office of Science and Technology Policy set down what every American should be able to expect from the automated systems that increasingly decide who gets hired, housed, treated, and heard. Its answer takes the form of five protections, from safe and effective systems to the right to a human alternative when an automated decision goes wrong.\n\nThis edition reproduces the unabridged text, including the technical companion that turns each principle into concrete expectations for the people who build, deploy, and govern these systems, and the full record of the year of public consultation behind it.\n\nThe Blueprint is non-binding by design, and it has shaped how the United States argues about rights, fairness, and accountability in the age of artificial intelligence. Read it here in full, at first hand and in the source.\n\nThe AI Law & Governance Library collects the world's foundational laws and governance texts on artificial intelligence in clean, durable reference editions. This is Volume 2.",
+      "es": null
+    },
+    "formats": [
+      {
+        "type": "hardcover",
+        "isbn": "978-1-917717-70-0"
+      },
+      {
+        "type": "paperback",
+        "isbn": "978-1-917717-71-7"
+      },
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-72-4"
+      }
+    ],
+    "prices": [
+      {
+        "type": "hardcover",
+        "amount": "£24.99"
+      },
+      {
+        "type": "paperback",
+        "amount": "£11.99"
+      },
+      {
+        "type": "ebook",
+        "amount": "£4.99"
+      }
+    ],
+    "status": "published",
+    "stores": [
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0HQ569Y93",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "id": "bliss-001-shut-up-brain",
+    "imprint": "Kwalia Bliss",
+    "title": {
+      "en": "Shut Up, Brain: 4 Hours of Deep Brown Noise for Sleep"
+    },
+    "authors": [
+      "Kwalia Bliss"
+    ],
+    "coverImage": {
+      "en": "assets/9781917717731.jpg"
+    },
+    "synopsis": {
+      "en": "Your brain has plenty to say. This audiobook has nothing to add. Just over four hours of deep brown noise, made by synthesis and held at a steady level. There is no narration or music. The sound runs continuously across eighty tracks of three minutes and five seconds, with a short fade at the beginning and end of the full work. Use it as a background for winding down, studying or a noisy room. Listen at a comfortable low volume. Produced by Kwalia Bliss."
+    },
+    "formats": [
+      {
+        "type": "audiobook",
+        "isbn": "978-1-917717-73-1"
+      }
+    ],
+    "prices": [
+      {
+        "type": "audiobook",
+        "amount": "£7.99"
+      }
+    ],
+    "status": "pending",
+    "stores": [],
+    "siteVisible": false
+  },
+  {
+    "id": "bliss-003-neurutron",
+    "imprint": "Kwalia Bliss",
+    "title": {
+      "en": "Neurutron: 4 Hours of Deep Engine Vibration, Slowing to Dock. Headphones Required."
+    },
+    "authors": [
+      "Kwalia Bliss"
+    ],
+    "coverImage": {
+      "en": "assets/9781917717755.jpg"
+    },
+    "synopsis": {
+      "en": "Headphones required. This recording contains very low bass that built-in phone and laptop speakers may not reproduce. You are in a bunk on a long run home. The engines never stop, and after a while they are the quiet. This is just over four hours of that: a deep, slow vibration with a pulse inside it, held steady for most of the journey and then easing down over the final twenty-four minutes and forty seconds as the ship comes in to dock. It was made by synthesis. Nothing here was recorded on a ship. Eighty tracks of three minutes and five seconds, continuous, with a soft beginning and a gradual stop. Use it for sleep, for long work, or for a room that is too quiet. Keep the volume comfortable. Produced by Kwalia Bliss."
+    },
+    "formats": [
+      {
+        "type": "audiobook",
+        "isbn": "978-1-917717-75-5"
+      }
+    ],
+    "prices": [
+      {
+        "type": "audiobook",
+        "amount": "£7.99"
+      }
+    ],
+    "status": "pending",
+    "stores": [],
+    "siteVisible": false
   }
 ]

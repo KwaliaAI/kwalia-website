@@ -18,6 +18,9 @@ jobs:
       - name: Run indexing contract regression tests
         run: python3 scripts/test_indexing_contract.py
 
+      - name: Validate generated book data and catalogue selection
+        run: python3 scripts/test_books_builder.py
+
       - name: Install essay builder test dependencies
         run: python3 -m pip install PyYAML Jinja2
 

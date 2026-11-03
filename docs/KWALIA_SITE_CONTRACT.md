@@ -19,6 +19,7 @@ Do not use older local clones as canonical without proving they match GitHub `ma
 | Surface | Canonical source | Generated or derived files | Required checks |
 |---|---|---|---|
 | Main homepage | `index.html`, `data/books.json`, `data/fiction.json`, `data/essays.json`, `data/i18n/*.json` | Browser-rendered homepage sections | Static smoke check plus live readback after deploy |
+| Homepage book catalogue | `KwaliaAI/catalog` `data/catalog.json` + approved presentation in `data/books.overrides.json` | **GENERATED** `data/books.json`, provenance/selection in `data/books.source.json` | `python3 scripts/build_books_json.py <catalogue-path>`, then repeat with `--check`; `python3 scripts/test_books_builder.py`; indexing validator and desktop/mobile EN/ES smoke |
 | Essay article content | `content/essays/en/*.md`, `content/essays/es/*.md` | `essays/*.html`, `data/essays.json` | `python3 build_essays.py`, then indexing contract |
 | Historical/manual essay pages | `essays/*.html` only when no Markdown source exists | `data/essays.json` after sync | `python3 sync_essays_json.py`, then indexing contract |
 | Essay navigation (index, generated and historical articles) | `templates/essay-nav-links.html`, homepage labels in `data/i18n/*.json` | `build_essays.py` refreshes both menus across `essays/*.html`; language switches retained | Indexing validator checks menu links/order/labels; desktop/mobile live readback |
@@ -29,6 +30,46 @@ Do not use older local clones as canonical without proving they match GitHub `ma
 | Styling and design tokens | `STYLE_GUIDE.md`, inline Tailwind classes, templates | Rendered pages | Desktop/mobile visual check for touched pages |
 
 ## Mandatory Workflow
+
+For books, use a clean committed catalogue checkout. The builder defaults to
+`../catalog/data/catalog.json`; pass an explicit path when using a worktree.
+`books.source.json` records the exact catalogue commit and SHA256, overlay hash,
+output hash and row selection decisions. Regenerate after catalogue merges or
+approved overlay changes; this is an explicit cross-repository sync, not a runtime
+Supabase query or an automatic cross-repository deployment trigger. Never edit
+generated book data directly. CI validates artifact hashes and mapping/selection
+regressions; the local `--check` verifies against the recorded catalogue input.
+
+The explicit channel test and field mapping are in the builder header. A primary
+row is visible when that test passes OR its approved overlay row has
+`legacyVisible: true`. The latter is transitional and ends when catalogue channel
+evidence is backfilled for those rows. Missing evidence is a catalogue gap, not
+proof that an approved legacy title is off sale. Routing plans and lifecycle/sale
+flags alone still do not prove channel availability.
+
+All eight approved legacy rows keep every public field verbatim and in production
+order: English/Spanish text, authors, formats, prices, status, art, links and sample
+controls. Approved legacy values win over conflicting catalogue values until the
+Founder approves replacement. Channel backfill does not approve copy changes.
+Apophenia remains the identical forthcoming card. The overlay visibility control
+is stripped from generated public data. `--baseline` reproduces these same eight
+public records byte for byte; normal generation also preserves them and adds
+Volume 2 as the ninth visible card. PAYLOAD stays on its existing fiction surface;
+its missing-channel primary record remains hidden. Both Bliss rows remain
+`siteVisible: false`, with `stores: []`; there is no new Bliss page.
+
+For new titles, catalogue English copy/GBP prices and approved presentation fields
+are mapped as documented in the builder. Missing Spanish uses the existing English
+fallback. New retail links use explicit catalogue ASINs only for live formats;
+Volume 2 has one Kindle link, with no print link while print is still publishing.
+The source manifest records channels and the legacy exception separately for each
+row, without inventing channel status. Retire the legacy visibility exception per
+row after verified channel backfill; retain approved field precedence until the
+Founder approves any differences.
+
+Undo before merge: close the catalogue and website PRs. Retire the builder if
+the homepage catalogue moves to another reviewed source; remove its overlay,
+manifest and test step together. Production readback remains GM's post-merge step.
 
 1. Verify the active repo, branch, and live target before changing anything.
 2. Identify which row in the source map the change touches.
