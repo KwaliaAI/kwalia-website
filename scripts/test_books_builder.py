@@ -56,6 +56,18 @@ class BooksBuilderTests(unittest.TestCase):
         self.assertEqual(books[0]["stores"], [])
         self.assertEqual(books[0]["formats"][0]["type"], "audiobook")
 
+    def test_live_bliss_uses_verified_links_without_legacy_visibility(self):
+        self.row.update(title_id="bliss-example", series_title="Kwalia Bliss",
+                        isbn_audio=self.row.pop("isbn_eb"), price_audio_gbp=7.99,
+                        platform_links=[{"name": "Spotify", "url": "https://example.com/verified-audio", "type": "audiobook"}])
+        books, decisions = generate([self.row], self.overlay)
+        self.assertTrue(decisions[0]["visible"])
+        self.assertFalse(decisions[0]["legacyVisible"])
+        self.assertNotIn("siteVisible", books[0])
+        self.assertEqual(books[0]["stores"], self.row["platform_links"])
+        self.assertEqual(books[0]["synopsis"]["en"], self.row["blurb_300"])
+        self.assertEqual(books[0]["prices"], [{"type": "audiobook", "amount": "£7.99"}])
+
     def test_legacy_reader_preserves_every_approved_field_without_channels(self):
         old = next(r for r in self.overlay["legacy_rows"] if r["id"] == "your-constitution-claude")
         self.row["title_id"] = old["id"]

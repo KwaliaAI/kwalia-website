@@ -8,7 +8,7 @@ transitional: retire it when catalogue channel evidence is backfilled for those
 rows. Missing evidence never proves an approved legacy title is off sale.
 Routing plans, lifecycle and sale flags alone are not channel evidence. Fiamma
 and translation duplicates never appear. Other missing-channel rows are retained
-with siteVisible=false for essay readers; Bliss stores remain empty.
+with siteVisible=false for essay readers; audio storefronts use platform_links.
 
 Field precedence: an approved legacy row supplies ALL public fields,
 including English/Spanish copy, status, formats, prices and store links, verbatim.
