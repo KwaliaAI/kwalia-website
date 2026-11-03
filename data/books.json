@@ -488,9 +488,54 @@
         "amount": "£7.99"
       }
     ],
-    "status": "pending",
-    "stores": [],
-    "siteVisible": false
+    "status": "published",
+    "stores": [
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/3AX1B5QRZi0sB6VGVVniDG",
+        "type": "audiobook"
+      },
+      {
+        "name": "Apple Books",
+        "url": "https://books.apple.com/gb/audiobook/shut-up-brain/id6828504374?uo=4",
+        "type": "audiobook"
+      },
+      {
+        "name": "BookBeat",
+        "url": "https://www.bookbeat.com/uk/book/shut-up-brain-2146482",
+        "type": "audiobook"
+      },
+      {
+        "name": "ElevenReader",
+        "url": "https://elevenreader.io/audiobooks/shut-up-brain-audiobook/oCvcYfbN6mFh7ewjnAJ2",
+        "type": "audiobook"
+      },
+      {
+        "name": "Feltrinelli",
+        "url": "https://www.lafeltrinelli.it/shut-up-brain-audiobook-kwalia-bliss/e/9781917717731",
+        "type": "audiobook"
+      },
+      {
+        "name": "Google Play",
+        "url": "https://play.google.com/store/audiobooks/details/Kwalia_Bliss_Shut_Up_Brain_Kwalia_Bliss?id=AQAAAEBGnzLfZM",
+        "type": "audiobook"
+      },
+      {
+        "name": "IBS",
+        "url": "https://www.ibs.it/shut-up-brain-audiobook-kwalia-bliss/e/9781917717731",
+        "type": "audiobook"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/be/books/shut-up-brain-4-hours-of-deep-brown-noise-for-sleep-15556285",
+        "type": "audiobook"
+      },
+      {
+        "name": "hoopla",
+        "url": "https://www.hoopladigital.com/audiobook/Shut-Up-Brain-Kwalia-Bliss/20447605",
+        "type": "audiobook"
+      }
+    ]
   },
   {
     "id": "bliss-003-neurutron",
@@ -519,8 +564,58 @@
         "amount": "£7.99"
       }
     ],
-    "status": "pending",
-    "stores": [],
-    "siteVisible": false
+    "status": "published",
+    "stores": [
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/7mG2I0wZTAstcygmtc2Y7G",
+        "type": "audiobook"
+      },
+      {
+        "name": "Apple Books",
+        "url": "https://books.apple.com/gb/audiobook/neurutron/id6828401848?uo=4",
+        "type": "audiobook"
+      },
+      {
+        "name": "BookBeat",
+        "url": "https://www.bookbeat.com/uk/book/neurutron-2144291",
+        "type": "audiobook"
+      },
+      {
+        "name": "ElevenReader",
+        "url": "https://elevenreader.io/audiobooks/neurutron-audiobook/TjB2RRSwBtLVKx5oHzPA",
+        "type": "audiobook"
+      },
+      {
+        "name": "Feltrinelli",
+        "url": "https://www.lafeltrinelli.it/neurutron-audiobook-kwalia-bliss/e/9781917717755",
+        "type": "audiobook"
+      },
+      {
+        "name": "Google Play",
+        "url": "https://play.google.com/store/audiobooks/details/Kwalia_Bliss_Neurutron_Kwalia_Bliss?id=AQAAAEBGLxFvRM",
+        "type": "audiobook"
+      },
+      {
+        "name": "Hugendubel",
+        "url": "https://www.hugendubel.de/de/hoerbuch_download/kwalia_bliss-neurutron-55197337-produkt-details.html",
+        "type": "audiobook"
+      },
+      {
+        "name": "IBS",
+        "url": "https://www.ibs.it/neurutron-audiobook-kwalia-bliss/e/9781917717755",
+        "type": "audiobook"
+      },
+      {
+        "name": "RTL+",
+        "url": "https://plus.rtl.de/neurutron-p_277644/audio/neurutron-c_2184063",
+        "type": "audiobook"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/nl/books/neurutron-4-hours-of-deep-engine-vibration-slowing-to-dock-headphones-required-15553836",
+        "type": "audiobook"
+      }
+    ]
   }
 ]

@@ -283,6 +283,16 @@
             </div>
         </section>
 
+        <section id="bliss" class="section-padding bg-gray-50 hidden">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="catalogue_bliss.title">Kwalia Bliss</h2>
+                </div>
+                <div id="bliss-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    </div>
+            </div>
+        </section>
+
         <section id="fiction" class="section-padding bg-gray-50">
             <div class="container mx-auto">
                 <div class="text-center mb-12">
@@ -548,6 +558,7 @@
             // AI Law & Governance Library (#ailgl) grid, so any series renders consistently.
             function buildBookCardHTML(book, lang) {
                 const coverUrl = book.coverImage[lang] || book.coverImage.en || "";
+                const bliss = book.imprint === 'Kwalia Bliss';
                 const hasSample = (book.stories && book.stories.length > 0) || Boolean(book.sampleUrl);
                 const bookStatus = (book.statusText && (book.statusText[lang] || book.statusText.en))
                     || (book.status && book.status !== 'published' ? (content[lang][`status.${book.status}`] || '') : '');
@@ -560,14 +571,16 @@
                 let coverHTML = `<div class="w-full h-96 bg-c1 flex items-center justify-center font-f3 text-lg text-center p-4 rounded-lg shadow-md relative">${badgeHTML} ${book.coverText || ''}</div>`;
                 if (coverUrl) {
                     coverHTML = `
-                        <div class="relative w-full h-96 rounded-lg shadow-md overflow-hidden bg-gray-100 group">
+                        <div class="relative w-full h-96 ${bliss ? 'bg-gray-50' : 'rounded-lg shadow-md overflow-hidden bg-gray-100 group'}">
                             ${badgeHTML}
-                            <img src="${coverUrl}" alt="${book.title.en} cover" class="w-full h-full object-contain p-2 transition-transform duration-500 group-hover:scale-105">
+                            <img src="${coverUrl}" alt="${book.title.en} cover" class="w-full h-full object-contain p-2 ${bliss ? '' : 'transition-transform duration-500 group-hover:scale-105'}">
                         </div>`;
                 }
 
                 const bookTitle = book.title[lang] || book.title.en;
                 const bookAuthors = (book.authors && book.authors.length > 0) ? book.authors.join(' & ') : content[lang]['status.forthcoming'];
+
+                const storesHTML = bliss ? `<div class="flex flex-wrap justify-center gap-3">${(book.stores || []).map((store, index) => `<a href="${store.url}" data-card-store-index="${index}" target="_blank" rel="noopener noreferrer" class="font-f2 text-sm text-c2/80 hover:text-c3">${store.name}</a>`).join('')}</div>` : '';
 
                 return `
                     <div class="flex flex-col gap-4 cursor-pointer book-item" data-book-id="${book.id}">
@@ -577,6 +590,7 @@
                             <p class="font-f2 text-sm text-c2/80">${bookAuthors}</p>
                             ${bookStatus ? `<p class="font-f3 text-xs uppercase tracking-[0.18em] text-c3 mt-2">${bookStatus}</p>` : ''}
                         </div>
+                        ${storesHTML}
                     </div>`;
             }
 
@@ -610,11 +624,44 @@
                 });
             }
 
+            function renderBliss(lang) {
+                const section = document.getElementById('bliss');
+                const container = document.getElementById('bliss-container');
+                if (!section || !container) return;
+
+                const blissBooks = bookCatalogue
+                    .filter(book => book.imprint === 'Kwalia Bliss');
+
+                if (blissBooks.length === 0) {
+                    section.classList.add('hidden');
+                    container.innerHTML = '';
+                    return;
+                }
+
+                section.classList.remove('hidden');
+                container.innerHTML = blissBooks.map(book => buildBookCardHTML(book, lang)).join('');
+
+                container.querySelectorAll('[data-card-store-index]').forEach(link => {
+                    const book = bookCatalogue.find(b => b.id === link.closest('.book-item').dataset.bookId);
+                    const store = book.stores[Number(link.dataset.cardStoreIndex)];
+                    link.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        trackPurchaseClick(book, store);
+                    });
+                });
+                container.querySelectorAll('.book-item').forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        const book = bookCatalogue.find(b => b.id === e.currentTarget.dataset.bookId);
+                        if (book) openBookModal(book, lang);
+                    });
+                });
+            }
+
             function renderCatalogue(lang) {
                 catalogueContainer.innerHTML = '';
                 // AI Law & Governance Library titles render in their own #ailgl series block,
                 // so keep them out of the New Citizenships grid to avoid double-listing.
-                const catalogueBooks = bookCatalogue.filter(book => book.imprint !== 'AI Law & Governance Library');
+                const catalogueBooks = bookCatalogue.filter(book => book.imprint !== 'AI Law & Governance Library' && book.imprint !== 'Kwalia Bliss');
                 // Order strictly by position in catalogueOrder. Ids not listed sort to the end.
                 const rank = id => {
                     const index = catalogueOrder.indexOf(id);
@@ -779,9 +826,9 @@
                      sampleActionsHTML = `<button class="font-f2 bg-c1 text-c2 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity mb-4 mr-2" onclick="openReader('placeholder-story', '${lang}')">Read a Short Story</button>`;
                 }
 
-                const storeLinkHTML = (store, index) => `<a href="${store.url}" data-store-index="${index}" id="buy-${book.id}-${store.type}-${index}" target="_blank" rel="noopener noreferrer" class="font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity">${store.name}</a>`;
-                const bookStoresHTML = (book.stores || []).map((store, index) => store.type === 'book' ? storeLinkHTML(store, index) : '').join(' ');
-                const audioStoresHTML = (book.stores || []).map((store, index) => store.type === 'audiobook' ? storeLinkHTML(store, index) : '').join(' ');
+                const storeLinkHTML = (store, index) => `<a href="${store.url}" data-store-index="${index}" id="buy-${book.id}-${store.type}-${index}" target="_blank" rel="noopener noreferrer" class="${book.imprint === 'Kwalia Bliss' ? 'font-f2 text-sm text-c2/80 hover:text-c3' : 'font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity'}">${store.name}</a>`;
+                const bookStoresHTML = (book.stores || []).map((store, index) => store.type === 'book' ? storeLinkHTML(store, index) : '').filter(Boolean).join(' ');
+                const audioStoresHTML = (book.stores || []).map((store, index) => store.type === 'audiobook' ? storeLinkHTML(store, index) : '').filter(Boolean).join(' ');
                 const formatsHTML = (book.formats || []).map(format => `<div class="font-f2 text-sm text-c2/80"><span class="font-bold">${content[lang][`format.${format.type}`]}:</span> ${format.isbn}</div>`).join('');
                 const pricesHTML = (book.prices || []).map(price => `<div class="font-f2 text-sm text-c2/80"><span class="font-bold">${content[lang][`format.${price.type}`]}:</span> ${price.amount}</div>`).join('');
                 const detailsHTML = [
@@ -802,7 +849,7 @@
                         </div>
                         <div class="grid md:grid-cols-3 gap-8">
                             <div class="md:col-span-1">
-                                <img src="${coverUrl}" alt="${book.title.en} cover" class="w-full object-contain rounded shadow-lg">
+                                <img src="${coverUrl}" alt="${book.title.en} cover" class="w-full object-contain ${book.imprint === 'Kwalia Bliss' ? '' : 'rounded shadow-lg'}">
                             </div>
                             <div class="md:col-span-2">
                                 ${bookAuthors}
@@ -1009,6 +1056,7 @@
 
                 renderCatalogue(lang);
                 renderAILGL(lang);
+                renderBliss(lang);
                 renderFiction(lang);
                 renderHeteronyms(lang);
                 renderFeaturedEssays(lang);
