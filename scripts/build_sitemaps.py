@@ -6,6 +6,7 @@ Reads data/essay_inventory.csv and emits:
   sitemap-books.xml    (changefreq monthly, if rows exist)
   sitemap-news.xml     (changefreq weekly, if rows exist)
   sitemap-answers.xml  (changefreq monthly, if rows exist)
+  sitemap-pages.xml    (static pages)
   sitemap-index.xml    (master index referencing the above)
   sitemap.xml          (conventional alias of sitemap-index.xml)
 
@@ -105,6 +106,11 @@ def main():
     if not generated:
         print("No rows found. Nothing to write.", file=sys.stderr)
         sys.exit(1)
+
+    # Static pages have no essay inventory row.
+    static_rows = [{"url": f"{BASE_URL}/press"}]
+    write_sitemap(REPO_ROOT / "sitemap-pages.xml", build_urlset(static_rows, "monthly"))
+    generated.append(("sitemap-pages.xml", len(static_rows)))
 
     # Build sitemap-index.xml
     sitemapindex = ET.Element(
