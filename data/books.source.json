@@ -1,10 +1,10 @@
 {
   "catalogue_repository": "https://github.com/KwaliaAI/catalog",
-  "catalogue_commit": "5801bf017e8fb655bc0c2765374d49302e89a9d9",
+  "catalogue_commit": "22eaf7d2c81687e5454a686fe3c4254a29bce4a5",
   "catalogue_file": "data/catalog.json",
-  "catalogue_sha256": "53ab21fc8069f8e9ed6089ba93b9265c4811a694e1ec4bbfc707b73490d586d9",
+  "catalogue_sha256": "7b399c2a8ea29f3fae6270610e8fdbe0de8fb6da52858ecdb49d5a644aa2c4fe",
   "overlay_sha256": "9946440499be3757109ad495d7218878cea5bb3d20d1e216b609ed4d713faa92",
-  "books_sha256": "3a42e4f88a15676f93ea4652ba5e38fd8f04e7e7a26b8aed9b3f59ce627f50a2",
+  "books_sha256": "e6e5ec5c4dfb0ce401376da9370c0ca0bb269605a92096bcfda03d7628ef5d44",
   "decisions": [
     {
       "id": "udair",
