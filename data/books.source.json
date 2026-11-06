@@ -1,10 +1,10 @@
 {
   "catalogue_repository": "https://github.com/KwaliaAI/catalog",
-  "catalogue_commit": "2917b7a8eabb50feb98a1cdf5510e557dc4977f8",
+  "catalogue_commit": "445b4fff0f24c4e6aa5886e935e6f4bb98e2ce6b",
   "catalogue_file": "data/catalog.json",
-  "catalogue_sha256": "7b399c2a8ea29f3fae6270610e8fdbe0de8fb6da52858ecdb49d5a644aa2c4fe",
+  "catalogue_sha256": "ee3ad88273e102276e719db5ff619af4b66d457b71a0d0155d045259610273e8",
   "overlay_sha256": "9946440499be3757109ad495d7218878cea5bb3d20d1e216b609ed4d713faa92",
-  "books_sha256": "e6e5ec5c4dfb0ce401376da9370c0ca0bb269605a92096bcfda03d7628ef5d44",
+  "books_sha256": "00086ced5e81642a2bd0f3d3a760868dc3fae696e5134fe2a57e6262f0c6e1af",
   "decisions": [
     {
       "id": "udair",
@@ -218,6 +218,15 @@
       "legacyVisible": false,
       "reason": "commissioned pending listing; no storefront-live claim",
       "listing_authority": "GM SIGNED B0 20:38 2026-11-06, FINAL descriptions; forthcoming cards without store links"
+    },
+    {
+      "id": "bliss-007-wind-on-mars",
+      "included": true,
+      "visible": true,
+      "channels": [],
+      "legacyVisible": false,
+      "reason": "commissioned pending listing; no storefront-live claim",
+      "listing_authority": "GM signed build/delivery brief 2026-11-06; publish after PRODUCT OK"
     }
   ]
 }

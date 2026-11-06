@@ -714,5 +714,35 @@
     "prices": [],
     "status": "forthcoming",
     "stores": []
+  },
+  {
+    "id": "bliss-007-wind-on-mars",
+    "imprint": "Kwalia Bliss",
+    "title": {
+      "en": "Wind on Mars: Real Martian Wind Recorded by NASA's Perseverance Rover"
+    },
+    "authors": [
+      "Kwalia Bliss"
+    ],
+    "coverImage": {
+      "en": "assets/9781917717854.jpg"
+    },
+    "synopsis": {
+      "en": "This is two hours of wind on Mars, from recordings taken by the microphone on NASA's Perseverance rover. You hear it at the speed it was recorded and at its own pitch. There's no narrator and no music on it. It's the weather on another planet, and you can play it in your kitchen. Headphones or a speaker will do. It's part of Kwalia Bliss, with Shut Up, Brain, Shut Up, Neighbours, Shut Up, Darling, Shut Up, Everyone and Neurutron.\n\nNASA/JPL-Caltech/LANL/CNES/CNRS/ISAE-Supaero"
+    },
+    "formats": [
+      {
+        "type": "audiobook",
+        "isbn": "978-1-917717-85-4"
+      }
+    ],
+    "prices": [
+      {
+        "type": "audiobook",
+        "amount": "£7.99"
+      }
+    ],
+    "status": "forthcoming",
+    "stores": []
   }
 ]
