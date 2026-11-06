@@ -1,10 +1,10 @@
 {
   "catalogue_repository": "https://github.com/KwaliaAI/catalog",
-  "catalogue_commit": "b26454cdb336e76dd1ce0f5052f780efabe161ea",
+  "catalogue_commit": "2fa97b1daf05929039835bc033562b34e11f1c76",
   "catalogue_file": "data/catalog.json",
-  "catalogue_sha256": "832917eca56c1fd4fd9aab5bea46899073d615b4d56eaf4f5e43f948e4e85936",
-  "overlay_sha256": "5b0da7897d423c5759279c9d101c6fab15b6a1bf1613cb7f834b309ae6b32dce",
-  "books_sha256": "a36cf3eb4b2bb65cc7841815c44bdc066d661faf223b1c8ad9e5fa5328fec5bc",
+  "catalogue_sha256": "388a1533270ce05595a39d27f1155d1473f38324692e0eeb8633818bf74f33b9",
+  "overlay_sha256": "9946440499be3757109ad495d7218878cea5bb3d20d1e216b609ed4d713faa92",
+  "books_sha256": "a892975ed0c08bacb6a1742040f5497a135e606daf8edc1a81a0ce32c94b3e7e",
   "decisions": [
     {
       "id": "udair",
@@ -173,6 +173,24 @@
         "bookwire"
       ],
       "legacyVisible": false
+    },
+    {
+      "id": "ailgl-003-nist-ai-rmf",
+      "included": true,
+      "visible": true,
+      "channels": [],
+      "legacyVisible": false,
+      "reason": "commissioned pending listing; no storefront-live claim",
+      "listing_authority": "Founder site brief 2026-11-06; show pending card without claiming a live storefront"
+    },
+    {
+      "id": "ailgl-004-china-ai-rules",
+      "included": true,
+      "visible": true,
+      "channels": [],
+      "legacyVisible": false,
+      "reason": "commissioned pending listing; no storefront-live claim",
+      "listing_authority": "Founder site brief 2026-11-06; show pending card without claiming a live storefront"
     }
   ]
 }

@@ -386,6 +386,30 @@
       "synopsis": {
         "es": null
       }
+    },
+    "ailgl-003-nist-ai-rmf": {
+      "coverImage": {
+        "en": "assets/9781917717786.jpg",
+        "es": "assets/9781917717786.jpg"
+      },
+      "title": {
+        "es": null
+      },
+      "synopsis": {
+        "es": null
+      }
+    },
+    "ailgl-004-china-ai-rules": {
+      "coverImage": {
+        "en": "assets/9781917717847.jpg",
+        "es": "assets/9781917717847.jpg"
+      },
+      "title": {
+        "es": null
+      },
+      "synopsis": {
+        "es": null
+      }
     }
   }
 }

@@ -9,6 +9,9 @@ rows. Missing evidence never proves an approved legacy title is off sale.
 Routing plans, lifecycle and sale flags alone are not channel evidence. Fiamma
 and translation duplicates never appear. Other missing-channel rows are retained
 with siteVisible=false for essay readers; audio storefronts use distribution_plan.audiobook.platform_links.
+An explicit draft_metadata.site_listing.visible commission can display a forthcoming
+card without activating a channel. Its formats list limits offered formats while
+the catalogue retains all allocated ISBNs. No retailer link is inferred.
 
 Field precedence: an approved legacy row supplies ALL public fields,
 including English/Spanish copy, status, formats, prices and store links, verbatim.
@@ -94,8 +97,14 @@ def build_row(row, overlay, channels):
     title = row["title"]
     if row.get("subtitle") and not library:
         title += ": " + row["subtitle"]
+    # An explicitly commissioned pending listing is independent of store activation.
+    # Keep allocated but unavailable formats (e.g. blocked KDP print) in the
+    # catalogue without offering them on the public card.
+    listing = (row.get("draft_metadata") or {}).get("site_listing") or {}
+    listed_formats = listing.get("formats")
     formats = [{"type": kind, "isbn": dashed(row[f"isbn_{short}"])}
                for short, kind in FORMATS if row.get(f"isbn_{short}")
+               and (listed_formats is None or kind in listed_formats)
                and (short != "audio" or row.get("audiobook_active") is not False)]
     isbn = next((str(row[f"isbn_{short}"]).replace("-", "") for short, _ in FORMATS
                  if row.get(f"isbn_{short}")), "")
@@ -113,7 +122,7 @@ def build_row(row, overlay, channels):
                  "coverImage": view.get("coverImage") or {"en": f"assets/{isbn}.jpg"},
                  "synopsis": {"en": row.get("blurb_300") or "", **view.get("synopsis", {})},
                  "formats": formats, "prices": prices,
-                 "status": "published" if channels else "pending"})
+                 "status": "published" if channels else "forthcoming"})
     audio_only = bool(formats) and all(f["type"] == "audiobook" for f in formats)
     metadata = row.get("draft_metadata") or {}
     asins = metadata.get("kdp_asins") or {}
@@ -130,7 +139,7 @@ def build_row(row, overlay, channels):
     for key in ("featured", "sampleUrl", "sampleLabel", "stories"):
         if key in view:
             book[key] = view[key]
-    if not channels:
+    if not channels and listing.get("visible") is not True:
         book["siteVisible"] = False
     return book
 
@@ -154,9 +163,12 @@ def generate(rows, overlay):
             continue
         book = build_row(row, overlay, channels)
         books.append(book)
-        decisions.append({"id": tid, "included": True, "visible": bool(channels) or legacy_visible, "channels": channels,
+        pending_listing = (row.get("draft_metadata") or {}).get("site_listing") or {}
+        pending_visible = pending_listing.get("visible") is True
+        decisions.append({"id": tid, "included": True, "visible": bool(channels) or legacy_visible or pending_visible, "channels": channels,
                           "legacyVisible": legacy_visible,
                           **({"reason": "approved legacy visibility; transitional until catalogue channel backfill"} if legacy_visible and not channels else
+                             {"reason": "commissioned pending listing; no storefront-live claim", "listing_authority": pending_listing.get("authority")} if pending_visible and not channels else
                              {"reason": "no explicit active channel; lifecycle/sale flag alone is insufficient"} if not channels else {})})
     order = {r["id"]: n for n, r in enumerate(overlay["legacy_rows"])}
     books.sort(key=lambda row: order.get(row["id"], len(order)))

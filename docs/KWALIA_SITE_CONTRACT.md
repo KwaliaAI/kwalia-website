@@ -62,6 +62,15 @@ For new titles, catalogue English copy/GBP prices and approved presentation fiel
 are mapped as documented in the builder. Missing Spanish uses the existing English
 fallback. New retail links use explicit catalogue ASINs only for live formats;
 Volume 2 has one Kindle link, with no print link while print is still publishing.
+The Founder commissioned pending Vol 3/4 cards on 2026-11-06. Their catalogue
+`draft_metadata.site_listing.visible` permits a forthcoming card without any
+storefront-live claim; `site_listing.formats` limits publicly offered formats.
+All allocated ISBNs and planned prices stay in the catalogue. Vol 4 exposes only
+its accepted Bookwire ebook while KDP creation is blocked. The existing EN copy
+fallback on the ES interface is preserved when no approved translation exists.
+Store links still require independent live evidence; import acceptance and KDP
+review do not activate a channel. Undo this commission by clearing the two
+`site_listing.visible` values and regenerating from the committed catalogue.
 The source manifest records channels and the legacy exception separately for each
 row, without inventing channel status. Retire the legacy visibility exception per
 row after verified channel backfill; retain approved field precedence until the

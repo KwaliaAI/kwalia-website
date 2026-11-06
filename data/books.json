@@ -405,7 +405,7 @@
         "amount": "£14.99"
       }
     ],
-    "status": "pending",
+    "status": "forthcoming",
     "stores": [],
     "siteVisible": false
   },
@@ -555,5 +555,89 @@
         "type": "audiobook"
       }
     ]
+  },
+  {
+    "id": "ailgl-003-nist-ai-rmf",
+    "imprint": "AI Law & Governance Library",
+    "volume": 3,
+    "title": {
+      "en": "The NIST AI Risk Management Framework",
+      "es": null
+    },
+    "authors": [
+      "Kwalia Books"
+    ],
+    "coverImage": {
+      "en": "assets/9781917717786.jpg",
+      "es": "assets/9781917717786.jpg"
+    },
+    "synopsis": {
+      "en": "THE NIST FRAMEWORK FOR AI RISK, WITH ITS GENERATIVE AI PROFILE\n\nThis volume holds two documents from the National Institute of Standards and Technology. The AI Risk Management Framework (NIST AI 100-1, January 2023) lists seven characteristics of a trustworthy AI system, among them safety, privacy, and fairness, and arranges the work of managing AI risks into four functions: Govern, Map, Measure, and Manage. The Generative AI Profile (NIST AI 600-1, July 2024) is its companion for generative AI, the kind that writes text and makes images, with twelve risks and 212 suggested actions. They're written for people who build, buy, or oversee AI systems.\n\nThis edition reproduces both texts unabridged, including every table of the framework's Core and of the profile's suggested actions, the framework's five figures, and the profile's references.\n\nThe AI Law & Governance Library collects the world's foundational laws and governance texts on artificial intelligence in clean, durable reference editions. This is Volume 3.",
+      "es": null
+    },
+    "formats": [
+      {
+        "type": "hardcover",
+        "isbn": "978-1-917717-76-2"
+      },
+      {
+        "type": "paperback",
+        "isbn": "978-1-917717-77-9"
+      },
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-78-6"
+      }
+    ],
+    "prices": [
+      {
+        "type": "hardcover",
+        "amount": "£24.99"
+      },
+      {
+        "type": "paperback",
+        "amount": "£11.99"
+      },
+      {
+        "type": "ebook",
+        "amount": "£4.99"
+      }
+    ],
+    "status": "forthcoming",
+    "stores": []
+  },
+  {
+    "id": "ailgl-004-china-ai-rules",
+    "imprint": "AI Law & Governance Library",
+    "volume": 4,
+    "title": {
+      "en": "China's AI Regulations (Bilingual)",
+      "es": null
+    },
+    "authors": [
+      "Cyberspace Administration of China"
+    ],
+    "coverImage": {
+      "en": "assets/9781917717847.jpg",
+      "es": "assets/9781917717847.jpg"
+    },
+    "synopsis": {
+      "en": "In this volume, with the year each took effect:\n\n- Interim Measures for the Administration of Generative Artificial Intelligence Services (2023)\n- Provisions on the Administration of Algorithmic Recommendations for Internet Information Services (2022)\n- Provisions on the Administration of Deep Synthesis for Internet Information Services (2023)\n- Interim Measures for the Administration of Anthropomorphic AI Interactive Services (2026)\n- Measures for the Labeling of Artificial Intelligence-Generated and Synthesized Content (2025)\n\nAll five were issued by the Cyberspace Administration of China with other national agencies. Each article is printed in Chinese on the left page and in English on the right.\n\nTranslated by Kwalia Books. The Chinese text is the original.\n\nIt's for anyone whose AI work touches China, or who studies how China governs AI, and wants to read the rules themselves.\n\nThe AI Law & Governance Library collects the world's main legal and governance texts on artificial intelligence in reference editions. This is Volume 4.",
+      "es": null
+    },
+    "formats": [
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-84-7"
+      }
+    ],
+    "prices": [
+      {
+        "type": "ebook",
+        "amount": "£4.99"
+      }
+    ],
+    "status": "forthcoming",
+    "stores": []
   }
 ]

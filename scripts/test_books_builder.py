@@ -102,6 +102,28 @@ class BooksBuilderTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "cannot be overridden"):
             presentation_for("example", overlay)
 
+    def test_commissioned_pending_listing_does_not_activate_stores(self):
+        self.row.update(channel_delivery_status={"bookwire": {"status": "imported"}},
+                        lifecycle_stage="production", enable_for_sale=False,
+                        draft_metadata={"site_listing": {"visible": True, "authority": "Founder brief"}})
+        books, decisions = generate([self.row], self.overlay)
+        self.assertTrue(decisions[0]["visible"])
+        self.assertEqual(decisions[0]["channels"], [])
+        self.assertNotIn("siteVisible", books[0])
+        self.assertEqual(books[0]["status"], "forthcoming")
+        self.assertEqual(books[0]["stores"], [])
+
+    def test_blocked_print_is_retained_in_catalogue_but_not_offered(self):
+        self.row.update(isbn_pb="9781917717830", isbn_hc="9781917717823",
+                        price_pb_gbp=11.99, price_hc_gbp=24.99,
+                        channel_delivery_status={"amazon-kdp": {"status": "blocked"}},
+                        draft_metadata={"site_listing": {"visible": True, "formats": ["ebook"]},
+                                        "kdp_format_status": {"paperback": "blocked", "hardcover": "blocked"}})
+        book = build_row(self.row, self.overlay, [])
+        self.assertEqual([f["type"] for f in book["formats"]], ["ebook"])
+        self.assertEqual([p["type"] for p in book["prices"]], ["ebook"])
+        self.assertEqual(book["stores"], [])
+
     def test_committed_artifact_hashes(self):
         source = json.loads((ROOT / "data/books.source.json").read_bytes())
         for key, filename in (("books_sha256", "books.json"), ("overlay_sha256", "books.overrides.json")):
