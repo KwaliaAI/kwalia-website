@@ -4,7 +4,7 @@
   "catalogue_file": "data/catalog.json",
   "catalogue_sha256": "388a1533270ce05595a39d27f1155d1473f38324692e0eeb8633818bf74f33b9",
   "overlay_sha256": "9946440499be3757109ad495d7218878cea5bb3d20d1e216b609ed4d713faa92",
-  "books_sha256": "a892975ed0c08bacb6a1742040f5497a135e606daf8edc1a81a0ce32c94b3e7e",
+  "books_sha256": "d4f07d01fdc5b99fb224b6d8b740e8edcd705d5e0d754a862ee2f842e9408d97",
   "decisions": [
     {
       "id": "udair",

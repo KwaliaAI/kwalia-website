@@ -122,7 +122,7 @@ def build_row(row, overlay, channels):
                  "coverImage": view.get("coverImage") or {"en": f"assets/{isbn}.jpg"},
                  "synopsis": {"en": row.get("blurb_300") or "", **view.get("synopsis", {})},
                  "formats": formats, "prices": prices,
-                 "status": "published" if channels else "forthcoming"})
+                 "status": "published" if channels else "forthcoming" if listing.get("visible") is True else "pending"})
     audio_only = bool(formats) and all(f["type"] == "audiobook" for f in formats)
     metadata = row.get("draft_metadata") or {}
     asins = metadata.get("kdp_asins") or {}
