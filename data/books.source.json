@@ -1,10 +1,10 @@
 {
   "catalogue_repository": "https://github.com/KwaliaAI/catalog",
-  "catalogue_commit": "6c18a3131166d0ed0a42385c5a2bb80268da3606",
+  "catalogue_commit": "5801bf017e8fb655bc0c2765374d49302e89a9d9",
   "catalogue_file": "data/catalog.json",
-  "catalogue_sha256": "72007142d4aed84b5d9fb579ebc2af38515c2b6ce53a219114b8a525c85dbe58",
+  "catalogue_sha256": "53ab21fc8069f8e9ed6089ba93b9265c4811a694e1ec4bbfc707b73490d586d9",
   "overlay_sha256": "9946440499be3757109ad495d7218878cea5bb3d20d1e216b609ed4d713faa92",
-  "books_sha256": "c96b480d307fd6d7aec45e96008f896bd1f009217717b0fdcaf633ff881e84b4",
+  "books_sha256": "3a42e4f88a15676f93ea4652ba5e38fd8f04e7e7a26b8aed9b3f59ce627f50a2",
   "decisions": [
     {
       "id": "udair",
@@ -191,6 +191,33 @@
       "legacyVisible": false,
       "reason": "commissioned pending listing; no storefront-live claim",
       "listing_authority": "Founder site brief 2026-11-06; show pending card without claiming a live storefront"
+    },
+    {
+      "id": "bliss-004-shut-up-neighbours",
+      "included": true,
+      "visible": true,
+      "channels": [],
+      "legacyVisible": false,
+      "reason": "commissioned pending listing; no storefront-live claim",
+      "listing_authority": "GM SIGNED B0 20:38 2026-11-06, FINAL descriptions; forthcoming cards without store links"
+    },
+    {
+      "id": "bliss-005-shut-up-darling",
+      "included": true,
+      "visible": true,
+      "channels": [],
+      "legacyVisible": false,
+      "reason": "commissioned pending listing; no storefront-live claim",
+      "listing_authority": "GM SIGNED B0 20:38 2026-11-06, FINAL descriptions; forthcoming cards without store links"
+    },
+    {
+      "id": "bliss-006-shut-up-everyone",
+      "included": true,
+      "visible": true,
+      "channels": [],
+      "legacyVisible": false,
+      "reason": "commissioned pending listing; no storefront-live claim",
+      "listing_authority": "GM SIGNED B0 20:38 2026-11-06, FINAL descriptions; forthcoming cards without store links"
     }
   ]
 }

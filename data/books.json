@@ -639,5 +639,80 @@
     ],
     "status": "forthcoming",
     "stores": []
+  },
+  {
+    "id": "bliss-004-shut-up-neighbours",
+    "imprint": "Kwalia Bliss",
+    "title": {
+      "en": "Shut Up, Neighbours: 4 Hours of White Noise"
+    },
+    "authors": [
+      "Kwalia Bliss"
+    ],
+    "coverImage": {
+      "en": "assets/9781917717793.jpg"
+    },
+    "synopsis": {
+      "en": "Shut Up, Neighbours is four hours of white noise, one sound all the way through, with no voice and no music. Put it on when the flat upstairs takes up the drums. It joins Shut Up, Brain and Neurutron on Kwalia Bliss."
+    },
+    "formats": [
+      {
+        "type": "audiobook",
+        "isbn": "978-1-917717-79-3"
+      }
+    ],
+    "prices": [],
+    "status": "forthcoming",
+    "stores": []
+  },
+  {
+    "id": "bliss-005-shut-up-darling",
+    "imprint": "Kwalia Bliss",
+    "title": {
+      "en": "Shut Up, Darling: 4 Hours of Pink Noise"
+    },
+    "authors": [
+      "Kwalia Bliss"
+    ],
+    "coverImage": {
+      "en": "assets/9781917717809.jpg"
+    },
+    "synopsis": {
+      "en": "Shut Up, Darling is four hours of pink noise, the same sound from start to finish. It's for when the person across the kitchen table has one more thing to say about their day. Any speaker in the kitchen will do."
+    },
+    "formats": [
+      {
+        "type": "audiobook",
+        "isbn": "978-1-917717-80-9"
+      }
+    ],
+    "prices": [],
+    "status": "forthcoming",
+    "stores": []
+  },
+  {
+    "id": "bliss-006-shut-up-everyone",
+    "imprint": "Kwalia Bliss",
+    "title": {
+      "en": "Shut Up, Everyone: 4 Hours of Green Noise"
+    },
+    "authors": [
+      "Kwalia Bliss"
+    ],
+    "coverImage": {
+      "en": "assets/9781917717816.jpg"
+    },
+    "synopsis": {
+      "en": "Shut Up, Everyone gives you green noise for four hours, one sound and nothing else. Play it on a train where everybody has found someone to call. Bring headphones, or everyone gets it too."
+    },
+    "formats": [
+      {
+        "type": "audiobook",
+        "isbn": "978-1-917717-81-6"
+      }
+    ],
+    "prices": [],
+    "status": "forthcoming",
+    "stores": []
   }
 ]
