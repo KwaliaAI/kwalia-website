@@ -1,10 +1,10 @@
 {
   "catalogue_repository": "https://github.com/KwaliaAI/catalog",
-  "catalogue_commit": "b007745b1f122f7361fd914fee4241ce6768257f",
+  "catalogue_commit": "eac7f887e18f550650d4945edf0550824689e2a7",
   "catalogue_file": "data/catalog.json",
-  "catalogue_sha256": "d53597ef2757f6b4c202583b310c8992f16fb864782dde08b251f23dd24559e2",
+  "catalogue_sha256": "5d9150d0edd6a79f1f0067ed1bd71ec68c9a8f9350f3396c9bd2d52a9be78dff",
   "overlay_sha256": "84ac1eadd8b648fbc81b91d3cfc84e0a7305901de0b33d04ca6ed8ea3ced7c75",
-  "books_sha256": "7bd455db4da8c05b04443dd92a2a9adfcb10cc1326eecb573aec49ccad5278c9",
+  "books_sha256": "b1d59c7bb9834d0fd1a0bba0a0946f76f8caf253142f84561bd813fe1e2e5f5c",
   "decisions": [
     {
       "id": "udair",
@@ -178,10 +178,10 @@
       "id": "ailgl-003-nist-ai-rmf",
       "included": true,
       "visible": true,
-      "channels": [],
-      "legacyVisible": false,
-      "reason": "commissioned pending listing; no storefront-live claim",
-      "listing_authority": "Founder site brief 2026-11-06; show pending card without claiming a live storefront"
+      "channels": [
+        "amazon-kdp"
+      ],
+      "legacyVisible": false
     },
     {
       "id": "ailgl-004-china-ai-rules",

@@ -603,8 +603,24 @@
         "amount": "£4.99"
       }
     ],
-    "status": "forthcoming",
-    "stores": []
+    "status": "published",
+    "stores": [
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0HQHG2F8N",
+        "type": "book"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717776",
+        "type": "book"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717768",
+        "type": "book"
+      }
+    ]
   },
   {
     "id": "ailgl-004-china-ai-rules",
@@ -765,11 +781,27 @@
     },
     "formats": [
       {
+        "type": "hardcover",
+        "isbn": "978-1-917717-86-1"
+      },
+      {
+        "type": "paperback",
+        "isbn": "978-1-917717-87-8"
+      },
+      {
         "type": "ebook",
         "isbn": "978-1-917717-88-5"
       }
     ],
     "prices": [
+      {
+        "type": "hardcover",
+        "amount": "£24.99"
+      },
+      {
+        "type": "paperback",
+        "amount": "£11.99"
+      },
       {
         "type": "ebook",
         "amount": "£4.99"
@@ -780,6 +812,16 @@
       {
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/B0HR247G89",
+        "type": "book"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717873",
+        "type": "book"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717865",
         "type": "book"
       }
     ]
