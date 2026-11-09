@@ -744,5 +744,44 @@
     ],
     "status": "forthcoming",
     "stores": []
+  },
+  {
+    "id": "ailgl-005-us-state-ai-laws",
+    "imprint": "AI Law & Governance Library",
+    "volume": 5,
+    "title": {
+      "en": "US State AI Laws",
+      "es": "US State AI Laws"
+    },
+    "authors": [
+      "Kwalia Books"
+    ],
+    "coverImage": {
+      "en": "assets/9781917717885.jpg"
+    },
+    "synopsis": {
+      "en": "US State AI Laws: Selected Statutes brings together nine legislative texts from California, Colorado, Texas, Utah and New York in one reference volume.\n\nThe selection covers frontier AI models, automated decisions, conversational services, mental health applications and consumer disclosures. It includes California’s SB 53, three Colorado acts passed in 2026, the Texas Responsible Artificial Intelligence Governance Act, three Utah Code chapters and New York’s 2026 RAISE Act amendment.\n\nThe official source texts were retrieved on 9 November 2026. Enacted provisions with future operative dates are identified within the volume.\n\nPublished by Kwalia Books as Volume 5 of the AI Law & Governance Library, this is a selected collection of primary texts for readers who want to consult the legislation directly.",
+      "es": "US State AI Laws: Selected Statutes reúne nueve textos legislativos de California, Colorado, Texas, Utah y Nueva York en un solo volumen de consulta.\n\nLa selección abarca modelos de IA de frontera, decisiones automatizadas, servicios conversacionales, aplicaciones de salud mental e información al consumidor. Incluye la SB 53 de California, tres leyes de Colorado aprobadas en 2026, la Texas Responsible Artificial Intelligence Governance Act, tres capítulos del Código de Utah y la modificación de 2026 de la RAISE Act de Nueva York.\n\nLos textos oficiales se obtuvieron el 9 de noviembre de 2026. El volumen identifica las disposiciones aprobadas cuya aplicación comienza en una fecha posterior.\n\nKwalia Books publica esta selección de textos originales como volumen 5 de la AI Law & Governance Library para quienes quieran consultar directamente la legislación. Los textos legislativos se reproducen en inglés."
+    },
+    "formats": [
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-88-5"
+      }
+    ],
+    "prices": [
+      {
+        "type": "ebook",
+        "amount": "£4.99"
+      }
+    ],
+    "status": "published",
+    "stores": [
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0HR247G89",
+        "type": "book"
+      }
+    ]
   }
 ]

@@ -1,10 +1,10 @@
 {
   "catalogue_repository": "https://github.com/KwaliaAI/catalog",
-  "catalogue_commit": "445b4fff0f24c4e6aa5886e935e6f4bb98e2ce6b",
+  "catalogue_commit": "b007745b1f122f7361fd914fee4241ce6768257f",
   "catalogue_file": "data/catalog.json",
-  "catalogue_sha256": "ee3ad88273e102276e719db5ff619af4b66d457b71a0d0155d045259610273e8",
-  "overlay_sha256": "9946440499be3757109ad495d7218878cea5bb3d20d1e216b609ed4d713faa92",
-  "books_sha256": "00086ced5e81642a2bd0f3d3a760868dc3fae696e5134fe2a57e6262f0c6e1af",
+  "catalogue_sha256": "d53597ef2757f6b4c202583b310c8992f16fb864782dde08b251f23dd24559e2",
+  "overlay_sha256": "84ac1eadd8b648fbc81b91d3cfc84e0a7305901de0b33d04ca6ed8ea3ced7c75",
+  "books_sha256": "7bd455db4da8c05b04443dd92a2a9adfcb10cc1326eecb573aec49ccad5278c9",
   "decisions": [
     {
       "id": "udair",
@@ -227,6 +227,15 @@
       "legacyVisible": false,
       "reason": "commissioned pending listing; no storefront-live claim",
       "listing_authority": "GM signed build/delivery brief 2026-11-06; publish after PRODUCT OK"
+    },
+    {
+      "id": "ailgl-005-us-state-ai-laws",
+      "included": true,
+      "visible": true,
+      "channels": [
+        "amazon-kdp"
+      ],
+      "legacyVisible": false
     }
   ]
 }

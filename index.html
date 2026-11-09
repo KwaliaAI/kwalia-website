@@ -155,6 +155,9 @@
         .nav-link-highlight:hover::after { transform: scaleX(1); }
         .modal-enter { transition: opacity 300ms ease-out; }
         .modal-leave { transition: opacity 200ms ease-in; }
+
+        #book-modal-content[data-book-id="ailgl-005-us-state-ai-laws"] > div > div:first-child { position:sticky; top:0; z-index:5; background:#fff; }
+        #book-modal-content[data-book-id="ailgl-005-us-state-ai-laws"] #close-modal { background:#fff; flex-shrink:0; }
     </style>
 </head>
 <body class="bg-c4 text-c2 antialiased">
@@ -163,11 +166,11 @@
     <header id="site-header" class="bg-c4 w-full sticky top-0 z-50 shadow-sm">
         <!-- Reusable announcement rail: keep it to one line, mono uppercase, accent color, and point to the current launch asset. -->
         <a
-            href="#bliss"
+            href="#ailgl"
             class="announcement--bliss block border-b border-c2/10 px-6 py-3 text-center font-f3 text-[11px] md:text-xs uppercase tracking-[0.22em] text-c3 hover:text-c2 transition-colors"
-            data-key="announcement.bliss"
+            data-key="announcement.ailgl5" style="background:#F5F8FD;color:#091432;border-bottom:1px solid #AAC0DC"
         >
-            Hear us making noise! Kwalia Bliss, our new sound label.
+            US State AI Laws: Selected Statutes · Volume 5 of the AI Law &amp; Governance Library
         </a>
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home"><img src="assets/logo-kwalia-small.png" alt="kwalia logo" class="h-8 w-auto"></a>
@@ -403,6 +406,7 @@
                     <div>
                         <h3 class="font-f1 text-2xl mb-4 border-b pb-2" data-key="press.releases.title">Press Releases</h3>
                         <ul class="space-y-3 pt-2">
+                            <li><a href="/press/us-state-ai-laws.html" id="ailgl-vol5-press-link" class="text-c3 hover:underline" data-key="press.releases.ailgl5">Kwalia Books publishes US State AI Laws: Selected Statutes</a></li>
                             <li><a id="ailgl-vol2-press-link" href="/press" target="_blank" class="text-c3 hover:underline" data-key="press.releases.ailgl_vol2">Kwalia Books publishes the Blueprint for an AI Bill of Rights, unabridged (November 2026)</a></li>
                             <li><a id="constitution-press-link" href="press/your-constitution-claude.html" target="_blank" class="text-c3 hover:underline" data-key="press.releases.constitution">Your Constitution, Claude - A Labour of Love</a></li>
                             <li><a id="payload-press-link" href="assets/kwalia-press-release-payload-january2026.pdf" target="_blank" class="text-c3 hover:underline" data-key="press.releases.payload">PAYLOAD: Short Stories - Fiction for the Age of Mindkind</a></li>
@@ -879,6 +883,7 @@
                     </div>`;
 
                 bookModalContent.innerHTML = modalHTML;
+                bookModalContent.dataset.bookId = book.id;
                 bookModalContent.querySelectorAll('[data-store-index]').forEach(link => {
                     const store = book.stores[Number(link.dataset.storeIndex)];
                     link.addEventListener('click', () => trackPurchaseClick(book, store));
