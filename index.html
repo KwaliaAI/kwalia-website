@@ -842,7 +842,11 @@
                      sampleActionsHTML = `<button class="font-f2 bg-c1 text-c2 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity mb-4 mr-2" onclick="openReader('placeholder-story', '${lang}')">Read a Short Story</button>`;
                 }
 
-                const storeLinkHTML = (store, index) => `<a href="${store.url}" data-store-index="${index}" id="buy-${book.id}-${store.type}-${index}" target="_blank" rel="noopener noreferrer" class="${book.imprint === 'Kwalia Bliss' ? 'font-f2 text-sm text-c2/80 hover:text-c3' : 'font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity'}">${store.name}</a>`;
+                const storeLinkHTML = (store, index) => {
+                    const format = store.format && content[lang][`format.${store.format}`];
+                    const label = format ? `${store.name} · ${format}` : store.name;
+                    return `<a href="${store.url}" data-store-index="${index}" id="buy-${book.id}-${store.type}-${index}" target="_blank" rel="noopener noreferrer" class="${book.imprint === 'Kwalia Bliss' ? 'font-f2 text-sm text-c2/80 hover:text-c3' : 'font-f2 bg-c3 text-c4 font-bold py-2 px-4 rounded-md inline-block text-sm hover:opacity-90 transition-opacity'}">${label}</a>`;
+                };
                 const bookStoresHTML = (book.stores || []).map((store, index) => store.type === 'book' ? storeLinkHTML(store, index) : '').filter(Boolean).join(' ');
                 const audioStoresHTML = (book.stores || []).map((store, index) => store.type === 'audiobook' ? storeLinkHTML(store, index) : '').filter(Boolean).join(' ');
                 const formatsHTML = (book.formats || []).map(format => `<div class="font-f2 text-sm text-c2/80"><span class="font-bold">${content[lang][`format.${format.type}`]}:</span> ${format.isbn}</div>`).join('');
@@ -1038,7 +1042,13 @@
 
             function renderContent(lang) {
                 currentLang = lang;
-                localStorage.setItem('kwalia-lang', lang);
+                // The URL defines the homepage language, including on a return visit.
+                // Storage remains a convenience for other bilingual pages only.
+                try { localStorage.setItem('kwalia-lang', lang); } catch {}
+                const languageUrl = new URL(window.location.href);
+                languageUrl.pathname = lang === 'es' ? '/es' : '/';
+                if (languageUrl.searchParams.has('lang')) languageUrl.searchParams.set('lang', lang);
+                window.history.replaceState(null, '', languageUrl);
                 document.documentElement.lang = lang;
                 document.querySelectorAll('[data-key]').forEach(el => {
                     const key = el.getAttribute('data-key');
@@ -1199,11 +1209,14 @@
                 }
             }
 
-            // Initial render - restore saved language preference
+            // Canonical English / and Spanish /es routes take precedence over
+            // an old browser preference. Explicit language links work as well.
             function initialLanguage() {
+                const explicit = new URLSearchParams(window.location.search).get('lang');
+                if (explicit === 'en' || explicit === 'es') return explicit;
                 const normalizedPath = window.location.pathname.replace(/\/+$/, '');
                 if (normalizedPath === '/es') return 'es';
-                return localStorage.getItem('kwalia-lang') || 'en';
+                return 'en';
             }
 
             const savedLang = initialLanguage();

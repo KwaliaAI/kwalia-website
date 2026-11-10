@@ -25,6 +25,36 @@ class BooksBuilderTests(unittest.TestCase):
             self.row.update(lifecycle_stage="published", enable_for_sale=True)
             self.assertEqual(live_channels(self.row), [])
 
+    def test_multiple_amazon_formats_have_explicit_format_labels(self):
+        self.row["draft_metadata"] = {"kdp_asins": {"ebook": "B0HQHG2F8N", "paperback": "1917717776", "hardcover": "1917717768"},
+                                      "kdp_format_status": {"ebook": "live", "paperback": "live", "hardcover": "live"}}
+        stores = build_row(self.row, self.overlay, ["amazon-kdp"])["stores"]
+        self.assertEqual([s["format"] for s in stores], ["ebook", "paperback", "hardcover"])
+        self.assertEqual(len({s["url"] for s in stores}), 3)
+
+    def test_verified_wide_link_survives_kdp_links(self):
+        self.row["draft_metadata"] = {"kdp_asins": {"ebook": "B0HQHG2F8N"}, "kdp_format_status": {"ebook": "live"}}
+        self.row["distribution_plan"] = {"ebook": {"platform_links": [{"name": "Storytel", "url": "https://example.com/verified", "type": "book"}]}}
+        stores = build_row(self.row, self.overlay, ["amazon-kdp", "bookwire"])["stores"]
+        self.assertEqual([s["name"] for s in stores], ["Amazon", "Storytel"])
+        self.assertEqual(stores[-1]["format"], "ebook")
+
+    def test_legacy_retailer_backfill_preserves_prose_and_existing_stores(self):
+        old = self.overlay["legacy_rows"][0]
+        self.row["title_id"] = old["id"]
+        self.row["distribution_plan"] = {"ebook": {"platform_links": [{"name": "Storytel", "url": "https://example.com/verified", "type": "book"}]}}
+        book = build_row(self.row, self.overlay, ["bookwire"])
+        self.assertEqual({k:v for k,v in book.items() if k != "stores"}, {k:v for k,v in legacy_public(old).items() if k != "stores"})
+        self.assertEqual(book["stores"][:-1], old["stores"])
+        self.assertEqual(book["stores"][-1]["name"], "Storytel")
+
+    def test_observed_legacy_edition_adds_missing_format_isbn(self):
+        self.row["title_id"] = "your-constitution-claude"
+        self.row["isbn_audio"] = "9781917717236"
+        self.row["distribution_plan"] = {"audiobook": {"platform_links": [{"name": "Storytel", "url": "https://example.com/audio", "type": "audiobook"}]}}
+        book = build_row(self.row, self.overlay, ["bookwire"])
+        self.assertIn({"type": "audiobook", "isbn": "978-1-917717-23-6"}, book["formats"])
+
     def test_partial_kindle_with_stale_sale_flag(self):
         self.row.update(enable_for_sale=False, lifecycle_stage="production",
                         channel_delivery_status={"amazon-kdp": {"status": "partially_live"}},

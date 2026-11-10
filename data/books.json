@@ -52,6 +52,18 @@
         "name": "Spotify",
         "url": "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY",
         "type": "audiobook"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/universal-declaration-of-ai-rights-rights-of-persons-11082401",
+        "type": "book",
+        "format": "ebook"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/universal-declaration-of-ai-rights-rights-of-persons-11082401",
+        "type": "audiobook",
+        "format": "audiobook"
       }
     ]
   },
@@ -95,6 +107,18 @@
         "name": "Apple Books",
         "url": "https://books.apple.com/cl/book/mindkind-the-cognitive-community/id6748483156",
         "type": "book"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/mindkind-the-cognitive-community-11786666",
+        "type": "book",
+        "format": "ebook"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/mindkind-the-cognitive-community-11844940",
+        "type": "audiobook",
+        "format": "audiobook"
       }
     ]
   },
@@ -147,6 +171,10 @@
       {
         "type": "hardcover",
         "isbn": "978-1-917717-38-0"
+      },
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-40-3"
       }
     ],
     "stores": [
@@ -154,6 +182,12 @@
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/1917717385",
         "type": "book"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/synthropology-a-new-science-of-synthetic-culture-15601301",
+        "type": "book",
+        "format": "ebook"
       }
     ]
   },
@@ -218,7 +252,20 @@
       }
     ],
     "status": "published",
-    "stores": []
+    "stores": [
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/war-and-ai-the-algorithmic-battlefield-13735270",
+        "type": "book",
+        "format": "ebook"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/war-and-ai-the-algorithmic-battlefield-13735270",
+        "type": "audiobook",
+        "format": "audiobook"
+      }
+    ]
   },
   {
     "id": "claudes-constitution",
@@ -263,6 +310,12 @@
         "name": "Google Play",
         "url": "https://play.google.com/store/audiobooks/details?id=AQAAAEAaaQ4pBM",
         "type": "audiobook"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/claudes-constitution-14477533",
+        "type": "book",
+        "format": "ebook"
       }
     ]
   },
@@ -296,6 +349,10 @@
       {
         "type": "hardcover",
         "isbn": "978-1-917717-22-9"
+      },
+      {
+        "type": "audiobook",
+        "isbn": "978-1-917717-23-6"
       }
     ],
     "stores": [
@@ -303,6 +360,12 @@
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/1917717229",
         "type": "book"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/your-constitution-claude-a-labour-of-love-the-second-person-edition-14592269",
+        "type": "audiobook",
+        "format": "audiobook"
       }
     ]
   },
@@ -360,6 +423,12 @@
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/191771761X",
         "type": "book"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/the-eu-ai-act-the-unabridged-text-of-regulation-eu-2024-1689-15586907",
+        "type": "book",
+        "format": "ebook"
       }
     ],
     "blurb_100": "A Kwalia Books reference edition of the complete EU AI Act, updated with the 2026 amendments of Regulation (EU) 2026/1744.",
@@ -460,7 +529,14 @@
       {
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/B0HQ569Y93",
-        "type": "book"
+        "type": "book",
+        "format": "ebook"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/blueprint-for-an-ai-bill-of-rights-making-automated-systems-work-for-the-american-people-15586904",
+        "type": "book",
+        "format": "ebook"
       }
     ]
   },
@@ -608,17 +684,20 @@
       {
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/B0HQHG2F8N",
-        "type": "book"
+        "type": "book",
+        "format": "ebook"
       },
       {
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/1917717776",
-        "type": "book"
+        "type": "book",
+        "format": "paperback"
       },
       {
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/1917717768",
-        "type": "book"
+        "type": "book",
+        "format": "hardcover"
       }
     ]
   },
@@ -653,8 +732,15 @@
         "amount": "£4.99"
       }
     ],
-    "status": "forthcoming",
-    "stores": []
+    "status": "published",
+    "stores": [
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/chinas-ai-regulations-bilingual-five-regulations-in-chinese-and-english-15615428",
+        "type": "book",
+        "format": "ebook"
+      }
+    ]
   },
   {
     "id": "bliss-004-shut-up-neighbours",
@@ -703,8 +789,15 @@
       }
     ],
     "prices": [],
-    "status": "forthcoming",
-    "stores": []
+    "status": "published",
+    "stores": [
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/shut-up-darling-4-hours-of-pink-noise-15623919",
+        "type": "audiobook",
+        "format": "audiobook"
+      }
+    ]
   },
   {
     "id": "bliss-006-shut-up-everyone",
@@ -758,8 +851,15 @@
         "amount": "£7.99"
       }
     ],
-    "status": "forthcoming",
-    "stores": []
+    "status": "published",
+    "stores": [
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/wind-on-mars-real-martian-wind-recorded-by-nasas-perseverance-rover-15623964",
+        "type": "audiobook",
+        "format": "audiobook"
+      }
+    ]
   },
   {
     "id": "ailgl-005-us-state-ai-laws",
@@ -812,17 +912,26 @@
       {
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/B0HR247G89",
-        "type": "book"
+        "type": "book",
+        "format": "ebook"
       },
       {
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/1917717873",
-        "type": "book"
+        "type": "book",
+        "format": "paperback"
       },
       {
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/1917717865",
-        "type": "book"
+        "type": "book",
+        "format": "hardcover"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/us-state-ai-laws-selected-statutes-15645581",
+        "type": "book",
+        "format": "ebook"
       }
     ]
   }

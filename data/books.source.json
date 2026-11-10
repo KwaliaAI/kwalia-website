@@ -1,18 +1,19 @@
 {
   "catalogue_repository": "https://github.com/KwaliaAI/catalog",
-  "catalogue_commit": "eac7f887e18f550650d4945edf0550824689e2a7",
+  "catalogue_commit": "ac5d0224c361ddf64408e3208b7fe426b35dabb5",
   "catalogue_file": "data/catalog.json",
-  "catalogue_sha256": "5d9150d0edd6a79f1f0067ed1bd71ec68c9a8f9350f3396c9bd2d52a9be78dff",
+  "catalogue_sha256": "1a35b14fdcef71d6123ccc4f16909391af1894a7a1091ea8ce30515d3cec7383",
   "overlay_sha256": "84ac1eadd8b648fbc81b91d3cfc84e0a7305901de0b33d04ca6ed8ea3ced7c75",
-  "books_sha256": "b1d59c7bb9834d0fd1a0bba0a0946f76f8caf253142f84561bd813fe1e2e5f5c",
+  "books_sha256": "7ba464fe8bb6ec975e20ef3257d602870ee70cef0e24d505f48b083af3118c0e",
   "decisions": [
     {
       "id": "udair",
       "included": true,
       "visible": true,
-      "channels": [],
-      "legacyVisible": true,
-      "reason": "approved legacy visibility; transitional until catalogue channel backfill"
+      "channels": [
+        "bookwire"
+      ],
+      "legacyVisible": true
     },
     {
       "id": "udair-es",
@@ -23,9 +24,10 @@
       "id": "mindkind",
       "included": true,
       "visible": true,
-      "channels": [],
-      "legacyVisible": true,
-      "reason": "approved legacy visibility; transitional until catalogue channel backfill"
+      "channels": [
+        "bookwire"
+      ],
+      "legacyVisible": true
     },
     {
       "id": "mindkind-es",
@@ -38,7 +40,8 @@
       "visible": true,
       "channels": [
         "ingram",
-        "google-play"
+        "google-play",
+        "bookwire"
       ],
       "legacyVisible": true
     },
@@ -51,16 +54,18 @@
       "id": "synthropology",
       "included": true,
       "visible": true,
-      "channels": [],
-      "legacyVisible": true,
-      "reason": "approved legacy visibility; transitional until catalogue channel backfill"
+      "channels": [
+        "bookwire"
+      ],
+      "legacyVisible": true
     },
     {
       "id": "ailgl-001-eu-ai-act",
       "included": true,
       "visible": true,
       "channels": [
-        "amazon-kdp"
+        "amazon-kdp",
+        "bookwire"
       ],
       "legacyVisible": true
     },
@@ -85,9 +90,10 @@
       "id": "your-constitution-claude",
       "included": true,
       "visible": true,
-      "channels": [],
-      "legacyVisible": true,
-      "reason": "approved legacy visibility; transitional until catalogue channel backfill"
+      "channels": [
+        "bookwire"
+      ],
+      "legacyVisible": true
     },
     {
       "id": "payload",
@@ -152,7 +158,8 @@
       "included": true,
       "visible": true,
       "channels": [
-        "amazon-kdp"
+        "amazon-kdp",
+        "bookwire"
       ],
       "legacyVisible": false
     },
@@ -187,10 +194,10 @@
       "id": "ailgl-004-china-ai-rules",
       "included": true,
       "visible": true,
-      "channels": [],
-      "legacyVisible": false,
-      "reason": "commissioned pending listing; no storefront-live claim",
-      "listing_authority": "Founder site brief 2026-11-06; show pending card without claiming a live storefront"
+      "channels": [
+        "bookwire"
+      ],
+      "legacyVisible": false
     },
     {
       "id": "bliss-004-shut-up-neighbours",
@@ -205,10 +212,10 @@
       "id": "bliss-005-shut-up-darling",
       "included": true,
       "visible": true,
-      "channels": [],
-      "legacyVisible": false,
-      "reason": "commissioned pending listing; no storefront-live claim",
-      "listing_authority": "GM SIGNED B0 20:38 2026-11-06, FINAL descriptions; forthcoming cards without store links"
+      "channels": [
+        "bookwire"
+      ],
+      "legacyVisible": false
     },
     {
       "id": "bliss-006-shut-up-everyone",
@@ -223,16 +230,17 @@
       "id": "bliss-007-wind-on-mars",
       "included": true,
       "visible": true,
-      "channels": [],
-      "legacyVisible": false,
-      "reason": "commissioned pending listing; no storefront-live claim",
-      "listing_authority": "GM signed build/delivery brief 2026-11-06; publish after PRODUCT OK"
+      "channels": [
+        "bookwire"
+      ],
+      "legacyVisible": false
     },
     {
       "id": "ailgl-005-us-state-ai-laws",
       "included": true,
       "visible": true,
       "channels": [
+        "bookwire",
         "amazon-kdp"
       ],
       "legacyVisible": false

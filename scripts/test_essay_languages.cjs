@@ -12,6 +12,7 @@ const published = JSON.parse(fs.readFileSync(path.join(root, 'data/essays.json')
         await context.route(/google-analytics\.com\/.*collect/, r => r.fulfill({ status: 204, body: '' }));
         if (!process.env.KWALIA_TEST_LIVE) await context.route('https://kwalia.ai/**', async r => {
             let name = new URL(r.request().url()).pathname;
+            if (name === '/es' || name === '/es/') name = '/index.html';
             if (name.endsWith('/')) name += 'index.html';
             const file = path.join(root, name);
             if (fs.existsSync(file) && fs.statSync(file).isFile()) return r.fulfill({ path: file });
@@ -57,7 +58,7 @@ const published = JSON.parse(fs.readFileSync(path.join(root, 'data/essays.json')
             assert.equal(await page.locator('a.sr-only[lang="es"][href=""]').count(), 0);
             for (const lang of ['es', 'en']) {
                 await page.evaluate(l => localStorage.setItem('kwalia-lang', l), lang);
-                await page.goto('https://kwalia.ai/', { waitUntil: 'domcontentloaded' });
+                await page.goto('https://kwalia.ai/' + (lang === 'es' ? 'es' : ''), { waitUntil: 'domcontentloaded' });
                 const expected = published.filter(e => e.slug[lang]).sort((a,b) => new Date(b.date)-new Date(a.date)).slice(0,3).map(e => '/essays/'+e.slug[lang]);
                 await page.waitForFunction(want => JSON.stringify([...document.querySelectorAll('#featured-essays > a')].map(a => a.getAttribute('href'))) === JSON.stringify(want), expected);
                 console.log('PASS homepage', width, lang);
