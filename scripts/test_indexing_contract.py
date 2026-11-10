@@ -400,6 +400,26 @@ Body.
     assert errors == ["content/essays/en/example.md related essay is unknown: missing-essay"]
 
 
+def test_spanish_homepage_requires_its_deployed_rewrite(validator) -> None:
+    original_root = validator.REPO_ROOT
+    with TemporaryDirectory() as tmpdir:
+        root = Path(tmpdir)
+        (root / "index.html").write_text("<html></html>", encoding="utf-8")
+        validator.REPO_ROOT = root
+        try:
+            assert not validator.internal_page_exists(root / "index.html", "/es")
+            (root / "_redirects").write_text(
+                "/es /index.html 200\n/es/ /index.html 200\n", encoding="utf-8"
+            )
+            assert validator.internal_page_exists(root / "index.html", "/es")
+            assert validator.internal_page_exists(root / "index.html", "/es/")
+            assert not validator.internal_page_exists(root / "index.html", "/es/missing")
+            (root / "index.html").unlink()
+            assert not validator.internal_page_exists(root / "index.html", "/es")
+        finally:
+            validator.REPO_ROOT = original_root
+
+
 def main() -> int:
     validator = load_validator()
     test_org_author_id_reference_fails(validator)
@@ -419,6 +439,7 @@ def main() -> int:
     test_core_reading_paths_required_links_pass(validator)
     test_homepage_core_entry_link_required(validator)
     test_unknown_related_frontmatter_fails(validator)
+    test_spanish_homepage_requires_its_deployed_rewrite(validator)
     print("Indexing contract regression tests OK.")
     return 0
 

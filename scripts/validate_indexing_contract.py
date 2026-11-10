@@ -388,6 +388,12 @@ def article_has_organization_author(article: dict, nodes_by_id: dict[str, dict] 
 
 def page_candidates_from_url_path(base_file: Path, url_path: str) -> list[Path]:
     decoded = unquote(url_path)
+    # The Spanish homepage is served by an explicit Netlify rewrite, not a file.
+    redirects = REPO_ROOT / "_redirects"
+    if decoded in {"/es", "/es/"} and redirects.exists():
+        if any(line.split()[:3] == [decoded, "/index.html", "200"]
+               for line in redirects.read_text(encoding="utf-8").splitlines()):
+            return [REPO_ROOT / "index.html"]
     if decoded.startswith("/"):
         target = REPO_ROOT / decoded.lstrip("/")
     else:
