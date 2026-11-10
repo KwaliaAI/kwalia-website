@@ -4,4 +4,9 @@
     <loc>https://kwalia.ai/press</loc>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://kwalia.ai/press/kwalia-sounds.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
