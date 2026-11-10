@@ -8,13 +8,15 @@ transitional: retire it when catalogue channel evidence is backfilled for those
 rows. Missing evidence never proves an approved legacy title is off sale.
 Routing plans, lifecycle and sale flags alone are not channel evidence. Fiamma
 and translation duplicates never appear. Other missing-channel rows are retained
-with siteVisible=false for essay readers; audio storefronts use distribution_plan.audiobook.platform_links.
+with siteVisible=false for essay readers; verified storefronts use distribution_plan.<format>.platform_links.
 An explicit draft_metadata.site_listing.visible commission can display a forthcoming
 card without activating a channel. Its formats list limits offered formats while
 the catalogue retains all allocated ISBNs. No retailer link is inferred.
 
 Field precedence: an approved legacy row supplies ALL public fields,
-including English/Spanish copy, status, formats, prices and store links, verbatim.
+including English/Spanish copy, status and prices, verbatim. Founder10Nov2026
+authorises merging verified catalogue retailer links and adding previously omitted
+offered format ISBNs while retaining existing approved copy.
 Catalogue differences require Founder approval before replacement; channel
 backfill alone does not approve new public copy. Apophenia stays forthcoming.
 The overlay's legacyVisible control is never emitted as a public book field.
@@ -68,6 +70,27 @@ def legacy_public(row):
     return {key: value for key, value in row.items() if key != "legacyVisible"}
 
 
+def retailer_links(row):
+    """Explicit format-specific retailer observations, never delivery plans."""
+    links = []
+    for kind in ("ebook", "paperback", "hardcover", "audiobook"):
+        for link in ((row.get("distribution_plan") or {}).get(kind) or {}).get("platform_links") or []:
+            links.append({**link, "format": kind})
+    return links
+
+
+def merge_stores(existing, observed):
+    links = [dict(link) for link in existing]
+    for link in observed:
+        # A retailer already present for this format remains one button, even
+        # when the observation uses another regional URL for the same edition.
+        if any(old["name"] == link["name"] and old["type"] == link["type"]
+               and (not old.get("format") or old["format"] == link.get("format")) for old in links):
+            continue
+        links.append(link)
+    return links
+
+
 def presentation_for(tid, overlay):
     old = next((r for r in overlay["legacy_rows"] if r["id"] == tid), {})
     fields = ("imprint", "imprintLine", "coverImage", "featured", "sampleUrl", "sampleLabel", "stories", "stores")
@@ -89,6 +112,14 @@ def build_row(row, overlay, channels):
     old = next((r for r in overlay["legacy_rows"] if r["id"] == tid), {})
     if old:
         book = legacy_public(old)
+        observed = retailer_links(row)
+        book["stores"] = merge_stores(book.get("stores", []), observed)
+        # New verified editions must also appear in the modal's ISBN list.
+        # Preserve all existing legacy copy, prices and format observations.
+        book["formats"] = [dict(item) for item in book.get("formats", [])]
+        for short, kind in FORMATS:
+            if any(link["format"] == kind for link in observed) and row.get(f"isbn_{short}") and not any(item["type"] == kind for item in book["formats"]):
+                book["formats"].append({"type": kind, "isbn": dashed(row[f"isbn_{short}"])})
         if not channels and old.get("legacyVisible") is not True:
             book["siteVisible"] = False
         return book
@@ -130,12 +161,13 @@ def build_row(row, overlay, channels):
     if audio_only:
         book["stores"] = ((row.get("distribution_plan") or {}).get("audiobook") or {}).get("platform_links") or []
     elif asins:
-        book["stores"] = [{"name": "Amazon", "url": f"https://www.amazon.com/dp/{asin}", "type": "book"}
+        book["stores"] = [{"name": "Amazon", "url": f"https://www.amazon.com/dp/{asin}", "type": "book", "format": kind}
                           for kind, asin in asins.items() if states.get(kind) == "live"]
     else:
         # Preserve approved site URLs rather than deriving an unverified retailer ID
         # from an ISBN alone. Volume 1's ISBN-10 link is already in this overlay.
         book["stores"] = view.get("stores", [])
+    book["stores"] = merge_stores(book["stores"], retailer_links(row))
     for key in ("featured", "sampleUrl", "sampleLabel", "stories"):
         if key in view:
             book[key] = view[key]

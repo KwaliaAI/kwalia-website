@@ -47,16 +47,16 @@ evidence is backfilled for those rows. Missing evidence is a catalogue gap, not
 proof that an approved legacy title is off sale. Routing plans and lifecycle/sale
 flags alone still do not prove channel availability.
 
-All eight approved legacy rows keep every public field verbatim and in production
-order: English/Spanish text, authors, formats, prices, status, art, links and sample
-controls. Approved legacy values win over conflicting catalogue values until the
+All eight approved legacy rows keep their approved text, authors, prices, status, art and sample controls in production order. Under the Founder's10November2026 store-link audit commission, explicit verified catalogue retailer links are merged into those rows and previously omitted offered formats are added with their canonical ISBNs; no prose or planned price is inferred. Approved legacy values win over conflicting catalogue values until the
 Founder approves replacement. Channel backfill does not approve copy changes.
-Apophenia remains the identical forthcoming card. The overlay visibility control
-is stripped from generated public data. `--baseline` reproduces these same eight
-public records byte for byte; normal generation also preserves them and adds
-Volume 2 as the ninth visible card. PAYLOAD stays on its existing fiction surface;
-its missing-channel primary record remains hidden. Both Bliss rows remain
-`siteVisible: false`, with `stores: []`; there is no new Bliss page.
+Apophenia remains the approved forthcoming card. The overlay visibility control
+is stripped from generated public data. `--baseline` reproduces the original eight
+public records byte for byte for migration checks; normal generation preserves
+their approved fields with the verified link/format exception above and includes
+additional commissioned titles according to current channel evidence. PAYLOAD
+stays on its existing fiction surface. Current Bliss visibility/store links follow
+its observed retailer records and generated selection manifest, not rollout-era
+fixed counts or a historical hidden-row example.
 
 For new titles, catalogue English copy/GBP prices and approved presentation fields
 are mapped as documented in the builder. Missing Spanish uses the existing English
@@ -154,3 +154,11 @@ The second GM batch approval explicitly preserves dialogue rayas in `un-dia-en-e
 ## Public title copy and metadata — Founder order, 2026-11-03
 
 The catalogue is the single source of truth for all public title copy and metadata, including title, subtitle, author line, description, formats, prices and retailer links. An approved change lands in the catalogue first; the site regenerates from that record and store re-sends carry it through the existing delivery pipelines. No surface is edited directly. The transitional approved legacy overlay preserves current public values until the Founder resolves the parity report; it does not authorize new copy or a direct surface edit. Retire this paragraph only if the Founder replaces the catalogue as the canonical source.
+
+## 10 November2026 website audit
+
+The homepage URL now defines language: `/` English, `/es` Spanish, explicit `?lang=en/es` takes precedence. The toggle updates that URL while preserving tracking parameters and title fragments. A previously saved Spanish value cannot override the English entry route; unavailable storage cannot stop rendering.
+
+Verified existing-channel retailer URLs live in `distribution_plan.<format>.platform_links`, with per-link primary observation evidence and exact ISBN/format/language. Non-legacy live KDP ASIN links retain their format for distinct translated button labels. Explicit wide links are merged alongside Amazon links; one retailer/format is not duplicated merely because a second regional URL was observed. Live retailer observations are scoped to the evidencedmarketplace; they do not certify global availability, prices, checkout or complete launch. Ingestion notes are retained as history.
+
+The separate technical task list is `docs/WEBSITE_MAINTENANCE.md`; the existing company `runbooks/TITLE_LAUNCH_CHECKLIST.md` remains the reusable per-title launch source. No new monitor or automatic wake is installed.

@@ -188,5 +188,6 @@
     </script>
 
 <script id="release-language">(()=>{let saved='en';try{saved=localStorage.getItem('kwalia-lang')||'en'}catch{}const choice=new URLSearchParams(location.search).get('lang')||saved;const lang=choice==='es'?'es':'en';document.documentElement.lang=lang;document.querySelectorAll('[data-release-language]').forEach(el=>el.hidden=el.dataset.releaseLanguage!==lang);try{localStorage.setItem('kwalia-lang',lang)}catch{}if(location.pathname.includes('ai-law-governance-library'))document.title={"en": "Kwalia Books presents the AI Law & Governance Library", "es": "Kwalia Books presenta la AI Law & Governance Library"}[lang]+' | Kwalia';})();</script>
+<script src="/assets/press-language-nav.js"></script>
 </body>
 </html>

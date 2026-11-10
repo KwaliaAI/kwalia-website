@@ -24,7 +24,7 @@ const root = path.resolve(__dirname, '..');
         if (!process.env.KWALIA_TEST_LIVE) {
             await context.route('https://kwalia.ai/**', async route => {
                 const pathname = new URL(route.request().url()).pathname;
-                const file = { '/': 'index.html', '/data/books.json': 'data/books.json', '/data/fiction.json': 'data/fiction.json' }[pathname];
+                const file = { '/': 'index.html', '/es': 'index.html', '/es/': 'index.html', '/data/books.json': 'data/books.json', '/data/fiction.json': 'data/fiction.json' }[pathname];
                 if (!file) return route.continue();
                 await route.fulfill({ status: 200, contentType: file.endsWith('.json') ? 'application/json' : 'text/html', body: fs.readFileSync(path.join(root, file)) });
             });
@@ -59,7 +59,7 @@ const root = path.resolve(__dirname, '..');
         for (const lang of ['en', 'es']) {
             // Use the site's actual card click path and both language versions.
             await page.evaluate(lang => { localStorage.setItem('kwalia-lang', lang); }, lang);
-            await page.evaluate(() => history.replaceState(null, '', '/#ailgl-001-eu-ai-act'));
+            await page.evaluate(l => history.replaceState(null, '', (l === 'es' ? '/es' : '/') + '#ailgl-001-eu-ai-act'), lang);
             await page.reload({ waitUntil: 'domcontentloaded' });
             await page.waitForSelector('#book-modal [href*="amazon"]');
             await page.locator('#close-modal').click();
