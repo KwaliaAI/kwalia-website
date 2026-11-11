@@ -108,7 +108,11 @@ def main():
         sys.exit(1)
 
     # Static pages have no essay inventory row.
-    static_rows = [{"url": f"{BASE_URL}/press"}]
+    static_rows = [
+        {"url": f"{BASE_URL}/press"},
+        {"url": f"{BASE_URL}/press/kwalia-sounds.html", "last_git_modified": "2026-11-10"},
+        {"url": f"{BASE_URL}/submissions", "last_git_modified": "2026-11-11"},
+    ]
     write_sitemap(REPO_ROOT / "sitemap-pages.xml", build_urlset(static_rows, "monthly"))
     generated.append(("sitemap-pages.xml", len(static_rows)))
 
