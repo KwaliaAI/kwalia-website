@@ -162,3 +162,13 @@ The homepage URL now defines language: `/` English, `/es` Spanish, explicit `?la
 Verified existing-channel retailer URLs live in `distribution_plan.<format>.platform_links`, with per-link primary observation evidence and exact ISBN/format/language. Non-legacy live KDP ASIN links retain their format for distinct translated button labels. Explicit wide links are merged alongside Amazon links; one retailer/format is not duplicated merely because a second regional URL was observed. Live retailer observations are scoped to the evidencedmarketplace; they do not certify global availability, prices, checkout or complete launch. Ingestion notes are retained as history.
 
 The separate technical task list is `docs/WEBSITE_MAINTENANCE.md`; the existing company `runbooks/TITLE_LAUNCH_CHECKLIST.md` remains the reusable per-title launch source. No new monitor or automatic wake is installed.
+
+## Bliss site-only copy — Founder-approved GM brief, 2026-11-12
+
+For the six Bliss cards only, `data/books.overrides.json` → `bliss_site_copy`
+contains the approved bare title, optional tag and synopsis used on the site.
+The builder applies these three fields after catalogue mapping. This explicit
+site-only commission overrides the general catalogue-copy rule above; retail
+metadata, statuses, prices, stores, covers and ISBNs remain unchanged. Spanish
+uses the approved English card copy fallback; only the shelf line is translated.
+Retire this exception when Founder replaces it with catalogue-backed site copy.

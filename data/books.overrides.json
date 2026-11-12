@@ -422,5 +422,73 @@
         "es": "US State AI Laws: Selected Statutes reúne nueve textos legislativos de California, Colorado, Texas, Utah y Nueva York en un solo volumen de consulta.\n\nLa selección abarca modelos de IA de frontera, decisiones automatizadas, servicios conversacionales, aplicaciones de salud mental e información al consumidor. Incluye la SB 53 de California, tres leyes de Colorado aprobadas en 2026, la Texas Responsible Artificial Intelligence Governance Act, tres capítulos del Código de Utah y la modificación de 2026 de la RAISE Act de Nueva York.\n\nLos textos oficiales se obtuvieron el 9 de noviembre de 2026. El volumen identifica las disposiciones aprobadas cuya aplicación comienza en una fecha posterior.\n\nKwalia Books publica esta selección de textos originales como volumen 5 de la AI Law & Governance Library para quienes quieran consultar directamente la legislación. Los textos legislativos se reproducen en inglés."
       }
     }
+  },
+  "bliss_site_copy": {
+    "bliss-001-shut-up-brain": {
+      "title": {
+        "en": "Shut Up, Brain"
+      },
+      "tag": {
+        "en": "Brown noise"
+      },
+      "synopsis": {
+        "en": "Your brain would like to revisit something you said at a wedding in 2011. Brown noise would rather it didn't."
+      }
+    },
+    "bliss-004-shut-up-neighbours": {
+      "title": {
+        "en": "Shut Up, Neighbours"
+      },
+      "tag": {
+        "en": "White noise"
+      },
+      "synopsis": {
+        "en": ""
+      }
+    },
+    "bliss-005-shut-up-darling": {
+      "title": {
+        "en": "Shut Up, Darling"
+      },
+      "tag": {
+        "en": "Pink noise"
+      },
+      "synopsis": {
+        "en": "You said for better or for worse. Nobody mentioned the snoring."
+      }
+    },
+    "bliss-006-shut-up-everyone": {
+      "title": {
+        "en": "Shut Up, Everyone"
+      },
+      "tag": {
+        "en": "Green noise"
+      },
+      "synopsis": {
+        "en": "For leaving the group chat when the group is in the room."
+      }
+    },
+    "bliss-003-neurutron": {
+      "title": {
+        "en": "Neurutron"
+      },
+      "tag": {
+        "en": "Spaceship"
+      },
+      "synopsis": {
+        "en": "The engines rumble along until the ship docks. Headphones, please. It's painful watching a phone speaker try."
+      }
+    },
+    "bliss-007-wind-on-mars": {
+      "title": {
+        "en": "Wind on Mars"
+      },
+      "tag": {
+        "en": "Actual Mars"
+      },
+      "synopsis": {
+        "en": "We've never gone further for a recording, and we didn't even go. NASA's Perseverance rover did, and it took a microphone.\n\nNASA/JPL-Caltech/LANL/CNES/CNRS/ISAE-Supaero"
+      }
+    }
   }
 }

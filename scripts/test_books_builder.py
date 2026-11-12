@@ -126,6 +126,22 @@ class BooksBuilderTests(unittest.TestCase):
         self.assertIs(books[0]["siteVisible"], False)
         self.assertFalse(decisions[0]["visible"])
 
+    def test_bliss_site_copy_preserves_retail_fields_and_source(self):
+        self.row.update(title_id="bliss-001-shut-up-brain", series_title="Kwalia Bliss",
+                        subtitle="4 Hours of Deep Brown Noise for Sleep")
+        original = copy.deepcopy(self.row)
+        without = copy.deepcopy(self.overlay)
+        without.pop("bliss_site_copy")
+        retail = build_row(self.row, without, ["bookwire"])
+        site = build_row(self.row, self.overlay, ["bookwire"])
+        self.assertEqual(self.row, original)
+        self.assertEqual({k:v for k,v in site.items() if k not in ("title", "tag", "synopsis")},
+                         {k:v for k,v in retail.items() if k not in ("title", "synopsis")})
+        self.assertIn("4 Hours", retail["title"]["en"])
+        self.assertNotIn("4 Hours", site["title"]["en"])
+        self.row["title_id"] = "example"
+        self.assertNotIn("tag", build_row(self.row, self.overlay, ["bookwire"]))
+
     def test_english_copy_override_refused(self):
         overlay = copy.deepcopy(self.overlay)
         overlay["presentation"]["example"] = {"synopsis": {"en": "Unauthorized"}}
