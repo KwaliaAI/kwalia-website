@@ -299,7 +299,7 @@
             <div class="container mx-auto">
                 <div class="text-center mb-12">
                     <h2 class="font-f1 text-4xl md:text-5xl font-bold" data-key="catalogue_bliss.title">Kwalia Bliss</h2>
-                    <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto" data-key="catalogue_bliss.subtitle">Four hours of one sound, no words, to leave on while you sleep or work.</p>
+                    <p class="font-f2 text-lg mt-4 max-w-2xl mx-auto" data-key="catalogue_bliss.subtitle">Nothing happens in any of these. You're welcome.</p>
                 </div>
                 <div id="bliss-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     </div>
@@ -598,6 +598,9 @@
                 const bookTitle = book.title[lang] || book.title.en;
                 const bookAuthors = (book.authors && book.authors.length > 0) ? book.authors.join(' & ') : content[lang]['status.forthcoming'];
 
+                const tag = bliss && book.tag && (book.tag[lang] || book.tag.en);
+                const synopsis = bliss && (book.synopsis[lang] || book.synopsis.en);
+                const synopsisHTML = synopsis ? `<div class="font-f2 text-sm text-c2/80 text-center">${synopsis.split('\n').filter(p => p.trim()).map(p => `<p>${p}</p>`).join('')}</div>` : '';
                 const storesHTML = bliss ? `<div class="flex flex-wrap justify-center gap-3">${(book.stores || []).map((store, index) => `<a href="${store.url}" data-card-store-index="${index}" target="_blank" rel="noopener noreferrer" class="font-f2 text-sm text-c2/80 hover:text-c3">${store.name}</a>`).join('')}</div>` : '';
 
                 return `
@@ -605,9 +608,11 @@
                         ${coverHTML}
                         <div class="pt-2 text-center">
                             <p class="font-f1 text-2xl">${bookTitle}</p>
+                            ${tag ? `<p class="font-f2 text-sm text-c2/80">${tag}</p>` : ''}
                             <p class="font-f2 text-sm text-c2/80">${bookAuthors}</p>
                             ${bookStatus ? `<p class="font-f3 text-xs uppercase tracking-[0.18em] text-c3 mt-2">${bookStatus}</p>` : ''}
                         </div>
+                        ${synopsisHTML}
                         ${storesHTML}
                     </div>`;
             }
@@ -821,7 +826,12 @@
                 const bookStatus = (book.statusText && (book.statusText[lang] || book.statusText.en))
                     || (book.status && book.status !== 'published' ? (content[lang][`status.${book.status}`] || '') : '');
                 const bookImprint = book.imprintLine || '';
-                const synopsisHTML = (book.synopsis[lang] || book.synopsis.en).split('\n').map(p => `<p class="mb-4">${p}</p>`).join('');
+                const synopsis = book.synopsis[lang] || book.synopsis.en;
+                const synopsisHTML = synopsis ? synopsis.split('\n').map(p => `<p class="mb-4">${p}</p>`).join('') : '';
+                const tag = book.imprint === 'Kwalia Bliss' && book.tag && (book.tag[lang] || book.tag.en);
+                const headingHTML = tag
+                    ? `<div class="pr-4 min-w-0 flex-1 break-words"><h3 class="font-f1 text-3xl md:text-4xl">${bookTitle}</h3><p class="font-f2 text-sm text-c2/80">${tag}</p></div>`
+                    : `<h3 class="font-f1 text-3xl md:text-4xl pr-4 min-w-0 flex-1 break-words">${bookTitle}</h3>`;
 
                 // Special handling for fiction: Multiple stories support
                 let sampleActionsHTML = '';
@@ -866,7 +876,7 @@
                 const modalHTML = `
                     <div class="p-6 sm:p-8">
                         <div class="flex justify-between items-start mb-6">
-                            <h3 class="font-f1 text-3xl md:text-4xl pr-4 min-w-0 flex-1 break-words">${bookTitle}</h3>
+                            ${headingHTML}
                             <button id="close-modal" class="text-4xl text-c2/50 hover:text-c3 leading-none shrink-0">×</button>
                         </div>
                         <div class="grid md:grid-cols-3 gap-8">
@@ -875,7 +885,7 @@
                             </div>
                             <div class="md:col-span-2">
                                 ${bookAuthors}
-                                <div class="font-f2 text-base text-c2/90 leading-relaxed">${synopsisHTML}</div>
+                                ${synopsisHTML ? `<div class="font-f2 text-base text-c2/90 leading-relaxed">${synopsisHTML}</div>` : ''}
                                 ${sampleActionsHTML || detailsHTML ? '<hr class="my-6">' : ''}
 
                                 ${sampleActionsHTML}

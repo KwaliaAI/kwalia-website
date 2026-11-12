@@ -544,7 +544,7 @@
     "id": "bliss-001-shut-up-brain",
     "imprint": "Kwalia Bliss",
     "title": {
-      "en": "Shut Up, Brain: 4 Hours of Deep Brown Noise for Sleep"
+      "en": "Shut Up, Brain"
     },
     "authors": [
       "Kwalia Bliss"
@@ -553,7 +553,7 @@
       "en": "assets/9781917717731.jpg"
     },
     "synopsis": {
-      "en": "It's four hours of brown noise and nothing else. Put it on when your head won't shut up. It works on a night bus as well, with the phone on your lap. There's no talking and no music, and the sound stays the same the whole way through. Headphones are good, and a speaker works too. It's on Kwalia Bliss, along with Neurutron and three more Shut Up titles."
+      "en": "Your brain would like to revisit something you said at a wedding in 2011. Brown noise would rather it didn't."
     },
     "formats": [
       {
@@ -584,13 +584,16 @@
         "url": "https://www.storytel.com/be/books/shut-up-brain-4-hours-of-deep-brown-noise-for-sleep-15556285",
         "type": "audiobook"
       }
-    ]
+    ],
+    "tag": {
+      "en": "Brown noise"
+    }
   },
   {
     "id": "bliss-003-neurutron",
     "imprint": "Kwalia Bliss",
     "title": {
-      "en": "Neurutron: 4 Hours of Deep Engine Vibration, Slowing to Dock. Headphones Required."
+      "en": "Neurutron"
     },
     "authors": [
       "Kwalia Bliss"
@@ -599,7 +602,7 @@
       "en": "assets/9781917717755.jpg"
     },
     "synopsis": {
-      "en": "You'll need headphones. A phone speaker can't play bass this low. You're in a bunk on a ship with the engines running under you for just over four hours. Near the end the ship slows and docks. Nobody speaks on it and there's no music. It's on Kwalia Bliss, next to Shut Up, Brain, Shut Up, Neighbours, Shut Up, Darling and Shut Up, Everyone."
+      "en": "The engines rumble along until the ship docks. Headphones, please. It's painful watching a phone speaker try."
     },
     "formats": [
       {
@@ -630,7 +633,10 @@
         "url": "https://www.storytel.com/nl/books/neurutron-4-hours-of-deep-engine-vibration-slowing-to-dock-headphones-required-15553836",
         "type": "audiobook"
       }
-    ]
+    ],
+    "tag": {
+      "en": "Spaceship"
+    }
   },
   {
     "id": "ailgl-003-nist-ai-rmf",
@@ -746,7 +752,7 @@
     "id": "bliss-004-shut-up-neighbours",
     "imprint": "Kwalia Bliss",
     "title": {
-      "en": "Shut Up, Neighbours: 4 Hours of White Noise"
+      "en": "Shut Up, Neighbours"
     },
     "authors": [
       "Kwalia Bliss"
@@ -755,7 +761,7 @@
       "en": "assets/9781917717793.jpg"
     },
     "synopsis": {
-      "en": "Shut Up, Neighbours is four hours of white noise, one sound all the way through, with no voice and no music. Put it on when the flat upstairs takes up the drums. It joins Shut Up, Brain and Neurutron on Kwalia Bliss. Shut Up, Darling and Shut Up, Everyone are there too. A speaker in the room is fine, or wear headphones if you'd rather."
+      "en": ""
     },
     "formats": [
       {
@@ -765,13 +771,16 @@
     ],
     "prices": [],
     "status": "forthcoming",
-    "stores": []
+    "stores": [],
+    "tag": {
+      "en": "White noise"
+    }
   },
   {
     "id": "bliss-005-shut-up-darling",
     "imprint": "Kwalia Bliss",
     "title": {
-      "en": "Shut Up, Darling: 4 Hours of Pink Noise"
+      "en": "Shut Up, Darling"
     },
     "authors": [
       "Kwalia Bliss"
@@ -780,7 +789,7 @@
       "en": "assets/9781917717809.jpg"
     },
     "synopsis": {
-      "en": "Shut Up, Darling is four hours of pink noise, the same sound from start to finish. It's for when the person across the kitchen table has one more thing to say about their day. Any speaker in the kitchen will do. There's no voice on it and no music. Headphones are the quieter choice, if you'd rather they didn't know. You'll find it on Kwalia Bliss with Shut Up, Brain, Neurutron and the other Shut Up titles."
+      "en": "You said for better or for worse. Nobody mentioned the snoring."
     },
     "formats": [
       {
@@ -797,13 +806,16 @@
         "type": "audiobook",
         "format": "audiobook"
       }
-    ]
+    ],
+    "tag": {
+      "en": "Pink noise"
+    }
   },
   {
     "id": "bliss-006-shut-up-everyone",
     "imprint": "Kwalia Bliss",
     "title": {
-      "en": "Shut Up, Everyone: 4 Hours of Green Noise"
+      "en": "Shut Up, Everyone"
     },
     "authors": [
       "Kwalia Bliss"
@@ -812,7 +824,7 @@
       "en": "assets/9781917717816.jpg"
     },
     "synopsis": {
-      "en": "Shut Up, Everyone gives you green noise for four hours, one sound and nothing else. Play it on a train where everybody has found someone to call. Bring headphones, or everyone gets it too. You get no voices and no music. On Kwalia Bliss it sits with Shut Up, Brain, Shut Up, Neighbours, Shut Up, Darling and Neurutron."
+      "en": "For leaving the group chat when the group is in the room."
     },
     "formats": [
       {
@@ -822,13 +834,16 @@
     ],
     "prices": [],
     "status": "forthcoming",
-    "stores": []
+    "stores": [],
+    "tag": {
+      "en": "Green noise"
+    }
   },
   {
     "id": "bliss-007-wind-on-mars",
     "imprint": "Kwalia Bliss",
     "title": {
-      "en": "Wind on Mars: Real Martian Wind Recorded by NASA's Perseverance Rover"
+      "en": "Wind on Mars"
     },
     "authors": [
       "Kwalia Bliss"
@@ -837,7 +852,7 @@
       "en": "assets/9781917717854.jpg"
     },
     "synopsis": {
-      "en": "This is two hours of wind on Mars, from recordings taken by the microphone on NASA's Perseverance rover. You hear it at the speed it was recorded and at its own pitch. There's no narrator and no music on it. It's the weather on another planet, and you can play it in your kitchen. Headphones or a speaker will do. It's part of Kwalia Bliss, with Shut Up, Brain, Shut Up, Neighbours, Shut Up, Darling, Shut Up, Everyone and Neurutron.\n\nNASA/JPL-Caltech/LANL/CNES/CNRS/ISAE-Supaero"
+      "en": "We've never gone further for a recording, and we didn't even go. NASA's Perseverance rover did, and it took a microphone.\n\nNASA/JPL-Caltech/LANL/CNES/CNRS/ISAE-Supaero"
     },
     "formats": [
       {
@@ -859,7 +874,10 @@
         "type": "audiobook",
         "format": "audiobook"
       }
-    ]
+    ],
+    "tag": {
+      "en": "Actual Mars"
+    }
   },
   {
     "id": "ailgl-005-us-state-ai-laws",
