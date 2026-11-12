@@ -576,7 +576,12 @@
       },
       {
         "name": "Apple Books",
-        "url": "https://books.apple.com/gb/audiobook/shut-up-brain/id6828504374?uo=4",
+        "url": "https://books.apple.com/gb/audiobook/shut-up-brain/id6828504374",
+        "type": "audiobook"
+      },
+      {
+        "name": "Google Play Books",
+        "url": "https://play.google.com/store/audiobooks/details/Kwalia_Bliss_Shut_Up_Brain_Kwalia_Bliss?id=AQAAAEBGnzLfZM",
         "type": "audiobook"
       },
       {
@@ -625,7 +630,12 @@
       },
       {
         "name": "Apple Books",
-        "url": "https://books.apple.com/gb/audiobook/neurutron/id6828401848?uo=4",
+        "url": "https://books.apple.com/gb/audiobook/neurutron/id6828401848",
+        "type": "audiobook"
+      },
+      {
+        "name": "Google Play Books",
+        "url": "https://play.google.com/store/audiobooks/details/Kwalia_Bliss_Neurutron_Kwalia_Bliss?id=AQAAAEBGLxFvRM",
         "type": "audiobook"
       },
       {
@@ -728,11 +738,27 @@
     },
     "formats": [
       {
+        "type": "hardcover",
+        "isbn": "978-1-917717-82-3"
+      },
+      {
+        "type": "paperback",
+        "isbn": "978-1-917717-83-0"
+      },
+      {
         "type": "ebook",
         "isbn": "978-1-917717-84-7"
       }
     ],
     "prices": [
+      {
+        "type": "hardcover",
+        "amount": "£24.99"
+      },
+      {
+        "type": "paperback",
+        "amount": "£11.99"
+      },
       {
         "type": "ebook",
         "amount": "£4.99"
@@ -740,6 +766,24 @@
     ],
     "status": "published",
     "stores": [
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0HR19LYVH",
+        "type": "book",
+        "format": "ebook"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717830",
+        "type": "book",
+        "format": "paperback"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717822",
+        "type": "book",
+        "format": "hardcover"
+      },
       {
         "name": "Storytel",
         "url": "https://www.storytel.com/fi/books/chinas-ai-regulations-bilingual-five-regulations-in-chinese-and-english-15615428",
@@ -797,14 +841,33 @@
         "isbn": "978-1-917717-80-9"
       }
     ],
-    "prices": [],
+    "prices": [
+      {
+        "type": "audiobook",
+        "amount": "£7.99"
+      }
+    ],
     "status": "published",
     "stores": [
       {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/6LFiwaugfmGtWCG864mSI8",
+        "type": "audiobook"
+      },
+      {
+        "name": "Apple Books",
+        "url": "https://books.apple.com/gb/audiobook/shut-up-darling/id6831800704",
+        "type": "audiobook"
+      },
+      {
+        "name": "Google Play Books",
+        "url": "https://play.google.com/store/audiobooks/details/Kwalia_Bliss_Shut_Up_Darling_Kwalia_Bliss?id=AQAAAEDGah0qyM",
+        "type": "audiobook"
+      },
+      {
         "name": "Storytel",
         "url": "https://www.storytel.com/fi/books/shut-up-darling-4-hours-of-pink-noise-15623919",
-        "type": "audiobook",
-        "format": "audiobook"
+        "type": "audiobook"
       }
     ],
     "tag": {
@@ -869,10 +932,24 @@
     "status": "published",
     "stores": [
       {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/7gC0m6pyhpzsLebxkElBcD",
+        "type": "audiobook"
+      },
+      {
+        "name": "Apple Books",
+        "url": "https://books.apple.com/gb/audiobook/wind-on-mars/id6831813618",
+        "type": "audiobook"
+      },
+      {
+        "name": "Google Play Books",
+        "url": "https://play.google.com/store/audiobooks/details/Kwalia_Bliss_Wind_on_Mars_Kwalia_Bliss?id=AQAAAEDGqiLq9M",
+        "type": "audiobook"
+      },
+      {
         "name": "Storytel",
         "url": "https://www.storytel.com/fi/books/wind-on-mars-real-martian-wind-recorded-by-nasas-perseverance-rover-15623964",
-        "type": "audiobook",
-        "format": "audiobook"
+        "type": "audiobook"
       }
     ],
     "tag": {

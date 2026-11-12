@@ -1,10 +1,10 @@
 {
   "catalogue_repository": "https://github.com/KwaliaAI/catalog",
-  "catalogue_commit": "39056b8eeb0d863ef18d47b7f9fe918a6959da50",
+  "catalogue_commit": "91f5ff6ecbe0a302a5a0e1d2cfbaa39e686ff906",
   "catalogue_file": "data/catalog.json",
-  "catalogue_sha256": "231a7c51f93811d9294c8b311628047e71196eacb8a3e42d4c8c7e5bc7d4ab9a",
+  "catalogue_sha256": "36d80af1fc33ce691a7fad751b973e526d25b0722c8b05d86af65c04cbbe904a",
   "overlay_sha256": "70d1048eb507241e794350d98ed09fee81edd3039c7822721bcccdcc0df7928e",
-  "books_sha256": "bc8693725e3b22f3826fe6ada5f090ca3efe7a03f4dea6f037a17219f1ec47e2",
+  "books_sha256": "276c8ba85d0879816e21677ca76e9ae92e49bf262a7ef3217ccea0d2a3437c32",
   "decisions": [
     {
       "id": "udair",
@@ -195,7 +195,8 @@
       "included": true,
       "visible": true,
       "channels": [
-        "bookwire"
+        "bookwire",
+        "amazon-kdp"
       ],
       "legacyVisible": false
     },
