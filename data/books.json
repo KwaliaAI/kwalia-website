@@ -1029,5 +1029,35 @@
         "format": "ebook"
       }
     ]
+  },
+  {
+    "id": "openai-model-spec",
+    "imprint": "New Citizenships",
+    "title": {
+      "en": "The OpenAI Model Spec: Diffs 2024–2026"
+    },
+    "authors": [
+      "OpenAI"
+    ],
+    "coverImage": {
+      "en": "assets/9781917717892.jpg"
+    },
+    "synopsis": {
+      "en": "• Annotated with a version history of all eight versions, 2024 to 2026\n\nThe Model Spec is OpenAI's public document setting out how it intends its models to behave. In OpenAI's words: \"By publishing the Model Spec, we aim to increase transparency around how we shape model behavior and invite public discussion on ways to improve it.\" This edition prints the version of 29 October 2026 in full, word for word.\n\nAfter an overview and definitions, it sets out five values: be faithful to human intent, minimize harm, be honest and transparent, facilitate human agency, and act with care. Most of its teaching is done by example in 182 short dialogues where a reply is marked Compliant, Violation or, seven times, Minor issues. Most sections carry an authority level, from Root down to Guideline, that says who can override what. It sets out the chain of command between OpenAI, developers and users, and what the model must never do. It also covers how the model should stay honest and avoid sycophancy, treat users under 18, respond to self-harm, keep political neutrality and accept human oversight.\n\nOpenAI revises the document. Eight versions were published between May 2024 and October 2026, and the text grew from about 9,000 words to about 36,500.\n\nThe version history at the back is Kwalia's. It lists all eight versions and compares each with the one before: word counts, sections added, removed, renamed and moved. For the first revision, May 2024 to February 2025, it gives word counts and section headings only. From 2025 on, it quotes the changes OpenAI's own changelog names, with deleted words struck through and new words underlined. The principles for users under 18, for example, arrive in the December 2025 comparison. The history says what changed and gives no opinion on it.\n\nThe book sits in Kwalia's New Citizenships collection with Claude's Constitution.\n\nOpenAI wrote the Model Spec and dedicated it to the public domain under CC0 1.0. Its text is reproduced unaltered from the version of 29 October 2026. This edition is not affiliated with, endorsed or sponsored by OpenAI."
+    },
+    "formats": [
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-89-2"
+      }
+    ],
+    "prices": [
+      {
+        "type": "ebook",
+        "amount": "£2.99"
+      }
+    ],
+    "status": "forthcoming",
+    "stores": []
   }
 ]
