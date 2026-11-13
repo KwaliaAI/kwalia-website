@@ -421,6 +421,11 @@
       "synopsis": {
         "es": "US State AI Laws: Selected Statutes reúne nueve textos legislativos de California, Colorado, Texas, Utah y Nueva York en un solo volumen de consulta.\n\nLa selección abarca modelos de IA de frontera, decisiones automatizadas, servicios conversacionales, aplicaciones de salud mental e información al consumidor. Incluye la SB 53 de California, tres leyes de Colorado aprobadas en 2026, la Texas Responsible Artificial Intelligence Governance Act, tres capítulos del Código de Utah y la modificación de 2026 de la RAISE Act de Nueva York.\n\nLos textos oficiales se obtuvieron el 9 de noviembre de 2026. El volumen identifica las disposiciones aprobadas cuya aplicación comienza en una fecha posterior.\n\nKwalia Books publica esta selección de textos originales como volumen 5 de la AI Law & Governance Library para quienes quieran consultar directamente la legislación. Los textos legislativos se reproducen en inglés."
       }
+    },
+    "openai-model-spec": {
+      "coverImage": {
+        "en": "assets/9781917717892.jpg"
+      }
     }
   },
   "bliss_site_copy": {
