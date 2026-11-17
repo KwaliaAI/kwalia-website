@@ -815,8 +815,29 @@
       }
     ],
     "prices": [],
-    "status": "forthcoming",
-    "stores": [],
+    "status": "published",
+    "stores": [
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/0JCPDBvmAjzumb23K8Twvw",
+        "type": "audiobook"
+      },
+      {
+        "name": "Apple Books",
+        "url": "https://books.apple.com/gb/audiobook/shut-up-neighbours/id6834114042",
+        "type": "audiobook"
+      },
+      {
+        "name": "Google Play Books",
+        "url": "https://play.google.com/store/audiobooks/details/Kwalia_Bliss_Shut_Up_Neighbours_Kwalia_Bliss?id=AQAAAEDGeRA5xM",
+        "type": "audiobook"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fr/books/shut-up-neighbours-4-hours-of-white-noise-15672356",
+        "type": "audiobook"
+      }
+    ],
     "tag": {
       "en": "White noise"
     }
@@ -897,8 +918,29 @@
       }
     ],
     "prices": [],
-    "status": "forthcoming",
-    "stores": [],
+    "status": "published",
+    "stores": [
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/0Jj3IR3zJFVQUDZOgrN8Cs",
+        "type": "audiobook"
+      },
+      {
+        "name": "Apple Books",
+        "url": "https://books.apple.com/gb/audiobook/shut-up-everyone/id6834107443",
+        "type": "audiobook"
+      },
+      {
+        "name": "Google Play Books",
+        "url": "https://play.google.com/store/audiobooks/details/Kwalia_Bliss_Shut_Up_Everyone_Kwalia_Bliss?id=AQAAAEDGeVA5hM",
+        "type": "audiobook"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fr/books/shut-up-everyone-4-hours-of-green-noise-15672355",
+        "type": "audiobook"
+      }
+    ],
     "tag": {
       "en": "Green noise"
     }

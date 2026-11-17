@@ -173,10 +173,11 @@ def build_row(row, overlay, channels):
             book[key] = view[key]
     if not channels and listing.get("visible") is not True:
         book["siteVisible"] = False
-    # Founder-approved 2026-11-12 site-only Bliss copy; retail metadata stays intact.
+    # Founder-approved site-only Bliss copy (12 Nov) and availability (17 Nov).
+    # Retail metadata stays intact; store URLs are verified public observations.
     site_copy = overlay.get("bliss_site_copy", {}).get(tid)
     if site_copy is not None:
-        if book["imprint"] != "Kwalia Bliss" or set(site_copy) - {"title", "tag", "synopsis"}:
+        if book["imprint"] != "Kwalia Bliss" or set(site_copy) - {"title", "tag", "synopsis", "status", "stores"}:
             raise ValueError(f"Invalid Bliss site copy: {tid}")
         book.update(site_copy)
     return book
