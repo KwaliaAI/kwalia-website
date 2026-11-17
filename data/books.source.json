@@ -3,8 +3,8 @@
   "catalogue_commit": "9d782aa2e54f53038e08e6bf81a08a9ca0c913c7",
   "catalogue_file": "data/catalog.json",
   "catalogue_sha256": "944827fbdb164ca79a87765526f7dbdd1501dc7d8c908a70a34a0a8fe1133378",
-  "overlay_sha256": "f1556be51ce0bee1ca18931dd9686cb1293b01789852d5d0b7b68897112c86ca",
-  "books_sha256": "f41274e11c97b672573b76e88d0f928945bf7a67840ca9d0df80f66bf4ea4aa0",
+  "overlay_sha256": "c0099647100a1ab6e6ffcf9991964ae2e9ad9343d56924d582a059e2cd8ef702",
+  "books_sha256": "709df7ce65bb138bd2f20c886285044aa1b4509799b68564bf0da1496d913b3e",
   "decisions": [
     {
       "id": "udair",
