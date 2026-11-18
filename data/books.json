@@ -47,6 +47,102 @@
     "status": "published",
     "stores": [
       {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0HRVN9Q6R",
+        "type": "book",
+        "format": "ebook",
+        "isbn": "9781917717892",
+        "evidence": "docs/reconciliation/2026-11-18-model-spec-shops.json#amazon-ebook"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717903",
+        "type": "book",
+        "format": "paperback",
+        "isbn": "9781917717908",
+        "evidence": "docs/reconciliation/2026-11-18-model-spec-shops.json#amazon-paperback"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717911",
+        "type": "book",
+        "format": "hardcover",
+        "isbn": "9781917717915",
+        "evidence": "docs/reconciliation/2026-11-18-model-spec-shops.json#amazon-hardcover"
+      },
+      {
+        "name": "Apple Books",
+        "url": "https://books.apple.com/gb/book/the-openai-model-spec/id6834351734",
+        "type": "book",
+        "format": "ebook",
+        "isbn": "9781917717892",
+        "evidence": "docs/reconciliation/2026-11-18-model-spec-shops.json#apple-books"
+      },
+      {
+        "name": "Kobo",
+        "url": "https://www.kobo.com/gb/en/ebook/the-openai-model-spec",
+        "type": "book",
+        "format": "ebook",
+        "isbn": "9781917717892",
+        "evidence": "docs/reconciliation/2026-11-18-model-spec-shops.json#kobo"
+      },
+      {
+        "name": "Barnes & Noble",
+        "url": "https://www.barnesandnoble.com/w/the-openai-model-spec-openai/1151981927?ean=9781917717892",
+        "type": "book",
+        "format": "ebook",
+        "isbn": "9781917717892",
+        "evidence": "docs/reconciliation/2026-11-18-model-spec-shops.json#barnes-&-noble"
+      },
+      {
+        "name": "Beam",
+        "url": "https://www.beam-shop.de/belletristik/fremdsprachige-romane/1300253/the-openai-model-spec",
+        "type": "book",
+        "format": "ebook",
+        "isbn": "9781917717892",
+        "evidence": "docs/reconciliation/2026-11-18-model-spec-shops.json#beam"
+      },
+      {
+        "name": "Casa del Libro",
+        "url": "https://www.casadellibro.com/ebook-the-openai-model-spec-ebook/9781917717892/19125563",
+        "type": "book",
+        "format": "ebook",
+        "isbn": "9781917717892",
+        "evidence": "docs/reconciliation/2026-11-18-model-spec-shops.json#casa-del-libro"
+      },
+      {
+        "name": "Feltrinelli",
+        "url": "https://www.lafeltrinelli.it/openai-model-spec-ebook-inglese-openai/e/9781917717892",
+        "type": "book",
+        "format": "ebook",
+        "isbn": "9781917717892",
+        "evidence": "docs/reconciliation/2026-11-18-model-spec-shops.json#feltrinelli"
+      },
+      {
+        "name": "IBS",
+        "url": "https://www.ibs.it/openai-model-spec-ebook-inglese-openai/e/9781917717892",
+        "type": "book",
+        "format": "ebook",
+        "isbn": "9781917717892",
+        "evidence": "docs/reconciliation/2026-11-18-model-spec-shops.json#ibs"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/the-openai-model-spec-diffs-2024-2026-15677402",
+        "type": "book",
+        "format": "ebook",
+        "isbn": "9781917717892",
+        "evidence": "docs/reconciliation/2026-11-18-model-spec-shops.json#storytel"
+      },
+      {
+        "name": "Thalia",
+        "url": "https://www.thalia.de/shop/home/artikeldetails/A1082677030",
+        "type": "book",
+        "format": "ebook",
+        "isbn": "9781917717892",
+        "evidence": "docs/reconciliation/2026-11-18-model-spec-shops.json#thalia"
+      },
+      {
         "name": "Heise",
         "url": "https://shop.heise.de/9781917717892-the-openai-model-spec-epub",
         "type": "book",
@@ -802,11 +898,6 @@
     "status": "published",
     "stores": [
       {
-        "name": "Spotify",
-        "url": "https://open.spotify.com/show/3AX1B5QRZi0sB6VGVVniDG",
-        "type": "audiobook"
-      },
-      {
         "name": "Apple Books",
         "url": "https://books.apple.com/gb/audiobook/shut-up-brain/id6828504374",
         "type": "audiobook"
@@ -814,6 +905,11 @@
       {
         "name": "Google Play Books",
         "url": "https://play.google.com/store/audiobooks/details/Kwalia_Bliss_Shut_Up_Brain_Kwalia_Bliss?id=AQAAAEBGnzLfZM",
+        "type": "audiobook"
+      },
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/3AX1B5QRZi0sB6VGVVniDG",
         "type": "audiobook"
       },
       {
@@ -857,11 +953,6 @@
     "status": "published",
     "stores": [
       {
-        "name": "Spotify",
-        "url": "https://open.spotify.com/show/7mG2I0wZTAstcygmtc2Y7G",
-        "type": "audiobook"
-      },
-      {
         "name": "Apple Books",
         "url": "https://books.apple.com/gb/audiobook/neurutron/id6828401848",
         "type": "audiobook"
@@ -869,6 +960,11 @@
       {
         "name": "Google Play Books",
         "url": "https://play.google.com/store/audiobooks/details/Kwalia_Bliss_Neurutron_Kwalia_Bliss?id=AQAAAEBGLxFvRM",
+        "type": "audiobook"
+      },
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/7mG2I0wZTAstcygmtc2Y7G",
         "type": "audiobook"
       },
       {
@@ -978,11 +1074,6 @@
     "status": "published",
     "stores": [
       {
-        "name": "Spotify",
-        "url": "https://open.spotify.com/show/0JCPDBvmAjzumb23K8Twvw",
-        "type": "audiobook"
-      },
-      {
         "name": "Apple Books",
         "url": "https://books.apple.com/gb/audiobook/shut-up-neighbours/id6834114042",
         "type": "audiobook"
@@ -990,6 +1081,11 @@
       {
         "name": "Google Play Books",
         "url": "https://play.google.com/store/audiobooks/details/Kwalia_Bliss_Shut_Up_Neighbours_Kwalia_Bliss?id=AQAAAEDGeRA5xM",
+        "type": "audiobook"
+      },
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/0JCPDBvmAjzumb23K8Twvw",
         "type": "audiobook"
       },
       {
@@ -1033,11 +1129,6 @@
     "status": "published",
     "stores": [
       {
-        "name": "Spotify",
-        "url": "https://open.spotify.com/show/6LFiwaugfmGtWCG864mSI8",
-        "type": "audiobook"
-      },
-      {
         "name": "Apple Books",
         "url": "https://books.apple.com/gb/audiobook/shut-up-darling/id6831800704",
         "type": "audiobook"
@@ -1045,6 +1136,11 @@
       {
         "name": "Google Play Books",
         "url": "https://play.google.com/store/audiobooks/details/Kwalia_Bliss_Shut_Up_Darling_Kwalia_Bliss?id=AQAAAEDGah0qyM",
+        "type": "audiobook"
+      },
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/6LFiwaugfmGtWCG864mSI8",
         "type": "audiobook"
       },
       {
@@ -1083,11 +1179,6 @@
     "status": "published",
     "stores": [
       {
-        "name": "Spotify",
-        "url": "https://open.spotify.com/show/0Jj3IR3zJFVQUDZOgrN8Cs",
-        "type": "audiobook"
-      },
-      {
         "name": "Apple Books",
         "url": "https://books.apple.com/gb/audiobook/shut-up-everyone/id6834107443",
         "type": "audiobook"
@@ -1095,6 +1186,11 @@
       {
         "name": "Google Play Books",
         "url": "https://play.google.com/store/audiobooks/details/Kwalia_Bliss_Shut_Up_Everyone_Kwalia_Bliss?id=AQAAAEDGeVA5hM",
+        "type": "audiobook"
+      },
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/0Jj3IR3zJFVQUDZOgrN8Cs",
         "type": "audiobook"
       },
       {
@@ -1138,11 +1234,6 @@
     "status": "published",
     "stores": [
       {
-        "name": "Spotify",
-        "url": "https://open.spotify.com/show/7gC0m6pyhpzsLebxkElBcD",
-        "type": "audiobook"
-      },
-      {
         "name": "Apple Books",
         "url": "https://books.apple.com/gb/audiobook/wind-on-mars/id6831813618",
         "type": "audiobook"
@@ -1150,6 +1241,11 @@
       {
         "name": "Google Play Books",
         "url": "https://play.google.com/store/audiobooks/details/Kwalia_Bliss_Wind_on_Mars_Kwalia_Bliss?id=AQAAAEDGqiLq9M",
+        "type": "audiobook"
+      },
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/7gC0m6pyhpzsLebxkElBcD",
         "type": "audiobook"
       },
       {
