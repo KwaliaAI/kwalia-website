@@ -142,16 +142,12 @@ def store_priority(link):
             "" if name in priority else name)
 
 
-def single_amazon(links, row, preserve_existing=False):
-    """Founder18Nov: one verified hardback URL; paperback if no hardback.
-
-    The simultaneous audit-only commission preserves existing legacy/deferred
-    targets with no verified print replacement. Those exceptions are reported;
-    they do not permit a Kindle fallback on newly generated titles.
-    """
-    amazon = [s for s in links if s["name"].casefold() == "amazon"]
-    if not amazon:
-        return links
+def single_amazon(links, row):
+    """Founder18Nov: Amazon always links one verified hardback, or is absent."""
+    # Explicit verified catalogue replacements win over stale legacy/deferred
+    # presentation links. An allocated ISBN alone never creates a product URL.
+    amazon = [s for s in retailer_links(row) if s["name"].casefold() == "amazon"]
+    amazon += [s for s in links if s["name"].casefold() == "amazon"]
     asins = (row.get("draft_metadata") or {}).get("kdp_asins") or {}
     def matches(link, kind):
         if link.get("format") == kind:
@@ -159,11 +155,16 @@ def single_amazon(links, row, preserve_existing=False):
         identifier = link["url"].split("/dp/")[-1].split("/")[0].split("?")[0]
         return bool(asins.get(kind)) and identifier == asins[kind]
     selected = next((s for s in amazon if matches(s, "hardcover")), None)
-    if selected is None and not row.get("isbn_hc"):
-        selected = next((s for s in amazon if matches(s, "paperback")), None)
-    if selected is None and preserve_existing:
-        selected = amazon[0]
+    if selected is not None:
+        selected = {**selected, "format": "hardcover"}
     return [s for s in links if s["name"].casefold() != "amazon"] + ([selected] if selected else [])
+
+
+def fiction_stores(books, rows):
+    """Apply the same shop rule to the separate fiction surface; retain its copy."""
+    source_rows = {row["title_id"]: row for row in rows}
+    return [{**book, "stores": sorted(single_amazon(book.get("stores", []), source_rows[book["id"]]), key=store_priority)}
+            for book in books]
 
 
 def presentation_for(tid, overlay):
@@ -305,11 +306,8 @@ def generate(rows, overlay):
     # Apply after all presentation/deferred overrides so every generated title
     # follows the same rule, including legacy and audiobook-only records.
     source_rows = {row["title_id"]: row for row in rows}
-    legacy_ids = {row["id"] for row in overlay["legacy_rows"]}
     for book in books:
-        hold = overlay.get("deferred_updates", {}).get(book["id"], {})
-        preserve = book["id"] in legacy_ids or "stores" in hold.get("fields", {})
-        links = single_amazon(book.get("stores", []), source_rows[book["id"]], preserve)
+        links = single_amazon(book.get("stores", []), source_rows[book["id"]])
         book["stores"] = sorted(links, key=store_priority)
     order = {r["id"]: n for n, r in enumerate(overlay["legacy_rows"])}
     books.sort(key=lambda row: order.get(row["id"], len(order)))
@@ -362,6 +360,13 @@ def main():
         if not args.baseline:
             args.output.with_suffix(".source.json").write_bytes(encode(manifest))
     if not args.baseline:
+        fiction = ROOT / "data/fiction.json"
+        before_fiction = fiction.read_bytes()
+        after_fiction = encode(fiction_stores(json.loads(before_fiction), rows))
+        if args.check and before_fiction != after_fiction:
+            parser.error("Fiction store links are stale; rerun the builder.")
+        if not args.check:
+            fiction.write_bytes(after_fiction)
         index = ROOT / "index.html"
         before = index.read_text()
         after = announcement_html(before, books)

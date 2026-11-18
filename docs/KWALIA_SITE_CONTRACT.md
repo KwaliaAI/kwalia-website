@@ -61,7 +61,7 @@ fixed counts or a historical hidden-row example.
 For new titles, catalogue English copy/GBP prices and approved presentation fields
 are mapped as documented in the builder. Missing Spanish uses the existing English
 fallback. New retail links use explicit catalogue ASINs only for live formats;
-Volume 2 has one Kindle link, with no print link while print is still publishing.
+Volume 2 now links its verified hardback, following the18November2026 signed-in product-page check.
 The Founder commissioned pending Vol 3/4 cards on 2026-11-06. Their catalogue
 `draft_metadata.site_listing.visible` permits a forthcoming card without any
 storefront-live claim; `site_listing.formats` limits publicly offered formats.
@@ -73,13 +73,15 @@ messages qualify for Amazon under the GM18Nov2026 shops commission. Import
 acceptance and KDP review do not activate a channel. The generator orders every
 title's stores after all overrides: Amazon, Apple Books, Google Play (including
 Google Play Books), Kobo, then remaining shops alphabetically. Heise stays last
-as explicitly requested in that commission. A subsequent Founder instruction (GM Tannoy488,18Nov2026) supersedes the
-three-format Amazon buttons: ONE Amazon link per title, using an already
-verified hardback URL; paperback only for a title with no hardback. Never infer
-an unverified print listing from an allocated ISBN. Existing legacy/deferred
-Amazon targets without a verified print replacement stay audit-only under the
-same commission; report their incorrect format and remove that exception when
-their link correction is commissioned. New titles do not fall back to Kindle.
+as explicitly requested in that commission. The Founder’s18November2026 approved sweep section C supersedes the earlier
+audit-only exceptions: ONE Amazon link per title, always a verified hardback,
+first in the list. Kindle, paperback and legacy/deferred fallbacks are removed.
+When no hardback is verified, omit Amazon and retain the other shops. The same
+generator rule updates stores only on the separate `data/fiction.json` surface;
+its descriptions and published book files are unchanged. Explicit verified
+hardback observations in the catalogue override stale legacy store targets.
+Never infer a product page from an allocated ISBN. Mindkind’s existing hardback
+ISBN was verified and reconciled; no price is inferred.
 Existing marketplace URLs are retained; current links use amazon.com/dp/<ASIN>. Undo this commission by clearing the two
 `site_listing.visible` values and regenerating from the committed catalogue.
 The source manifest records channels and the legacy exception separately for each
@@ -170,7 +172,7 @@ The catalogue is the single source of truth for all public title copy and metada
 
 The homepage URL now defines language: `/` English, `/es` Spanish, explicit `?lang=en/es` takes precedence. The toggle updates that URL while preserving tracking parameters and title fragments. A previously saved Spanish value cannot override the English entry route; unavailable storage cannot stop rendering.
 
-Verified existing-channel retailer URLs live in `distribution_plan.<format>.platform_links`, with per-link primary observation evidence and exact ISBN/format/language. Non-legacy live KDP ASIN links retain their format for distinct translated button labels. Explicit wide links are merged alongside Amazon links; one retailer/format is not duplicated merely because a second regional URL was observed. Live retailer observations are scoped to the evidencedmarketplace; they do not certify global availability, prices, checkout or complete launch. Ingestion notes are retained as history.
+Verified existing-channel retailer URLs live in `distribution_plan.<format>.platform_links`, with per-link primary observation evidence and exact ISBN/format/language. Store links retain their format for translated button labels; the later hardback-only Amazon rule above applies after all overrides. Explicit wide links are merged alongside Amazon links; one retailer/format is not duplicated merely because a second regional URL was observed. Live retailer observations are scoped to the evidencedmarketplace; they do not certify global availability, prices, checkout or complete launch. Ingestion notes are retained as history.
 
 The separate technical task list is `docs/WEBSITE_MAINTENANCE.md`; the existing company `runbooks/TITLE_LAUNCH_CHECKLIST.md` remains the reusable per-title launch source. No new monitor or automatic wake is installed.
 
@@ -212,3 +214,7 @@ publicly unverified. These do not assert catalogue parity. Remove each hold when
 GM commissions that title's separate reconciliation; no public prose is changed.
 Apophenia remains its approved forthcoming card against editorial catalogue state.
 Undo via the introducing website and catalogue merge reverts through normal CI.
+
+## Approved defensive-copy sweep —18November2026
+
+Vera’s table A rows3–16 and B2 are applied verbatim, including homepage HTML fallbacks. The Apophenia forthcoming synopsis changes in the retained legacy overlay and its snapshot hash; published title synopses stay on hold. Store-link corrections have separate approval in section C.

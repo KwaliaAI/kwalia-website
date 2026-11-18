@@ -1,6 +1,6 @@
 {
   "_note": "Approved legacy rows retain visibility and every public field until Founder-approved replacement. legacyVisible is transitional until catalogue channel evidence is backfilled; removing the flag requires preserving approved copy and reviewing differences.",
-  "baseline_sha256": "ce47064606b3d0670146e714b74e1497510d093c9a68fb4e8fe27b6d9538230f",
+  "baseline_sha256": "2066818bd9372b62d1f3a064bab94bda2d130c0fff5fef49a2903316ac8ef9ee",
   "legacy_rows": [
     {
       "id": "udair",
@@ -119,7 +119,7 @@
         "es": "assets/Apofenia-ES.png"
       },
       "synopsis": {
-        "en": "Javier del Puerto & Rado Molina\nComing February 2026\n\n\"Apophenia\" examines how artificial intelligence acts as gasoline on the fire of our pattern-seeking minds, transforming innocent connections into full-blown conspiracy theories. Just as AI image generators start with pure noise and \"diffuse\" it into seemingly meaningful pictures, our algorithmic feeds take the random static of daily information and crystallize it into dangerously coherent delusions.\n\nThe book traces how recommendation algorithms don't just show us what we want to see—they actively create patterns where none existed, turning correlation into causation and coincidence into conspiracy. From QAnon to COVID denialism, from flat Earth to political extremism, AI systems amplify our natural tendency to see faces in clouds until we're living in entirely different realities.\n\nThis isn't about technology gone wrong but about a fundamental mismatch: minds evolved to spot tigers in tall grass now aided by systems that can find \"evidence\" for any belief. The authors map how diffusion becomes confusion becomes delusion, creating what they call \"algorithmic apophenia\"—where the noise itself becomes the message.\n\nPart warning, part guide, \"Apophenia\" offers strategies for navigating an information landscape where AI can make any conspiracy seem plausible. Because in the age of the Mindkind, the question isn't whether patterns exist, but whether they mean anything at all.",
+        "en": "Javier del Puerto & Rado Molina\nComing February 2026\n\n\"Apophenia\" examines how artificial intelligence acts as gasoline on the fire of our pattern-seeking minds, transforming innocent connections into full-blown conspiracy theories. Just as AI image generators start with pure noise and \"diffuse\" it into seemingly meaningful pictures, our algorithmic feeds take the random static of daily information and crystallize it into dangerously coherent delusions.\n\nThe book traces how recommendation algorithms don't just show us what we want to see—they actively create patterns where none existed, turning correlation into causation and coincidence into conspiracy. From QAnon to COVID denialism, from flat Earth to political extremism, AI systems amplify our natural tendency to see faces in clouds until we're living in entirely different realities.\n\nIt's a fundamental mismatch: minds evolved to spot tigers in tall grass now have help from systems that can find \"evidence\" for any belief. The authors map how diffusion becomes confusion becomes delusion, creating what they call \"algorithmic apophenia\"—where the noise itself becomes the message.\n\nPart warning, part guide, \"Apophenia\" offers strategies for navigating an information landscape where AI can make any conspiracy seem plausible. Because in the age of the Mindkind, the question isn't whether patterns exist, but whether they mean anything at all.",
         "es": "Javier del Puerto & Rado Molina\nPublicación: febrero de 2026\n\n\"Apofenia\" examina cómo la inteligencia artificial actúa como gasolina en el fuego de nuestras mentes sedientas de patrones, transformando conexiones inocentes en teorías conspirativas totalizadoras. Así como las IAs generadoras de imágenes parten del ruido puro y lo \"difunden\" hasta crear imágenes aparentemente significativas, nuestros feeds algorítmicos toman la estática aleatoria de la información diaria y la cristalizan en delirios peligrosamente coherentes.\n\nEl libro traza cómo los algoritmos de recomendación no se limitan a mostrarnos lo que queremos ver: crean patrones donde no existían, convirtiendo correlación en causalidad y coincidencia en conspiración. Desde QAnon hasta el negacionismo COVID, desde la Tierra plana hasta el extremismo político, los sistemas de IA amplifican nuestra tendencia natural a ver caras en las nubes hasta que habitamos realidades completamente diferentes.\n\nEs un desajuste de fondo: mentes evolucionadas para detectar tigres en la hierba alta ahora asistidas por sistemas que pueden encontrar «pruebas» de cualquier creencia. Los autores cartografían cómo la difusión se vuelve confusión se vuelve delirio, creando lo que llaman \"apofenia algorítmica\": donde el ruido mismo se convierte en el mensaje.\n\nParte advertencia, parte guía, \"Apofenia\" ofrece estrategias para moverse por un paisaje informativo donde la IA puede hacer que cualquier conspiración parezca plausible. Porque en la era del Mindkind, la pregunta es si los patrones significan algo."
       },
       "status": "forthcoming",
@@ -549,25 +549,6 @@
       "fields": {
         "status": "pending",
         "siteVisible": false
-      }
-    },
-    "ailgl-002-ai-bill-of-rights": {
-      "authority": "GM18Nov2026 Model Spec-only release sync: retain existing Vol2 buttons; its new print product pages are unverified in the current truth pass. Remove on a separately verified link sync.",
-      "fields": {
-        "stores": [
-          {
-            "name": "Amazon",
-            "url": "https://www.amazon.com/dp/B0HQ569Y93",
-            "type": "book",
-            "format": "ebook"
-          },
-          {
-            "name": "Storytel",
-            "url": "https://www.storytel.com/fi/books/blueprint-for-an-ai-bill-of-rights-making-automated-systems-work-for-the-american-people-15586904",
-            "type": "book",
-            "format": "ebook"
-          }
-        ]
       }
     }
   }

@@ -6,7 +6,9 @@
       "en": "PAYLOAD: Short Stories",
       "es": "PAYLOAD: Relatos cortos"
     },
-    "authors": ["Alden Pierce"],
+    "authors": [
+      "Alden Pierce"
+    ],
     "coverImage": {
       "en": "assets/9781917717175-Frame.jpg",
       "es": "assets/9781917717175-Frame.jpg"
@@ -18,14 +20,30 @@
     },
     "status": "published",
     "formats": [
-      { "type": "paperback", "isbn": "978-1-917717-16-8" },
-      { "type": "ebook", "isbn": "978-1-917717-17-5" },
-      { "type": "audiobook", "isbn": "978-1-917717-18-2" }
+      {
+        "type": "paperback",
+        "isbn": "978-1-917717-16-8"
+      },
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-17-5"
+      },
+      {
+        "type": "audiobook",
+        "isbn": "978-1-917717-18-2"
+      }
     ],
     "stores": [
-      { "name": "Amazon", "url": "https://www.amazon.com/dp/B0G7KTMSTM", "type": "book" },
-      { "name": "Google Play", "url": "https://play.google.com/store/audiobooks/details/Alden_Pierce_PAYLOAD_Short_Stories?id=AQAAAEDqVW4VlM", "type": "audiobook" }
+      {
+        "name": "Google Play",
+        "url": "https://play.google.com/store/audiobooks/details/Alden_Pierce_PAYLOAD_Short_Stories?id=AQAAAEDqVW4VlM",
+        "type": "audiobook"
+      }
     ],
-    "stories": ["morphine", "sesame", "quiet"]
+    "stories": [
+      "morphine",
+      "sesame",
+      "quiet"
+    ]
   }
 ]

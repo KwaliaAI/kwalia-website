@@ -1,10 +1,10 @@
 {
   "catalogue_repository": "https://github.com/KwaliaAI/catalog",
-  "catalogue_commit": "62ec39d216a1e9d3d52d4dfa753b090bd206378f",
+  "catalogue_commit": "2e8a1378dc4ab424f1602b7b930138548a844713",
   "catalogue_file": "data/catalog.json",
-  "catalogue_sha256": "8c04e459749b370c0024db343ed47e9ff7a39a618b9a58735db4327c3b17cca6",
-  "overlay_sha256": "caf52afe0f7c46b0bec8a29a54d3160185ec5f56136af053750fd66456fb7488",
-  "books_sha256": "7b2f954ac7e7fc227447e9b66fd458b0039c9f79e117419329379769edaeb6a6",
+  "catalogue_sha256": "ce38dc4e4b34f2783d313858d4d4b89ec17621c5761479d91fce8875415a6760",
+  "overlay_sha256": "880de2a561bec777f060c0dca83c69c6ff3aaf64ce30aa63179787553d503569",
+  "books_sha256": "d61745e5c7c7d9e53afda76b42aef6225307ad0a21062a45ee7977e0538b4c53",
   "decisions": [
     {
       "id": "udair",
@@ -164,8 +164,7 @@
         "amazon-kdp",
         "bookwire"
       ],
-      "legacyVisible": false,
-      "deferred_update_authority": "GM18Nov2026 Model Spec-only release sync: retain existing Vol2 buttons; its new print product pages are unverified in the current truth pass. Remove on a separately verified link sync."
+      "legacyVisible": false
     },
     {
       "id": "bliss-001-shut-up-brain",

@@ -5,7 +5,7 @@ import hashlib
 import json
 import unittest
 
-from build_books_json import ROOT, announcement_html, build_row, encode, generate, live_channels, presentation_for, legacy_public, single_amazon
+from build_books_json import ROOT, announcement_html, build_row, encode, generate, live_channels, presentation_for, legacy_public, single_amazon, fiction_stores
 
 
 class BooksBuilderTests(unittest.TestCase):
@@ -28,20 +28,34 @@ class BooksBuilderTests(unittest.TestCase):
                          ["Amazon", "Apple Books", "Google Play Books", "Kobo", "Barnes & Noble", "Storytel", "Heise"])
         self.assertEqual(books[0]["stores"][0]["url"], links[7]["url"])
         self.row["title_id"] = self.overlay["legacy_rows"][0]["id"]
+        self.row["draft_metadata"] = {"kdp_asins": {"hardcover": self.overlay["legacy_rows"][0]["stores"][0]["url"].split('/dp/')[-1]}}
         self.row["distribution_plan"] = {"ebook": {"platform_links": links[:4]}}
         books, _ = generate([self.row], self.overlay)
         self.assertEqual(books[0]["stores"][0]["name"], "Amazon")
         self.assertEqual(books[0]["stores"][-1]["name"], "Heise")
 
-    def test_amazon_prefers_hardback_and_only_uses_paperback_without_hardback(self):
+    def test_amazon_always_hardback_no_paperback_or_kindle_fallback(self):
         links = [{"name": "Amazon", "url": "https://www.amazon.com/dp/" + kind, "format": kind}
                  for kind in ["ebook", "paperback", "hardcover"]]
         self.assertEqual(single_amazon(links, self.row), [links[2]])
-        self.assertEqual(single_amazon(links[:2], self.row), [links[1]])
+        self.assertEqual(single_amazon(links[:2], self.row), [])
         self.assertEqual(single_amazon(links[:1], self.row), [])
         self.row["isbn_hc"] = "9781917717915"
         self.assertEqual(single_amazon(links[:2], self.row), [])
-        self.assertEqual(single_amazon(links[:1], self.row, preserve_existing=True), [links[0]])
+
+    def test_verified_hardback_replaces_legacy_series_or_kindle_target(self):
+        old = {"name": "Amazon", "url": "https://www.amazon.com/dp/series", "type": "book"}
+        hardback = {"name": "Amazon", "url": "https://www.amazon.com/dp/verified", "type": "book"}
+        self.row["distribution_plan"] = {"hardcover": {"platform_links": [hardback]}}
+        self.assertEqual(single_amazon([old], self.row), [{**hardback, "format": "hardcover"}])
+        self.assertEqual(single_amazon([], self.row), [{**hardback, "format": "hardcover"}])
+
+    def test_fiction_uses_same_rule_without_changing_story_or_description(self):
+        book = {"id": "example", "synopsis": {"en": "Exact approved description."},
+                "stores": [{"name": "Amazon", "url": "https://www.amazon.com/dp/kindle", "type": "book"},
+                           {"name": "Kobo", "url": "https://example.com/ebook", "type": "book"}]}
+        result = fiction_stores([book], [self.row])[0]
+        self.assertEqual(result, {**book, "stores": book["stores"][1:]})
 
     def test_baseline_exact_original_hash_and_eight_rows(self):
         self.assertEqual(len(self.overlay["legacy_rows"]), 8)
@@ -138,7 +152,13 @@ class BooksBuilderTests(unittest.TestCase):
                  "blurb_300": "Unapproved copy", "price_eb_gbp": 999,
                  "channel_delivery_status": {}} for old in reversed(self.overlay["legacy_rows"])]
         books, decisions = generate(rows, self.overlay)
-        self.assertEqual(books, [legacy_public(old) for old in self.overlay["legacy_rows"]])
+        # Approved legacy prose/prices remain authoritative; retailer links are
+        # separately governed by the verified-hardback rule.
+        self.assertEqual([{k: v for k, v in book.items() if k != "stores"} for book in books],
+                         [{k: v for k, v in legacy_public(old).items() if k != "stores"}
+                          for old in self.overlay["legacy_rows"]])
+        self.assertTrue(all(s["format"] == "hardcover" for book in books for s in book["stores"]
+                            if s["name"] == "Amazon"))
         self.assertTrue(all(d["visible"] and d["legacyVisible"] for d in decisions))
         self.assertEqual(next(b for b in books if b["id"] == "apophenia")["status"], "forthcoming")
         for row in rows:
