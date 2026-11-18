@@ -142,6 +142,30 @@ def store_priority(link):
             "" if name in priority else name)
 
 
+def single_amazon(links, row, preserve_existing=False):
+    """Founder18Nov: one verified hardback URL; paperback if no hardback.
+
+    The simultaneous audit-only commission preserves existing legacy/deferred
+    targets with no verified print replacement. Those exceptions are reported;
+    they do not permit a Kindle fallback on newly generated titles.
+    """
+    amazon = [s for s in links if s["name"].casefold() == "amazon"]
+    if not amazon:
+        return links
+    asins = (row.get("draft_metadata") or {}).get("kdp_asins") or {}
+    def matches(link, kind):
+        if link.get("format") == kind:
+            return True
+        identifier = link["url"].split("/dp/")[-1].split("/")[0].split("?")[0]
+        return bool(asins.get(kind)) and identifier == asins[kind]
+    selected = next((s for s in amazon if matches(s, "hardcover")), None)
+    if selected is None and not row.get("isbn_hc"):
+        selected = next((s for s in amazon if matches(s, "paperback")), None)
+    if selected is None and preserve_existing:
+        selected = amazon[0]
+    return [s for s in links if s["name"].casefold() != "amazon"] + ([selected] if selected else [])
+
+
 def presentation_for(tid, overlay):
     old = next((r for r in overlay["legacy_rows"] if r["id"] == tid), {})
     fields = ("imprint", "imprintLine", "coverImage", "featured", "sampleUrl", "sampleLabel", "stories", "stores")
@@ -280,8 +304,13 @@ def generate(rows, overlay):
                             deferred_update_authority=hold["authority"])
     # Apply after all presentation/deferred overrides so every generated title
     # follows the same rule, including legacy and audiobook-only records.
+    source_rows = {row["title_id"]: row for row in rows}
+    legacy_ids = {row["id"] for row in overlay["legacy_rows"]}
     for book in books:
-        book["stores"] = sorted(book.get("stores", []), key=store_priority)
+        hold = overlay.get("deferred_updates", {}).get(book["id"], {})
+        preserve = book["id"] in legacy_ids or "stores" in hold.get("fields", {})
+        links = single_amazon(book.get("stores", []), source_rows[book["id"]], preserve)
+        book["stores"] = sorted(links, key=store_priority)
     order = {r["id"]: n for n, r in enumerate(overlay["legacy_rows"])}
     books.sort(key=lambda row: order.get(row["id"], len(order)))
     # Stable date ordering replaces both append-only generation and the browser's
