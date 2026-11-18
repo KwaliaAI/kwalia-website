@@ -35,6 +35,12 @@
     ],
     "stores": [
       {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717164",
+        "type": "book",
+        "format": "paperback"
+      },
+      {
         "name": "Google Play",
         "url": "https://play.google.com/store/audiobooks/details/Alden_Pierce_PAYLOAD_Short_Stories?id=AQAAAEDqVW4VlM",
         "type": "audiobook"

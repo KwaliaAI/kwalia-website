@@ -34,14 +34,14 @@ class BooksBuilderTests(unittest.TestCase):
         self.assertEqual(books[0]["stores"][0]["name"], "Amazon")
         self.assertEqual(books[0]["stores"][-1]["name"], "Heise")
 
-    def test_amazon_always_hardback_no_paperback_or_kindle_fallback(self):
+    def test_amazon_prefers_hardback_then_paperback_then_existing_digital(self):
         links = [{"name": "Amazon", "url": "https://www.amazon.com/dp/" + kind, "format": kind}
                  for kind in ["ebook", "paperback", "hardcover"]]
         self.assertEqual(single_amazon(links, self.row), [links[2]])
-        self.assertEqual(single_amazon(links[:2], self.row), [])
-        self.assertEqual(single_amazon(links[:1], self.row), [])
+        self.assertEqual(single_amazon(links[:2], self.row), [links[1]])
+        self.assertEqual(single_amazon(links[:1], self.row), [links[0]])
         self.row["isbn_hc"] = "9781917717915"
-        self.assertEqual(single_amazon(links[:2], self.row), [])
+        self.assertEqual(single_amazon(links[:2], self.row), [links[1]])
 
     def test_verified_hardback_replaces_legacy_series_or_kindle_target(self):
         old = {"name": "Amazon", "url": "https://www.amazon.com/dp/series", "type": "book"}
@@ -55,7 +55,22 @@ class BooksBuilderTests(unittest.TestCase):
                 "stores": [{"name": "Amazon", "url": "https://www.amazon.com/dp/kindle", "type": "book"},
                            {"name": "Kobo", "url": "https://example.com/ebook", "type": "book"}]}
         result = fiction_stores([book], [self.row])[0]
-        self.assertEqual(result, {**book, "stores": book["stores"][1:]})
+        self.assertEqual(result, book)
+
+    def test_audio_fallback_and_missing_amazon_do_not_invent_urls(self):
+        audio = {"name": "Amazon", "url": "https://www.amazon.com/dp/existing-audio", "type": "audiobook"}
+        self.assertEqual(single_amazon([audio, audio], self.row), [audio])
+        self.row["isbn_hc"] = "9781917717915"
+        self.assertEqual(single_amazon([], self.row), [])
+
+    def test_fiction_paperback_override_survives_repeat_generation(self):
+        book = {"id": "example", "synopsis": {"en": "Approved copy"},
+                "stores": [{"name": "Amazon", "url": "https://www.amazon.com/dp/old-kindle", "type": "book"}]}
+        paperback = {"name": "Amazon", "url": "https://www.amazon.com/dp/verified-paperback", "type": "book", "format": "paperback"}
+        overlay = {"legacy_rows": [], "presentation": {"example": {"stores": [paperback]}}}
+        result = fiction_stores([book], [self.row], overlay)
+        self.assertEqual(result, [{**book, "stores": [paperback]}])
+        self.assertEqual(fiction_stores(result, [self.row], overlay), result)
 
     def test_baseline_exact_original_hash_and_eight_rows(self):
         self.assertEqual(len(self.overlay["legacy_rows"]), 8)
@@ -157,8 +172,7 @@ class BooksBuilderTests(unittest.TestCase):
         self.assertEqual([{k: v for k, v in book.items() if k != "stores"} for book in books],
                          [{k: v for k, v in legacy_public(old).items() if k != "stores"}
                           for old in self.overlay["legacy_rows"]])
-        self.assertTrue(all(s["format"] == "hardcover" for book in books for s in book["stores"]
-                            if s["name"] == "Amazon"))
+        self.assertTrue(all(sum(s["name"] == "Amazon" for s in book["stores"]) <= 1 for book in books))
         self.assertTrue(all(d["visible"] and d["legacyVisible"] for d in decisions))
         self.assertEqual(next(b for b in books if b["id"] == "apophenia")["status"], "forthcoming")
         for row in rows:
