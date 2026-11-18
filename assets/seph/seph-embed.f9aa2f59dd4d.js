@@ -158,6 +158,8 @@ var box = null, img = null, canvas = null, gl = null, prog = null, locs = {};
 var mounted = false, glReady = false, failed = false, lost = false, live = false;
 var visible = false, userPaused = false, reduced = false, running = false, raf = 0, last = 0, lastDraw = 0;
 var mqReduce = null, compileTimer = 0, parallelCompile = null;
+var textureSource = null, bitmapReady = false, bitmapPending = false;
+function releaseBitmap(){ if (textureSource) textureSource.close(); textureSource = null; }
 
 /* ---- animation state ---- */
 var S = {
@@ -255,12 +257,12 @@ function initGL(){
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,1,1]), gl.STATIC_DRAW);
     var la = gl.getAttribLocation(prog, "a"); gl.enableVertexAttribArray(la); gl.vertexAttribPointer(la, 2, gl.FLOAT, false, 0, 0);
     gl.bindTexture(gl.TEXTURE_2D, gl.createTexture());
-    var srcTex = img, maxT = gl.getParameter(gl.MAX_TEXTURE_SIZE) || 2048;
+    var srcTex = textureSource || img, maxT = gl.getParameter(gl.MAX_TEXTURE_SIZE) || 2048;
     if (img.naturalWidth > maxT) {                                                // old phones: bring the wide picture under the texture limit
       srcTex = document.createElement("canvas"); srcTex.width = maxT; srcTex.height = Math.max(1, Math.round(img.naturalHeight*maxT/img.naturalWidth));
       srcTex.getContext("2d").drawImage(img, 0, 0, srcTex.width, srcTex.height);
     }
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, srcTex);    // throws if the picture is cross-origin without CORS
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, srcTex);    // throws if the picture is cross-origin without CORS
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
     if (gl.getError() !== gl.NO_ERROR) throw new Error("gl");
@@ -336,11 +338,21 @@ function start(){
   if (running) return;
   if (!glReady) {
     if (!(img.complete && img.naturalWidth > 0)) return;           // the still has not arrived yet: its load event calls update()
+    // Decode/prepare the GPU source asynchronously, rather than converting the image during texImage2D.
+    if (root.createImageBitmap && !bitmapReady) {
+      if (!bitmapPending) {
+        bitmapPending = true;
+        root.createImageBitmap(img, { premultiplyAlpha: "none" }).then(function(bitmap){
+          textureSource = bitmap; bitmapReady = true; bitmapPending = false; update();
+        }, function(){ bitmapReady = true; bitmapPending = false; update(); });
+      }
+      return;
+    }
     resize();
     var ready = initGL();
     if (ready === null) return;
-    if (!ready) { failed = true; return; }                         // no WebGL: the still stays, nothing else happens
-    glReady = true;
+    if (!ready) { releaseBitmap(); failed = true; return; }                         // no WebGL: the still stays, nothing else happens
+    glReady = true; releaseBitmap();
   }
   running = true; qN = 0; last = lastDraw = performance.now(); raf = root.requestAnimationFrame(frame);
 }
@@ -372,7 +384,7 @@ function mount(el){
   canvas = document.createElement("canvas");
   canvas.setAttribute("aria-hidden", "true"); canvas.setAttribute("role", "presentation"); canvas.tabIndex = -1;
   img.parentNode.insertBefore(canvas, img.nextSibling);
-  canvas.addEventListener("webglcontextlost", function(e){ e.preventDefault(); lost = true; glReady = false; gl = null; prog = null; update(); }, false);
+  canvas.addEventListener("webglcontextlost", function(e){ e.preventDefault(); lost = true; glReady = false; gl = null; prog = null; releaseBitmap(); bitmapReady = false; update(); }, false);
   canvas.addEventListener("webglcontextrestored", function(){ lost = false; update(); }, false);
   if (root.matchMedia) {
     mqReduce = root.matchMedia("(prefers-reduced-motion: reduce)"); reduced = mqReduce.matches;
