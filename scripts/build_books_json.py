@@ -143,7 +143,7 @@ def store_priority(link):
 
 
 def single_amazon(links, row):
-    """Founder18Nov: Amazon always links one verified hardback, or is absent."""
+    """GM18Nov correction: one Amazon link, hardback then paperback then existing digital."""
     # Explicit verified catalogue replacements win over stale legacy/deferred
     # presentation links. An allocated ISBN alone never creates a product URL.
     amazon = [s for s in retailer_links(row) if s["name"].casefold() == "amazon"]
@@ -154,16 +154,26 @@ def single_amazon(links, row):
             return True
         identifier = link["url"].split("/dp/")[-1].split("/")[0].split("?")[0]
         return bool(asins.get(kind)) and identifier == asins[kind]
-    selected = next((s for s in amazon if matches(s, "hardcover")), None)
-    if selected is not None:
-        selected = {**selected, "format": "hardcover"}
+    selected = None
+    for kind in ("hardcover", "paperback"):
+        selected = next((s for s in amazon if matches(s, kind)), None)
+        if selected is not None:
+            selected = {**selected, "format": kind}
+            break
+    if selected is None:
+        # Preserve the already approved Kindle/audio target when no print
+        # observation exists. ISBN allocation alone never creates a URL.
+        selected = next((s for s in links if s["name"].casefold() == "amazon"),
+                        next(iter(amazon), None))
     return [s for s in links if s["name"].casefold() != "amazon"] + ([selected] if selected else [])
 
 
-def fiction_stores(books, rows):
+def fiction_stores(books, rows, overlay=None):
     """Apply the same shop rule to the separate fiction surface; retain its copy."""
     source_rows = {row["title_id"]: row for row in rows}
-    return [{**book, "stores": sorted(single_amazon(book.get("stores", []), source_rows[book["id"]]), key=store_priority)}
+    return [{**book, "stores": sorted(single_amazon(merge_stores(book.get("stores", []),
+                presentation_for(book["id"], overlay or {"legacy_rows": []}).get("stores", [])),
+                source_rows[book["id"]]), key=store_priority)}
             for book in books]
 
 
@@ -362,7 +372,7 @@ def main():
     if not args.baseline:
         fiction = ROOT / "data/fiction.json"
         before_fiction = fiction.read_bytes()
-        after_fiction = encode(fiction_stores(json.loads(before_fiction), rows))
+        after_fiction = encode(fiction_stores(json.loads(before_fiction), rows, overlay))
         if args.check and before_fiction != after_fiction:
             parser.error("Fiction store links are stale; rerun the builder.")
         if not args.check:

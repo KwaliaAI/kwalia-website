@@ -426,6 +426,16 @@
       "coverImage": {
         "en": "assets/9781917717892.jpg"
       }
+    },
+    "payload": {
+      "stores": [
+        {
+          "name": "Amazon",
+          "url": "https://www.amazon.com/dp/1917717164",
+          "type": "book",
+          "format": "paperback"
+        }
+      ]
     }
   },
   "bliss_site_copy": {

@@ -785,7 +785,14 @@
       }
     ],
     "status": "pending",
-    "stores": [],
+    "stores": [
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717164",
+        "type": "book",
+        "format": "paperback"
+      }
+    ],
     "siteVisible": false
   },
   {

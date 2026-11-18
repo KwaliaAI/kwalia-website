@@ -74,9 +74,12 @@ acceptance and KDP review do not activate a channel. The generator orders every
 title's stores after all overrides: Amazon, Apple Books, Google Play (including
 Google Play Books), Kobo, then remaining shops alphabetically. Heise stays last
 as explicitly requested in that commission. The Founder’s18November2026 approved sweep section C supersedes the earlier
-audit-only exceptions: ONE Amazon link per title, always a verified hardback,
-first in the list. Kindle, paperback and legacy/deferred fallbacks are removed.
-When no hardback is verified, omit Amazon and retain the other shops. The same
+audit-only exceptions: ONE Amazon link per title, first in the list. The later18November GM correction
+selects a verified hardback first, otherwise a verified paperback, otherwise the
+existing approved Kindle or audio target. Preserve a title’s existing Amazon link
+when it has no hardback; never invent a URL for a title that had none. PAYLOAD’s
+verified paperback is retained in the approved presentation overlay, applied to
+both catalogue and fiction stores on every generation. The same
 generator rule updates stores only on the separate `data/fiction.json` surface;
 its descriptions and published book files are unchanged. Explicit verified
 hardback observations in the catalogue override stale legacy store targets.
@@ -172,7 +175,7 @@ The catalogue is the single source of truth for all public title copy and metada
 
 The homepage URL now defines language: `/` English, `/es` Spanish, explicit `?lang=en/es` takes precedence. The toggle updates that URL while preserving tracking parameters and title fragments. A previously saved Spanish value cannot override the English entry route; unavailable storage cannot stop rendering.
 
-Verified existing-channel retailer URLs live in `distribution_plan.<format>.platform_links`, with per-link primary observation evidence and exact ISBN/format/language. Store links retain their format for translated button labels; the later hardback-only Amazon rule above applies after all overrides. Explicit wide links are merged alongside Amazon links; one retailer/format is not duplicated merely because a second regional URL was observed. Live retailer observations are scoped to the evidencedmarketplace; they do not certify global availability, prices, checkout or complete launch. Ingestion notes are retained as history.
+Verified existing-channel retailer URLs live in `distribution_plan.<format>.platform_links`, with per-link primary observation evidence and exact ISBN/format/language. Store links retain their format for translated button labels; the Amazon edition-preference rule above applies after all overrides. Explicit wide links are merged alongside Amazon links; one retailer/format is not duplicated merely because a second regional URL was observed. Live retailer observations are scoped to the evidencedmarketplace; they do not certify global availability, prices, checkout or complete launch. Ingestion notes are retained as history.
 
 The separate technical task list is `docs/WEBSITE_MAINTENANCE.md`; the existing company `runbooks/TITLE_LAUNCH_CHECKLIST.md` remains the reusable per-title launch source. No new monitor or automatic wake is installed.
 
