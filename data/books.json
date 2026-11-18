@@ -48,22 +48,6 @@
     "stores": [
       {
         "name": "Amazon",
-        "url": "https://www.amazon.com/dp/B0HRVN9Q6R",
-        "type": "book",
-        "format": "ebook",
-        "isbn": "9781917717892",
-        "evidence": "docs/reconciliation/2026-11-18-model-spec-shops.json#amazon-ebook"
-      },
-      {
-        "name": "Amazon",
-        "url": "https://www.amazon.com/dp/1917717903",
-        "type": "book",
-        "format": "paperback",
-        "isbn": "9781917717908",
-        "evidence": "docs/reconciliation/2026-11-18-model-spec-shops.json#amazon-paperback"
-      },
-      {
-        "name": "Amazon",
         "url": "https://www.amazon.com/dp/1917717911",
         "type": "book",
         "format": "hardcover",
@@ -208,18 +192,6 @@
     "stores": [
       {
         "name": "Amazon",
-        "url": "https://www.amazon.com/dp/B0HR247G89",
-        "type": "book",
-        "format": "ebook"
-      },
-      {
-        "name": "Amazon",
-        "url": "https://www.amazon.com/dp/1917717873",
-        "type": "book",
-        "format": "paperback"
-      },
-      {
-        "name": "Amazon",
         "url": "https://www.amazon.com/dp/1917717865",
         "type": "book",
         "format": "hardcover"
@@ -283,18 +255,6 @@
     ],
     "status": "published",
     "stores": [
-      {
-        "name": "Amazon",
-        "url": "https://www.amazon.com/dp/B0HR19LYVH",
-        "type": "book",
-        "format": "ebook"
-      },
-      {
-        "name": "Amazon",
-        "url": "https://www.amazon.com/dp/1917717830",
-        "type": "book",
-        "format": "paperback"
-      },
       {
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/1917717822",
@@ -1027,18 +987,6 @@
     ],
     "status": "published",
     "stores": [
-      {
-        "name": "Amazon",
-        "url": "https://www.amazon.com/dp/B0HQHG2F8N",
-        "type": "book",
-        "format": "ebook"
-      },
-      {
-        "name": "Amazon",
-        "url": "https://www.amazon.com/dp/1917717776",
-        "type": "book",
-        "format": "paperback"
-      },
       {
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/1917717768",

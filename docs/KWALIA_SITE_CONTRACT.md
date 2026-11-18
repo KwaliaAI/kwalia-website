@@ -73,8 +73,14 @@ messages qualify for Amazon under the GM18Nov2026 shops commission. Import
 acceptance and KDP review do not activate a channel. The generator orders every
 title's stores after all overrides: Amazon, Apple Books, Google Play (including
 Google Play Books), Kobo, then remaining shops alphabetically. Heise stays last
-as explicitly requested in that commission. Stable ties preserve the existing
-Amazon marketplace and format order; current links use amazon.com/dp/<ASIN>. Undo this commission by clearing the two
+as explicitly requested in that commission. A subsequent Founder instruction (GM Tannoy488,18Nov2026) supersedes the
+three-format Amazon buttons: ONE Amazon link per title, using an already
+verified hardback URL; paperback only for a title with no hardback. Never infer
+an unverified print listing from an allocated ISBN. Existing legacy/deferred
+Amazon targets without a verified print replacement stay audit-only under the
+same commission; report their incorrect format and remove that exception when
+their link correction is commissioned. New titles do not fall back to Kindle.
+Existing marketplace URLs are retained; current links use amazon.com/dp/<ASIN>. Undo this commission by clearing the two
 `site_listing.visible` values and regenerating from the committed catalogue.
 The source manifest records channels and the legacy exception separately for each
 row, without inventing channel status. Retire the legacy visibility exception per

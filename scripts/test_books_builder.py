@@ -5,7 +5,7 @@ import hashlib
 import json
 import unittest
 
-from build_books_json import ROOT, announcement_html, build_row, encode, generate, live_channels, presentation_for, legacy_public
+from build_books_json import ROOT, announcement_html, build_row, encode, generate, live_channels, presentation_for, legacy_public, single_amazon
 
 
 class BooksBuilderTests(unittest.TestCase):
@@ -21,15 +21,27 @@ class BooksBuilderTests(unittest.TestCase):
         self.row["title_id"] = "example"
         overlay = copy.deepcopy(self.overlay)
         overlay["deferred_updates"] = {"example": {"authority": "test", "fields": {"stores": links}}}
+        links[4]["format"] = "ebook"
+        links[7]["format"] = "hardcover"
         books, _ = generate([self.row], overlay)
         self.assertEqual([s["name"] for s in books[0]["stores"]],
-                         ["Amazon", "Amazon", "Apple Books", "Google Play Books", "Kobo", "Barnes & Noble", "Storytel", "Heise"])
-        self.assertEqual([s["url"] for s in books[0]["stores"][:2]], [links[4]["url"], links[7]["url"]])
+                         ["Amazon", "Apple Books", "Google Play Books", "Kobo", "Barnes & Noble", "Storytel", "Heise"])
+        self.assertEqual(books[0]["stores"][0]["url"], links[7]["url"])
         self.row["title_id"] = self.overlay["legacy_rows"][0]["id"]
         self.row["distribution_plan"] = {"ebook": {"platform_links": links[:4]}}
         books, _ = generate([self.row], self.overlay)
         self.assertEqual(books[0]["stores"][0]["name"], "Amazon")
         self.assertEqual(books[0]["stores"][-1]["name"], "Heise")
+
+    def test_amazon_prefers_hardback_and_only_uses_paperback_without_hardback(self):
+        links = [{"name": "Amazon", "url": "https://www.amazon.com/dp/" + kind, "format": kind}
+                 for kind in ["ebook", "paperback", "hardcover"]]
+        self.assertEqual(single_amazon(links, self.row), [links[2]])
+        self.assertEqual(single_amazon(links[:2], self.row), [links[1]])
+        self.assertEqual(single_amazon(links[:1], self.row), [])
+        self.row["isbn_hc"] = "9781917717915"
+        self.assertEqual(single_amazon(links[:2], self.row), [])
+        self.assertEqual(single_amazon(links[:1], self.row, preserve_existing=True), [links[0]])
 
     def test_baseline_exact_original_hash_and_eight_rows(self):
         self.assertEqual(len(self.overlay["legacy_rows"]), 8)
