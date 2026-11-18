@@ -15,6 +15,22 @@ class BooksBuilderTests(unittest.TestCase):
                     "language": "eng", "isbn_eb": "9781917717724", "blurb_300": "Exact approved description.\nSecond paragraph.",
                     "price_eb_gbp": 4.99, "channel_delivery_status": {"bookwire": {"status": "live"}}}
 
+    def test_major_shop_order_applies_after_audiobook_and_legacy_overrides(self):
+        links = [{"name": name, "url": "https://example.com/" + str(i), "type": "book"}
+                 for i, name in enumerate(["Heise", "Storytel", "Google Play Books", "Apple Books", "Amazon", "Kobo", "Barnes & Noble", "Amazon"])]
+        self.row["title_id"] = "example"
+        overlay = copy.deepcopy(self.overlay)
+        overlay["deferred_updates"] = {"example": {"authority": "test", "fields": {"stores": links}}}
+        books, _ = generate([self.row], overlay)
+        self.assertEqual([s["name"] for s in books[0]["stores"]],
+                         ["Amazon", "Amazon", "Apple Books", "Google Play Books", "Kobo", "Barnes & Noble", "Storytel", "Heise"])
+        self.assertEqual([s["url"] for s in books[0]["stores"][:2]], [links[4]["url"], links[7]["url"]])
+        self.row["title_id"] = self.overlay["legacy_rows"][0]["id"]
+        self.row["distribution_plan"] = {"ebook": {"platform_links": links[:4]}}
+        books, _ = generate([self.row], self.overlay)
+        self.assertEqual(books[0]["stores"][0]["name"], "Amazon")
+        self.assertEqual(books[0]["stores"][-1]["name"], "Heise")
+
     def test_baseline_exact_original_hash_and_eight_rows(self):
         self.assertEqual(len(self.overlay["legacy_rows"]), 8)
         self.assertEqual(hashlib.sha256(encode([legacy_public(row) for row in self.overlay["legacy_rows"]])).hexdigest(), self.overlay["baseline_sha256"])

@@ -132,6 +132,16 @@ def merge_stores(existing, observed):
     return links
 
 
+def store_priority(link):
+    """GM18Nov2026: major shops first; stable ties retain Amazon format order."""
+    name = link["name"].casefold().strip()
+    priority = {"amazon": 0, "apple books": 1, "google play": 2,
+                "google play books": 2, "kobo": 3}
+    # The same commission explicitly retains Heise at the end.
+    return (priority.get(name, 5 if name == "heise" else 4),
+            "" if name in priority else name)
+
+
 def presentation_for(tid, overlay):
     old = next((r for r in overlay["legacy_rows"] if r["id"] == tid), {})
     fields = ("imprint", "imprintLine", "coverImage", "featured", "sampleUrl", "sampleLabel", "stories", "stores")
@@ -268,6 +278,10 @@ def generate(rows, overlay):
             decision = next(d for d in decisions if d["id"] == book["id"])
             decision.update(visible=book.get("siteVisible") is not False,
                             deferred_update_authority=hold["authority"])
+    # Apply after all presentation/deferred overrides so every generated title
+    # follows the same rule, including legacy and audiobook-only records.
+    for book in books:
+        book["stores"] = sorted(book.get("stores", []), key=store_priority)
     order = {r["id"]: n for n, r in enumerate(overlay["legacy_rows"])}
     books.sort(key=lambda row: order.get(row["id"], len(order)))
     # Stable date ordering replaces both append-only generation and the browser's

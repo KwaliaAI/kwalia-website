@@ -68,8 +68,13 @@ storefront-live claim; `site_listing.formats` limits publicly offered formats.
 All allocated ISBNs and planned prices stay in the catalogue. Vol 4 exposes only
 its accepted Bookwire ebook while KDP creation is blocked. The existing EN copy
 fallback on the ES interface is preserved when no approved translation exists.
-Store links still require independent live evidence; import acceptance and KDP
-review do not activate a channel. Undo this commission by clearing the two
+Store links require evidence of the live edition; KDP live receipts/publication
+messages qualify for Amazon under the GM18Nov2026 shops commission. Import
+acceptance and KDP review do not activate a channel. The generator orders every
+title's stores after all overrides: Amazon, Apple Books, Google Play (including
+Google Play Books), Kobo, then remaining shops alphabetically. Heise stays last
+as explicitly requested in that commission. Stable ties preserve the existing
+Amazon marketplace and format order; current links use amazon.com/dp/<ASIN>. Undo this commission by clearing the two
 `site_listing.visible` values and regenerating from the committed catalogue.
 The source manifest records channels and the legacy exception separately for each
 row, without inventing channel status. Retire the legacy visibility exception per
