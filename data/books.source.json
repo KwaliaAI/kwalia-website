@@ -1,10 +1,10 @@
 {
   "catalogue_repository": "https://github.com/KwaliaAI/catalog",
-  "catalogue_commit": "9d782aa2e54f53038e08e6bf81a08a9ca0c913c7",
+  "catalogue_commit": "ecfbca7a7b6d6a1c26911b2d1d64057317d72347",
   "catalogue_file": "data/catalog.json",
-  "catalogue_sha256": "944827fbdb164ca79a87765526f7dbdd1501dc7d8c908a70a34a0a8fe1133378",
-  "overlay_sha256": "92392051b4eeccef212bbfa94505409c710ef25782deaa6da9ef6b50370c7fe6",
-  "books_sha256": "33acad5f9fb806fd377a97ce62e106f27de53d9d70ee9278ae9d00a8f0b220a8",
+  "catalogue_sha256": "bbe2b9621167dbec03a8ed22aa388871f2cf0a11bd0fcab67cde9c750ac92cf6",
+  "overlay_sha256": "caf52afe0f7c46b0bec8a29a54d3160185ec5f56136af053750fd66456fb7488",
+  "books_sha256": "230f397b15c6da609f26dfd57c234cab82f27e65f139674abfc70be1c1503b6d",
   "decisions": [
     {
       "id": "udair",
@@ -39,8 +39,6 @@
       "included": true,
       "visible": true,
       "channels": [
-        "ingram",
-        "google-play",
         "bookwire"
       ],
       "legacyVisible": true
@@ -55,6 +53,7 @@
       "included": true,
       "visible": true,
       "channels": [
+        "amazon-kdp",
         "bookwire"
       ],
       "legacyVisible": true
@@ -82,7 +81,8 @@
       "included": true,
       "visible": true,
       "channels": [
-        "bookwire"
+        "bookwire",
+        "amazon-kdp"
       ],
       "legacyVisible": true
     },
@@ -91,7 +91,8 @@
       "included": true,
       "visible": true,
       "channels": [
-        "bookwire"
+        "bookwire",
+        "amazon-kdp"
       ],
       "legacyVisible": true
     },
@@ -99,9 +100,11 @@
       "id": "payload",
       "included": true,
       "visible": false,
-      "channels": [],
+      "channels": [
+        "google-play"
+      ],
       "legacyVisible": false,
-      "reason": "no explicit active channel; lifecycle/sale flag alone is insufficient"
+      "deferred_update_authority": "GM18Nov2026 Model Spec brief step3: report other status disagreements without changing them. PAYLOAD remains on its existing fiction surface; remove this hold when GM commissions its status sync."
     },
     {
       "id": "akm-001-terms-and-conditions",
@@ -161,7 +164,8 @@
         "amazon-kdp",
         "bookwire"
       ],
-      "legacyVisible": false
+      "legacyVisible": false,
+      "deferred_update_authority": "GM18Nov2026 Model Spec-only release sync: retain existing Vol2 buttons; its new print product pages are unverified in the current truth pass. Remove on a separately verified link sync."
     },
     {
       "id": "bliss-001-shut-up-brain",
@@ -204,10 +208,10 @@
       "id": "bliss-004-shut-up-neighbours",
       "included": true,
       "visible": true,
-      "channels": [],
-      "legacyVisible": false,
-      "reason": "commissioned pending listing; no storefront-live claim",
-      "listing_authority": "GM SIGNED B0 20:38 2026-11-06, FINAL descriptions; forthcoming cards without store links"
+      "channels": [
+        "bookwire"
+      ],
+      "legacyVisible": false
     },
     {
       "id": "bliss-005-shut-up-darling",
@@ -222,10 +226,10 @@
       "id": "bliss-006-shut-up-everyone",
       "included": true,
       "visible": true,
-      "channels": [],
-      "legacyVisible": false,
-      "reason": "commissioned pending listing; no storefront-live claim",
-      "listing_authority": "GM SIGNED B0 20:38 2026-11-06, FINAL descriptions; forthcoming cards without store links"
+      "channels": [
+        "bookwire"
+      ],
+      "legacyVisible": false
     },
     {
       "id": "bliss-007-wind-on-mars",
@@ -250,10 +254,11 @@
       "id": "openai-model-spec",
       "included": true,
       "visible": true,
-      "channels": [],
-      "legacyVisible": false,
-      "reason": "commissioned pending listing; no storefront-live claim",
-      "listing_authority": "Founder-supplied GM brief13Nov2026: forthcoming card; no format on sale and no buy links"
+      "channels": [
+        "bookwire",
+        "amazon-kdp"
+      ],
+      "legacyVisible": false
     }
   ]
 }

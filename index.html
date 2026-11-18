@@ -200,11 +200,12 @@
     <header id="site-header" class="bg-c4 w-full sticky top-0 z-50 shadow-sm">
         <!-- Reusable announcement rail: keep it to one line, mono uppercase, accent color, and point to the current launch asset. -->
         <a
-            href="#ailgl"
+            id="latest-release"
+            href="#openai-model-spec"
             class="announcement--bliss block border-b border-c2/10 px-6 py-3 text-center font-f3 text-[11px] md:text-xs uppercase tracking-[0.22em] text-c3 hover:text-c2 transition-colors"
-            data-key="announcement.ailgl5" style="background:#F5F8FD;color:#091432;border-bottom:1px solid #AAC0DC"
+            style="background:#F5F8FD;color:#091432;border-bottom:1px solid #AAC0DC"
         >
-            US State AI Laws: Selected Statutes · Volume 5 of the AI Law &amp; Governance Library
+            The OpenAI Model Spec: Diffs 2024–2026 · Volume 8 of New Citizenships
         </a>
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home"><img src="assets/logo-kwalia-small.png" alt="kwalia logo" class="h-8 w-auto"></a>
@@ -555,16 +556,6 @@
             let shortStories = [];
             let essays = [];
 
-            // Single source of truth for New Citizenships card order. First id = top-left. To add a book to the top, prepend its id. Unlisted books render last.
-            const catalogueOrder = [
-                'synthropology',
-                'war-and-ai',
-                'apophenia',
-                'your-constitution-claude',
-                'claudes-constitution',
-                'mindkind',
-                'udair'
-            ];
 
             // Load all data from JSON files
             async function loadData() {
@@ -724,14 +715,8 @@
                 // AI Law & Governance Library titles render in their own #ailgl series block,
                 // so keep them out of the New Citizenships grid to avoid double-listing.
                 const catalogueBooks = bookCatalogue.filter(book => book.imprint !== 'AI Law & Governance Library' && book.imprint !== 'Kwalia Bliss');
-                // Order strictly by position in catalogueOrder. Ids not listed sort to the end.
-                const rank = id => {
-                    const index = catalogueOrder.indexOf(id);
-                    return index === -1 ? Infinity : index;
-                };
-                const sortedCatalogue = [...catalogueBooks].sort((left, right) => rank(left.id) - rank(right.id));
-
-                sortedCatalogue.forEach(book => {
+                // The generator supplies publication-date order.
+                catalogueBooks.forEach(book => {
                     catalogueContainer.innerHTML += buildBookCardHTML(book, lang);
                 });
 
@@ -1137,6 +1122,13 @@
                     payloadPressLink.href = 'assets/kwalia-press-release-payload-january2026.pdf';
                 }
 
+                const latest = bookCatalogue.find(book => book.announcement);
+                const announcement = document.getElementById('latest-release');
+                if (latest && announcement) {
+                    announcement.textContent = latest.announcement[lang] || latest.announcement.en;
+                    announcement.href = '#' + latest.id;
+                }
+
                 renderCatalogue(lang);
                 renderAILGL(lang);
                 renderBliss(lang);
@@ -1175,6 +1167,11 @@
                         // Only prevent default if it actually starts with # AND isn't just a placeholder
                         if (href && href.startsWith('#') && href.length > 1) {
                         e.preventDefault();
+                        const book = bookCatalogue.find(book => book.id === href.slice(1));
+                        if (book) {
+                            openBookModal(book, currentLang);
+                            return;
+                        }
                         const targetElement = document.querySelector(href);
                         if (targetElement) {
                             window.scrollTo({
