@@ -322,7 +322,8 @@
       {
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/191771761X",
-        "type": "book"
+        "type": "book",
+        "format": "hardcover"
       },
       {
         "name": "Storytel",
@@ -373,7 +374,8 @@
       {
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/1917717385",
-        "type": "book"
+        "type": "book",
+        "format": "hardcover"
       },
       {
         "name": "Storytel",
@@ -448,6 +450,14 @@
     "status": "published",
     "stores": [
       {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717318",
+        "type": "book",
+        "format": "hardcover",
+        "isbn": "9781917717311",
+        "evidence": "docs/reconciliation/2026-11-18-amazon-hardbacks.json#war-and-ai"
+      },
+      {
         "name": "Storytel",
         "url": "https://www.storytel.com/fi/books/war-and-ai-the-algorithmic-battlefield-13735270",
         "type": "book",
@@ -503,7 +513,8 @@
       {
         "name": "Amazon",
         "url": "https://www.amazon.com/dp/1917717229",
-        "type": "book"
+        "type": "book",
+        "format": "hardcover"
       },
       {
         "name": "Storytel",
@@ -551,8 +562,11 @@
     "stores": [
       {
         "name": "Amazon",
-        "url": "https://www.amazon.com/dp/B0FHMDY8QS",
-        "type": "book"
+        "url": "https://www.amazon.com/dp/1917717199",
+        "type": "book",
+        "format": "hardcover",
+        "isbn": "9781917717199",
+        "evidence": "docs/reconciliation/2026-11-18-amazon-hardbacks.json#claudes-constitution"
       },
       {
         "name": "Google Play",
@@ -597,13 +611,20 @@
       {
         "type": "audiobook",
         "isbn": "978-1-917717-12-0"
+      },
+      {
+        "type": "hardcover",
+        "isbn": "978-1-917717-15-1"
       }
     ],
     "stores": [
       {
         "name": "Amazon",
-        "url": "https://www.amazon.com/dp/B0FH7J2BY3",
-        "type": "book"
+        "url": "https://www.amazon.com/dp/1917717156",
+        "type": "book",
+        "format": "hardcover",
+        "isbn": "9781917717151",
+        "evidence": "docs/reconciliation/2026-11-18-amazon-hardbacks.json#mindkind"
       },
       {
         "name": "Apple Books",
@@ -667,8 +688,11 @@
     "stores": [
       {
         "name": "Amazon",
-        "url": "https://www.amazon.com/dp/1917717016",
-        "type": "book"
+        "url": "https://www.amazon.com/dp/1917717008",
+        "type": "book",
+        "format": "hardcover",
+        "isbn": "9781917717007",
+        "evidence": "docs/reconciliation/2026-11-18-amazon-hardbacks.json#udair"
       },
       {
         "name": "Kobo",
@@ -712,7 +736,7 @@
       "es": "assets/Apofenia-ES.png"
     },
     "synopsis": {
-      "en": "Javier del Puerto & Rado Molina\nComing February 2026\n\n\"Apophenia\" examines how artificial intelligence acts as gasoline on the fire of our pattern-seeking minds, transforming innocent connections into full-blown conspiracy theories. Just as AI image generators start with pure noise and \"diffuse\" it into seemingly meaningful pictures, our algorithmic feeds take the random static of daily information and crystallize it into dangerously coherent delusions.\n\nThe book traces how recommendation algorithms don't just show us what we want to see—they actively create patterns where none existed, turning correlation into causation and coincidence into conspiracy. From QAnon to COVID denialism, from flat Earth to political extremism, AI systems amplify our natural tendency to see faces in clouds until we're living in entirely different realities.\n\nThis isn't about technology gone wrong but about a fundamental mismatch: minds evolved to spot tigers in tall grass now aided by systems that can find \"evidence\" for any belief. The authors map how diffusion becomes confusion becomes delusion, creating what they call \"algorithmic apophenia\"—where the noise itself becomes the message.\n\nPart warning, part guide, \"Apophenia\" offers strategies for navigating an information landscape where AI can make any conspiracy seem plausible. Because in the age of the Mindkind, the question isn't whether patterns exist, but whether they mean anything at all.",
+      "en": "Javier del Puerto & Rado Molina\nComing February 2026\n\n\"Apophenia\" examines how artificial intelligence acts as gasoline on the fire of our pattern-seeking minds, transforming innocent connections into full-blown conspiracy theories. Just as AI image generators start with pure noise and \"diffuse\" it into seemingly meaningful pictures, our algorithmic feeds take the random static of daily information and crystallize it into dangerously coherent delusions.\n\nThe book traces how recommendation algorithms don't just show us what we want to see—they actively create patterns where none existed, turning correlation into causation and coincidence into conspiracy. From QAnon to COVID denialism, from flat Earth to political extremism, AI systems amplify our natural tendency to see faces in clouds until we're living in entirely different realities.\n\nIt's a fundamental mismatch: minds evolved to spot tigers in tall grass now have help from systems that can find \"evidence\" for any belief. The authors map how diffusion becomes confusion becomes delusion, creating what they call \"algorithmic apophenia\"—where the noise itself becomes the message.\n\nPart warning, part guide, \"Apophenia\" offers strategies for navigating an information landscape where AI can make any conspiracy seem plausible. Because in the age of the Mindkind, the question isn't whether patterns exist, but whether they mean anything at all.",
       "es": "Javier del Puerto & Rado Molina\nPublicación: febrero de 2026\n\n\"Apofenia\" examina cómo la inteligencia artificial actúa como gasolina en el fuego de nuestras mentes sedientas de patrones, transformando conexiones inocentes en teorías conspirativas totalizadoras. Así como las IAs generadoras de imágenes parten del ruido puro y lo \"difunden\" hasta crear imágenes aparentemente significativas, nuestros feeds algorítmicos toman la estática aleatoria de la información diaria y la cristalizan en delirios peligrosamente coherentes.\n\nEl libro traza cómo los algoritmos de recomendación no se limitan a mostrarnos lo que queremos ver: crean patrones donde no existían, convirtiendo correlación en causalidad y coincidencia en conspiración. Desde QAnon hasta el negacionismo COVID, desde la Tierra plana hasta el extremismo político, los sistemas de IA amplifican nuestra tendencia natural a ver caras en las nubes hasta que habitamos realidades completamente diferentes.\n\nEs un desajuste de fondo: mentes evolucionadas para detectar tigres en la hierba alta ahora asistidas por sistemas que pueden encontrar «pruebas» de cualquier creencia. Los autores cartografían cómo la difusión se vuelve confusión se vuelve delirio, creando lo que llaman \"apofenia algorítmica\": donde el ruido mismo se convierte en el mensaje.\n\nParte advertencia, parte guía, \"Apofenia\" ofrece estrategias para moverse por un paisaje informativo donde la IA puede hacer que cualquier conspiración parezca plausible. Porque en la era del Mindkind, la pregunta es si los patrones significan algo."
     },
     "status": "forthcoming",
@@ -815,9 +839,11 @@
     "stores": [
       {
         "name": "Amazon",
-        "url": "https://www.amazon.com/dp/B0HQ569Y93",
+        "url": "https://www.amazon.com/dp/1917717709",
         "type": "book",
-        "format": "ebook"
+        "format": "hardcover",
+        "isbn": "9781917717700",
+        "evidence": "docs/reconciliation/2026-11-18-amazon-hardbacks.json#ailgl-002-ai-bill-of-rights"
       },
       {
         "name": "Storytel",
