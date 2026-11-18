@@ -157,7 +157,7 @@ function fullPose(name){ var o = zeroPose(), m = MOODS[name] || {}; POSE_KEYS.fo
 var box = null, img = null, canvas = null, gl = null, prog = null, locs = {};
 var mounted = false, glReady = false, failed = false, lost = false, live = false;
 var visible = false, userPaused = false, reduced = false, running = false, raf = 0, last = 0, lastDraw = 0;
-var mqReduce = null;
+var mqReduce = null, compileTimer = 0, parallelCompile = null;
 
 /* ---- animation state ---- */
 var S = {
@@ -235,13 +235,20 @@ function step(dt){
 function U(n){ return (n in locs) ? locs[n] : (locs[n] = gl.getUniformLocation(prog, n)); }
 function initGL(){
   try {
-    var opts = { antialias:false, alpha:false, depth:false, stencil:false, powerPreference:"low-power" };
-    gl = canvas.getContext("webgl", opts) || canvas.getContext("experimental-webgl", opts);
-    if (!gl) return false;
-    var mk = function(type, src){ var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
-      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error("shader"); return s; };
-    prog = gl.createProgram(); locs = {};
-    gl.attachShader(prog, mk(gl.VERTEX_SHADER, VS)); gl.attachShader(prog, mk(gl.FRAGMENT_SHADER, FS)); gl.linkProgram(prog);
+    if (!gl) {
+      var opts = { antialias:false, alpha:false, depth:false, stencil:false, powerPreference:"low-power" };
+      gl = canvas.getContext("webgl", opts) || canvas.getContext("experimental-webgl", opts);
+      if (!gl) return false;
+      parallelCompile = gl.getExtension("KHR_parallel_shader_compile");
+      // Checking COMPILE_STATUS here would wait synchronously for the GPU.
+      var mk = function(type, src){ var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; };
+      prog = gl.createProgram(); locs = {};
+      gl.attachShader(prog, mk(gl.VERTEX_SHADER, VS)); gl.attachShader(prog, mk(gl.FRAGMENT_SHADER, FS)); gl.linkProgram(prog);
+    }
+    if (parallelCompile && !gl.getProgramParameter(prog, parallelCompile.COMPLETION_STATUS_KHR)) {
+      if (!compileTimer) compileTimer = root.setTimeout(function(){ compileTimer = 0; update(); }, 32);
+      return null; // Keep the still and yield while the driver compiles.
+    }
     if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error("link");
     gl.useProgram(prog);
     gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
@@ -330,12 +337,14 @@ function start(){
   if (!glReady) {
     if (!(img.complete && img.naturalWidth > 0)) return;           // the still has not arrived yet: its load event calls update()
     resize();
-    if (!initGL()) { failed = true; return; }                      // no WebGL: the still stays, nothing else happens
+    var ready = initGL();
+    if (ready === null) return;
+    if (!ready) { failed = true; return; }                         // no WebGL: the still stays, nothing else happens
     glReady = true;
   }
   running = true; qN = 0; last = lastDraw = performance.now(); raf = root.requestAnimationFrame(frame);
 }
-function stop(){ if (running) { running = false; root.cancelAnimationFrame(raf); } }
+function stop(){ if (compileTimer) { root.clearTimeout(compileTimer); compileTimer = 0; } if (running) { running = false; root.cancelAnimationFrame(raf); } }
 function update(){
   if (!mounted) return;
   var want = visible && !document.hidden && !userPaused && !reduced && !failed && !lost;
@@ -363,7 +372,7 @@ function mount(el){
   canvas = document.createElement("canvas");
   canvas.setAttribute("aria-hidden", "true"); canvas.setAttribute("role", "presentation"); canvas.tabIndex = -1;
   img.parentNode.insertBefore(canvas, img.nextSibling);
-  canvas.addEventListener("webglcontextlost", function(e){ e.preventDefault(); lost = true; glReady = false; update(); }, false);
+  canvas.addEventListener("webglcontextlost", function(e){ e.preventDefault(); lost = true; glReady = false; gl = null; prog = null; update(); }, false);
   canvas.addEventListener("webglcontextrestored", function(){ lost = false; update(); }, false);
   if (root.matchMedia) {
     mqReduce = root.matchMedia("(prefers-reduced-motion: reduce)"); reduced = mqReduce.matches;
