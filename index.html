@@ -8,6 +8,8 @@
     <!-- /Indexing contract -->
     <base href="/">
     <title>Kwalia | AI First Entertainment</title>
+    <!-- Fetch the small visible still early; decoding and animation never block paint. -->
+    <link rel="preload" as="image" href="assets/seph/seph-band-b.25eca3e02fc7.webp" fetchpriority="high">
 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -159,6 +161,33 @@
 
         #book-modal-content[data-book-id="ailgl-005-us-state-ai-laws"] > div > div:first-child { position:sticky; top:0; z-index:5; background:#fff; }
         #book-modal-content[data-book-id="ailgl-005-us-state-ai-laws"] #close-modal { background:#fff; flex-shrink:0; }
+
+/* Seph, variant B: the hero becomes a full-width band, she is veiled behind the words. Remove this block to undo. */
+.seph-band{position:relative;overflow:hidden;background:#dcdedd}
+.seph-band img,.seph-band canvas{position:absolute;top:0;left:0;width:100%;height:100%;max-width:none;display:block;object-fit:cover}
+.seph-band canvas{opacity:0;transition:opacity .8s ease;pointer-events:none}
+.seph-band.is-live canvas{opacity:1}
+@media (prefers-reduced-motion:reduce){.seph-band canvas{display:none}}
+#home{position:relative;overflow:hidden;background:#e5e6e6}
+#home>.container{position:relative;z-index:2}
+.seph-band--b{position:absolute;top:0;left:0;right:0;height:calc(64vw + 2.5rem);max-height:24rem}
+.seph-band--b img,.seph-band--b canvas{object-position:100% 30%;filter:saturate(.5)}
+.seph-veil{position:absolute;top:0;left:0;width:100%;height:100%;background:#eceded;opacity:.58;transition:opacity .7s ease;pointer-events:none}
+.seph-fade{position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(rgba(229,230,230,0),#e5e6e6);pointer-events:none}
+.seph-hit{display:none}
+@media (max-width:1279px){#home{padding-top:min(calc(64vw + 1rem),22.5rem);padding-bottom:3.5rem}}
+@media (min-width:1280px){
+  #home{display:flex;align-items:center;min-height:clamp(420px,58vh,640px);padding:3rem 0;background:#dcdedd}
+  #home>.container{width:100%;padding-left:1.5rem;padding-right:1.5rem;text-align:left;pointer-events:none}
+  #home>.container>*{pointer-events:auto;width:fit-content}
+  #home>.container>h1{max-width:calc(100% - 36vw)}
+  #home>.container>p{max-width:34rem;margin-left:0}
+  .seph-band--b{bottom:0;height:auto;max-height:none}
+  .seph-veil{opacity:.5}
+  .seph-fade{display:none}
+  .seph-hit{display:block;position:absolute;top:0;bottom:0;right:0;width:36%}
+  .seph-hit:hover~.seph-veil{opacity:.3}
+}
     </style>
 </head>
 <body class="bg-c4 text-c2 antialiased">
@@ -220,6 +249,11 @@
 
     <main>
         <section id="home" class="bg-c4 section-padding">
+<div class="seph-band seph-band--b" aria-hidden="true" data-seph-portrait data-seph-crop="-2232,8,3200,732">
+    <img src="assets/seph/seph-band-b.25eca3e02fc7.webp" width="3200" height="732" alt="" fetchpriority="high" decoding="async">
+    <div class="seph-hit"></div><div class="seph-veil"></div><div class="seph-fade"></div>
+</div>
+
             <div class="container mx-auto text-center">
                 <h1 class="font-f1 text-5xl md:text-7xl font-bold leading-tight" data-key="hero.title">AI First ✦ Entertainment</h1>
                 <p class="font-f2 text-lg md:text-xl mt-6 max-w-3xl mx-auto" data-key="hero.subtitle">
@@ -1256,6 +1290,21 @@
                 }
             }
         });
+    </script>
+    <script>
+        // Let the page paint before fetching and starting the decorative portrait.
+        window.addEventListener('load', function () {
+            requestAnimationFrame(function () { requestAnimationFrame(function () {
+                function loadPortrait() {
+                    var script = document.createElement('script');
+                    script.src = 'assets/seph/seph-embed.f9aa2f59dd4d.js';
+                    script.async = true;
+                    document.body.appendChild(script);
+                }
+                if ('requestIdleCallback' in window) window.requestIdleCallback(loadPortrait, { timeout: 1500 });
+                else setTimeout(loadPortrait, 200);
+            }); });
+        }, { once: true });
     </script>
 </body>
 </html>
