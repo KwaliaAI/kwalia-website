@@ -5,7 +5,7 @@ import hashlib
 import json
 import unittest
 
-from build_books_json import ROOT, build_row, encode, generate, live_channels, presentation_for, legacy_public
+from build_books_json import ROOT, announcement_html, build_row, encode, generate, live_channels, presentation_for, legacy_public
 
 
 class BooksBuilderTests(unittest.TestCase):
@@ -175,6 +175,47 @@ class BooksBuilderTests(unittest.TestCase):
         for key, filename in (("books_sha256", "books.json"), ("overlay_sha256", "books.overrides.json")):
             self.assertEqual(source[key], hashlib.sha256((ROOT / "data" / filename).read_bytes()).hexdigest())
         self.assertEqual(len(source["catalogue_commit"]), 40)
+
+    def test_next_release_leads_and_replaces_both_announcements_without_id_edit(self):
+        older = {**self.row, "date_published": "2026-11-13", "series_title": "New Citizenships"}
+        newer = {**self.row, "title_id": "next-release", "title": "Next registered title",
+                 "date_published": "2026-11-19", "series_title": "New Citizenships",
+                 "draft_metadata": {"cover_collection_number": 9}}
+        future = {**self.row, "title_id": "not-live", "date_published": "2027-01-01",
+                  "channel_delivery_status": {}, "draft_metadata": {"site_listing": {"visible": True}}}
+        books, _ = generate([older, future, newer], self.overlay)
+        self.assertEqual(books[0]["id"], "next-release")
+        self.assertEqual(books[0]["announcement"], {
+            "en": "Next registered title · Volume 9 of New Citizenships",
+            "es": "Next registered title · Volumen 9 de New Citizenships"})
+        self.assertNotIn("announcement", next(b for b in books if b["id"] == "not-live"))
+        html = announcement_html('<a id="latest-release" href="#old" class="rail">Old</a>', books)
+        self.assertIn('href="#next-release"', html)
+        self.assertIn(books[0]["announcement"]["en"], html)
+
+    def test_live_print_outgrows_pending_ebook_only_limit_without_unverified_links(self):
+        self.row.update(isbn_pb="9781917717908", isbn_hc="9781917717915",
+                        draft_metadata={"site_listing": {"visible": True, "formats": ["ebook"],
+                                                        "verified_storefronts_only": True},
+                                        "kdp_asins": {"ebook": "B0HRVN9Q6R"},
+                                        "kdp_format_status": {"ebook": "live", "paperback": "live", "hardcover": "live"}},
+                        distribution_plan={"ebook": {"platform_links": [{"name": "Heise", "url": "https://example.com/verified", "type": "book"}]}})
+        book = build_row(self.row, self.overlay, ["amazon-kdp"])
+        self.assertEqual(book["status"], "published")
+        self.assertEqual({f["type"] for f in book["formats"]}, {"ebook", "paperback", "hardcover"})
+        self.assertEqual([s["name"] for s in book["stores"]], ["Heise"])
+
+    def test_committed_latest_and_static_fallback_agree(self):
+        books = json.loads((ROOT / "data/books.json").read_bytes())
+        html = (ROOT / "index.html").read_text()
+        self.assertEqual(announcement_html(html, books), html)
+        self.assertNotIn("catalogueOrder", html)
+        latest = next(b for b in books if b.get("announcement"))
+        self.assertEqual(latest["status"], "published")
+        self.assertFalse(any(b.get("datePublished", "") > latest["datePublished"]
+                             for b in books if b["status"] == "published"
+                             and b.get("siteVisible") is not False
+                             and b["imprint"] not in ("Fiction", "Kwalia Bliss")))
 
 
 if __name__ == "__main__":

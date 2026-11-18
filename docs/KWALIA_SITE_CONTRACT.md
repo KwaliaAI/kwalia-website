@@ -172,3 +172,32 @@ site-only commission overrides the general catalogue-copy rule above; retail
 metadata, statuses, prices, stores, covers and ISBNs remain unchanged. Spanish
 uses the approved English card copy fallback; only the shelf line is translated.
 Retire this exception when Founder replaces it with catalogue-backed site copy.
+
+## Model Spec release repair — GM18Nov2026
+
+The catalogue sync now emits publication dates, sorts published titles newest first,
+and derives the latest nonfiction announcement in EN/ES, including its static HTML
+fallback. The homepage consumes that generated order; there is no manual ID list.
+The existing title · Volume N of SERIES / title · Volumen N de SERIES wording is
+retained; number comes from catalogue series_number/cover_collection_number/volume,
+otherwise the registered title stands alone. Unknown publication dates never
+out-rank dated releases; forthcoming titles cannot take the release announcement.
+A pre-release site_listing.formats restriction expands only for confirmed live
+KDP formats. verified_storefronts_only uses explicit catalogue platform_links,
+without synthesizing Amazon buttons from shelf IDs. It does not claim public
+Amazon availability.
+
+Run the existing builder once against clean committed catalogue main after each
+authorized release change, then --check. That one sync updates status, offered
+formats, ordering and the announcement; no book-ID or announcement hand edit is
+needed. The sync remains explicit and does not install a cross-repository wake or
+retailer automation. CI tests a subsequent unseen release as well as artifact
+hashes and the static announcement.
+
+For this bounded commission only, books.overrides.json deferred_updates preserves
+PAYLOAD's existing pending/hidden reader record (its visible fiction card is
+unchanged), and Vol2's existing shop buttons while its new print URLs remain
+publicly unverified. These do not assert catalogue parity. Remove each hold when
+GM commissions that title's separate reconciliation; no public prose is changed.
+Apophenia remains its approved forthcoming card against editorial catalogue state.
+Undo via the introducing website and catalogue merge reverts through normal CI.

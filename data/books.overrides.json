@@ -542,5 +542,33 @@
         "en": "We've never gone further for a recording, and we didn't even go. NASA's Perseverance rover did, and it took a microphone.\n\nNASA/JPL-Caltech/LANL/CNES/CNRS/ISAE-Supaero"
       }
     }
+  },
+  "deferred_updates": {
+    "payload": {
+      "authority": "GM18Nov2026 Model Spec brief step3: report other status disagreements without changing them. PAYLOAD remains on its existing fiction surface; remove this hold when GM commissions its status sync.",
+      "fields": {
+        "status": "pending",
+        "siteVisible": false
+      }
+    },
+    "ailgl-002-ai-bill-of-rights": {
+      "authority": "GM18Nov2026 Model Spec-only release sync: retain existing Vol2 buttons; its new print product pages are unverified in the current truth pass. Remove on a separately verified link sync.",
+      "fields": {
+        "stores": [
+          {
+            "name": "Amazon",
+            "url": "https://www.amazon.com/dp/B0HQ569Y93",
+            "type": "book",
+            "format": "ebook"
+          },
+          {
+            "name": "Storytel",
+            "url": "https://www.storytel.com/fi/books/blueprint-for-an-ai-bill-of-rights-making-automated-systems-work-for-the-american-people-15586904",
+            "type": "book",
+            "format": "ebook"
+          }
+        ]
+      }
+    }
   }
 }

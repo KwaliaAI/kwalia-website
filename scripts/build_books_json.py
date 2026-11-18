@@ -27,19 +27,60 @@ explicit per-format live KDP ASINs, else approved URLs; audio uses distribution_
 
 --baseline reproduces the approved eight public rows byte for byte, stripping
 only the overlay visibility control. Normal generation preserves these same
-rows in the same order and appends new catalogue titles.
+rows with their approved copy. Published titles sort by catalogue publication date;
+the latest nonfiction title supplies the existing bilingual announcement pattern.
 The source manifest records the exact clean catalogue commit and content hash.
 Run explicitly after catalogue changes; --check detects stale committed output.
 """
 import argparse
 from decimal import Decimal
+from html import escape
 import hashlib
 import json
 from pathlib import Path
+import re
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 FORMATS = (("hc", "hardcover"), ("pb", "paperback"), ("eb", "ebook"), ("audio", "audiobook"))
+
+
+def release_fields(row):
+    fields = {}
+    if row.get("date_published"):
+        fields["datePublished"] = row["date_published"]
+    number = row.get("series_number") or (row.get("draft_metadata") or {}).get("cover_collection_number")
+    if number is not None:
+        fields["seriesNumber"] = number
+    return fields
+
+
+def latest_announcement(books):
+    """Reuse the established title · Volume N of SERIES pattern in EN/ES."""
+    latest = next((b for b in books if b["status"] == "published" and b.get("datePublished")
+                   and b.get("siteVisible") is not False
+                   and b["imprint"] not in ("Kwalia Bliss", "Fiction")), None)
+    if latest is None:
+        return None
+    text = {lang: latest["title"].get(lang) or latest["title"]["en"] for lang in ("en", "es")}
+    number = latest.get("seriesNumber") or latest.get("volume")
+    if number is not None:
+        for lang, pattern in (("en", "Volume {} of {}"), ("es", "Volumen {} de {}")):
+            text[lang] += " · " + pattern.format(number, latest["imprint"])
+    return latest, text
+
+
+def announcement_html(html, books):
+    latest = latest_announcement(books)
+    if latest is None:
+        return html
+    book, text = latest
+    pattern = r'(<a\s+id="latest-release"\s+href=")[^"]*("[^>]*>)[\s\S]*?(</a>)'
+    html, count = re.subn(pattern, lambda m: m[1] + "#" + book["id"] + m[2]
+                         + "\n            " + escape(text["en"]) + "\n        " + m[3], html)
+    if count != 1:
+        raise ValueError("Expected exactly one generated latest-release announcement")
+    return html
 
 
 def encode(value):
@@ -112,6 +153,7 @@ def build_row(row, overlay, channels):
     old = next((r for r in overlay["legacy_rows"] if r["id"] == tid), {})
     if old:
         book = legacy_public(old)
+        book.update(release_fields(row))
         observed = retailer_links(row)
         book["stores"] = merge_stores(book.get("stores", []), observed)
         # New verified editions must also appear in the modal's ISBN list.
@@ -133,6 +175,11 @@ def build_row(row, overlay, channels):
     # catalogue without offering them on the public card.
     listing = (row.get("draft_metadata") or {}).get("site_listing") or {}
     listed_formats = listing.get("formats")
+    if listed_formats is not None and channels:
+        # A pre-release format restriction must not hide a subsequently confirmed
+        # live edition. An allocation or submission alone still adds nothing.
+        states = (row.get("draft_metadata") or {}).get("kdp_format_status") or {}
+        listed_formats = set(listed_formats) | {kind for kind, state in states.items() if state == "live"}
     formats = [{"type": kind, "isbn": dashed(row[f"isbn_{short}"])}
                for short, kind in FORMATS if row.get(f"isbn_{short}")
                and (listed_formats is None or kind in listed_formats)
@@ -142,7 +189,8 @@ def build_row(row, overlay, channels):
     prices = [{"type": kind, "amount": f"£{Decimal(str(row[f'price_{short}_gbp'])):.2f}"}
               for short, kind in FORMATS if row.get(f"price_{short}_gbp") is not None
               and any(f["type"] == kind for f in formats)]
-    book = {"id": tid, "imprint": row.get("series_title") or view.get("imprint") or "Kwalia Books"}
+    book = {"id": tid, "imprint": row.get("series_title") or view.get("imprint") or "Kwalia Books",
+            **release_fields(row)}
     volume = row.get("series_number") or row.get("ailgl_volume")
     if library and volume is not None:
         book["volume"] = volume
@@ -160,7 +208,7 @@ def build_row(row, overlay, channels):
     states = metadata.get("kdp_format_status") or {}
     if audio_only:
         book["stores"] = ((row.get("distribution_plan") or {}).get("audiobook") or {}).get("platform_links") or []
-    elif asins:
+    elif asins and not listing.get("verified_storefronts_only"):
         book["stores"] = [{"name": "Amazon", "url": f"https://www.amazon.com/dp/{asin}", "type": "book", "format": kind}
                           for kind, asin in asins.items() if states.get(kind) == "live"]
     else:
@@ -209,8 +257,27 @@ def generate(rows, overlay):
                           **({"reason": "approved legacy visibility; transitional until catalogue channel backfill"} if legacy_visible and not channels else
                              {"reason": "commissioned pending listing; no storefront-live claim", "listing_authority": pending_listing.get("authority")} if pending_visible and not channels else
                              {"reason": "no explicit active channel; lifecycle/sale flag alone is insufficient"} if not channels else {})})
+    # A bounded commission can leave an unrelated existing site state untouched.
+    # These explicit holds are removed only when that title is commissioned.
+    for book in books:
+        hold = overlay.get("deferred_updates", {}).get(book["id"])
+        if hold:
+            if set(hold["fields"]) - {"status", "siteVisible", "stores"}:
+                raise ValueError("Unsupported deferred site field")
+            book.update(hold["fields"])
+            decision = next(d for d in decisions if d["id"] == book["id"])
+            decision.update(visible=book.get("siteVisible") is not False,
+                            deferred_update_authority=hold["authority"])
     order = {r["id"]: n for n, r in enumerate(overlay["legacy_rows"])}
     books.sort(key=lambda row: order.get(row["id"], len(order)))
+    # Stable date ordering replaces both append-only generation and the browser's
+    # manual ID list. Undated titles retain their previous relative order.
+    books.sort(key=lambda row: row.get("datePublished", "")
+               if row["status"] == "published" and row["imprint"] not in ("Kwalia Bliss", "Fiction")
+               else "", reverse=True)
+    latest = latest_announcement(books)
+    if latest:
+        latest[0]["announcement"] = latest[1]
     return books, decisions
 
 
@@ -251,6 +318,14 @@ def main():
         args.output.write_bytes(output)
         if not args.baseline:
             args.output.with_suffix(".source.json").write_bytes(encode(manifest))
+    if not args.baseline:
+        index = ROOT / "index.html"
+        before = index.read_text()
+        after = announcement_html(before, books)
+        if args.check and before != after:
+            parser.error("Generated latest-release announcement is stale; rerun the builder.")
+        if not args.check:
+            index.write_text(after)
     print(json.dumps({"catalogue_commit": commit, "baseline": args.baseline,
                       "books": len(json.loads(output)), "sha256": manifest["books_sha256"], "checked": args.check}))
 

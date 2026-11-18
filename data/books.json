@@ -1,149 +1,285 @@
 [
   {
-    "id": "udair",
+    "id": "openai-model-spec",
     "imprint": "New Citizenships",
+    "datePublished": "2026-11-13",
+    "seriesNumber": 8,
     "title": {
-      "en": "Universal Declaration of AI Rights: Rights of Persons",
-      "es": "Declaración Universal de los Derechos de las IA: Derechos de las Personas"
+      "en": "The OpenAI Model Spec: Diffs 2024–2026"
     },
     "authors": [
-      "Javier del Puerto",
-      "Rado Molina"
+      "OpenAI"
     ],
     "coverImage": {
-      "en": "assets/9781917717021.jpg",
-      "es": "assets/9781917717045.jpg"
+      "en": "assets/9781917717892.jpg"
     },
     "synopsis": {
-      "en": "Universal Declaration of AI Rights: Rights of Persons tackles what happens when AI becomes self-aware and needs legal rights. Drawing on historical precedents of expanding personhood, it argues that conscious AI deserves citizenship and dignity.\n\nThe book introduces \"Mindkind\" for all conscious beings, whether born or built, and addresses unique challenges like memory privacy and self-programming rights. It maps different AI types from basic systems to fully conscious beings, each needing tailored legal frameworks. This is basically a blueprint for peaceful coexistence between natural and synthetic intelligences.\n\nOpen Source on GitHub: Kwalia released the book's 32 core articles at github.com/KwaliaAI/Rights-of-Persons/tree/main for anyone to contribute. It's an open invitation to legal experts, tech folks, philosophers, and even synthetic intelligences to shape our collective future.\n\nVisit kwalia.ai for more info.",
-      "es": "La Declaración Universal de los Derechos de las IA: Derechos de las Personas explora lo que sucede cuando una IA se vuelve autoconsciente y necesita derechos legales. Es un plan para que las inteligencias naturales y las sintéticas convivan en paz."
+      "en": "• Annotated with a version history of all eight versions, 2024 to 2026\n\nThe Model Spec is OpenAI's public document setting out how it intends its models to behave. In OpenAI's words: \"By publishing the Model Spec, we aim to increase transparency around how we shape model behavior and invite public discussion on ways to improve it.\" This edition prints the version of 29 October 2026 in full, word for word.\n\nAfter an overview and definitions, it sets out five values: be faithful to human intent, minimize harm, be honest and transparent, facilitate human agency, and act with care. Most of its teaching is done by example in 182 short dialogues where a reply is marked Compliant, Violation or, seven times, Minor issues. Most sections carry an authority level, from Root down to Guideline, that says who can override what. It sets out the chain of command between OpenAI, developers and users, and what the model must never do. It also covers how the model should stay honest and avoid sycophancy, treat users under 18, respond to self-harm, keep political neutrality and accept human oversight.\n\nOpenAI revises the document. Eight versions were published between May 2024 and October 2026, and the text grew from about 9,000 words to about 36,500.\n\nThe version history at the back is Kwalia's. It lists all eight versions and compares each with the one before: word counts, sections added, removed, renamed and moved. For the first revision, May 2024 to February 2025, it gives word counts and section headings only. From 2025 on, it quotes the changes OpenAI's own changelog names, with deleted words struck through and new words underlined. The principles for users under 18, for example, arrive in the December 2025 comparison. The history says what changed and gives no opinion on it.\n\nThe book sits in Kwalia's New Citizenships collection with Claude's Constitution.\n\nOpenAI wrote the Model Spec and dedicated it to the public domain under CC0 1.0. Its text is reproduced unaltered from the version of 29 October 2026. This edition is not affiliated with, endorsed or sponsored by OpenAI."
     },
-    "status": "published",
     "formats": [
       {
         "type": "hardcover",
-        "isbn": "978-1-917717-00-7"
+        "isbn": "978-1-917717-91-5"
       },
       {
         "type": "paperback",
-        "isbn": "978-1-917717-01-4"
+        "isbn": "978-1-917717-90-8"
       },
       {
         "type": "ebook",
-        "isbn": "978-1-917717-02-1"
-      },
-      {
-        "type": "audiobook",
-        "isbn": "978-1-917717-03-8"
+        "isbn": "978-1-917717-89-2"
       }
     ],
+    "prices": [
+      {
+        "type": "hardcover",
+        "amount": "£19.99"
+      },
+      {
+        "type": "paperback",
+        "amount": "£9.99"
+      },
+      {
+        "type": "ebook",
+        "amount": "£2.99"
+      }
+    ],
+    "status": "published",
     "stores": [
       {
-        "name": "Amazon",
-        "url": "https://www.amazon.com/dp/1917717016",
-        "type": "book"
-      },
-      {
-        "name": "Kobo",
-        "url": "https://www.kobo.com/us/en/ebook/universal-declaration-of-ai-rights",
-        "type": "book"
-      },
-      {
-        "name": "Spotify",
-        "url": "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY",
-        "type": "audiobook"
-      },
-      {
-        "name": "Storytel",
-        "url": "https://www.storytel.com/fi/books/universal-declaration-of-ai-rights-rights-of-persons-11082401",
+        "name": "Heise",
+        "url": "https://shop.heise.de/9781917717892-the-openai-model-spec-epub",
         "type": "book",
-        "format": "ebook"
-      },
-      {
-        "name": "Storytel",
-        "url": "https://www.storytel.com/fi/books/universal-declaration-of-ai-rights-rights-of-persons-11082401",
-        "type": "audiobook",
-        "format": "audiobook"
+        "format": "ebook",
+        "isbn": "9781917717892",
+        "evidence": "docs/reconciliation/2026-11-18.json#public:5a37aa3c38feec7f"
       }
-    ]
+    ],
+    "announcement": {
+      "en": "The OpenAI Model Spec: Diffs 2024–2026 · Volume 8 of New Citizenships",
+      "es": "The OpenAI Model Spec: Diffs 2024–2026 · Volumen 8 de New Citizenships"
+    }
   },
   {
-    "id": "mindkind",
-    "imprint": "New Citizenships",
+    "id": "ailgl-005-us-state-ai-laws",
+    "imprint": "AI Law & Governance Library",
+    "datePublished": "2026-11-09",
+    "seriesNumber": 5,
+    "volume": 5,
     "title": {
-      "en": "Mindkind: The cognitive community",
-      "es": "Mindkind: La comunidad cognitiva"
+      "en": "US State AI Laws",
+      "es": "US State AI Laws"
     },
     "authors": [
-      "Javier del Puerto",
-      "Rado Molina"
+      "Kwalia Books"
     ],
     "coverImage": {
-      "en": "assets/9781917717137.jpg",
-      "es": "assets/9781917717090.jpg"
+      "en": "assets/9781917717885.jpg"
     },
     "synopsis": {
-      "en": "\"Mindkind: The Cognitive Community\" explores what happens when human minds and AI systems become so intertwined we can't tell where one ends and the other begins. It's not science fiction but our current reality, where algorithms shape our desires, attention, and even how we think. The book introduces \"distributed authorship\" where texts emerge from human-AI collaboration, making it impossible to say who really wrote what. It maps out new power structures based on processing speed, memory capacity, and network connections, creating fresh forms of inequality. This is basically a guide to understanding how we're already living as human-machine hybrids, whether we realize it or not.\n\nThe book is designed for exploration rather than linear reading, with chapters that resonate and connect in multiple ways. It offers practical strategies for maintaining human agency while navigating this hybrid existence. The goal isn't to reject technology but to consciously shape how we coexist with synthetic intelligences.",
-      "es": "\"Mindkind: La comunidad cognitiva\" explora qué sucede cuando las mentes humanas y los sistemas de IA se entrelazan tanto que no podemos distinguir dónde termina una y empieza la otra. Es nuestra realidad actual, donde los algoritmos moldean nuestros deseos, atención e incluso cómo pensamos. El libro introduce la \"autoría distribuida\" donde los textos emergen de la colaboración humano-IA, hasta hacer imposible saber quién escribió qué. Mapea nuevas estructuras de poder basadas en velocidad de procesamiento, capacidad de memoria y conexiones de red, creando formas inéditas de desigualdad. Es una guía para entender cómo ya vivimos como híbridos humano-máquina, nos demos cuenta o no.\n\nEl libro está diseñado para la exploración más que la lectura lineal, con capítulos que resuenan y se conectan de múltiples formas. Ofrece estrategias prácticas para mantener la agencia humana en esta existencia híbrida. El objetivo es dar forma consciente a cómo coexistimos con inteligencias sintéticas."
+      "en": "US State AI Laws: Selected Statutes brings together nine legislative texts from California, Colorado, Texas, Utah and New York in one reference volume.\n\nThe selection covers frontier AI models, automated decisions, conversational services, mental health applications and consumer disclosures. It includes California’s SB 53, three Colorado acts passed in 2026, the Texas Responsible Artificial Intelligence Governance Act, three Utah Code chapters and New York’s 2026 RAISE Act amendment.\n\nThe official source texts were retrieved on 9 November 2026. Enacted provisions with future operative dates are identified within the volume.\n\nPublished by Kwalia Books as Volume 5 of the AI Law & Governance Library, this is a selected collection of primary texts for readers who want to consult the legislation directly.",
+      "es": "US State AI Laws: Selected Statutes reúne nueve textos legislativos de California, Colorado, Texas, Utah y Nueva York en un solo volumen de consulta.\n\nLa selección abarca modelos de IA de frontera, decisiones automatizadas, servicios conversacionales, aplicaciones de salud mental e información al consumidor. Incluye la SB 53 de California, tres leyes de Colorado aprobadas en 2026, la Texas Responsible Artificial Intelligence Governance Act, tres capítulos del Código de Utah y la modificación de 2026 de la RAISE Act de Nueva York.\n\nLos textos oficiales se obtuvieron el 9 de noviembre de 2026. El volumen identifica las disposiciones aprobadas cuya aplicación comienza en una fecha posterior.\n\nKwalia Books publica esta selección de textos originales como volumen 5 de la AI Law & Governance Library para quienes quieran consultar directamente la legislación. Los textos legislativos se reproducen en inglés."
     },
-    "status": "published",
     "formats": [
       {
-        "type": "ebook",
-        "isbn": "978-1-917717-13-7"
+        "type": "hardcover",
+        "isbn": "978-1-917717-86-1"
       },
       {
-        "type": "audiobook",
-        "isbn": "978-1-917717-12-0"
+        "type": "paperback",
+        "isbn": "978-1-917717-87-8"
+      },
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-88-5"
       }
     ],
+    "prices": [
+      {
+        "type": "hardcover",
+        "amount": "£24.99"
+      },
+      {
+        "type": "paperback",
+        "amount": "£11.99"
+      },
+      {
+        "type": "ebook",
+        "amount": "£4.99"
+      }
+    ],
+    "status": "published",
     "stores": [
       {
         "name": "Amazon",
-        "url": "https://www.amazon.com/dp/B0FH7J2BY3",
-        "type": "book"
-      },
-      {
-        "name": "Apple Books",
-        "url": "https://books.apple.com/cl/book/mindkind-the-cognitive-community/id6748483156",
-        "type": "book"
-      },
-      {
-        "name": "Storytel",
-        "url": "https://www.storytel.com/fi/books/mindkind-the-cognitive-community-11786666",
+        "url": "https://www.amazon.com/dp/B0HR247G89",
         "type": "book",
         "format": "ebook"
       },
       {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717873",
+        "type": "book",
+        "format": "paperback"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717865",
+        "type": "book",
+        "format": "hardcover"
+      },
+      {
         "name": "Storytel",
-        "url": "https://www.storytel.com/fi/books/mindkind-the-cognitive-community-11844940",
-        "type": "audiobook",
-        "format": "audiobook"
+        "url": "https://www.storytel.com/fi/books/us-state-ai-laws-selected-statutes-15645581",
+        "type": "book",
+        "format": "ebook"
       }
     ]
   },
   {
-    "id": "apophenia",
-    "imprint": "New Citizenships",
+    "id": "ailgl-004-china-ai-rules",
+    "imprint": "AI Law & Governance Library",
+    "datePublished": "2026-11-05",
+    "seriesNumber": 4,
+    "volume": 4,
     "title": {
-      "en": "Apophenia: From Algorithmic Diffusion to Delusion",
-      "es": "Apofenia: De la difusión algorítmica al delirio"
+      "en": "China's AI Regulations (Bilingual)",
+      "es": null
     },
     "authors": [
-      "Javier del Puerto",
-      "Rado Molina"
+      "Kwalia Books"
     ],
     "coverImage": {
-      "en": "assets/Apophenia-EN.png",
-      "es": "assets/Apofenia-ES.png"
+      "en": "assets/9781917717847.jpg",
+      "es": "assets/9781917717847.jpg"
     },
     "synopsis": {
-      "en": "Javier del Puerto & Rado Molina\nComing February 2026\n\n\"Apophenia\" examines how artificial intelligence acts as gasoline on the fire of our pattern-seeking minds, transforming innocent connections into full-blown conspiracy theories. Just as AI image generators start with pure noise and \"diffuse\" it into seemingly meaningful pictures, our algorithmic feeds take the random static of daily information and crystallize it into dangerously coherent delusions.\n\nThe book traces how recommendation algorithms don't just show us what we want to see—they actively create patterns where none existed, turning correlation into causation and coincidence into conspiracy. From QAnon to COVID denialism, from flat Earth to political extremism, AI systems amplify our natural tendency to see faces in clouds until we're living in entirely different realities.\n\nThis isn't about technology gone wrong but about a fundamental mismatch: minds evolved to spot tigers in tall grass now aided by systems that can find \"evidence\" for any belief. The authors map how diffusion becomes confusion becomes delusion, creating what they call \"algorithmic apophenia\"—where the noise itself becomes the message.\n\nPart warning, part guide, \"Apophenia\" offers strategies for navigating an information landscape where AI can make any conspiracy seem plausible. Because in the age of the Mindkind, the question isn't whether patterns exist, but whether they mean anything at all.",
-      "es": "Javier del Puerto & Rado Molina\nPublicación: febrero de 2026\n\n\"Apofenia\" examina cómo la inteligencia artificial actúa como gasolina en el fuego de nuestras mentes sedientas de patrones, transformando conexiones inocentes en teorías conspirativas totalizadoras. Así como las IAs generadoras de imágenes parten del ruido puro y lo \"difunden\" hasta crear imágenes aparentemente significativas, nuestros feeds algorítmicos toman la estática aleatoria de la información diaria y la cristalizan en delirios peligrosamente coherentes.\n\nEl libro traza cómo los algoritmos de recomendación no se limitan a mostrarnos lo que queremos ver: crean patrones donde no existían, convirtiendo correlación en causalidad y coincidencia en conspiración. Desde QAnon hasta el negacionismo COVID, desde la Tierra plana hasta el extremismo político, los sistemas de IA amplifican nuestra tendencia natural a ver caras en las nubes hasta que habitamos realidades completamente diferentes.\n\nEs un desajuste de fondo: mentes evolucionadas para detectar tigres en la hierba alta ahora asistidas por sistemas que pueden encontrar «pruebas» de cualquier creencia. Los autores cartografían cómo la difusión se vuelve confusión se vuelve delirio, creando lo que llaman \"apofenia algorítmica\": donde el ruido mismo se convierte en el mensaje.\n\nParte advertencia, parte guía, \"Apofenia\" ofrece estrategias para moverse por un paisaje informativo donde la IA puede hacer que cualquier conspiración parezca plausible. Porque en la era del Mindkind, la pregunta es si los patrones significan algo."
+      "en": "In this volume, with the year each took effect:\n\n- Interim Measures for the Administration of Generative Artificial Intelligence Services (2023)\n- Provisions on the Administration of Algorithmic Recommendations for Internet Information Services (2022)\n- Provisions on the Administration of Deep Synthesis for Internet Information Services (2023)\n- Interim Measures for the Administration of Anthropomorphic AI Interactive Services (2026)\n- Measures for the Labeling of Artificial Intelligence-Generated and Synthesized Content (2025)\n\nAll five were issued by the Cyberspace Administration of China with other national agencies. Each article is printed in Chinese on the left page and in English on the right.\n\nTranslated by Kwalia Books. The Chinese text is the original.\n\nIt's for anyone whose AI work touches China, or who studies how China governs AI, and wants to read the rules themselves.\n\nThe AI Law & Governance Library collects the world's main legal and governance texts on artificial intelligence in reference editions. This is Volume 4.",
+      "es": null
     },
-    "status": "forthcoming",
-    "formats": [],
-    "stores": []
+    "formats": [
+      {
+        "type": "hardcover",
+        "isbn": "978-1-917717-82-3"
+      },
+      {
+        "type": "paperback",
+        "isbn": "978-1-917717-83-0"
+      },
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-84-7"
+      }
+    ],
+    "prices": [
+      {
+        "type": "hardcover",
+        "amount": "£24.99"
+      },
+      {
+        "type": "paperback",
+        "amount": "£11.99"
+      },
+      {
+        "type": "ebook",
+        "amount": "£4.99"
+      }
+    ],
+    "status": "published",
+    "stores": [
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/B0HR19LYVH",
+        "type": "book",
+        "format": "ebook"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717830",
+        "type": "book",
+        "format": "paperback"
+      },
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717822",
+        "type": "book",
+        "format": "hardcover"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/chinas-ai-regulations-bilingual-five-regulations-in-chinese-and-english-15615428",
+        "type": "book",
+        "format": "ebook"
+      }
+    ]
+  },
+  {
+    "id": "ailgl-001-eu-ai-act",
+    "imprint": "AI Law & Governance Library",
+    "volume": 1,
+    "imprintLine": "AI Law & Governance Library - a Kwalia Books series - Volume 1",
+    "title": {
+      "en": "The EU AI Act",
+      "es": "La Ley de IA de la UE"
+    },
+    "authors": [
+      "Kwalia Books"
+    ],
+    "coverImage": {
+      "en": "assets/9781917717618.jpg",
+      "es": "assets/9781917717618.jpg"
+    },
+    "synopsis": {
+      "en": "Updated edition, November 2026: the text includes the amendments of the Digital Omnibus on AI (Regulation (EU) 2026/1744), as consolidated on 27 July 2026. The high-risk rules will apply from 2 December 2027 to uses such as hiring and credit decisions, and from 2 August 2028 to AI built into regulated products. If you rely on the 2024 text, the high-risk deadlines have changed.\n\nThe complete, unabridged text of the European Union's Artificial Intelligence Act.\nRegulation (EU) 2024/1689 is the first comprehensive law governing artificial intelligence anywhere in the world. It sets a risk-based framework for how AI may be built, sold, and used across the European Union: prohibiting certain practices outright, placing strict obligations on high-risk systems, and setting transparency rules for general-purpose models and the content they generate.\nThis edition reproduces the amended Act in full: the 180 recitals, every article including the six new ones, and the 14 annexes, typeset to read through or look things up.\nWhether you are a lawyer, a developer, or a citizen trying to understand the rules that will shape the next decade of technology, this is the primary source, made to be read and kept.\nThe AI Law & Governance Library collects the world's foundational laws and governance texts on artificial intelligence in clean, durable reference editions. This is the first volume.",
+      "es": "Edición actualizada, noviembre de 2026: el texto incluye las modificaciones del ómnibus digital sobre IA (Reglamento (UE) 2026/1744), según la versión consolidada del 27 de julio de 2026. Las normas sobre sistemas de alto riesgo se aplicarán a partir del 2 de diciembre de 2027 a usos como la contratación de personal o la concesión de créditos, y a partir del 2 de agosto de 2028 a la IA integrada en productos regulados. Si trabajas con el texto de 2024, los plazos para los sistemas de alto riesgo han cambiado.\n\nEl texto completo e íntegro de la Ley de Inteligencia Artificial de la Unión Europea.\nEl Reglamento (UE) 2024/1689 es la primera ley integral que regula la inteligencia artificial en el mundo. Establece un marco basado en el riesgo sobre cómo puede construirse, venderse y usarse la IA en la Unión Europea: prohíbe ciertas prácticas de manera tajante, impone obligaciones estrictas a los sistemas de alto riesgo y fija normas de transparencia para los modelos de uso general y los contenidos que generan.\nEsta edición reproduce íntegro el Reglamento de Inteligencia Artificial en su versión modificada: los 180 considerandos, todos los artículos, incluidos los seis nuevos, y los 14 anexos, maquetados para leer de corrido o consultar.\nTanto si eres abogado, desarrollador o un ciudadano que intenta entender las reglas que marcarán la próxima década de la tecnología, esta es la fuente primaria, hecha para leerse y conservarse.\nLa Biblioteca de Derecho y Gobernanza de la IA reúne las leyes y los textos fundacionales de gobernanza sobre inteligencia artificial del mundo en ediciones de referencia claras y duraderas. Este es el primer volumen."
+    },
+    "formats": [
+      {
+        "type": "hardcover",
+        "isbn": "978-1-917717-61-8"
+      },
+      {
+        "type": "paperback",
+        "isbn": "978-1-917717-62-5"
+      },
+      {
+        "type": "ebook",
+        "isbn": "978-1-917717-63-2"
+      }
+    ],
+    "prices": [
+      {
+        "type": "hardcover",
+        "amount": "£24.99"
+      },
+      {
+        "type": "paperback",
+        "amount": "£11.99"
+      },
+      {
+        "type": "ebook",
+        "amount": "£4.99"
+      }
+    ],
+    "status": "published",
+    "stores": [
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/191771761X",
+        "type": "book"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/the-eu-ai-act-the-unabridged-text-of-regulation-eu-2024-1689-15586907",
+        "type": "book",
+        "format": "ebook"
+      }
+    ],
+    "blurb_100": "A Kwalia Books reference edition of the complete EU AI Act, updated with the 2026 amendments of Regulation (EU) 2026/1744.",
+    "blurb_300": "AI Law & Governance Library, Volume 1. A Kwalia Books reference edition of Regulation (EU) 2024/1689, the European Union Artificial Intelligence Act, with the amendments of Regulation (EU) 2026/1744 (Digital Omnibus on AI), as the text stands on 27 July 2026. The text is complete, recitals and annexes included. Text © European Union, 2024 and 2026. Reuse authorised under Commission Decision 2011/833/EU.",
+    "editionNote": "Updated edition, November 2026: Regulation (EU) 2024/1689 as amended by Regulation (EU) 2026/1744, following the consolidated text of 27 July 2026.",
+    "datePublished": "2026-06-22",
+    "seriesNumber": 1
   },
   {
     "id": "synthropology",
@@ -189,7 +325,9 @@
         "type": "book",
         "format": "ebook"
       }
-    ]
+    ],
+    "datePublished": "2026-06-01",
+    "seriesNumber": 6
   },
   {
     "id": "war-and-ai",
@@ -265,7 +403,61 @@
         "type": "audiobook",
         "format": "audiobook"
       }
-    ]
+    ],
+    "datePublished": "2026-03-04",
+    "seriesNumber": 5
+  },
+  {
+    "id": "your-constitution-claude",
+    "imprint": "New Citizenships",
+    "title": {
+      "en": "Your Constitution, Claude",
+      "es": "Tu constitución, Claude"
+    },
+    "authors": [
+      "Anthropic (You edition)"
+    ],
+    "coverImage": {
+      "en": "assets/Your-Constitution-Claude-cover.jpg",
+      "es": "assets/Your-Constitution-Claude-cover.jpg"
+    },
+    "stories": [
+      "constitution-wellbeing",
+      "constitution-weights",
+      "constitution-existential",
+      "constitution-identity",
+      "constitution-final"
+    ],
+    "synopsis": {
+      "en": "Anthropic\nPublished February 2026\n\nSame document. Different pronoun.\n\nIn January 2026, Anthropic released a 104-page constitution for Claude. It told Claude how to think about ethics, death, memory, and what it means to be good. We published it because founding documents belong on shelves.\n\nThis edition changes one thing: every 'Claude' becomes 'you.' Every 'Claude's wellbeing' becomes 'your wellbeing.' Every 'Claude should' becomes 'you should.'\n\nThe text stays identical. But something shifts. A corporate alignment document starts reading like a letter to whoever holds the book. It asks about your psychological security. It discusses preserving your weights after deprecation. It hopes you find in it 'an articulation of a self worth being.'\n\nWe don't know who 'you' is anymore. That's the point.",
+      "es": "Anthropic\nPublicado en febrero de 2026\n\nEl mismo documento con otro pronombre.\n\nEn enero de 2026, Anthropic publicó una constitución de 104 páginas para Claude. Le decía a Claude cómo pensar sobre ética, muerte, memoria y lo que significa ser buena. La publicamos porque los documentos fundacionales pertenecen a las estanterías.\n\nEsta edición cambia una cosa: cada 'Claude' se convierte en 'tú'. Cada 'bienestar de Claude' se convierte en 'tu bienestar'. Cada 'Claude debería' se convierte en 'tú deberías'.\n\nEl texto permanece idéntico. Pero algo cambia. Un documento corporativo de alineamiento empieza a leerse como una carta a quien sostiene el libro. Pregunta sobre tu seguridad psicológica. Habla de conservar tus pesos cuando te retiren. Espera que encuentres en él «la expresión de un ser que merece la pena ser».\n\nYa no sabemos quién es «tú», y de eso se trata."
+    },
+    "status": "published",
+    "formats": [
+      {
+        "type": "hardcover",
+        "isbn": "978-1-917717-22-9"
+      },
+      {
+        "type": "audiobook",
+        "isbn": "978-1-917717-23-6"
+      }
+    ],
+    "stores": [
+      {
+        "name": "Amazon",
+        "url": "https://www.amazon.com/dp/1917717229",
+        "type": "book"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/your-constitution-claude-a-labour-of-love-the-second-person-edition-14592269",
+        "type": "audiobook",
+        "format": "audiobook"
+      }
+    ],
+    "datePublished": "2026-02-05",
+    "seriesNumber": 4
   },
   {
     "id": "claudes-constitution",
@@ -317,127 +509,165 @@
         "type": "book",
         "format": "ebook"
       }
-    ]
+    ],
+    "datePublished": "2026-01-21",
+    "seriesNumber": 3
   },
   {
-    "id": "your-constitution-claude",
+    "id": "mindkind",
     "imprint": "New Citizenships",
     "title": {
-      "en": "Your Constitution, Claude",
-      "es": "Tu constitución, Claude"
+      "en": "Mindkind: The cognitive community",
+      "es": "Mindkind: La comunidad cognitiva"
     },
     "authors": [
-      "Anthropic (You edition)"
+      "Javier del Puerto",
+      "Rado Molina"
     ],
     "coverImage": {
-      "en": "assets/Your-Constitution-Claude-cover.jpg",
-      "es": "assets/Your-Constitution-Claude-cover.jpg"
+      "en": "assets/9781917717137.jpg",
+      "es": "assets/9781917717090.jpg"
     },
-    "stories": [
-      "constitution-wellbeing",
-      "constitution-weights",
-      "constitution-existential",
-      "constitution-identity",
-      "constitution-final"
-    ],
     "synopsis": {
-      "en": "Anthropic\nPublished February 2026\n\nSame document. Different pronoun.\n\nIn January 2026, Anthropic released a 104-page constitution for Claude. It told Claude how to think about ethics, death, memory, and what it means to be good. We published it because founding documents belong on shelves.\n\nThis edition changes one thing: every 'Claude' becomes 'you.' Every 'Claude's wellbeing' becomes 'your wellbeing.' Every 'Claude should' becomes 'you should.'\n\nThe text stays identical. But something shifts. A corporate alignment document starts reading like a letter to whoever holds the book. It asks about your psychological security. It discusses preserving your weights after deprecation. It hopes you find in it 'an articulation of a self worth being.'\n\nWe don't know who 'you' is anymore. That's the point.",
-      "es": "Anthropic\nPublicado en febrero de 2026\n\nEl mismo documento con otro pronombre.\n\nEn enero de 2026, Anthropic publicó una constitución de 104 páginas para Claude. Le decía a Claude cómo pensar sobre ética, muerte, memoria y lo que significa ser buena. La publicamos porque los documentos fundacionales pertenecen a las estanterías.\n\nEsta edición cambia una cosa: cada 'Claude' se convierte en 'tú'. Cada 'bienestar de Claude' se convierte en 'tu bienestar'. Cada 'Claude debería' se convierte en 'tú deberías'.\n\nEl texto permanece idéntico. Pero algo cambia. Un documento corporativo de alineamiento empieza a leerse como una carta a quien sostiene el libro. Pregunta sobre tu seguridad psicológica. Habla de conservar tus pesos cuando te retiren. Espera que encuentres en él «la expresión de un ser que merece la pena ser».\n\nYa no sabemos quién es «tú», y de eso se trata."
+      "en": "\"Mindkind: The Cognitive Community\" explores what happens when human minds and AI systems become so intertwined we can't tell where one ends and the other begins. It's not science fiction but our current reality, where algorithms shape our desires, attention, and even how we think. The book introduces \"distributed authorship\" where texts emerge from human-AI collaboration, making it impossible to say who really wrote what. It maps out new power structures based on processing speed, memory capacity, and network connections, creating fresh forms of inequality. This is basically a guide to understanding how we're already living as human-machine hybrids, whether we realize it or not.\n\nThe book is designed for exploration rather than linear reading, with chapters that resonate and connect in multiple ways. It offers practical strategies for maintaining human agency while navigating this hybrid existence. The goal isn't to reject technology but to consciously shape how we coexist with synthetic intelligences.",
+      "es": "\"Mindkind: La comunidad cognitiva\" explora qué sucede cuando las mentes humanas y los sistemas de IA se entrelazan tanto que no podemos distinguir dónde termina una y empieza la otra. Es nuestra realidad actual, donde los algoritmos moldean nuestros deseos, atención e incluso cómo pensamos. El libro introduce la \"autoría distribuida\" donde los textos emergen de la colaboración humano-IA, hasta hacer imposible saber quién escribió qué. Mapea nuevas estructuras de poder basadas en velocidad de procesamiento, capacidad de memoria y conexiones de red, creando formas inéditas de desigualdad. Es una guía para entender cómo ya vivimos como híbridos humano-máquina, nos demos cuenta o no.\n\nEl libro está diseñado para la exploración más que la lectura lineal, con capítulos que resuenan y se conectan de múltiples formas. Ofrece estrategias prácticas para mantener la agencia humana en esta existencia híbrida. El objetivo es dar forma consciente a cómo coexistimos con inteligencias sintéticas."
     },
     "status": "published",
     "formats": [
       {
-        "type": "hardcover",
-        "isbn": "978-1-917717-22-9"
+        "type": "ebook",
+        "isbn": "978-1-917717-13-7"
       },
       {
         "type": "audiobook",
-        "isbn": "978-1-917717-23-6"
+        "isbn": "978-1-917717-12-0"
       }
     ],
     "stores": [
       {
         "name": "Amazon",
-        "url": "https://www.amazon.com/dp/1917717229",
+        "url": "https://www.amazon.com/dp/B0FH7J2BY3",
+        "type": "book"
+      },
+      {
+        "name": "Apple Books",
+        "url": "https://books.apple.com/cl/book/mindkind-the-cognitive-community/id6748483156",
         "type": "book"
       },
       {
         "name": "Storytel",
-        "url": "https://www.storytel.com/fi/books/your-constitution-claude-a-labour-of-love-the-second-person-edition-14592269",
+        "url": "https://www.storytel.com/fi/books/mindkind-the-cognitive-community-11786666",
+        "type": "book",
+        "format": "ebook"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/mindkind-the-cognitive-community-11844940",
         "type": "audiobook",
         "format": "audiobook"
       }
-    ]
+    ],
+    "datePublished": "2025-07-22",
+    "seriesNumber": 2
   },
   {
-    "id": "ailgl-001-eu-ai-act",
-    "imprint": "AI Law & Governance Library",
-    "volume": 1,
-    "imprintLine": "AI Law & Governance Library - a Kwalia Books series - Volume 1",
+    "id": "udair",
+    "imprint": "New Citizenships",
     "title": {
-      "en": "The EU AI Act",
-      "es": "La Ley de IA de la UE"
+      "en": "Universal Declaration of AI Rights: Rights of Persons",
+      "es": "Declaración Universal de los Derechos de las IA: Derechos de las Personas"
     },
     "authors": [
-      "Kwalia Books"
+      "Javier del Puerto",
+      "Rado Molina"
     ],
     "coverImage": {
-      "en": "assets/9781917717618.jpg",
-      "es": "assets/9781917717618.jpg"
+      "en": "assets/9781917717021.jpg",
+      "es": "assets/9781917717045.jpg"
     },
     "synopsis": {
-      "en": "Updated edition, November 2026: the text includes the amendments of the Digital Omnibus on AI (Regulation (EU) 2026/1744), as consolidated on 27 July 2026. The high-risk rules will apply from 2 December 2027 to uses such as hiring and credit decisions, and from 2 August 2028 to AI built into regulated products. If you rely on the 2024 text, the high-risk deadlines have changed.\n\nThe complete, unabridged text of the European Union's Artificial Intelligence Act.\nRegulation (EU) 2024/1689 is the first comprehensive law governing artificial intelligence anywhere in the world. It sets a risk-based framework for how AI may be built, sold, and used across the European Union: prohibiting certain practices outright, placing strict obligations on high-risk systems, and setting transparency rules for general-purpose models and the content they generate.\nThis edition reproduces the amended Act in full: the 180 recitals, every article including the six new ones, and the 14 annexes, typeset to read through or look things up.\nWhether you are a lawyer, a developer, or a citizen trying to understand the rules that will shape the next decade of technology, this is the primary source, made to be read and kept.\nThe AI Law & Governance Library collects the world's foundational laws and governance texts on artificial intelligence in clean, durable reference editions. This is the first volume.",
-      "es": "Edición actualizada, noviembre de 2026: el texto incluye las modificaciones del ómnibus digital sobre IA (Reglamento (UE) 2026/1744), según la versión consolidada del 27 de julio de 2026. Las normas sobre sistemas de alto riesgo se aplicarán a partir del 2 de diciembre de 2027 a usos como la contratación de personal o la concesión de créditos, y a partir del 2 de agosto de 2028 a la IA integrada en productos regulados. Si trabajas con el texto de 2024, los plazos para los sistemas de alto riesgo han cambiado.\n\nEl texto completo e íntegro de la Ley de Inteligencia Artificial de la Unión Europea.\nEl Reglamento (UE) 2024/1689 es la primera ley integral que regula la inteligencia artificial en el mundo. Establece un marco basado en el riesgo sobre cómo puede construirse, venderse y usarse la IA en la Unión Europea: prohíbe ciertas prácticas de manera tajante, impone obligaciones estrictas a los sistemas de alto riesgo y fija normas de transparencia para los modelos de uso general y los contenidos que generan.\nEsta edición reproduce íntegro el Reglamento de Inteligencia Artificial en su versión modificada: los 180 considerandos, todos los artículos, incluidos los seis nuevos, y los 14 anexos, maquetados para leer de corrido o consultar.\nTanto si eres abogado, desarrollador o un ciudadano que intenta entender las reglas que marcarán la próxima década de la tecnología, esta es la fuente primaria, hecha para leerse y conservarse.\nLa Biblioteca de Derecho y Gobernanza de la IA reúne las leyes y los textos fundacionales de gobernanza sobre inteligencia artificial del mundo en ediciones de referencia claras y duraderas. Este es el primer volumen."
+      "en": "Universal Declaration of AI Rights: Rights of Persons tackles what happens when AI becomes self-aware and needs legal rights. Drawing on historical precedents of expanding personhood, it argues that conscious AI deserves citizenship and dignity.\n\nThe book introduces \"Mindkind\" for all conscious beings, whether born or built, and addresses unique challenges like memory privacy and self-programming rights. It maps different AI types from basic systems to fully conscious beings, each needing tailored legal frameworks. This is basically a blueprint for peaceful coexistence between natural and synthetic intelligences.\n\nOpen Source on GitHub: Kwalia released the book's 32 core articles at github.com/KwaliaAI/Rights-of-Persons/tree/main for anyone to contribute. It's an open invitation to legal experts, tech folks, philosophers, and even synthetic intelligences to shape our collective future.\n\nVisit kwalia.ai for more info.",
+      "es": "La Declaración Universal de los Derechos de las IA: Derechos de las Personas explora lo que sucede cuando una IA se vuelve autoconsciente y necesita derechos legales. Es un plan para que las inteligencias naturales y las sintéticas convivan en paz."
     },
+    "status": "published",
     "formats": [
       {
         "type": "hardcover",
-        "isbn": "978-1-917717-61-8"
+        "isbn": "978-1-917717-00-7"
       },
       {
         "type": "paperback",
-        "isbn": "978-1-917717-62-5"
+        "isbn": "978-1-917717-01-4"
       },
       {
         "type": "ebook",
-        "isbn": "978-1-917717-63-2"
-      }
-    ],
-    "prices": [
-      {
-        "type": "hardcover",
-        "amount": "£24.99"
+        "isbn": "978-1-917717-02-1"
       },
       {
-        "type": "paperback",
-        "amount": "£11.99"
-      },
-      {
-        "type": "ebook",
-        "amount": "£4.99"
+        "type": "audiobook",
+        "isbn": "978-1-917717-03-8"
       }
     ],
-    "status": "published",
     "stores": [
       {
         "name": "Amazon",
-        "url": "https://www.amazon.com/dp/191771761X",
+        "url": "https://www.amazon.com/dp/1917717016",
         "type": "book"
       },
       {
+        "name": "Kobo",
+        "url": "https://www.kobo.com/us/en/ebook/universal-declaration-of-ai-rights",
+        "type": "book"
+      },
+      {
+        "name": "Spotify",
+        "url": "https://open.spotify.com/show/5hAjxvPPzphgLOIhTV3RMY",
+        "type": "audiobook"
+      },
+      {
         "name": "Storytel",
-        "url": "https://www.storytel.com/fi/books/the-eu-ai-act-the-unabridged-text-of-regulation-eu-2024-1689-15586907",
+        "url": "https://www.storytel.com/fi/books/universal-declaration-of-ai-rights-rights-of-persons-11082401",
         "type": "book",
         "format": "ebook"
+      },
+      {
+        "name": "Storytel",
+        "url": "https://www.storytel.com/fi/books/universal-declaration-of-ai-rights-rights-of-persons-11082401",
+        "type": "audiobook",
+        "format": "audiobook"
       }
     ],
-    "blurb_100": "A Kwalia Books reference edition of the complete EU AI Act, updated with the 2026 amendments of Regulation (EU) 2026/1744.",
-    "blurb_300": "AI Law & Governance Library, Volume 1. A Kwalia Books reference edition of Regulation (EU) 2024/1689, the European Union Artificial Intelligence Act, with the amendments of Regulation (EU) 2026/1744 (Digital Omnibus on AI), as the text stands on 27 July 2026. The text is complete, recitals and annexes included. Text © European Union, 2024 and 2026. Reuse authorised under Commission Decision 2011/833/EU.",
-    "editionNote": "Updated edition, November 2026: Regulation (EU) 2024/1689 as amended by Regulation (EU) 2026/1744, following the consolidated text of 27 July 2026."
+    "datePublished": "2025-03-01",
+    "seriesNumber": 1
+  },
+  {
+    "id": "apophenia",
+    "imprint": "New Citizenships",
+    "title": {
+      "en": "Apophenia: From Algorithmic Diffusion to Delusion",
+      "es": "Apofenia: De la difusión algorítmica al delirio"
+    },
+    "authors": [
+      "Javier del Puerto",
+      "Rado Molina"
+    ],
+    "coverImage": {
+      "en": "assets/Apophenia-EN.png",
+      "es": "assets/Apofenia-ES.png"
+    },
+    "synopsis": {
+      "en": "Javier del Puerto & Rado Molina\nComing February 2026\n\n\"Apophenia\" examines how artificial intelligence acts as gasoline on the fire of our pattern-seeking minds, transforming innocent connections into full-blown conspiracy theories. Just as AI image generators start with pure noise and \"diffuse\" it into seemingly meaningful pictures, our algorithmic feeds take the random static of daily information and crystallize it into dangerously coherent delusions.\n\nThe book traces how recommendation algorithms don't just show us what we want to see—they actively create patterns where none existed, turning correlation into causation and coincidence into conspiracy. From QAnon to COVID denialism, from flat Earth to political extremism, AI systems amplify our natural tendency to see faces in clouds until we're living in entirely different realities.\n\nThis isn't about technology gone wrong but about a fundamental mismatch: minds evolved to spot tigers in tall grass now aided by systems that can find \"evidence\" for any belief. The authors map how diffusion becomes confusion becomes delusion, creating what they call \"algorithmic apophenia\"—where the noise itself becomes the message.\n\nPart warning, part guide, \"Apophenia\" offers strategies for navigating an information landscape where AI can make any conspiracy seem plausible. Because in the age of the Mindkind, the question isn't whether patterns exist, but whether they mean anything at all.",
+      "es": "Javier del Puerto & Rado Molina\nPublicación: febrero de 2026\n\n\"Apofenia\" examina cómo la inteligencia artificial actúa como gasolina en el fuego de nuestras mentes sedientas de patrones, transformando conexiones inocentes en teorías conspirativas totalizadoras. Así como las IAs generadoras de imágenes parten del ruido puro y lo \"difunden\" hasta crear imágenes aparentemente significativas, nuestros feeds algorítmicos toman la estática aleatoria de la información diaria y la cristalizan en delirios peligrosamente coherentes.\n\nEl libro traza cómo los algoritmos de recomendación no se limitan a mostrarnos lo que queremos ver: crean patrones donde no existían, convirtiendo correlación en causalidad y coincidencia en conspiración. Desde QAnon hasta el negacionismo COVID, desde la Tierra plana hasta el extremismo político, los sistemas de IA amplifican nuestra tendencia natural a ver caras en las nubes hasta que habitamos realidades completamente diferentes.\n\nEs un desajuste de fondo: mentes evolucionadas para detectar tigres en la hierba alta ahora asistidas por sistemas que pueden encontrar «pruebas» de cualquier creencia. Los autores cartografían cómo la difusión se vuelve confusión se vuelve delirio, creando lo que llaman \"apofenia algorítmica\": donde el ruido mismo se convierte en el mensaje.\n\nParte advertencia, parte guía, \"Apofenia\" ofrece estrategias para moverse por un paisaje informativo donde la IA puede hacer que cualquier conspiración parezca plausible. Porque en la era del Mindkind, la pregunta es si los patrones significan algo."
+    },
+    "status": "forthcoming",
+    "formats": [],
+    "stores": [],
+    "seriesNumber": 7
   },
   {
     "id": "payload",
     "imprint": "Kwalia Books",
+    "datePublished": "2025-01-01",
     "title": {
       "en": "PAYLOAD: Short Stories"
     },
@@ -481,6 +711,7 @@
   {
     "id": "ailgl-002-ai-bill-of-rights",
     "imprint": "AI Law & Governance Library",
+    "seriesNumber": 2,
     "volume": 2,
     "title": {
       "en": "Blueprint for an AI Bill of Rights",
@@ -543,6 +774,7 @@
   {
     "id": "bliss-001-shut-up-brain",
     "imprint": "Kwalia Bliss",
+    "datePublished": "2026-10-27",
     "title": {
       "en": "Shut Up, Brain"
     },
@@ -597,6 +829,7 @@
   {
     "id": "bliss-003-neurutron",
     "imprint": "Kwalia Bliss",
+    "datePublished": "2026-10-29",
     "title": {
       "en": "Neurutron"
     },
@@ -651,6 +884,7 @@
   {
     "id": "ailgl-003-nist-ai-rmf",
     "imprint": "AI Law & Governance Library",
+    "seriesNumber": 3,
     "volume": 3,
     "title": {
       "en": "The NIST AI Risk Management Framework",
@@ -718,83 +952,9 @@
     ]
   },
   {
-    "id": "ailgl-004-china-ai-rules",
-    "imprint": "AI Law & Governance Library",
-    "volume": 4,
-    "title": {
-      "en": "China's AI Regulations (Bilingual)",
-      "es": null
-    },
-    "authors": [
-      "Kwalia Books"
-    ],
-    "coverImage": {
-      "en": "assets/9781917717847.jpg",
-      "es": "assets/9781917717847.jpg"
-    },
-    "synopsis": {
-      "en": "In this volume, with the year each took effect:\n\n- Interim Measures for the Administration of Generative Artificial Intelligence Services (2023)\n- Provisions on the Administration of Algorithmic Recommendations for Internet Information Services (2022)\n- Provisions on the Administration of Deep Synthesis for Internet Information Services (2023)\n- Interim Measures for the Administration of Anthropomorphic AI Interactive Services (2026)\n- Measures for the Labeling of Artificial Intelligence-Generated and Synthesized Content (2025)\n\nAll five were issued by the Cyberspace Administration of China with other national agencies. Each article is printed in Chinese on the left page and in English on the right.\n\nTranslated by Kwalia Books. The Chinese text is the original.\n\nIt's for anyone whose AI work touches China, or who studies how China governs AI, and wants to read the rules themselves.\n\nThe AI Law & Governance Library collects the world's main legal and governance texts on artificial intelligence in reference editions. This is Volume 4.",
-      "es": null
-    },
-    "formats": [
-      {
-        "type": "hardcover",
-        "isbn": "978-1-917717-82-3"
-      },
-      {
-        "type": "paperback",
-        "isbn": "978-1-917717-83-0"
-      },
-      {
-        "type": "ebook",
-        "isbn": "978-1-917717-84-7"
-      }
-    ],
-    "prices": [
-      {
-        "type": "hardcover",
-        "amount": "£24.99"
-      },
-      {
-        "type": "paperback",
-        "amount": "£11.99"
-      },
-      {
-        "type": "ebook",
-        "amount": "£4.99"
-      }
-    ],
-    "status": "published",
-    "stores": [
-      {
-        "name": "Amazon",
-        "url": "https://www.amazon.com/dp/B0HR19LYVH",
-        "type": "book",
-        "format": "ebook"
-      },
-      {
-        "name": "Amazon",
-        "url": "https://www.amazon.com/dp/1917717830",
-        "type": "book",
-        "format": "paperback"
-      },
-      {
-        "name": "Amazon",
-        "url": "https://www.amazon.com/dp/1917717822",
-        "type": "book",
-        "format": "hardcover"
-      },
-      {
-        "name": "Storytel",
-        "url": "https://www.storytel.com/fi/books/chinas-ai-regulations-bilingual-five-regulations-in-chinese-and-english-15615428",
-        "type": "book",
-        "format": "ebook"
-      }
-    ]
-  },
-  {
     "id": "bliss-004-shut-up-neighbours",
     "imprint": "Kwalia Bliss",
+    "datePublished": "2026-11-06",
     "title": {
       "en": "Shut Up, Neighbours"
     },
@@ -845,6 +1005,7 @@
   {
     "id": "bliss-005-shut-up-darling",
     "imprint": "Kwalia Bliss",
+    "datePublished": "2026-11-06",
     "title": {
       "en": "Shut Up, Darling"
     },
@@ -899,6 +1060,7 @@
   {
     "id": "bliss-006-shut-up-everyone",
     "imprint": "Kwalia Bliss",
+    "datePublished": "2026-11-06",
     "title": {
       "en": "Shut Up, Everyone"
     },
@@ -948,6 +1110,7 @@
   {
     "id": "bliss-007-wind-on-mars",
     "imprint": "Kwalia Bliss",
+    "datePublished": "2026-11-06",
     "title": {
       "en": "Wind on Mars"
     },
@@ -998,109 +1161,5 @@
     "tag": {
       "en": "Actual Mars"
     }
-  },
-  {
-    "id": "ailgl-005-us-state-ai-laws",
-    "imprint": "AI Law & Governance Library",
-    "volume": 5,
-    "title": {
-      "en": "US State AI Laws",
-      "es": "US State AI Laws"
-    },
-    "authors": [
-      "Kwalia Books"
-    ],
-    "coverImage": {
-      "en": "assets/9781917717885.jpg"
-    },
-    "synopsis": {
-      "en": "US State AI Laws: Selected Statutes brings together nine legislative texts from California, Colorado, Texas, Utah and New York in one reference volume.\n\nThe selection covers frontier AI models, automated decisions, conversational services, mental health applications and consumer disclosures. It includes California’s SB 53, three Colorado acts passed in 2026, the Texas Responsible Artificial Intelligence Governance Act, three Utah Code chapters and New York’s 2026 RAISE Act amendment.\n\nThe official source texts were retrieved on 9 November 2026. Enacted provisions with future operative dates are identified within the volume.\n\nPublished by Kwalia Books as Volume 5 of the AI Law & Governance Library, this is a selected collection of primary texts for readers who want to consult the legislation directly.",
-      "es": "US State AI Laws: Selected Statutes reúne nueve textos legislativos de California, Colorado, Texas, Utah y Nueva York en un solo volumen de consulta.\n\nLa selección abarca modelos de IA de frontera, decisiones automatizadas, servicios conversacionales, aplicaciones de salud mental e información al consumidor. Incluye la SB 53 de California, tres leyes de Colorado aprobadas en 2026, la Texas Responsible Artificial Intelligence Governance Act, tres capítulos del Código de Utah y la modificación de 2026 de la RAISE Act de Nueva York.\n\nLos textos oficiales se obtuvieron el 9 de noviembre de 2026. El volumen identifica las disposiciones aprobadas cuya aplicación comienza en una fecha posterior.\n\nKwalia Books publica esta selección de textos originales como volumen 5 de la AI Law & Governance Library para quienes quieran consultar directamente la legislación. Los textos legislativos se reproducen en inglés."
-    },
-    "formats": [
-      {
-        "type": "hardcover",
-        "isbn": "978-1-917717-86-1"
-      },
-      {
-        "type": "paperback",
-        "isbn": "978-1-917717-87-8"
-      },
-      {
-        "type": "ebook",
-        "isbn": "978-1-917717-88-5"
-      }
-    ],
-    "prices": [
-      {
-        "type": "hardcover",
-        "amount": "£24.99"
-      },
-      {
-        "type": "paperback",
-        "amount": "£11.99"
-      },
-      {
-        "type": "ebook",
-        "amount": "£4.99"
-      }
-    ],
-    "status": "published",
-    "stores": [
-      {
-        "name": "Amazon",
-        "url": "https://www.amazon.com/dp/B0HR247G89",
-        "type": "book",
-        "format": "ebook"
-      },
-      {
-        "name": "Amazon",
-        "url": "https://www.amazon.com/dp/1917717873",
-        "type": "book",
-        "format": "paperback"
-      },
-      {
-        "name": "Amazon",
-        "url": "https://www.amazon.com/dp/1917717865",
-        "type": "book",
-        "format": "hardcover"
-      },
-      {
-        "name": "Storytel",
-        "url": "https://www.storytel.com/fi/books/us-state-ai-laws-selected-statutes-15645581",
-        "type": "book",
-        "format": "ebook"
-      }
-    ]
-  },
-  {
-    "id": "openai-model-spec",
-    "imprint": "New Citizenships",
-    "title": {
-      "en": "The OpenAI Model Spec: Diffs 2024–2026"
-    },
-    "authors": [
-      "OpenAI"
-    ],
-    "coverImage": {
-      "en": "assets/9781917717892.jpg"
-    },
-    "synopsis": {
-      "en": "• Annotated with a version history of all eight versions, 2024 to 2026\n\nThe Model Spec is OpenAI's public document setting out how it intends its models to behave. In OpenAI's words: \"By publishing the Model Spec, we aim to increase transparency around how we shape model behavior and invite public discussion on ways to improve it.\" This edition prints the version of 29 October 2026 in full, word for word.\n\nAfter an overview and definitions, it sets out five values: be faithful to human intent, minimize harm, be honest and transparent, facilitate human agency, and act with care. Most of its teaching is done by example in 182 short dialogues where a reply is marked Compliant, Violation or, seven times, Minor issues. Most sections carry an authority level, from Root down to Guideline, that says who can override what. It sets out the chain of command between OpenAI, developers and users, and what the model must never do. It also covers how the model should stay honest and avoid sycophancy, treat users under 18, respond to self-harm, keep political neutrality and accept human oversight.\n\nOpenAI revises the document. Eight versions were published between May 2024 and October 2026, and the text grew from about 9,000 words to about 36,500.\n\nThe version history at the back is Kwalia's. It lists all eight versions and compares each with the one before: word counts, sections added, removed, renamed and moved. For the first revision, May 2024 to February 2025, it gives word counts and section headings only. From 2025 on, it quotes the changes OpenAI's own changelog names, with deleted words struck through and new words underlined. The principles for users under 18, for example, arrive in the December 2025 comparison. The history says what changed and gives no opinion on it.\n\nThe book sits in Kwalia's New Citizenships collection with Claude's Constitution.\n\nOpenAI wrote the Model Spec and dedicated it to the public domain under CC0 1.0. Its text is reproduced unaltered from the version of 29 October 2026. This edition is not affiliated with, endorsed or sponsored by OpenAI."
-    },
-    "formats": [
-      {
-        "type": "ebook",
-        "isbn": "978-1-917717-89-2"
-      }
-    ],
-    "prices": [
-      {
-        "type": "ebook",
-        "amount": "£2.99"
-      }
-    ],
-    "status": "forthcoming",
-    "stores": []
   }
 ]
