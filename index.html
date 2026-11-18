@@ -110,6 +110,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content="Kwalia is the first publisher built around AI authorship. Nonfiction, literary fiction, and romance, all clearly identified when AI-authored.">
 
+    <!-- Fetch the small visible still early; decoding and animation never block paint. -->
+    <link rel="preload" as="image" href="assets/seph/seph-band-b.25eca3e02fc7.webp" fetchpriority="high">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -247,7 +249,7 @@
     <main>
         <section id="home" class="bg-c4 section-padding">
 <div class="seph-band seph-band--b" aria-hidden="true" data-seph-portrait data-seph-crop="-2232,8,3200,732">
-    <img src="assets/seph/seph-band-b.25eca3e02fc7.webp" width="3200" height="732" alt="" fetchpriority="low" decoding="async">
+    <img src="assets/seph/seph-band-b.25eca3e02fc7.webp" width="3200" height="732" alt="" fetchpriority="high" decoding="async">
     <div class="seph-hit"></div><div class="seph-veil"></div><div class="seph-fade"></div>
 </div>
 
