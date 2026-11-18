@@ -171,8 +171,9 @@ def single_amazon(links, row):
 def fiction_stores(books, rows, overlay=None):
     """Apply the same shop rule to the separate fiction surface; retain its copy."""
     source_rows = {row["title_id"]: row for row in rows}
-    return [{**book, "stores": sorted(single_amazon(merge_stores(book.get("stores", []),
-                presentation_for(book["id"], overlay or {"legacy_rows": []}).get("stores", [])),
+    return [{**book, "stores": sorted(single_amazon(merge_stores(
+                presentation_for(book["id"], overlay or {"legacy_rows": []}).get("stores", []),
+                book.get("stores", [])),
                 source_rows[book["id"]]), key=store_priority)}
             for book in books]
 

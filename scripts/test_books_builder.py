@@ -64,7 +64,8 @@ class BooksBuilderTests(unittest.TestCase):
         self.assertEqual(single_amazon([], self.row), [])
 
     def test_fiction_paperback_override_survives_repeat_generation(self):
-        book = {"id": "example", "synopsis": {"en": "Approved copy"}, "stores": []}
+        book = {"id": "example", "synopsis": {"en": "Approved copy"},
+                "stores": [{"name": "Amazon", "url": "https://www.amazon.com/dp/old-kindle", "type": "book"}]}
         paperback = {"name": "Amazon", "url": "https://www.amazon.com/dp/verified-paperback", "type": "book", "format": "paperback"}
         overlay = {"legacy_rows": [], "presentation": {"example": {"stores": [paperback]}}}
         result = fiction_stores([book], [self.row], overlay)
