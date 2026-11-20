@@ -169,9 +169,14 @@ class BooksBuilderTests(unittest.TestCase):
         books, decisions = generate(rows, self.overlay)
         # Approved legacy prose/prices remain authoritative; retailer links are
         # separately governed by the verified-hardback rule.
-        self.assertEqual([{k: v for k, v in book.items() if k != "stores"} for book in books],
-                         [{k: v for k, v in legacy_public(old).items() if k != "stores"}
-                          for old in self.overlay["legacy_rows"]])
+        expected = []
+        for old in self.overlay["legacy_rows"]:
+            book = legacy_public(old)
+            cover = self.overlay.get("presentation", {}).get(old["id"], {}).get("coverImage")
+            if cover:
+                book["coverImage"] = cover
+            expected.append({k: v for k, v in book.items() if k != "stores"})
+        self.assertEqual([{k: v for k, v in book.items() if k != "stores"} for book in books], expected)
         self.assertTrue(all(sum(s["name"] == "Amazon" for s in book["stores"]) <= 1 for book in books))
         self.assertTrue(all(d["visible"] and d["legacyVisible"] for d in decisions))
         self.assertEqual(next(b for b in books if b["id"] == "apophenia")["status"], "forthcoming")
