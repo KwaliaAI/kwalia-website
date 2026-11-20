@@ -200,6 +200,10 @@ def build_row(row, overlay, channels):
     if old:
         book = legacy_public(old)
         book.update(release_fields(row))
+        # An explicitly approved presentation cover can replace legacy art.
+        cover_override = overlay.get("presentation", {}).get(tid, {}).get("coverImage")
+        if cover_override:
+            book["coverImage"] = cover_override
         observed = retailer_links(row)
         book["stores"] = merge_stores(book.get("stores", []), observed)
         # New verified editions must also appear in the modal's ISBN list.
