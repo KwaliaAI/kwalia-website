@@ -1,6 +1,6 @@
 {
   "catalogue_repository": "https://github.com/KwaliaAI/catalog",
-  "catalogue_commit": "119f37c314563f7530bdc927d60c18b7be1f3ac2",
+  "catalogue_commit": "67dafc92a68dbcdedee2e3e07150613d5d1291b8",
   "catalogue_file": "data/catalog.json",
   "catalogue_sha256": "e2cb32c38d018fabc1d24c756ccd3a627cf8278d057245a01611188fb040fffe",
   "overlay_sha256": "6a688ba0eead8b7374fe523af7a9336d58907ac956be2764ffaf6e39d7cfa4ca",
