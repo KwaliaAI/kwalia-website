@@ -1033,11 +1033,14 @@
                         return response.text();
                     })
                     .then(html => {
+                        // Legacy English files also contain an unused Spanish placeholder
+                        // and a duplicate story. Keep the English block for both EN and ES fallback.
+                        const storyHtml = html.split(/`,\s*es:\s*`/, 1)[0];
                         readerContent.innerHTML = `
                             <h1 class="font-f1 text-4xl mb-4">${storyTitle}</h1>
                             <p class="font-f2 text-lg text-c2/60 mb-8">By ${story.author}</p>
                             <div class="animate-in fade-in duration-500">
-                                ${html}
+                                ${storyHtml}
                             </div>
                         `;
                     })
