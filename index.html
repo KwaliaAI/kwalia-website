@@ -780,6 +780,10 @@
                     if (het.image) {
                         imageHTML = `<img src="${het.image}" alt="${het.name}" class="w-full h-64 object-cover rounded-full shadow-md aspect-square mx-auto mb-4">`;
                     }
+                    if (het.video) {
+                        const autoplay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? '' : 'autoplay';
+                        imageHTML = `<video ${autoplay} muted loop playsinline controls preload="metadata" poster="${het.image || ''}" aria-label="${het.name}" class="w-full h-64 object-cover rounded-full shadow-md aspect-square mx-auto mb-4"><source src="${het.video}" type="video/mp4"></video>`;
+                    }
 
                     const bio = het.bio[lang] || het.bio.en;
 
