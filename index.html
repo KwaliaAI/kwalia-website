@@ -773,7 +773,15 @@
                 });
             }
 
+            const playedPortraits = new Set();
+            const portraitMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            let portraitObserver;
+            portraitMotion.addEventListener('change', () => {
+                if (portraitMotion.matches) heteronymsContainer.querySelectorAll('video').forEach(video => video.pause());
+            });
+
             function renderHeteronyms(lang) {
+                if (portraitObserver) portraitObserver.disconnect();
                 heteronymsContainer.innerHTML = '';
                 heteronyms.forEach(het => {
                     let imageHTML = `<div class="w-full h-64 bg-gray-200 flex items-center justify-center font-f3 text-lg text-center p-4 rounded-full shadow-md aspect-square mx-auto mb-4">${het.name.charAt(0)}</div>`;
@@ -781,8 +789,8 @@
                         imageHTML = `<img src="${het.image}" alt="${het.name}" class="w-full h-64 object-cover rounded-full shadow-md aspect-square mx-auto mb-4">`;
                     }
                     if (het.video) {
-                        const autoplay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? '' : 'autoplay';
-                        imageHTML = `<video ${autoplay} muted loop playsinline controls preload="metadata" poster="${het.image || ''}" aria-label="${het.name}" class="w-full h-64 object-cover rounded-full shadow-md aspect-square mx-auto mb-4"><source src="${het.video}" type="video/mp4"></video>`;
+                        const fallback = het.videoWebm ? `<source src="${het.videoWebm}" type="video/webm">` : '';
+                        imageHTML = `<video data-portrait="${het.id}" muted playsinline disablepictureinpicture disableremoteplayback preload="metadata" poster="${het.image || ''}" aria-label="${het.name}" class="w-full h-64 object-cover rounded-full shadow-md aspect-square mx-auto mb-4"><source src="${het.video}" type="video/mp4">${fallback}</video>`;
                     }
 
                     const bio = het.bio[lang] || het.bio.en;
@@ -796,6 +804,27 @@
                             </div>
                         </div>`;
                     heteronymsContainer.innerHTML += hetHTML;
+                });
+
+                const playOnce = video => {
+                    if (portraitMotion.matches || !video.paused) return;
+                    video.currentTime = 0;
+                    video.play().catch(() => {});
+                };
+                portraitObserver = new IntersectionObserver(entries => {
+                    entries.forEach(({ target: video, isIntersecting }) => {
+                        if (!isIntersecting) return;
+                        portraitObserver.unobserve(video);
+                        if (playedPortraits.has(video.dataset.portrait) || portraitMotion.matches) return;
+                        playedPortraits.add(video.dataset.portrait);
+                        playOnce(video);
+                    });
+                }, { threshold: 0.5 });
+                heteronymsContainer.querySelectorAll('video[data-portrait]').forEach(video => {
+                    video.addEventListener('pointerenter', event => {
+                        if (event.pointerType === 'mouse') playOnce(video);
+                    });
+                    portraitObserver.observe(video);
                 });
             }
 
